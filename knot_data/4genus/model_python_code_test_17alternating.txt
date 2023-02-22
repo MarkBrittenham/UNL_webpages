@@ -1,0 +1,32 @@
+
+
+import snappy
+
+fa=open('goeritz_results_REV17a.txt','w')
+fa.close()
+
+with open('dtcplus_17alt.txt','r') as testfile:
+  for line in testfile:
+    sys.stdout.flush()
+    dtc=line.strip()
+    bbb=dtc.split(':')
+    named=bbb[0].strip('\'')
+    dtcode=bbb[1].split(',')
+    dtcode2=[]
+    for ii in range(0,len(dtcode)):
+      dtcode2=dtcode2+[int(dtcode[ii])]
+    M=snappy.Manifold('DT:'+str(dtcode2))
+    L=M.link()
+    if L.signature() > 0:
+      K=L
+    else:
+      K=L.mirror()
+    (CORS,PPD)=find_corners(K)
+    REGS=find_regions(CORS,PPD)
+    (REGT,REGT2)=build_checkerboards(REGS)
+    (GOER1,GOER2)=build_goeritz(REGT,REGT2)
+    sigt=abs(K.signature())
+    GO1=Matrix(GOER1)
+    GO2=Matrix(GOER2)
+    test_matrices(GO1,GO2,sigt,K,'REV17a',named,dtcode2)
+

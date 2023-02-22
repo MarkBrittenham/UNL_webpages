@@ -1,0 +1,28 @@
+
+import snappy
+
+
+RR=snappy.NonalternatingKnotExteriors(indices=(0,1210608,1))
+
+fa=open('goeritz_results_REV16n.txt','w')
+fa.close()
+
+for mm in range(201702,1210608):
+  M=RR[mm]
+  namit=M.name()
+  L=M.link()
+  if L.signature() > 0:
+    K=L
+  else:
+    K=L.mirror()
+  DTCD=K.DT_code()
+  (CORS,PPD)=find_corners(K)
+  REGS=find_regions(CORS,PPD)
+  (REGT,REGT2)=build_checkerboards(REGS)
+  (GOER1,GOER2)=build_goeritz(REGT,REGT2)
+  sigt=abs(K.signature())
+  GO1=Matrix(GOER1)
+  GO2=Matrix(GOER2)
+  test_matrices(GO1,GO2,sigt,K,'REV16n',namit,DTCD)
+print('done')
+

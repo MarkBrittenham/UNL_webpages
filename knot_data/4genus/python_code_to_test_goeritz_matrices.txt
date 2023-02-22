@@ -1,0 +1,238 @@
+
+
+################################################################
+################################################################
+
+def find_corners(K):
+  PPD=K.PD_code()
+  CORS=[]
+  for ii in range (0,len(PPD)):      ## this builds a list of corners
+    wrk=PPD[ii]
+    aa=wrk[0]
+    bb=wrk[1]
+    cc=wrk[2]
+    dd=wrk[3]
+    CORS.append((aa,bb,-1,ii))       ## originally, the signs of the third entries
+    CORS.append((bb,cc,1,ii))        ## were reversed; I changed them to "match"
+    CORS.append((cc,dd,-1,ii))       ## the results of Lewark and McCoy
+    CORS.append((dd,aa,1,ii))
+  return (CORS,PPD)
+
+def find_regions(CORS,PPD):
+  numc=2*len(PPD)
+  REGS=[]                            ## this will hold a list of lists of regions/corners
+  REGS2=[]                           ## these are corners processed
+  CORS2=CORS.copy()                  ## these are corners not yet processed
+  REGS.append([CORS2[0]])
+  REGS2.append(CORS2[0])
+  next1=CORS2[0][0]
+  next2=CORS2[0][1]
+  cros=CORS2[0][3]
+  frst1=CORS2[0][0]
+  CORS2.pop(0)
+  cntr=0
+  new=0                              ## signals we have (not) finished a region
+  while CORS2 != []:
+    if new==1:                       ## we've finished a region, start a new one!
+      cntr=cntr+1
+      REGS.append([CORS2[0]])
+      REGS2.append(CORS2[0])
+      next1=CORS2[0][0]
+      next2=CORS2[0][1]
+      cros=CORS2[0][3]
+      frst1=CORS2[0][0]
+      CORS2.pop(0)
+      new=0
+    else:                            ## still processing region, find the next corner, traversing clockwise
+      found=0
+      for jj in range(0,len(CORS2)):           ## look for the next corner
+        if found==0:                           ## (stop looking when you find it! "popping" it messes up the for loop...
+          test=CORS2[jj][1]
+          if CORS2[jj][0]==next2:
+            if CORS2[jj][3] != cros:
+              if CORS2[jj][1] != (next1-1)%numc:
+                if CORS2[jj][1] != (next1+1)%numc:    ## this is the next corner!
+                  found=1
+                  REGS[cntr].append(CORS2[jj])
+                  REGS2.append(CORS2[jj])
+                  next1=CORS2[jj][0]
+                  next2=CORS2[jj][1]
+                  cros=CORS2[jj][3]
+                  CORS2.pop(jj)
+                  if test==frst1:           ## returned to the beginning, time for a new region
+                    new=1
+  return REGS
+
+## next, split the regions into the two checkerboard sets
+## that is, empty one checkbaord into another container, leaving the other behind.
+
+def build_checkerboards(REGS):
+  REGT=REGS.copy()
+  REGT2=[]
+  REGT2.append(REGT[0])
+  REGT.pop(0)                  ## for each corner, find the region containing the opposite corner, and add it to REGT2
+  donit=0
+  coutr=0
+  while donit==0:
+    new=0
+    BOX=REGT2[coutr]
+    for ii in range(0,len(BOX)):      ## find regions corresponding to the opposite corners
+      CR=BOX[ii]                      ## this is a crossing in the region
+      cr1=CR[0]
+      cr2=CR[1]
+      sgm=CR[2]
+      crs=CR[3]
+      PDC=PPD[crs]             ## this is the crossing
+      if PDC[0]==cr1:
+        if PDC[1]==cr2:
+          OPPO=(PDC[2],PDC[3],sgm,crs)      ## one of these is the opposite crossing!
+      if PDC[1]==cr1:
+        if PDC[2]==cr2:
+          OPPO=(PDC[3],PDC[0],sgm,crs)
+      if PDC[2]==cr1:
+        if PDC[3]==cr2:
+          OPPO=(PDC[0],PDC[1],sgm,crs)
+      if PDC[3]==cr1:
+        if PDC[0]==cr2:    
+          OPPO=(PDC[1],PDC[2],sgm,crs) 
+      fundt=0
+      for jj in range(0,len(REGT)):        ## look for that crossing in an un-grabbed region
+        if fundt==0:                       ## (stop looking when you find it! "popping" it messes up the for loop...
+          if OPPO in REGT[jj]:             ## and add it to our REGT2 region list if it is there
+            new=1
+            REGT2.append(REGT[jj])
+            REGT.pop(jj)
+            fundt=1
+    if new==0:
+      if coutr>=len(REGT2)-1:              ## ending condition: we've run through all of the regions in REGT2
+        donit=1
+      else:
+        coutr=coutr+1
+  return (REGT,REGT2)
+
+
+#################################################
+#################################################
+## final step: build the two Goeritz matrices; the crossing numbers in the corner data should make this quick 
+
+def build_goeritz(REGT,REGT2):
+  dim1=len(REGT)
+  GMAT1=[]
+  GROW1=[]
+  for ii in range(0,dim1):
+    GROW1.append(0)
+  for jj in range(0,dim1):
+    GROW1b=GROW1.copy()
+    GMAT1.append(GROW1b)
+  GMAT11=GMAT1.copy()
+  dim2=len(REGT2)
+  GMAT2=[]
+  GROW2=[]
+  for ii in range(0,dim2):
+    GROW2.append(0)
+  for jj in range(0,dim2):
+    GROW2b=GROW2.copy()
+    GMAT2.append(GROW2b)
+  GMAT22=GMAT2.copy()
+  for ii in range(0,dim1):
+    for jj in range(0,len(REGT[ii])):
+      cros1=REGT[ii][jj][3]
+      sgm1=REGT[ii][jj][2]
+      for kk in range(ii+1,dim1):
+        for ll in range(0,len(REGT[kk])):
+          cros2=REGT[kk][ll][3]
+          if cros1==cros2:
+##            print(str(ii)+str(jj)+str(kk)+str(ll)+'ok'+str(sgm1))
+            GMAT11[ii][kk]=GMAT11[ii][kk]+sgm1
+            GMAT11[kk][ii]=GMAT11[kk][ii]+sgm1 
+            GMAT11[ii][ii]=GMAT11[ii][ii]-sgm1
+            GMAT11[kk][kk]=GMAT11[kk][kk]-sgm1
+  for ii in range(0,dim2):
+    for jj in range(0,len(REGT2[ii])):
+      cros1=REGT2[ii][jj][3]
+      sgm1=REGT2[ii][jj][2]
+      for kk in range(ii+1,dim2):
+        for ll in range(0,len(REGT2[kk])):
+          cros2=REGT2[kk][ll][3]
+          if cros1==cros2:
+##            print(str(ii)+str(jj)+str(kk)+str(ll)+'ok'+str(sgm1))
+            GMAT22[ii][kk]=GMAT22[ii][kk]+sgm1
+            GMAT22[kk][ii]=GMAT22[kk][ii]+sgm1 
+            GMAT22[ii][ii]=GMAT22[ii][ii]-sgm1
+            GMAT22[kk][kk]=GMAT22[kk][kk]-sgm1
+
+######################################################################################
+##  need to strike out a row and column to get the "actual" Goeritz matrix!
+
+  GR1=[]
+  GRW1=[]
+  for ii in range(0,dim1-1):
+    GRW1.append(0)
+  for jj in range(0,dim1-1):
+    GRW1b=GRW1.copy()
+    GR1.append(GRW1b)
+  GOER1=GR1.copy()
+  for ii in range(0,dim1-1):
+    for jj in range(0,dim1-1):
+      GOER1[ii][jj]=GMAT11[ii][jj]
+
+  GR2=[]
+  GRW2=[]
+  for ii in range(0,dim2-1):
+    GRW2.append(0)
+  for jj in range(0,dim2-1):
+    GRW2b=GRW2.copy()
+    GR2.append(GRW2b)
+  GOER2=GR2.copy()
+  for ii in range(0,dim2-1):
+    for jj in range(0,dim2-1):
+      GOER2[ii][jj]=GMAT22[ii][jj]
+
+  return (GOER1,GOER2)
+
+
+############################################################################
+
+
+def test_matrices(GO1,GO2,sigt,K,mrk,namit,DTCD):
+  fa=open('goeritz_results_'+str(mrk)+'.txt','a')
+  if GO1.is_positive_definite():
+    dim1=GO1.dimensions()[0]
+    MM=gap(GO1)
+    SS1=MM.OrthogonalEmbeddings()
+    TT1=libgap.eval(SS1)
+    SOLS1=TT1['solutions']
+    rnge=1000
+    for ii in range(0,len(SOLS1)):
+      if len(SOLS1[ii]) < rnge:
+        rnge=len(SOLS1[ii])
+    if rnge > dim1+sigt:
+      fa.write(str(namit)+'  '+str(DTCD)+'  GO1 is a Winner!  '+str(sigt)+':'+str(rnge)+' '+str(dim1+sigt)+'\n')
+      print('good  '+str(namit)+' '+str(sigt))
+      SSOUT1=SS1
+  else:
+    SSOUT1='empty'
+  if GO2.is_positive_definite():
+    dim2=GO2.dimensions()[0]
+    NN=gap(GO2)
+    SS2=NN.OrthogonalEmbeddings()
+    TT2=libgap.eval(SS2)
+    SOLS2=TT2['solutions']
+    rnge=1000
+    for ii in range(0,len(SOLS2)):
+      if len(SOLS2[ii]) < rnge:
+        rnge=len(SOLS2[ii])
+    if rnge > dim2+sigt:
+      fa.write(str(namit)+'  '+str(DTCD)+'  GO2 is a Winner!  '+str(sigt)+':'+str(rnge)+' '+str(dim2+sigt)+'\n')
+      print('good  '+str(namit)+' '+str(sigt))
+      SSOUT2=SS2
+  else:
+    SSOUT2='empty'
+  fa.close()
+
+
+
+
+##########################################################
+##############################################################
+########################################################
