@@ -1,0 +1,262 @@
+
+\magnification=1200
+
+\input amstex
+\loadmsbm
+
+\def\dsp{\displaystyle}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ctln{\centerline}
+\def\nidt{\noindent}
+\def\ubr{\underbar}
+
+
+\centerline{\bf Math 314 Group Project: Fun with polynomials}
+
+\medskip
+
+\centerline{Due date: Wednesday, December 4}
+
+\medskip
+
+This project explores methods for constructing bases for the
+vector space ${\Cal P}_n$ of polynomials of degree up to $n$,
+and for verifying that collections of polynomials are bases
+for ${\Cal P}_n$. Depending upon the set of polynommials
+you will use different characterizations of bases that we 
+have developed in class. These bases arise in different
+contexts that you have met and/or will meet in your 
+mathematics and other courses.
+
+\medskip
+
+We know that ${\Cal P}_n$ has the ``standard'' basis consisting
+of the polynomials (with one term, usually called {\it monomials})
+
+\ssk
+
+\ctln{$\{1,x,x^2,\ldots,x^n\}$}
+
+\ssk
+
+\nidt because they span ${\Cal P}_n$ - the definition, esssentially, 
+of polynomials as the functions $p(x)=a_0x^n+a_1x^{n-1}+\cdots +a_{n-1}x+a_n$ 
+express polynomials as linear combinations of monomials. The monomials are also linearly independent:
+If $p(x)=a_0x^n+a_1x^{n-1}+\cdots +a_{n-1}x+a_n=0$, then plugging in $x=0$ gives
+$p(0)=a_n=0$, so $p(x)=a_0x^n+a_1x^{n-1}+\cdots +a_{n-1}x=x[a_0x^{n-1}+a_1x^{n-2}+\cdots +a_{n-1}]=0$,
+so $a_0x^{n-1}+a_1x^{n-2}+\cdots +a_{n-1}=0$, as well. Repeating this argument (plugging in $x=0$)
+will repeatedly show another coefficient is equal to zero, resulting in 
+$a_n=a_{n-1}= \cdots = a_1=a_0=0$, establishing linear independence.
+
+\msk
+
+But what you may not realize is that you have \ubr{already} encountered \ubr{other} bases for these
+vector spaces ${\Cal P}_n$. In particular, in second-semester calculus, the (integration) technique
+we call {\it partial fractions} made systematic use of other, alternative, bases for the vector
+space ${\Cal P}_n$, although of course we did not use this terminology for it at the time!
+In this project, we will explore the construction and verification of some of these
+bases.
+
+\msk
+
+A refresher on partial fraction decompositions can be found at
+
+\ssk
+
+\ctln{http://www.math.unl.edu/$\sim$mbrittenham2/classwk/314f13/project/partial.pdf}
+
+\ssk
+
+\nidt (which is based on the review notes I provided to one of my Calculus II classes). The basic 
+point is that starting from a completely factored polynomial
+
+\msk
+
+\ctln{$q(x) = (x-a_1)^{m_1}(x-a_2)^{m_2}\cdots 
+(x-a_k)^{m_k}(x^2+\alpha_1x+\beta_1)^{n_1}\cdots(x^2+\alpha_\ell x+\beta_\ell)^{n_\ell}$,}
+
+\msk
+
+\nidt where the quadratic terms are irreducible, with $\text{degree}(q) =N = m_1+\cdots m_k+2n_1+\cdots 2n_\ell$,
+partial fractions gives a prescription for writing any quotient $\dsp{{p(x)}\over{q(x)}}$, with
+$\text{degree}(p)\leq N-1$ as a sum of the quotients 
+
+\ssk
+
+\ctln{$\dsp {{A}\over{(x-a_i)^m}}$ for $1\leq m\leq m_i$, and $\dsp{{Bx+C}\over{(x^2+\alpha_jx+\beta_j\ell)^n}}$ 
+for $1\leq n\leq n_j$.}
+
+\msk
+
+What this \ubr{really} means, when we put things over a common denominator, is that $p(x)$ is a sum of 
+constant multiples of the polynomials (the denominators divide the numerator)
+
+\msk
+
+\ctln{$\dsp {{q(x)}\over{(x-a_i)^m}}$ for $1\leq m\leq m_i$,  
+$\dsp {{q(x)}\over{(x^2+\alpha_jx+\beta_j\ell)^n}}$, and $\dsp x{{q(x)}\over{(x^2+\alpha_jx+\beta_j\ell)^n}}$
+for $1\leq n\leq n_j$,}
+
+\msk
+
+\nidt that is, these polynomials \ubr{span} ${\Cal P}_{N-1}$. Noting that there are precisely
+
+\ctln{$m_1+\cdots m_k+2n_1+\cdots 2n_\ell = N = \text{dim}({\Cal P}_{N-1})$}
+
+\nidt polynomials in this list,
+this implies that these polynomials are 
+a \ubr{basis} for ${\Cal P}_{N-1}$. So partial fractions
+is really all about constructing a particular basis for ${\Cal P}_{N-1}$ from a 
+single degree $N$ polynomial $q(x)$.
+
+\bsk
+
+In the following exercises you will verify that for some choices of $q(x)$ these polynomials do 
+indeed form a basis for ${\Cal P}_{N-1}$,
+using the techniques that were developed for solving partial fractions problems, together with our
+knowledge that establishing linear independence can be as useful to verifying bases as showing that they span can.
+
+\ssk
+
+We start with the technique usually called {\it plugging in}: Choosing specific values to 
+evaluate an expression at tells us the value of one or more coefficients.
+
+\msk
+
+{\bf Problem 1.} For the polynomial $q(x)=(x-1)(x-2)(x-3)(x-4)$, with degree 4, describe the basis for 
+${\Cal P}_{3}$ that partial fractions asserts we have, and demonstrate that your collection of polynomials
+are {\it linearly independent}; that is, that 
+
+\ctln{$a_1p_1(x)+a_2p_2(x)+a_3p_3(x)+a_4p_4(x)=0$ implies
+that $a_1=a_2=a_3=a_4=0$.}
+
+\nidt Explain why this implies that your collection of polynomials is therefore
+a basis for ${\Cal P}_{3}$. 
+
+\msk
+
+{\bf Problem 2.} Explain how the same technique can be applied to the general situation where
+$q(x)=(x-a_1)(x-a_2)\cdots(x-a_k)$ with $a_1<a_2<\cdots <a_k$.
+
+\bsk
+
+A second technique might be called {\it moving the origin}: by writing $x=(x-a)+a$, we can write powers of $x$
+as linear combinations of powers of $(x-a)$; e,g, by multiplying out $x^6=[(x+1)-1]^6$.
+
+\msk
+
+{\bf Problem 3.} For the polynomial $q(x)=(x-1)^4$, with degree 4, describe the basis for 
+${\Cal P}_{3}$ that partial fractions asserts we have, and demonstrate that your collection of polynomials
+\ubr{spans} ${\Cal P}_{3}$, by showing that elements of the `standard' basis for ${\Cal P}_{3}$ can be written
+as linear combinations of your partial fractions basis. 
+
+\msk
+
+{\bf Problem 4.} Explain how the same technique can be applied to the general situation where
+$q(x)=(x-a)^n$, for $a\in{\Bbb R}$ a constant and $n\geq 1$ an integer. Can you come up with an 
+alternate approach which directly establishes that your polynomials are linearly independent (i.e., 
+which does not first establish that they span)?
+
+\bsk
+
+Next, we look at what happens when we have a combination of these two situations. 
+
+\msk
+
+{\bf Problem 5.} For the polynomial $q(x)=(x-1)^2(x-2)^2$, with degree 4, describe the basis for 
+${\Cal P}_{3}$ that partial fractions asserts we have, and demonstrate that your collection of polynomials
+forms a basis for ${\Cal P}_{3}$. You might try various combinations of the approaches explored
+in the previous problems (in some order), and/or other ideas, to see what works (best)!
+
+\msk
+
+{\bf Problem 6.} Describe how your approach to problem \#5 could be adapted to some more general
+situation. Try to describe the most general situation that you can manage to solve in a reasonably small
+amount of space (and time).
+
+\bsk
+
+When irreducible quadratics appear in our factorization of $q(x)$, things get more `interesting'.
+We no longer have a clear idea of what values to plug in to reveal information about coefficients 
+in a linear combination, and there is no clear value to `shift the origin' by to express our 
+standard basis as linear combinations. But we can always apply the `brute force' method, which is 
+really just solving a system of linear equations! For example, by writing $a(x-1)+b(x-2)=0$
+as $(a+b)x+(-a-2b)=0$, solving $a+b=0$ and $-a-2b=0$ for $a$ and $b$ establishes that
+$x-1$ and $x-2$ are linearly independent.
+
+\msk
+
+{\bf Problem 7.} For the polynomial $q(x)=(x^2+2x+2)(x^2-x+2)$ [note that
+both factors are irreducible quadratics], with degree 4, describe the basis for 
+${\Cal P}_{3}$ that partial fractions asserts we have, and show that your collection of polynomials
+forms a basis for ${\Cal P}_{3}$. You can show either that they are linearly independent, or
+that they span (by showing that you can express another basis as linear combinations of them).
+
+\msk
+
+In practice, establishing that partial fractions `works', even in the presence of irreducible
+quadratices, uses a standard trick of thinking of the polynomials as having {\it complex} coefficients,
+and then further factoring them into linear polynomials. Facts about complex numbers then are
+used to make certain that our solutions still have {\it real} coefficients (the phrase `complex
+conjugate pairs' might mean something to you?). But exploring this further would take us too far afield,
+and so we will close our explorations here.
+
+\bsk 
+
+\noindent {\bf Guidelines for writing up your project.}
+
+\medskip
+
+The project is the solution to an open-ended multistep problem, formally 
+presented. It will
+probably require several meetings for your group to find a solution to some of the 
+problems and to present your solutions
+clearly and understandably. Everyone in the group should contribute to the project.
+
+\medskip
+
+Your group should write up a short paper explaining the problem and the 
+mathematics you
+used to solve it, and then discussing the significance of your solution. 
+Your paper should be a grammatically
+correct, organized discussion of the problem, with an introduction and 
+a conclusion. While you should
+answer the specific questions asked in the project, your report should 
+not be a disconnected set of answers
+but a connected narrative with transitions. It should conform to proper 
+English usage (yes, spelling counts!). 
+You should show enough relevant
+calculations to justify your answers but not so much as to obscure the 
+calculations' purpose. If you type your report (this is preferred but
+not required) it is fine to leave blank spaces and write the equations in.
+[There are certain advantages to typing: making (small or large) 
+changes does not require
+the rewriting of the entire document!]
+Explain your results and conclusions, pointing out both strengths and 
+weaknesses of your analysis. Assume
+that your reader is someone who took a linear algebra course a while 
+ago and does not remember all
+of the details. Be sure to avoid plagiarism.
+
+\medskip
+
+Preparing formal reports is an important job skill for mathematicians, 
+scientists, and engineers. For example,
+the Columbia Investigation Board, in its report on the causes of the 
+Columbia space shuttle accident, wrote:
+
+\medskip
+
+{\it ``During its investigation, the board was surprised to receive 
+[PowerPoint] slides from NASA
+officials in place of technical reports. The board views the endemic 
+use of PowerPoint
+briefing slides instead of technical papers as an illustration 
+of the problematic methods of
+technical communication at NASA.''}
+
+
+\vfill
+\end

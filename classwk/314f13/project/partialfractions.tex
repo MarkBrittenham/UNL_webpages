@@ -1,0 +1,203 @@
+\magnification=1200
+
+\def\ctln{\centerline}
+\def\ni{\noindent}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.2in}
+\def\hhsk{\hskip.3in}
+\def\ra{$\rightarrow$}
+\def\ubr{\underbar}
+
+\baselineskip=10pt
+\nopagenumbers
+\parindent=0pt
+
+\ctln{\bf Math 107H}
+
+\msk
+
+\ctln{\bf The method of partial fractions}
+
+\bsk
+
+In calculus, we
+repeatedly find ourselves needing to integrate {\it rational functions}, that
+is, quotients of polynomials. There a general method 
+of finding such integrals (which isn't really so much about the integrals
+as it is the function themselves!), called {\it partial fractions}.
+
+\bsk
+
+The basic idea is that we will integrate a rational function
+
+\ctln{$\displaystyle f(x) = {{p(x)}\over{q(x)}} = {{a_0x^n+\cdots +a_{n-1}x+a_n}\over{b_0x^m+\cdots +b_{m-1}x+b_m}}$}
+
+by writing it as a sum of simpler functions.
+
+\msk
+
+The main fact that will make this (at least in theory, and often in practice) possible is that {\it any
+polynomial with real coefficients can (in principle) be expressed as the product of linear and (irreducible)
+quadratic polynomials}. By factoring the quotient polynomial $q(x)$ in this way, we can determine
+what the simpler functions will look like; a procedure very much like undetermined coefficients will
+then allow us to determine exactly what the simpler pieces are.
+
+\msk
+
+The basic procedure goes like this: starting with  $f(x)$ = $\displaystyle{{p(x)}\over{q(x)}}$
+
+\msk
+
+(0): Make sure that degree($p$)$<$degree($q$); do polynomial long division if it isn't. I.e., write
+$p(x) = a(x)q(x)+b(x)$, with degree($b$)$<$degree($q$), and then 
+
+\ssk
+
+\ctln{$\displaystyle {{p(x)}\over{q(x)}} =  a(x) + {{b(x)}\over{q(x)}}$,}
+
+\ssk
+
+and we can integrate $a(x)$, since it is a polynomial. 
+
+\msk
+
+(1): Factor $q(x)$ into linear and irreducible quadratic factors. This is the only step where 
+we really have no general procedure (basically, because there {\it is} none). As with the 
+auxiliary equations for higher order 
+DE's, we can try to find roots of the polynomial to determine linear factors, and there
+are procedures (like the rational roots theorem) for determining good candidates. And a 
+good computer algebra system can give us good approximations to roots (and quadratic factors).
+
+\msk
+
+(2): Group common factors together as powers; if, e.g., 3 is a root of $q(x)$ four times, then
+we treat the four factors in what follows as giving one factor of $(x-3)^4$.
+
+\msk
+
+(3a): For each group $(x-a)^k$, we add together:
+
+\ssk
+
+\ctln{$\displaystyle{{a_1}\over{x-a}}+\cdots +{{a_k}\over{(x-a)^k}}$}
+
+\ssk
+
+These are the simpler pieces that the factor $(x-a)^k$ will contribute to the final sum.
+
+\msk
+
+(3b): For each group $(ax^2+bx+c)^k$, we add together:
+
+\ssk
+
+\hhsk $\displaystyle{{c_1x+b_1}\over{ax^2+bx+c}}+\cdots +{{c_kx+b_k}\over{(ax^2+bx+c)^k}}$
+
+\msk
+
+(4)  Set $f(x)$ = the sum of all of these sums; solve the resulting equation for the `undetermined' coefficients $a_i,c_j$ , etc.
+
+\msk
+
+Note that we need to use {\it different} names for the coefficients, for each piece! 
+
+\msk
+
+Showing {\it why} this procedure works (i.e., why a rational function can always be expressed as such a
+sum) would take us too far afield (and isn't even really about integration!), so we will content ourselves 
+to just use this remarkable fact. There are two basic methods for carrying out step (4), to solve for the
+undetermined coefficients:
+
+\msk
+
+In both, we put the entire sum over a common denomenator (which, it turns out, will 
+(almost: up to multiplication by a constant) be equal to $q(x)$, if you put things over 
+the {\it smallest} common denomenator) and set the 
+resulting numerator equal to (the appropriate constant multiple of) $p(x)$.
+
+\ssk
+
+(a) (this always works): Multiply out the numerator to a single polynomial, and set 
+the coeffs of the two polynomials equal to one another. (This works because
+two polynomials are the same precisely when they have the same degree and their
+coefficients are equal to one another.) This gives us a system of linear equations
+involving the unknown coefficients, which we can solve.
+
+\ssk
+
+\hskip.4in Ex: $x+3 = a(x-1)+b(x-2)$ = $(a+b)x+(-a-2b)$; solve $1=a+b$, $3=-a-2b$
+
+\msk
+
+(b) Don't multiply out the numerator! Leave it as a sum of products of terms from 
+the denomenators. We can determine many of the unknown coefficients by plugging 
+well-chosen values in for $x$.
+
+\ssk
+
+For each linear term $(x-a)^k$,  plug $x=a$ into both sides. Most of the 
+terms of the sum will have a factor of $(x-a)$ and so will give zero, which will 
+allow us to quickly solve for one of the coefficients.
+
+\ssk
+
+If $k\geq 2$, take derivatives of both sides! Then by plugging in x=a, 
+we will quickly solve for another coefficient.
+
+\msk
+
+Ex: $\displaystyle{{x^2}\over{(x-1)^2(x^2+1)}}$ = $\displaystyle {{A}\over{x-1}}+{{B}\over{(x-1)^2}}+{{Cx+D}\over{x^2+1}}$
+
+\ssk
+
+\hskip2in $= \displaystyle{{A(x-1)(x^2+1)+B(x^2+1)+(Cx+D)(x-1)^2}\over{(x-1)^2(x^2+1)}}$
+
+\ssk
+
+so $A(x-1)(x^2+1)+B(x^2+1)+(Cx+D)(x-1)^2$ = $x^2$.
+
+\msk
+
+Set $x=1$, get $2B = 1$, solve for $B$.
+
+\msk
+
+Take derivatives: $A(x^2+1)+A(x-1)(2x)+B(2x)+C(x-1)^2+2(Cx+D)(x-1) = 2x$
+
+\ssk
+
+Set $x=1$, get $2A+0+2B+0+0=2$, solve for $A$ (since we already know $B$)
+
+\bsk
+
+The end result of this process is a an expression for $\displaystyle {{p(x)}\over{q(x)}}$ as a sum 
+of rational functions of the form 
+
+\ssk
+
+\ctln{$\displaystyle{{a_i}\over{(x-a)^i}}$ and $\displaystyle{{c_ix+b_i}\over{(ax^2+bx+c)^i}}$}
+
+\msk
+
+These can then be integrated one at a time; integrating the second type can be simplified by
+writing 
+
+\ssk
+
+\ctln{$\displaystyle{{c_ix+b_i}\over{(ax^2+bx+c)^i}} = {{c_i}\over{2a}}{{2ax+b}\over{(ax^2+bx+c)^i}} + 
+(b_i-{{c_ib}\over{2a}})\displaystyle{{1}\over{(ax^2+bx+c)^i}}$}
+
+\msk
+
+
+The first part can be integrated by substitution $u=ax^2+bx+c$ ; the second involves completing the square 
+(to write it as a sum of squares $a[(x-\alpha)^2+\beta^2]$) which we can then integrate by $u-$substitution 
+$u=x-\alpha$ , followed by trigonometric substitution $u=\beta\tan w$; this gives us a collection of
+powers of $\cos w$ to integrate.
+
+\vfill\end
+
+
+
