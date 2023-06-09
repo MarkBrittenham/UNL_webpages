@@ -1,0 +1,1137 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 208H</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for the first exam</center><br></b>
+<p>
+<p><br>
+<b>Chapter 9:</b> Parametric curves
+<p>
+<p>
+The motivation: think of the graph of y = f(x) as a 
+path that we are walking along. The 'right' way to
+think of this is that we are visiting each point of
+the graph at various times t, e.g., 
+<p>
+
+<center>x = t , y = f(x) = f(t)</center><br>
+<p>
+But we need not be limited to having x = t ; we can more
+generally describe our path as
+<p>
+
+<center>x = x(t) , y = y(t)</center><br>
+<p>
+This is a <i>parametric curve</i>; it describes a curve in 
+the plane, and how we traverse it through time. The 
+advantage is that the curve we describe need not be
+the graph of a function. t = the parameter = the independent 
+variable ; x and y = dependent variables
+<p>
+<p>
+A circle of radius 1 centered at (0,0) : x<sup>2</sup>+y<sup>2</sup> = 1
+<p>
+x(t) = cost , y(t) = sint 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>
+<p>
+Twice as fast around: x(t) = cos2t , y(t) = sin2t 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> <font face="symbol">p</font
+>
+<p>
+A circle of radius r centered at (a,b) : (x-a)<sup>2</sup>+(y-b)<sup>2</sup> = r<sup>2</sup>
+<p>
+Think: x-a = rcost , y-b = rsint
+<p>
+x(t) = a+rcost , y(t) = b+rsint 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>
+<p>
+<p>
+An ellipse: (x/a)<sup>2</sup>+(y/b)<sup>2</sup> = 1
+<p>
+x(t) = acost , y(t) = bsint 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>
+<p>
+A line through (a,b) and (c,d)
+<p>
+x(t) = a+t(c-a) , y(t) = b+t(d-b)
+<p>
+<p>
+Finding an (x,y) equation from a parametric equation: (if possible) solve for x = x(t)
+or y = y(t) as t = expression in x or y, then plug into the other equation.
+<p>
+<p>
+Ex: x = t<sup>2</sup>-1 , y = t<sup>3</sup>+t-1 , then x+1 = t<sup>2</sup> so t = <font face="symbol">±</font
+>[<font face="symbol">Ö</font
+>(x+1)], so
+y = (<font face="symbol">±</font
+>[<font face="symbol">Ö</font
+>(x+1)])<sup>3</sup>+(<font face="symbol">±</font
+>[<font face="symbol">Ö</font
+>(x+1)])-1
+<p>
+<p>
+<b>Calculus of curves</b>
+<p>
+<p>
+Thinking of a parametric curve as a path that we are traversing, we are at each
+instant aware of (at least) two things: how fast we are going and what direction
+we are going. Each can be computed essentially as we would for a graph.
+<p>
+<p>
+Speed = the limit of (distance)/(time interval) as the time interval shrinks to 0.
+<p>
+<p>
+average speed = <font face="symbol">Ö</font
+>{(<font face="symbol">D</font
+>x)<sup>2</sup>+(<font face="symbol">D</font
+>y)<sup>2</sup>}/<font face="symbol">D</font
+>t = 
+<font face="symbol">Ö</font
+>{(<font face="symbol">D</font
+>x/<font face="symbol">D</font
+>t)<sup>2</sup>+(<font face="symbol">D</font
+>y/<font face="symbol">D</font
+>t)<sup>2</sup>}
+<p>
+<p>
+instantaneous speed = [<font face="symbol">Ö</font
+>((dx/dt)<sup>2</sup>+(dy/dt)<sup>2</sup>)] = 
+<font face="symbol">Ö</font
+>{(x<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup> + (y<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup>}
+<p>
+<p>
+direction = slope of tangent line - limit of slopes of secant lines
+<p>
+<p>
+secant lines: slope = <font face="symbol">D</font
+>y/<font face="symbol">D</font
+>x = (<font face="symbol">D</font
+>y/<font face="symbol">D</font
+>t)/(<font face="symbol">D</font
+>x/<font face="symbol">D</font
+>t)
+<p>
+tangent lines: slope = (dy/dt)/(dx/dt) = y<sup><font face="symbol">¢</font
+></sup>(t)/x<sup><font face="symbol">¢</font
+></sup>(t)
+<p>
+<p>
+We can encode both of these in the <i>velocity vector</i> (x<sup><font face="symbol">¢</font
+></sup>(t),y<sup><font face="symbol">¢</font
+></sup>(t))
+<p>
+<p>
+A parametric curve x = x(t) , y = y(t)  , a <font face="symbol">£</font
+> t <font face="symbol">£</font
+> b with x(a) = x(b) , y(a) = y(b) 
+ends where it begins; it is a <i>closed curve</i>. Such a curve surrounds and encloses
+a region R in the plane. 
+<p>
+<p>
+If the curve goes around the region counterclockwise, then the area of the region can be
+computed as 
+<p>
+<p>
+
+<center>Area =  <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> x(t)y<sup><font face="symbol">¢</font
+></sup>(t)&nbsp;dt = 
+ -<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> y(t)x<sup><font face="symbol">¢</font
+></sup>(t)&nbsp;dt</center><br>
+<p>
+<p>
+We will see why this formula is true later in this class....
+<p>
+<p>
+<b>Arclength and surface area</b>
+<p>
+<p>
+Just as with graphs of functions, we can compute the length of a paramentric curve
+and the surface area when a curve is rotated around an axis:
+<p>
+<p>
+Length: we approximate it the same way, as a sum of lengths of line seqments
+that approximate the curve. Each segment has length 
+<p>
+<p>
+
+<center><font face="symbol">Ö</font
+>{(<font face="symbol">D</font
+>x)<sup>2</sup>+(<font face="symbol">D</font
+>y/)<sup>2</sup>} = 
+<font face="symbol">Ö</font
+>{(<font face="symbol">D</font
+>x/<font face="symbol">D</font
+>t)<sup>2</sup>+(<font face="symbol">D</font
+>y/<font face="symbol">D</font
+>t)<sup>2</sup>}<font face="symbol">D</font
+>t
+ <font face="symbol">»</font
+> <font face="symbol">Ö</font
+>{(x<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup> + (y<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup>}&nbsp;dt</center><br>
+<p>
+<p>
+so the length of the curve is  <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> <font face="symbol">Ö</font
+>{(x<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup> + (y<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup>}&nbsp;dt
+<p>
+<p>
+Surface area: if we spin the curve x = x(t) , y = y(t)  , a <font face="symbol">£</font
+> t <font face="symbol">£</font
+> b around
+the line y = c
+then, just like before, we can approximate the surface by frustra of cones,
+each having area approximately 
+<p>
+<p>
+2<font face="symbol">p</font
+><font face="symbol">|</font
+>y(t)-c<font face="symbol">|</font
+><font face="symbol">Ö</font
+>{(x<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup> + (y<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup>}&nbsp;dt = (2<font face="symbol">p</font
+>)(radius)(length)
+<p>
+<p>
+and so the area
+of the surface of revolution is
+<p>
+<p>
+
+<center> 2<font face="symbol">p</font
+><font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> <font face="symbol">|</font
+>y(t)-c<font face="symbol">|</font
+><font face="symbol">Ö</font
+>{(x<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup> + (y<sup><font face="symbol">¢</font
+></sup>(t))<sup>2</sup>}&nbsp;dt</center><br>
+<p>
+<p>
+Ex: for the ellipse x = 3cost , y = 5sint , 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>, spun around y = 7, we
+have
+<p>
+<p>
+Area =  2<font face="symbol">p</font
+><font face="symbol">ò</font
+><sub>0</sub><sup>2<font face="symbol">p</font
+></sup> (7-3sint)<font face="symbol">Ö</font
+>{9sin<sup>2</sup> t + 25cos<sup>2</sup> t}&nbsp;dt
+ =  2<font face="symbol">p</font
+><font face="symbol">ò</font
+><sub>0</sub><sup>2<font face="symbol">p</font
+></sup> (7-3sint)<font face="symbol">Ö</font
+>{9 + 16cos<sup>2</sup> t}&nbsp;dt
+<p>
+
+<p>
+<b>Polar coordinates</b>
+<p>
+<p>
+Idea: describe points in the plane in terms of (distance,direction).
+<p>
+r = (x<sup>2</sup>+y<sup>2</sup>)<sup>1/2</sup> = distance , <font face="symbol">q</font
+> = arctan(y/x) = angle with the positive x-axis.
+<p>
+x = rcos<font face="symbol">q</font
+> , y = rsin<font face="symbol">q</font
+>
+<p>
+The same point in the plane can have many representations in polar coordinates:
+<p>
+(1,0)<sub>rect</sub> = (1,0)<sub>pol</sub> = (1,2<font face="symbol">p</font
+>)<sub>pol</sub> = (1,16<font face="symbol">p</font
+>)<sub>pol</sub> = <font face="symbol">¼</font
+>
+<p>
+A negative distance is interpreted as a positive distance in the <i>opposite</i> direction (add <font face="symbol">p</font
+> to the angle):
+<p>
+(-2,<font face="symbol">p</font
+>/2)<sub>pol</sub> = (2,<font face="symbol">p</font
+>/2+<font face="symbol">p</font
+>)<sub>pol</sub> = (0,-2)<sub>rect</sub>
+<p>
+An equation in polar coordinates can (in principal) be converted to rectangular coords, and vice versa:
+<p>
+E.g., r = sin(2<font face="symbol">q</font
+>) = 2sin<font face="symbol">q</font
+>cos<font face="symbol">q</font
+> can be expressed as 
+<p>
+r<sup>3</sup> = (x<sup>2</sup>+y<sup>2</sup>)<sup>3/2</sup> = 2(rsin<font face="symbol">q</font
+>)(rcos<font face="symbol">q</font
+>) = 2yx, i.e., (x<sup>2</sup>+y<sup>2</sup>)<sup>3</sup> = 4x<sup>2</sup>y<sup>2</sup>
+<p>
+<p><br>
+Given an equation in polar coordinates
+<p>
+r = f(<font face="symbol">q</font
+>) , i.e., the curve (f(<font face="symbol">q</font
+>),<font face="symbol">q</font
+>)<sub>pol</sub> , <font face="symbol">q</font
+><sub>1</sub> <font face="symbol">£</font
+> <font face="symbol">q</font
+> <font face="symbol">£</font
+> <font face="symbol">q</font
+><sub>2</sub>
+<p>
+we can compute the slope of its tangent line, by thinking in rectangular coords:
+<p>
+x = f(<font face="symbol">q</font
+>)cos<font face="symbol">q</font
+>, y = f(<font face="symbol">q</font
+>)sin<font face="symbol">q</font
+> , so 
+<p>
+ [dy/dx] = [(dy/d<font face="symbol">q</font
+>)/(dx/d<font face="symbol">q</font
+>)] = [(f<sup><font face="symbol">¢</font
+></sup>(<font face="symbol">q</font
+>)sin<font face="symbol">q</font
+>+ f(<font face="symbol">q</font
+>)cos<font face="symbol">q</font
+>)/(f<sup><font face="symbol">¢</font
+></sup>(<font face="symbol">q</font
+>)cos<font face="symbol">q</font
+>- f(<font face="symbol">q</font
+>)sin<font face="symbol">q</font
+>)]
+<p>
+<p>
+Arclength: the polar curve r = f(<font face="symbol">q</font
+>) is really the (rectangular) parametrized curve
+<p>
+x = f(<font face="symbol">q</font
+>)cos<font face="symbol">q</font
+>, y = f(<font face="symbol">q</font
+>)sin<font face="symbol">q</font
+>, and (x<sup><font face="symbol">¢</font
+></sup>(<font face="symbol">q</font
+>))<sup>2</sup>+(y<sup><font face="symbol">¢</font
+></sup>(<font face="symbol">q</font
+>))<sup>2</sup>)<sup>1/2</sup> = 
+(f<sup><font face="symbol">¢</font
+></sup>(<font face="symbol">q</font
+>))<sup>2</sup>+(f(<font face="symbol">q</font
+>))<sup>2</sup>)<sup>1/2</sup>,
+<p>
+so the arclength for a <font face="symbol">£</font
+> <font face="symbol">q</font
+> <font face="symbol">£</font
+> b is displaystyle <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> (f<sup><font face="symbol">¢</font
+></sup>(<font face="symbol">q</font
+>))<sup>2</sup>+(f(<font face="symbol">q</font
+>))<sup>2</sup>)<sup>1/2</sup> &nbsp;d<font face="symbol">q</font
+> 
+<p>
+<p>
+Area: if r = f(<font face="symbol">q</font
+>) , a <font face="symbol">£</font
+> <font face="symbol">q</font
+> <font face="symbol">£</font
+> b describes a closed curve (f(a) = f(b) = 0), then we can 
+compute the area inside the curve as a sum of areas of sectors of a circle, each with area approximately
+<p>
+<font face="symbol">p</font
+>r<sup>2</sup> (<font face="symbol">D</font
+><font face="symbol">q</font
+>/2<font face="symbol">p</font
+> = [((f(<font face="symbol">q</font
+>))<sup>2</sup>)/2]<font face="symbol">D</font
+><font face="symbol">q</font
+>
+<p>
+so the area can be computed by the integral  <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> [1/2](f(<font face="symbol">q</font
+>))<sup>2</sup>&nbsp;d<font face="symbol">q</font
+>
+<p>
+<p><br>
+<b>Chapter 10: Vectors</b>
+<p>
+<p>
+<b>Vectors</b>
+<p>
+In one-variable calculus, we make a distinction between
+speed and velocity; velocity has a direction (left or right), 
+while speed doesn't. Speed is the <i>size</i> of the velocity.
+This distinction is even more important in higher 
+dimensions, and motivates the ntion of a <i>vector</i>.
+<p>
+Basically, a vector [v\vec] is an arrow pointing <i>from</i> 
+one point in the 
+plane (or 3-space or ...) <i>to</i> another. A vector is
+thought of as pointing frm its <i>tail</i> to its <i>head</i>.
+If it points from P to Q, we call the vector [v\vec]
+= PQ. 
+<p>
+A vector has both a <i>size</i> (= length = distance from P to Q)
+and a <i>direction</i>. Vectors that have the same size and point in the same 
+direction are often thought of as the same, even if they have different tails (and
+heads). Put differently, by picking up the vector and translating it so that its
+tail is at the origin (0,0), we can identify [v\vec] with a point in the plane, 
+namely its head (x,y), and write [v\vec] = <font face="symbol">á</font
+>x,y<font face="symbol">ñ</font
+>. If [v\vec] goes from 
+(a,b) to (c,d), then we would have [v\vec]= <font face="symbol">á</font
+>c-a,d-b<font face="symbol">ñ</font
+>. The length of [v\vec] =  
+<font face="symbol">á</font
+>a,b<font face="symbol">ñ</font
+> is then <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = [<font face="symbol">Ö</font
+>(a<sup>2</sup>+b<sup>2</sup>)].
+<p>
+In 3-space we have three special vectors, pointing in the direction of each coordinate
+axis (in the plane there are, analogously, two); these are called
+<p>
+
+<center>[i\vec] = <font face="symbol">á</font
+>1,0,0<font face="symbol">ñ</font
+>, [j\vec] = <font face="symbol">á</font
+>0,1,0<font face="symbol">ñ</font
+>, and [k\vec] = <font face="symbol">á</font
+>0,0,1<font face="symbol">ñ</font
+></center><br>
+<p>
+These come in especially handy when we start to add vectors.
+There are several different points of view to vector addition:
+<p>
+<p>
+(1) move the vector [w\vec] so that its head is on the tail of [v\vec]; then the vector
+[v\vec]+[w\vec] has tail equal to the tail of [v\vec] and head equal to the head of [w\vec];
+<p>
+<p>
+(2) move [v\vec] and [w\vec] so that their tails are both at the origin, and build the parallelogram
+which has sides equal to [v\vec] and [w\vec]; then [v\vec]+[w\vec] is the vector that goes from the origin
+to the opposite corner of the parallelogram;
+<p>
+<p>
+(3) if [v\vec] = <font face="symbol">á</font
+>a,b<font face="symbol">ñ</font
+> and [w\vec] = <font face="symbol">á</font
+>c,d<font face="symbol">ñ</font
+>, then [v\vec]+[w\vec] = <font face="symbol">á</font
+>a+c,b+d<font face="symbol">ñ</font
+>
+<p>
+<p>
+
+
+
+<a href="w1f2.ai">Figure</a>
+<p>
+We can also subtract vectors; if they share the same tail, [v\vec]-[w\vec] is the vector that
+points from the head of [w\vec] to the head of [v\vec] (so that [w\vec]+([v\vec]-[w\vec]) = [v\vec]). In coordinates,
+we simply subtract the coordinates.
+<p>
+We can also <i>rescale</i> vectors = multiply them by a constant factor;
+a[v\vec] = vector pointing in the same direction, but a times as long. (We use
+the convention that if a<font face="symbol"> &lt; </font
+>0, then a[v\vec] points in the <i>opposite</i> direction
+from [v\vec].)
+<p>
+Using coordinates, this means that a<font face="symbol">á</font
+>x,y<font face="symbol">ñ</font
+> = <font face="symbol">á</font
+>ax,ay<font face="symbol">ñ</font
+> . To distinguish a from the coordinates
+or the vector, we call a a <i>scalar</i>. One consequence of this formula is that <font face="symbol">|</font
+><font face="symbol">|</font
+>c[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+>c<font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> .
+<p>
+<p>
+All of these operations satisfy all of the usual properties you would expect:
+<p>
+<p>
+[v\vec]+[w\vec] = [w\vec]+[v\vec] 
+<p>
+([v\vec]+[w\vec])+[u\vec] = [v\vec]+([w\vec]+[u\vec])
+<p>
+a(b[v\vec]) = (ab)[v\vec]
+<p>
+a([v\vec]+[w\vec]) = a[v\vec] + a[w\vec]
+<p>
+<p>
+If all that we are interested in about a vector is its <i>direction</i>, then we can choose
+a vector of length one pointing in the same direction: 
+<p>
+ [u\vec]&nbsp; = [[v\vec]/(<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>)] = unit vector pointing in the same diection as [v\vec] .
+<p>
+<p>
+Of course there is nothing special in all of this about vectors in the plane; all of these ideas
+work for vectors in 3-space.  The only thing we really need to determine is
+the right formula for <i>length</i>: a few applications of the Pythagorean theorem leads us to
+<p>
+<font face="symbol">|</font
+><font face="symbol">|</font
+><font face="symbol">á</font
+>a,b,c<font face="symbol">ñ</font
+><font face="symbol">|</font
+><font face="symbol">|</font
+> = (a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>
+<p>
+<p><br>
+<b>Dot products</b>
+<p>
+<p>
+One thing we haven't done yet is multiply vectors together. It turns out that there are
+two ways to reasonably do this, serving two very different sorts of purposes.
+<p>
+The first, the dot product, is intended to measure the extent to which two vectors [v\vec] and [w\vec]
+are pointing in the same direction. It takes a pair of vectors [v\vec] = <font face="symbol">á</font
+>v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub><font face="symbol">ñ</font
+> and
+[w\vec] = <font face="symbol">á</font
+>w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>n</sub><font face="symbol">ñ</font
+>, and gives us a <i>scalar</i> [v\vec]<font face="symbol">·</font
+>[w\vec] = v<sub>1</sub>w<sub>1</sub>+<font face="symbol">¼</font
+>+v<sub>n</sub>w<sub>n</sub>.
+<p>
+Note that [v\vec]<font face="symbol">·</font
+>[v\vec] = v<sub>1</sub><sup>2</sup>+<font face="symbol">¼</font
+>+v<sub>n</sub><sup>2</sup> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>. In general, 
+[v\vec]<font face="symbol">·</font
+>[w\vec] = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;cos(<font face="symbol">q</font
+>), where <font face="symbol">q</font
+> is the angle
+between the vectors [v\vec] and [w\vec] (when they have the same tail); this can be seen by comparing
+the Law of Cosines to the formula 
+<p>
+<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]-[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup> + <font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup> - 2[v\vec]<font face="symbol">·</font
+>[w\vec]
+<p>
+This in turn allows us to compute this angle:
+<p>
+The <i>angle</i> <font face="symbol">Q</font
+> between v and w  = the angle (between 
+0 and <font face="symbol">p</font
+> with cos(<font face="symbol">Q</font
+>) = <font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>/(<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>)
+<p>
+<p>
+The dot product satisfies some properties which justify calling it a product:
+<p>
+[v\vec]<font face="symbol">·</font
+>[w\vec] = [w\vec]<font face="symbol">·</font
+>[v\vec]
+<p>
+(k[v\vec])<font face="symbol">·</font
+>[w\vec] = k([v\vec]<font face="symbol">·</font
+>[w\vec])
+<p>
+[v\vec]<font face="symbol">·</font
+>([w\vec]+[u\vec]) = [v\vec]<font face="symbol">·</font
+>[w\vec]+[v\vec]<font face="symbol">·</font
+>[u\vec]
+<p>
+<p>
+Two vectors are orthogonal (= perpendicular) if the angle <font face="symbol">q</font
+> between them is <font face="symbol">p</font
+>/2, 
+so cos(<font face="symbol">q</font
+>)=0; this means that [v\vec]<font face="symbol">·</font
+>[w\vec] = 0. We write [v\vec]<font face="symbol">^</font
+>[w\vec].
+<p>
+<p>
+Since <font face="symbol">|</font
+>cos<font face="symbol">q</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> 1, we always have <font face="symbol">|</font
+>[v\vec]<font face="symbol">·</font
+>[w\vec]<font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> . This is the <i>Cauchy-Schwartz inequality</i>. From this we can also deduce the <i>Triangle inequality</i> : <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]+[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>+<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> .
+<p>
+<p>
+Projecting one vector onto another:
+<p>
+The idea is to figure out how much of one vector [v\vec] points <i>in</i> the direction of another vector
+[w\vec]. The dot product measures to what extent they are pointing in the same direction, so it
+is only natural that it plays a role.
+<p>
+What we wish to do is to write [v\vec] = c[w\vec]&nbsp;+ [u\vec], where [u\vec]<font face="symbol">^</font
+>[w\vec] (i.e., write
+[v\vec] as the part pointing in the direction of [w\vec] and the part <font face="symbol">^</font
+> [w\vec]). By solving the
+equation ([v\vec]-c[w\vec])<font face="symbol">·</font
+>[w\vec] = 0, we find that c = ([v\vec]<font face="symbol">·</font
+>[w\vec])/([w\vec]<font face="symbol">·</font
+>[w\vec]).
+<p>
+We write c[w\vec] = proj<sub>[w\vec]</sub>[v\vec] =  [([v\vec]<font face="symbol">·</font
+>[w\vec])/([w\vec]<font face="symbol">·</font
+>[w\vec])][w\vec]=
+ [([v\vec]<font face="symbol">·</font
+>[w\vec])/(<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>)][[w\vec]/(<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>)]
+= (orthogonal) projection of [v\vec] onto [w\vec] .
+<p>
+[u\vec] = [v\vec]-c[w\vec] = the part of [v\vec] perpendicular to [w\vec] .
+<p>
+<p><br>
+<b>The cross product</b>
+<p>
+<p>
+The dot product takes two vectors and spits out a scalar. For vectors in 3-space, there is another
+product, which spits out another vector. The basica idea is that given two vectros in 3-space, there
+is a third vector which is perpendicular to both of them. Given the two vectors
+<p>
+[v\vec]&nbsp; = <font face="symbol">á</font
+>a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub><font face="symbol">ñ</font
+> , [w\vec]&nbsp; = <font face="symbol">á</font
+>b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub><font face="symbol">ñ</font
+>
+<p>
+we can solve the pair of equations a<sub>1</sub>x+a<sub>2</sub>y+a<sub>3</sub>z = 0, b<sub>1</sub>x+b<sub>2</sub>y+b<sub>3</sub>z = 0 to find that
+<p>
+<font face="symbol">á</font
+>a<sub>2</sub>b<sub>3</sub>-a<sub>3</sub>b<sub>2</sub>,-(a<sub>1</sub>b<sub>3</sub>-a<sub>3</sub>b<sub>1</sub>),a<sub>1</sub>b<sub>2</sub>-a<sub>2</sub>b<sub>1</sub><font face="symbol">ñ</font
+> is a solution.
+<p>
+We call this vector the <i>cross product</i> [v\vec]&times;[w\vec] for [v\vec] and [w\vec] .
+<p>
+<p>
+How do you remember this formula? Most people remember it using the notation
+<p>
+
+<center>[v\vec]&times;[w\vec] =
+
+
+|</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+[i\vec]</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+[j\vec]</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+[k\vec]</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+a<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+b<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| = 
+
+
+|</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ b<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|</td><td nowrap align="center">
+<font face="symbol">®</font
+><br>i<Br>&nbsp;<br></td><td nowrap align="center">
+- </td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ b<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap align="center">
+<font face="symbol">®</font
+><br>j<Br>&nbsp;<br></td><td nowrap align="center">
++</td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a<sub>2</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ b<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b<sub>2</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap align="center">
+<font face="symbol">®</font
+><br>k<Br>&nbsp;<br></td><td nowrap align="center">
+</center><br>
+<p>
+where |</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ c</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+d</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| = 
+ad-bc is the <i>determinant</i> of the 2&times;2 matrix
+<p>
+<p>
+The cross product satisfies several useful equalities:
+<p>
+
+[v\vec]<font face="symbol">·</font
+>([v\vec]&times;[w\vec]) = 0 , [w\vec]<font face="symbol">·</font
+>([v\vec]&times;[w\vec]) = 0
+<p>
+
+[v\vec]&times;[w\vec] = -[w\vec]&times;[v\vec]
+<p>
+
+(k[v\vec])&times;[w\vec] = k([v\vec]&times;[w\vec])
+<p>
+
+[v\vec]&times;([w\vec]+[u\vec]) = [v\vec]&times;[w\vec]+ [v\vec]&times;[u\vec]
+<p>
+
+[u\vec]<font face="symbol">·</font
+>([v\vec]&times;[w\vec]) = [v\vec]<font face="symbol">·</font
+>([w\vec]&times;[u\vec]) = [w\vec]<font face="symbol">·</font
+>([u\vec]&times;[v\vec]) (the <i>triple product</i>)
+<p>
+
+[u\vec]&times;([v\vec]&times;[w\vec]) = ([u\vec]<font face="symbol">·</font
+>[w\vec])[v\vec]- ([u\vec]<font face="symbol">·</font
+>[v\vec])[w\vec]
+<p>
+<p>
+For our standard vectors in 3-space we have
+<p>
+[i\vec]&times;[j\vec] = [k\vec] , [j\vec]&times;[k\vec] = [i\vec] , [k\vec]&times;[i\vec] = [j\vec]
+<p>
+<p>
+Our formula for the cross product was worked out 
+just by solving a pair of equations; any other multiple of our
+vector would have been perpendicular to [v\vec] and [w\vec], too. But
+in a precise sense, the formula we came up with is the right one, because
+the length of our vector has geometric significance:
+<p>
+<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]&times;[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> sin<font face="symbol">q</font
+> , where <font face="symbol">q</font
+> = angle between [v\vec] and [w\vec] .
+<p>
+But! The area of a parallelogram with sides equal to the 
+vectors [v\vec] and [w\vec]  is
+<p>
+Area = (base)&times;(height) = 
+<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;h = <font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;sin(<font face="symbol">q</font
+>) (from trigonometry).
+<p>
+So: <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]&times;[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;sin(<font face="symbol">q</font
+>) = the
+area of that parallelogram!
+<p>
+<p><br>
+The cross product can be used to carry out many calculations which we will find useful. 
+For example, to compute the distance d from a point P to the line through the points Q and
+R, we find that (setting [v\vec] = QP , [w\vec] = QR) using right triangles we have
+<p>
+<p>d = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>sin<font face="symbol">q</font
+> = (<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>sin<font face="symbol">q</font
+>)/<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]&times;[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>/<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>
+<p>
+<p>
+Also, to compute the volume of a parallelopiped with sides [u\vec],[v\vec],[w\vec], we can compute
+<p>
+<p>volume = (area of base)&#183;(height) = <font face="symbol">|</font
+><font face="symbol">|</font
+>[u\vec]&times;[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;(<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">|</font
+>cos<font face="symbol">y</font
+><font face="symbol">|</font
+>)
+<p>
+where <font face="symbol">y</font
+> = angle between [u\vec]&times;[v\vec] and [w\vec], so 
+<p>
+<p>volume = <font face="symbol">|</font
+>([u\vec]&times;[v\vec])<font face="symbol">·</font
+>[w\vec]<font face="symbol">|</font
+> = absolute value of the triple product!
+<p>
+<p><br>
+<b>Lines and planes in 3-space</b>
+<p>
+<p>
+Just as with lines in the plane, we can parametrize lines in space, given a point on 
+the line, P, and the direction [v\vec] that the line is travelling:
+<p>
+L(t) = (x(t),y(t),z(t)) = P +[v\vec]t = (x<sub>0</sub>+at,y<sub>0</sub>+bt,z<sub>0</sub>+ct)
+<p>
+This involves a (somewhat arbitrary) parameter t to describe; we can find a more
+<i>symmetric</i> description of the line by determining, for each coordinate, what t is
+and setting them all equal to one another:
+<p>
+ [(x-x<sub>0</sub>)/a] = [(y-y<sub>0</sub>)/b] = [(z-z<sub>0</sub>)/c]
+<p>
+<p>
+To determine if and where two lines in space intersect, if we use the parametrized forms, we
+need to remember that the two lines might pass through that same point at different times, and
+so we really need to use different names for the parameters:
+<p>
+P+[v\vec]t = Q+ [w\vec]s
+<p>
+This gives us three equations (each of the three coordinates) with two variables; it therefore
+usually does not have a solutions. Two lines in 3-space that do not meet are called <i>skew</i>.
+If two lines do meet, then we can treat them much like in the plane; we can, for example, 
+determine the angle at which they meet by computing the angle between their
+direction vectors [v\vec],[w\vec] .
+<p>
+<p>
+For planes, three points P, Q and R that do not lie on a single line will have exactly
+one plane through them. To describe that plane, we can think of it as all points X so that
+PX can be expressed as a combination of PQ and PR. This in 
+turn means that PX is perpendicular to anything that is simultaneously perpendicular 
+to both PQ and PR. But the cross product is such a vector; and so we
+can describe the plane by insisting that 
+<p>
+PX<font face="symbol">·</font
+>(PQ&times;PR) = 0
+<p>
+If we write PQ&times;PR = <font face="symbol">á</font
+>a,b,c<font face="symbol">ñ</font
+> and PX = <font face="symbol">á</font
+>x-x<sub>0</sub>,y-y<sub>0</sub>,z-z<sub>0</sub><font face="symbol">ñ</font
+>, then this equation becomes
+<p>
+a(x-x<sub>0</sub>)+b(y-y<sub>0</sub>)+c(z-z<sub>0</sub>) = 0
+<p>
+What is really needed to describe this plane, in some sense, is the point P = (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>) 
+and the vector [(\vec]N) = <font face="symbol">á</font
+>a,b,c <font face="symbol">ñ</font
+> = the <i>normal</i> vector to the plane. In 
+other words, to completely describe a plane we can also use knowledge of a single point 
+that the plane passes through, P, and what direction ``up'' is, namely the vector [(\vec]N)
+perpendicular to the plane (i.e, the vector perpendicular to every vector lying in the plane). 
+We can then write the equation for the plane as
+<p>
+<font face="symbol">á</font
+>x,y,z<font face="symbol">ñ</font
+><font face="symbol">·</font
+>[N\vec] = P<font face="symbol">·</font
+>[N\vec]
+<p>
+Note that if we are given the equation for the plane, we can quickly read off its normal 
+vector; it is the coefficients of x, y, and z.
+<p>
+<p>
+Intersecting planes: typically, two planes will intersect in a line (unless they are parallel, 
+i.e., their normals are multiples of one another). We can find the parametric equation for 
+the line by solving each equation of the 
+plane for x, say, as an expression in y and z. Setting these two expressions equal,
+we can express y, say, as a function of z. Plugging back into our original expression for 
+x, we get x as a function of z. So x, y, and z have all been expressed in terms 
+of a single variable, z, which is exactly what a parametric equation does! The direction vector
+for this line, it is worth pointing out, is the cross product of the normals to the two planes; this
+direction vector points in a direction lying in both planes, and so much be perpendicular to 
+both normals. 
+<p>
+
+
+
+One immediate application is the equation for a plane:
+<p>
+To find the plane through the three points P, Q, and R&nbsp;in 3-space, 
+look at the vectors PQ&nbsp;and PR&nbsp;. These are vectors
+between points in our plane, and so they give a pair of directions in the 
+plane. They then must both be perpendicular to the normal vector [n\vec]&nbsp;for 
+the plane. But we know that they are both perpendicular to [v\vec]&times;[w\vec],
+and so [v\vec]&times;[w\vec] must be perpendicular to the plane. In other words, 
+we can choose our normal vector to <i>be</i> [v\vec]&times;[w\vec]. Using one 
+of our original points (P, say) as a point in the plane, we can write down the
+equation for the plane using our dot product equation, above.
+<p>
+
+<p>
+
+
+
+We've seen that it usually takes three pieces of information to describe a plane in 3-space
+(3 points in the plane, or a point and the x- and y-slopes), however, using dot
+products, we can describe it using only <i>two</i>:
+<p>
+Every plane has a <i>normal vector</i> [n\vec]; [n\vec]&nbsp;is orthogonal to the vector PQ&nbsp;for any pair of 
+points P and Q in the plane. For example, the vector &nbsp;is perpendicular
+to the xy-plane, sine it is perpendicular to every vector of the form (a,b,0).
+Given such a normal vector [n\vec]&nbsp;and a point (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>) <i>in</i> the plane, every other point
+in the plane must satisfy [n\vec]<font face="symbol">·</font
+>(x-x<sub>0</sub>,y-y<sub>0</sub>,z-z<sub>0</sub>) = 0; writing this in
+coordinates gives the equation for the plane; 
+<p>
+
+<center>a(x-x<sub>0</sub>)+b(y-y<sub>0</sub>)+c(z-z<sub>0</sub>) = 0, where [n\vec](a,b,c)</center><br>
+<p>
+This means that if we are <i>given</i> the equation of the plane, we can 
+quickly read off what the normal vector for the plane is, as well. 
+<p>
+<p>
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
