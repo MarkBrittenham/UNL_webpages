@@ -1,0 +1,326 @@
+
+\magnification=1200
+
+\input amstex
+\loadmsbm
+
+\def\dsp{\displaystyle}
+
+\centerline{\bf Math 107 Project: Balancing on the point of a pin}
+
+\medskip
+
+\centerline{Due date: Thursday, December 5}
+
+\medskip
+
+This project explores the mathematics behind the
+{\it center of mass} (or {\it center of gravity}) of an object.
+
+\medskip
+
+In many physical situations, an object behaves as if all of its mass
+were concentrated at a single point, called the center of mass (COM) of the
+object. For example, an object allowed to rotate freely will rotate around 
+a line through its 
+center of mass; an object thrown through the air, in the absence of air 
+resistance, will have its center of mass trace out 
+the perfect parabolic arc that physics predicts. See, for example,
+
+\smallskip
+
+\centerline{http://www.schooltube.com/video/ef4699826e6448bf9703/Elmo-Center-of-Mass}
+
+\smallskip
+
+\noindent for experiments carried out with an Elmo doll! 
+In this project we will focus on center of mass computations for an object
+modeled as a thin plate of uniform density shaped like a region $R$
+in the plane; under these hypotheses, the COM is usually called the {\it centroid}
+of the region $R$.
+For a region $R$ having a 
+line of symmetry, the centroid will always lie along the line, a fact which 
+can greatly simplify calculations of centroids. Knowlege of the centroid of an 
+region, in turn, can greatly simplify other calculations; the Thoerem of Pappus
+states that when a region $R$ of the plane is rotated  in space around a line not meeting
+$R$, the volume of the resulting solid of revolution is equal to the area of $R$
+times the distance traveled by the centroid $R$ under the rotation. Our goal 
+is to verify some of these observations and carry out a variety of computations.
+
+\bigskip
+
+Some basic material on centers of mass can be found in section 8.4 of our text, pages
+415-423, which makes a good starting point for your studies. To summarize, a collection
+of masses $m_i$ distributed at the points $x_i$ along the real line will ``balance''
+at the point $\overline{x}$ where 
+
+\smallskip
+
+\centerline{$\overline{x}\sum m_i = \sum x_im_i$, 
+or, in a different form, $\sum m_i(\overline{x}-x_i)=0$}
+
+\smallskip
+
+\noindent This is essentially the principle of the lever; a small mass far from
+the balance point can balance a larger mass close to the balance point but on the 
+other side. $\overline{x}$ is the center of mass of the collection of masses.
+More generally, a finite collection of masses $m_i$ distributed at points $(x_i,y_i)$
+in the plane has
+center of mass $(\overline{x},\overline{y})$, where 
+
+\smallskip
+
+\centerline{$\sum m_i(\overline{x}-x_i)=0$ and  $\sum m_i(\overline{y}-y_i)=0$}
+
+\smallskip
+
+$\overline{x}-x_i$ represents the ``signed'' distance from the point $(x_i,y_i)$
+to the line $x=\overline{x}$; the condition $\sum m_i(\overline{x}-x_i)=0$ ensures
+that the masses, if placed on a massless plate supported along the line 
+$x=\overline{x}$, will balance. The other condition ensures that the masses 
+balance when supported along the horizontal line $y=\overline{y}$.
+
+\medskip
+
+Even more is true: 
+for $a,b\in{\Bbb R}$, if we set $c=a\overline{x}+b\overline{y}$,
+then the distance from the mass $m_i$ sitting at the 
+point $(x_i,y_i)$ to the line $ax+by=c$ is equal to 
+
+\smallskip
+
+\centerline{$\displaystyle {{|a(\overline{x}-x_i)+b(\overline{y}-y_i)|}\over{\sqrt{a^2+b^2}}}$ ,}
+
+\smallskip
+
+\noindent and so, if we define the `signed' distance from $(x_i,y_i)$
+to the line $ax+by=c$ to be 
+
+\smallskip
+
+\centerline{$\displaystyle d_{a,b}(x_i,y_i) = {{a(\overline{x}-x_i)+b(\overline{y}-y_i)}\over{\sqrt{a^2+b^2}}}$ ,}
+
+then $\sum m_id_{a,b}(x_i,y_i)=0$. So the collection of masses will also
+balance when supported along any line through the center of mass.
+
+\medskip
+
+From this it follows that a collection of masses will ``balance'' on the point of a pin placed
+at the center of mass, since they will not tip in any direction.
+
+\medskip
+
+Now assume we have a thin plate occupying a region $R$ as shown. Also, 
+assume the density of the plate is a constant $\rho$ $kg/m^2$.  
+
+\input epsf
+
+\leavevmode
+
+\epsfxsize=1.8in
+\centerline{\epsfbox{comfig.eps}}
+
+In order to find the centroid of the plate, we start by finding $\overline{x}$. 
+We partition the interval  $[a,b]$  via the regular partition  $\{a=x_0, x_1, x_2,  \cdots , x_n=b\}$, 
+with $\Delta x=\frac{b-a}{n}$. This process results in dividing the plate into thin vertical 
+strips which can be approximated as a rectangle of a small width $\Delta x$. Let   $L(z_k)$ be 
+the total length of the
+line segments of intersection of the vertical line $x=z_k$ with $R$, where 
+$z_k \in [x_{k-1}, x_k] $ is any point of your choice. Now, we think of each vertical strip 
+of the plate as a discrete mass in the plane whose coordinate is $(z_k, w_k)$, for some 
+$w_k\in {\Bbb R}$, which is irrelevant in the following calculations. Let us note that 
+the mass of the kth vertical strip is given by:
+$m_k= \text{ (density)(area)} \approx \rho L(z_k) \Delta x $. So, by thinking of the 
+whole plate as a discrete system of $n$ masses $m_k  \approx \rho L(z_k) \Delta x$ each 
+located at a point $(z_k, w_k)$ in the plane, we find
+$$\overline{x}=\frac{M_y}{M} \approx \frac{\sum_{k=1}^n \rho z_k L(z_k) \Delta x} 
+{\sum_{k=1}^n \rho  L(z_k) \Delta x}=\frac{\sum_{k=1}^n  z_k L(z_k) \Delta x} {\sum_{k=1}^n   L(z_k) \Delta x} .$$ 
+
+
+\noindent By letting  $n\rightarrow \infty$, we obtain the formula \hskip.2in
+$\displaystyle\overline{x}= \frac{\int_{a}^b x  L(x) dx}{\int_{a}^b   L(x) dx}.$
+ 
+\smallskip
+
+\noindent A similar collection of steps will obtain a formula for the $y$-coordinate of the 
+centroid:
+
+\smallskip
+
+\centerline{$\dsp\overline{y}= \frac{\int_{c}^d y S(y) dy}{\int_{c}^d   S(y) dy}, $}
+
+\smallskip
+
+\noindent where $S(w_k)$ is the total length of the
+line segments of intersection of the horizontal line $y=w_k$ with $R$.
+
+\medskip
+
+\noindent{\bf Problem \# 1:} Explain why the area $A(R)$ of the region $R$ is
+equal to
+
+\smallskip
+
+\centerline{$\displaystyle A(R) = \int_a^b L(x)\ dx = \int_c^d L(y)\ dy$ .}
+
+\smallskip
+
+\noindent Hence we have:
+
+\smallskip
+
+\centerline{$\dsp\overline{x}= \frac{1}{A(R)} \int_{a}^b   xL(x) dx, \quad \overline{y}= \frac{1}{A(R)}\int_{c}^d  y S(y) dy$ .}
+
+\smallskip
+
+\noindent Use this to explain why, if the region $R$ has a vertical line of reflection
+symmetry $x=A$, then $\overline{x}=A$, and if 
+$R$ has a horizontal line of reflection symmetry $y=B$, then
+$\overline{y}=B$. [Hint: a line of symmetry tells us something 
+about the function $L(x)$ or $L(y)$. You might, to start, assume that $A=0$ and $B=0$.] 
+
+\medskip
+
+By computing $L(x)$ and $L(y)$ for specific examples, together with symmetry considerations,
+we can compute the centroids of a wide variety of regions in the plane:
+
+\medskip
+
+\noindent{\bf Problem \# 2:} Compute the centroids of 
+
+\smallskip
+
+(a): the disk $D=\{(x,y)\ :\ (x+2)^2+y^2\leq 1\}$;
+
+(b): the triangle with vertices $(1,0)$, $(5,0)$, and $(4,4)$;
+
+(c): the triangle with vertices $(1,0)$, $(4,0)$, and $(5,4)$;
+
+(d): the region lying between the parabolas $y=2x-x^2$ and $y=2x^2-4x$
+
+\smallskip
+
+\noindent [You may use familiar formulas for area to streamline your computations,
+as well as any symmetries that you can identify.]
+
+\medskip
+
+In your answers for 3(b) and 3(c), if you compare the coordinates of the
+centroids with the coordinates of the
+vertices of the triangles, you may begin to suspect that there is a 
+general formula for the centroid of a triangle, in terms of the 
+coordinates of the vertices. Your final task is to find that formula,
+by carrying out the integral computations for a triangle with
+unknown values for its vertices.
+
+\medskip
+
+\noindent{\bf Problem \# 3:} Find a 
+general formula for the centroid of
+a triangle with vertices $(x_1,y_1)$, $(x_2,y_2)$, and $(x_3,y_3)$. 
+
+\medskip
+
+To do this, we may assume that the $x$-coordinates of the points are 
+ordered 
+
+\smallskip
+
+\centerline{$x_1 \leq x_2 \leq x_3$}
+
+\smallskip
+
+\noindent (otherwise we would just rename them), but you 
+should treat the two cases, where $(x_2,y_2)$ lies above or below the 
+side joining the other two vertices, separately. You will, as with 3(b) 
+and 3(c), need to find formulas for the lines joining the vertices, in
+order to carry out your integral computations. You will also probably find it
+helpful, while in the middle of your calculations, to introduce some shorthand,
+like $\Delta_1=x_2-x_1$ or $\dsp m_3={{y_3-y_1}\over{x_3-x_1}}$, to keep the
+readability of what you are doing to an acceptably high level!
+
+\smallskip
+
+You should, for this problem, simplify your answers as much as possible,
+hopefully to the point where your answers for both cases look identical!
+
+\bigskip
+
+\noindent {\bf Guidelines for writing up your project.}
+
+\medskip
+
+The intent of projects is to expose you to mathematics as you might meet it 
+in the real world, i.e., working
+as a team. Your group must understand the problem; translate it into 
+mathematics; learn, read about, or
+develop mathematical methods to find the answer; show that the answer is 
+correct; translate the mathematical
+answer back into the original problem and, finally, explain the significance 
+of the translated answer. Projects
+are easier than real world problems, in that we make sure that the problem 
+can be solved using the methods
+of this course. You may need to learn some new information to do the project.
+
+\medskip
+
+The project is the solution to an open-ended multistep problem, formally 
+presented. It will
+probably require several meetings for your group to find a solution to the 
+problem and to present that solution
+clearly and understandably. Everyone in the group should contribute to the project.
+\medskip
+
+Your group should write up a short paper explaining the problem and the 
+mathematics you
+used to solve it, and then discussing the significance of your solution. 
+Your paper should be a grammatically
+correct, organized discussion of the problem, with an introduction and 
+a conclusion. While you should
+answer the specific questions asked in the project, your report should 
+not be a disconnected set of answers
+but a connected narrative with transitions. It should conform to proper 
+English usage (yes, spelling counts!)
+and should include appropriate diagrams and/or graphs, clearly labeled. 
+You should show enough relevant
+calculations to justify your answers but not so much as to obscure the 
+calculations' purpose. If you type your report (this is preferred but
+not required) it is fine to leave blank spaces and write the equations in.
+[There are certain advantages to typing: making (small or large) 
+changes does not require
+the rewriting of the entire document!]
+Explain your results and conclusions, pointing out both strengths and 
+weaknesses of your analysis. Assume
+that your reader is someone who took a calculus class course a while 
+ago and does not remember all
+of the details. Be sure to avoid plagiarism.
+
+\medskip
+
+Preparing formal reports is an important job skill for mathematicians, 
+scientists, and engineers. For example,
+the Columbia Investigation Board, in its report on the causes of the 
+Columbia space shuttle accident, wrote:
+
+\medskip
+
+{\it ``During its investigation, the board was surprised to receive 
+[PowerPoint] slides from NASA
+officials in place of technical reports. The board views the endemic 
+use of PowerPoint
+briefing slides instead of technical papers as an illustration 
+of the problematic methods of
+technical communication at NASA.''}
+
+\bigskip
+
+For {\bf extra credit}, you can build models of some of the regions described in 
+Problem \# 2, out of some relatively stiff material, and demonstrate 
+that they balance on the head of a pin placed at the centroid that you 
+computed! [This can also serve as an independent check that your computed 
+solution is correct!]
+
+\vfill
+\end
+
+
