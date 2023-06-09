@@ -1,0 +1,649 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 314</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for third exam</center><br></b>
+<p>
+<p><br>
+
+<center>Technically, everything covered by the first two exams <b>plus</b></center><br>
+<p>
+
+<b>Chapter 4:</b> Eigenvalues
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The beginning</b></DD></DL>
+For A an n&times;n matrix, v is an <i>eigenvector</i> (e-vector, for short) for A if v <font face="symbol">¹</font
+> 0 and 
+Av = <font face="symbol">l</font
+>v for some (real or complex, depending on the context) number <font face="symbol">l</font
+>.
+<font face="symbol">l</font
+> is called the associated <i>eigenvalue</i> for A.
+<p>
+A matrix which has an eigenvector has <i>lots</i> of them; if v is an eigenvector, then
+so is 2v, 3v, etc. On the other hand, a matrix does 
+<U>not</U> have lots of 
+eigenvalues:
+<p>
+<p>
+If <font face="symbol">l</font
+>&nbsp;is an e-value for A, then (<font face="symbol">l</font
+>I-A)v=0 for some non-zero vector v. So
+\cal N(<font face="symbol">l</font
+>I-A) <font face="symbol">¹</font
+> {0}, so det(<font face="symbol">l</font
+>I-A) = 0. 
+But det(tI-A) = p<sub>A</sub>(t), thought of as a function of t, is a polynomial of
+degree n, so has 
+<U>at</U> 
+<U>most</U> n roots. So A has at most n different 
+eigenvalues. 
+<p>
+ p<sub>A</sub>(t) = det(tI-A) is called the <i>characteristic polynomial</i> of A.
+<p>
+\cal N(<font face="symbol">l</font
+>I-A) = \cal E<sub><font face="symbol">l</font
+></sub> (A) is (ignoring 0) the collection 
+of all e-vectors for A with
+e-value <font face="symbol">l</font
+>. it is called the <i>eigenspace</i> (or e-space) for A corresponding 
+to <font face="symbol">l</font
+>. An <i>eigensystem</i> for a (square) matrix A is a list of all of 
+its e-values, along with their corresponding e-spaces.
+<p>
+<p>
+One somewhat simple case: if A is (upper or lower) triangular, then the e-values for
+A are 
+<U>exactly</U> the diagonal entries of A, since tI-A is also triangular, so
+its determinant is the product of its diaginal entries.
+<p>
+We call dim\cal N(<font face="symbol">l</font
+>I-A) the <i>geometric multiplicity</i> of <font face="symbol">l</font
+>, and the
+number of times <font face="symbol">l</font
+>&nbsp;is a root of p<sub>A</sub>(t) (= number of times (t-<font face="symbol">l</font
+>) is a factor)
+ = m(<font face="symbol">l</font
+>) = the algebraic multiplicity of <font face="symbol">l</font
+>&nbsp;.
+<p>
+Some basic facts:
+<p>
+The number of real eigenvalues for an n&times;n matrix is  <font face="symbol">£</font
+> n .
+<p>
+counting multiplicity and complex root the number of eigenvalues =n .
+<p>
+For every e-value <font face="symbol">l</font
+>, 1 <font face="symbol">£</font
+>  the geometric multiplicity  <font face="symbol">£</font
+>  m(<font face="symbol">l</font
+>)
+<p>
+<p>
+If the matrix A is symmetric (i.e., A<sup>T</sup> = A), then every eigenvalue of A is a 
+<U>real</U>
+number (i.e., every complex root of p<sub>A</sub>(t) is actually real).
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Similarity and diagonalization</b></DD></DL>
+TRhe basic idea: to understand a Markov chain x<sub>n</sub> = A<sup>n</sup> x<sub>0</sub>, you need to compute large powers
+of A. This can be hard! There ought to be an easier way. Eigenvalues (or rather, eigenvectors) 
+can help (if you have enough of them).
+<p>
+<p>
+The matrix A = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+2</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+4</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) has e-values 1 and 6 (Check!) with
+corresponding e-vectors (1,-1) and (2,3) . This then means that
+<p>
+<p>
+(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+2</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+4</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>)</td><td align="left"><font face="symbol">
+æ<br>ç<br>ç<br>
+ç<br>è
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+1</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+2</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ -1</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+3</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ö<br>÷<br>÷<br>
+÷<br>ø
+</font></td><td>
+ = 
+(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+1</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+2</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ -1</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+3</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>)</td><td align="left"><font face="symbol">
+æ<br>ç<br>ç<br>
+ç<br>è
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+1</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+0</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 0</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+6</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ö<br>÷<br>÷<br>
+÷<br>ø
+</font></td><td>
+ , which we write AP = PD , 
+<p>
+<p>
+where P is the matrix whose colummns are our e-vectors, and D is a diagonal matrix. Written slightly
+differently, this says A = PDP<sup>-1</sup> .
+<p>
+<p>
+We say two matrices A and B are <i>similar</i> if there is an invertible matrix
+P so that AP = PB . (Equivalently, A = PBP<sup>-1</sup>, or B = P<sup>-1</sup>AP .) A matrix
+A is <i>diagonalizable</i> if it is similar to a diagonal matrix.
+<p>
+Why do we care? It is easy to check that if A = PBP<sup>-1</sup>, then A<sup>n</sup> = PB<sup>n</sup>P<sup>-1</sup> .
+If B<sup>n</sup> is easy to calculate (e.g., if B is diagonal; B<sup>n</sup> is then also diagonal, and its
+diagonal entries are the powers of B's diagonal entries), this means A<sup>n</sup> is 
+<U>also</U>
+fairly easy to calculate!
+<p>
+Also, if A and B are similar, then they have the same characteristic polynomial, so they
+have the same eigenvalues. They do, however, have different eigenvectors; in fact, if AP = PB
+and Bv = <font face="symbol">l</font
+>v, then A(Pv) = <font face="symbol">l</font
+>(Pv), i.e., the e-vectors of A are P times the
+e-vectors of B . 
+<p>
+These facts in turn tell us when a matrix can be diagonalized. Since for a diagonal matrix D, each
+of the standard basis vectors e<sub>i</sub> is an e-vector, R<sup>n</sup> has a basis consisting of e-vectors 
+for D. If A is similar to D, via P, then each of Pe<sub>i</sub> = ith column of P is 
+an e-vector. But since P is invertible, its columns form a basis for R<sup>n</sup>, as well. SO there
+is a basis consisting of e-vectors of A. On the other hand, such a basis guarantees that
+A is diagonalizable (just run the above argument in reverse...), so we find that:
+<p>
+<p>
+(The Diagonalization Theorem) An n&times;n matrix A is diagonalizable if and only if there is 
+basis of R<sup>n</sup> consisting of eigenvectors of A.
+<p>
+<p>
+And one way to guarantee that such a basis exists: If A is n&times;n and has n distinct
+eigenvalues, then choosing an e-vector for each will 
+<U>always</U> yield a linear independent 
+coillection of vectors (so, since there are n od them, you get a basis for R<sup>n</sup>). So:
+<p>
+<p>
+If A is n&times;n and has n distinct (real) eigenvalues, A is diagonalizable.
+In fact, the dimensions of all of the eigenspaces for A (for real eigenvalues <font face="symbol">l</font
+>) add up to n
+if and only if A is diagonalizable.
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Discrete dynamical systems</b></DD></DL>
+A discrete dynamical system (DDS) (= a system that moves in discrete steps) is a generalization 
+of the Markov processes we studied before.
+It consists of an <i>initial state</i> x<sub>0</sub> and a transition matrix A . Starting at x<sub>0</sub>, at 
+every tick of the clock, we take the vector we are standing on and mutliply by A, so after
+n ticks, we are standing on x<sub>n</sub> = A<sup>n</sup>x<sub>0</sub> . 
+<p>
+The main question we wish to study is: what happens to x<sub>n</sub> as n gets larger and larger?
+It turns out that this question has a fairly straightforward answer when A is diagonalizable.
+The answer depends upon the value of the <i>spectral radius</i> of A, <font face="symbol">r</font
+>(A), which is defined to
+be max{<font face="symbol">|</font
+><font face="symbol">l</font
+><sub>i</sub><font face="symbol">|</font
+>}, where <font face="symbol">l</font
+><sub>i</sub> ranges over all of the e-values of A. In essence,
+it is the size of the `largest' eigenvalue of A. Then we have:
+<p>
+<p>
+If A is diagonalizable, and x<sub>0</sub> is an initial state, then
+<p>
+<p>
+If <font face="symbol">r</font
+>(A)<font face="symbol"> &lt; </font
+>1, then <font face="symbol">|</font
+><font face="symbol">|</font
+>A<sup>n</sup>x<sub>0</sub><font face="symbol">|</font
+><font face="symbol">|</font
+> goes to 0 as n goes to <font face="symbol">¥</font
+> .
+<p>
+If <font face="symbol">r</font
+>(A) = 1, then for some N, <font face="symbol">|</font
+><font face="symbol">|</font
+>A<sup>n</sup>x<sub>0</sub><font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> N for all n .
+<p>
+If <font face="symbol">r</font
+>(A) = 1, A has e-value 1, and every other e-value has absolute
+value less than 1, then A<sup>n</sup> x<sub>0</sub> has a limit x<sub><font face="symbol">¥</font
+></sub> as n<font face="symbol">®</font
+><font face="symbol">¥</font
+>, and
+either Ax<sub><font face="symbol">¥</font
+></sub> = 0 or Ax<sub><font face="symbol">¥</font
+></sub> = x<sub><font face="symbol">¥</font
+></sub> . (Usually, it equals x<sub><font face="symbol">¥</font
+></sub> .)
+<p>
+If <font face="symbol">r</font
+>(A)<font face="symbol"> &gt; </font
+>1, then for nearly every x<sub>0</sub>, <font face="symbol">|</font
+><font face="symbol">|</font
+>A<sup>n</sup>x<sub>0</sub><font face="symbol">|</font
+><font face="symbol">|</font
+> goes to <font face="symbol">¥</font
+> as n goes to <font face="symbol">¥</font
+>
+<p>
+<p>
+A matrix A is called <i>defective</i> if for some e-value <font face="symbol">l</font
+>, 
+dim\cal N(<font face="symbol">l</font
+>I-A)<font face="symbol"> &lt; </font
+>m(<font face="symbol">l</font
+>) . It is fairly easy to show that a
+matrix is defective if and only if it is not diagonalizable (since the
+sum of dimensions of e-spaces will then be less than n).
+<p>
+What do we do if A 
+<U>isn't</U> diagonalizable? Some of the statements (when <font face="symbol">r</font
+>(A) = 1)
+fail to be true. But it turns out that the other two statements 
+<U>are</U> true. This can be 
+shown using <i>Jordan normal forms</i>
+<p>
+The idea is that being diagonalizable says that A is similar to a very simple matrix. It 
+turns out that every matrix is similar to a `kind of' simple matrix. A <i>Jordan block</i>
+J<sub><font face="symbol">l</font
+></sub>(k) is a k&times;k matrix most of whose entries are 0, except along the
+diagonal the entires are equal to <font face="symbol">l</font
+>, and just above the diagonal they are 1. 
+<p>
+Every matrix is similar to a <i>block diagonal matrix</i>, i.e., a matrix whose entries are all
+0 outside of a collection of square blocks whose diagonals sit on the main diagonal of A. 
+Each block is a Jordan block, with possibly different <font face="symbol">l</font
+>'s. This matrix is the
+<i>Jordan normal form</i> for A. It is unique, up to reordering the blocks on the 
+diagonal.
+<p>
+We can still talk about the spectral radius <font face="symbol">r</font
+>(A) of a matrix, even if it isn't diagonalizable.
+With Jordan normal forms, it is possible to show that the first and last assertions of our 
+theorem hold true, for every matrix A.
+<p>
+<p>
+<b>Chapter 5:</b> Norms and inner products (again)
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Norms</b></DD></DL>
+We have found the notion of the length of a vector in R<sup>n</sup> useful in several circumstances 
+so far, now it is time to extend this concept to more of our favorite vector spaces!
+<p>
+The idea of this section is that our familiar notion of length satisfies some fairly natural
+properties. What we will now do is assert that any function satisfying those properties
+is something that we can reasonably called a notion of length, or a <i>norm</i>.
+<p>
+A <i>norm</i> on a vector space V is a function <font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>:V<font face="symbol">®</font
+> R which 
+satisfies:
+<p>
+<p>
+(1) for every v in V, <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">³</font
+> 0, and <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+> = 0 if and only if v = 0 
+<p>
+(2) for every v in V and c in R, <font face="symbol">|</font
+><font face="symbol">|</font
+>c&#183;v<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+>c<font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>
+<p>
+(3) for every v and w in V, <font face="symbol">|</font
+><font face="symbol">|</font
+>v+w<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>+<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+> (Triangle Inequality)
+<p>
+<p>
+The pair (V,<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>) is called a <i>normed linear space</i>.
+<p>
+For example, on R<sup>n</sup> there are 
+<U>lots</U> of different norms: for every p <font face="symbol">³</font
+> 1, the function
+<p>
+
+<center><font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+><sub>p</sub> = (<font face="symbol">|</font
+>v<sub>1</sub><font face="symbol">|</font
+><sup>p</sup>+<font face="symbol">¼</font
+>+<font face="symbol">|</font
+>v<sub>n</sub><font face="symbol">|</font
+><sup>p</sup>)<sup>1/p</sup></center><br>
+<p>
+is a norm, called the p-norm . There is a similar norm for `p = <font face="symbol">¥</font
+>':
+<p>
+
+<center><font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+><sub><font face="symbol">¥</font
+></sub> = max{<font face="symbol">|</font
+>v<sub>1</sub><font face="symbol">|</font
+>,<font face="symbol">¼</font
+>,<font face="symbol">|</font
+>v<sub>n</sub><font face="symbol">|</font
+>}</center><br>
+<p>
+<p>
+Also, for C[a,b] = the cts fcns from [a,b] to R, 
+<p>
+
+<center> <font face="symbol">|</font
+><font face="symbol">|</font
+>f<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup><font face="symbol">|</font
+>f(x)<font face="symbol">|</font
+> dx</center><br>
+<p>
+is a norm. For many of these, especially the p-norms, proving the triangle inequality
+takes some work!
+<p>
+With a norm we can talk about convergence: v<sub>n</sub><font face="symbol">®</font
+> v as n<font face="symbol">®</font
+> <font face="symbol">¥</font
+> means
+(as with the usual norm) that <font face="symbol">|</font
+><font face="symbol">|</font
+>v<sub>n</sub>-v<font face="symbol">|</font
+><font face="symbol">|</font
+><font face="symbol">®</font
+> 0 as n<font face="symbol">®</font
+><font face="symbol">¥</font
+> .
+<p>
+We can also talk about the ball of radius r around a vector v; it is all of the 
+vectors w with <font face="symbol">|</font
+><font face="symbol">|</font
+>w-v<font face="symbol">|</font
+><font face="symbol">|</font
+><font face="symbol"> &lt; </font
+>r .
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Inner products</b></DD></DL>
+Just as with norms, we can adapt our notion of an innner product <font face="symbol"> &lt; </font
+>&#183;,&#183;<font face="symbol"> &gt; </font
+> to more general
+vector spaces, by taking some of its familiar properties and making these a definition of
+an inner product!
+<p>
+An <i>inner product</i> on a vector space V is a function <font face="symbol"> &lt; </font
+>&#183;,&#183;<font face="symbol"> &gt; </font
+> which takes pairs
+of vectors and hands you a number, which satisfies:
+<p>
+(1) for every v in V, <font face="symbol"> &lt; </font
+>v,v<font face="symbol"> &gt; </font
+> <font face="symbol">³</font
+> 0, and <font face="symbol"> &lt; </font
+>v,v<font face="symbol"> &gt; </font
+> = 0 if and only if v = 0
+<p>
+(2) for every v and w in V, <font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+> = <font face="symbol"> &lt; </font
+>w,v<font face="symbol"> &gt; </font
+>
+<p>
+(3) for every v and w in V, and c in R, <font face="symbol"> &lt; </font
+>cv,w<font face="symbol"> &gt; </font
+> = c<font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+>
+<p>
+(4) for every u, v, and w in V, <font face="symbol"> &lt; </font
+>u+v,w<font face="symbol"> &gt; </font
+> = <font face="symbol"> &lt; </font
+>u,w<font face="symbol"> &gt; </font
+> + <font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+>
+<p>
+<p>
+The pair (V,<font face="symbol"> &lt; </font
+>&#183;,&#183;<font face="symbol"> &gt; </font
+>) is called an <i>inner product space</i>.
+<p>
+Again, it turns out that there are lots of inner products on R<sup>n</sup>, besides the
+usual one. For example, on R<sup>2</sup>, <font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+> = 2v<sub>1</sub>w<sub>1</sub>+5v<sub>2</sub>w<sub>2</sub> is an inner product; you 
+can check that the four properties hold. More generally, for any invertible n&times;n
+matrix A, the function 
+<p>
+
+<center><font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+><sub>A</sub> = <font face="symbol"> &lt; </font
+>Av,Aw<font face="symbol"> &gt; </font
+> = v<sup>T</sup>(A<sup>T</sup>A)w</center><br>
+<p>
+is an inner product on R<sup>n</sup>. On C[a,b], 
+<p>
+
+<center><font face="symbol"> &lt; </font
+>f,g<font face="symbol"> &gt; </font
+> = <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)g(x) dx</center><br>
+<p>
+is an inner product.
+<p>
+<p>
+It turns out that every inner product on V can be used to define a norm on V, by 
+doing what we know is true for the usual norm and inner product:
+<p>
+Define <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+> = (<font face="symbol"> &lt; </font
+>v,v<font face="symbol"> &gt; </font
+>)<sup>1/2</sup> . Property (1) for an inner product implies that property
+(1) for a norm holds; property (3) for an inner product implies property (2) for a norm holds;
+and finally, property (3) for this norm hold because
+<p>
+
+<center>(<font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+>)<sup>2</sup> <font face="symbol">£</font
+> <font face="symbol"> &lt; </font
+>v,v<font face="symbol"> &gt; </font
+><font face="symbol"> &lt; </font
+>w,w<font face="symbol"> &gt; </font
+></center><br>
+<p>
+This is our (old) Schwartz inequality; but a look at the reasons why this was true for the 
+ordinary inner product will convince you that all we need to know was the properties (1)-(4)
+for the inner product. So our argument there carries over to this more general setting without 
+any change!
+<p>
+<p>
+So every inner product can be used to define a norm. But not every norm comes 
+<U>from</U> an 
+inner product! There are several properties (for example, 
+<font face="symbol">|</font
+><font face="symbol">|</font
+>u+v<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>+<font face="symbol">|</font
+><font face="symbol">|</font
+>u-v<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup> = 2<font face="symbol">|</font
+><font face="symbol">|</font
+>u<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>+2<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>) which one can show always hold, 
+<U>if</U> your norm
+comes from an inner product! By evaluating both sides suing specific vectors, however, one can 
+show that such equalities don't hold, showing that the norms in question do not
+come from inner products!
+<p>
+<p>
+Just as with the ordinary inner product, we say that two vectors v and w are <i>orthogonal</i>
+if <font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+>=0.
+<p>
+<p>
+If the vectors v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> are all non-zero and all orthogonal to one another, and
+v is in the span of the v<sub>i</sub>'s then it is easy to show that
+<p>
+v =  [(<font face="symbol"> &lt; </font
+>v<sub>1</sub>,v<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>v<sub>1</sub>,v<sub>1</sub><font face="symbol"> &gt; </font
+>)]v<sub>1</sub>+<font face="symbol">¼</font
+>+[(<font face="symbol"> &lt; </font
+>v<sub>n</sub>,v<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>v<sub>n</sub>,v<sub>n</sub><font face="symbol"> &gt; </font
+>)]v<sub>n</sub>
+<p>
+In fact,m this is the 
+<U>only</U> way to write v as a linear combination of the v<sub>i</sub>'s,
+implying that the v<sub>i</sub>'s are linearly independent!
+<p>
+
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

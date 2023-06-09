@@ -1,0 +1,820 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 314</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for second exam</center><br></b>
+<p>
+<p><br>
+
+<center>Technically, everything covered by the first exam <b>plus</b></center><br>
+<p>
+
+<b>Chapter 2</b> &#167; 6 Determinants
+<p>
+<p>
+(Square) matrices come in two flavors: invertible (all Ax = b have a solution)
+and non-invertible (Ax = <b>0</b> has a non-trivial solution). It is an amazing 
+fact that one number identifies this difference; the determinant of A.
+<p>
+<p><br>
+For 2&times;2 matrices A = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b </td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ c</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+d</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>), this
+number is det(A)=ad-bc; if  <font face="symbol">¹</font
+> 0, A is invertible, if =0, A is
+non-invertible (=singular).
+<p>
+For larger matrices, there is a similar (but more complicated formula):
+<p>
+A= n&times;n matrix, M<sub>ij</sub>(A) = matrix obtained by removing ith row and
+jth column of A.
+<p>
+det(A) = <font face="symbol">S</font
+><sub>i = 1</sub><sup>n</sup> (-1)<sup>i+1</sup>a<sub>i1</sub>det(M<sub>i1</sub>(A))
+<p>
+(this is called expanding along the first column)
+<p>
+<p>
+Amazing properties:
+<p>
+If A is upper triangular, then det(A) = product of the entries on the 
+diagonal
+<p>
+If you multiply a row of A by c to get B, then det(B) = cdet(A)
+<p>
+If you add a mult of one row of A to another to get B, then det(B) = det(A)
+<p>
+If you switch a pair of rows of A to get B, then det(B) = -det(A)
+<p>
+<p>
+In other words, we can understand exactly how each elementary row operation 
+affects the determinant. In part,
+<p>
+A is invertible iff det(A) <font face="symbol">¹</font
+> 0; and in fact, we can <b>use</b> row operations to 
+calculate det(A) (since the RREF of a matrix is upper triangular).
+<p>
+More interesting facts:
+<p>
+det(AB) = det(A)det(B) ; det(A<sup>T</sup>) = det(A)
+<p>
+<p>
+We can expand along other columns than the first:
+<p>
+det(A) = <font face="symbol">S</font
+><sub>i = 1</sub><sup>n</sup> (-1)<sup>i+j</sup>a<sub>ij</sub>det(M<sub>ij</sub>(A))
+<p>
+(expanding along jth column)
+<p>
+And since det(A<sup>T</sup>) = det(A), we could expand along <b>rows</b>, as well....
+<p>
+<p>
+A formula for the inverse of a matrix:
+<p>
+If we define A<sub>c</sub> to be the matrix whose (i,j)th entry is
+(-1)<sup>i+j</sup>det(M<sub>ij</sub>(A)), then A<sub>c</sub><sup>T</sup>A = (detA)I (A<sub>c</sub><sup>T</sup> is called
+the <i>adjoint</i> of A). So if det(A) <font face="symbol">¹</font
+> 0, then we can write the
+inverse of A as
+<p>
+<p>
+A<sup>-1</sup> = [1/det(A)]A<sub>c</sub><sup>T</sup>
+(This is very handy for 2&times;2 matrices...)
+<p>
+<p>
+The same approach allows us to write an explicit formula for the solution to
+Ax = b, when A is invertible:
+<p>
+If we write B<sub>i</sub> = A with its ith column replaced by b, then the (unique) 
+solution to Ax = b has ith coordinate equal to 
+<p>
+<p>
+[(det(B<sub>i</sub>))/det(A)]
+<p>
+<p>
+
+<b>Chapter 3:</b> Vector Spaces
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Basic concepts</b></DD></DL>
+Basic idea: a vector space V is a collection of things you can add together, 
+and multiply by scalars (= numbers)
+<p>
+V = things for which v,w <font face="symbol">Î</font
+> V implies v+v <font face="symbol">Î</font
+> V ; a <font face="symbol">Î</font
+> <b>R</b> and v <font face="symbol">Î</font
+> V implies
+a&#183;v <font face="symbol">Î</font
+> V
+<p>
+<p>
+E.g., V=<b>R</b><sup>2</sup>, add and scalar multiply componentwise
+<p>
+V=all 3-by-2 matrices, add and scalar multiply entrywise
+<p>
+V={ax<sup>2</sup>+bx+c : a,b,c <font face="symbol">Î</font
+> <b>R</b>} = polynomials of degree  <font face="symbol">£</font
+> 2; add, scalar
+multiply as functions
+<p>
+<p>
+The <i>standard vector space</i> of dimension n : <b>R</b><sup>n</sup> = 
+{(x<sub>1</sub>,<font face="symbol">¼</font
+>,x<sub>n</sub>) : x<sub>i</sub> <font face="symbol">Î</font
+> <b>R</b> all i}
+<p>
+<p>
+An <i>abstract vector space</i> is a set V together with some notion of
+addition and scalar multiplication, satisfying the `usual rules': for
+u,v,w <font face="symbol">Î</font
+> V and c,d <font face="symbol">Î</font
+> <b>R</b> we have
+<p>
+<p>
+u+v <font face="symbol">Î</font
+> V, cu <font face="symbol">Î</font
+> V
+<p>
+u+v = v+u, u+(v+w) = (u+v)+w
+<p>
+There is <b>0</b> <font face="symbol">Î</font
+> V and -u <font face="symbol">Î</font
+> V with <b>0</b>+u = u all u, and
+u+(-u) = <b>0</b>
+<p>
+c(u+v) = cu+cv, (c+d)u = cu+du, (cd)u = c(du), 1u = u
+<p>
+<p>
+Examples: <b>R</b><sup>m,n</sup> = all m&times;n matrices, under matrix addition/scalar mult
+<p>
+C[a,b]  = all continuous functions f:[a,b]<font face="symbol">®</font
+><b>R</b>, under
+function addition
+<p>
+{A <font face="symbol">Î</font
+> <b>R</b><sup>n,n</sup> : A<sup>T</sup> = A} = all symmetric matrices, is a vector space
+<p>
+<p>
+Note: {f <font face="symbol">Î</font
+> C[a,b] : f(a) = 1} is <b>not</b> a vector space (e.g., has no bf 0)
+<p>
+Basic facts:
+<p>
+0v = <b>0</b>, c<b>0</b> = <b>0</b>, (-c)v = -(cv); cv = <b>0</b> implies c = 0 or
+v = <b>0</b>
+<p>
+A vector space (=VS) has only one <b>0</b>; a vector has only one additive inverse
+<p>
+<p>
+Linear operators: 
+<p>
+T:V<font face="symbol">®</font
+> W is a linear operator if T(cu+dv) = cT(u)+dT(v) for all
+c,d <font face="symbol">Î</font
+> <b>R</b>, u,v <font face="symbol">Î</font
+> V
+<p>
+Example: T<sub>A</sub>:<b>R</b><sup>n</sup><font face="symbol">®</font
+> <b>R</b><sup>m</sup>, T<sub>A</sub>(v) = Av, is linear
+<p>
+T:C[a,b]<font face="symbol">®</font
+> <b>R</b>, T(f) = f(b), is linear
+<p>
+<p>
+T:<b>R</b><sup>2</sup><font face="symbol">®</font
+> <b>R</b>, T(x,y) = x-xy+3y is <b>not</b> linear!
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Subspaces</b></DD></DL>
+Basic idea: V = vector space, W <font face="symbol">Í</font
+> V, then to check if W is 
+a vector space, using the <b>same</b> addition and scalar multiplication as V,
+we need only check <b>two things</b>:
+<p>
+<p>
+whenever c <font face="symbol">Î</font
+> <b>R</b> and u,v <font face="symbol">Î</font
+> W, we <b>always</b> have cu, u+v <font face="symbol">Î</font
+> W
+<p>
+<p>
+All other properties come for free, since they are true for V !
+<p>
+If V is a VS, W <font face="symbol">Í</font
+> V and W is a VS using the same operations as V, we
+say that W is a <i>(vector) subspace of</i> V.
+<p>
+<p>
+Examples: {(x,y,z) <font face="symbol">Î</font
+> <b>R</b><sup>3</sup> : z = 0} is a subspace of <b>R</b><sup>3</sup>
+<p>
+{(x,y,z) <font face="symbol">Î</font
+> <b>R</b><sup>3</sup> : z = 1} is <b>not</b> a subspace of <b>R</b><sup>3</sup>
+<p>
+{A <font face="symbol">Î</font
+> <b>R</b><sup>n,n</sup> : A<sup>T</sup> = A} is a subspace of <b>R</b><sup>n,n</sup>
+<p>
+<p>
+Basic construction: v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> <font face="symbol">Î</font
+> V
+<p>
+W = {a<sub>1</sub>v<sub>1</sub>+<font face="symbol">¼</font
+>a<sub>n</sub>v<sub>n</sub> : a<sub>1</sub>,<font face="symbol">¼</font
+>,a<sub>n</sub> <font face="symbol">Î</font
+> <b>R</b> = all linear 
+combinations of v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> = span{v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>}  = the <i>span</i>
+of v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> , is a subspace of V
+<p>
+<p>
+Basic fact: if w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>k</sub> <font face="symbol">Î</font
+>  span{v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>}, then
+span{w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>k</sub>}  <font face="symbol">Í</font
+>  span{v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>}
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Subspaces from matrices</b></DD></DL>
+column space of A = \cal C(A) = span{the columns of A}
+<p>
+row space of A = \cal R(A) = span{(transposes of the ) rows of A}
+<p>
+nullspace of A = \cal N(A) = {x <font face="symbol">Î</font
+> <b>R</b><sup>n</sup> : Ax = <b>0</b>}
+<p>
+<p>
+(Check: \cal N(A) is a subspace!)
+<p>
+<p>
+Alternative view Ax = lin comb of columns of A, so is in \cal C(A);
+in fact, \cal C(A) = {Ax : x <font face="symbol">Î</font
+> <b>R</b><sup>n</sup>}
+<p>
+<p>
+Subspaces from linear operators: T:V<font face="symbol">®</font
+> W
+<p>
+image of T = im(T) = {Tv : v <font face="symbol">Î</font
+> V}
+<p>
+kernel of T = ker(T) = {x : T(x) = <b>0</b>}
+<p>
+<p>
+When T = T<sub>A</sub>, im(T) = \cal C(A), and ker(T) = \cal N(A)
+<p>
+<p>
+T is called <i>one-to-one</i> if Tu = Tv implies u = v
+<p>
+Basic fact: T is one-to-one iff ker(T) = {<b>0}</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Norm and inner product</b></DD></DL>
+Norm means length! In <b>R</b><sup>n</sup> this is computed as
+<font face="symbol">|</font
+><font face="symbol">|</font
+>x<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+><font face="symbol">|</font
+>(x<sub>1</sub>,<font face="symbol">¼</font
+>,x<sub>n</sub>)<font face="symbol">|</font
+><font face="symbol">|</font
+> = (x<sub>1</sub><sup>2</sup>+<font face="symbol">¼</font
+>+x<sub>n</sub><sup>2</sup>)<sup>1/2</sup>
+<p>
+<p>
+Basic facts: <font face="symbol">|</font
+><font face="symbol">|</font
+>x<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">³</font
+> 0, and <font face="symbol">|</font
+><font face="symbol">|</font
+>x<font face="symbol">|</font
+><font face="symbol">|</font
+> = 0 iff x = <b>0</b>,
+<p>
+<font face="symbol">|</font
+><font face="symbol">|</font
+>cu<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+>c<font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>u<font face="symbol">|</font
+><font face="symbol">|</font
+>, and <font face="symbol">|</font
+><font face="symbol">|</font
+>u+v<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>u<font face="symbol">|</font
+><font face="symbol">|</font
+>+<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+> (triangle inequality)
+<p>
+<p>
+unit vector:  the norm of u/<font face="symbol">|</font
+><font face="symbol">|</font
+>u<font face="symbol">|</font
+><font face="symbol">|</font
+> is 1; u/<font face="symbol">|</font
+><font face="symbol">|</font
+>u<font face="symbol">|</font
+><font face="symbol">|</font
+> is the <i>unit vector</i> in the
+direction of u.
+<p>
+convergence: u<sub>n</sub><font face="symbol">®</font
+> u if <font face="symbol">|</font
+><font face="symbol">|</font
+>u<sub>n</sub>-u<font face="symbol">|</font
+><font face="symbol">|</font
+><font face="symbol">®</font
+> 0
+<p>
+<p>
+Inner product: 
+<p>
+idea: assign a number to a pair of vectors (think: angle between them?)
+<p>
+In <b>R</b><sup>n</sup>, we use the <i>dot product</i>: v = (v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>), w = (w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>n</sub>)
+<p>
+v<font face="symbol">·</font
+>w = <font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+> = v<sub>1</sub>w<sub>1</sub>+<font face="symbol">¼</font
+>+v<sub>n</sub>w<sub>n</sub> = v<sup>T</sup>w
+<p>
+<p>
+Basic facts:
+<p>
+<font face="symbol">á</font
+>v,v<font face="symbol">ñ</font
+> = <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup> 
+(so <font face="symbol">á</font
+>v,v<font face="symbol">ñ</font
+> <font face="symbol">³</font
+> 0, and equals 0 iff v = <b>0</b>)
+<p>
+<font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+> = <font face="symbol">á</font
+>w,v<font face="symbol">ñ</font
+>;
+<font face="symbol">á</font
+>cv,w<font face="symbol">ñ</font
+> = <font face="symbol">á</font
+>v,cw<font face="symbol">ñ</font
+> = c<font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Applications of norms and inner products</b></DD></DL>
+Cauchy-Schwartz inequality: for all v,w, <font face="symbol">|</font
+><font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>
+<p>
+(this implies the triangle inequality)
+<p>
+So: -1 <font face="symbol">£</font
+> <font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>/(<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>)  <font face="symbol">£</font
+> 1
+<p>
+<p>
+Define: the <i>angle</i> <font face="symbol">Q</font
+> between v and w  = the angle (between 
+0 and <font face="symbol">p</font
+> with cos(<font face="symbol">Q</font
+>) = <font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>/(<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>)
+<p>
+Ex: v = w : then cos(<font face="symbol">Q</font
+>) = 1, so <font face="symbol">Q</font
+> = 0
+<p>
+Two vectors are <i>orthogonal</i> if their angle is <font face="symbol">p</font
+>/2, i.e., 
+<font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>=0. Notation: v<font face="symbol">^</font
+>w
+<p>
+Pythagorean theorem: if v<font face="symbol">^</font
+>w, then <font face="symbol">|</font
+><font face="symbol">|</font
+>v+w<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup> = <font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>+<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>
+<p>
+<p>
+Orthogonal projection: Given v,w <font face="symbol">Î</font
+> <b>R</b><sup>n</sup>, then we can write v = cw+u, with
+u<font face="symbol">^</font
+>w
+<p>
+<p>
+c =  [(<font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>)/(<font face="symbol">á</font
+>w,w<font face="symbol">ñ</font
+>)];
+<p>
+cw = proj<sub>w</sub>v =  [(<font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>)/(<font face="symbol">á</font
+>w,w<font face="symbol">ñ</font
+>)]w=
+ [(<font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>)/(<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>)][w/(<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>)]
+= (orthogonal) projection of v onto w
+<p>
+u = v-cw !
+<p>
+<p>
+Least squares: 
+<p>
+Idea: Find the closest thing to a solution to Ax = b, when it  no solution.
+<p>
+Overdetermined system: more equations than unknowns. Typically, the system will 
+have no solution.
+<p>
+Instead, find the  vector with a solution (i.e, of the form Ax) to b.
+<p>
+Need: Ax-b perpendicular to the subspace \cal C(A) 
+<p>
+I.e, need: Ax-b <font face="symbol">^</font
+> each column of A, i.e., need 
+<font face="symbol">á</font
+>(column of A),Ax-b<font face="symbol">ñ</font
+> = 0
+<p>
+I.e., need A<sup>T</sup>(Ax-b) = <b>0</b>, i.e., need (A<sup>T</sup>A)x = (A<sup>T</sup>b)
+<p>
+<p>
+Fact: such a system of equations is <b>always</b> consistent!
+<p>
+Ax will be the closest vector in \cal C(A) to b
+<p>
+<b>If</b> A<sup>T</sup>A is invertible (need: r(A)=number of columnsof A), then we
+can write x = (A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b); Ax = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
+<p>
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>Bases and dimension</b></DD></DL>
+Idea: putting free and bound variables on a more solid theoretical footing
+<p>
+We've seen: every solution to Ax = b can be expressed in terms of the 
+free variables (x = v+x<sub>i<sub>1</sub></sub>v<sub>1</sub>+<font face="symbol">¼</font
+>+x<sub>i<sub>k</sub></sub>v<sub>k</sub>)
+<p>
+Could a different method of solution give us a different number of free
+variables? (Ans: No! B/c that number is the `dimension' of a certain subspace...)
+<p>
+<p>
+Linear independence/dependence:
+<p>
+v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> <font face="symbol">Î</font
+> V are linearly independent if the <b>only</b> way to 
+express <b>0</b> as a linear combination of the v<sub>i</sub>'s is with all 
+coefficients equal to 0;
+<p>
+whenever c<sub>1</sub>v<sub>1</sub>+<font face="symbol">¼</font
+>+c<sub>n</sub>v<sub>n</sub> = <b>0</b>, we have c<sub>1</sub> = <font face="symbol">¼</font
+> = c<sub>n</sub> = 0
+<p>
+<b>Otherwise</b>, we say the vectors are linearly dependent. I.e, some
+non-trivial linear combination equals <b>0</b>. Any vector v<sub>i</sub> in such a
+linear combination having a non-zero coefficient is called 
+<b>redundant</b>; the expression (lin comb = <b>0</b>) can be 
+rewritten to say that v<sub>i</sub> = lin comb of the remaining vectors, i.e., 
+v<sub>i</sub> is in the <b>span</b> of the remaining vectors. This means:
+<p>
+Any redundant vector can be removed from our list of vectors <b>without
+changing the span</b> of the vectors.
+<p>
+<p>
+A <b>basis</b> for a vector space V is a set of vectors v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>
+so that (a) they are linearly independent, and (b) V=span{v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>} .
+<p>
+Example: The vectors 
+e<sub>1</sub> = (1,0,<font face="symbol">¼</font
+>,0)m e<sub>2</sub> = (0,1,0,<font face="symbol">¼</font
+>,0),<font face="symbol">¼</font
+>,e<sub>n</sub> = (0,<font face="symbol">¼</font
+>,0,1) are a basis for <b>R</b><sup>n</sup>, the <i>standard basis</i>.
+<p>
+<p>
+To find a basis: start with a collection of vectors that span, and repeatedly throw
+out redundant vectors (so you don't change the span) until the ones that are 
+left are linearly independent. Note: each time you throw one out, you need to 
+ask: are the remaining ones lin indep?
+<p>
+Basic fact: If v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> is a bassis for V, then every v <font face="symbol">Î</font
+> V can be 
+expressed as a linear combination of the v<sub>i</sub>'s in <i>exactly one way</i>.
+If v = a<sub>1</sub>v<sub>1</sub>+<font face="symbol">¼</font
+>+a<sub>n</sub>v<sub>n</sub>, we call the a<sub>i</sub> the <b>coordinates</b> of v 
+with respect to the basis v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> .
+<p>
+<p>
+The Dimension Theorem: Any two bases of the same vector space contain the 
+same number of vectors. (This common number is called the <i>dimension</i> of V,
+denoted dim(V) .)
+<p>
+Reason: if v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> is a basis for V and w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>k</sub> <font face="symbol">Î</font
+> V are
+linearly independent, then k <font face="symbol">£</font
+> n
+<p>
+<p>
+As part of that proof, we also learned: 
+<p>
+If v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> is a basis for V and w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>k</sub> are linearly independent,
+then the spanning set v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>,w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>k</sub> for V can be thinned
+down to a basis for V by throwing away v<sub>i</sub>'s . 
+<p>
+<p>
+<b>In reverse:</b> we can take any
+linearly independent set of vectors in V, and <b>add</b> to it from any basis 
+for V, to produce a new basis for V.
+<p>
+<p>
+Some consequences:
+<p>
+If dim(V)=n, and W <font face="symbol">Í</font
+> V is a subspace of V, then dim(W) <font face="symbol">£</font
+> n
+<p>
+<p>
+If dim(V)=n and v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> <font face="symbol">Î</font
+> V are linearly independent, then they 
+also span V
+<p>
+If dim(V)=n and v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> <font face="symbol">Î</font
+> V span V, then they are also linearly 
+independent.
+<p>
+<p>
+
+<DL compact><DT>&#167; 7:
+</DT><DD>
+ <b>Linear systems revisited</b></DD></DL>
+Using our new-found terminology, we have:
+<p>
+<p>
+A system of equations Ax = b has a solution iff b <font face="symbol">Î</font
+> \cal C(A) .
+<p>
+<p>
+If Ax<sub>0</sub> = b, then every other solution to Ax = b is x = x<sub>0</sub>+z, where
+z <font face="symbol">Î</font
+> \cal N(A) .
+<p>
+<p>
+To finish our description of (a) the vectors b that have solutions, and
+(b) the set of solutions to Ax = b, we need to find (useful) bases for
+\cal C(A) and \cal N(A).
+<p>
+<p>
+So of course we start with:
+<p>
+Finding a basis for the row space.
+<p>
+Basic idea: if B is obtained from A by elementary row operations, then 
+\cal R(A) = \cal R(B).
+<p>
+So of R is the reduced row echelon form of A, 
+\cal R(R) = \cal R(A)
+<p>
+But a basis for \cal R(R) is easy to find; take all of the non-zero
+rows of R ! (The zero rows are clearly redundant.) These rows are
+linearly independent, since each has a `special coordinate' where, among
+the rows, only it is non-zero. That coordinate is the
+<i>pivot</i> in that row. So in any linear combination of rows, only that vector
+can contribute something non-zero to that coordinate. <i>Consequently</i>, in
+any linear combination, that coordinate is the <b>coefficient</b> of our vector!
+<b>So</b>, if the lin comb is <b>0</b>, the coefficient of our vector (i.e., 
+each vector!) is 0.
+<p>
+<p><br><p><br>
+Put bluntly, to find a basis for \cal R(A), row reduce A, 
+to R; the 
+(transposes of) the non-zero rows of R form a basis for \cal R(A).
+<p>
+<p><br><p><br>
+This in turn gives a way to find a basis for \cal C(A), since
+\cal C(A) = \cal R(A<sup>T</sup>) !
+<p>
+<p><br><p><br>
+To find a basis for \cal C(A), take A<sup>T</sup>, row reduce it to S; 
+the (transposes of) the non-zero rows of S form a basis for \cal R(A<sup>T</sup>)
+=\cal C(A) .
+<p>
+<p><br><p><br>
+This is probably in fact the most useful basis for \cal C(A), since each 
+basis vector has that special coordinate. This makes it very easy to decide
+if, for any given vector b, Ax = b has a solution. You need to decide
+if b can be written as a linear combination of your basis vectors; but each
+coefficient will be the corrdinate of b lying at the special coordinate of
+each vector. Then just check to see if <b>that</b> linear combination
+of your basis vectors adds up to b !
+<p>
+<p><br><p><br>
+There is another, perhaps less useful, but faster way to build a basis for 
+\cal C(A); row reduce A to R, locate the pivots in R, and take the
+columns of A (Note: A, <b>not</b> R !) the correspond to the columns 
+containing the pivots. These form a (different) basis for \cal C(A).
+<p>
+<p><br><p><br>
+Why? Imagine building a matrix B
+out of just the bound columns. Then in row reduced form there is a pivot 
+in every column. Solving Bv = <b>0</b> in the case that there are no
+free variables, we get v = <b>0</b>, so the columns are linearly independent.
+If we now add a free column to B to get C, we get the same collection of pivots,
+so our added column represents a free variable. Then there are non-trivial 
+solutions to Cv = <b>0</b>, so the columns of C are not
+linearly independent. This means that the added columns can be expressed as 
+a linear combination of the bound columns. This is true for all free
+columns, so the bound columns span \cal C(A).
+<p>
+<p>
+Finally, there is the nullspace \cal N(A). To find a basis for 
+\cal N(A):
+<p>
+<p><br><p><br>
+Row reduce A to R, and use each row of R to 
+solve Rx = <b>0</b> by expressing each bound variable in terms of the frees.
+collect the coeeficients together and write 
+x = x<sub>i<sub>1</sub></sub>v<sub>1</sub>+<font face="symbol">¼</font
+>+x<sub>i<sub>k</sub></sub>v<sub>k</sub> where the x<sub>i<sub>j</sub></sub> are the free variables.
+Then the vectors v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>k</sub> form a basis for \cal N(A).
+<p>
+<p><br><p><br>
+Why? By construction they span \cal N(A); and just with our row space
+procedure, each has a special coordinate where only it is 0 (the coordinate
+corresponding to the free variable!).
+<p>
+<p>
+Note: since the number of vectors in the bases for \cal R(A) and \cal C(A) 
+is the same as the number of pivots ( = number of nonzero rows in the RREF) = rank of A,
+we have dim(\cal R(A))=dim(\cal C(A))=r(A). 
+<p>
+And since the number of vectors in the basis for \cal N(A) is the same as the 
+number of free variables for A ( = the number of columns without a pivot) = 
+nullity of A (hence the name!), we have dim(\cal N(A)) = n(A) = n-r(A)
+(where n=number of columns of A).
+<p>
+So, dim(\cal C(A)) + dim(\cal N(A)) = the number of columns of A .
+<p>
+
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

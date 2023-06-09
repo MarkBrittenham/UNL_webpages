@@ -1,0 +1,346 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 314</center><br></b>
+<p>
+<p>
+
+<center><b>Topics since the third exam</center><br></b>
+<p>
+<p><br>
+The final exam is on Wednesday, May 5, from 10:00am to noon. It will cover the
+material from the entire course, with a slight emphasis on the material from this sheet.
+<p>
+<p><br>
+<b>Chapter 4:</b> Eigenvalues
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ Gram-Schmidt orthogonalization</DD></DL>
+We've seen how a basis consitsing of vectors orthogonal to one another can prove useful;
+this section is about how to <i>build</i> such a basis.
+<p>
+The starting point is our old formula for the projection of one vector onto another;
+<p>
+
+<center> v-[(<font face="symbol"> &lt; </font
+>w,v<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w,w<font face="symbol"> &gt; </font
+>)]w is perpendicular to w.</center><br> 
+<p>
+Gram-Scmidt orthogonalization consists of repeatedly using this formula to replace a 
+collection of vectors with ones that are orthogonal to one, <b>without changing 
+their span</b>. Starting with a collection {v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>} of vectors in V,
+<p>
+<p>
+let w<sub>1</sub> = v<sub>1</sub>, then let w<sub>2</sub> = v<sub>2</sub>-[(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,v<sub>2</sub><font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,w<sub>1</sub><font face="symbol"> &gt; </font
+>)]w<sub>1</sub> .
+<p>
+Then w<sub>1</sub> and w<sub>2</sub> are orthogonal, and since w<sub>2</sub> is a linear combination of
+w<sub>1</sub> = v<sub>1</sub> and v<sub>2</sub>, while the above equation can also be rewritten to give
+v<sub>2</sub> as a linaear combination of w<sub>1</sub> and w<sub>2</sub>, the span is unchanged. Continuing,
+<p>
+let w<sub>3</sub> = 
+ v<sub>3</sub>-[(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,v<sub>3</sub><font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,w<sub>1</sub><font face="symbol"> &gt; </font
+>)]w<sub>1</sub>-[(<font face="symbol"> &lt; </font
+>w<sub>2</sub>,v<sub>3</sub><font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>2</sub>,w<sub>2</sub><font face="symbol"> &gt; </font
+>)]w<sub>2</sub> ; then since w<sub>1</sub> and w<sub>2</sub> are 
+orthogonal, it is not hard to check that w<sub>3</sub> is orthogonal to <b>both</b> of them,
+and using the same argument, the span is unchanged (in this case, span{w<sub>1</sub>,w<sub>2</sub>,w<sub>3</sub>}
+=span{w<sub>1</sub>,w<sub>2</sub>,v<sub>3</sub>}=span{v<sub>1</sub>,v<sub>2</sub>,v<sub>3</sub>}).
+<p>
+Continuing this, we let
+w<sub>k</sub> = 
+ v<sub>k</sub>-[(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,v<sub>k</sub><font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,w<sub>1</sub><font face="symbol"> &gt; </font
+>)]w<sub>1</sub>-<font face="symbol">¼</font
+>-[(<font face="symbol"> &lt; </font
+>w<sub>k-1</sub>,v<sub>k</sub><font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>k-1</sub>,w<sub>k-1</sub><font face="symbol"> &gt; </font
+>)]w<sub>k-1</sub>
+<p>
+Doing this all the way to n will replace v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub> with orthogonal vectors
+w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>n</sub>, without changing the span.
+<p>
+<p>
+One thing worth noting is that the if two vectors are orthogonal, then any scalar
+multiples of them are, too. This means that if the coordinates of one of our
+w<sub>k</sub> are not to our satisfaction (having an ugly denomenator, perhaps),
+we can scale it to change the coordinates to something more pleasant. It is interesting to
+note that in so doing, the the later vectors w<sub>k</sub> are unchanged, since our scalar, can
+be pulled out of both the top inner product and the bottom one in later calculations,
+and cancelled.
+<p>
+<p>
+We've seen that if w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>n</sub> is an <b>orthogonal basis</b> for a subspace W of V,
+and w <font face="symbol">Î</font
+> W, then 
+w = 
+ [(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,w<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,w<sub>1</sub><font face="symbol"> &gt; </font
+>)]w<sub>1</sub>+<font face="symbol">¼</font
+>+[(<font face="symbol"> &lt; </font
+>w<sub>k-1</sub>,w<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>k-1</sub>,w<sub>k-1</sub><font face="symbol"> &gt; </font
+>)]w<sub>k-1</sub>
+<p>
+<p>
+On the other hand, if v <font face="symbol">Î</font
+> V , we can define the orthogonal projection
+<p>
+<p>
+
+<center></i></b></tt>proj<sub>W</sub>(v) = 
+ [(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,v<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>1</sub>,w<sub>1</sub><font face="symbol"> &gt; </font
+>)]w<sub>1</sub>+<font face="symbol">¼</font
+>+[(<font face="symbol"> &lt; </font
+>w<sub>k-1</sub>,v<font face="symbol"> &gt; </font
+>)/(<font face="symbol"> &lt; </font
+>w<sub>k-1</sub>,w<sub>k-1</sub><font face="symbol"> &gt; </font
+>)]w<sub>k-1</sub></center><br>
+<p>
+<p>
+ of v into W. This vector is in W, and by the Gram-Schmidt argument, 
+v-</i></b></tt>proj<sub>W</sub>(v)
+is orthogonal to all of the w<sub>i</sub>, so it is orthogonal to every
+linear combination, i.e., it is orthonal to every vector in W. As a result:
+<p>
+<p>
+<font face="symbol">|</font
+><font face="symbol">|</font
+>v-</i></b></tt>proj<sub>W</sub>(v)<font face="symbol">|</font
+><font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+><font face="symbol">|</font
+>v-w<font face="symbol">|</font
+><font face="symbol">|</font
+> for <b>every</b> vector w in W. (**)
+<p>
+<p>
+In the case that the w<sub>i</sub> are not just orthogonal but also <i>orthnormal</i>,
+we can simplify this somewhat:
+<p>
+</i></b></tt>proj<sub>W</sub>(v) = <font face="symbol"> &lt; </font
+>w<sub>1</sub>,v<font face="symbol"> &gt; </font
+>w<sub>1</sub>+<font face="symbol">¼</font
+>+<font face="symbol"> &lt; </font
+>w<sub>n</sub>,v<font face="symbol"> &gt; </font
+>w<sub>n</sub> = (w<sub>1</sub>w<sub>1</sub><sup>T</sup>+<font face="symbol">¼</font
+>+w<sub>n</sub>w<sub>n</sub><sup>T</sup>)v = 
+Pv , 
+<p>
+where P = (w<sub>1</sub>w<sub>1</sub><sup>T</sup>+<font face="symbol">¼</font
+>+w<sub>n</sub>w<sub>n</sub><sup>T</sup>) is the <b>projection matrix</b> giving us
+orthogonal projection.
+<p>
+This projection matrix has three useful properties: (1) since it has 
+the property (**), the matrix you get will be the same no matter what orthonormal 
+basis you will use to build it; (2) it is symmetric (P<sup>T</sup> = P), and (3) it is
+idempotent, meaning P<sup>2</sup> = P (this is because the orthogonal projection of a vector
+in W (e.g., Pv) is the same vector).
+<p>
+<p>
+If we think of the vectors w<sub>i</sub> as the columns of a matrix A, then W = \cal C(A), 
+and so the result (**) is talking about the least squares solution to the equation 
+Ax = v ! The closest vector Ax to v is then Pv, which, looking at what we did
+before, means that P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>. This, however, makes sense even if the 
+columns of A are <b>not</b> orthogonal; if we picked orthonormal ones, and computed P,
+we would <b>still</b> get the least squares solution, which this formula <b>also</b> 
+gives!
+<p>
+<p><br>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ Orthogonal matrices</DD></DL>
+We've seen that having a basis consisting of orthonormal vectors can simplify some
+of our previous calculations. Now we'll see where some of them come from.
+<p>
+
+An n&times;n matrix Q is called <b>orthogonal</b> if it's columns form an 
+orthonormal basis for R<sup>n</sup>. This means 
+<font face="symbol"> &lt; </font
+>(ith column of Q),(jth column of Q&#62; = 1 if i = j, 0 otherwise .
+This in turn means that Q<sup>T</sup>Q = I, which in turn means Q<sup>T</sup> = Q<sup>-1</sup> !
+So an orthogonal matrix is one whose inverse is equal to its own transpose.
+<p>
+<p>
+A basic fact about an orthogonal matrix Q : for any v,w <font face="symbol">Î</font
+> R<sup>n</sup>, <font face="symbol"> &lt; </font
+>Qv,Qw<font face="symbol"> &gt; </font
+> = <font face="symbol"> &lt; </font
+>v,w<font face="symbol"> &gt; </font
+> .
+<p>
+<p>
+A basic fact about a symmetric matrix A : if v<sub>1</sub> and v<sub>2</sub> are eigenvectors 
+for A with different eigenvalues <font face="symbol">l</font
+><sub>1</sub>,<font face="symbol">l</font
+><sub>2</sub>, then v<sub>1</sub> and v<sub>2</sub> 
+are orthogonal.
+<p>
+This is a main ingredient needed to show: If A is a symmetric n&times;n matrix, 
+then A is always diagonalizable; in fact there is an orthonormal basis for
+R<sup>n</sup> consisting of eigenvectors of A. This means that the matrix P, with
+AP = PD , whose columns are a basis of eigenvectors for A, can (when A is
+symmetric) be chosen to be an <b>orthogonal</b> matrix.
+<p>
+Wow, short section.
+<p>
+<p><br>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ Orthogonal complements</DD></DL>
+This notion of orthogonal vectors can even be used to reinterpret some of our
+dearly-held results about systems of linear equations, where all of this stuff began.
+<p>
+<p>
+Starting with Ax = 0, this can be interpreted as saying that 
+<font face="symbol"> &lt; </font
+>(every row of A),x<font face="symbol"> &gt; </font
+>=0, i.e., x is orthogonal to every row of 
+A. This in turn implies that x is orthogonal to every linear combination of 
+rows of A, i.e., x is orthogonal to every vector in the row space of A.
+<p>
+This leads us to introduce a new concept: the <b>orthogonal complement</b>
+of a subspace W in a vector space V, denoted W<sup><font face="symbol">^</font
+></sup>, is the collection
+of vectors v with v<font face="symbol">^</font
+>w for <b>every</b> vector w <font face="symbol">Î</font
+> W. It is not hard to 
+see that these vectors form a subspace of V; the sum of two vectors orthogonal
+to w, for example, is orthogonal to w, so the sum of two vectors
+in W<sup><font face="symbol">^</font
+></sup> is also in W<sup><font face="symbol">^</font
+></sup> . The same is true for scalar multiples.
+<p>
+<p>
+Some basic facts:
+<p>
+For every subspace W, W<font face="symbol">Ç</font
+>W<sup><font face="symbol">^</font
+></sup> = {0} (since anything in both is
+orthogonal to <i>itself</i>, and only the 0-vector has that property).
+<p>
+Any vector v <font face="symbol">Î</font
+> V can be written, uniquely, as v = w+w<sup><font face="symbol">^</font
+></sup>, for w <font face="symbol">Î</font
+> W and
+w<sup><font face="symbol">^</font
+></sup> <font face="symbol">Î</font
+> W<sup><font face="symbol">^</font
+></sup> ; w in fact is </i></b></tt>proj<sub>W</sub>(v) . 
+v-</i></b></tt>proj<sub>W</sub>(v) will be in W<sup><font face="symbol">^</font
+></sup>, more or less by definition of 
+</i></b></tt>proj<sub>W</sub>(v) . The uniqueness comes from 
+the result above about intersections.
+<p>
+Even further, a basis for W and a basis for W<sup><font face="symbol">^</font
+></sup> together form a basis for
+V; this implies that dim(W)+dim(W<sup><font face="symbol">^</font
+></sup>) = dim(V) .
+<p>
+Finally, (W<sup><font face="symbol">^</font
+></sup>)<sup><font face="symbol">^</font
+></sup> = W ; this is because W is contained in (W<sup><font face="symbol">^</font
+></sup>)<sup><font face="symbol">^</font
+></sup>
+(a vector in W is orthogonal to every vector that is orthogonal to things in W),
+and the dimensions of the two spaces are the same.
+<p>
+<p>
+The importance that this has to systems of equations stems from the following facts:
+<p>
+\cal N(A) = \cal R(A)<sup><font face="symbol">^</font
+></sup> (this is what we noted, actually, at the beginning
+of this section!)
+<p>
+\cal R(A) = \cal N(A)<sup><font face="symbol">^</font
+></sup>
+<p>
+\cal C(A) = \cal N(A<sup>T</sup>)<sup><font face="symbol">^</font
+></sup>
+<p>
+<p>
+So, for example, to compute a basis for W<sup><font face="symbol">^</font
+></sup>, start with a basis for W, writing
+them as the columns of a matrix A, so W = \cal C(A), then 
+W<sup><font face="symbol">^</font
+></sup> = \cal C(A)<sup><font face="symbol">^</font
+></sup> = \cal R(A<sup>T</sup>)<sup><font face="symbol">^</font
+></sup> = \cal N(A<sup>T</sup>), which we know how
+to compute a basis for!
+<p>
+
+
+
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
