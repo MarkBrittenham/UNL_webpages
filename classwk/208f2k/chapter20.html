@@ -1,0 +1,298 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 208H</center><br></b>
+<p>
+<p>
+
+<center><b>Topics from Chapter 20: Calculus of Vector Fields</center><br></b>
+<p>
+<p><br>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The divergence of a vector field</b></DD></DL>
+In terms of the coordinates [F\vec] = (F<sub>1</sub>,F<sub>2</sub>,F<sub>3</sub>) of a vector field, the divergence is
+<p>
+
+<center>div(F) = (F<sub>1</sub>)<sub>x</sub>+(F<sub>2</sub>)<sub>y</sub>+(F<sub>3</sub>)<sub>z</sub></center><br>
+<p>
+It can be identified with the <i>flux density</i> of the vector field [F\vec] at a 
+point P: this should be though of as the flux integral of F through a tiny
+box around the point P. This measures the extent to which the vector field is `expanding',
+at each point.
+<p>
+<p>
+div(F) = the limit as the side length goes to 0, of the flux through the sides of a box 
+centered at P, divided by the volume of the box.
+<p>
+<p>
+A vector field F is <i>divergence-free</i> if div(F) = 0. For example, F = (y,z,x)
+is divergence free, but F = (x,y,z) is not; div(F) = 3.
+<p>
+Some formulas that can help to calculate divergence:
+<p>
+<p>
+
+<center>div(fF) = (<font face="symbol">Ñ</font
+>f)<font face="symbol">·</font
+>F + f&#183;(divF)</center><br>
+<p>
+
+<center>div(F&times;G) = (curl F)<font face="symbol">·</font
+>G - F<font face="symbol">·</font
+>(curlG) in 3-space</center><br>
+<p>
+
+<center>div(curl([F\vec])) = 0 in 3-space</center><br>
+<p>
+<p>
+It turns out that this last result works the other way; a vector field F , defined over an entire box,
+which is divergence-free, is the curl of <i>some</i> other vector field G.
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>The Divergence Theorem</b></DD></DL>
+If W is a region in 3-space, it boundary is a surface S. (S might actually consist of 
+several pieces; this won't really effect our discussion.) We can choose normal vectors for
+each piece of S by insisting that [n\vec] alway points <i>out</i> of W. Then we have,
+for any vector field F <i>which is defined everywhere in W</i>:
+<p>
+<p>
+<b>The Divergence Theorem:</b>  <font face="symbol">ò</font
+><sub>S</sub> [F\vec]<font face="symbol">·</font
+>d[A\vec] = 
+ <font face="symbol">ò</font
+><sub>W</sub> (div F) dV 
+<p>
+<p>
+In other words, we can compute flux integrals over a surface S that forms the boundary
+of a region W, by computing the integral of a <i>different</i> function over W. This
+is especially useful when the vector field is divergence-free; for example if the region W
+has two surfaces for boundary and F is divergence-free, then the flux integral of F over
+one surface, with normals pointing out of W, is <i>equal</i> to the flux integral of F over
+the <i>other</i> surface, with normals pointing <i>into</i> W. Even if F is not divergence-free,
+we can compute the flux integral of one as the flux integral of the other <i>plus</i> the 
+triple integral of the divergence over W.
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>The curl of a vector field</b></DD></DL>
+We have already met the curl of a vector field [F\vec] = (F<sub>1</sub>,F<sub>2</sub>,F<sub>3</sub> in 3-space; 
+in terms of coordinates:
+<p>
+<p>
+
+<center>curl([F\vec]) = ((F<sub>3</sub>)<sub>y</sub>-(F<sub>2</sub>)<sub>z</sub> , -((F<sub>3</sub>)<sub>x</sub>-(F<sub>1</sub>)<sub>z</sub>) , (F<sub>2</sub>)<sub>x</sub>-(F<sub>1</sub>)<sub>y</sub>) </center><br>
+<p>
+<p>
+Its physical interpretation is as the direction where the <i>circulation density</i> of 
+the vector field [F\vec],
+at the point P, is the <i>largest</i>. The
+circulation density measures the extent to which objects caught up in a (velocity)
+vector field `want' to rotate with their axis pointing in the direction of a (unit) 
+vector [n\vec], and is computed
+as the limit, as the side lengths go to 0, of the line integral of [F\vec] around
+the boundary of a little square around P and <i>perpendicular</i> to [n\vec], divided
+by the area of the square. In terms of the curl, it can be computed as
+<p>
+<p>
+
+<center>circ <sub>[n\vec]</sub>([F\vec]) = curl([F\vec])<font face="symbol">·</font
+>[n\vec]</center><br>
+<p>
+<p>
+We have already used the curl to detect conservative vector fields; this stems from the
+formula
+<p>
+
+<center>curl(<font face="symbol">Ñ</font
+>[F\vec]) = (0,0,0)</center><br>
+<p>
+A vector field [F\vec] is <i>curl-free</i> if curl[F\vec] = (0,0,0) . This means that in any 
+<i>box</i> in which [F\vec] is defined, [F\vec] is a gradient vector field (although it
+is possible that [F\vec] cannot be expressed as the gradient of a function everywhere that
+[F\vec] is defined <i>at the same time</i>; the standard example of this is the vector field
+<p>
+
+<center>[F\vec] =  ([(-y)/(x<sup>2</sup>+y<sup>2</sup>)],[x/(x<sup>2</sup>+y<sup>2</sup>)],0)</center><br>
+<p>
+[F\vec] is curl-free, but it is not a gradient vector field, since (as you can check)
+the line integral of [F\vec] around the circle of radius one in the x-y plane with center
+(0,0,0) is 2<font face="symbol">p</font
+>. Green's Theorem does not work, because [F\vec] (and so its curl) is not defined
+on the entire disk with boundary the circle.)
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Stokes' Theorem</b></DD></DL>
+If S is a surface in 3-space, with a normal orientation [n\vec], the boundary of 
+S is a colection of paramatrized curves (there can easily be more than one, e.g, if
+S is a cylinder). We can orient each curve using a <i>right-hand rule</i>; if we
+stand on the curve and walk along it the chosen orientation with our heads pointing
+in the direction of [N\vec], then the surface S dshould always be on our left.
+Then Stokes' Theorem says that, for any vector field [F\vec] defined everywhere on S:
+<p>
+
+<center> <font face="symbol">ò</font
+><sub>C</sub> [F\vec]<font face="symbol">·</font
+>d[r\vec] = <font face="symbol">ò</font
+><sub>S</sub> (curl[F\vec])<font face="symbol">·</font
+>d[A\vec]</center><br>
+<p>
+This allows us to compute line integrals as flux integrals, and, with a little work, 
+flux integrals as line integrals. 
+<p>
+For example, it says that the line integral of a curl-free vector field [F\vec] around 
+a closed  curve is 
+always 0, <i>so long as</i> the curve is the boundary of a surface contained entirely
+in the domain of [F\vec]. 
+<p>
+<p>
+We say that a vector field [F\vec] is a <i>curl field</i> if [F\vec] = curl([G\vec])
+for some vector field [G\vec] . [G\vec] is called a <i>vector potential</i> of [F\vec] .
+Then Stokes' Theorem says that, for any surface S in the domain of [F\vec] with 
+boundary C,
+<p>
+
+<center> <font face="symbol">ò</font
+><sub>S</sub> [F\vec]<font face="symbol">·</font
+>d[A\vec] = <font face="symbol">ò</font
+><sub>S</sub> curl
+[G\vec]<font face="symbol">·</font
+>d[A\vec] = <font face="symbol">ò</font
+><sub>C</sub> [G\vec]<font face="symbol">·</font
+>d[r\vec]</center><br>
+<p>
+So, for example, for a curl field [F\vec] and <i>two</i> surfaces S<sub>1</sub> and S<sub>2</sub>
+with the <i>same</i> boundary C, we have
+<p>
+
+<center><font face="symbol">ò</font
+><sub>S<sub>1</sub></sub>[F\vec]<font face="symbol">·</font
+>d[A\vec] = <font face="symbol">ò</font
+><sub>S<sub>2</sub></sub>[F\vec]<font face="symbol">·</font
+>d[A\vec]</center><br>
+<p>
+So the flux integral of a curl field <i>really</i> depends just on the boundary of the surface, 
+not on the surface.
+<p>
+<p>
+We can test for whether or not [F\vec] is a curl field, using the divergence, 
+since div(curl([G\vec])) = 0, so a curl field must be divergence-free. (The opposite, as we have seen,
+ is <i>almost</i> true; it is true, for example, if the vector field is defined in a big box.)
+<p>
+<p>
+
+The whole idea behind these three theorems (Green's, Divergence, and Stokes')
+is that the integral of one kind of function over one kind of region can be computed
+instead as the integral of <i>another</i> kind of function over the <i>boundary</i> of
+the region. 
+<p>
+<p>
+
+Green's: Integral of the vector field [F\vec] over a closed curve in the 
+plane equals integral of its curl of [F\vec] over the region in the plane
+that the curve bounds.
+<p>
+Divergence: The flux integral of a vector field [F\vec] through the boundary of a 
+region in 3-space equals the integral of the divergence of [F\vec] over the
+region in 3-space.
+<p>
+Stokes':  The line integral of the vector field [F\vec] over a closed curve C in 3-space
+equals the flux integral of the curl of [F\vec] over any surface S that has C as its
+boundary.
+<p>
+<p>
+Note that Green's Theorem is really just a special case of Stokes' (where the 
+curve C lies in the plane, and the third coordinate of [F\vec] just happens to 
+be 0). All of these, like the Fundamental Theorem of Line Integrals, are really
+a kind of Fundamental Theorem of Calculus, where we are computing a kind of integral
+by instead computing something else across the boundary of the region we are
+interested in. We could keep doing this, finding a relation between integrals over
+regions in 4-space (or higher!) in terms of integrals over thier `boundary', but we 
+won't do that....
+<p>
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

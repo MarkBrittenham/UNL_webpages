@@ -1,0 +1,413 @@
+<HTML>
+
+
+<center><b>Math 208</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for the second exam</center><br></b>
+<p>
+<p><br>
+(Technically, everything covered on the first exam, <i>plus</i>)
+<p>
+<p><br>
+<b>Chapter 13: Differentiation</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 7:
+</DT><DD>
+ <b>Second Order Partial Derivatives</b></DD></DL>
+Just as in one variable calculus, a (partial) derivative is a function; so it has its
+own partial derivatives. These are called <i>second partial derivatives</i>.
+<p>
+We write [(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)]([(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]) = [(<font face="symbol">¶</font
+><sup>2</sup>)/(<font face="symbol">¶</font
+>x<sup>2</sup>)](f) = [(<font face="symbol">¶</font
+><sup>2</sup> f)/(<font face="symbol">¶</font
+>x<sup>2</sup>)]f<sub>xx</sub> = (f<sub>x</sub>)<sub>x</sub> , and similarly for y, and
+<p>
+[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>y)]([(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]) = [(<font face="symbol">¶</font
+><sup>2</sup> f)/(<font face="symbol">¶</font
+>y<font face="symbol">¶</font
+>x)][(<font face="symbol">¶</font
+><sup>2</sup>)/(<font face="symbol">¶</font
+>y<font face="symbol">¶</font
+>x)](f) = (f<sub>x</sub>)<sub>y</sub> = f<sub>xy</sub> , and similarly for [(<font face="symbol">¶</font
+><sup>2</sup>)/(<font face="symbol">¶</font
+>x<font face="symbol">¶</font
+>y)](these are called
+the <i>mixed partial derivatives</i>.
+<p>
+This leads to the slightly confusing convention that [(<font face="symbol">¶</font
+><sup>2</sup> f)/(<font face="symbol">¶</font
+>x<font face="symbol">¶</font
+>y)]f<sub>yx</sub> while [(<font face="symbol">¶</font
+><sup>2</sup> f)/(<font face="symbol">¶</font
+>y<font face="symbol">¶</font
+>x)]f<sub>xy</sub>,
+but as luck would have it:
+<p>
+<p>
+<b>Fact:</b> If f<sub>xy</sub> and f<sub>yx</sub> are both continuous, then they are equal [[Mixed 
+partials are equal.]] So while at first glance a function of two variables would seem to have
+four second partials, it `really' has only three. (Similarly, a function of three variables
+`really' has six second partials, and not nine.)
+<p>
+<p>
+In one-variable calculus, the second derivative measures concavity, or the rate at which the
+graph of f bends. The second partials f<sub>xx</sub>&nbsp;and f<sub>yy</sub>&nbsp;measure the bending of the graph
+of f in the x- and y-directions, while f<sub>xy</sub>&nbsp;measures the rate at which the x-slope of 
+f changes as you move in the y-direction, i.e., the amount that the graph is <i>twisting</i>
+as you walk in the y direction. The statement that f<sub>xy</sub>f<sub>yx</sub>&nbsp;then says that the
+amount of twisting in the y-direction is <i>always</i> the <i>same</i> as the amount of twisting
+in the x-direction, at any point, which is by no means obvious!
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 8:
+</DT><DD>
+ <b>Taylor Approximations</b></DD></DL>
+In some sense, the culmination of one-variable calculus is the observation that
+any function can be approximated by a polynomial; and the polynomial of degree n
+that `best' approximates f near the point a is the one which has the same 
+(higher) derivatives as f at a, up to the nth derivative. This leads to the
+definition of the <i>Taylor polynomial</i> :
+<p>
+p<sub>n</sub>(x) = f(a) + f<sup><font face="symbol">¢</font
+></sup>(a)(x-a) + <font face="symbol">¼</font
+> +  [(f<sup>(n)</sup>(a))/n!](x-a)<sup>n</sup>
+<p>
+Functions of two variables are not much different; we just replace the word `derivative' 
+with `<i>partial</i> derivative'! So for example, the degree one Taylor polynomial is
+<p>
+L(x,y) = f(a,b) + f<sub>x</sub>(a,b)(x-a) + f<sub>y</sub>(a,b)(y-b)
+<p>
+which is nothing more than our old formula for the tangent plane to the graph of f
+at the point (a,b,f(a,b)) .
+<p>
+We will soon need the second degree version (which for simplicity we will write for
+the point (a,b) = (0,0)) :
+<p>
+Q(x,y) = L(x,y) + [(f<sub>xx</sub>(0,0))/2]x<sup>2</sup> + f<sub>xy</sub>(0,0)xy+ [(f<sub>yy</sub>(0,0))/2]y<sup>2</sup>
+= L(x,y) + Ax<sup>2</sup>+Bxy+Cy<sup>2</sup>
+<p>
+<p>
+As before, L and Q are the `best' linear and quadratic approximations to f, near the point (a,b), in a sense
+that can be made precise; basically, L-f shrinks to 0 like a quadratic, near (a,b), while Q-f shrinks like a
+cubic (which shrinks to 0 <i>faster</i>, when your input is small).
+<p>
+
+<p>
+
+<DL compact><DT>
+</DT><DD>
+ <b>Differentiability</b></DD></DL>
+In one-variable calculus, `f is differentiable' is just another way of
+saying `the derivative of f exists'. But with several variables,
+differentiablility means <b>more</b> than that all of the partial
+derivatives exist. 
+<p>
+A function of several variables is <i>differentiable</i> at a point
+if the tangent plane to the graph of f at that point makes a
+good approximation to the function, near the point of tangency. In the
+words of the previous paragraph, L-f shrinks to 0 <i>faster</i>
+than a linear function would.
+<p>
+The basic fact, that we keep using, is that if the partial derivatives
+of f don't just <i>exist</i> at a point, but are also <b>continuous</b>
+near the point, then f is differentiable in this more precise sense.
+<p>
+<p><br>
+<b>Chapter 14: Optimization: Local and Global Extrema</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Local Extrema</b></DD></DL>
+The partial derivatives of f measuire the rate of change of f in each of the 
+coordinate directions. So they are giving us partial information (no pun 
+intended) about how thew function f is rising and falling. And just as in one-variable 
+calculus, we ought to be able to turn this into a procedure for findong out when a
+function is at its maximum or minimum. 
+<p>
+The basic idea is that at a max or min for f, then, thinking of f just as a 
+function of x, we would <i>still</i> think we were at a max or min, so the derivative,
+as a function of x, will be 0 (if it is defined). In other words, f<sub>x</sub> similarly, we would find
+that f<sub>y</sub>, as well. following one-variable theory, therefore, we say that
+<p>
+A point (a,b) is a <b>critical point</b> for the function f if f<sub>x</sub>(a,b) and 
+f<sub>y</sub>(a,b) are <i>each</i> either 0 or undefined. (A similar notion would hold for functions of 
+more than two variables.)
+<p>
+Just as with the one-variable theory, then, if we wish to find the max or min of a function, 
+what we first do is find the critical points; <i>if</i> thew function has a max or min, it will
+occur at a critical point.
+<p>
+and just as before, we have a `Second Derivative Test' for figuring out the 
+difference between a (local) max and a (local) min (or <i>neither</i>, which we will call a 
+<i>saddle point</i>). The point is that at a critical point, f looks like its 
+second degree Taylor polynomial, which (simplifying things somewhat) is described as
+Q(x,y) = Ax<sup>2</sup>+Bxy+Cy<sup>2</sup> (since the first derivatives are 0). The actual shape of the 
+graph of Q is basically described by <i>one number</i>, called the descriminant, which
+(in terms of partial derivatives) is given by
+<p>
+D = f<sub>xx</sub>f<sub>yy</sub>-(f<sub>xy</sub>)<sup>2</sup>
+<p>
+(Basically, Q looks like one of x<sup>2</sup>+y<sup>2</sup> (local min), -x<sup>2</sup>-y<sup>2</sup> (local max), or x<sup>2</sup>-y<sup>2</sup> (saddle),
+and D tells you if the signs are the same (D<font face="symbol"> &gt; </font
+>0) or opposite (D<font face="symbol"> &lt; </font
+>0) . More specifically, if, at a 
+critical point (a,b), 
+<p>
+<p>
+D<font face="symbol"> &gt; </font
+>0 and f<sub>xx</sub><font face="symbol"> &gt; </font
+>0 then (a,b) is a local min; if
+<p>
+D<font face="symbol"> &gt; </font
+>0 and f<sub>xx</sub><font face="symbol"> &lt; </font
+>0 then (a,b) is a local max; and if
+<p>
+D<font face="symbol"> &lt; </font
+>0, then (a,b) is a saddle point
+<p>
+(We get no information if D = 0.)
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Global Extrema: Unconstrained Optimization</b></DD></DL>
+Critical points help us find local extrema. To find <i>global</i> extrema, we take our cue from one-variable 
+land, where the procedure was (1) Identify the domain, (2) find critical points <i>inside</i> the domain, 
+(3) plug critical points and <i>endpoints</i> into f, (4) biggest is the max, smallest is the min.
+<p>
+For two variables, we do (essentially) <i>exactly the same thing</i>:
+<p>
+<p>
+(1) Identify the domain
+<p>
+(2) Find critical points in the <i>interior</i> of the domain
+<p>
+(3) Identify the (potential) max and min values on the <i>boundary</i> of the domain (more about this later!)
+<p>
+(4) Plug the critical points, and your potential points on the boundary
+<p>
+(5) biggest is max, smnallewst is min
+<p>
+<p>
+This works if the domain is <i>closed</i> and <i>bounded</i> (think, e.g., of a closed interval in the x direction and
+a closd intervasl in the y direction, or the inside of a circle in the plane). Usually, in practice, we don't have
+such nice domains; but we usually know from physical considerations that our function <i>has</i> a max or min
+(e.g., find the maximum volume you can enclose in a box made from 300 square inches of cardboard...), and so we 
+<i>still</i> know that it has to occur at a critical point of our function.
+<p>
+<p>
+Finding critical points involves solving two (or more) equations simultaneously. This can be very difficult; 
+a different approach <b>gradient search</b>, use the idea of `walking to' the maximum (or minimum), as an
+approach to aaproximating local extrema. The basic idea is to start at a point, and walk in the direction 
+the the function goes up the fastest, i.e., in the direction of the gradient at that point.
+Symbolically, if we start with an initial `guess' of (x<sub>0</sub>,y<sub>0</sub>) for a max of a function F, the idea is
+to look at the vaules of f as we walk in the direction of <font face="symbol">Ñ</font
+>f(x<sub>0</sub>,y<sub>0</sub>), i.e., look at the 
+function of <i>one</i> variable
+<p>
+<p>
+
+<center>f((x<sub>0</sub>,y<sub>0</sub>)+t<font face="symbol">Ñ</font
+>f(x<sub>0</sub>,y<sub>0</sub>)) = g<sub>1</sub>(t)</center><br>
+<p>
+<p>
+at t = 0, g has positive derivative (what is it?), and so for awhile g increases; we can determine
+when it will stop increasing by finding its (first positive) critical point. At this point we can 
+no longer guarantee that continuing on f will continue to increase, so instead we stop at this pojnt 
+(x<sub>1</sub>,y<sub>1</sub>), take stock, and pick a new direction to go to make f increase, namely, in the direction
+of <font face="symbol">Ñ</font
+>f(x<sub>1</sub>,y<sub>1</sub>). Then we look at
+<p>
+<p>
+
+<center>f((x<sub>1</sub>,y<sub>1</sub>)+t<font face="symbol">Ñ</font
+>f(x<sub>1</sub>,y<sub>1</sub>)) = g<sub>2</sub>(t)</center><br>
+<p>
+<p>
+We then follow along this function until it stops going up, take stock again, and head off in a new
+direction again. The idea is that if we keep going up, and our function <i>has</i> a max, then eventually
+this procedure will land us in the vicinity of that max. This isn't really true: if the sequence of
+points we find ourselves at converges, it's probably converging to a <b>local</b> max, but maybe not the
+global one. <i>But</i> this is very straighforward procedure, easy to implement of a computer, and can do a good
+job of finding candidates for maximums. By starting the process at lots of different points, we can collect alot
+of candidates for max's, increasing our chances of finding the (approximation to the) <i>real</i>
+global max.
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Constrained Optimization: Lagrange Multipliers</b></DD></DL>
+Most optimization problems that arise naturally at not unconstrained; we are usually trying to 
+maximize one function while <i>satisfying</i> another. Even the problem above is best phrased
+this way; maximize <i>volume</i> subject to the <i>constraint</i> that surface area equals 300.
+We can use the one-variable calculus trick of solving the constraint for one variable, and plugging
+this into the function we wish to maximize, <b>or</b> we can take a completely different (and often
+better) approach:
+<p>
+The basic idea is that if we think of our constraint as describing a level curve (or surface) of a function g, then 
+we are trying to maximize or minimize f among all the points of the level curve. If the level curves
+of f are cutting <i>across</i> our level curve of g, it's easy to see that we can icrease or
+decrease f while still staying on the level curve of g. So at a max or min, the level curve of
+f has to be <i>tangent</i> to our constraining level curve of g. This in turn means:
+<p>
+At a max or min of f subject to the constraint g, <font face="symbol">Ñ</font
+>f = <font face="symbol">l</font
+><font face="symbol">Ñ</font
+>g (for some real number <font face="symbol">l</font
+>)
+<p>
+We must also satisfy the constraint : g(x,y) = c.
+<p>
+<p>
+So to solve a constrained optimization problem (m,ax.min of f subject to the constraint g(x,y) = c) we solve
+<p>
+<font face="symbol">Ñ</font
+>f = <font face="symbol">l</font
+><font face="symbol">Ñ</font
+>g <b>and</b> g(x,y) = c
+<p>
+<p>
+This in turn allows us to finish our procedure for finding global extrema, since step (3) can be interpreted
+as a constrained optimization problem (max or min on the <i>boundary</i>). In these terms,
+<p>
+<p>
+To optimize f subject to the condition g(x,y) <font face="symbol">£</font
+> c, we (1) solve <font face="symbol">Ñ</font
+>f = 0 and g(x,y)<font face="symbol"> &lt; </font
+>c, (2)
+solve <font face="symbol">Ñ</font
+>f = <font face="symbol">l</font
+><font face="symbol">Ñ</font
+>g and g(x,y) = c, (3) plug all of these points into f, (4) the biggest
+is the max, the smallest is the min. 
+<p>
+[This works fine, unless the region g(x,y) <font face="symbol">£</font
+> c runs off to 
+infinity; but often, physical considerations will still tell us that one of our critical points is an
+optimum.]
+<p>
+<p><br>
+<b>Chapter 15: Integrating Functions of Several Variables</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The Definite Integral of a Function of Two Variables</b></DD></DL>
+In an entirely formal sense, the intergal of a function of one variable is a great big huge
+sum of little tiny numbers; we add up things of the form f(c<sub>i</sub>)<font face="symbol">D</font
+>x<sub>i</sub>, where we cut the interval
+[a,b] we are integrating over into little intervals of length <font face="symbol">D</font
+>x<sub>i</sub>, and pick points c<sub>i</sub> in each 
+interval. In esssence, the integral is the sum of areas of very thin rectangles, which leads us to 
+iterpret the integral as the area under the graph of f.
+<p>
+For functions of two variables, we do the exact same thing. To integrate a function f over a rectangle
+in the plane, we cut the rectangle into lots of tiny rectangles, with side lengths <font face="symbol">D</font
+>x<sub>i</sub> and <font face="symbol">D</font
+>y<sub>j</sub>,
+pick a point in each rectangle, and then add up f(x<sub>i</sub>,y<sub>j</sub>)<font face="symbol">D</font
+>x<sub>i</sub><font face="symbol">D</font
+>y<sub>j</sub> . This gives an 
+<i>approximation</i> to the actual integral; letting the little side length go to zero, we arrive at
+what we would call the integral of f over the rectangle R, which we denote by
+<p>
+<font face="symbol">ò</font
+><sub>R</sub> f dA (where dA denotes the `differential of area' dxdy (or dydx)
+<p>
+The idea is that if we think of f as measuring height above the rectangle, then 
+f(x<sub>i</sub>,y<sub>j</sub>)<font face="symbol">D</font
+>x<sub>i</sub><font face="symbol">D</font
+>y<sub>j</sub> is the volume of a thin rectangular box; letting the <font face="symbol">D</font
+>'s go to zero,
+the integral would then measure the <i>volume</i> under the graph of f, lying over the
+rectangle R.
+<p>
+If the region R <i>isn't</i> a rectangle, we can still use this method of defining an integral; we simply
+<i>cover</i> R with tiny rectangles, take the same sum, and let the <font face="symbol">D</font
+>'s go to 0.
+<p>
+<p>
+Of course, we have no reason to believe that as the <font face="symbol">D</font
+>'s go to 0, this collection of sums 
+will <i>converge</i> to a single number. But it is a basic fact that if the function f is 
+<i>continuous</i>, and the region R isn't too ugly, then these sums always will converge.
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Iterated Integrals</b></DD></DL>
+Of course, the preceding approach is no way to <i>compute</i> a double integral! Instead, we (as usual)
+steal an idea from one-variable calculus.
+<p>
+The idea is that we already <i>know</i> how to compute volumes, and so we <i>implicitly</i> know how to 
+compute double integrals! We can compute the volume of a region by integrating the <i>area of a slice</i>.
+You can do this two ways; (thinking in terms of the region R in the plane) you can slice R into horizontal
+lines,
+and integrate the area of the slices dy, or you can slice R into vertical lines, and integrate the
+slices dx. 
+<p>
+but each <i>slice</i> can be interpreted as an integral; the area of a 
+horizontal slice is the integral of f, thought of as <i>just a function of x</i>, and the area of
+a vertical slice is the integral of f, thought of as <i>just a function of y</i>. This leads to 
+<i>two</i> ways to compute our integral:
+<p>
+<p>
+<font face="symbol">ò</font
+><sub>R</sub> f dA = <font face="symbol">ò</font
+><sub>c</sub><sup>d</sup>(<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x,y) dx) dy (for horiz slices) = 
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup>(<font face="symbol">ò</font
+><sub>c</sub><sup>d</sup> f(x,y) dy) dx  (for vert slices)
+<p>
+<p>
+In each case, the <i>inner</i> integral is thought of as the integral of a function of <i>one variable</i>.
+It just happens to be a <i>different</i> variable in each case. In the case of a rectangle, the 
+limits of integration are just numbers, as we have written it. In the case of a more
+complicated region R, the inner limits of integration might depend on where we cut. The idea is that
+a slice along a horizontal line is a slice along y = constant, and the endpoints of the integral
+might <i>depend on y</i>; for a slice along a vertical line (x = constant), the endpoints might 
+depend on x .
+<p>
+<p>
+So, e.g., to integrate a function f over the region lying between the graphs of y = 4x and y = x<sup>3</sup>, we
+would compute either
+<p>
+<font face="symbol">ò</font
+><sub>0</sub><sup>2</sup>(<font face="symbol">ò</font
+><sub>x<sup>3</sup></sub><sup>4x</sup> f(x,y) dy) dx or 
+<font face="symbol">ò</font
+><sub>0</sub><sup>8</sup>(<font face="symbol">ò</font
+><sub>y/4</sub><sup>y<sup>1/3</sup></sup> f(x,y) dx) dy
+<p>
+<p>
+Which should we compute? Whichever one is easier! They give the <i>same</i> number!
+<p>
+<p>
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

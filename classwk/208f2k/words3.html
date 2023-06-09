@@ -1,0 +1,1000 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 208H</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for third exam</center><br></b>
+<p>
+<p><br>
+
+<center>Technically, everything covered on the first two exams, <i>plus</i></center><br>
+<p>
+<p>
+<b>Chapter 15: Multiple Integrals</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Triple Integrals</b></DD></DL>
+Triple integrals are just like double integrals, only more so. We can define them as a limit of a huge sum;
+here the terms in the sum would be the value of the function f time the volume of a tiny rectangular
+box. The usual interpretation of a triple integral arises by thinking of the function f as giving 
+the density of the matter at each point of a solid region W in 3-space. Since density times volume is mass,
+the integral of f over the region W would compute the mass of the solid object occupying the region W.
+In the special case that f is the function 1, the integral will compute the volume of the region W.
+<p>
+<p>
+Again, as with double integrals, the way we really comupute a triple integral is as a (triply) iterated
+integral. You pick a direction to slice (x=constant, y=constant, or z=constant) W up, and compute
+the integral of f over each slice. Each of these is a double integral (computed as an iterated 
+integral), whose value <i>depends</i> on the variable you sliced along. To compute the integral over W,
+you integrate these double integrals over the last variable, getting three iterated integrals.
+<p>
+<p>
+Put slightly differently, you can evaluate a triple integral by integrating out each variable, one at a time.
+Typically, we start with z, since our region W is usually described as the region lying between 
+the graphs of two functions, given as z=blah and z=bleh . The idea is to first, for each fixed
+value of x and y, integrate the function f, dz, from blah to bleh. (Ther resulting 
+values depend on x and y, i.e., are a <i>function</i> of x and y.) Then we integrate over
+the region, R, in the plane consisting of the points (x,y) such that the vertical line <i>hits</i> the region
+W. We usually call this region R the <i>shadow</i> of W in the x-y plane. In symbols
+<p>
+<font face="symbol">ò</font
+><sub>W</sub> f dV = <font face="symbol">ò</font
+><sub>R</sub>(<font face="symbol">ò</font
+><sub>a(x,y)</sub><sup>e(x,y)</sup>f(x,y,z) dz) dA
+<p>
+For example, the integral of a function over the region lying above the x-y plane and inside
+the sphere of radius 2, centered at the origin, would be computed as
+<p>
+<p>
+<font face="symbol">ò</font
+><sub>R</sub>(<font face="symbol">ò</font
+><sub>0</sub><sup>[<font face="symbol">Ö</font
+>(4-x<sup>2</sup>-y<sup>2</sup>)]</sup> f(x,y,z) dz) dA = 
+<font face="symbol">ò</font
+><sub>-2</sub><sup>2</sup>(<font face="symbol">ò</font
+><sub>-[<font face="symbol">Ö</font
+>(4-x<sup>2</sup>)]</sub><sup>[<font face="symbol">Ö</font
+>(4-x<sup>2</sup>)]</sup>(<font face="symbol">ò</font
+><sub>0</sub><sup>[<font face="symbol">Ö</font
+>(4-x<sup>2</sup>-y<sup>2</sup>)]</sup> f(x,y,z) dz) dy) dx
+<p>
+<p>
+where R is the shadow of W (in this case, the disk of radius 2,m centered at the origin, in the x-y plane).
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Double integrals with polar coordinates</b></DD></DL>
+Polar coordinates describe a point in the plane by <i>distance</i> and <i>direction</i>,
+r and <font face="symbol">q</font
+>. We can translate from rectangular to polar coordinates by
+<p>
+
+<center>(x,y) = (rcos<font face="symbol">q</font
+>,rsin<font face="symbol">q</font
+>)</center><br>
+<p>
+We can use this new coordinate system to simplify some integration problems,
+in part because a circular disk is a <i>polar rectangle</i>, defined by
+0 <font face="symbol">£</font
+> r <font face="symbol">£</font
+> R<sub>0</sub> and 0 <font face="symbol">£</font
+> <font face="symbol">q</font
+> <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>. Similarly, circular sectors
+can be described as `polar rectangles'. 
+<p>
+But in so doing, we must interpret dA in terms of dr and d<font face="symbol">q</font
+> ; this is
+completely analogous to what we must do with u-substitution. If we have a 
+small circular sector, made between the circles of radius r and r+<font face="symbol">D</font
+>r, 
+and between the lines making angles <font face="symbol">q</font
+> and <font face="symbol">q</font
+>+<font face="symbol">D</font
+><font face="symbol">q</font
+>, it has
+area approximately r<font face="symbol">D</font
+>r<font face="symbol">D</font
+><font face="symbol">q</font
+>; so
+<p>
+
+<center>dA = r dr d<font face="symbol">q</font
+></center><br>
+<p>
+and so <font face="symbol">ò</font
+><sub>R</sub> f(x,y) dA = 
+ <font face="symbol">ò</font
+><sub>D</sub> f(rcos<font face="symbol">q</font
+>,rsin<font face="symbol">q</font
+>) r dr d<font face="symbol">q</font
+> , where D is how we
+describe the region R <i>in polar coordinates</i>.
+<p>
+For example, the integral of the function f(x,y) = xy on the semicircle
+lying between the x-axis and y=[<font face="symbol">Ö</font
+>(9-x<sup>2</sup>)] can be computed as
+<p>
+
+<center> <font face="symbol">ò</font
+><sub>0</sub><sup><font face="symbol">p</font
+></sup><font face="symbol">ò</font
+><sub>0</sub><sup>3</sup> (rcos<font face="symbol">q</font
+>)(rsin<font face="symbol">q</font
+>)r dr d<font face="symbol">q</font
+></center><br>
+<p>
+<p>
+ Focus on Theory: <b>Change of variables</b>
+<p>
+Polar coordinates illustrate the benefit of decribing points in the plane
+differently - it can simplify some double integrals. The idea is to 
+<i>change variables</i>; it's basically u-substitution for function of
+two variables.
+<p>
+<p>
+The general idea is that if a region R can be described more conveniently
+using a different sort of coordinates, this means that we are describing
+x and y as <i>functions</i> of different variables s and t. For example,
+a circle of radius 4 is better described as 
+<p>
+<p>
+
+<center>x = rcos<font face="symbol">q</font
+> and y = rsin<font face="symbol">q</font
+>, for 0 <font face="symbol">£</font
+> r <font face="symbol">£</font
+> 4 
+and 0 <font face="symbol">£</font
+> <font face="symbol">q</font
+> <font face="symbol">£</font
+> 2<font face="symbol">p</font
+></center><br>
+<p>
+<p>
+ (i.e., polar coordinates). In general, changing coordinates means 
+describing the region R by
+<p>
+<p>
+
+<center>x = x(s,t) and y = y(s,t), for s and t in some region S</center><br>
+<p>
+<p>
+Then we write the integral of the function f over R as the integral of
+<i>something else</i> (written in terms of s and t) over the region S.
+The question is, the integral of <i>what</i>? The answer comes from thinking 
+of cutting up S into little rectangles S<sub>ij</sub>, and looking at the 
+little regions R<sub>ij</sub> the change of 
+variables carries each to. The integral of f over R can be approximated 
+by adding up
+values in each region R<sub>ij</sub>, times the area of R<sub>ij</sub>. By choosing (s<sub>i</sub>,t<sub>j</sub>)
+in S<sub>ij</sub>, we can use the point (x(s<sub>i</sub>,t<sub>j</sub>),y(s<sub>i</sub>,t<sub>j</sub>)) in R<sub>ij</sub>; the question is,
+what is the area of R<sub>ij</sub>?. 
+<p>
+If we think of the rectangles S<sub>ij</sub> as having sides of length ds and dt, 
+then using linear approximations to x(s,t) and y(s,t), R<sub>ij</sub> can be
+approximated by a parallelogram with sides the vectors 
+<p>
+<p>
+
+<center> ([(<font face="symbol">¶</font
+>x)/(<font face="symbol">¶</font
+>s)],[(<font face="symbol">¶</font
+>y)/(<font face="symbol">¶</font
+>s)])ds
+and  ([(<font face="symbol">¶</font
+>x)/(<font face="symbol">¶</font
+>t)],[(<font face="symbol">¶</font
+>y)/(<font face="symbol">¶</font
+>t)])dt</center><br>
+<p>
+<p>
+ Luckily, we know how to compute the area of such a parallelogram; it's given
+by their cross product (add 0's to the vectors, so they are in 3-space!), which turns 
+out to be:
+<p>
+<p>
+
+<center><font face="symbol">D</font
+>A<sub>ij</sub> = <font face="symbol">|</font
+>x<sub>s</sub> y<sub>t</sub>-x<sub>t</sub> y<sub>s</sub><font face="symbol">|</font
+>&nbsp;ds&nbsp;dt</center><br>
+<p>
+<p>
+ Taking limits as the size of the S<sub>ij</sub> goes to zero, we obtain:
+<p>
+<p>
+
+<center><font face="symbol">ò</font
+><sub>R</sub> f(x,y)&nbsp;dx&nbsp;dy = <font face="symbol">ò</font
+><sub>S</sub> f(x(s,t),y(s,t))&nbsp;<font face="symbol">|</font
+>x<sub>s</sub> y<sub>t</sub>-x<sub>t</sub> y<sub>s</sub><font face="symbol">|</font
+>&nbsp;ds&nbsp;dt</center><br>
+<p>
+<p>
+The expression <font face="symbol">|</font
+>x<sub>s</sub> y<sub>t</sub>-x<sub>t</sub> y<sub>s</sub><font face="symbol">|</font
+> is called the <i>Jacobian</i> associated to the
+change of variables, and is sometimes written
+<p>
+<p>
+
+<center><font face="symbol">|</font
+>x<sub>s</sub> y<sub>t</sub>-x<sub>t</sub> y<sub>s</sub><font face="symbol">|</font
+> =  [(<font face="symbol">¶</font
+>(x,y))/(<font face="symbol">¶</font
+>(s,t))]</center><br>
+<p>
+<p>
+For example, to integrate a function f over the triangle with vertices 
+(1,1), (2,3), and (3,8),
+we can instead integrate over the triangle with vertices (0,0), (1,0), and (0,1),
+by changing coordinates. It turns out we can always do this by writing
+<p>
+<p>
+
+<center>x = as+bt+c and y = ds+et+f</center><br>
+<p>
+<p>
+ for appropriate choices of a,b,c,d,e and f. All you need to do is
+solve the equations
+1 = a0+b0+c,1 = d0+e0+f,2 = a1+b0+c,3 = d1+e0+f,3 = a0+b1+c, and 8 = d0+e1+f
+which, in this case, gives a=1,b=2,c=1,d=2,e=7,f=1. So
+x = s+2t+1 and y = 2s+7t+1, giving Jacobian 1&#183;7-2&#183;2 = 3. So under this
+change of coordinates,
+<p>
+<p>
+
+<center><font face="symbol">ò</font
+><sub>R</sub> f(x,y)&nbsp;dA = <font face="symbol">ò</font
+><sub>0</sub><sup>1</sup><font face="symbol">ò</font
+><sub>0</sub><sup>1-t</sup>f(s+2t+1,2s+7t+1)&#183;3&nbsp;ds&nbsp;dt</center><br>
+<p>
+<p>
+More generally, we can carry out a change of coordinates for 3 variables;
+we then write 
+<p>
+<p>
+
+<center>x = x(s,t,u), y = y(s,t,u), and z = z(s,t,u)</center><br>
+<p>
+<p>
+ A little box with sides of length ds, dt, and du gets 
+carried to a little parallelogram, with sides the vectors
+<p>
+<p>
+
+<center>(x<sub>s</sub>,y<sub>s</sub>,z<sub>s</sub>)&nbsp;ds, (x<sub>t</sub>,y<sub>t</sub>,z<sub>t</sub>)&nbsp;dt, and (x<sub>u</sub>,y<sub>u</sub>,z<sub>u</sub>)&nbsp;du</center><br>
+<p>
+<p>
+ (call these V<sub>s</sub>, V<sub>t</sub>, and V<sub>u</sub>). This has volume 
+<font face="symbol">|</font
+>V<sub>s</sub><font face="symbol">·</font
+>(V<sub>t</sub>&times;V<sub>u</sub>)<font face="symbol">|</font
+>, which is the Jacobian of this change of variables, and serves
+as the necessary ``fudge factor'' to express an integral in terms of s, t, and u.
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Triple integrals with spherical and cylindrical coordinates</b></DD></DL>
+It turns out that we can easily impose <i>two</i> new coordinate systems on 3-space; each can 
+sometimes be used to simplify an integration problem, usually by simplifying the 
+<i>region</i> we integrate over.
+<p>
+With cylindrical coordinates, we simply replace (x,y,z) with (r,<font face="symbol">q</font
+>,z), i.e., use
+polar coordinates in the xy-plane. In the new coordinate system, 
+dV = (r dr d<font face="symbol">q</font
+>) dz , since that will be the volume of a small `cylinder'
+of height dz lying over the small sector in the xy-plane that we use to compute dA
+above.
+<p>
+Usually, we will actually integrate in cylindrical coordinates in the order 
+dz dr d<font face="symbol">q</font
+>, since this coordinate system is most useful when the
+cross-sections z=constant of our region are <i>disks</i> (so the limits 
+of integrations for z will depend only on r).
+<p>
+<p>
+Spherical coordinates are much like polar coordinates; we describe a point
+(x,y,z) by distance (which we call <font face="symbol">r</font
+> and direction, except we need to use <i>two</i>
+angles to completely specify the direction; first, the
+angle <font face="symbol">q</font
+> that (x,y,0) makes with the x-axis in 
+the xy-plane, and then the angle <font face="symbol">f</font
+> that the line through our 
+point makes with the (positive) z-axis (which we can always assume 
+lies between 0 and <font face="symbol">p</font
+>). A little trigonometry leads us to the
+formulas 
+<p>
+
+<center>(x,y,z) = (<font face="symbol">r</font
+>cos<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,<font face="symbol">r</font
+>sin<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,<font face="symbol">r</font
+>cos<font face="symbol">f</font
+>)</center><br>
+<p>
+Again, the idea is that regions difficult to describe in rectangular coordinates
+can be far easier to describe spherically; for example, a sphere of radius R<sub>0</sub>
+can be described as the <i>rectangle</i> 0 <font face="symbol">£</font
+> <font face="symbol">r</font
+> <font face="symbol">£</font
+> R<sub>0</sub>, o <font face="symbol">£</font
+> <font face="symbol">q</font
+> <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>,
+and 0 <font face="symbol">£</font
+> <font face="symbol">f</font
+> <font face="symbol">£</font
+> <font face="symbol">p</font
+>. 
+<p>
+It is a bit more trouble to work out what dV is in spherical coordinates; computing the
+Jacobian, we find that it is 
+<p>
+
+<center>dv = <font face="symbol">r</font
+><sup>2</sup>sin<font face="symbol">f</font
+> d<font face="symbol">r</font
+> d<font face="symbol">q</font
+> d<font face="symbol">f</font
+></center><br>.
+<p>
+So the `change of variables formula' for spherical coordinates reads:
+<p>
+
+<center><font face="symbol">ò</font
+><sub>W</sub> f(x,y,z) dV = 
+<font face="symbol">ò</font
+><sub>R</sub> f(<font face="symbol">r</font
+>cos<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,<font face="symbol">r</font
+>sin<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,<font face="symbol">r</font
+>cos<font face="symbol">f</font
+>) 
+<font face="symbol">r</font
+><sup>2</sup>sin<font face="symbol">f</font
+> d<font face="symbol">r</font
+> d<font face="symbol">q</font
+> d<font face="symbol">f</font
+></center><br>
+<p>
+So, for example, the integral of the function f(x,y,z) = xz over the top half of a 
+sphere of radius 5 could be computed as
+<p>
+
+<center>
+ <font face="symbol">ò</font
+><sub>0</sub><sup>5</sup><font face="symbol">ò</font
+><sub>0</sub><sup>2<font face="symbol">p</font
+></sup><font face="symbol">ò</font
+><sub>0</sub><sup><font face="symbol">p</font
+>/2</sup>(<font face="symbol">r</font
+>cos<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>)(<font face="symbol">r</font
+>cos<font face="symbol">f</font
+>) (<font face="symbol">r</font
+><sup>2</sup>sin<font face="symbol">f</font
+>) 
+d<font face="symbol">f</font
+> d<font face="symbol">q</font
+> d<font face="symbol">r</font
+></center><br>
+<p>
+<p><br>
+<b>Chapter 16: Parametrized curves</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Parametrized curves</b></DD></DL>
+So far, we have talked about functions of several variables; functions
+which need several inputs in order to get a single output. Our next
+topic is <i>parametrized curves</i>; functions which have one input
+but several outputs. We will focus on functions of the form
+<p>
+
+<center>[r\vec](t) = (x(t),y(t)) or [r\vec](t) = (x(t),y(t),z(t))</center><br>
+<p>
+i.e., curves in the plane or 3-space. If we think of t as time, then
+what [r\vec] does is give us a point in the plane or 3-space at each moment
+of time. Thinking of [r\vec] as the position of a particle, the particle
+sweeps out a path  or curve, C, in the plane or 3-space as time passes;
+we think of [r\vec] as <i>parametrizing</i> this curve C.
+<p>
+We therefore make a distinction between a <i>curve</i> (= a collection
+of point laid out in a string) and a <i>parametrized curve</i> (= a
+function which traces out a curve). A single curve can have many different
+parametrizations; for example,
+<p>
+[(r<sub>1</sub>)\vec](t) = (cost,sint) , 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>
+<p>
+[(r<sub>1</sub>)\vec](t) = (cos2t,sin2t) , 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> <font face="symbol">p</font
+>
+<p>
+[(r<sub>1</sub>)\vec](t) = (sint,cost) , 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> 2<font face="symbol">p</font
+>
+<p>
+[(r<sub>1</sub>)\vec](t) = (cost<sup>2</sup>,sint<sup>2</sup>) , 0 <font face="symbol">£</font
+> t <font face="symbol">£</font
+> <font face="symbol">Ö</font
+>{2<font face="symbol">p</font
+>}
+<p>
+all parametrize the (unit) circle in the plane. Their diffences with the first are that
+they go twice as fast, or travel in the opposite direction, or starts slowly and then moves
+faster and faster, respectively.
+<p>
+<p>
+Of special interest are <i>lines</i>; they can be described as having a starting place
+and a direction they travel, and so can be parametrized by [r\vec](t) = P+t[v\vec],
+where P is the starting point and [v\vec] is the direction (for example,
+the difference of two points lying <i>along</i> the line).
+<p>
+As with ordinary functions, we can build new parametrized curves from old ones by, for example,
+adding constants to each coordinate (which translates the curve by those amounts), or multiplying
+coordinates by constants (which streches the curve in those directions).
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Velocity and acceleration</b></DD></DL>
+When we think of t as time, we can imagine ourselves as travelling along the
+para-
+<p>
+metrized curve [r\vec](t), and so at each point we can make sense of both
+<i>velocity</i> and <i>acceleration</i>. Velocity, which is the instantaneous
+rate of change of position, can be easily calculated from our
+parametrization [r\vec](t) = x(t),y(t),z(t) as
+[v\vec](t) = [r\vec]<sup><font face="symbol">¢</font
+></sup>(t) = x<sup><font face="symbol">¢</font
+></sup>(t),y<sup><font face="symbol">¢</font
+></sup>(t),z<sup><font face="symbol">¢</font
+></sup>(t)
+<p>
+Similarly, acceleration can be computed as 
+[a\vec](t) = [r\vec]<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(t) = 
+x<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(t),y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(t),z<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(t)
+<p>
+On useful fact: if the length of the velocity (i.e., its <i>speed</i>), <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec](t)<font face="symbol">|</font
+><font face="symbol">|</font
+> is 
+constant, then [a\vec](t) is always perpendicular to [v\vec](t)
+<p>
+And speaking of length, we can compute the <i>length</i> of a parametrized curve can be computed
+by integrating its speed: the length of the parametrized curve [r\vec](t), a <font face="symbol">£</font
+> t <font face="symbol">£</font
+> b,
+is
+<p>
+
+<center>Length = <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec](t)<font face="symbol">|</font
+><font face="symbol">|</font
+> dt</center><br>
+<p>
+<p><br>
+<b>Chapter 17: Vector fields</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Vector fields</b></DD></DL>
+A vector field is a field of vectors, i.e., a choice of vector F(x,y) (or F(x,y,z))
+in the plane for every point in some part of the plane (the domain of F), and similarly
+in 3-space. We can think of F as F(x,y) = (F<sub>1</sub>(x,y),F<sub>2</sub>(x,y)) ; each coordinate of
+F is a function of several variables. We can represent a vector field
+pictorially by place the vector F(x,y) in the plane with its <i>tail</i> at the 
+point (x,y) . A vector field is therefore a choice of a direction (and magmitude)
+at each point in the plane (or 3-space...). Such objects naturally occur in many
+disciplines, e.g., a vector field may represent the wind velocity at each point
+in the plane, or the direction and magnitude of the current in a river.
+<p>
+One of the most important class of vector fields that we will encounter are
+the <i>gradient vector fields</i>. If we have an (ordinary) function f(x,y,z)
+of several variables, then for each point (x,y,z), <font face="symbol">Ñ</font
+>(f) can be thought
+of as a <i>vector</i>, which we have in fact already taken to drawing with its
+tail at the point (x,y,z) (so that, for example, we can use it
+as a normal vector for the tangent plane to the graph of f). Many vector
+fields are gradient vector fields, e.g., (y,x) = <font face="symbol">Ñ</font
+>(xy) ; one of 
+the question we will need to answer is `How do you tell when a vector field
+is a gradient vector field?'. We shall see several answers to this question 
+in the next chapter.
+<p>
+
+
+
+
+<p><br>
+<b>Chapter 18: Line Integrals</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The basic idea</b></DD></DL>
+We introduced vector fields F(x,y) in the previous chapter in large 
+part because 
+these are the objects that we can most naturally integrate over a 
+(parametrized) curve. The reason for this is that along a curve
+we have the notion of a velocity vector [v\vec] at each point, and we can 
+<i>compare</i> these two vectors, by taking their dot product. This 
+tells us the extent to which F points in the direction of [v\vec].
+Integration is all about taking averages, and so we can think if 
+the integral of F over the curved C as measuring the <i>average</i>
+extent to which F points in the same direction as C. 
+<p>
+We can set this up as we have all other integrals, as a limit of sums.
+Picking points [(c<sub>i</sub>)\vec] strung along the curve C, we can add together
+the dot products F([(c<sub>i</sub>)\vec])<font face="symbol">·</font
+>([(c<sub>i+1</sub>)\vec]-[(c<sub>i</sub>)\vec]), and then
+take a limit as the lengths of the vectors [(c<sub>i+1</sub>)\vec]-[(c<sub>i</sub>)\vec] between
+consecutive points along the curve goes to 0. We denote this number
+by
+<p>
+
+<center><font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec]</center><br>
+<p>
+<p>
+Such a quantity can be interpreted in several ways; we will mostly focus
+on the notion of <i>work</i>. If we interpret F as measuring the amount
+of force being applied to an object at each point (e.g., the pull due to 
+gravity), then <font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] measures the amount
+of work done by F as we move along C. In other words, it measures the
+amount that the force field F <i>helped</i> us move along C (since moving in 
+the same direction, it helps push us along, while when moving opposite to it,
+it would slow us down).
+<p>
+In the case that F measures the current in a river or lake or ocean, and C is a
+<i>closed</i> curve (meaning it begins and ends at the same point), we interpret
+the integral of F along C as the <i>circulation</i> around C, since it
+measures the extent to which the current would <i>push</i> you around the curve
+C.
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Computing using parametrized curves</b></DD></DL>
+Of course, as usual, we would never want to <i>compute</i> a line integral by
+taking a limit! But if we use a parametrization of C, we can interpret
+<font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] as an `ordinary' integral. The
+idea is that if we use a parametrization [r\vec](t) for C then
+F([(c<sub>i</sub>)\vec])<font face="symbol">·</font
+>([(c<sub>i+1</sub>)\vec]-[(c<sub>i</sub>)\vec]) becomes 
+<p>
+
+<center>F([r\vec](t<sub>i</sub>))<font face="symbol">·</font
+>([r\vec](t<sub>i+1</sub>)-[r\vec](t<sub>i</sub>))</center><br>
+<p>
+But using tangent lines, we can approximate [r\vec](t<sub>i+1</sub>)-[r\vec](t<sub>i</sub>)
+by [r\vec]<sup><font face="symbol">¢</font
+></sup>(t<sub>i</sub>)(t<sub>i+1</sub>-t<sub>i</sub>) = [r\vec]<sup><font face="symbol">¢</font
+></sup>(t<sub>i</sub>)<font face="symbol">D</font
+>y .
+<p>
+so we can instead compute our line integral as
+<p>
+
+<center><font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] = 
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> F([r\vec](t))<font face="symbol">·</font
+>[r\vec]<sup><font face="symbol">¢</font
+></sup>(t) dt</center><br>
+<p>
+
+where [r\vec] parametrizes C with a <font face="symbol">£</font
+> t <font face="symbol">£</font
+> b .
+<p>
+<p>
+Some notation that we will occasionally use: If the vector field F = (P,Q,R)
+and [r\vec](t) = (x(t),y(t),z(t)), then  d[r\vec] = (dx,dy,dz), so
+F<font face="symbol">·</font
+>d[r\vec] = Pdx+Qdy+Rdz . So we can write 
+<font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] =  <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> Pdx+Qdy+Rdz
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Gradient fields and path independence</b></DD></DL>
+In general, the computation of a line integral can be quite cumbersome, 
+in part because we need to evaluate the vector field F <i>at the
+point</i> [r\vec](t), while can yield quite complicated formulas. But there
+is one class of vector fields that are really quite easy to integrate: 
+gradient vector fields. This is because we can compute:
+<p>
+<p>
+if F = <font face="symbol">Ñ</font
+>(f), then F([r\vec](t))<font face="symbol">·</font
+>[r\vec]<sup><font face="symbol">¢</font
+></sup>(t)
+= [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)][dx/dt]+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)][dy/dt]+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>z)][dz/dt][d/dt](f([r\vec](t)))
+<p>
+<p>
+so <font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] = 
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> F([r\vec](t))<font face="symbol">·</font
+>[r\vec]<sup><font face="symbol">¢</font
+></sup>(t) dt
+= <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> 
+[d/dt](f([r\vec](t))) dt = f([r\vec](b)) - f([r\vec](a)) . 
+We call this the <i>Fundamental Theorem of Calculus for Line Integrals</i>. 
+<p>
+We say that a vector field f is <i>path-independent</i> (or <i>conservative</i>)
+if the value of a line integral over a curve C depends only on what the 
+endpoints P,Q of C are, i.e., the integral would be the same of any
+<i>other</i> curve running from P to Q. Our result right above can then be 
+interpreted as saying that gradient vector fields are conservative. What is amazing is that it 
+turns out that every conservative vector field F is the gradient vector field for some 
+function f. We can alctually write down the function, too (by stealing an idea
+from the Fundamental Theorem of Calculus...), as 
+<p>
+f(x,y) =  <font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] , where C is <i>any</i> curve
+from (0,0) to (x,y).
+<p>
+<p>
+
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Green's Theorem</b></DD></DL>
+All of which is very nice, but far too theoretical for practical purposes. What we need
+are simple ways to tell that a vector field is conservative, and to build the function f
+when it is. Luckily, this is not too hard!
+<p>
+First, a slight reinterpretation: a vector field F is path-independent if 
+<font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec]=0 for every <i>closed</i> curve C.
+<p>
+If F is conservative, then F = (F<sub>1</sub>,F<sub>2</sub>) = (f<sub>x</sub>,f<sub>y</sub>) for some function f. But then 
+by using the equality of mixed partials for f, we can then conclude
+that we <i>must</i> have (F<sub>1</sub>)<sub>y</sub> = (F<sub>2</sub>)<sub>x</sub> . In fact, this is enough to <i>guarantee</i>
+that F is conservative; this is because of <i>Green's Theorem</i>: defining
+the <i>curl</i> of F to be (F<sub>2</sub>)<sub>x</sub>-(F<sub>1</sub>)<sub>y</sub>, we have
+<p>
+<p>
+If R is a region in the plane, and C is the boundary of R, parametrized so that
+we travel <i>counterclockwise</i> around R, then
+<p>
+
+<center><font face="symbol">ò</font
+><sub>C</sub> F<font face="symbol">·</font
+>d[r\vec] = <font face="symbol">ò</font
+><sub>R</sub> curl(F) dA</center><br>
+<p>
+<p>
+In particular, if the curl is 0, then the integral of F along C is always 0 
+for every closed curve, so F is conservative.
+<p>
+We can actually use this result to evaluate line integrals <i>or</i> double integrals,
+whichever we wish. For example, we can compute the area of a region R as a
+line integral, by integrating the functionb 1 over R, and then using a vector
+field around the boundary whose curl is 1, such as (0,y) or (-x,0) or (x,2y) or ....
+<p>
+This allows us to spot conservative vector fields quite easily, but doesn't tell us how to 
+compute the function it is the gradient <i>of</i> (called its <i>potential function</i>).
+But in practice this is not hard; we simply write down a function
+f with [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]=F<sub>1</sub> (e.g., f(x,y) = <font face="symbol">ò</font
+>F<sub>1</sub>(x,y) dx). This is actually a
+<i>family</i> of functions, because we have the constant of integration to worry about, which we 
+should <i>really</i> think of as a <i>function of</i> y (because we integrated a function
+of two variables, dx). To figure out <i>which</i> function of y, simply
+take [(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>y)]&nbsp;of your function, and compare with F<sub>2</sub> = [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]; just adjust the constant of
+integration accordingly.
+<p>
+<p>
+Finally, there is a similar result for vector fields in dimension 3;
+for F = (F<sub>1</sub>,F<sub>2</sub>,F<sub>3</sub>), we can define
+curel(F) = ``<font face="symbol">Ñ</font
+>&times;F'' = 
+((F<sub>3</sub>)<sub>y</sub>-(F<sub>2</sub>)<sub>z</sub>,-((F<sub>3</sub>)<sub>x</sub>-(F<sub>1</sub>)<sub>z</sub>),(F<sub>2</sub>)<sub>x</sub>-(F<sub>1</sub>)<sub>y</sub>)
+<p>
+Then F = <font face="symbol">Ñ</font
+>f exactly when curl(F) = (0,0,0) ; and we can actually
+<i>construct</i> f using a procedure analogous to the one we came up with for vector fields
+with two variables.
+<p>
+<p><br>
+<b>Chapter 19: Flux Integrals</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The basic idea</b></DD></DL>
+The basic idea is that we can also integrate vector fields (in 3-space)
+over a <i>surface</i>. The interpretation we will use is that we
+are measuring the amount of fluid flowing through a surface (e.g., a cell
+membrane) immersed in the fluid.
+<p>
+We can think of a wire-frame surface sitting in a river; we would like to compute 
+the amount of water flowing (each second, perhaps) flowing through the surface.
+(Or, you can think of computing the amount of rain falling on the surface of your body...)
+<p>
+Our input is a (velocity) vector field F, and a surface S, described in some
+fashion (e.g., as the graph of a function of two vairables). The idea is that a piece
+of surface which is tilted with respect to the vector field will not contribute much to the 
+total. In other words, the amount flowing through the surface is
+related to the extent to which the (<b>unti</b>) <i>normal vector</i> for the surface is
+pointing in the
+same direction as F. We measure this with the dot product, F<font face="symbol">·</font
+>[n\vec].
+This amount is also clearly proportional to the <i>size</i> of the surface; twice as much surface
+will give twice as much flow. This leads us to believe that what we
+need to add up in order to compute the flow through the surface is
+F<font face="symbol">·</font
+>[n\vec] dA (to take into account tilt and size). So we define the <i>flux
+integral</i> of a vector field F over a surface S to be
+<p>
+
+<center><font face="symbol">ò</font
+><sub>S</sub> [F\vec]<font face="symbol">·</font
+>d[A\vec] = <font face="symbol">ò</font
+><sub>S</sub> ([F\vec]<font face="symbol">·</font
+>[n\vec])&nbsp;dA</center><br>
+<p>
+Now at every point of the surface S, we actually have <i>two</i> choices of unit normal
+vector [n\vec]; we will see in the next section how to make a more or less `obvious'
+consistent choice of normal, the <i>outward pointing normal</i>. For example, if S
+is a sphere of radius R, centered at (0,0,0), the outward unit normal at (x,y,z) is
+just (x/R,y/R,z/R). If we choose F to be this <i>same</i> vector, then it is easy to see that
+F<font face="symbol">·</font
+>[n\vec] = 1, and so our flux integral will just compute the
+area of the surface S.
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Computing using graphs, cylindrical, and spherical coordinates</b></DD></DL>
+Of course, still don't want to compute flux integrals as limits of sums, either! What we
+need is some approaches to calculating [n\vec]&nbsp;dA . We study three cases:
+<p>
+<p>
+Swuppose S is the graph of a function f, having domain R in the plane. What 
+we would really like to do
+is to compute the flux integral as the integral of a function over R.
+To do this, we note that the vector v = (-f<sub>x</sub>,-f<sub>y</sub>,1) is normal to the graph of f;
+it's the normal vector we used to express the tangent plane to the graph of f.
+It just so happens that v = (1,0,f<sub>x</sub>)&times;(0,1,f<sub>y</sub>), and so its length
+is equal to the area of the parallelogram that these two vectors span. But!, these are
+exactly the paralleograms we would use to approximate the graph, i.e., this length is also
+dA. So, [n\vec]&nbsp;dA = (-f<sub>x</sub>,-f<sub>y</sub>,1), and so
+<p>
+
+<center><font face="symbol">ò</font
+><sub>S</sub> F<font face="symbol">·</font
+>[n\vec]&nbsp;dA = <font face="symbol">ò</font
+><sub>R</sub> F(x,y,f(x,y))<font face="symbol">·</font
+>(-f<sub>x</sub>,-f<sub>y</sub>,1) dx dy dz</center><br>
+<p>
+<p><br>
+We can also use cylindrical and spherical coordinates, in special cases. If S is a piece
+of a cylinder
+cylinder, given by r = r<sub>0</sub>, for <font face="symbol">q</font
+> and z in some range of values R, 
+then the outward normal at r<sub>0</sub>,<font face="symbol">q</font
+>,z is (cos<font face="symbol">q</font
+>,sin<font face="symbol">q</font
+>,0), while
+dA = r<sub>0</sub> d<font face="symbol">q</font
+> dz, so
+<p>
+
+<center><font face="symbol">ò</font
+><sub>S</sub> F<font face="symbol">·</font
+>[n\vec]&nbsp;dA = 
+<font face="symbol">ò</font
+><sub>R</sub> F(r<sub>0</sub>cos<font face="symbol">q</font
+>,r<sub>0</sub>sin<font face="symbol">q</font
+>, z)<font face="symbol">·</font
+>(cos<font face="symbol">q</font
+>,sin<font face="symbol">q</font
+>,0) r<sub>0</sub> d<font face="symbol">q</font
+> dz</center><br>
+<p>
+<p><br>
+If S is a piece of sphere,  given by  <font face="symbol">r</font
+> = <font face="symbol">r</font
+><sub>0</sub> for <font face="symbol">q</font
+> and <font face="symbol">f</font
+> in some range
+R of values, then the outward normal is 
+(cos<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,sin<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,cos<font face="symbol">f</font
+>)
+while dA is <font face="symbol">r</font
+><sub>0</sub><sup>2</sup>sin<font face="symbol">f</font
+> d<font face="symbol">q</font
+> d<font face="symbol">f</font
+>, so
+<p>
+
+<center><font face="symbol">ò</font
+><sub>S</sub> F<font face="symbol">·</font
+>[n\vec]&nbsp;dA =</center><br> 
+<p>
+
+<center>
+<font face="symbol">ò</font
+><sub>R</sub> F(<font face="symbol">r</font
+><sub>0</sub>cos<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,<font face="symbol">r</font
+><sub>0</sub>sin<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,<font face="symbol">r</font
+><sub>0</sub>cos<font face="symbol">f</font
+>)<font face="symbol">·</font
+>(cos<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,sin<font face="symbol">q</font
+>sin<font face="symbol">f</font
+>,cos<font face="symbol">f</font
+>) <font face="symbol">r</font
+><sub>0</sub><sup>2</sup>sin<font face="symbol">f</font
+> d<font face="symbol">q</font
+> d<font face="symbol">f</font
+></center><br>
+<p>
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

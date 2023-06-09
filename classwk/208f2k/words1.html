@@ -1,0 +1,1100 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 208</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for first exam</center><br></b>
+<p>
+<p><br>
+<b>Chapter 11: Functions of Several Variables</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Functions of two variables</b></DD></DL>
+Function of one variable: one number in, one number out. Picture a
+black box; one input and one output.
+<p>
+Function of several variables: several inputs, one output. Picture
+a quantity which depends on several different quantities. E.g., 
+distance from the origin in the plane: 
+<p>
+
+<center>distance = d = [<font face="symbol">Ö</font
+>(x<sup>2</sup>+y<sup>2</sup>)]</center><br>
+<p>
+depends on both the x- and y-coordinates of our point.
+<p>
+<p>
+Our goal is to understand functions of several variables, in much
+the same way that the tools of calculus allow us to understand functions
+of one variable. And our basic tool is going to be to <i>think
+of a function of several variables as a function of <b>one variable</b>
+(at a time!)</i>, s ithat we can use those tools to good effect.
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>3-space</b></DD></DL>
+One of the best ways to understand a function is to graph it.
+for one variable, y = f(x), this means to plot all of the 
+pairs of points (x,f(x), where x is in the domain of f.
+For functions of two variables, z=f(x,y), we need to plot 
+all <i>triples</i> (x,y,f(x,y). We need to build our graphs
+in <b>3-space</b>.
+<p>
+Cartesian coordinates: three axes, each perpendicular to one another, 
+all meeting at the <i>origin</i> (0,0,0). Axes are labelled by the
+<i>right hand rule</i>; the thumb, forefinger, and middle finger 
+of the right hand point in the x, y, and z directions, 
+respectively.
+The point (a,b,c) is the one reached from the origin by moving
+a units in the direction of the (positive) x-axis, then 
+b units in the
+y direction, and then c units in the z direction. 
+<p>
+
+
+<p>
+
+
+
+<a href="w1f1.ai">Figure</a>
+<p>
+The distance between points (a,b,c) and (x,y,z) is given by a formula
+very similar to the one for the plane:
+<p>
+
+<center>d = [<font face="symbol">Ö</font
+>((x-a)<sup>2</sup>+(y-b)<sup>2</sup>+(z-c)<sup>2</sup>)]</center><br>
+<p>
+<p>
+So, e.g., the points satisfying x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup> = 9 are all of the points
+with distance 3 from the origin (0,0,0), i.e., they form a sphere
+of radius 3, centered at the origin.
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>graphs of functions of two variables</b></DD></DL>
+We know what such a graph <i>is</i>; but how do we see what it
+looks like? One answer is to think of it as a function of 
+one variable (at a time!). 
+<p>
+If we set y = c=constant, and look at z = f(x,c) , we are looking at
+a function of one variable, x, which we can (in theory) graph.
+This graph is what we would see when the <i>plane</i> y = c meets
+the graph z = f(x,y) ; this is a (vertical) <i>cross section</i>
+of our graph (parallel to the plane
+y = 0, the xz-plane). Similarly, if we set x = d=constant, 
+and look at the graph of z = f(d,y) (as a function of y), we
+are seeing vertical cross sections of our original graph, parallel
+to the yz-plane. Several of these x- and y-cross sections together
+can give a very good picture of the general shape of the graph
+of our function z=f(x,y) .
+<p>
+Some of the simplest functions to describe are linear functions; 
+functions havng equations of the form z=ax+by+c . Their
+cross sections are all lines; the cross sections x = const all
+have the same slope b, and the y-cross sections all have 
+slope a.
+<p>
+Another simple type of function is <i>cylinders</i>; these
+are functions like f(x,y) = y<sup>2</sup> which, although we think of them as 
+functions of x and y, the output does not depend on one of the 
+inputs. Cross sections of such functions, setting equal to a constant
+whichever variable does not change the value of the function,
+will all be identical, so the graph looks likecopies of the
+exact same function, stacked side-by-side.
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Contour diagrams</b></DD></DL>
+The cross sections of the graph of a function are obtained by
+slicing our graph with vertical planes (parallel to one of our
+coordinate planes). But we could also use <i>horizontal</i>
+planes as well, that is, the planes z=constant. In other
+words, we graph f(x,y) = c for different values of the constant
+c. These are called <i>contour lines</i> or <i>level curves</i>
+for the function f, since they represent all of the points 
+on the graph of f which lie on the same horizontal level
+(the term contour line is borrowed from topographic maps; the
+lines represent the level curves of the height of land). 
+These have the advantage that they can be graphed <i>together</i>
+in the xy-plane, for different values of c, because the level
+curves corresponding to different values of c cannot meet
+(a point (x,y) on both level curves would satisfy c = f(x,y) = d,
+so f would not be a function....)
+<p>
+A collection of level curves also gives a good picture of what the
+graph of our function f looks like; we can imagine wandering through
+the doman of our function, reading off the value of the function
+f by looking at what level curve we are standing on. We usually
+draw level curves for equally spaced values of c; that way, if 
+the level curves are close together, we know that the function is changing 
+values rapidly in that region, while if they are far appart, the
+values of the function are not varying by a large amount in that
+area.
+<p>
+<p>
+
+
+
+<a href="w1f3.ai">Figure</a>
+<p>
+We usually, for convenience, draw the level curves of f on a single
+xy-plane (since we can keep them somewhat separate), labelling
+each curve with its z-value. We could reconstruct a picture 
+of the graph of f by simply drawing the level curve f(x,y) = c
+on the horizontal plane z = c in 3-space.
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Linear functions</b></DD></DL>
+Just as lines play an important role in the 1-variable theory
+of calculus (e.g., as tangent lines to functions), linear
+function play an important role in the several variable theory.
+<p>
+The most general equation for a plane in 3-space is 
+<p>
+
+<center>ax+by+cz = d , where a,b,c and d are constants,</center><br>
+<p>
+although typically, our planes will come in the form z = ax+by+c. 
+The number a is called the <i>x-slope</i>, since it tells us
+how much z changes if we move 1 unit to the right in the 
+x-direction. For similar reasons, b is called the <i>y-slope</i>.
+<p>
+Typically, there is exactly one plane passing through any
+three particular points in 3-space (unless they happen to line up
+in a line, then there are many planes possible). Later we will
+see how to determine an equation for this plane.
+<p>
+We can also completely describe a plane by knowing a point 
+(x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>) on the plane, and its x-slope m and y-slope
+n; the equation for the plane is then 
+<p>
+
+<center>z = z<sub>0</sub>+m(x-x<sub>0</sub>)+n(y-y<sub>0</sub>)</center><br>
+<p>
+This will often be our method for finding equations of planes, since
+it is these three pieces of information which we will know when trying to
+compute the <i>tangent plane</i> to the graph of a function, as we shall
+see.
+<p>
+If we look at the level curves of a linear function, 
+z = ax+by+c = d = constant, they are a collection of 
+parallel lines; if we choose equally spaced horizontal levels, 
+they will be <i>equally spaced parallel lines</i>.
+<p>
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>Functions of more than two variables</b></DD></DL>
+There is of course no reason to stop with two variables for a function.
+An expression like F =F(M,m,r) =  GMm/r<sup>2</sup> can be thought of as a function
+describing F as a function of M, m, and r (and G!). When we
+think of the graph of this function (as a function of the first three
+variables), its graph will live in 4-space! However, we can still get 
+an impression of what the function looks like, by graphing 
+F(M,m,r) = c = constant, for various values of c. These
+are <i>level surfaces</i> for the function f. We can get a picture
+of what the level surfaces look like by taking cross sections! Or
+we could look at each level surface's level <i>curves</i>.
+<p>
+
+<p><br>
+<b>Chapter 12: Vectors</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1,2:
+</DT><DD>
+ <b>Vectors</b></DD></DL>
+In one-variable calculus, we make a distinction between
+speed and velocity; velocity has a direction (left or right), 
+while speed doesn't. It is the <i>size</i> of the velocity.
+This distinction is even more important in several variable 
+calculus, and motivates the ntion of a <i>vector</i>.
+<p>
+Basically, a vector [v\vec] is an arrow pointing <i>from</i> 
+one point in the 
+plane (or 3-space or ...) <i>to</i> another. A vector is
+thought of as pointing frm its <i>tail</i> to its <i>head</i>.
+If it points from P to Q, we call the vector [v\vec]
+= PQ. 
+<p>
+A vector has both a <i>size</i> (= length = distance from P to Q)
+and a <i>direction</i>. Vectors that have the same size and point in the same 
+direction are often thought of as the same, even if they have different tails (and
+heads). Put differently, by picking up the vector and translating it so that its
+tail is at the origin (0,0), we can identify [v\vec] with a point in the plane, 
+namely its head (x,y), and write [v\vec] = (x,y). If [v\vec]&nbsp;goes from 
+(a,b) to (c,d), then we would have [v\vec](c-a,d-b). The length of [v\vec]
+(a,b) is then <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = [<font face="symbol">Ö</font
+>(a<sup>2</sup>+b<sup>2</sup>)].
+<p>
+In 3-space we have three special vectors, pointing in the direction of each coordinate
+axis (in the plane there are, analogously, two); these are called
+<p>
+
+<center>[i\vec](1,0,0), [j\vec](0,1,0), and [k\vec](0,0,1)</center><br>
+<p>
+These come in especially handy when we start to add vectors.
+There are several different points of view to vector addition:
+<p>
+(1) move the vector [w\vec]&nbsp;so that its head is on the tail of [v\vec]; then the vector
+[v\vec]+[w\vec]&nbsp;has tail equal to the tail of [v\vec]&nbsp;and head equal to the head of [w\vec];
+<p>
+(2) move [v\vec]&nbsp;and [w\vec]&nbsp;so that their tails are both at the origin, and build the parallelogram
+which has sides equal to [v\vec]&nbsp;and [w\vec]; then [v\vec]+[w\vec]&nbsp;is the vector that goes from the origin
+to the opposite corner of the parallelogram;
+<p>
+(3) if [v\vec](a,b) and [w\vec](c,d), then [v\vec]+[w\vec](a+c,b+d)
+<p>
+<p>
+
+
+
+<a href="w1f2.ai">Figure</a>
+<p>
+We can also subtract vectors; if they share the same tail, [v\vec]-[w\vec]&nbsp;is the vector that
+points from the head of [w\vec]&nbsp;to the head of [v\vec]&nbsp;(so that [w\vec]+([v\vec]-[w\vec]) = [v\vec]). In coordinates,
+we simply subtract the coordinates.
+<p>
+We can also <i>rescale</i> vectors = multiply them by a constant factor;
+a[v\vec]vector pointing in the same direction, but a times as long. (We use
+the convention that if a<font face="symbol"> &lt; </font
+>0, then a[v\vec]&nbsp;points in the <i>opposite</i> direction
+from [v\vec].)
+<p>
+Using coordinates, this means that a(x,y) = (ax,ay) . To distinguish a from the coordinates
+or the vector, we call a a <i>scalar</i>.
+<p>
+All of these operations satisfy all of the usual properties you would expect:
+<p>
+<p>
+[v\vec]+[w\vec][w\vec]+[v\vec]
+<p>
+([v\vec]+[w\vec])+[u\vec][v\vec]+([w\vec]+[u\vec])
+<p>
+a(b[v\vec]) = (ab)[v\vec]
+<p>
+a([v\vec]+[w\vec]) = a[v\vec]+a[w\vec]
+<p>
+<p>
+Of course there is nothing special in all of this about vectors in the plane; all of these ideas
+work for vectors in 3-space, or 4-space, or .....
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Dot products</b></DD></DL>
+One thing we haven't done yet is multiply vectors together. It turns out that there are
+two ways to reasonably do this, serving two very different sorts of purposes.
+<p>
+The first, the dot product, is intended top measure the extent to which two vectors [v\vec]&nbsp;and [w\vec]\
+are pointing in the same direction. It takes a pair of vectors [v\vec](v<sub>1</sub>,<font face="symbol">¼</font
+>,v<sub>n</sub>) and
+[w\vec](w<sub>1</sub>,<font face="symbol">¼</font
+>,w<sub>n</sub>), and gives us a <i>scalar</i> [v\vec]<font face="symbol">·</font
+>[w\vec] = v<sub>1</sub>w<sub>1</sub>+<font face="symbol">¼</font
+>+v<sub>n</sub>w<sub>n</sub>.
+<p>
+Note that [v\vec]<font face="symbol">·</font
+>[v\vec] = v<sub>1</sub><sup>2</sup>+<font face="symbol">¼</font
+>+v<sub>n</sub><sup>2</sup> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+><sup>2</sup>. In general, 
+[v\vec]<font face="symbol">·</font
+>[w\vec] = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;cos(<font face="symbol">q</font
+>), where <font face="symbol">q</font
+> is the angle
+between the vectors [v\vec]&nbsp;and [w\vec]&nbsp;(when they have the same tail); this can be seen by an application
+of the Law of Cosines. This in turn allows us to compute this angle:
+<p>
+The <i>angle</i> <font face="symbol">Q</font
+> between v and w  = the angle (between 
+0 and <font face="symbol">p</font
+> with cos(<font face="symbol">Q</font
+>) = <font face="symbol">á</font
+>v,w<font face="symbol">ñ</font
+>/(<font face="symbol">|</font
+><font face="symbol">|</font
+>v<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>w<font face="symbol">|</font
+><font face="symbol">|</font
+>)
+<p>
+
+<p>
+The dot product satisfy some properties which justify calling it a product:
+<p>
+[v\vec]<font face="symbol">·</font
+>[w\vec] = [w\vec]<font face="symbol">·</font
+>[v\vec]
+<p>
+(k[v\vec])<font face="symbol">·</font
+>[w\vec] = k([v\vec]<font face="symbol">·</font
+>[w\vec])
+<p>
+[v\vec]<font face="symbol">·</font
+>([w\vec]+[u\vec]) = [v\vec]<font face="symbol">·</font
+>[w\vec]+[v\vec]<font face="symbol">·</font
+>[u\vec]
+<p>
+<p>
+Two vectors are orthogonal (= perpendicular) if the angle <font face="symbol">q</font
+> between them is <font face="symbol">p</font
+>/2, 
+so cos(<font face="symbol">q</font
+>)=0; this means that [v\vec]<font face="symbol">·</font
+>[w\vec] = 0. We write [v\vec]<font face="symbol">^</font
+>[w\vec].
+<p>
+<p>
+We've seen that it usually take three pieces of information to describe a plane in 3-space
+(3 points in the plane, or a point and the x- and y-slopes), however, using dot
+products, we can describe it using only <i>two</i>:
+<p>
+Every plane has a <i>normal vector</i> [n\vec]; [n\vec]&nbsp;is orthogonal to the vector PQ&nbsp;for any pair of 
+points P and Q in the plane. For example, the vector [k\vec]&nbsp;is perpendicular
+to the xy-plane, sine it is perpendicular to every vector of the form (a,b,0).
+Given such a normal vector [n\vec]&nbsp;and a point (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>) <i>in</i> the plane, every other point
+in the plane must satisfy [n\vec]<font face="symbol">·</font
+>(x-x<sub>0</sub>,y-y<sub>0</sub>,z-z<sub>0</sub>) = 0; writing this in
+coordinates gives the equation for the plane; 
+<p>
+
+<center>a(x-x<sub>0</sub>)+b(y-y<sub>0</sub>)+c(z-z<sub>0</sub>) = 0, where [n\vec](a,b,c)</center><br>
+<p>
+This means that if we are <i>given</i> the equation of the plane, we can 
+quickly read off what the normal vector for the plane is, as well. 
+<p>
+<p>
+Another application: projecting one vector onto another.
+<p>
+The idea is to figure out how much of one vector [v\vec]&nbsp;points <i>in</i> the direction of another vector
+[w\vec]. The dot product measures to what extent they are pointing in the same direction, so it
+is only natural that it plays a role.
+<p>
+What we wish to do is to write [v\vec]c[w\vec]&nbsp;+ [u\vec], where [u\vec]<font face="symbol">^</font
+>[w\vec] (i.e., write
+[v\vec]&nbsp;as the part pointing in the direction of [w\vec]&nbsp;and the part <font face="symbol">^</font
+> [w\vec]). By solving the
+equation ([v\vec]-c[w\vec])<font face="symbol">·</font
+>[w\vec] = 0, we find that c = ([v\vec]<font face="symbol">·</font
+>[w\vec])/([w\vec]<font face="symbol">·</font
+>[w\vec]).
+<p>
+We write c[w\vec] = proj<sub>[w\vec]</sub>[v\vec] =  [([v\vec]<font face="symbol">·</font
+>[w\vec])/([w\vec]<font face="symbol">·</font
+>[w\vec])][w\vec]=
+ [([v\vec]<font face="symbol">·</font
+>[w\vec])/(<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>)][[w\vec]/(<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>)]
+= (orthogonal) projection of [v\vec] onto [w\vec]
+<p>
+[u\vec] = [v\vec]-c[w\vec] !
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>The cross product</b></DD></DL>
+We saw how to use the dot product to give an equation for a plane, using a normal vector 
+for the plane
+The only question
+is, how do we find the normal vector, from the usual pieces of information we will know 
+about the plane? One answer is given by the cross product.
+<p>
+One ingredient we will need: The area of a parallelogram with sides the 
+vectors [v\vec]&nbsp;and [w\vec]&nbsp;:
+<p>
+Area = (bases&times;(height) = 
+<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;h = <font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;sin(<font face="symbol">q</font
+>) 9from triginometry).
+<p>
+<p>
+Now, for no apparent reason, we define, for [v\vec](v<sub>1</sub>,v<sub>2</sub>,v<sub>3</sub>) and 
+[w\vec](w<sub>1</sub>,w<sub>2</sub>,w<sub>3</sub>),
+<p>
+
+<center>[v\vec]&times;[w\vec] = (v<sub>2</sub>w<sub>3</sub>-v<sub>3</sub>w<sub>2</sub>,-(v<sub>1</sub>w<sub>3</sub>-v<sub>3</sub>w<sub>1</sub>),v<sub>1</sub>w<sub>2</sub>-v<sub>2</sub>w<sub>1</sub>)</center><br>
+<p>
+
+<center>= (v<sub>2</sub>w<sub>3</sub>-v<sub>3</sub>w<sub>2</sub>)[i\vec]-(v<sub>1</sub>w<sub>3</sub>-v<sub>3</sub>w<sub>1</sub>)[j\vec]+(v<sub>1</sub>w<sub>2</sub>-v<sub>2</sub>w<sub>1</sub>)[k\vec]</center><br>
+<p>
+We do this because, it turns out, ([v\vec]&times;[w\vec])<font face="symbol">^</font
+>[v\vec] <i>and</i> 
+([v\vec]&times;[w\vec])<font face="symbol">^</font
+>[w\vec] . [This is just a long tedious computation; take
+the dot products!] Also, a similar computation will produce
+<p>
+
+<center><font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]&times;[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+> = <font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[w\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;sin(<font face="symbol">q</font
+>) = the
+area of that parallelogram!</center><br>
+<p>
+How do you rembmer this formula? Most people remember it using the notation
+<p>
+
+<center>[v\vec]&times;[w\vec] =
+
+
+|</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+[i\vec]</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+[j\vec]</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+[k\vec]</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+v<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+w<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+w<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+w<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| = 
+
+
+|</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ w<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+w<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|</td><td nowrap align="center">
+<font face="symbol">®</font
+><br>i<Br>&nbsp;<br></td><td nowrap align="center">
+- </td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ w<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+w<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap align="center">
+<font face="symbol">®</font
+><br>j<Br>&nbsp;<br></td><td nowrap align="center">
++</td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>2</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ w<sub>1</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+w<sub>2</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ê<br>ê<br>ê<br>
+ê<br>ê
+</font></td><td>
+</td><td nowrap align="center">
+<font face="symbol">®</font
+><br>k<Br>&nbsp;<br></td><td nowrap align="center">
+</center><br>
+<p>
+where |</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>3</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ w<sub>2</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+w<sub>3</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| = 
+v<sub>2</sub>w<sub>3</sub>-v<sub>3</sub>w<sub>2</sub>, etc.
+<p>
+The cross product satisfies the following equalities:
+<p>
+[v\vec]&times;[w\vec] = -[w\vec]&times;[v\vec]
+<p>
+(k[v\vec])&times;[w\vec] = k([v\vec]&times;[w\vec])
+<p>
+<p>
+One immediate application is the equation for a plane:
+<p>
+To find the plane through the three points P, Q, and R&nbsp;in 3-space, 
+look at the vectors [v\vec]PQ&nbsp;and [w\vec]PR&nbsp;. These are vectors
+between points in our plane, and so they give a pair of directions in the 
+plane. They then must both be perpendicular to the normal vector [n\vec]&nbsp;for 
+the plane. But we know that they are both perpendicular to [v\vec]&times;[w\vec],
+and so [v\vec]&times;[w\vec] must be perpendicular to the plane. In other words, 
+we can choose our normal vector to <i>be</i> [v\vec]&times;[w\vec]. Using one 
+of our original points (P, say) as a point in the plane, we can write down the
+equation for the plane using our dot product equation, above.
+<p>
+
+<p>
+
+
+<b>Chapter 13: Differentiation</b>
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Partial derivatives</b></DD></DL>
+In one-variable calculus, the derivative of a function y = f(x) is defined
+as the limit of difference quotients:
+<p>
+
+<center>f<sup><font face="symbol">¢</font
+></sup>(x)lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f(x+h)-f(x))/h]</center><br>
+<p>
+and interpreted as an instantaneous rate of chage, or slope of tangent line.
+<p>
+But a function of two variables has <i>two variables</i>; which one do you
+increment by h to get your difference quotient? The answer is <b>both
+of them</b>, one at a time. In other words, a function of two variables z = f(x,y)
+has <i>two</i> (partial) derivatives:
+<p>
+
+<center>[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f(x+h,y)-f(x,y))/h] and 
+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]= lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f(x,y+h)-f(x,y))/h]</center><br>
+<p>
+Essentially, [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]&nbsp;is the derivative of f, thought of solely as a function of x
+(i.e., pretending that y is a constant), while [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]&nbsp;is the derivative of f, 
+thought of solely as a function of y.
+<p>
+<p>
+Different viewpoint, same result:
+<p>
+For one variable calculus f<sup><font face="symbol">¢</font
+></sup>(x)&nbsp;is the slope of the tangent line to the graph of
+f. As we shall see, The graph of a function of two variables has something
+we would naturally call a tangent <i>plane</i>, and one way to describe a plane
+is by computing its x- and y-slopes, i.e, the rate of change of f solely
+in the x- and y- directions. But this is precisely what the 
+limits above calculate; so [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]&nbsp;will be the x-slope of the tangent plane, 
+and [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]&nbsp;will be the y-slope.
+<p>
+The basic picture here is:
+<p>
+
+<p>
+
+
+
+<a href="w1f4.ai">Figure</a>
+<p>
+Just as with one variable, there are lots of different notations for describing
+the partial derivatives: for z = f(x,y), 
+<p>
+
+<center>[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]= [(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](f) =[(<font face="symbol">¶</font
+>z)/(<font face="symbol">¶</font
+>x)][(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](z) = D<sub>x</sub>(f) = D<sub>x</sub>(z) = f<sub>x</sub> = z<sub>x</sub></center><br>
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>The algebra of partial derivatives</b></DD></DL>
+The basic idea is that since a partial derivative is `really' the derivative of
+a function of one <i>variable</i> (the other `variable' is <i>really</i> a constant),
+all of our usual differentiation rules can be applied. so, e.g,
+<p>
+<p>
+[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](f+g) = [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]&nbsp;+ [(<font face="symbol">¶</font
+>g)/(<font face="symbol">¶</font
+>x)][(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>y)](f+g) = [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]&nbsp;+ [(<font face="symbol">¶</font
+>g)/(<font face="symbol">¶</font
+>y)]
+<p>
+[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](c&#183;f) = c[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)][(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>y)](c&#183;f) = c[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]
+<p>
+[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](f&#183;g) = [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]g + f[(<font face="symbol">¶</font
+>g)/(<font face="symbol">¶</font
+>x)](etc.)
+<p>
+[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](f/g) = ([(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]g-f[(<font face="symbol">¶</font
+>g)/(<font face="symbol">¶</font
+>x)])/g<sup>2</sup> (etc.)
+<p>
+[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](h(f(x,y))) = h<sup><font face="symbol">¢</font
+></sup>(f(x,y))&#183;[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)](etc.)
+<p>
+<p>
+In the end the way we should getused to taking a partial derivative is exactly
+the same as for functions of one variable; just read from the outside in, applying
+each rule as it is appropriate. The <i>only</i> difference now is 
+that what tking a derivative of a function z = f(x,y), we need to remember that
+<p>
+
+<center>[(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>x)](y) = 0 and [(<font face="symbol">¶</font
+>)/(<font face="symbol">¶</font
+>y)](x) = 0</center><br>
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Tangent planes</b></DD></DL>
+In one-variable calculus, we can convince ourselves that a function has a tangent 
+line at a point by zooming in on that point of the graph; the closer we look, 
+the `straighter' the graph appears to be. At extreme magnification, the graph
+looks just like a line - its tangent line.
+<p>
+Functions of two variables are really no different; as we zoom in, the graph
+of our function f starts to look like a plane - the graph's <i>tangent plane</i>.
+Finding the equation of this tangent plane is really a matter of determining
+its x- and y-slopes, which is precisely what the partial derivatives of f
+do. The x-slope is the rate of change of the function in the x-direction, 
+i.e., the partial derivative with respect to x; and similarly for the y-slope.
+<p>
+So the equation for the tangent plane to the graph of z = f(x,y) at the point 
+<p>
+
+<center>(a,b,f(a,b)) is z = [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)](a,b)(x-a)+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)](a,b)(y-b)+f(a,b)</center><br>
+<p>
+And just as with one-variable calculus, one use we put this to is to find good
+approximations to f(x,y) at points near (a,b); 
+<p>
+
+<center>f(x,y)  <font face="symbol">»</font
+>  [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)](a,b)(x-a)+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)](a,b)(y-b)+f(a,b), 
+for (x,y) near (a,b)</center><br>
+<p>
+As with one variable, this also goes hand-in-hand with the idea of <i>differentials</i>:
+<p>
+
+<center>df = f<sub>x</sub>(a,b) dx + f<sub>y</sub>(a,b)dy = differential of f at (a,b)</center><br>
+<p>
+And as before, f(x,y)-f(a,b)  <font face="symbol">»</font
+>  df, when dx = x-a and dy = y-b are small.
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>The gradient</b></DD></DL>
+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]&nbsp;and [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)]&nbsp;measure the instantaneous rate of change of f in the x- 
+and y-directions, respectively. But what if we want to know the rate of change 
+of f in the direction of the vector 3[i\vec]-4[j\vec]&nbsp;? By thinking of the partial
+derivatives in a slightly different way, we can get a clue to how to answer this
+question.
+<p>
+By writing f<sub>x</sub>(a,b) = lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f((a,b)+h(1,0)) - f(a,b))/h]
+<p>
+and f<sub>y</sub>(a,b) = lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f((a,b)+h(0,1)) - f(a,b))/h], 
+<p>
+we can make the two derivatives <i>look</i> the same; which motivates us to 
+define the <i>directional derivative</i> of f at (a,b), in the direction of the vector [u\vec],
+as 
+<p>
+f<sub>[u\vec]</sub>(a,b) = D<sub>[u\vec]</sub>(a,b) = lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f((a,b)+h[u\vec]) - f(a,b))/h]
+<p>
+[Technically, we need [u\vec]&nbsp;to be a unit vector, <font face="symbol">|</font
+><font face="symbol">|</font
+>[u\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>; for other vectors
+[v\vec], we would define D<sub>[v\vec]</sub>(f) = D<sub>[v\vec]/<font face="symbol">|</font
+><font face="symbol">|</font
+>[v\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+></sub>(f).]
+<p>
+But running to the limit definition all of the time would take up way too much of our time;
+we need a better way to calculate directional derivatives! We can figure out how to do this using
+differentials:
+<p>
+For [u\vec](u<sub>1</sub>,u<sub>2</sub>), f((a,b)+h[u\vec]  <font face="symbol">»</font
+>  df = f<sub>x</sub>(a,b) hu<sub>1</sub> + f<sub>y</sub>(a,b)hu<sub>2</sub>, 
+so 
+<p>
+
+<center>[(f((a,b)+h[u\vec]) - f(a,b))/h]  <font face="symbol">»</font
+>  f<sub>x</sub>(a,b) u<sub>1</sub> + f<sub>y</sub>(a,b) u<sub>2</sub></center><br>
+<p>
+and so taking the limit, we find that f<sub>[u\vec]</sub>(a,b) = f<sub>x</sub>(a,b) u<sub>1</sub> + f<sub>y</sub>(a,b) u<sub>2</sub>
+= (f<sub>x</sub>(a,b),f<sub>y</sub>(a,b))<font face="symbol">·</font
+>[u\vec]&nbsp;. 
+<p>
+The vector (f<sub>x</sub>(a,b),f<sub>y</sub>(a,b)) is going to come up often enough that we will give it its
+own name;
+<p>
+
+<center>(f<sub>x</sub>(a,b),f<sub>y</sub>(a,b)) = <font face="symbol">Ñ</font
+>(f)(a,b) = grad(f)(a,b) = the <i>gradient</i> of f</center><br>
+<p>
+So the derivative f in the direction of [u\vec]&nbsp;is the dot product of [u\vec]&nbsp;with the 
+gradient of f. This means that (when <font face="symbol">q</font
+> is the angle between
+<font face="symbol">Ñ</font
+>f and [u\vec]), D<sub>[u\vec]</sub>(f) = <font face="symbol">|</font
+><font face="symbol">|</font
+>Del f<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;<font face="symbol">|</font
+><font face="symbol">|</font
+>[u\vec]<font face="symbol">|</font
+><font face="symbol">|</font
+>&#183;cos(<font face="symbol">q</font
+>) = 
+<font face="symbol">|</font
+><font face="symbol">|</font
+><font face="symbol">Ñ</font
+>f<font face="symbol">|</font
+><font face="symbol">|</font
+>cos(<font face="symbol">q</font
+>) . This is the largest when cos(<font face="symbol">q</font
+>) = 1, i.e., <font face="symbol">q</font
+> = 0
+i.e., [u\vec]&nbsp;points in the same direction as <font face="symbol">Ñ</font
+>f . So <font face="symbol">Ñ</font
+>f points in the direction
+of largest increase for the function f, at every point (a,b) . Its length is this
+maximum rate of increase.
+<p>
+On the other hand, when [u\vec]&nbsp;points in the same direction as the level curve for the 
+point (a,b) (i.e., it is tangent to the level curve), then the rate of change of f in 
+that direction is 0; so <font face="symbol">Ñ</font
+>f<font face="symbol">·</font
+>[u\vec] = 0, i.e, <font face="symbol">Ñ</font
+>f<font face="symbol">^</font
+>[u\vec] . This means that
+<font face="symbol">Ñ</font
+>f is perpendicular to the level curves of f, at every point (a,b). 
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Gradients for functions of 3 variables</b></DD></DL>
+For functions of 3 variables, everything works pretty much the same. We can make a similar 
+construction of
+the directional derivative of w = f(x,y,z); using the differential of f, 
+<p>
+
+<center>df = f<sub>x</sub>(a,b)dx + f<sub>y</sub>(a,b)dy + f<sub>z</sub>(a,b)dz</center><br>
+<p>
+we can compute that D<sub>[u\vec]</sub>(f) = <font face="symbol">Ñ</font
+>f<font face="symbol">·</font
+>[u\vec], where <font face="symbol">Ñ</font
+>f = (f<sub>x</sub>,f<sub>y</sub>,f<sub>z</sub>)
+is the gradient of f. For the exact same reasons, this means that <font face="symbol">Ñ</font
+>f points in the 
+direction of maximal increase for f, and <font face="symbol">Ñ</font
+>f is perpendicular to the <i>level 
+surfaces</i> for f. 
+<p>
+<p>
+We can use the gradient of functions of 3 variables to help us understand the graphs of 
+functions of two variables, since we can think of the graph of a function of two 
+variables, z = f(x,y), as a <i>level curve</i> of a function of 3 variables
+<p>
+
+<center>g(x,y,z) = f(x,y)-z = 0</center><br>
+<p>
+The gradient of g is perpendicular to its level curves, so it is perpendicular
+to the graph of f, so gives us the normal vector for the tangent plane to the 
+graph of f. Computing, we find that
+<p>
+
+<center><font face="symbol">Ñ</font
+>g = ([(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)],[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)],-1) = [n\vec]</center><br>
+<p>
+which means that the equation for the tangent plane to the graph of z = f(x,y) at
+the point (a,b,f(a,b)) is
+<p>
+
+<center>([(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)](a,b),[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)](a,b),-1)<font face="symbol">·</font
+>(x-a,y-b,z-f(a,b)) = 0</center><br>
+<p>
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>The Chain Rule</b></DD></DL>
+If f is a function of the variables x and y, and both x and y depend on a single 
+variable t, then in a certain sense, f is a fuinction of t; f(x,y) = f(x(t),y(t));
+it is a <i>composition</i>. To find its derivative <i>with respect to t</i>, we can turn to 
+differentials:
+<p>
+df = f<sub>x</sub> dx+f<sub>y</sub> dy, while dx = [dx/dt]dt and dy = [dy/dt]dt . Putting these together
+we get 
+<p>
+df = ([(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)][dx/dt]+ [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)][dy/dt])dt = [df/dt]dt , which implies that [df/dt]= [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)][dx/dt]+ [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)][dy/dt]
+<p>
+<p>
+This is the (or rather, one of the) Chain Rule(s) for functions of several 
+variables.
+A similar line of reasoning would lead us to:
+<p>
+If z = f(u,v) and u = u(x,y) and v = v(x,y), then
+<p>
+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>x)]= [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>u)][(<font face="symbol">¶</font
+>u)/(<font face="symbol">¶</font
+>x)]+ [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>v)][(<font face="symbol">¶</font
+>v)/(<font face="symbol">¶</font
+>x)]. A similar formula would hold for [(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)].
+<p>
+In general, we can imagine a composition of functions of several variables as a picture
+with each variable linked by a line going up to functions it is a variable of, and linked
+by a line going down to variables it is a <i>function</i> of, with the original function f
+at the top. To find the derivative of f with respect to a variable, one finds all paths
+leading down from f to the variable, multiplying together all of the partial derivatives
+of one varaible w.r.t. the variable below it, and adding these products together,
+one for each path. This can, as before, be verified using differentials.
+<p>
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
