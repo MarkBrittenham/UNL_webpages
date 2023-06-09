@@ -1,0 +1,333 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 203</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for Chapter 11: Social Choice</center><br></b>
+<p>
+<p>
+The basic question: what is the best way to choose the best of several alternatives,
+based on the preferences of some group of people? For example, how do a group 
+of people choose which restaurant to eat dinner at, based on the culinary
+preferences of the people in the group? We explore several different
+such `voting systems', exploring their advantages and disadvantages.
+<p>
+In most cases, the voting system uses a <i>preference list</i> from each voter: a
+list of the alternatives in the order that the voter would prefer them, from highest
+preference to lowest. In most case, we also allow <i>ties</i>; more than one 
+alternative can be declared the `winner'. Just about the only condition we
+impose on a voting system is that no matter what collection of preference 
+lists we give it, it will always declare at least one alternative to be a winner
+(we have to eat <i>somewhere</i>; someone needs to be President (right?)).
+<p>
+<p><br>
+For a vote between only two alternatives, we can use <b>majority rule</b>: the 
+alternative with the most first place votes is the winner. In this case, we 
+often think of a preference list as one name (our top choice); the name not appearing
+would be our second (i.e., last) choice.
+<p>
+Majority rule has (at least) three properties that are considered desirable:
+<p>
+<p>
+(1) All voters are treated equally. It doesn't matter who turns in a ballot, it will
+be treated the same as anybody else's ballot.
+<p>
+[[Compare this with a <b>dictatorship</b>: whatever the dictator votes for wins. This
+fails to have property (1).]]
+<p>
+(2) Both candidates are treated the same. It doesn't matter who the candidates are,
+if everybody switched their preference order, the winner would lose and 
+the loser would win.
+<p>
+[[Compare this with <b>imposed rule</b>: no matter how people vote, one pre-chosen alternative 
+will win. This fails to have property (2).]]
+<p>
+(3) If someone changes their votes from the loser to the winner, the winner will still 
+win.
+<p>
+<p><br>
+It is a fact (called May's Theorem) that the only voting systems for two alternatives
+that satisfy all three of these conditions are majority rule and the system that says 
+that both alternatives always win! 
+<p>
+<p><br>
+When we move on to consider voting systems for three or more alternatives, we find
+that there are several that are used in everyday life.
+<p>
+<p>
+A <b>plurality vote</b> looks only at each person's top choice; the choices with the most
+votes are the winners. (Note that, in practice, ties are actually rare; among one
+million people, it is extremely unlikely that <i>exactly</i> 300,000 (say) will vote
+for two candidates.) With three or more alternatives, it is therefore possible to
+win without receiving a majority of the votes.
+<p>
+(Sidebar: Majority rule is actually sometimes used, as well; for example, 
+when each party chooses its presidential candidate at the national convention. These
+days, someone usually wins on the first ballot, but in past campaigns, several 
+ballots were required, a few people changing their votes each time, before 
+someone managed to coerce enough people to vote for him/her to get a majority!
+Choosing a new pope is similar, but at least two-thirds of the votes are required.)
+<p>
+<p>
+But the plurality vote system has a drawback, which is illustrated by the following 
+collection of preference list. We have 3 alternatives A,B,C , and the following numbers 
+of voters rank them in the following orderings:
+<p>
+<p>
+
+<center>22 for A-B-C
+23 for A-C-B</center><br>
+<p>
+
+<center>15 for B-A-C
+29 for B-C-A</center><br>
+<p>
+
+<center>7 for C-B-A
+4 for C-A-B</center><br>
+<p>
+<p>
+With a plurality vote, A gets 45 votes, B gets 11 and C gets 44, so A wins. But! it
+turns out that if either A or B dropped out of the race, then based on the preference
+lists, in an A/B race, B gets 51 votes to A's 49, and in a B/C race, B gets 66 votes
+to C's 34. So B is preferred to both A and C, considered one at a time!
+<p>
+<p>
+We would call B the <b>Condorcet winner</b> of the election, based on our voting scheme.
+This means that if we used our voting system on our preference lists, but erase every
+alternative but B and one other alternative, then B will always win over each other
+alternative. A voting systen satisfies the <b>Condorcet Winner Criterion</b> (CWC, 
+for short) if for any collection of preference lists we might come up with, <b>if</b> there 
+is a Condorcet winner based on our voting system, then this alternative is also a 
+winner based on the voting system alone. Since in the above example, the winner under
+the plurality vote (A) was not the same as the Condorcet winner (B), plurality voting
+does not satisfy CWC.
+<p>
+<p>
+It is interesting to note that both dictatorship and imposed rule <i>do</i>
+satisfy CWC! We should also point out that in most cases, a collection of 
+preference lists will <b>have no Condorcet winner</b>. But when it does, CWC 
+says that alternative should be the same as the winner from the 
+voting system.
+<p>
+<p>
+In the next voting system, the goal is not only to find a winner, but to rank all
+of the alternatives. The basic idea is to `average' everyone's preference lists, to get
+one big preference list. This method is called the <b>Borda count</b>. The idea is, for
+each preference list, to assign a <i>weight</i> to each alternative in the list, based
+on how high it is on the list. In a traditional Borda count, if there are n choices,
+the top choice is given a weight of n-1, the second choice gets n-2, all the way 
+down the list, so the last choice gets weight 0. A total weight is 
+then derived by adding, for each alternative, the weights they have received from each list.
+<p>
+For example, if we have three alternatives A,B, and C, and the following numbers of 
+people rank them the following ways:
+<p>
+<p>
+
+<center>6 have A-B-C
+5 have B-A-C</center><br>
+<p>
+
+<center>4 have A-C-B
+4 have B-C-A</center><br>
+<p>
+
+<center>2 have C-A-B
+2 have C-B-A</center><br>
+<p>
+<p>
+then the final vote will give a ranking of A-B-C, since 
+A receives 6&times;2+5&times;1+4&times;2+4&times;0+2&times;1+2&times;0 = 27 total points, 
+A receives 6&times;1+5&times;2+4&times;0+4&times;2+2&times;0+2&times;1 = 26 points, and
+A receives 6&times;0+5&times;0+4&times;1+4&times;1+2&times;2+2&times;2 = 15 points.
+<p>
+But strange things happen if we look at the last two voter's preference lists. Their
+last choice, A, won. If they really hated A, they could at the very least let B win
+instead of A, by changing their votes to B-C-A. Then A gets 27, B gets 28 and C gets
+13 ! In fact, if only one of them made this change, A and B would tie for first place.
+The strange part of this is that these two turned A into a loser and B into a winner,
+without changing the order in which they preferred A and B!
+<p>
+<p>
+A voting system is said to satisfy <b>Independence of Irrelevant Alternatives (IIA)</b> if no
+single voter, by changing his/her vote, can turn a losing alternative (B) into a
+winning alternative, without reversing the order in which they rank B with one of
+the previously winning alternatives. Put differently, moving only an irrelevant alternative
+(one that isn't a winner) around in the list cannot make a losing alternative win.
+<p>
+The example above shows that the Borda count does not satisfy IIA. The same lists 
+also show that the plurality vote fails to satisfy IIA; the same change turns winner
+A and loser B into winner B and loser A! Interestingly, Both dictatorship and imposed 
+rule satisfy IIA! If a system fails IIA, the outcome of the vote can be 
+manipulated by unscrupulous sorts by voting `strategically', basically, in a 
+way that insures your higher choice wins, even if your (`real') top choice won't.
+<p>
+Many voting siystems are similar to the Borda count, but just weight the list 
+differently. For example, a common weighting system is 10,5,3,2,1,0,0,0 (dropping 
+by about half each time). Technically, these aren't called Borda counts, 
+although they are `Borda-like'.
+<p>
+<p>
+Our next voting system is frequently used in legislatures, and is called
+<b>Sequential Pairwise Voting</b>. The idea is that a predetermined `agenda'
+(a list of the alternatives) is used to allow each voter to vote on 
+only two candidates at a time, with
+the one receiving the majority being the winner. We start with the top two from 
+the agenda, and the winner between those two goes on to face the next alternative
+on the agenda. The winner between those two goes on to face the next, and this
+continues until we reach the bottom of the agenda. We can think of this as a game
+show where each day a champion faces a challenger; whoever wins becomes the
+next day's champion, to face a new challenger. When we run out of challenger's, the
+remaining chamption is the winner. 
+<p>
+A basic flaw with this system is that the last item on the agenda has to beat only 
+one other alternative in order to be the winner. For example with four 
+alternatives and preference lists
+<p>
+<p>
+
+<center>3 for A-D-C-B
+2 for B-A-D-C</center><br>
+<p>
+
+<center>2 for C-B-A-D</center><br>
+<p>
+<p>
+and the agenda A-B-C-D, then in A vs. B, B wins 4 to 3 (i.e, 4 prefer
+B over A, and 3 preferA over B), so faces C, the next alternative in the agenda, where
+C wins 5 to 2, so C faces D, where D wins 5 to 2. So D is the winner of the
+vote, based on sequential pairwise voting.
+<p>
+But! we could have made <b>any</b> alternative win, by choosing a different agenda.
+For A to win, use the agenda B-C-D-A, for B use C-D-A-B, and for C use 
+D-A-B-C ! In this case what this means is that the person who sets the agenda
+can rig things so that whoever they want to win will win!
+<p>
+In our beginning example, there's something else wrong as well. Alternative D won,
+but a look at every preference list shows that <i>every voter preferred</i>
+A <i>over</i> D ! This means that sequential pairwise voting fails to 
+satisfy something called the <b>Pareto condition</b>. A voting system satisfies
+the <b>Pareto condition</b> if an alternative A cannot be one of the winners when
+<i>every voter</i> prefers the <i>same</i> other alternative, B, to A. 
+<p>
+It turns out that dictatorship, imposed rule, plurality vote, and Borda counts
+<i>do</i> satisfy the Pareto condition. Which has to make you wonder why sequential
+pairwise voting is used so often in state and national legislatures? 
+<p>
+<p>
+The final system we will look at is called the <b>Hare system</b>. In this system,
+we repeatedly look at the top candidate on each preference list. The one (or one's)
+receiving the fewest votes is removed from everybody's list. We continue to do this
+until either only one alternative remains (who is then the winner), or every 
+remaining choice is tied for last place among the top choices (in which case we 
+declare them all to be winners). For example, with the preference lists
+<p>
+<p>
+
+<center>5 for A-B-C
+4 for B-C-A</center><br>
+<p>
+
+<center>3 for C-B-A 
+1 for C-A-B</center><br>
+<p>
+<p>
+in the first round A gets 5 votes, B gets 4 and C get 4, so both B and C 
+are eliminated. This leaves A as the only alternative, so A is the winner.
+<p>
+But in a slightly different vote,
+<p>
+
+<center>5 for A-B-C
+4 for B-C-A</center><br>
+<p>
+
+<center>3 for C-B-A 
+1 for A-C-B</center><br>
+<p>
+<p>
+first A gets 6, B gets 4 and C gets 3, so C, having the fewest votes, is
+eliminated. Removing C from every list, we get the new lists
+<p>
+<p>
+
+<center>5 for A-B
+4 for B-A</center><br>
+<p>
+
+<center>3 for B-A
+1 for A-B</center><br>
+<p>
+<p>
+In the second round, then A gets 6 votes, and B gets 7, so A is eliminated, 
+leaving B the only alternative, so B wins.
+<p>
+But wait! There is something terribly wrong here. The only change in these two
+collections of lists is that in the second case, the last voter moved
+A <i>up</i> in his/her list. This change, however, resulted in A <b>losing</b>!
+As a result, we say that the Hare system fails to satisfy <b>monotonicity</b>:
+a voting system satisfies <b>monotonicity</b> if whenever an alternative A is among
+the winners, and a voter then moves A <i>higher</i> in their preference list, then
+the voting system will still declare A to be a winner. 
+<p>
+Plurality vote, Borda counts, sequential pairwise voting,
+dictatorship, and imposed rule all satisfy monotonicity. The fact that having
+someone rank an alternative higher can cause that alternative to lose, in the Hare 
+system, is considered a serious enough defect that nobody really uses the Hare
+system (except for hiring decisions in the math department at NMSU...). The 
+only reason someone might prefer the Hare system is that it does insure that
+the eventual winner was the top choice of <i>some</i> voter (since without
+a top vote, you are eliminated in the first round (zero is the lowest vote 
+count you could get...)). 
+<p>
+<p>
+It is not hard to construct collections of preference lists where these different
+voting systems give different winners. For example, in the second collection
+of lists in the discussion of the Hare system, A would win the plurality vote.
+It would also win with the first set, although B would win with a Borda count.
+<p>
+<p>
+It turns out that there is <b>no</b> voting system which can 
+be considered fair, in the sense that it satisfies all of the conditions
+we have considered (including (1), (2), and (3) from majority rule). In fact, if 
+we simply insist on having a voting system that satisfies both CWC and IIA, then 
+(unless we allow <i>everyone</i> to win!) the only voting systems we could use 
+would be dictatorship or imposed rule! Both of which have their own little
+problems.....
+<p>
+<p>
+One final voting system is becoming more and more popular; it is called 
+<b>approval voting</b>. The idea is that each voter casts a vote for <i>each</i>
+alternative that they find acceptable, i.e, approve of. The alternative that
+receives the most votes (i.e., is acceptable to the most voters) is the
+winner. This is in fact a `Borda'like' count; the weights used are 
+1,<font face="symbol">¼</font
+>,1,0,<font face="symbol">¼</font
+>,0, where the 1's you approve of and the 0's you don't.
+Asking whether or not this system satisfies IIA is a little difficult, because
+the repeated numbers mean that most alternatives are `tied', so reversing
+the order of alternatives doesn't really make sense. But it does satisfy CWC,
+the Pareto condition, and monotonicity. It also satisfies (1), (2), and (3)!
+<p>
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

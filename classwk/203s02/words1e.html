@@ -1,0 +1,377 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 203</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for first exam</center><br></b>
+<p>
+<p><br>
+<b>Chapter 1:</b> Street Networks
+<p>
+Operations research
+<p>
+Goal: determine how to carry out a sequence of tasks most efficiently
+<p>
+Efficient: least cost, least time, least distance, ......
+<p>
+<p>
+
+
+Example: reading parking meters - need to walk down each street that has 
+meters on it. Efficient: try not to walk down the same sidewalk twice!
+<p>
+<p>
+Model of the problem: a graph = a bunch of points 
+(vertices) connected together
+by line segments/curves (edges).
+<p>
+E.g., vertices = intersections, edges = sidewalks
+<p>
+
+
+<a href="w1f1.eps">Figure</a>
+A <b>path</b> in a graph is a way to walk from vertex to vertex along the edges.
+<p>
+A <b>circuit</b> is a path that begins and ends at the same vertex.
+<p>
+<i>Finding efficient circuits:</i> Need to cross every edge (read all
+the meters!), the best possible will cross each edge exactly once
+= <b>Euler circuit</b>.
+<p>
+Does every graph have an Euler circuit? No...
+<p>
+The <b>valence</b> of a vertex is the number of (ends of) edges that meet at
+the vertex.
+<p>
+A graph is <b>connected</b> if for any pair of edges, you can find a path in the graph
+going from one edge to the other (i.e., the graph doesn't come in pieces...)
+<p>
+<p>
+<b>Euler's Theorem</b> A graph has an Euler circuit if and only if (i.e., exactly when)
+it is both connected and every vertex has even valence.
+<p>
+
+
+
+<a href="w1f2.eps">Figure</a>
+Finding an Euler circuit: start anywhere, and imagine erasing each edge <i>just
+before</i> you cross it; if erasing it disconnects what's left of the graph,
+<b>don't go that way!</b> Pick a different edge to continue along.
+<p>
+
+If the graph has no Euler circuit, what is the best route you can find?
+<p>
+The sum of the valences of a graph = 2&times;(the number of edges) is <i>even</i>.
+So the number of vertices with <i>odd</i> valence is also even. If we pair
+them up, find a path between each pair, and duplicate the edges of our graph
+(put in a second, parallel, edge next to the ones in our path), the resulting
+graph <i>will</i> have an Euler circuit (this is called <b>Eulerizing</b> the
+graph). The best Eulerization will have the fewest number of additional 
+edges. This means: the sum of the lengths of the paths pairing up vertices
+is as small as possible. How do we find the best paths (Matching Problem)?
+(Practice, practice, practice?) With 2n vertices of odd valence, you will 
+need to add at least n edges.
+<p>
+
+
+
+<a href="w1f3.eps">Figure</a>
+Finding the best circuit: find an Euler circuit for the Eulerized graph, and
+`squeeze' it onto the original (imagine crossing the same edge twice, instead of
+walking across the added parallel edge).
+<p>
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<p>
+
+Complicate things? Introduce one-way streets (add arrows to edges = a
+<b>directed</b> graph = digraph)! Take into account the <b>lengths</b>
+of edges, when finding the most efficient circuit.
+<p>
+<p>
+<b>Chapter 2:</b> Visiting Vertices
+<p>
+<p>
+Different problem, different goal: finding efficient delivery routes. Instead of 
+crossing every street exactly once, try to visit every vertex exactly once!
+<p>
+vertices = destinations , edges = routes between destinations. 
+<p>
+A circuit that passes through each vertex exactly once is called a
+<b>Hamiltonian circuit</b>.
+<p>
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p>
+For <b>complete graphs</b> (every pair of vertices is joined by an edge), finding
+Hamiltonian circuits is easy; keep walking to a new vertex until you visit them
+all, then return to start.
+<p>
+Think: each edge is labelled with a number (=distance b/w vertices, cost of
+shipping between destinations....). New goal: find <b>least cost</b> 
+Hamiltonian circuit. Problem: e.g., for a complete graph with 12 vertices, there
+are 11&times;10&times;<font face="symbol">¼</font
+>&times;2&times;1 = 11! (=) Hamiltonian circuits!
+How do you find the best one?
+<p>
+<p>
+You don't. But we can think of fast ways (algorithms) to find circuits that 
+probably won't do too badly:
+<p>
+<p>
+Nearest neighbor algorithm: Start at a vertex. Start building a Hamiltonian 
+circuit by walking to the closest vertex (shortest length edge); repeat the
+process, walking to new vertices, until all have been visited, then walk 
+back home.
+<p>
+<p>
+Sorted edges algorithm: Idea: use the shortest edges you can. Sort the
+edges in increasing order of length. Pick edges by starting with the
+shortest one; keep choosing the shortest edge remaining that can be used with the
+ones we picked to build a Hamiltonian circuit. I.e. <b>discard</b> the
+shortest edge remaining if:
+<p>
+(a) you will have three edges sharing a vertex, or
+<p>
+(b) you will build a circuit that doesn't include all 
+of the vertices.
+<p>
+
+
+
+<a href="w1f6.eps">Figure</a>
+These are both "greedy" algorithms; at each stage they both choose the shortest edge
+meeting certain criteria.
+<p>
+<p>
+Different problem, different goal: stringing phone lines between cities.
+<p>
+Complete graph with edges labelled (by distance, cost to string wire between,...)
+What is the most efficient way to wire them together? Route calls through
+other cities - don't need a direct connection. Just need to wire a <b>path</b>
+between each pair. What is the shortest total collection of edges that includes
+a path between every pair?
+<p>
+Idea: <b>Don't</b> build circuits! They waste wire (remove an edge, and all the 
+cities in the circuit are still wired together...)
+<p>
+A collection of edges that form no circuit is called a <b>tree</b>. A tree that 
+contains all of the vertices is called a <b>maximal tree</b>. Our shortest total collection
+of edges will form what is called a <b>minimum cost spanning tree</b> for the graph.
+<p>
+<p>
+<b>Kruskal's algorithm:</b> Steal from sorted edges algorithm! Pick the shortest 
+edge; continue 
+to add the shortest edge that <b>doesn't</b> build a circuit. Stop when all vertices
+are connected together (Fact: for n vertices, you will need exactly n-1 edges.)
+<p>
+<p>
+This applies just as well to graphs that aren't complete (just pretend that the 
+missing edges each cost $1,000,000 - then the algorithm would never look at them).
+<p>
+
+
+
+<a href="w1f7.eps">Figure</a>
+Fact: Kurskal's algorithm will <b>always find</b> the minimum cost spanning tree.
+<p>
+<p><br>
+Critical Path Analysis: 
+<p>
+Idea: We have a project which involves several tasks, some of which must be
+completed before others can be begun (e.g., constructing a house, cooking dinner).
+What is the minimum amount of time required to complete all of the tasks?
+<p>
+We assume we have as many people as we need to assign each task to.
+<p>
+Model the progect with a directed graph. Tasks = vertices; a directed edge
+points from one task to anopther that cannot be begun until the first is finished
+(e.g., build foundation <font face="symbol">®</font
+> install refrigerator) : the <b>order-requirement
+digraph</b>.
+<p>
+Basic idea: every directed path through the order-requirement digraph (<b>ORD</b>) 
+represents a collection of
+tasks each of which must wait for the previous tasks to finish before 
+starting. So the time to finish <i>just those tasks</i> is the sum of the times
+to do the tasks. The whole project cannot be completed in less than 
+this time.
+<p>
+<p>
+A <b>critical path</b> for a digraph is the longest (in terms of total 
+completion time) directed path in the graph.
+<p>
+<i>Fact:</i> The shortest completion time for the collection of tasks is <i>equal</i> to the
+total time along the critical path(s).
+<p>
+
+
+
+
+<a href="w1f8.eps">Figure</a>
+Finding the completion time: set up the ORD so that every arrow goes left to right.
+Working from left to right, assign to each arrow the minimum completion time for the
+task it points <b>from</b>. This time is the largest of the times
+on arrows pointing <b>to</b> the task, plus the length of time for the task. For tasks
+not required for anything else, write the corresponding time to the right of the 
+vertex. The largest number you write is the shortest completion time. The sequence of
+vertices that forced this number to be as high as it is represents your critical path.
+<p>
+<p>
+Tasks on the critical path(s) represent bottlenecks; places to focus efforts to save time. 
+Shortening a task that does not lie on <i>all</i> of the critical paths will not
+decrease the completion time!
+<p>
+
+<b>Chapter 3:</b> Planning and Scheduling
+<p>
+<p>
+In the real world, we do not have an unlimited number of people (= processors) to 
+assign to our tasks. How do things work if we have a set number of processors?
+<p>
+<p>
+simplifying assumptions:
+<p>
+- each processor can do any of the tasks (no specialists)
+<p>
+- once a task is started, it is completed without stopping
+<p>
+- when a processor finishes, it will immediately start a task if one is
+available
+<p>
+- an order-requirement digraph tells us when a task is available (i.e., if it's
+prerequisite tasks have been completed)
+<p>
+- a <b>priority list</b> tells us which jobs we <i>want</i> to do first (e.g., 
+shortest first, longest first, one the get us paid first...)
+<p>
+<p>
+The goal of our scheduling procedure might vary depending on what we want to focus on:
+<p>
+1. Shortest completion time with available resources
+<p>
+2. Shortest amount of idle time for each processor
+<p>
+3. Determine the minimum number of processors needed to complete the project 
+in a fixed amount of time.
+<p>
+<p>
+An easy algorithm to find the best completion time has not been (will never
+be?) found.
+<p>
+<b>List processing algorithm</b>: As each processor finishes a task, assign it the
+highest priority task that the order requirement digraph says is available. If
+no task is available, stand idle until one is available.
+<p>
+<p>
+Priority list: T<sub>1</sub>,T<sub>2</sub>,T<sub>3</sub>,T<sub>4</sub>,T<sub>5</sub>,T<sub>6</sub>,T<sub>7</sub>
+<p>
+
+
+
+<a href="w1f9.eps">Figure</a>
+Some strange behavior:
+<p>
+<p>
+- shorten each task in the project above by 1: longer completion time!
+<p>
+- add a third processor: longer completion time!
+<p>
+- ignore the order requirement digraph: longer completion time!
+<p>
+<p>
+Moral: We chose a very bad priority list....
+<p>
+Critical path analysis tells us that tasks on the critical path(s) are potential 
+bottlenecks, slowing down overall completion time. The first task on a critical 
+path should be given highest priority.
+<p>
+<b>Critical path scheduling:</b> Build the priority list using critical paths. The 
+first task(s) on critical path(s) are given highest priority. Pretend that the 
+first task is <i>completed</i>, and find the <b>new critical path(s)</b> for the
+remaining tasks. Give the first
+task on the new path the next highest priority. Continue through the ORD until 
+every task has been placed on the priority list. Then schedule the tasks using 
+the ORD and this priority list.
+<p>
+<p>
+<b>Independent tasks:</b> Get rid of the ORD!
+<p>
+Many projects naturally have no ORD; e.g., processing a large number of 
+photocopying orders, grading term papers (time=length?). The individual 
+tasks may be completed in any order; no task needs to wait until 
+another has finished. These are called <b>independent tasks</b>.
+<p>
+A fairly efficient way to schedule independent tasks is using a <b>
+decreasing time</b> (priority) <b>list</b>. Idea: a common source of
+inefficiency is having one processor working alone long after 
+all others have finished. A long task left until 
+the end will tie up only one processor, while everyone else sits idle.
+So, make sure that the last task is as short as possible! Sort the
+tasks in <b>decreasing</b> order of time to complete, and use this as 
+your priority list.
+<p>
+Fact: If T is the best possible completion time for m processors,
+then the decreasing time list wil give a completion time of <b>at
+most</b> (4/3 - 1/(3m))T (e.g., for 2 processors, this is (7/6)T).
+<p>
+<p>
+<b>Bin Packing:</b> Set the completion time! How many processors do you
+need to finish the project in a set amount of time T? (Note: no single
+task can take more than time T...!)
+<p>
+Think: objects of differing heights (= completion times) being stacked
+on top of one another (= being assigned to each processor) into bins of
+height T (=for a total time of at most T each). How many bins
+(=how many processors) will you need to hold (= finish) all of the tasks?
+<p>
+Some likely procedures:
+<p>
+<p>
+Next fit: keep adding items to a bin until the next one won't fit, then move
+on to the next bin.
+<p>
+<p>
+First fit: put each item into the <b>first</b> bin it will fit in.
+<p>
+<p>
+Worst fit: put each item into the open bin with the most available space (if possible), 
+otherwise open a new bin.
+<p>
+<p>
+These can all be inefficient; large objects appearing late in the list will not 
+be packed efficiently. (We all know that when packing, the <b>big</b> stuff goes in
+first, and the little stuff is packed around it...)
+<p>
+More efficient: create a decreasing time list <b>first</b>, so that big stuff gets packed
+away first. List all objects in decreasing order of size, first. Otherwise, proceed as 
+before. This gives:
+<p>
+<p>
+Next fit decreasing, First fit decreasing, Worst fit decreasing.
+<p>
+
+
+
+
+<a href="w1f10.eps">Figure</a>
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

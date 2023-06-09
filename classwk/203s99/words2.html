@@ -1,0 +1,515 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 203</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for second exam</center><br></b>
+<p>
+<p><br>
+<b>Statistics: the science of data</b>
+<p>
+<p><br>
+<b>Chapter 5:</b> Producing data
+<p>
+Statistics is all about drawing conclusions about the opinions/behavior/structure
+of large populations based on information about a relatively small part of that
+population, called a <i>sample</i>.
+<p>
+<p>
+Samples can be gathered in a variety of ways:
+<p>
+Convenience sample: interview people as they walk by
+<p>
+Voluntary response sample (=call-in poll): the subject contacts the interviewer
+<p>
+Random sample: subjects are chosen `randomly' from the target population
+<p>
+A sampling method is <i>biased</i> if it systematically favors one outcome over another
+(i.e., there are systematic reasons why the poll will 
+<U>not</U> reflect the true 
+behavior of the population).
+<p>
+E.g., comvenience poll: ask people at a mall `Do you like malls?'
+<p>
+Random sample: every sample of the same size is as likely to be chosen as any other.
+Basic technique: assign every subject in the population a different number with the
+same number of digits, and then choose your sample by picking strings of numbers from
+a <i>table of random digits</i>.
+<p>
+<p>
+Sampling variability: we would never expect two random samples to give the 
+<U>exact</U>
+same result! There is always some variablility in results. However, this variability
+behaves in a very predictable way.
+<p>
+The individual sample results will be spread out around the `true' value describing
+the opinions/structure of the whole population. But if our sample size is large,
+the values from our random samples will be more bunched together. This is 
+described in terms of a `margin of error' (MOE): 95% of our random samples will fall
+within the MOE of the true value, where the MOE is
+<p>
+<p>
+5% for sample size 600, 4% for 1000, and 3% for 1500
+<p>
+<p>
+Experiments: Unlike opinion polls, an experiment seeks to determine how one quantity 
+will change when another is varied, e.g., how recovery time changes with the
+change in dosage for some new drug; does paying people more for the same job make them 
+work harder, etc.
+<p>
+The basic problem in experimental design is making sure that 
+<U>only</U> the thing we
+think we are varying (the causal variable), to see the change in the other quantity
+(the response variable), is actually changing!
+<p>
+Confounding: changes in two variables (usually, the one we're tracking and one
+we're not!) have similar effects on the response variable.
+<p>
+E.g., the placebo effect: giving patients 
+<U>something</U> (even if it is `nothing') will 
+have some effect. Interviewer effects: might send subtle signals which will 
+effect the subjects responses.
+<p>
+Solution: use a <i>control group</i>, to which you give a `sham' treatment to. Both
+control group and experimental group are chosen randomly, to average out individual 
+differences (randomized comparative experiment). For interviewer effects, use
+a double-blind experiment; neither interviewer nor subject know who is in control 
+group.
+<p>
+When is a change in response variable really being caused by the change in causal 
+variable? A change is <i>statistically significant</i> if it is unlikely to be the
+result of random chance. The idea is, even small changes can be significant if
+they occur to a large enough population.
+<p>
+<p><br>
+<b>Chapter 6:</b> Describing data
+<p>
+Once you have generated your data, it's time to understand it! The idea is to 
+look for 
+<U>patterns</U> in the data, which tells you something about your population.
+<p>
+Typically, we try to disply the data graphically; the eye is very good at picking out
+patterns. 
+<p>
+Dotplot: put one dot over the number `N' for every sample that had value N. E.g., flip 
+a coin 50 times, many times, record the number of heads. Typically, our dots will
+sort of clup together, with some <i>outliers</i> lying far away from the majority.
+<p>
+If our numbers can take on too many distinct values (e.g., 100 diffferent possible exam
+grades in a class of only 30), we might plot ranges of values (91-100, 81-90, etc.)
+recording the number of samples in each range as a rectangle with width = the 
+range of values and height the number of samples. This is a <i>histogram</i> of
+the data.
+<p>
+With both we can try to describe the `shape' of the data: any symmetry or lack of it
+(e.g., skewed (= stretched out) to the right or left; data has a `tail'), where the 
+center is, how spread out the data is. For this, there are two sets of numbers
+we can use:
+<p>
+<p>
+Median/Quartiles: list the numbers in increasing order. The <i>median</i> M is the middle
+number on this list. The fist quartile Q<sub>1</sub> is the median of the bottom half (i.e., 
+one-fourth of the way along the list), and the third quartile Q<sub>3</sub> is the median of the
+top half. The median describes the center; the quartiles describe the spread.
+<p>
+<p>
+Mean/standard deviation: the <i>mean</i> <font face="symbol">m</font
+> is the `average'; add all of the numbers up, and
+divide by how many numbers you have. This gives a (usually different) description of the
+center of the data. 
+<p>
+The <i>standard deviation</i> <font face="symbol">s</font
+> describes the spread; it is the <b>square root</b> 
+of the variance <font face="symbol">s</font
+><sup>2</sup>, which is calculated as (here x<sub>1</sub>,<font face="symbol">¼</font
+>,x<sub>n</sub> are our data points)
+<p>
+<p>
+
+<center>
+<font face="symbol">s</font
+><sup>2</sup> = [((<font face="symbol">m</font
+>-x<sub>1</sub>)<sup>2</sup>+(<font face="symbol">m</font
+>-x<sub>2</sub>)<sup>2</sup>+<font face="symbol">¼</font
+>+(<font face="symbol">m</font
+>-x<sub>n</sub>)<sup>2</sup>))/((n-1))]</center><br>
+<p>
+<p>
+The larger <font face="symbol">s</font
+> is, the more spread out our data is. 
+<p>
+The distinction between these two way of measuring center and spread is 
+basically that <font face="symbol">m</font
+> and <font face="symbol">s</font
+> are much more sensitive to outliers, while M
+and the quartiles are almost completely ignorant of them. 
+<p>
+In the case of M and
+the quartiles, we can add the highest and lowest values to create a <i>boxplot</i>;
+draw a horizontal line at M, a rectangle on top whose top and bottom are the quartiles,
+and finally a vertical line on top of this whose top and bottom are the 
+highest and lowest values in the data set. This gives a very quick representation 
+of the center, spread, and outliers in the data, especially for making comparisions
+between different data sets.
+<p>
+<p>
+With data from experiments, on the other hand, our data comes in pairs;
+e.g., pairs of dosages and recovery times. To visualize this sort of data, we 
+can use a <i>scatterplot</i>. Plot each pair as a point on a rectangular grid
+(with scale for the first number (causal variable)along the bottom, and for the 
+second (response variable) along the
+left side), where
+the point lies above the first number and to the right of the second number.
+<p>
+With this we can look for patterns; form (clumped together or spread out?),
+direction (is there a trend in the data, does it follow a line/curve?), and strength
+(how cloe do all the data points stay to that line/curve?)
+<p>
+Can we predict values of the response variable for values of the causal variable that 
+we didn't check? Use a <i>regression line</i>:
+<p>
+Can fit a line to the data `by eye'; <b>slope</b> of the line ( the `a' of y=ax+b) 
+tells us how the data trends. <i>Correlation</i> describes how well the line fits the 
+data (the `strength', above).
+<p>
+The least squares regression line goes through the point decribing the mean of both
+variables, and has slope equal to (where (x<sub>1</sub>,y<sub>1</sub>),<font face="symbol">¼</font
+>,(x<sub>n</sub>,y<sub>n</sub>) are our
+data points, and <font face="symbol">S</font
+> means add up all of the quantities from 1 to n)
+<p>
+<p>
+
+<center>b = 
+[(n<font face="symbol">S</font
+>(x<sub>i</sub>y<sub>i</sub>)-(<font face="symbol">S</font
+>x<sub>i</sub>)(<font face="symbol">S</font
+>y<sub>i</sub>))/(n<font face="symbol">S</font
+>(x<sub>i</sub><sup>2</sup>)-(<font face="symbol">S</font
+>x<sub>i</sub>)<sup>2</sup>)]</center><br>
+<p>
+<p><br>
+<b>Chapter 7:</b> Probability: the mathematics of chance
+<p>
+Probability is the study of the long-term behavior of random phenomena, where 
+<i>random</i>, basically, means that knowledge of what the phenomenon has done
+before will not let you decide what it will do 
+<U>next</U>. Such phenomena include
+flipping coins, rolling dice, the Dow Jones Industrial Average, etc. The 
+basic idea is that while the object's short term behavior is impossible to 
+predict, its long term (average) behavior can be predicted with great 
+accuracy!
+<p>
+Each observation of the object is a <i>trail</i> (e.g., the flip of a 
+coin; and each possible outcome of the trial is an <i>event</i>.
+The <i>probability</i> of each event predicts how many times the event will
+occur, in a large number of trials.
+<p>
+We can express these things in a <i>probability model</i>. It consists of two things:
+<p>
+<p>
+1. A <i>sample space</i> S = the collection of all possible outcomes for our trial
+<p>
+2. A <i>probability</i> ( = a number between 0 and 1) for each outcome.
+<p>
+The idea is that the probability describes the fraction of times we would 
+<U>expect</U>
+our outcome to occur in a very large number of trials.
+<p>
+The individual probablilities must add up to one, because: If we let an 
+<i>event</i> mean, more 
+generally, some collection of outcomes, then the probability of the event 
+should be the sum of the individual probabilities of each event. Consequently, 
+the sum od all the probabilities should be the probability that some one of the outcomes
+occurs in each trial, i.e., the fraction of the time that something happens! Since
+
+<U>something</U> always happens, this probability is one.
+<p>
+<p>
+Ex: flipping a (fair!) coin; the sample space is {heads,tails}, and each has a 
+probability of .5 .
+<p>
+Ex: rolling a pair of dice: there are 36 possible outcomes (if we keep track of 
+which die is which), each having a probability of 1/36 .
+<p>
+These probability models describe <i>equally likely outcomes</i>; each event has the 
+same probability. 
+<p>
+<p>
+Ex: the list of birthdays in a classroom of 20 students; there are 366<sup>20</sup>
+possible outcomes; is each equally likely?
+<p>
+Ex: Roll a pair of dice, but don't keep track of which is which; there are then
+only 21 possible outcomes, and they are 
+<U>not</U> equally likely!
+<p>
+<p>
+Just as with dotplots, is probability model has a <i>mean</i> and a <i>standard
+deviation</i> (and they mean much the same thing!):
+<p>
+For a probability model with sample space S = {x<sub>1</sub>,<font face="symbol">¼</font
+>,x<sub>k</sub>}, where each 
+outcome x<sub>i</sub> occurs with probability p<sub>i</sub>, then:
+<p>
+The mean <font face="symbol">m</font
+> of the model is the sum of the numbers p<sub>i</sub>x<sub>i</sub> (think: for a large number
+N of trials, each x<sub>i</sub> will occur approximately Np<sub>i</sub> times; average these numbers!)
+<p>
+The standard deviation <font face="symbol">s</font
+> of the model is the 
+<U>square</U> 
+<U>root</U> of the
+sum of the numbers p<sub>i</sub>(<font face="symbol">m</font
+>-x<sub>i</sub>)<sup>2</sup> (again, this is what we would expect from
+just thinking of a large number of trials).
+<p>
+<p>
+The significance of these numbers stem from two important results:
+<p>
+<p>
+The Law of Large Numbers: If we observe a random phenomenon that obeys a certain
+probability model (e.g., flip coins or roll dice) for larger and larger numbers of
+trials, then:
+<p>
+1. The fraction of times a particular outcome occurs will get closer and
+closer to the probability of that outcome, and
+<p>
+2. The average of all of the outcomes wil get closer and closer to the mean <font face="symbol">m</font
+> .
+<p>
+<p>
+The Central Limit Theorem: under the same conditions, if we repeatedly average the
+oucomes of n trials, and plot the resulting averages, then these averages will 
+have distribution that is (aprroximately) bell curve shaped (see below!); and the
+bell curve will have mean <font face="symbol">m</font
+> and standard deviation <font face="symbol">s</font
+>/<font face="symbol">Ö</font
+>n.
+<p>
+<p>
+The idea behind the Central Limit Theorem is that taking a survey of a population has 
+alot in common with gambling; there is an underlying pattern ( the fraction of the
+population that feels a certain way), but the individual answers we get will
+vary in a random way. If we plot the fraction from 
+a large collection of samples of the same size, they will typically form a bell 
+curve or <i>normal ditribution</i>. And the basic idea is that 
+<U>everything</U> 
+about a bell curve is determined by two numbers: its center (= mean = <font face="symbol">m</font
+>) and
+its spread (= standard deviation = <font face="symbol">s</font
+>). The standard deviation can be seen as the distance from the
+center to the point on the curve where the curve starts to `level out'.
+<p>
+<p><br>
+
+
+
+
+<a href="w2f1.ai">Figure</a>
+<p><br>
+Every normal distribution has the same properties:
+<p>
+The median is <font face="symbol">m</font
+> ( = the mean); the first and third quartiles are
+Q<sub>1</sub> = <font face="symbol">m</font
+>-2<font face="symbol">s</font
+>/3 and Q<sub>3</sub> = <font face="symbol">m</font
+>+2<font face="symbol">s</font
+>/3 (so half of the data from your
+trials will lie between these two numbers).
+<p>
+The 68-95-99.7 Rule:
+<p>
+68% of the data points will lie between <font face="symbol">m</font
+>-<font face="symbol">s</font
+> and <font face="symbol">m</font
+>+<font face="symbol">s</font
+> .
+<p>
+95% of the data points will lie between <font face="symbol">m</font
+>-2<font face="symbol">s</font
+> and <font face="symbol">m</font
+>+2<font face="symbol">s</font
+> .
+<p>
+99.7% of the data points will lie between <font face="symbol">m</font
+>-3<font face="symbol">s</font
+> and <font face="symbol">m</font
+>+3<font face="symbol">s</font
+> .
+<p>
+<p>
+The significance of the Central Limit Theorem is that the spread of the distribution
+for a larger number trials is always smaller (there is that <font face="symbol">Ö</font
+>n in the denomenator
+of the standard deviation...). So these rules say that the fractions we get from large
+trials mostly fall 
+<U>very</U> 
+<U>close</U> to the mean.
+<p>
+This is why casinos make money. The mean of the probability model for all of their 
+games
+is slightly negative (they get your money). If you play only a few times, the 
+spread of possible
+outcomes for you is very large. This is what makes gambling exciting. But for the
+house, their spread is very small, since they average wins and losses over a 
+very large
+number of plays. In fact, they are virtually guaranteed to make money every day,
+and that amount is nearly always very close to the mean (times the number of players!).
+<p>
+<p><br>
+<b>Chapter 8:</b> Statistical inference
+<p>
+Here we return to something we introduced back in Chapter 5; the idea of the 
+margin of error in a poll. The basic idea is that this is the same as
+the `95' in the 68-95-99.7 rule.
+<p>
+<p>
+The results of opinion poll are usually given as a percent; `35% of those
+polled said.....' . Here we mostly think of this as 
+a fraction; 35% 
+<U>means</U> 35 out of 100, or .35 . 
+<p>
+In general, we call such a statement a sample proportion. The idea is that it is
+supposed to represent a number close to the proportion of the entire population 
+who would say whatever it is they would say. In general, any number obtained from
+a sample is called a <i>statistic</i>; the number for the whole population that
+it is intended to estimate is called a <i>parameter</i>. In the case of
+proportions, the smaple proportion is usually denoted [^p], and the corresponding
+parameter is called p.
+<p>
+We know that different samples will yield different proportions; there is sampling
+variability. But the Central Limit Theorem (CLT) tells us what this distribution looks
+like! We can think of pick someone from the population as a random phenomenon, where
+they have a probability of p of saying whatever it is we reported (call this event `1'),
+and a probability of 1-p of not saying it (call this event `0'). We can then calculate
+that the mean <font face="symbol">m</font
+> of this model is p, and its standard deviation <font face="symbol">s</font
+> is
+(unfortunately) [<font face="symbol">Ö</font
+>(p(1-p))]. *So*, if we carry out a number of trials (= ask
+n people), and look at the average of the n trials (= the sample
+proportion [^p], and do this many times,  the CLT says these will form a bell curve
+with mean <font face="symbol">m</font
+> and standard deviation <font face="symbol">s</font
+><sub>[^p]</sub> = [<font face="symbol">Ö</font
+>(p(1-p))]/<font face="symbol">Ö</font
+>n.
+<p>
+We can then use the 68-95-99.7 rule to tell us how often we expect the sample
+proportion [^p] to fall within certain multiples of <font face="symbol">m</font
+>. In part, 95% of the
+time, [^p] will be within 2[<font face="symbol">Ö</font
+>(p(1-p))]/<font face="symbol">Ö</font
+>n of p. 
+<p>
+But this, in turn, says that 95% of the
+time, p will be within 2<font face="symbol">s</font
+><sub>[^p]</sub> = 2[<font face="symbol">Ö</font
+>(p(1-p))]/<font face="symbol">Ö</font
+>n of 
+[^p] ! Which is what we really
+want to know; it tells us how often our stastistic is close to the parameter we're trying
+to measure (and how close it would be). Unfortunately, in order to know what 
+2<font face="symbol">s</font
+><sub>[^p]</sub> is, we really need to know p (which we don't). But really, 
+all we really want to know is that 2<font face="symbol">s</font
+><sub>[^p]</sub> is small, and what we can
+show is that no matter what p is, 2<font face="symbol">s</font
+><sub>[^p]</sub> is smaller than
+1/<font face="symbol">Ö</font
+>n . Which tells us that if n is large (i.e., our sample is large),
+then most of the time our sample proportion [^p] is close to the true
+proportion p.
+<p>
+<p>
+We can say much the same thing for sample means: if a quantity varies, but its 
+distribution is bell curve sahaped with mean <font face="symbol">m</font
+> and standard deviation <font face="symbol">s</font
+>, then 
+if we take smaples of size n and average them, the distribution of these averages will 
+also be a bell curve, with the same mean but 
+<U>smaller</U> standard deviation; it will
+be <font face="symbol">s</font
+>/<font face="symbol">Ö</font
+>n . So again we can use the 68-95-99.7 rule to describe how
+often the sample mean will be within certain values on either side of the mean.
+<p>
+<p>
+One situation where these idea are put to use in practice is in <i>statistical 
+process control</i>. Here the idea is to try to understand, by sampling the
+product coming off a production line or out of a machine, whether or not the machine
+is working properly. We basically think of some property of the objects coming off the 
+line (their weight?) as being normally distributed, with known values for the mean <font face="symbol">m</font
+> 
+and standard deviation <font face="symbol">s</font
+>. Any one item falling far from the mean 
+<U>might</U>
+be due to simple chance; do we want to stop the process and inspect the machine
+because of it? 
+<p>
+The idea is instead to use a measurement that we know should exhibit much less variation, namely
+the average value of some number n of the objects. What we do is build a <i>control
+chart</i>; each hour we randomly pick n (9, say) objects and measure them, and graph
+their average against the hour of the measurement.
+<p>
+<p><br>
+
+
+<a href="w2f2.ai">Figure</a>
+<p><br>
+If we draw in the lines at the mean and two standard deviations above and below, then we know
+that our average values should be more or less evenly distributed on either side of
+this line, and 95% of them should fall between the upper and lower lines. But since 
+we have taken an average those upper and lower lines are much (in our case n=9, three
+times) closer to the mean than they would be with one sample. So even small changes 
+in the average value can be significant.
+<p>
+In practice a halt is called and the maichine is inspected if one of our averages falls
+more than two (or if you want to be more sure the machine needs fixing, three)
+standard deviations away from the mean, or if eight averages in a row fall on the same side of the
+mean. Either of these indicates that it is very likely that the average object that 
+the machine is really putting is different than the average value we designed the 
+machine for.
+out is 
+<p>
+<p><br>
+One final observation; it is possible for completely correct statistics to lead us to 
+make the wrong conclusion. For example, in a small town it is discovered that in a recent 
+month the banks have approved 40% (18 of 45) of the loan request made by men, and
+50% (9 0f 18) made by women. Does this represent 
+discrimination by the banks? This information can be represented by
+a two-way table:
+<p>
+<p><br>
+
+
+<a href="w2f3.ai">Figure</a>
+<p><br>
+In point of fact, however, there are two banks in town. Each actually grants the 
+same fraction of loans to men and women. But since far more men applied at the
+bank that had the lower approval rate, when we add the results from the two banks
+together, we see an apparent difference between the two. This demonstrates that
+confounding variables (the difference in sizes of the two banks, in this example)
+can be very subtle, indeed!
+<p>
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
