@@ -1,0 +1,127 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-0.5in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 1}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, August 31.}
+
+
+\begin{description}
+
+\item{1.} Let $S = \{ x\in\bbr \mid x^2+x = 0\}$ and
+$T = \{ x\in\bbr \mid x^2+x < 5\}$.
+
+\item{(*)} (a) Write $S$ and $T$ as (small) unions of points and/or intervals.
+
+\ssk
+
+\item{(*)} (b) Decide whether each of the following statements is true, and
+(briefly) explain: 
+
+\ssk
+
+\ctln{$S\subseteq\bbn$ ; $S\subseteq T$ ; $T\cap\bbq\neq\emptyset$ ; $-2.8\in \bbq\setminus T$ .}
+
+\ssk
+
+\item{\spc} (c) Describe the set $U = \{x\in\bbr \mid x^2+x<0\}$ as a union of intervals.
+
+\msk
+
+\item{2.} Starting with a set $S$, we can construct a new
+set $P(S)$, the \ubr{power} \ubr{set} of $S$, consisting of all subsets of $S$.
+For example, $P(\{1,2\}) = \{\emptyset,\{1\},\{2\},\{1,2\}\}$. 
+
+\ssk
+
+\item{\spc} (a) Find $P(\{1,2,3\})$.
+
+\ssk
+
+\item{\spc} (b) Show that if $S\sset T$, then $P(S)\sset P(T)$.
+
+\ssk
+
+\item{\spc} (c) If we set $N_k = \{1,2,\ldots,k\}$, explain why
+$P(N_{11})$ has twice as many elements as $P(N_{10})$.
+
+\msk
+
+\item{3.} Let $L$ be the (linear) function
+$L(x) = ax+b$, where $a$ and $b$ are (real) constants and $a\neq 0$.
+
+\ssk
+
+\item{(*)} (a) Explain why $L$ is both one-to-one and onto.
+
+\ssk
+
+\item{(*)} (b) Find a formula for the inverse function 
+$M=L^{-1}$, and show that 
+
+\vspace{-.07in}
+
+\hspace{.3in} $L\circ M(x) = M\circ L(x) = x$ 
+for every $x\in\bbr$.
+
+\msk
+
+\item{4.} Suppose the $f:A\ra B$ and $g:B\ra C$
+are both functions.
+
+\ssk
+
+\item{\spc} (a) Show that if $f$ and $g$ are both one-to-one, 
+then $g\circ f:A\ra C$ is one-to-one.
+
+\ssk
+
+\item{(*)} (b) Show that if $g\circ f$ is onto, then $g$ is onto.
+
+\end{description}
+\vfill
+
+\end{document}
+

@@ -1,0 +1,141 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 3}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, September 14.}
+
+
+\begin{description}
+
+\item{10.} Show, by induction, that the (ordinary) triangle
+inequality extends to show that for any $n\geq 2$ we have
+
+\ssk
+
+\ctln{$\big|\sum_{k=1}^n a_k\big| \leq \sum_{k=1}^n |a_k|$ .}
+
+\msk
+
+\item{(*) 11.} Show that the \ubr{maximum} of two numbers $x,y\in\bbr$ 
+can be computed by 
+
+\ssk
+
+\ctln{$\dsp \textrm{max}(x,y) = {{x+y+|x-y|}\over{2}}$ .}
+
+\ssk
+
+[That is, if $x\leq y$ then $\dsp {{x+y+|x-y|}\over{2}} = y$, while if $y\leq x$ then it equals $x$.]
+
+\ssk
+
+Find a similar formula which gives the minimum of $x$ and $y$.
+
+
+\msk
+
+\item{12.} (Belding and Mitchell, p.35, \#4) Under what conditions on $a,b,c\in\bbr$ can we
+conclude that $ab=cb$ implies that $a=c$ ? Prove your answer.
+
+\msk
+
+\item{13.} (Belding and Mitchell, p.3,5 \#7) If we have a subset $A\sset\bbr$ of real numbers, 
+then $A$ satisfies all of the properties of a field so long as (a) 0 and 1 are elements of $A$ and
+(b) whenever $a,b\in A$ we have $-a\in A$,  $a^{-1}\in A$, $a+b\in A$ and $ab\in A$ (where these 
+are the negative and inverse \underbar{in} \underbar{the} \underbar{real} \underbar{line}); that is,
+$A$ is {\it closed} under negation, inverse, addition, and multiplication.
+
+\ssk
+
+Use this to show that the set $\bbq[\sqrt{11}]=\{a+b\sqrt{11}\ :\ a,b\in\bbr\}$ satisfies all of the 
+properties of a field.
+
+\msk
+
+\item{(*) 14.} (Belding and Mitchell, p.36, \#17) Use the triangle inequality to establish
+that for every $x,y\in\bbr$ we have
+
+\ssk
+
+\item{(*)} (a) $|x|-|y|\leq |x-y|$
+\hskip2in (*) (b) $|x|-|y|\leq |x+y|$
+
+\ssk
+
+\item{(*)} (d) $\Bigl||x|-|y|\Bigr| \leq |x-y|$
+
+\msk
+
+\item{(*) 15.} (a) Show that if $B\subseteq\bbr$ is {\it bounded}, and $A\subseteq B$, 
+then $A$ is bounded.
+
+\ssk
+
+\item{(*)} (b) If $S\subseteq\bbr$, then we define the set $|S|$ as $|S|=\{|s|\ :\ s\in S\}$.
+Show that if $S$ is bounded, then $|S|$ is bounded.
+
+\msk
+
+\item{16.} For each of the following sets, either show that it is bounded (and find bounds), or 
+explain why it isn't. [You can appeal to results from calculus in your answers.]
+
+\ssk
+
+\item{\spc} (a) $\dsp A = \Big\{\sum_{k=1}^n {{1}\over{k}}\ :\ n\in\bbn\Big\}$
+\hskip2in (b) $\dsp B = \Big\{\sum_{k=1}^n {{1}\over{2^k}}\ :\ n\in\bbn\Big\}$
+
+\ssk
+
+\item{\spc} (c) $\dsp C = \Big\{ {{\ln n}\over{n}}\ :\ n\in\bbn\Big\}$
+\hskip2in (d) $\dsp D = \Big\{ {{2^n}\over{n^2}}\ :\ n\in\bbn\Big\}$
+
+
+\end{description}
+\vfill
+
+\end{document}
+

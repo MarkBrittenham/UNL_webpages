@@ -1,0 +1,129 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 8}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, October 26.}
+
+
+\begin{description}
+
+
+\item{45.} Show that the function $f:\bbr\ra\bbr$ given by $f(x)=x\cdot |x|$ is 
+differentiable at every $a\in\bbr$. 
+
+\ssk
+
+\item{\spc} [Hint: in most cases, you can (if you stay close to $a$) replace $f$ with a more 
+`amenable' function...]
+
+\msk
+
+\item{46.} (Belding and Mitchell, p.99, \#3(b)) Show that if $0\in D$ and  $f:D\ra\bbr$ is continuous at
+$a=0$, then $g:D\ra\bbr$ given by $g(x)=xf(x)$ is differentiable at $a=0$.
+
+\msk
+
+\item{(*) 47.} (Belding and Mitchell, p.100, \#10 (sort of)) If $a\in D$ and $f:D\ra\bbr$ is differentiable
+at $a$ \ubr{and} $f^{\prime}(a)>0$, show that there is a $\delta>0$ 
+$x\in (a,a+\delta)$ implies that $f(x)>f(a)$ and $x\in (a-\delta)$ implies that $f(x)<f(a)$ .
+
+\msk
+
+\item{(*) 48.} Show that if $a\in D$, $f,g:D\ra\bbr$ are both differentiable and $x=a$, 
+$f(a)=g(a)$, \ubr{and} $f(x)\leq g(x)$ for all $x\in D$, then $f^{\prime}(a)=g^{\prime}(a)$.
+
+\ssk
+
+\item{\spc} [What's the alternative? The previous problem can help!]
+ 
+\msk
+
+\item{49.} (The `Squeeze Play Theorem' for derivatives):
+Show that if $a\in D$, $f,g,h:D\ra\bbr$ are functions with
+$f(x)\leq g(x)\leq h(x)$ for all $x\in D$, $f(a)=g(a)=h(a)$, \ubr{and} $f$ and $h$ are differentiable at $x=a$, 
+then $g$ is differentiable at $x=a$ and $f^{\prime}(a)=g^{\prime}(a)=h^\prime(a)$.
+
+\ssk
+
+\item{\spc} [Note that the only 'new' things here are that $g$ is differentiable at $a$ and $g^\prime(a)=f^\prime(a)$ ...]
+
+\msk
+
+\item{(*) 50.} Suppose that $f:\bbr\ra\bbr$ and $g:\bbr\ra\bbr$
+are both continuous, and $f$ is differentiable at $x=0$, with
+$f(0)=f^\prime(0)=0$. Show that $h(x)=f(x)g(x)$ is also 
+differentiable at $x=0$ and $h^\prime(0)=0$ .
+
+\ssk
+
+\item{\spc} [Note that since we do \ubr{not} know that $g$ is differentiable at
+$x=0$, we \ubr{cannot} use the product rule (even if we knew what that was)....]
+
+\msk
+
+\item{51.} As almost none of us learn, the angle sum formula for tangent is
+
+\ssk
+
+\ctln{$\dsp \tan(a+h)={{\tan a + \tan h}\over{1-\tan a\tan h}}$ }
+
+\ssk
+
+\item{\spc} Use this to show directly from the (``limit as $h\ra 0$'' definition) that the 
+derivative of $f(x)=\tan x$ is what you were told it is in calculus class.
+
+\ssk
+
+\item{\spc} [If you want something extra to do, derive this angle sum formula from the
+angle sum formulas for $\sin x$ and $\cos x$ (for fun!).]
+
+
+\end{description}
+\vfill
+
+\end{document}
+

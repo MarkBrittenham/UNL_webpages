@@ -1,0 +1,144 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 4}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, September 21.}
+
+
+\begin{description}
+
+
+\item{(*) 17.} (Belding and Mitchell, p.36, \#20)
+
+\ssk
+
+\item{(*)} (a) Show that if $x,y,c\in\bbr$, $c>0$, and $|x-y|<c$, then $|x|<|y|+c$ .
+
+\ssk
+
+\item{(*)} (b) Show that if $x,y\in\bbr$ and $\displaystyle |x-y|<{{|x|}\over{2}}$, 
+then $\displaystyle |y|>{{|x|}\over{2}}$ .
+
+\msk
+
+\item{18.} A set $A$ is said to be {\it bounded away from $0$} if there is 
+an $\epsilon>0$ so that for every $x\in A$ we have $|x|>\epsilon$. Show that $A$ is bounded away
+from $0$ if and only if the set $B = \{ {{1}\over{x}}\ |\ x\in A\}$ is bounded.
+
+\ssk
+
+\item{\spc} [N.B. ``P if and only if Q'' means P implies Q \ubr{and} Q implies P; that is, 
+there are two things to show!]
+
+\msk
+
+\item{19.} If we set $A = \{x\in\bbr\ |\ x^3<2\}$, show that $A$ is bounded above,
+so has a supremum $\alpha=\textrm{sup}(A)$. Then show (in a manner similar to our
+classroom demonstrations) that $\alpha^3<2$ is not possible. (If you are feeling
+like doing even more, show that $\alpha^3>2$ is also impossible! 
+From that, we can conclude that $\alpha^3=2$.)
+
+\msk
+
+\item{(*) 20.} (Belding and Mitchell, p.22, \#2) Show that
+if a set of real numbers $S$ has a least upper bound $\alpha$, 
+then this least
+upper bound is \underbar{unique}. That is, if $\beta$ is also a least upper bound for $S$,
+then $\alpha=\beta$. [Hint: what's the alternative?]
+
+\msk
+
+\item{21.} (Belding and Mitchell, p.23, \#6) For subsets 
+$A,B\subseteq\bbr$, we define their `sum' as
+$A+B=\{a+b\ :\ a\in A, b\in B\}$. 
+
+\ssk
+
+\item{\spc} Show that if $A$ and $B$ are both non-empty and
+bounded from above, then so is $A+B$, and 
+
+\ctln{$\textrm{lub}(A+B)=\textrm{lub}(A)+\textrm{lub}(B)$ .}
+
+\ssk
+
+\item{\spc} [Hint: show that $\textrm{lub}(A)+\textrm{lub}(B)$ is an upper bound!
+Then worry about whether there might be a smaller one...]
+
+\msk
+
+\item{(*) 22.} (Belding and Mitchell, p.23, \#4) Let 
+$A = \{a_1,a_2,a_3, \ldots\}=\{a_n\ :\ n\in\bbn\}$ and $B = \{b_1,b_2,b_3, \ldots\}
+=\{b_n\ :\ n\in\bbn\}$ be two sequences of real
+numbers. Let $C = \{a_n+b_n\ :\ n\in\bbn\}$, the sequence of their sums.
+
+\ssk
+\item{(*)} (a) Show that if $A$ and $B$ have least upper bounds $\alpha$ and $\beta$, respectively,
+then $\alpha+\beta$ is an upper bound for $C$.
+
+\ssk
+
+\item{(*)} (b) Find an example showing that $\alpha+\beta$ \ubr{need} \ubr{not} \ubr{be} the least upper
+bound for $C$.
+
+\msk
+
+\item{23.} (Belding and Mitchell, p.23, \#7) Show that if $\alpha,\beta\in\bbr$ and $\alpha<\beta$, then 
+there is an \ubr{irrational} number $c\not\in\bbq$ with $\alpha<c<\beta$ . 
+
+\ssk
+
+\item{\spc} [Hint: $c$ could be a rational
+multiple of $\sqrt{2}$ (why is that not rational?). Or see the outline that the text provides!]
+
+\msk
+
+
+\end{description}
+\vfill
+
+\end{document}
+

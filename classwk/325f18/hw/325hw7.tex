@@ -1,0 +1,125 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 7}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, October 19.}
+
+
+\begin{description}
+
+
+\item{(*) 38.} (Belding and Mitchell, p.89, \#10(a)) Show that if $a,b\in\bbr$, $a<b$, 
+and $f:(a,b)\ra\bbr$ is {\it uniformly} continuous,
+then $f$ is bounded: there are $M,N\in\bbr$ so that $M\leq f(x)\leq N$ for every $x\in (a,b)$.
+
+\ssk
+
+\item{\spc} Hint: the argument that we gave in class sort of works, but we can't `start' at
+$a$ (it's not in the domain)!. `Start' in the middle, instead!
+
+\msk
+
+\item{39.} (Belding and Mitchell, p.88, \#5) Show that if $f,g:(a,b)\ra\bbr$ are both uniformly
+continuous, then $f+g$ and $f-g$ (as functions from $(a,b)$ to $\bbr$) are also uniformly continuous.
+
+\msk
+
+\item{(*) 40.} (Belding and Mitchell, p., \#5, the other part) 
+If $a,b\in\bbr$ and $f,g:(a,b)\ra\bbr$ are uniformly continuous, show that $fg:(a,b)\ra\bbr$ is uniformly
+continuous. Show, by example, on the other hand that $f,g:\bbr\ra\bbr$ both uniformly continuous
+does \ubr{not} imply that $fg:\bbr\ra\bbr$ is uniformly continuous.
+
+\ssk
+
+\item{\spc} [Hint: for the first, try to follow the `usual' continuity argument for products; problem \#38 will
+help! for the second, you don't need to get very creative...]
+
+\msk
+
+\item{41.} (Belding and Mitchell, p.89, \#14) Let $f$ and $g$ be uniformly continuous on $\bbr$. Prove that their 
+composition $f\circ g$ is also uniformly continuous on $\bbr$ .
+ 
+\msk
+
+\item{42.} (Belding and Mitchell, p.89, \#12) A function $f:D\ra\bbr$ is called {\it Lipschitz} (with Lipschitz
+constant $M\in\bbr$ if for every $x,y\in D$ we have $|f(x)-f(y)|\leq M\cdot|x-y|$. Show that a Lipschitz function 
+is uniformly continuous on $D$. Use this to show that the function $f:\bbr\ra\bbr$ defined by
+
+\ssk
+
+\ctln{$\dsp f(x)={{1}\over{1+|x|}}$}
+
+\ssk
+
+\item{\spc} is uniformly continuous on $\bbr$ .
+
+\msk
+
+\item{43.} Suppose that $f:[a,b]\ra\bbr$ is continuous, and define a new function $g:[a,b]\ra\bbr$ by
+$g(x)={\textrm lub}\{f(t)\ :\ a\leq t\leq x\}$. Show that $g$ is also continuous!
+
+\ssk
+
+\item{\spc} [Hint: that least upper bound is (always) achieved!]
+
+\msk
+
+\item{(*) 44.} A function $f:\bbr\ra\bbr$ is called {\it periodic} if there is a $P>0$ so that $f(x+P)=f(x)$ for every $x\in\bbr$.
+Show that if $f$ is periodic and continuous, then $f$ is uniformly continuous. 
+
+\ssk
+
+\item{\spc} [Hint: you can always insist that your $\delta$'s be smaller than some particular positive number (why?).]
+
+\msk
+
+
+\end{description}
+\vfill
+
+\end{document}
+

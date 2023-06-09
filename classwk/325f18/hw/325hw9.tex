@@ -1,0 +1,134 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 9}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, November 2.}
+
+
+\begin{description}
+
+
+\item{52.} (a) Use the product and chain rules to derive a general formula
+for the \ubr{second} derivative $(f\circ g)^{\prime\prime}(x)$ of a composition; you should assume 
+that $f^{\prime\prime}(x)$ and $g^{\prime\prime}(x)$ both exist.
+
+\ssk
+
+\item{\spc} (b) Find a `hybrid product-chain rule' to express the derivative
+$(f\circ (gh))^\prime(x)$ ; you should assume that $f$, $g$ and $h$ are all 
+differentiable.
+
+\msk
+
+\item{(*) 53.} (Belding and Mitchell, p.100, \#11) Suppose that $f$ is differentiable on $[a,b]$ with $f^\prime(a) > 0$ 
+and $f^\prime(b) < 0$. Show that:
+
+\ssk
+
+\item{\spc} (a) Neither $f(a)$ nor $f(b)$ is a
+maximum value for $f$ on $[a,b]$; that is, there is a $c\in (a,b)$ so that
+$f(a)<f(c)$ and $f(b)<f(c)$.  [Hint: a previous problem will help...]
+
+\ssk
+
+\item{\spc} (b) Use this and Rolle's Theorem to show that there is a point $c\in (a,b)$ where $f^\prime(c) = 0$.
+
+\msk
+
+\item{54.} (Belding and Mitchell, p.100, \#12) Prove
+the {\bf Intermediate Value Theorem for Derivatives}: If $f$ is differentiable
+on $[a,b]$ and $f^\prime(a) < k < f\prime(b)$, then there is a $c\in (a,b)$ with $f^\prime(c) = k$.
+
+\ssk
+
+[Hint: Consider the `auxiliary' function $h(x) = kx-f(x)$
+and apply the results of the preceding problem. Note that $f^\prime(x)$ 
+\ubr{need} \ubr{not} \ubr{be} \ubr{continuous} (although examples of this are 
+tough to construct!), so we cannot `just' apply IVT...!]
+
+\msk
+
+\item{(*) 55.} Use Rolle's Theorem to show, by induction,
+that a polynomial 
+
+\ssk
+
+\ctln{$p(x)=a_nx^n+\cdots +a_1x+a_0$}
+
+\ssk
+
+\item{\spc} of degree $n$ has \ubr{at} 
+\ubr{most} $n$ distinct roots (i.e., solutions to $p(x)=0$).
+
+\ssk
+
+\item{\spc} [Hint: If $p$ has degree $n$, then $p^\prime$ has degree $n-1$ ...]
+ 
+\msk
+
+\item{56.} Use the `other' Inverse Function Theorem to show that for every $n\in\bbn$ 
+the function $f(x)=x^{1/n}$ is differentiable on $D=(0,\infty)$, and find $f^\prime(x)$.
+Then use this and the Chain Rule to find the derivative of $g(x)=x^{m/n}$ for every $m,n\in\bbn$.
+
+\msk
+
+\item{(*) 57.} Suppose that $f,g:[0,1]\ra\bbr$ are both continuous on $[0,1]$, differentiable 
+on $(0,1)$, $f(0)=g(0)$, and
+$f^\prime(x)>g^\prime(x)$ for every $x\in (0,1)$. Show that
+$f(x)>g(x)$ for all $x\in (0,1]$ .
+
+\msk
+
+\item{58.} Let $f(x)=x+2x^2\sin(1/x)$ for $x\neq 0$ and set $f(0)=0$. Show that
+$f$ is differentiable everywhere, and that $f^\prime(0)=1$, \ubr{but} there is no
+interval $(a,b)$ contiaining $0$ where $f$ is an increasing function.
+
+\end{description}
+\vfill
+
+\end{document}
+

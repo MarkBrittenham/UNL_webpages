@@ -1,0 +1,125 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 6}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, October 12.}
+
+
+\begin{description}
+
+
+\item{(*) 31.} (Belding and Mitchell, p.80, \#2) Show that if $f:(a,b)\ra\bbr$ is a continuous function, then the function
+$g:(a,b)\ra\bbr$ given by $g(x)=|f(x)|$ is also continuous. (You should argue directly
+from $\epsilon$'s and $\delta$'s.)
+
+\msk
+
+\item{32.} Using the previous problem (and a problem from a previous problem set!), show that
+if $f,g:(a,b)\ra\bbr$ are continuous functions, then the function
+$M:(a,b)\ra\bbr$ given by $M(x)=$max$\{f(x),g(x)\}$ is also continuous.
+
+\msk
+
+\item{(*) 33.} Suppose that $f:\bbr\ra\bbr$ is continuous and $f(x)=0$ for every $x\in\bbq$.
+Show that $f(x)=0$ for every $x\in\bbr$ .
+
+\ssk
+
+\item{\spc} [Hint: what's the alternative? Remember that rational numbers are `everywhere'!]
+
+\msk
+
+\item{34.} Using the problem above, show that if $f,g:\bbr\ra\bbr$ are both continuous
+functions, and $f(x)=g(x)$ for every $x\in\bbq$, then $f=g$ (i.e., $f(x)=g(x)$ for every
+$x\in\bbr$).
+
+\ssk
+
+\item{\spc} [`A continuous function is \ubr{determined} by its values on the rational numbers.']
+
+
+\msk
+
+\item{35.} Suppose that $a<0<b$ and $f:(a,b)\ra\bbr$ is a function
+that is bounded (i.e., for some $M\in\bbr$, $|f(x)|\leq M$ for every $x\in (a,b)$).
+Show that the function $g:(a,b)\ra \bbr$ defined by $g(x)=xf(x)$ is continuous at $x=0$.
+Show, on the other hand, that for any \ubr{other} $c\in(a,b)$ we have that $g$ is continuous
+at $c$ \ubr{if} \ubr{and} \ubr{only} \ubr{if} $f$ is continuous at $c$.
+
+\ssk
+
+\item{\spc} [The last assertion can be attacked using `general' results we have established,
+\ubr{or} directly using $\epsilon$'s and $\delta$'s (your choice!).]
+
+\msk
+
+\item{(*) 36.} (Belding and Mitchell, p.89, \#9) Use the intermediate value theorem 
+to show that any positive number $a\in\bbr$, $a>0$
+has an $n$-th root, that is, for any $n\in\bbn$, there is some real number $x\geq 0$ such
+that $x^n=a$.
+
+\ssk
+
+\item{\spc} [The textbook provides an outline that you could follow.]
+
+\msk
+
+\item{37.} Show that if $f:[a,b]\ra [a,b]$ is continuous, then there is 
+at least one $c\in [a,b]$ so that $f(c)=c$.
+
+\ssk
+
+\item{\spc} [Hint: apply the intermediate value theorem to a different function!]
+
+\msk
+
+
+\end{description}
+\vfill
+
+\end{document}
+

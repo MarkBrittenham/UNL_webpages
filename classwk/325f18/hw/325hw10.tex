@@ -1,0 +1,132 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 10}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, November 30.}
+
+
+\begin{description}
+
+
+\item{(*) 59.} Show that if $f$ is integrable on $[a,b]$, and you can show
+(from the definition as $\dsp|\sum_{i=1}^n f(c_i)(x_i-x_{i-1})-L|<\epsilon$) 
+that $\dsp\int_a^b f(x)\ dx = L$ \ubr{and} $\dsp\int_a^b f(x)\ dx = M$, 
+then $L=M$ . [I.e., `the value of an integral is unique'.]
+
+\ssk
+
+\item{\spc} [Suppose not! Show that there is a partition $P$ that gets you into trouble...]
+
+\msk
+
+\item{(*) 60.} (Belding and Mitchell, p.129, \#4b and \#8) 
+
+(a): Show that if $h$ is integrable on the interval $[a,b]$ and
+$h(x)\geq 0$ for every $x\in [a,b]$, then for every partition $P=\{a=x_0<x_1<\cdots <x_n=b\}$ of $[a,b]$  
+and set of `samples' $S = \{c_1,\ldots,c_n\}$ with $c_i\in [x_{i-1},x_i]$ for each $i$, we have
+the Riemann sum has
+$R(h,P,S)\geq 0$. Explain why we can then conclude that $\dsp\int_a^b h(x)\ dx\ \geq\ 0$ .
+
+\ssk
+
+\item{\spc} (b): Use part (a) and the properties of integrals to show that if 
+$f$ and $g$ are integrable on $[a,b]$ and $f(x)\geq g(x)$ for every $x\in[a,b]$, then 
+$\dsp \int_a^b f(x)\ dx\ \geq \int_a^b g(x)\ dx$ .
+ 
+\msk
+
+\item{61.} (Belding and Mitchell, p.129, \#4(a)) Suppose that $f$ is integrable on $[a,b]$, and 
+$m\leq f(x)\leq M$ for every $x\in[a,b]$ . Show that 
+$\dsp m(b-a)\leq \int_a^b f(x)\ dx  \leq M(b-a)$ .
+
+\msk
+
+\item{62.} Suppose that $f$ is differentiable on $[a,b]$ with $f^\prime(x)<k$ for every $x\in[(a,b)$. 
+Let $P$ be any
+partition of $[a,b]$. Show that $U(f,P)-L(f,P)\leq k(b-a)^2$. 
+
+\ssk
+
+\item{\spc} [The textbook provides some hints.]
+
+\msk
+
+\item{63.} Show: If $f$ is integrable on $[a,b]$, then $g(x)=|f(x)|$ is integrable on $[a,b]$ and
+$\dsp|\int_a^b f(x)\ dx|\leq \int_a^b|f(x)|\ dx$ .
+
+\ssk
+
+\item{\spc} [Hint: for integrable, use that $|f(y)|-|f(x)|\leq |f(y)-f(x)|$ 
+for every $x$ and $y$ to show that $U(|f|,P)-L(|f|,P)\leq U(f,P)-L(f,P)$. For the
+inequality, look at earlier problems!]
+
+\msk
+
+\item{(*) 64.} (Belding and Mitchell, p.147, \#1) Show, using the fundamental theorem of 
+calculus, that for all $x\in\bbr$ we have 
+$\dsp \int_0^x |t|\ dt\ = {{1}\over{2}} x|x|$ . [Consider the two cases $x > 0$ and $x < 0$
+separately.]
+
+\msk
+
+\item{65.} (Belding and Mitchell, p148., \#10) Prove the {\bf generalized integral mean value theorem}: 
+If $f$ and $g$ are
+continuous functions on $[a,b]$ and $g(x) > 0$ on $[a,b]$, then there is a $c\in [a,b]$ such
+that
+$\dsp\int_a^b f(x)g(x)\ dx = f(c)\int_a^b g(x)\ dx$ .
+
+\ssk
+
+\item{\spc} [The textbook provides a suggestion of how to do this.]
+
+\msk
+
+\end{description}
+\vfill
+
+\end{document}
+

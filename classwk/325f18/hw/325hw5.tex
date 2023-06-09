@@ -1,0 +1,126 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\dsp{\displaystyle}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 325 Problem Set 5}
+
+\msk
+
+\ctln{Starred (*) problems are due Friday, September 28.}
+
+
+\begin{description}
+
+
+\item{24.} Show that if $0\leq x<1$ then for any $\epsilon>0$ there is an $n\in\bbn$ so that $x^n<\epsilon$. 
+
+\ssk
+
+\item{\spc} [Hint: Suppose not! Then look at lower bounds for $A=\{x^n : n\in\bbn\}$ .] 
+
+\msk
+
+\item{(*) 25.} (Belding and Mitchell, p.63, \#1) Using the $\epsilon$-$\delta$ formulation of limits,
+
+\item{(*)} (b) show that $\dsp\lim_{x\ra -1} 1-2x = 3$ .
+
+\item{\spc} (c) show that $\dsp \lim_{x\ra 5} \sqrt{x+4} = 3$ .
+
+\item{(*)} (e) show that $\dsp \lim_{x\ra -3} {{1}\over{8-4x}} = {{-1}\over{4}}$ .
+
+\msk
+
+\item{26.} (Belding and Mitchell, p.63, \#2) Suppose that $g:\bbr\ra\bbr$ is a {\it bounded}
+function, i.e., there is an $M\in\bbr$ so that $|g(x)|\leq M$ for all $x\in\bbr$. Show 
+that $\dsp\lim_{x\ra 0} xg(x) = 0$.
+
+\msk
+
+\item{27.} (Belding and Mitchell, p.64, \#6) Show that if $\dsp\lim_{x\ra a} f(x) = L$, then 
+for any $\eta>0$ there is a $\tau>0$ so that $0<|x_1-a|<\tau$ and $0<|x_2-a|<\tau$ imply that
+$|f(x_1)-f(x_2)|<\eta$ . [I.e., ``if $f$ has a limit as we approach $a$, then points close (enough)
+to $a$ have values close to \ubr{one} \ubr{another}''.]
+
+\ssk
+
+\item{\spc} [N.B. This is a useful way to show that a function has {\it no} limit as $x$ approaches $a$ : 
+show that this conclusion does \ubr{not} hold!]
+
+\msk
+
+\item{(*) 28.} (The `Squeeze Play' Theorem) Suppose that $f,g,h:\bbr\ra\bbr$,
+are functions with  with $f(x)\leq g(x)\leq h(x)$ for all $x\in\bbr$
+with $0<|x-a|<M$ for some $a\in\bbr$ and $M>0$.
+Suppose further that 
+
+\item{\spc} $\displaystyle \lim_{x\rightarrow a}f(x)=L=\lim_{x\rightarrow a}h(x)$.
+Show that $\displaystyle \lim_{x\rightarrow a}g(x)=L$ .
+
+\ssk
+
+\item{\spc} [See Belding and Mitchell, p.64, \#8 for an outline that you might follow.]
+
+\msk
+
+\item{(*) 29.} (Belding and Mitchell, p.64, \#9) If $f:\bbr\ra\bbr$ is a function,
+$\dsp\lim_{x\ra a} f(x)=L$, and for some $K,M\in\bbr$ with $M>0$ we have $f(x)\leq K$ for
+all $x$ with $0<|x-a|<M$, show that $L\leq K$ . 
+
+\ssk
+
+\item{\spc} [What's the alternative?]
+
+\msk
+
+\item{30.} (Belding and Mitchell, p.69, \#1) Show, using our limit theorems and induction, that
+for every $n\in\bbz$ we have $\dsp\lim_{x\ra a} x^n = a^n$ (where we assume that $a\neq 0$ when 
+$n<0$).
+
+\msk
+
+
+\end{description}
+\vfill
+
+\end{document}
+
