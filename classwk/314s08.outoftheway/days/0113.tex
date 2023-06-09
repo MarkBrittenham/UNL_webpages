@@ -1,0 +1,140 @@
+
+%\input amstex
+
+
+\magnification=1200
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+%\loadmsbm
+\input colordvi
+
+\nopagenumbers
+\parindent=0pt
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+
+
+
+\ctln{\bf Math 314 Matrix Theory}
+
+\ssk
+
+\ctln{January 13, 2005}
+
+\msk
+
+{\bf Goal:} Develop methods for finding solutions to systems of linear equations, and 
+reasons for wanting to do so.
+
+\msk
+
+System of equations: 
+
+\vskip-12pt
+
+\hskip1.5in $a_{11}x_1+\cdots +a{1n}x_n = b_1$
+
+\hskip2.1in $\vdots$
+
+\hskip1.5in $a_{m1}x_1+\cdots +a{mn}x_n = b_m$
+
+\msk
+
+{\it Method of successive substitution (MoSS)}: 
+
+Write the first equation as 
+$\displaystyle x_1 = {{1}\over{a_{11}}}(b_1-a_{12}x_2-\cdots a_{1n}x_n)$ , 
+and substitute into the remaining equations. The remaining equations now
+constitute $m-1$ equations in $n-1$ unknowns, i.e., a ``simpler'' system.
+Now repeat the process, solving for $x_2$, and continue.
+\hskip.2in 
+
+{\it Need}: lead coefficient $a_{11}\neq 0$
+
+\msk
+
+Simplify the notation: {\bf matrices}. Decide what the variables are, and what order they appear in. 
+Then the coefficients are all that we need, in order to unambiguously describe the system of equations. 
+(A variable missing in an equation has coefficient 0.)
+
+\msk
+
+$\displaystyle \matrix{8x-6y+z=1\cr 5x+5y-9z=2\cr 9x+2z=3}$\hskip.2in $\Leftrightarrow$ \hskip.2in $\displaystyle \left(\matrix{8&-6&1&|&1\cr 5&5&-9&|&2\cr 9&0&2&|&3}\right)$
+
+\msk
+
+The left side of the expression on the right is the {\it coefficient matrix}; the whole thing is an {\it augmented matrix}.
+
+\ssk
+
+The idea: translate our solution method MoSS into one that manipulates the rows of the augmented matrix. Each MoSS 
+step can be broken down into 3 basic steps.
+
+\msk
+
+(1) Swap rows. 
+
+\ssk
+
+(In MoSS, this allows us to ensure that our lead coefficient $a_{11}$ is non-zero.)
+
+\ssk
+
+The substitution can be split into 2 parts.
+
+\ssk
+
+(2) Multiply a row by a non-zero constant. 
+
+\ssk
+
+(In MoSS, this lets us make the coefficient of $x_1$ equal to 1, by dividing by $a_{11}$.)
+
+\ssk
+
+(3) Add a multiple of one row to another. 
+
+\ssk
+
+(In MoSS, we thought of this as replacing $x_1$ by some expression {\it blah}; but
+this is the same as adding $a_{i1}$({\it blah}- $x_1$) to the $i$-th equation.)
+
+\msk
+
+These three kinds of steps are enough to carry out MoSS. And we can see that for each of these smaller steps,
+we get a new set of equations but {\bf have not changed the set of solutions}. This is because anything
+solving the equations before the step solves the equation after the step, and {\it each basic step is reversible}:
+swapping back, multiplying by the inverse, and subtracting the multiple of the one row undoes each step.
+
+\bsk
+
+The point is, we shall see, that with these  three steps,
+we can simplify the equations we need to solve to the point where the solution becomes immediate.
+The other point is that do not have to do the exact steps which implement MoSS; we can do any
+combination of steps we wish to, that leads to a ``simpler'' set of equations.
+
+\vfill\end
