@@ -1,0 +1,753 @@
+<HTML>
+
+
+<center><b>Math 221</center><br></b>
+<p>
+
+<center><b>Topics for the third exam</center><br></b>
+<p>
+
+<b>Chapter 3:</b> Second Order Linear Equations
+<p>
+
+<DL compact><DT>&#167; 8:
+</DT><DD>
+ <b>Spring - Mass problems</b></DD></DL>
+Basic setup: an object with mass m suspended on a spring. At rest, the mass
+stretches the spring by a length L. The mass is then displaced from this
+equilibrium position and released (with some initial velocity). Position at
+time t is u(t) .
+<p>
+Newton: m u<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup> = sum of the forces acting on the object. These
+include:
+<p>
+gravity: F<sub>g</sub> = mg
+<p>
+the spring: F<sub>s</sub> = -k(u+L) (Hooke's Law)
+<p>
+friction: F<sub>f</sub> = -<font face="symbol">g</font
+>u<sup><font face="symbol">¢</font
+></sup>
+<p>
+a possible external force: F<sub>e</sub> = f(t)
+<p>
+<p>
+Equilibrium: gravity and spring forces balance out; mg-kL = 0 (use to compute k !)
+<p>
+So: m u<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup> = -ku-<font face="symbol">g</font
+>u<sup><font face="symbol">¢</font
+></sup> + f(t), i.e., 
+<p>
+
+<center>m u<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+ku+<font face="symbol">g</font
+>u<sup><font face="symbol">¢</font
+></sup> = f(t)</center><br>
+<p>
+
+<p>
+Some special cases:
+<p>
+No friction (<font face="symbol">g</font
+> = 0) = undamped, no external force (= free vibration); solutions are
+<p>
+
+<center>u = c<sub>1</sub>cos(<font face="symbol">w</font
+><sub>0</sub> t)+c<sub>2</sub>sin(<font face="symbol">w</font
+><sub>0</sub> t) = C cos(<font face="symbol">w</font
+><sub>0</sub> t-<font face="symbol">d</font
+>)</center><br>
+<p>
+where <font face="symbol">w</font
+> = [<font face="symbol">Ö</font
+>(k/m)] = the <i>natural frequency</i> of the system, C = amplitude
+of the vibration, <font face="symbol">d</font
+> (= `delay') = phase angle
+<p>
+C = <font face="symbol">Ö</font
+>(c<sub>1</sub><sup>2</sup>+c<sub>2</sub><sup>2</sup>), tan(<font face="symbol">d</font
+>) = c<sub>2</sub>/c<sub>1</sub>
+<p>
+T = 2<font face="symbol">p</font
+>/<font face="symbol">w</font
+><sub>0</sub> = period of the vibration. Note: stiffer spring (= larger k)
+gives higher frequency, shorter period. Larger m gives the opposite.
+<p>
+<p>
+Damped free vibrations; solutions depend on <font face="symbol">g</font
+><sup>2</sup>-4km = discriminant
+<p>
+<font face="symbol">g</font
+><sup>2</sup><font face="symbol"> &gt; </font
+>4km (overdamped); fundamental solutions are e<sup>r<sub>1</sub> t</sup>, e<sup>r<sub>2</sub> t</sup>, r<sub>1</sub>,r<sub>2</sub><font face="symbol"> &lt; </font
+>0 
+<p>
+<font face="symbol">g</font
+><sup>2</sup> = 4km (critically damped); fundamental solutions are e<sup>rt</sup>, te<sup>rt</sup>, r<font face="symbol"> &lt; </font
+>0 
+<p>
+<font face="symbol">g</font
+><sup>2</sup><font face="symbol"> &lt; </font
+>4km (underdamped); fundamental solutions are 
+e<sup>rt</sup>cos(<font face="symbol">w</font
+>t), e<sup>rt</sup>sin(<font face="symbol">w</font
+>t), r<font face="symbol"> &lt; </font
+>0 , 
+<font face="symbol">w</font
+> = <font face="symbol">Ö</font
+>{<font face="symbol">w</font
+><sub>0</sub><sup>2</sup>-(<font face="symbol">g</font
+>/2m)<sup>2</sup>}
+<p>
+In each case, solutions tend to 0 as t goes to <font face="symbol">¥</font
+>. In first two cases, the solution
+has at most on local max or min; in the third case, note that
+the frequency of the periodic part of the motion is smaller than the 
+natural frequency. T = 2<font face="symbol">p</font
+>/<font face="symbol">w</font
+> is called the <i>quasi-period</i> of the vibration.
+<p>
+<p>
+
+<DL compact><DT>&#167; 9:
+</DT><DD>
+ <b>Forced vibrations</b></DD></DL>
+Focus on periodic forcing term: f(t) = F<sub>0</sub>cos(<font face="symbol">w</font
+>t) .
+<p>
+Undamped: if <font face="symbol">w</font
+> <font face="symbol">¹</font
+> <font face="symbol">w</font
+><sub>0</sub>, then (using undetermined coefficients) solution is
+<p>
+
+<center>u = 
+ Ccos(<font face="symbol">w</font
+><sub>0</sub> t-<font face="symbol">d</font
+>) + [(F<sub>0</sub>)/(m(<font face="symbol">w</font
+><sub>0</sub><sup>2</sup>-<font face="symbol">w</font
+><sup>2</sup>))]cos(<font face="symbol">w</font
+>t)</center><br>
+<p>
+This is the sum of two vibrations with different frequencies.
+<p>
+In the special case u(0) = 0, u<sup><font face="symbol">¢</font
+></sup>(0) = 0 (starting at rest), we can further
+simplify:
+<p>
+
+<center>u = 
+ [(2F<sub>0</sub>)/(m(<font face="symbol">w</font
+><sub>0</sub><sup>2</sup>-<font face="symbol">w</font
+><sup>2</sup>))] sin([(<font face="symbol">w</font
+><sub>0</sub>-<font face="symbol">w</font
+>)/2]t)sin([(<font face="symbol">w</font
+><sub>0</sub>+<font face="symbol">w</font
+>)/2]t)</center><br>
+<p>
+When <font face="symbol">w</font
+> is close to <font face="symbol">w</font
+><sub>0</sub>, this illustrates the concept of <i>beats</i>;
+we have a high frequency vibration (the second sine) with <i>amplitude</i> a low 
+frequency vibration (the first sine). the mass essentially vibrates rapidly
+between to sine curves.
+<p>
+<p>
+When <font face="symbol">w</font
+> = <font face="symbol">w</font
+><sub>0</sub>, our forcing term is a solution to the homogeneous
+equation, so the general solution, instead, is 
+<p>
+
+<center>u = 
+ Ccos(<font face="symbol">w</font
+><sub>0</sub> t-<font face="symbol">d</font
+>) + [(F<sub>0</sub>)/(2m<font face="symbol">w</font
+><sub>0</sub>)]tsin(<font face="symbol">w</font
+>t)</center><br>
+<p>
+In this case, as t goes to <font face="symbol">¥</font
+>, the amplitude of the second oscillation
+goes to <font face="symbol">¥</font
+>; the solution, essentially, resonates with the forcing term. 
+(Basically, you are `feeding' the system at it's natural frequency.) This illustrates the
+phenomenon of <i>resonance</i>.
+<p>
+<p>
+Finally, if we include friction (<font face="symbol">g</font
+> <font face="symbol">¹</font
+> 0), then the solution turns out to
+be 
+<p>
+
+<center>u = homog. soln. + Ccos(<font face="symbol">w</font
+>t- <font face="symbol">d</font
+>), where</center><br>
+<p>
+
+<center> C = [(F<sub>0</sub>)/(<font face="symbol">Ö</font
+>{m<sup>2</sup>(<font face="symbol">w</font
+><sub>0</sub><sup>2</sup>-<font face="symbol">w</font
+><sup>2</sup>)<sup>2</sup>+<font face="symbol">g</font
+><sup>2</sup><font face="symbol">w</font
+><sup>2</sup>})], 
+ tan(<font face="symbol">d</font
+>) = [(<font face="symbol">g</font
+>m)/(m(<font face="symbol">w</font
+><sub>0</sub><sup>2</sup>-<font face="symbol">w</font
+><sup>2</sup>))]</center><br>
+<p>
+But since <font face="symbol">g</font
+><font face="symbol"> &gt; </font
+> 0, the homogeneous solutions will tend to 0 as t<font face="symbol">®</font
+><font face="symbol">¥</font
+>;
+they are called the <i>transient solution</i>. (Basically, they just allow us to solve any
+initial value problem. We can then conclude that any energy given to the 
+susystem is 
+dissipated over time; leaving only the energy imparted by the forcing term to drive
+the system along.) The other term is called the <i>forced response</i>, or 
+<i>steady-state solution</i>.
+<p>
+Note that the amplitude C of the forced response goes to 0 as the driving
+frequency, <font face="symbol">w</font
+>, goes to <font face="symbol">¥</font
+>. Notice also that tan(<font face="symbol">d</font
+>) can never be
+0, so the forced response is always out of phase with the forcing term. When we are
+driving the system at it's natural frequency <font face="symbol">w</font
+><sub>0</sub>, the system is 90 degrees
+out of phase; as <font face="symbol">w</font
+><font face="symbol">®</font
+><font face="symbol">¥</font
+>, the system approaches being
+180 degrees out of phase, i.e., the motion of the mass is almost exactly 
+
+<U>opposite</U> to the force being externally applied!
+<p>
+<p><br>
+<b>Chapter 7:</b> Systems of first order linear equations
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Introduction</b></DD></DL>
+Basic idea: we have <i>two</i> (or more) quantities, with their 
+rates of change depending upon <i>one another</i>.
+<p>
+Ex: multiple spring - mass system:
+<p>
+
+<center>WALL - spring - mass - spring - mass - spring - WALL walls are A units apart</center><br>
+<p>
+u<sub>1</sub> = position of first mass, u<sub>2</sub> = position of second mass, then we find ,
+by analyzing the forces involved, that
+<p>
+
+<center>m<sub>1</sub>u<sub>1</sub><sup><font face="symbol">¢</font
+></sup><font face="symbol">¢</font
+> = -k<sub>1</sub> u<sub>1</sub> + k<sub>2</sub> (u<sub>2</sub>-u<sub>1</sub>) -<font face="symbol">g</font
+><sub>1</sub> u<sub>1</sub><sup><font face="symbol">¢</font
+></sup> hskip.2in
+m<sub>2</sub>u<sub>2</sub><sup><font face="symbol">¢</font
+></sup><font face="symbol">¢</font
+> = -k<sub>2</sub>(u<sub>2</sub>-u<sub>1</sub>) +k<sub>3</sub>(A-u<sub>2</sub>) -<font face="symbol">g</font
+><sub>2</sub> u<sub>2</sub><sup><font face="symbol">¢</font
+></sup></center><br>
+<p>
+where the symbols have similar meanings to our ordinary situation. The appropriate notion of 
+an initial value problem would be to know the initial positions and initial velocities
+of both masses at a fixed time.
+<p>
+<p>
+Ex: mixing with multiple tanks:
+<p>
+Tank 1 flows to tank 2 with rate r<sub>1</sub>, 2 to 3 with rate r<sub>2</sub>, and 3 to 1 with 
+rate r<sub>3</sub>, then if the u's are the amount of solute in each tank, and 
+the V's are the volumes in each, we have 
+<p>
+
+<center>
+
+ u<sub>1</sub><sup><font face="symbol">¢</font
+></sup> = [(r<sub>3</sub>)/(V<sub>3</sub>)]u<sub>3</sub> - [(r<sub>1</sub>)/(V<sub>1</sub>)]u<sub>1</sub> ,u<sub>2</sub><sup><font face="symbol">¢</font
+></sup> = [(r<sub>1</sub>)/(V<sub>1</sub>)]u<sub>1</sub> - [(r<sub>2</sub>)/(V<sub>2</sub>)]u<sub>2</sub> , u<sub>3</sub><sup><font face="symbol">¢</font
+></sup> = [(r<sub>2</sub>)/(V<sub>2</sub>)]u<sub>2</sub> - [(r<sub>3</sub>)/(V<sub>3</sub>)]u<sub>3</sub></center><br>
+<p>
+Here the appropriate notion of <i>initial value problem</i>  is to know the values 
+of each of u<sub>1</sub>,u<sub>2</sub>,u<sub>3</sub> at a fixed time.
+<p>
+<p>
+An important class of examples: any ordinary differential equation
+<p>
+
+<center>y<sup>(n)</sup> = f(t,y,y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>,y<sup>(n-1)</sup>)</center><br>
+<p>
+can be turned into a system of <i>first order</i> equations by setting
+<p>
+
+<center>u<sub>1</sub> = y,u<sub>2</sub> = y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>, u<sub>n-1</sub> = y<sup>(n-1)</sup></center><br>
+<p>
+giving the system of equations
+<p>
+
+<center>
+u<sub>1</sub><sup><font face="symbol">¢</font
+></sup> = u<sub>2</sub>, u<sub>2</sub><sup><font face="symbol">¢</font
+></sup> = u<sub>3</sub>, <font face="symbol">¼</font
+>, u<sub>n-1</sub><sup><font face="symbol">¢</font
+></sup> = f(t,y,y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>,y<sup>(n-1)</sup>)</center><br>
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Matrices</b></DD></DL>
+The best way to develop techniques for solving systems of equations is with 
+<i>matrices</i>. Notationally, a system of equations
+<p>
+
+<center>u<sub>1</sub><sup><font face="symbol">¢</font
+></sup> = 2u<sub>1</sub>+3u<sub>2</sub> u<sub>2</sub><sup><font face="symbol">¢</font
+></sup> = 3u<sub>1</sub>-u<sub>2</sub></center><br>
+<p>
+can be expressed as 
+<p>
+
+(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+u<sub>1</sub><sup><font face="symbol">¢</font
+></sup></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ u<sub>2</sub><sup><font face="symbol">¢</font
+></sup></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) = </td><td align="left"><font face="symbol">
+æ<br>ç<br>ç<br>
+ç<br>è
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+2</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+3</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+-1</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ö<br>÷<br>÷<br>
+÷<br>ø
+</font></td><td>
+</td><td align="left"><font face="symbol">
+æ<br>ç<br>ç<br>
+ç<br>è
+</font></td><td>
+</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+u<sub>1</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ u<sub>2</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap></td><td align="left"><font face="symbol">
+ö<br>÷<br>÷<br>
+÷<br>ø
+</font></td><td>
+ , or, writing 
+<b>u</b> = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+u<sub>1</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ u<sub>2</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) and using the derivative of a vector-valued function,
+<b>u</b><sup><font face="symbol">¢</font
+></sup> = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+2</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+3</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+-1</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>)<b>u</b> = A<b>u</b> . 
+The square of numbers is called a (coefficient) <i>matrix</i>. We actually 
+want to think of A<b>u</b> as a real multiplication; the basic idea is that
+the i-th entry of A<b>u</b> is the i-th row of A <i>times</i> <b>u</b> .
+This in turn should be familiar as the dot product of the row of A and <b>u</b>.
+<p>
+More generally, we can multiply matrices, getting another matrix. Using the notation
+A = (a<sub>ij</sub>), where a<sub>ij</sub> is the entry in the i-th row and j-th column
+of A, we write 
+<p>
+<p>
+AB = (c<sub>ij</sub>), where c<sub>ij</sub> = the dot product of the i-th row of A
+and the j-th column of B .
+<p>
+<p>
+Amazingly, this product has alot of the properties we are used to: if we add matrices by
+adding their ij-th entries (to get the ij-th entry of the sum), and multiply by a
+scalar c by multliplying each entry by c, then we have:
+<p>
+
+<center>(AB)C = A(BC) , A(B+C) = AB+AC , A(cB) = c(AB) , c(A+B) = cA+cB</center><br>
+<p>
+However what we do not NOT <b>NOT</b> have is AB = BA; usually, matrix multiplication
+does not NOT <b>NOT</b> commute! We will need the special matrix I = (<font face="symbol">d</font
+><sub>ij</sub>), 
+where <font face="symbol">d</font
+><sub>ij</sub> = 1 if i = j, and 0 if i <font face="symbol">¹</font
+> j . This matrix has the property
+that IA = AI = A for all matrices A, i.e., it acts like the number 1 under 
+multiplication.
+<p>
+<p>
+If A is a matrix whose entries are functions (a<sub>ij</sub>(t) = A(t), then we can 
+make sense of its derivative; A<sup><font face="symbol">¢</font
+></sup>(t) = (a<sub>ij</sub><sup><font face="symbol">¢</font
+></sup>(t)) . 
+Then we have the properties:
+<p>
+
+<center>(A+B)<sup><font face="symbol">¢</font
+></sup>(t) = A<sup><font face="symbol">¢</font
+></sup>(t)+B<sup><font face="symbol">¢</font
+></sup>(t) , 
+(AB)<sup><font face="symbol">¢</font
+></sup>(t) = A<sup><font face="symbol">¢</font
+></sup>(t)B(t)+A(t)B<sup><font face="symbol">¢</font
+></sup>(t)</center><br>
+<p>
+Note the order of multiplication in the second formula; it's important!
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Eigenvectors and eigenvalues</b></DD></DL>
+We shall see that our approach to solving <b>u</b><sup><font face="symbol">¢</font
+></sup> = A<b>u</b>, is, like in 
+Chapter 1, to find solutions of the form <b>u</b> = e<sub>kt</sub>[v\vec]<sub>0</sub> for a (non-zero)
+vector
+[v\vec]<sub>0</sub> and number k. These vectors and numbers will be 
+determined by A; they will come from solving 
+<p>
+
+<center>A[v\vec]<sub>0</sub> = k[v\vec]<sub>0</sub></center><br>
+<p>
+Such vectors are called <i>eigenvectors</i>, and their associated numbers k are
+called <i>eigenvalues</i>. Our approach to finding such vectors and numbers is to 
+write the equation as
+<p>
+
+<center>(A-kI)[v\vec]<sub>0</sub> = [0\vec] (*)</center><br>
+<p>
+First we find the right values k. Linear algebra teaches us that (*) has a 
+(non-zero vector) solution exactly when det(A-kI) = 0, where "det" stands for
+the determinant. We have already run into this concept; for a 2-by-2 matrix
+<p>
+
+<center> A = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ c</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+d</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) , det(A) = ad-bc</center><br>
+<p>
+There are similar formulas for n&times;n matrices for any n, but we will focus
+on n = 2 to make our calculations simpler. If we compute det(A-kI), we find that
+(*) has a solution exactly when
+<p>
+
+<center>det(A-kI) = k<sup>2</sup>-(a+d)k+(ad-bc) = 0</center><br>
+<p>
+This is a quadratic polynomial, so it (usually) has two roots, r<sub>1</sub>,r<sub>2</sub> . Once we have the roots,
+we go back and solve (A-r<sub>i</sub> I)[v\vec] = [(\vec]0), i.e, 
+<p>
+
+<center>ax<sub>1</sub>+bx<sub>2</sub> = r<sub>i</sub> x<sub>1</sub> , cx<sub>1</sub> + dx<sub>2</sub> = r<sub>i</sub> x<sub>2</sub></center><br>
+<p>
+It turns out that the second equation is always redundant (although this is really only
+true of 2&times;2 systems), and we can find [v\vec] by choosing any convenient 
+(non-zero) value for x<sub>1</sub> or x<sub>2</sub>, and solving for the other. 
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Homogeneous linear systems with constant coefficients</b></DD></DL>
+Now we put all of this technology to work, to solve our system of differential 
+equations 
+<p>
+
+<center><b>u</b><sup><font face="symbol">¢</font
+></sup> = A<b>u</b> (**)</center><br>
+<p>
+where A is a matrix whose entries are all constants. Our basic procedure 
+will be to <i>guess</i> that the solution is <b>u</b> = 
+e<sup>kt</sup>[v\vec]<sub>0</sub> for some vector (with constant entries) [v\vec]<sub>0</sub>. If we plug
+such a function into (**), we find that 
+<p>
+
+<center><b>u</b><sup><font face="symbol">¢</font
+></sup> = k<b>u</b> = e<sup>kt</sup>(k[v\vec]<sub>0</sub>), while
+A<b>u</b> = e<sup>kt</sup>(A[v\vec]<sub>0</sub>)</center><br>
+<p>
+and so we find that we need A[v\vec]<sub>0</sub> = k[v\vec]<sub>0</sub> . In other words, we need the
+eigenvalues for A, and their corresponding eigenvectors. This gives us <b>two</b>
+solutions to the system of equations, but using the Principle of Superposition:
+<p>
+<p>
+<DL><DD>If u<sub>1</sub>, u<sub>2</sub> are solutions to the linear system of equations 
+<b>u</b><sup><font face="symbol">¢</font
+></sup> = A<b>u</b>, then the functions c<sub>1</sub> u<sub>1</sub>+c<sub>2</sub> u<sub>2</sub> are also solutions,
+for any constants c<sub>1</sub>,c<sub>2</sub> .
+<p>
+<p>
+(which we can easily verify), we can take linear combinations of our solutions, to get
+the general solution to the system of equations
+<p>
+
+<center><b>u</b> = c<sub>1</sub> e<sup>r<sub>1</sub> t</sup>[(v<sub>1</sub>)\vec] + c<sub>2</sub> e<sup>r<sub>2</sub> t</sup> [(v<sub>2</sub>)\vec]</center><br>
+<p>
+where [(v<sub>1</sub>)\vec], [(v<sub>2</sub>)\vec] are eigenvectors for the coefficient matrix A, 
+with eigenvalues r<sub>1</sub>,r<sub>2</sub>.
+<p>
+<p>
+To solve an initial value problem, we find the general solution, and then plug t<sub>0</sub>
+into the solution and set the vector equal to our initial values (u<sub>1</sub>(t<sub>0</sub>),u<sub>2</sub>(t<sub>0</sub>)) . 
+This gives
+us a pair of linear equations to solve, which we do using our earlier techniques.
+<p>
+<p>
+Each solution is a pair of functions <b>u</b> = (u<sub>1</sub>(t),u<sub>2</sub>(t)), which, if we think of 
+them as giving x- and y-coordinates, describe a <i>path</i> in the plane. 
+<b>u</b><sup><font face="symbol">¢</font
+></sup> can then be interpreted as the velocity vectors of this path,
+which are vectors <i>tangent</i> to the path. since we have a solution to our 
+differential equation (**), <b>u</b><sup><font face="symbol">¢</font
+></sup> is actually A<b>u</b>, which we can 
+imagine computing for <i>every</i> point in the plane. Plotting each of these
+vectors A[v\vec] with its tail at [v\vec] gives us a vector field in the 
+plane, which we call the <i>direction
+field</i> of the system of equations. The solutions to (**) are the paths whose 
+velocity vectors are equal to this direction field (and in 
+particular is tanget to the vector field). A picture of the direction field,
+together with a representative collection of solution curves, is called a 
+<i>phase portrait</i> for the system of equations.
+<p>
+<p>
+Our fundamental solutions u<sub>i</sub> = e<sup>r<sub>i</sub> t</sup>[(v<sub>i</sub>)\vec] give very special solution
+curves; the y-coordinate is a (constant) multiple of the x-coordinate, so it
+parametrizes a straight line out from the origin. With two eigenvalues, we 
+have two straight line solutions to the system of equations. Every other 
+solution will be curved (*actually, this isn't quite true; things are much different
+if one of the eigenvalues is 0; then <i>every</i> solution is a straight line
+(check it out!)*). We can understand the other solutions in terms of their
+behavior as t<font face="symbol">®</font
+><font face="symbol">¥</font
+> and t<font face="symbol">®</font
+> -<font face="symbol">¥</font
+>.
+<p>
+We have two lines L<sub>1</sub> and L<sub>2</sub> coming from the eigenvalues r<sub>1</sub> and r<sub>2</sub>.
+If r<sub>1</sub><font face="symbol"> &gt; </font
+>r<sub>2</sub>, then as t<font face="symbol">®</font
+><font face="symbol">¥</font
+>, e<sup>r<sub>1</sub> t</sup>/e<sup>r<sub>2</sub> t</sup> = e<sup>(r<sub>1</sub>-r<sub>2</sub>)t</sup><font face="symbol">®</font
+> <font face="symbol">¥</font
+>
+and so in any solution
+<p>
+
+<center>c<sub>1</sub> e<sup>r<sub>1</sub> t</sup>[(v<sub>1</sub>)\vec] + c<sub>2</sub> e<sup>r<sub>2</sub> t</sup> [(v<sub>2</sub>)\vec], the c<sub>1</sub> e<sup>r<sub>1</sub> t</sup>[(v<sub>1</sub>)\vec]
+term will `dominate'</center><br>
+<p>
+i.e., the solution will turn parallel to [(v<sub>1</sub>)\vec]. A similar argument shows that
+as t<font face="symbol">®</font
+> -<font face="symbol">¥</font
+>, the solutions will turn parallel to [(v<sub>2</sub>)\vec].
+<p>
+The shape of the solutions also depend on the signs of the eigenvalues.
+If they are both negative, every solution tends toward the origin as t<font face="symbol">®</font
+><font face="symbol">¥</font
+>,
+and head to <font face="symbol">¥</font
+> in the other direction. If one is positive and one negative, then 
+the solutions (other than the straight line ones) tend to <font face="symbol">¥</font
+> in both directions.
+If both are positive, then every solution tends to <font face="symbol">¥</font
+> as t<font face="symbol">®</font
+><font face="symbol">¥</font
+>, and
+heads to the origin in the other direction.
+<p>
+<p>
+All of this analysis has the <i>assumption</i> that the eigenvalues for our matrix 
+A are <i>distinct real numbers</i>. We have yet to deal with the other two 
+possibilities: the eigenvalues are complex (conjugates), or are equal.
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Complex eigenvalues</b></DD></DL>
+To deal with complex eigenvalues <font face="symbol">a</font
+><font face="symbol">±</font
+><font face="symbol">b</font
+>i , for example
+<p>
+
+<center>A = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+1</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+-4</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 3</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+-3</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) , which has eigenvalues 1<font face="symbol">±</font
+>3i</center><br>
+<p>
+we do what we did for second order equation. We just <i>assume</i> that the 
+solution is 
+<p>
+
+<center><b>u</b> = e<sup>(<font face="symbol">a</font
+>+<font face="symbol">b</font
+>i)t</sup> [v\vec]<sub>0</sub> = 
+e<sup><font face="symbol">a</font
+>t</sup>(cos(<font face="symbol">b</font
+>t)+isin(<font face="symbol">b</font
+>t))([v\vec]</center><br>
+<p>
+To find [v\vec], we solve A[v\vec] = (<font face="symbol">a</font
+>+<font face="symbol">b</font
+>i)[v\vec] as before, except
+that in this case the coordinates of [v\vec] will be complex numbers. (As before,
+the second equation is redundant.) If we write
+<p>
+
+<center>[v\vec] = (</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+v<sub>1</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ v<sub>2</sub></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>), so <b>u</b> = 
+
+(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+(cos(<font face="symbol">b</font
+>t)+isin(<font face="symbol">b</font
+>t))[(v<sub>1</sub>)\vec]</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ (cos(<font face="symbol">b</font
+>t)+isin(<font face="symbol">b</font
+>t))[(v<sub>2</sub>)\vec]</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>)</center><br>
+<p>
+we can write this as
+<p>
+
+<center><b>u</b> = <b>x</b>+i<b>y</b> , where <b>x</b> and <b>y</b> have
+real entries</center><br>
+<p>
+Then we use the useful fact: if <b>u</b> = <b>x</b>+i<b>y</b> solves the
+equation <b>u</b><sup><font face="symbol">¢</font
+></sup> = A<b>u</b> , where A has real entries, then 
+<b>x</b> and <b>y</b> <i>also</i> solve the system of equations. (This uses
+the fact that eigenvalues come in complex conjugate pairs!) These two
+vector functions are our fundamental solutions. Each coordinate of these functions is
+a linear combination of the functions e<sup><font face="symbol">a</font
+>t</sup>cos(<font face="symbol">b</font
+>t) and 
+e<sup><font face="symbol">a</font
+>t</sup>sin(<font face="symbol">b</font
+>t), and so the phase portrait of such a 
+system of equations invloves both a circular motion and and expension from 
+or contraction towards the origin (depending on whether <font face="symbol">a</font
+> is positive
+or negative). The solution curves are spirals around the origin.
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Repeated eigenvalues</b></DD></DL>
+If the coefficient matrix has only one eigenvalue r, occuring twice, then using that
+eigenvalue we can find an eigenvector [v\vec] and a solition <b>u</b> = e<sup>rt</sup>[v\vec].
+But only if A = rI (in the 2&times;2 case, will we be able to find <i>two</i>
+independent solutions; in that case we can actually take
+<p>
+
+<center><b>u</b> = c<sub>1</sub> r<sup>rt</sup>(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+1</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 0</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) + c<sub>2</sub> e<sup>rt</sup>(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+0</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ 1</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>) = 
+(</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+c<sub>1</sub> e<sup>rt</sup></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ c<sub>2</sub> e<sup>rt</sup></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>)</center><br>
+<p>
+In every other case, we <i>guess</i> that the other solution is <b>u</b> = t e<sup>rt</sup>[w\vec] .
+It turns out, however, that this won't work: what we instead need to do is to guess
+<p>
+<p>
+<b>u</b> = t e<sup>rt</sup>[v\vec] + e<sup>rt</sup>[w\vec] , where v is the <i>same</i>
+eigenvector with eigenvalue r that we already found!
+<p>
+<p>
+Carrying this expression through the equation <b>u</b><sup><font face="symbol">¢</font
+></sup> = A<b>u</b> , we find
+that [w\vec] must satisfy
+<p>
+
+<center>(A-rI)[w\vec] = [v\vec]</center><br>
+<p>
+Since we know r and [v\vec] , we can solve this for [w\vec] . (In general,
+linear algebra tells us we shouldn't always expect to be able to solve such 
+an equation, but because of the repeated root, it turns out than in fact we <i>can</i>.)
+This gives us our second fundamental solution.
+<p>
+<p>
+If we look at the phase portrait for such an equation, we find that
+for the solution
+<p>
+
+<center><b>u</b> = c<sub>1</sub> e<sup>rt</sup>[v\vec] + c<sub>2</sub> (t e<sup>rt</sup>[v\vec] + e<sup>rt</sup>[w\vec]) = 
+e<sup>rt</sup>[(c<sub>1</sub>+c<sub>2</sub> t)[v\vec] +c<sub>2</sub>[w\vec]]</center><br>
+<p>
+as t<font face="symbol">®</font
+><font face="symbol">¥</font
+> the solution curves (with c<sub>2</sub><font face="symbol"> &gt; </font
+>0) run parallel to 
+[v\vec], while as t<font face="symbol">®</font
+> -<font face="symbol">¥</font
+>, they run parallel to -[v\vec] , 
+that is, the term t[v\vec] will dominate. If c<sub>2</sub><font face="symbol"> &lt; </font
+>0, the roles of <font face="symbol">±</font
+>[v\vec]
+are reversed. Notice that c<sub>2</sub> = 0 gives the straight line solution(s) 
+<b>u</b> = <font face="symbol">±</font
+>e<sup>rt</sup>[v\vec]. The solutions will tend to the origin as t goes to
+<font face="symbol">¥</font
+> or -<font face="symbol">¥</font
+> , depending on the sign of r.
+<p>
+
+</DL>
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

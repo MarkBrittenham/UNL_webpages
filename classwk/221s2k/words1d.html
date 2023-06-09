@@ -1,0 +1,625 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 221</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for first exam</center><br></b>
+<p>
+<p><br>
+<b>Chapter 1:</b> Introduction
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The types of differential equations</b></DD></DL>
+A differential equation is an equation involoving an (unknown) function y and
+some of its derivatives. The basic goal is to <i>solve</i> the equation, i.e., to 
+determine which function or functions satisfy the equation. Differential equations
+come in several types, and our techniques for solving them will differ 
+depending on the type.
+<p>
+<p>
+<i>Ordinary vs. partial:</i> If y is a function of only one variable t, then our
+differential equation&nbsp;will involve only derivatives w.r.t. t, and we will call the equation an
+it ordinary differential equation. If y is a function of more than one variable, then our differential equation&nbsp;
+will involve partial derivatives, and we will call it a <i>partial differential equation</i>. We
+will deal almost exclusively with ordinary differential equations&nbsp;in this class.
+<p>
+<p>
+<i>Systems:</i> Sometimes the rates of change of several functions are 
+inter-related, as with the populations of a predator y(t) and its prey x(t),
+where x<sup><font face="symbol">¢</font
+></sup> = ax-<font face="symbol">a</font
+>xy and y<sup><font face="symbol">¢</font
+></sup> = <font face="symbol">g</font
+>xy - cy . We call 
+this a <i>system</i> of differential equations, and its solution would involve finding both 
+x(t) and y(t).
+<p>
+<p>
+<i>Order:</i> Techniques for solving differential equations&nbsp;differ depending upon how many
+derivatives of our unknown function are involved. The <i>order</i> of a 
+differential equation&nbsp;is the order of the highest derivative appearing in the equation. 
+The Implicit Function Theorem tells us that we can rewrite our equation so that
+it equates the highest order derivative with an expression involving lower
+order terms:
+<p>
+
+<center>y<sup>(n)</sup> = F(t,y,y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>,y<sup>(n-1)</sup></center><br>
+<p>
+<p>
+<i>Linear vs. non-linear:</i> A differential equation&nbsp;is <i>linear</i> if it can be written as
+<p>
+
+<center>a<sub>0</sub>(t)y<sup>(n)</sup>+<font face="symbol">¼</font
+>+a<sub>n-1</sub>(t)y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>(t)y = g(t)</center><br>
+<p>
+(i.e., the function F is linear in the variables y,y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>,y<sup>(n-1)</sup>,
+although it <b>need not</b> be linear in t). A differential equation&nbsp;is non-linear if it isn't
+linear! E.g., 
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = y<sup>2</sup></center><br> 
+<p>
+is non-linear, while 
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = (sint)y/(1+t<sup>2</sup>) - cos(cost)</center><br>
+<p>
+is linear.
+<p>
+<p>
+In many cases, especially for first order differential equations, we can `see' what a solution
+should look like without actually finding the solution. For first order
+equations, y<sup><font face="symbol">¢</font
+></sup> = f(t,y), a solution y(t) will satisfy 
+y<sup><font face="symbol">¢</font
+></sup>(t) = f(t,y(t)), and so we can think of f(t,y) as giving the <i>slope</i>
+of the tangent line to the graph of y(t) at the point (t,y(t)). But since the function f
+is already known, we can draw small line segments at `every' point of the t-y plane
+with slope f(t,y) at the point (t,y); this is called the
+<i>direction field</i> for our differential equation. A solution to our differential equation&nbsp;is
+simply a function whose graph is tangent to each of these line segments at every
+point along the graph. Thinking of the direction field as a velocity vector field
+(always pointing to the right), our solution is then the path of a particle being
+push along by the velocity vector field. From this point of view it is not 
+hard to believe that <i>every</i> (first order ordinary) differential equation&nbsp;has a solution, in 
+fact many solutions; you just drop a particle in and watch where it goes. <i>Where</i>
+you drop it is important (it changes where it goes), which gives rise to the
+notion of an <i>initial value problem</i>; we seek to find the specific solution
+with the additional <i>initial value</i> y(t<sub>0</sub>) = y<sub>0</sub>.
+<p>
+<p><br>
+<b>Chapter 2:</b> First order differential equations
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Linear equations</b></DD></DL>
+The most straightforward sort of differential equation&nbsp;to solve is the <i>first order
+linear ordinary differential equation</i> 
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = a(t)y+b(t)</center><br>
+<p>
+We will typically (following tradition) write such equations as
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> + p(t)y = g(t)</center><br>
+<p>
+For example, near the earth and in the presence of air resistance, the
+velocity v of a falling object obeys the differential equation&nbsp;v<sup><font face="symbol">¢</font
+></sup> = g -kv, 
+where g and k are (positive) constants.
+<p>
+There is a general technique for solving such equations, by trying to think of the
+left-hand side of the equation as the derivative of a single function. In form it
+look like the derivative of a product, and by introducing an <i>integrating factor</i> <font face="symbol">m</font
+>(t),
+we can actually arrange this. Writing
+<p>
+
+<center>(<font face="symbol">m</font
+>(t)y)<sup><font face="symbol">¢</font
+></sup> = <font face="symbol">m</font
+>(t)(y<sup><font face="symbol">¢</font
+></sup>+p(t)y)) = <font face="symbol">m</font
+>(t)g(t)</center><br>
+<p>
+we find that (where exp(blah) means e raised to the power `blah')
+<p>
+
+<center><font face="symbol">m</font
+>(t) = exp(<font face="symbol">ò</font
+>p(t) dt)</center><br>
+<p>
+and so
+<p>
+
+<center><font face="symbol">m</font
+>(t)y = <font face="symbol">ò</font
+><font face="symbol">m</font
+>(t)g(t) dt = <font face="symbol">ò</font
+>(exp(<font face="symbol">ò</font
+>p(t) dt)) g(t) dt +c</center><br>
+<p>
+which we can then solve for y.
+<p>
+<p>
+For example, the differential equation&nbsp;ty<sup><font face="symbol">¢</font
+></sup> -y = t<sup>2</sup>+1 , after being rewritten in 
+`standard form as y<sup><font face="symbol">¢</font
+></sup> -(1/t)y = t+(1/t), has integrating factor
+<p>
+
+<center><font face="symbol">m</font
+>(t) = exp(<font face="symbol">ò</font
+>-1/t dt) = exp(-lnt) = 1/t</center><br>
+<p>
+so we have 
+<p>
+
+<center>(1/t)y = <font face="symbol">ò</font
+>1+1/t<sup>2</sup> dt = t-(1/t)+c</center><br>
+<p>
+and so our solutions are y = t<sup>2</sup>-1+ct, where c is a constant.
+<p>
+<p>
+But what is c ? Or solution is actually a <i>family</i> of solutions; a 
+particular solution (i.e., a particular value for c) can be found from 
+an initial value y(t<sub>0</sub>) =y<sub>0</sub>. For example, if we wished to solve
+the initial value problem 
+<p>
+
+<center>ty<sup><font face="symbol">¢</font
+></sup> -y = t<sup>2</sup>+1 , y(2) = 5</center><br>
+<p>
+we can plug t = 2 and y = 5 into our general solution to obtain c = 1 .
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Existence and uniqueness</b></DD></DL>
+Our solution above can be expressed more concisely by saying that the solution(s)
+to 
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> + p(t)y = g(t)</center><br>
+<p>
+are
+<p>
+
+<center>y = exp(-<font face="symbol">ò</font
+>p(t) dt)(<font face="symbol">ò</font
+>exp(-<font face="symbol">ò</font
+>p(t) dt)g(t) dt + c)</center><br>
+<p>
+where c is determined from an initial value. We can check that this actually
+<i>is</i> a solution by pluging it into our differential equation&nbsp;and seeing that it does in fact solve it.
+<p>
+We can in fact write down the solution to the added initial value problem
+y(t<sub>0</sub>) = y<sub>0</sub> as
+<p>
+
+<center>y = exp(-<font face="symbol">ò</font
+><sub>t<sub>0</sub></sub><sup>t</sup> p(x) 
+dx)(<font face="symbol">ò</font
+><sub>t<sub>0</sub></sub><sup>t</sup> exp(<font face="symbol">ò</font
+><sub>t<sub>0</sub></sub><sup>u</sup> p(v) dv) g(u) du + y<sub>0</sub>)</center><br>
+<p>
+although in practice this is more trouble than it is worth.
+<p>
+<p>
+But this formula does tell us one important thing; for every first order
+linear ordinary differential equation, every initial value problem has a solution (we just wrote
+it down), and that solution is <i>unique</i> (because it has to <i>be</i> the
+one we wrote down). This is the basic existence and uniqueness theorem.
+<p>
+It actually says more (or less): the solution exists and is unique over any interval
+where the integrals we've written down make sense, which amount to any interval
+where <i>both</i> p(t) and g(t) are continuous. In other words, a solution to
+a linear differential equation can blow up or fail to be continuous only at the 
+points of discontinuity of p or g .
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Separable equations</b></DD></DL>
+There is another class of first order equations for which we can readily
+find solutions by integration; there are the <i>separable</i> equations. A
+differential equation&nbsp;is separable if it can be written as
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = A(t)B(y)</center><br>
+<p>
+This allows us to `separate the variables' and integrate with respect to dy and dt
+to get a solution:
+<p>
+
+<center> [1/B(y)]dy = A(t) dt ; integrate both sides</center><br>
+<p>
+In the end, our solution looks like F(y) = G(t) + c, so it defines y
+<i>implicitly</i> as a function of t , rather than explicitly. In some cases
+we can invert F to get an explicit solution, but often we cannot.
+<p>
+<p>
+For example, the separable equation y<sup><font face="symbol">¢</font
+></sup> = ty<sup>2</sup> , y(1) = 2 has solution
+<p>
+
+<center> <font face="symbol">ò</font
+>[dy/(y<sup>2</sup>)] = <font face="symbol">ò</font
+>t dt + c</center><br>
+<p>
+so solving the integrals we get (-1/y) = (t<sup>2</sup>/2)+c, or y = -2/(t<sup>2</sup>+2c) ; 
+setting y = 2 when t = 1 gives c = -1 .
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Linear versus non-linear equations</b></DD></DL>
+There is a similar, but more restrictive, version of existence and uniqueness
+for non-linear first order differential equations:
+<p>
+<p>
+If y<sup><font face="symbol">¢</font
+></sup> = f(t,y) is a differential equation with both f and 
+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)] continuous for a<font face="symbol"> &lt; </font
+>t<font face="symbol"> &lt; </font
+>b and <font face="symbol">a</font
+><font face="symbol"> &lt; </font
+> y <font face="symbol"> &lt; </font
+> <font face="symbol">b</font
+>,
+and t<sub>0</sub> <font face="symbol">Î</font
+> (a,b) and y<sub>0</sub> <font face="symbol">Î</font
+> (<font face="symbol">a</font
+>,<font face="symbol">b</font
+>), then <i>for some</i> h<font face="symbol"> &gt; </font
+>0,
+the initial value problem 
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = f(t,y) , y(t<sub>0</sub>) = y<sub>0</sub></center><br>
+<p>
+has a unique solution for t <font face="symbol">Î</font
+> (t<sub>0</sub>-h,t<sub>0</sub>+h) .
+<p>
+<p>
+With non-linear equations, however, the size of the interval where we can 
+guarantee existence (and uniqueness) can be very small, and often depends
+on the choice of initial value! For example,  for the equation
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = y<sup>2</sup></center><br>
+<p>
+the righthand side is continuous everywhere (as is the partial derivative),
+but the interval we can choose for the solutions y = -1/(t+c) depends on c, 
+which will depend on the initial condition! And it can <i>never</i> be chosen 
+to be the entire real line.
+<p>
+<p>
+Failure to satisfy the hypotheses of the result can easily kill both 
+existence and uniqueness. For example, the equation
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = y<sup>1/3</sup></center><br>
+<p>
+has many solutions with the initial condition y(0) = 0, such as y = 0 and 
+y = (2t/3)<sup>3/2</sup> .
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Modeling with linear equations</b></DD></DL>
+<i>Radioactive decay:</i> Our best model of the spontaneous decay of a 
+radioactive substance assumes that every atom is as likely to decay at any given time
+as every other, so the rate of decay is proportional to the amount
+present. In other words, if A(t) = the amount present at time t,
+then 
+<p>
+
+<center>A<sup><font face="symbol">¢</font
+></sup> = kAfor some (negative) constant k</center><br>
+<p>
+Soving this, we find that A(t) = Ce<sup>kt</sup> for some constant
+C. Using the initial value A(0) = A<sub>0</sub>, we find that 
+A(t) = A<sub>0</sub>e<sup>kt</sup>. 
+<p>
+Usually, we are not <i>given</i> k, but are given either the 
+half-life (the time t<sub>1/2</sub> with A(t<sub>1/2</sub>) = (1/2)A(0)), or,
+more generally, another data point A(t<sub>1</sub>) = A<sub>1</sub> . Plugging these
+into the equation above, we can solve for k .
+<p>
+<p>
+<i>Mixing problems:</i> The basic setup has a solution of a known
+concentration mixing at a known rate with a solution in a vat,
+while the mixed solution is poured off at a known rate. The 
+problem is to find the function which gives concentration in the vat
+at time t. It turns out that it is much easier to find a differential equation\
+which describes the amount of solute (e.g., salt) in the
+solution (e.g., water), rather than the concentration.
+<p>
+If the concentration pouring in is A, at a rate of N, while the 
+solution is pouring out at rate M with concentration A(t)=
+x(t)/V(t), then if the initial volume is V<sub>0</sub>, we can 
+compute V(t) = V<sub>0</sub>+(N-M)t . The change in the amount x(t) of
+solute can be computed as (rate falling in)-(rate falling out),
+which is
+<p>
+
+<center>x<sup><font face="symbol">¢</font
+></sup> = AN - A(t)M = 
+ AN-[x/(V<sub>0</sub>+(N-M)t)]M</center><br>
+<p>
+This is a linear equation, and so we can solve it using our 
+techniques above. The integrating factor 
+<p>
+
+<center> exp(<font face="symbol">ò</font
+>[M/(V<sub>0</sub>+(N-M)t)]dt)</center><br>
+<p>
+is a power of the denomenator when N-M <font face="symbol">¹</font
+> 0, and is an 
+exponential when N = M .
+<p>
+<p>
+<i>Newton's Law of Cooling:</i> This states that the rate of
+change of the temperature
+T(t) of an object is proportional to the difference between
+is temperature and the ambient temperature of the air around it.
+The constant of proportionality depends upon the particular
+object (and the medium, e.g., air or water) it is in. In other
+words,
+<p>
+
+<center>T<sup><font face="symbol">¢</font
+></sup> = k(A-T)</center><br>
+<p>
+Since a cold object will warm up, and a warm object will cool
+down, this means that the constant k should be positive. Writing
+the equation as
+<p>
+
+<center>T<sup><font face="symbol">¢</font
+></sup> +kT = kA</center><br>
+<p>
+which has solutions
+<p>
+
+<center>T(t) = A+(T(0)-A)e<sup>-kt</sup></center><br>
+<p>
+Typically, k is not given, but can be determined by
+knowing the temperature at some other time t<sub>0</sub>, by 
+plugging into the equation above and solving for k.
+<p>
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>Population models and autonomous equations</b></DD></DL>
+A differential equation is called <i>autonomous</i> if
+the function f(t,y) is realy a function f(y) only of the
+variable y. Such equations are separable, and so can be
+solved using the techniques outlined above. But we can
+learn alot about the solutions to such an equation simply 
+by understanding the graph of f(y) .
+<p>
+One feature of the solutions is that we can translate in
+time and get another solution; if y(t) is a 
+solution to y<sup><font face="symbol">¢</font
+></sup> = f(y), then so is z(t) = y(t+c)
+for any constant c, as can be verified by plugging z into
+the differential equation. This can also be verified geometrically, using
+the direction field approach. For an autonomous equation, 
+the slope of the direction field is always the same along
+horizontal lines (since it depends on y, not t), and so if
+we pick up a solution curve, tangent to the direction field,
+and translate it in the horizontal direction, it will <i>still</i>
+be everywhere tangent to the direction field, and so is also a 
+solution.
+<p>
+An example of such equations come from population models. The
+idea is that if y is the population at time t, then
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = (birth rate) - (death rate)</center><br>
+<p>
+Typically, the birth rate is proportional to the population,
+i.e. is ry, while the death rate is proportional to the 
+square of the population (this typically represents contact
+between individuals,arising from competition for food, overcrowding,
+etc.), i.e., is ky<sup>2</sup> . In other words,
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = ry-ky<sup>2</sup></center><br>
+<p>
+The key to understanding solutions to such equations
+y<sup><font face="symbol">¢</font
+></sup> = f(y) is to find <i>equilibrium solutions</i>, that
+is, solutions y = constant =c . Such solutions have derivative
+0, and so for such solutions we must have f(c) = 0. The basic
+idea is that these equilibrium solutions tell us a great deal about 
+the behavior of <i>every</i> solution to the differential equation.
+<p>
+<p>
+If the function f(y) is continuous, then between the zeroes
+of f (i.e., the equilibrium
+solutions of the differential equation) f has all the same sign, and so for the 
+solutions, y<sup><font face="symbol">¢</font
+></sup> has the same sign, so y(t) is either 
+always 
+increasing or always decreasing. It cannot <i>cross</i>
+the equilibrium solutions, since this would violate
+the uniqueness of solutions to our differential equation. (Here we assume
+that the derivative of f is also continuous.) If a
+solution curve becomes asymptotic to a horizontal line, that 
+line must <i>be</i> an equilibrium solution, because
+the tangent lines along our solution must be becoming 
+horizontal, i.e., f(y(t)) = f(y) is approaching 0 = f(limit
+of y(t)). 
+<p>
+Therefore, the structure of the solutions is very simple; between
+consecutive equilibrium solutions, the solutions increase or
+decrease monotonically from one equilibrium to the other.
+This allows us to classify equilibrium solutions as one of
+three kinds: <i>stable equilibria</i>, where nearby
+solutions all converge <i>back</i> to the equilibrium, 
+<i>unstable equilibria</i>, where nearby
+solutions all diverge away from the equilibrium, and
+<i>semistable equilibria</i>, where on one side the
+solutions converge back, and on the other they diverge away.
+<p>
+The easiest way to assemble this data is to plot the roots of f
+on a number line, and then determine the sign of f in the intervals
+in between. Where it is positive, solutions move to the right 
+(i.e., up), while where it is negative they move left. Marking
+these as arrows, a stable equilibrium has arrows on both sides
+pointing towards it, and an unstable equilibrium has both
+arrows pointing away.
+<p>
+<p><br>
+<b>Chapter 8:</b> Numerical methods differential equations
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The tangent line method</b></DD></DL>
+Most first order equations cannot be solved by the methods
+we have presented here. For such equations, the best we can often
+do is to <i>approximate</i> the solutions, using numerical techniques.
+The first of these techniques that were studied is the it 
+tangent line method, also known as <i>Euler's method</i>. The idea is
+that our differential equation y<sup><font face="symbol">¢</font
+></sup> = f(t,y) tells us
+the slope of the tangent line at every point of our solution, 
+and the tangent line can be used to approximate the graph
+of a function, at least close to the point of tangency. In other
+words, for a solution to our differential equation,
+<p>
+
+<center>
+y(t)  <font face="symbol">»</font
+> y(t<sub>0</sub>)+y<sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)(t-t<sub>0</sub>) = y<sub>0</sub>+f(t<sub>0</sub>,y<sub>0</sub>)(t-t<sub>0</sub>)</center><br>
+<p>
+for t-t<sub>0</sub> small. If we wish to approximate y(t) for a value of t
+far away from our initial value t<sub>0</sub>, we use
+the above idea in several steps. 
+We cut up the interval into n pieces of length h (called the
+<i>stepsize</i>), and then 
+set
+<p>
+
+<center>y<sub>1</sub> = y<sub>0</sub>+f(t<sub>0</sub>,y<sub>0</sub>)h , t<sub>1</sub> = t<sub>0</sub>+h</center><br>
+<p>
+
+<center>y<sub>2</sub> = y<sub>1</sub>+f(t<sub>1</sub>,y<sub>1</sub>)h , t<sub>2</sub> = t<sub>1</sub>+h</center><br>
+<p>
+
+<center>y<sub>3</sub> = y<sub>2</sub>+f(t<sub>2</sub>,y<sub>2</sub>)h , t<sub>3</sub> = t<sub>2</sub>+h</center><br>
+<p>
+and continue until we reach y<sub>n</sub>, which will be our approximation
+to y(t) = y(t<sub>n</sub>) . Each step can be thought of as a mid-course
+correction, using information about the direction field at each stage
+to determine which way the solution is tending.
+<p>
+Calculus teaches us that at each stage the error introduced
+is approximately proportional to the square of h. So with a
+stepsize half as large, we will require twice as many steps, but
+each introduces an error only about one-fourth as large, so overall
+we get an error only half as large. This leads us to conclude
+that as the stepsize goes to 0, the error between our approximate solution
+y<sub>n</sub> and y(t<sub>n</sub>) goes to 0. 
+<p>
+<p>
+A slightly different technique is called <i>backwards Euler</i>, 
+where we use the approximation 
+<p>
+
+<center>y(t<sub>i</sub>)  <font face="symbol">»</font
+> y<sub>i+1</sub> + y<sup><font face="symbol">¢</font
+></sup>(t<sub>i+1</sub>)(t<sub>i</sub>-t<sub>i+1</sub>) = 
+y<sub>i+1</sub> + f(t<sub>i+1</sub>,y<sub>i+1</sub>)(-h)</center><br>
+<p>
+and so we use the step
+<p>
+
+<center>y<sub>i</sub> = y<sub>i+1</sub> - f(t<sub>i+1</sub>,y<sub>i+1</sub>)h</center><br>
+<p>
+This defines y<sub>i+1</sub> implicitly in terms of y<sub>i</sub> ; if we can 
+solve this equation (essentially, by inverting the function on
+the right-hand side), we can then use this to determine a
+(different) y<sub>n</sub> from the initial value y<sub>0</sub> . The
+analysis of how well this method does to approximate the 
+true value of y(t) is essentially the same as for (forward)
+Euler.
+<p>
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

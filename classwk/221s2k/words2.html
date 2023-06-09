@@ -1,0 +1,656 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 221</center><br></b>
+<p>
+<p>
+
+<center><b>Basic techniques for the second exam</center><br></b>
+<p>
+<p><br>
+Basic object of study: second order linear differential equations
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y = g(t)(*)</center><br>
+<p>
+Initial value problem:
+<p>
+
+<center>y(t<sub>0</sub>)=y<sub>0</sub>&nbsp;and y<sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)=y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></center><br>
+<p>
+Basic fact: if p(t), q(t), and g(t)&nbsp;are continuous on an interval around
+t<sub>0</sub>, then any initial value problem has a <i>unique</i> solution on that interval.
+Our Basic goal: find the solution!
+<p>
+Homogeneous: g(t) Constant coefficients: p(t)&nbsp;and q(t)&nbsp;are constant.
+<p>
+<p>
+Start small: homogeneous with constant coefficients:
+<p>
+
+<center>ay<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+by<sup><font face="symbol">¢</font
+></sup>+cy = 0</center><br>
+<p>
+Basic idea: <i>guess</i> that y = e<sup>rt</sup>, and plug in! Get:
+<p>
+
+<center>(ar<sup>2</sup>+br+c)e<sup>rt</sup> = 0 , so ar<sup>2</sup>+br+c = 0</center><br>
+<p>
+Solve: get (typically) two roots r<sub>1</sub>, r<sub>2</sub>, so y<sub>1</sub>e<sup>r<sub>1</sub> t</sup> and 
+y<sub>2</sub>e<sup>r<sub>2</sub> t</sup> are <i>both</i> solutions.
+<p>
+The equation ar<sup>2</sup>+br+c = 0 is called the <i>characteristic equation</i> for our differential equation.
+<p>
+<p>
+Operator notation: write L[y] = y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y (this is 
+called a <i>linear operator</i>), then a solution to (*)
+is a function y with L[y] = g(t). 
+<p>
+For a linear differential equation, L[c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub>] = c<sub>1</sub>L[y<sub>1</sub>]+c<sub>2</sub>L[yt], and so if
+y<sub>1</sub>&nbsp;and y<sub>2</sub>&nbsp;are both solutions to L[y] = 0 then so is c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> . 
+c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> is called a <i>linear combination</i> of y<sub>1</sub>&nbsp;and y<sub>2</sub>.
+This is called the <i>Principle of Superposition</i>: more generally, if
+L[y<sub>1</sub>] = g<sub>1</sub>(t) and L[y<sub>2</sub>] = g<sub>2</sub>(t), then L[y<sub>1</sub>+y<sub>2</sub>] = g<sub>1</sub>(t)+g<sub>2</sub>(t) .
+<p>
+<p>
+With (the right) <i>two</i> solutions y<sub>1</sub>, y<sub>2</sub>&nbsp;to a <i>homogeneous</i> equation
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y = 0 (**)</center><br>
+<p>
+we can solve <i>any</i> initial value problem, by choosing the 
+right linear combination: we need to solve
+<p>
+
+<center>c<sub>1</sub>y<sub>1</sub>(t<sub>0</sub>)+ c<sub>2</sub>y<sub>2</sub>(t<sub>0</sub>) = y<sub>0</sub></center><br>
+<p>
+
+<center>c<sub>1</sub>y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)+ c<sub>2</sub>y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>) = y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></center><br>
+<p>
+for the constants c<sub>1</sub>&nbsp;amd c<sub>2</sub>; then y = c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> is our solution.
+This we can do directly, as a pair of linear equations, by solving one 
+equation for one of the constants, and plugging into the other equation, or we
+can use the formulas
+<p>
+
+<center>
+ c<sub>1</sub> = </td><td nowrap align="center">
+(|&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>0</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub>(t<sub>0</sub>)</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|)/|&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub>(t<sub>0</sub>)</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|<Br></td><td nowrap align="center">
+ 
+
+ c<sub>2</sub> = </td><td nowrap align="center">
+(|&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>0</sub></td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|)/|&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub>(t<sub>0</sub>)</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|<Br></td><td nowrap align="center">
+</center><br>
+<p>
+where |&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a </td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ b</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ c </td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ d</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| = ad-bc .
+This makes it clear that a solution <i>exists</i> (i.e., we have the 
+`right' pair of functions), provided that the quantity
+<p>
+
+<center>W = W(y<sub>1</sub>,y<sub>2</sub>)(t<sub>0</sub>) = 
+ |&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub>(t<sub>0</sub>)</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| <font face="symbol">¹</font
+> 0</center><br>
+<p>
+W is called the <i>Wronskian</i> (determinant) of y<sub>1</sub>&nbsp;and y<sub>2</sub>&nbsp;at t<sub>0</sub> . The Wronskian
+is closely related to the concept of <i>linear independence</i> of a collection
+y<sub>1</sub>,<font face="symbol">¼</font
+>,y<sub>n</sub>&nbsp;of functions; such a collection is linearly independent if
+the only linear combination c<sub>1</sub>y<sub>1</sub>+ <font face="symbol">¼</font
+>+ c<sub>n</sub>y<sub>n</sub> which is equal to the
+0 function is the one with c<sub>1</sub> = <font face="symbol">¼</font
+> = c<sub>n</sub> = 0 .
+<p>
+Two functions y<sub>1</sub>&nbsp;and y<sub>2</sub>&nbsp;are linearly independent if their Wronksian is non-zero
+at <i>some</i> point; for a pair of solutions to (**), it turns out that the 
+Wronskian is always equal to a constant multiple of 
+<p>
+
+<center>exp(-<font face="symbol">ò</font
+>p(t)&nbsp;dt)</center><br>
+<p>
+and so is either <i>always</i> 0 or <i>never</i> 0. We call a pair of linearly 
+independent solutions to (**) a pair of <i>fundamental solutions</i>. By our
+above discussion, we can solve any initial value problem for (**) as a linear
+combination of fundamental solutions y<sub>1</sub>&nbsp;and y<sub>2</sub>. By our existence and 
+uniqueness result, this give us:
+<p>
+<p><br>
+If y<sub>1</sub>&nbsp;and y<sub>2</sub>&nbsp;are a fundamental set of solutions to the differential equation&nbsp;(**), then
+<i>any</i> solution to (**) can be expressed as a linear combination
+c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> or y<sub>1</sub>&nbsp;and y<sub>2</sub>.
+<p>
+<p><br>
+So to solve an initial value problem&nbsp;for (**), all we need is a pair of fundamental solutions.
+For an equation with constant coefficients, we do this by finding the roots of the
+characteristic equation ar<sup>2</sup>+br+c = 0 . We have the following basic facts:
+<p>
+<p>
+If the roots of the characteristic equation&nbsp;are real and distinct, r<sub>1</sub> <font face="symbol">¹</font
+> r<sub>2</sub>, then a fundamental 
+set of solutions is 
+<p>
+
+<center>y<sub>1</sub> = e<sup>r<sub>1</sub>t</sup>,y<sub>2</sub> = e<sup>r<sub>2</sub>t</sup></center><br>
+<p>
+If the root of the characteristic equation&nbsp;are complex <font face="symbol">a</font
+><font face="symbol">±</font
+><font face="symbol">b</font
+>i, then a fundamental 
+set of solutions is 
+<p>
+
+<center>y<sub>1</sub> = e<sup><font face="symbol">a</font
+>t</sup>cos(<font face="symbol">b</font
+>t),y<sub>2</sub> = e<sup><font face="symbol">a</font
+>t</sup>sin(<font face="symbol">b</font
+>t)</center><br>
+<p>
+If the roots of the characteristic equation&nbsp;are <i>repeated</i> (and therefore real), r<sub>1</sub> = r<sub>2</sub> = r, 
+then a fundamental set of solutions is 
+<p>
+
+<center>y<sub>1</sub> = e<sup>rt</sup>,y<sub>2</sub> = te<sup>rt</sup></center><br>
+<p>
+<p><br>
+In showing the last of these facts, we introduced a general technique for 
+finding a second, linearly independent, solution y<sub>2</sub>&nbsp;to (**), given a (non-zero)
+solution y<sub>1</sub>; this was called <i>reduction of order</i>; if y<sub>1</sub>&nbsp;is a solution
+to (**), then so is 
+<p>
+
+<center>y<sub>2</sub>y<sub>1</sub>(t)<font face="symbol">ò</font
+>[(exp(-<font face="symbol">ò</font
+>p(t)&nbsp;dt))/((y<sub>1</sub>(t))<sup>2</sup>)]&nbsp;dt</center><br>
+<p>
+This formula arises by <i>assuming</i> that y<sub>2</sub>(t) = c(t)y<sub>1</sub>(t), and then determining
+what differential equation c(t) must satisfy! It turns out to be a first-order
+equation (hence the name reduction of order).
+<p>
+<p><br>
+Much of what we just did for second order equation goes through without any change for
+even higher order (linear) equations:
+<p>
+
+<center>L[y]y<sup>(n)</sup>&nbsp; = a<sub>1</sub>(t)y<sup>(n-1)</sup>+ <font face="symbol">¼</font
+>+ a<sub>n-1</sub>(t)y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>(t)y = g(t) (!)</center><br>
+<p>
+and its associated homogeneous equation\
+<p>
+
+<center>y<sup>(n)</sup>&nbsp; = a<sub>1</sub>(t)y<sup>(n-1)</sup>+ <font face="symbol">¼</font
+>+ a<sub>n-1</sub>(t)y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>(t)y = 0 (!!)</center><br>
+<p>
+In this case the correct notion of an initial value problem requires us to 
+specify the values, at t<sub>0</sub>, of y and all its derivatives up to the
+(n-1)st: 
+<p>
+
+<center>y(t<sub>0</sub>) = y<sub>0</sub>, y<sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>) = y<sub>0</sub><sup><font face="symbol">¢</font
+></sup>, <font face="symbol">¼</font
+>, y<sup>(n-1)</sup>(t<sub>0</sub>) = y<sub>0</sub><sup>(n-1)</sup></center><br>
+<p>
+As with the second order case, we have a principle of superposition:
+L[y<sub>1</sub>] = g<sub>1</sub> and L[y<sub>2</sub>] = g<sub>2</sub>, then L[y<sub>1</sub>+y<sub>2</sub>] = g<sub>1</sub>+g<sub>2</sub> . This means that linear combinations of 
+solutions to the homogeneous equation (!!) are also solutions. And the general solution
+to (!!) can always be obtained (uniquely) as a linear combination of n <i>linearly
+independent</i> (or <i>fundamental</i>) solutions. Linear independence can be 
+determined by computing a Wronskian determinant W(y<sub>1</sub>,<font face="symbol">¼</font
+>,y<sub>n</sub>).
+<p>
+The theory we developed for homogeneous equations with constant coefficients can be similarly extended.
+The equation 
+<p>
+
+<center>a<sub>0</sub>y<sup>(n)</sup>+a<sub>1</sub>y<sup>(n-1)</sup>+<font face="symbol">¼</font
+>+a<sub>n-1</sub>y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>y = 0</center><br>
+<p>
+has a fundamental set of solutions determined by its characteristic equation
+<p>
+
+<center>a<sub>0</sub>r<sup>n</sup>+<font face="symbol">¼</font
+>+a<sub>n-1</sub>r + a<sub>n</sub> = 0</center><br>
+<p>
+Real roots r correspond to solutions exp(rt) ; complex roots to solutions
+exp(<font face="symbol">a</font
+>t)cos(<font face="symbol">b</font
+>t) and exp(<font face="symbol">a</font
+>t)sin(<font face="symbol">b</font
+>t) . 
+The only extra wrinkle is that we can have repeated roots which repeat <i>many</i>
+times, and even repeated complex roots! For each, we do as we did before and create new
+fundamental solutions by multiplying
+our basic solution by t, as many times as it repeats. For example, the equation
+<p>
+
+<center>y<sup>(4)</sup>+2y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+y = 0</center><br>
+<p>
+has a characteristic equation&nbsp;with roots i,i,-i, and -i, and so its fundamental solutions are
+<p>
+
+<center>cos(t), tcos(t), sin(t), and tsin(t)</center><br>
+<p>
+<p><br>
+Our final concern is <i>inhomogeneous linear equations</i>
+<p>
+
+<center>L[y]y<sup>(n)</sup>&nbsp;+ a<sub>1</sub>(t)y<sup>(n-1)</sup>+ <font face="symbol">¼</font
+>+ a<sub>n-1</sub>(t)y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>(t)y = g(t) (!)</center><br>
+<p>
+with g(t) <font face="symbol">¹</font
+> 0 . The principle of superposition tells us that
+for any pair of solutions Y<sub>1</sub>, Y<sub>2</sub> to (!), 
+L[Y<sub>2</sub>-Y<sub>1</sub>] = 0, and so if we have a fundamental set of solutions to the
+associated homogeneous equation, y<sub>1</sub>,<font face="symbol">¼</font
+>,y<sub>n</sub>, we can write
+<p>
+
+<center>Y<sub>2</sub> = Y<sub>1</sub>+c<sub>1</sub>y<sub>1</sub>+<font face="symbol">¼</font
+>+c<sub>n</sub>y<sub>n</sub></center><br>
+<p>
+In other words, we can find <i>any</i> solution to (!) by finding one <i>particular</i>
+solution, together with a fundamental set of solutions to the associated homogeneous equation&nbsp;(!!).
+Any initial value problem can then be solved by solving the system of
+equations
+<p>
+
+<center>Y<sub>1</sub>(t<sub>0</sub>)+c<sub>1</sub>y<sub>1</sub>(t<sub>0</sub>) +<font face="symbol">¼</font
+>+c<sub>n</sub>y<sub>n</sub>(t<sub>0</sub>) = g(t<sub>0</sub>)</center><br>
+<p>
+
+<center>Y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)+c<sub>1</sub>y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>) +<font face="symbol">¼</font
+>+c<sub>n</sub>y<sub>n</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>) = g<sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</center><br>
+<p>
+all the way to 
+<p>
+
+<center>Y<sub>1</sub><sup>(n-1)</sup>(t<sub>0</sub>)+c<sub>1</sub>y<sub>1</sub><sup>(n-1)</sup>(t<sub>0</sub>) +<font face="symbol">¼</font
+>+c<sub>n</sub>y<sub>n</sub><sup>(n-1)</sup>(t<sub>0</sub>) = g<sup>(n-1)</sup>(t<sub>0</sub>)</center><br>
+<p>
+for the constants c<sub>1</sub>,<font face="symbol">¼</font
+>,c<sub>n</sub> .
+<p>
+<p>
+The only part of this we haven't really explored yet is finding a particular solution
+to (!). for this we have two techniques. The first is called the <i>Method of
+Undetermined Coefficients</i>. 
+<p>
+
+<center><b>Important: This works only for equations with constant coefficients!</center><br></b>
+<p>
+The basic idea behind the
+technique is that for most kinds of functions, like polynomials, expoential, sines and cosines,
+or products of these, all of the functions derivatives are of the <i>same kind</i>.
+So if the function g(t) in 
+<p>
+
+<center>L[y]a<sub>0</sub>y<sup>(n)</sup>&nbsp;+ a<sub>1</sub>y<sup>(n-1)</sup>+ <font face="symbol">¼</font
+>+ a<sub>n-1</sub>y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>y = g(t) (!)</center><br>
+<p>
+is one of these kinds, what we do is <i>guess</i> that our solution y is the same
+kind. In particular,
+<p>
+<p><br>
+If g is a polynomial of degree n, we set y to be a (different) polynomial
+of degree n,
+<p>
+<p>
+If g is a multiple of an exponential exp(rt), we set y to be a a multiple cexp(rt) of g,
+<p>
+<p>
+If g is a multiple of sin(<font face="symbol">b</font
+>t) or cos(<font face="symbol">b</font
+>t), we set y to be a linear combination
+asin(<font face="symbol">b</font
+>t)+bcos(<font face="symbol">b</font
+>t),
+<p>
+<p>
+If g(t) = exp(rt)cos(<font face="symbol">b</font
+>t) (or has a sine), we set y to be
+aexp(rt)sin(<font face="symbol">b</font
+>t)+bexp(rt)cos(<font face="symbol">b</font
+>t),
+<p>
+<p>
+If g is a polynomial of degree n times one of these, we set y to be a (different)
+polynomial of degree n time the corresponding function above.
+<p>
+<p><br>
+<i>Then</i> we must plug this function into (!), and solve for the undetermined
+coefficients.
+<p>
+<p>
+Of course, there is one wrinkle; sometimes our choice of y <i>cannot</i> work, because
+it is a solution to the associated <i>homogeneous</i> equation. For example, for the 
+equation
+<p>
+
+<center>L[y]y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+ y = cos(t)</center><br>
+<p>
+The function y = acos(t)+bsin(t) will never solve it, because 
+for such a function, L[y] In this case
+what we must do is multiply our guess by t, or more generally, by a high enough power
+to insure that our guess is not a solution to the homogeneous equation. For this, we must
+first determine the number of times the root which corresponds to our target solution
+occurs among the roots of the associated characteristic equation. This can be a trifle
+tricky to determine; for example, for the equation
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>-2y<sup><font face="symbol">¢</font
+></sup>+ y = te<sup>t</sup></center><br> 
+<p>
+we should guess that our solution is y = t(at+b)e<sup>t</sup>, since our original guess would
+be y = (at+b)e<sup>t</sup>, but this is a solution to the homogeneous equation, while t 
+times it is not; but for 
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>-2y<sup><font face="symbol">¢</font
+></sup>+ y = 3e<sup>t</sup></center><br> 
+<p>
+we should guess that our solution is y = at<sup>2</sup>e<sup>t</sup>, since te<sup>t</sup> is still a solution to 
+the homogeneous equation, but y = t<sup>2</sup>e<sup>t</sup> is not.
+<p>
+<p>
+Finally, if our function g(t) is a linear combination of such functions, we can use this
+method to solve L[y]each piece, and then use the Principle of Superposition to find
+our solution by taking a linear combination.
+<p>
+<p><br>
+Our other technique works (in theory) for any linear equation; we will restrict our attention
+to second order equations, for sake of simplicity. It is called variation of parameters,
+and starts with a pair of fundamental solutions y<sub>1</sub>,yt to the associated homogeneous equation\
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y = 0 (**)</center><br>
+<p>
+and then <i>guess</i> that the solution to our inhomogeneous equation
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y = g(t)(*)</center><br>
+<p>
+
+is of the form y(t) = c<sub>1</sub>(t)y<sub>1</sub>(t)+c<sub>2</sub>(t)y<sub>2</sub>(t), and plug in. The resulting equation
+is too complicated, but if we make the simplifying assumption
+<p>
+
+<center>c<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t)y<sub>1</sub>(t)+c<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t)y<sub>2</sub>(t) = 0</center><br>
+<p>
+then the equation becomes
+<p>
+
+<center>c<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t)y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t)+c<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t)y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t) = g(t)</center><br>
+<p>
+which we can solve:
+<p>
+
+<center>
+
+ c<sub>1</sub><sup><font face="symbol">¢</font
+></sup> = [(-gy<sub>2</sub>)/(|&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub>(t<sub>0</sub>)</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|)] 
+
+ c<sub>2</sub><sup><font face="symbol">¢</font
+></sup> = [(gy<sub>1</sub>)/(|&nbsp;</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub>(t<sub>0</sub>)</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|)]</center><br>
+<p>
+Here again, the by now familiar Wronskian appears! Note that we must still
+<i>integrate</i> these functions, to determine c<sub>1</sub> and c<sub>2</sub> .
+<p>
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

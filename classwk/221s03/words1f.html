@@ -1,0 +1,922 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 221</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for first exam</center><br></b>
+<p>
+<p><br>
+<b>Chapter 1:</b> Introduction
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Background</b></DD></DL>
+<p>
+<p>
+A differential equation is an equation involoving an (unknown) function y and
+some of its derivatives. The basic goal is to <i>solve</i> the equation, i.e., to 
+determine which function or functions satisfy the equation. Differential equations
+come in several types, and our techniques for solving them will differ 
+depending on the type.
+<p>
+<p>
+<i>Ordinary vs. partial:</i> If y is a function of only one variable t, then our
+differential equation&nbsp;will involve only derivatives w.r.t. t, and we will call the equation an
+it ordinary differential equation. If y is a function of more than one variable, then our differential equation&nbsp;
+will involve partial derivatives, and we will call it a <i>partial differential equation</i>. We
+will deal almost exclusively with ordinary differential equations&nbsp;in this class.
+<p>
+<p>
+<i>Systems:</i> Sometimes the rates of change of several functions are 
+inter-related, as with the populations of a predator y(t) and its prey x(t),
+where x<sup><font face="symbol">¢</font
+></sup> = ax-<font face="symbol">a</font
+>xy and y<sup><font face="symbol">¢</font
+></sup> = <font face="symbol">g</font
+>xy - cy . We call 
+this a <i>system</i> of differential equations, and its solution would involve finding both 
+x(t) and y(t).
+<p>
+<p>
+<i>Order:</i> Techniques for solving differential equations&nbsp;differ depending upon how many
+derivatives of our unknown function are involved. The <i>order</i> of a 
+differential equation&nbsp;is the order of the highest derivative appearing in the equation. 
+The Implicit Function Theorem tells us that we can rewrite our equation so that
+it equates the highest order derivative with an expression involving lower
+order terms:
+<p>
+
+<center>y<sup>(n)</sup> = F(t,y,y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>,y<sup>(n-1)</sup></center><br>
+<p>
+<p>
+<i>Linear vs. non-linear:</i> A differential equation&nbsp;is <i>linear</i> if it can be written as
+<p>
+<p>
+
+<center>a<sub>0</sub>(t)y<sup>(n)</sup>+<font face="symbol">¼</font
+>+a<sub>n-1</sub>(t)y<sup><font face="symbol">¢</font
+></sup>+a<sub>n</sub>(t)y = g(t)</center><br>
+<p>
+<p>
+(i.e., the function F is linear in the variables y,y<sup><font face="symbol">¢</font
+></sup>,<font face="symbol">¼</font
+>,y<sup>(n-1)</sup>,
+although it <b>need not</b> be linear in t). A differential equation&nbsp;is non-linear if it isn't
+linear! E.g., 
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = y<sup>2</sup></center><br> 
+<p>
+<p>
+is non-linear, while 
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = (sint)y/(1+t<sup>2</sup>) - cos(cost)</center><br>
+<p>
+<p>
+is linear.
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Solutions and Initial Value Problems</b></DD></DL>
+<p>
+<p>
+<i>Solving</i> a differential equation&nbsp;means to determine which function or functions 
+satisfy the equation. Our solutions come in two flavors: <i>explicit</i>
+solutions y = y(t) which provide a function of t which satisfies the
+equation, and <i>implicit</i> solutions which provide an equation
+g(y,t) = 0 which any explicit solution would have to satisfy. The 
+idea is that we can treat g(y,t) = 0 as implicitly defining y as a function
+of t; given a specific value t = c for t, we solve (numerically?) 
+g(y,c) = 0 for y to determine the value of the solution to the differential equation&nbsp;at c.
+<p>
+<p>
+In general, a differential equation&nbsp;y<sup><font face="symbol">¢</font
+></sup> = f(t,y) will have many solutions; but typically
+one particular solution can be specified by requiring one additional condition
+be met; that y take a specific value y<sub>0</sub> at a specific point t<sub>0</sub>. If we 
+think of the time t<sub>0</sub> as the time at which we ``start'' our solution, then we call the
+pair of equations
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = f(t,y) y(t<sub>0</sub>) = y<sub>0</sub></center><br>
+<p>
+<p>
+an <i>initial value problem</i> (or <i>IVP</i>). There is a general result which
+ gives conditions guaranteeing that an IVP has a solution:
+<p>
+<p>
+If y<sup><font face="symbol">¢</font
+></sup> = f(t,y) is a differential equation with both f and 
+[(<font face="symbol">¶</font
+>f)/(<font face="symbol">¶</font
+>y)] continuous for a<font face="symbol"> &lt; </font
+>t<font face="symbol"> &lt; </font
+>b and <font face="symbol">a</font
+><font face="symbol"> &lt; </font
+> y <font face="symbol"> &lt; </font
+> <font face="symbol">b</font
+>,
+and t<sub>0</sub> <font face="symbol">Î</font
+> (a,b) and y<sub>0</sub> <font face="symbol">Î</font
+> (<font face="symbol">a</font
+>,<font face="symbol">b</font
+>), then <i>for some</i> h<font face="symbol"> &gt; </font
+>0,
+the initial value problem 
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = f(t,y) , y(t<sub>0</sub>) = y<sub>0</sub></center><br>
+<p>
+<p>
+has a unique solution for t <font face="symbol">Î</font
+> (t<sub>0</sub>-h,t<sub>0</sub>+h) .
+<p>
+<p>
+In general, however, the size of the interval where we can 
+guarantee existence (and uniqueness) can be very small, and often depends
+on the choice of initial value! For example,  for the equation
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = y<sup>2</sup></center><br>
+<p>
+<p>
+the righthand side is continuous everywhere (as is the partial derivative),
+but the interval we can choose for the solutions y = -1/(t+c) depends on c, 
+which will depend on the initial condition! And it can <i>never</i> be chosen 
+to be the entire real line.
+<p>
+<p>
+Failure to satisfy the hypotheses of the result can easily kill both 
+existence and uniqueness. For example, the equation
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = y<sup>1/3</sup></center><br>
+<p>
+<p>
+has many solutions with the initial condition y(0) = 0, such as y = 0 and 
+y = (2t/3)<sup>3/2</sup> .
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Direction Fields</b></DD></DL>
+<p>
+<p>
+In many cases, especially for first order differential equations, we can `see' what a solution
+should look like without actually finding the solution. For first order
+equations, y<sup><font face="symbol">¢</font
+></sup> = f(t,y), a solution y(t) will satisfy 
+y<sup><font face="symbol">¢</font
+></sup>(t) = f(t,y(t)), and so we can think of f(t,y) as giving the <i>slope</i>
+of the tangent line to the graph of y(t) at the point (t,y(t)). But since the function f
+is already known, we can draw small line segments at `every' point of the t-y plane
+with slope f(t,y) at the point (t,y); this is called the
+<i>direction field</i> for our differential equation. A solution to our differential equation&nbsp;is
+simply a function whose graph is tangent to each of these line segments at every
+point along the graph. Thinking of the direction field as a velocity vector field
+(always pointing to the right), our solution is then the path of a particle being
+pushed along by the velocity vector field. From this point of view it is not 
+hard to believe that <i>every</i> (first order ordinary) differential equation&nbsp;has a solution, in 
+fact many solutions; you just drop a particle in and watch where it goes. <i>Where</i>
+you drop it is important (it changes where it goes), which really is what gives rise to the
+notion of an <i>initial value problem</i>; we seek to find the specific solution
+with the additional <i>initial value</i> y(t<sub>0</sub>) = y<sub>0</sub>.
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>The Phase Line</b></DD></DL>
+<p>
+<p>
+A differential equation is called <i>autonomous</i> if
+the function f(t,y) is really a function f(y) only of the
+variable y. We will learn how to solve such equations below; 
+but we can
+learn alot about the solutions to such an equation simply 
+by understanding the graph of f(y) .
+<p>
+One feature of the solutions is that we can translate in
+time and get another solution; if y(t) is a 
+solution to y<sup><font face="symbol">¢</font
+></sup> = f(y), then so is z(t) = y(t+c)
+for any constant c, as can be verified by plugging z into
+the differential equation. This can also be verified geometrically, using
+the direction field approach. For an autonomous equation, 
+the slope of the direction field is always the same along
+horizontal lines (since it depends on y, not t), and so if
+we pick up a solution curve, tangent to the direction field,
+and translate it in the horizontal direction, it will <i>still</i>
+be everywhere tangent to the direction field, and so is also a 
+solution.
+<p>
+The key to understanding solutions to such equations
+y<sup><font face="symbol">¢</font
+></sup> = f(y) is to find <i>equilibrium solutions</i>, that
+is, solutions y = constant =c . Such solutions have derivative
+0, and so for such solutions we must have f(c) = 0. The basic
+idea is that these equilibrium solutions tell us a great deal about 
+the behavior of <i>every</i> solution to the differential equation.
+<p>
+<p>
+If the function f(y) is continuous, then between the zeroes
+of f (i.e., the equilibrium
+solutions of the differential equation) f has all the same sign, and so for the 
+solutions, y<sup><font face="symbol">¢</font
+></sup> has the same sign, so y(t) is either 
+always 
+increasing or always decreasing. It cannot <i>cross</i>
+the equilibrium solutions, since this would violate
+the uniqueness of solutions to our differential equation. (Here we assume
+that the derivative of f is also continuous.) If a
+solution curve becomes asymptotic to a horizontal line, that 
+line must <i>be</i> an equilibrium solution, because
+the tangent lines along our solution must be becoming 
+horizontal, i.e., f(y(t)) = f(y) is approaching 0 = f(limit
+of y(t)). 
+<p>
+Therefore, the structure of the solutions is very simple; between
+consecutive equilibrium solutions, the solutions increase or
+decrease monotonically from one equilibrium to the other.
+This allows us to classify equilibrium solutions as one of
+three kinds: <i>stable equilibria</i>, where nearby
+solutions all converge <i>back</i> to the equilibrium, 
+<i>unstable equilibria</i>, where nearby
+solutions all diverge away from the equilibrium, and
+<i>semistable equilibria</i> or <i>nodes</i>, where on one side the
+solutions converge back, and on the other they diverge away.
+<p>
+The easiest way to assemble this data is to plot the roots of f
+on a number line (called the <i>phase line</i>, and then determine 
+the sign of f in the intervals
+in between. Where it is positive, solutions move to the right 
+(i.e., up), while where it is negative they move left. Marking
+these as arrows, a stable equilibrium has arrows on both sides
+pointing towards it, and an unstable equilibrium has both
+arrows pointing away.
+<p>
+<p><br>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>The Approximation Method of Euler</b></DD></DL>
+<p>
+<p>
+Most first order equations cannot be solved by the methods
+we will present here; the function f(y,t) is too complicated. 
+For such equations, the best we can often
+do is to <i>approximate</i> the solutions, using numerical techniques.
+One method is the <i>tangent line method</i>, also known as <i>Euler's method</i>. 
+The idea is
+that our differential equation y<sup><font face="symbol">¢</font
+></sup> = f(t,y) tells us
+the slope of the tangent line at every point of our solution, 
+and the tangent line can be used to approximate the graph
+of a function, at least close to the point of tangency. In other
+words, for a solution to our differential equation,
+<p>
+<p>
+
+<center>
+y(t)  <font face="symbol">»</font
+> y(t<sub>0</sub>)+y<sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)(t-t<sub>0</sub>) = y<sub>0</sub>+f(t<sub>0</sub>,y<sub>0</sub>)(t-t<sub>0</sub>)</center><br>
+<p>
+<p>
+for t-t<sub>0</sub> small. If we wish to approximate y(t) for a value of t
+far away from our initial value t<sub>0</sub>, we use
+the above idea in several steps. 
+We cut up the interval into n pieces of length h (called the
+<i>stepsize</i>), and then 
+set
+<p>
+<p>
+
+
+<center>y<sub>1</sub> = y<sub>0</sub>+f(t<sub>0</sub>,y<sub>0</sub>)h , t<sub>1</sub> = t<sub>0</sub>+h</center><br>
+<p>
+
+<center>y<sub>2</sub> = y<sub>1</sub>+f(t<sub>1</sub>,y<sub>1</sub>)h , t<sub>2</sub> = t<sub>1</sub>+h</center><br>
+<p>
+
+<center>y<sub>3</sub> = y<sub>2</sub>+f(t<sub>2</sub>,y<sub>2</sub>)h , t<sub>3</sub> = t<sub>2</sub>+h</center><br>
+<p>
+<p>
+and continue until we reach y<sub>n</sub>, which will be our approximation
+to y(t) = y(t<sub>n</sub>) . Each step can be thought of as a mid-course
+correction, using information about the direction field at each stage
+to determine which way the solution is tending.
+<p>
+Calculus teaches us that at each stage the error introduced
+is approximately proportional to the square of h. So with a
+stepsize half as large, we will require twice as many steps, but
+each introduces an error only about one-fourth as large, so overall
+we get an error only half as large. This leads us to conclude
+that as the stepsize goes to 0, the error between our approximate solution
+y<sub>n</sub> and y(t<sub>n</sub>) goes to 0. 
+<p>
+
+<p><br>
+<b>Chapter 2:</b> First Order Differential Equations
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Separable Equations</b></DD></DL>
+<p>
+<p>
+There is a class of first order equations for which we can readily
+find solutions by integration; there are the <i>separable</i> equations. A
+differential equation&nbsp;is separable if it can be written as
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = A(t)B(y)</center><br>
+<p>
+<p>
+This allows us to `separate the variables' and integrate with respect to dy and dt
+to get a solution:
+<p>
+<p>
+
+<center> [1/B(y)]dy = A(t) dt ; integrate both sides</center><br>
+<p>
+<p>
+In the end, our solution looks like F(y) = G(t) + c, so it defines y
+<i>implicitly</i> as a function of t , rather than explicitly. In some cases
+we can invert F to get an explicit solution, but often we cannot.
+<p>
+<p>
+For example, the separable equation y<sup><font face="symbol">¢</font
+></sup> = ty<sup>2</sup> , y(1) = 2 has solution
+<p>
+<p>
+
+<center> <font face="symbol">ò</font
+>[dy/(y<sup>2</sup>)] = <font face="symbol">ò</font
+>t dt + c</center><br>
+<p>
+<p>
+so solving the integrals we get (-1/y) = (t<sup>2</sup>/2)+c, or y = -2/(t<sup>2</sup>+2c) ; 
+setting y = 2 when t = 1 gives c = -1 .
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Linear Equations</b></DD></DL>
+<p>
+<p>
+Perhaps the most straightforward sort of differential equation&nbsp;to solve is the <i>first order
+linear ordinary differential equation</i> 
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = a(t)y+b(t)</center><br>
+<p>
+<p>
+We will typically (following tradition) write such equations in <i>standard form</i> as
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> + p(t)y = g(t)(**)</center><br>
+<p>
+<p>
+For example, near the earth and in the presence of air resistance, the
+velocity v of a falling object obeys the differential equation&nbsp;v<sup><font face="symbol">¢</font
+></sup> = g -kv, 
+where g and k are (positive) constants.
+<p>
+There is a general technique for solving such equations, by first solving the <i>associated homogeneous equation</i>
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> + p(t)y = 0</center><br>
+<p>
+<p>
+This equation is separable, and so we can use the techniques of the previous section to find that
+<p>
+<p>
+
+
+<center>y<sub>h</sub> = Ae<sup>-<font face="symbol">ò</font
+>p(t)&nbsp;dt</sup></center><br>
+<p>
+<p>
+solves the homogeneous equation. 
+<U>Then</U> we can employ a technique
+known as <i>variation of parameters</i> to solve the original equation: if we write
+<p>
+<p>
+
+<center>y = A(t)y<sub>h</sub></center><br>
+<p>
+<p>
+and plug into (**), then (since y<sub>h</sub><sup><font face="symbol">¢</font
+></sup>+py<sub>h</sub> = 0) we find that A(t) must 
+satisfy
+<p>
+<p>
+
+<center>A<sup><font face="symbol">¢</font
+></sup>(t)y<sub>h</sub> = g(t) , so</center><br>
+<p>
+<p>
+
+<center>A(t) = <font face="symbol">ò</font
+>e<sup><font face="symbol">ò</font
+>p(t)&nbsp;dt</sup> g(t)&nbsp;dt</center><br>
+<p>
+<p>
+Putting this all together, we find that the solutions to (**) are given by
+<p>
+<p>
+
+
+<center>y = e<sup>-<font face="symbol">ò</font
+>p(t)&nbsp;dt</sup>(<font face="symbol">ò</font
+>e<sup><font face="symbol">ò</font
+>p(t)&nbsp;dt</sup> g(t)&nbsp;dt + c)</center><br>
+<p>
+
+<p>
+For example, the differential equation&nbsp;ty<sup><font face="symbol">¢</font
+></sup> -y = t<sup>2</sup>+1 , after being rewritten in 
+standard form as y<sup><font face="symbol">¢</font
+></sup> -(1/t)y = t+(1/t), has homogeneous solution
+<p>
+<p>
+
+<center>y<sub>h</sub> = exp(<font face="symbol">ò</font
+>1/t dt) = exp(lnt) = t</center><br>
+<p>
+<p>
+so we have 
+<p>
+<p>
+
+<center>y = t(<font face="symbol">ò</font
+>1+1/t<sup>2</sup>&nbsp;dt) = t(t-(1/t)+c)</center><br>
+<p>
+<p>
+and so our solutions are y = t<sup>2</sup>-1+ct, where c is a constant.
+<p>
+<p>
+But what is c ? Or solution is actually a <i>family</i> of solutions; a 
+particular solution (i.e., a particular value for c) can be found from 
+an initial value y(t<sub>0</sub>) =y<sub>0</sub>. For example, if we wished to solve
+the initial value problem 
+<p>
+<p>
+
+<center>ty<sup><font face="symbol">¢</font
+></sup> -y = t<sup>2</sup>+1 , y(2) = 5</center><br>
+<p>
+<p>
+we can plug t = 2 and y = 5 into our general solution to obtain c = 1 .
+<p>
+
+<p><br>
+<b>Chapter 3:</b> Mathematical Models
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Compartmental Analysis</b></DD></DL>
+<p>
+<p>
+In many instances, the rate of change of a quantity can be best 
+analysed by treating the factors that make the quantity go up 
+separately from those that make it go down; each can often be easily understood 
+in isolation. We can then build a differential equation modeling the 
+behavior of the quantity y = y(t) as
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = (things that make y go up) - (things that make y go down)</center><br>
+<p>
+<p>
+As a basic example, we have mixing problems. The basic setup has 
+a solution of a known concentration mixing at a known rate with a 
+solution in a vat, while the mixed solution is poured off at a known rate. 
+The problem is to find the function which gives concentration in the vat
+at time t. It turns out that it is much easier to find a differential equation\
+which describes the amount of solute (e.g., salt) in the
+solution (e.g., water), rather than the concentration.
+<p>
+If the concentration pouring in is A, at a rate of N, while the 
+solution is pouring out at rate M with concentration A(t)=
+x(t)/V(t), then if the initial volume is V<sub>0</sub>, we can 
+compute V(t) = V<sub>0</sub>+(N-M)t . The change in the amount x(t) of
+solute can be computed as (rate falling in)-(rate falling out),
+which is
+<p>
+<p>
+
+<center>x<sup><font face="symbol">¢</font
+></sup> = AN - A(t)M = 
+ AN-[x/(V<sub>0</sub>+(N-M)t)]M</center><br>
+<p>
+<p>
+This is a linear equation, and so we can solve it using our 
+techniques above. 
+<p>
+We can also deal with a succession of mixing problems, the output of one 
+becoming the input of the next, by treating them one at a time; the only 
+change in the setup above is that the incoming concentration for the
+next vat (to solve for x<sub>i+1</sub>(t)) would be the concentration x<sub>i</sub>(t)/V<sub>i</sub>(t)
+found by solving the equation for the previous vat.
+<p>
+<p>
+Another situation where this kind of analysis proves successful is in modeling
+population growth. The
+idea is that if y is the population at time t, then
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = (birth rate) - (death rate)</center><br>
+<p>
+<p>
+Typically, the birth rate is proportional to the population,
+i.e. is ry, while the death rate is either modeled as being proportional to the population (Malthusian model)
+or is a sum (logistic model); one part is proportional to the 
+population (death by ``natural causes''), the other is proportional to the 
+square of the population (this typically represents contact
+between individuals,arising from competition for food, overcrowding,
+etc.), i.e., is ky<sup>2</sup> . Put together, and combining the two terms proportional
+to population, we obtain 
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = ry for the Malthusian model, and</center><br>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+></sup> = ry-ky<sup>2</sup> for the logistic model</center><br>
+<p>
+<p>
+Both equations are separable, and so we can use phase lines to understand their long-term behavior, as
+well as finding explicit solutions (using partial fractions, for the logistic equation).
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Heating and Cooling</b></DD></DL>
+<p>
+<p>
+<i>Newton's Law of Cooling:</i> This states that the rate of
+change of the temperature
+T(t) of an object is proportional to the difference between
+its temperature and the ambient temperature of the air around it.
+The constant of proportionality depends upon the particular
+object (and the medium, e.g., air or water) it is in. In other
+words,
+<p>
+<p>
+
+<center>T<sup><font face="symbol">¢</font
+></sup> = k(A-T)</center><br>
+<p>
+<p>
+Since a cold object will warm up, and a warm object will cool
+down, this means that the constant k should be positive. Writing
+the equation as
+<p>
+<p>
+
+<center>T<sup><font face="symbol">¢</font
+></sup> +kT = kA</center><br>
+<p>
+<p>
+we find the solution (after solving the IVP)
+<p>
+<p>
+
+<center>T(t) = A+(T(0)-A)e<sup>-kt</sup></center><br>
+<p>
+<p>
+Typically, k is not given, but can be determined by
+knowing the temperature at some other time t<sub>1</sub>, by 
+plugging into the equation above and solving for k.
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Newtonian Mechanics</b></DD></DL>
+<p>
+<p>
+If we wish to model the motion of an object, whose position at time t is given by x(t), then
+(setting v(t) = x<sup><font face="symbol">¢</font
+></sup>(t)) Newton's Second Law of Motion tells us that
+<p>
+<p>
+
+<center>mv<sup><font face="symbol">¢</font
+></sup> = the sum of the individual forces acting on the object</center><br>
+<p>
+<p>
+When we can understand these forces, in terms of t and v, we can build a
+first order differential equation, which we can then bring our techniques to bear to solve.
+Typical forces include:
+<p>
+<p>
+gravity: F<sub>g</sub> = mg or F<sub>g</sub> = -mg, depending upon whether we think of the positive direction
+as down (giving +) or up (giving -). g = 9.8 m/sec<sup>2</sup> = 32 ft/sec<sup>2</sup> (approximately)
+<p>
+<p>
+air resisitance: this is typically modeled either as F<sub>a</sub> = -kv (for smallish velocities) or F<sub>a</sub> = -kv<sup>2</sup> 
+(for large velocities). It always acts to push our velocity towards 0, hence the - sign.
+<p>
+<p>
+external force: F<sub>e</sub> = g(t) ; this represents a force that ``follows along'' the object and tries to push 
+it in a direction that is ``pre-programmed'' in time.
+<p>
+<p>
+With these sorts of forces, we get a general equation
+<p>
+<p>
+
+<center>mv<sup><font face="symbol">¢</font
+></sup> = <font face="symbol">±</font
+>mg- kv+g(t)</center><br>
+<p>
+<p>
+which we can solve by the methods we have developed. For example, ignoring external forces and 
+assume the positive direction is ``down'', we have the initial value problem
+<p>
+<p>
+
+<center>mv<sup><font face="symbol">¢</font
+></sup> = mg-kv v(0) = v<sub>0</sub></center><br>
+<p>
+with solution
+<p>
+
+<center>v(t) = [mg/k]+(v<sub>0</sub>-[mg/k])e<sup>-[kt/m]</sup></center><br>
+<p>
+<p>
+As t<font face="symbol">®</font
+><font face="symbol">¥</font
+>,  v(t)<font face="symbol">®</font
+>[mg/k] = the <i>terminal velocity</i>.
+<p>
+
+<p>
+
+<p><br>
+<b>Chapter 4:</b> Linear Second Order Equations
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Linear Differential Operators</b></DD></DL>
+<p>
+<p>
+Basic object of study: second order linear differential equations. Standard form:
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y = g(t) (*)</center><br>
+<p>
+<p>
+Initial value problem: we need <i>two</i> initial conditions
+<p>
+<p>
+
+<center>y(t<sub>0</sub>) = y<sub>0</sub> and y<sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>) = y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></center><br>
+<p>
+<p>
+Basic existence and uniqueness: if p(t), q(t), and g(t) are continuous on an interval around 
+t<sub>0</sub>, then any initial value problem has a unique solution on that interval. Our Basic goal: find the solution! 
+<p>
+(*) is called <i>homogeneous</i> if  g(t) = 0 ; otherwise it is <i>inhomogeneous</i>. 
+(*) is an equation with <i>constant coefficients</i> if p(t) and q(t) are constants.
+<p>
+<p>
+Our main new technique for exploring these equations will be <i>operator notation</i>. We 
+write L[y] = y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y (this is called a <i>linear operator</i>), 
+then a solution to (*) is a function y with L[y] = g(t). Some familiar linear operators:
+D<sup>n</sup>[y] = y<sup>(n)</sup> ( the n-th derivative operator). The operator is called <i>linear</i>
+because
+<p>
+<p>
+
+<center>L[cy] = cL[y] and L[y<sub>1</sub>+y<sub>2</sub>] = L[y<sub>1</sub>]+L[y<sub>2</sub>]</center><br>
+<p>
+<p>
+For a linear differential equation, L[c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub>] = c<sub>1</sub>L[y<sub>1</sub>]+c<sub>2</sub>L[y<sub>2</sub>], and so if y<sub>1</sub> and y<sub>2</sub> are both solutions to L[y] = 0 then so is c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> . c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> is called a <i>linear combination</i> of y<sub>1</sub> and y<sub>2</sub>. This fact is called the
+<i>Principle of Superposition</i>: more generally, for a linear operator, if L[y<sub>1</sub>] = g<sub>1</sub>(t) and L[y<sub>2</sub>] = g<sub>2</sub>(t), then L[y<sub>1</sub>+y<sub>2</sub>] = g<sub>1</sub>(t)+g<sub>2</sub>(t) .
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Fundamental Solutions of Homogeneous Equations</b></DD></DL>
+<p>
+<p>
+Basic idea: with (the right) two solutions y<sub>1</sub>, y<sub>2</sub> to a homogeneous linear equation 
+<p>
+<p>
+
+<center>y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>+p(t)y<sup><font face="symbol">¢</font
+></sup>+ q(t)y = 0(***)</center><br>
+<p>
+<p>
+we can solve any initial value problem, by choosing the right linear combination: we need to solve 
+<p>
+<p>
+ 
+<center>c<sub>1</sub>y<sub>1</sub>(t<sub>0</sub>)+ c<sub>2</sub>y<sub>2</sub>(t<sub>0</sub>) = y<sub>0</sub> and 
+c<sub>1</sub>y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)+ c<sub>2</sub>y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>) = y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></center><br>
+<p>
+<p>
+for the constants c<sub>1</sub> and c<sub>2</sub>; then y = c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> is our solution. This we can do directly, as a pair of linear equations, by solving one equation for one of the constants, and plugging into the other equation, or we can use the formulas 
+<p>
+<p>
+
+<center>
+ c<sub>1</sub> = </td><td nowrap align="center">
+(|</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>0</sub></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub>(t<sub>0</sub>) </td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>0</sub><sup><font face="symbol">¢</font
+></sup></td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| )/| </td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub>(t<sub>0</sub>) </td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|<Br></td><td nowrap align="center">
+ 
+and 
+ c<sub>2</sub> = </td><td nowrap align="center">
+(|</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>0</sub> </td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>0</sub><sup><font face="symbol">¢</font
+></sup> </td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| )/| </td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub>(t<sub>0</sub>) </td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|<Br></td><td nowrap align="center">
+</center><br>
+<p>
+where |</td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+a</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+b</td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ c</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+d</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>| = ad-bc . This makes it clear that a solution exists (i.e., we have the `right' pair of functions), provided that the quantity 
+<p>
+<p>
+
+<center> W = W(y<sub>1</sub>,y<sub>2</sub>)(t<sub>0</sub>) = | </td><td nowrap><TablE border=0 align="left"><tr><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>1</sub>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub>(t<sub>0</sub>) </td></tabLe></TD></TR><TR><TD NOWRAP align="center"><tabLe border=0><tr><td nowrap align="center">
+ y<sub>1</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></td><td nowrap align="center">
+<tabLe border=0><tr><td nowrap align="center">
+y<sub>2</sub><sup><font face="symbol">¢</font
+></sup>(t<sub>0</sub>)</td></tabLe></TD></TR></td></TablE>
+</td><td nowrap>|  <font face="symbol">¹</font
+> 0</center><br>
+<p>
+<p>
+W is called the Wronskian (determinant) of y<sub>1</sub> and y<sub>2</sub> at t<sub>0</sub> . 
+The Wronskian is closely related to the concept of linear independence of a collection y<sub>1</sub>,<font face="symbol">¼</font
+>,y<sub>n</sub> of functions; such a collection is linearly independent if the only linear combination c<sub>1</sub>y<sub>1</sub>+ <font face="symbol">¼</font
+>+ c<sub>n</sub>y<sub>n</sub> which is equal to the 0 function is the one with c<sub>1</sub> = <font face="symbol">¼</font
+> = c<sub>n</sub> = 0 . 
+<p>
+Two functions y<sub>1</sub> and y<sub>2</sub> are linearly independent if their Wronksian is non-zero at some point; for a pair of solutions to (***), it turns out that the Wronskian is always equal to a constant multiple of 
+<p>
+<p>
+
+<center>e<sup><font face="symbol">ò</font
+>p(t)&nbsp;dt</sup></center><br>
+<p>
+<p>
+and so is either always 0 or never 0. We call a pair of linearly independent solutions to (***) a pair of <i>fundamental solutions</i>. By our above discussion, we can solve any initial value problem for (***) as a linear
+combination of fundamental solutions y<sub>1</sub> and y<sub>2</sub>. By our existence and uniqueness result, this gives us: 
+<p>
+<p>
+If y<sub>1</sub> and y<sub>2</sub> are a fundamental set of solutions to the differential equation (***), then any solution to (***) can be expressed as a linear combination c<sub>1</sub>y<sub>1</sub>+c<sub>2</sub>y<sub>2</sub> of y<sub>1</sub> and y<sub>2</sub>. 
+<p>
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

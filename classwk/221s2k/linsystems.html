@@ -1,0 +1,45 @@
+Maple code for drawing phase portraits:<p>
+<p>
+
+<b>
+restart: with(DEtools): with(linalg):<br>          
+a:=1: b:=-1: c:=1: d:=1:      <br>
+A:=array([[a,b],[c,d]]);       <br>               
+charp:= k^2-(a+d)*k+(a*d-b*c);    <br>   
+r_:=solve(charp,k);               <br>                   
+if Re(r_[1])<> r_[1]               <br>             
+then <br>
+DEplot([diff(x(t),t)=a*x(t)+b*y(t), diff(y(t),t)=c*x(t)+d*y(t)],<br>
+[x(t),y(t)],t=-10..10,color=black,linecolor=blue, <br>
+[[x(0)=1,y(0)=0],[x(0)=0,y(0)=1],[x(0)=-1,y(0)=0],<br>
+[x(0)=0,y(0)=-1]],<br>
+x=-5..5,y=-5..5,stepsize=.01) <br>
+elif b<>0                                          <br> 
+then                  <br>
+DEplot([diff(x(t),t)=a*x(t)+b*y(t), diff(y(t),t)=c*x(t)+d*y(t)],<br>
+[x(t),y(t)],t=-10..10,color=black,linecolor=blue, <br>
+[[x(0)=1,y(0)=(r_[1]-a)/b],[x(0)=1,y(0)=(r_[2]-a)/b],<br>
+[x(0)=-1,y(0)=-(r_[1]-a)/b],[x(0)=-1,y(0)=-(r_[2]-a)/b],<br>
+[x(0)=1,y(0)=(r_[1]+r_[2]-2*a)/(2*b)],<br>
+[x(0)=1,y(0)=(r_[1]-r_[2])/b],<br>
+[x(0)=-1,y(0)=-(r_[1]+r_[2]-2*a)/(2*b)],<br>
+[x(0)=-1,y(0)=(r_[2]-r_[1])/b]], <br>
+x=-5..5,y=-5..5,stepsize=.01)          <br>
+elif c<>0         <br>
+then   <br>
+DEplot([diff(x(t),t)=a*x(t)+b*y(t), diff(y(t),t)=c*x(t)+d*y(t)],<br>
+[x(t),y(t)],t=-10..10,color=black,linecolor=blue, <br>
+[[x(0)=(a-d)/c,y(0)=1],[x(0)=0,y(0)=1],<br>
+[x(0)=-(a-d)/c,y(0)=-1],[x(0)=0,y(0)=-1],<br>
+[x(0)=1+(a-d)/c,y(0)=1],[x(0)=-1+(a-d)/(c),y(0)=1],<br>
+[x(0)=1-(a-d)/c,y(0)=-1],[x(0)=-1-(a-d)/c,y(0)=-1]], <br>
+x=-5..5,y=-5..5,stepsize=.01)   <br>
+else  <br>
+DEplot([diff(x(t),t)=a*x(t)+b*y(t), diff(y(t),t)=c*x(t)+d*y(t)],<br>
+[x(t),y(t)],t=-10..10,color=black,linecolor=blue, <br>
+[[x(0)=1,y(0)=0],[x(0)=0,y(0)=1],[x(0)=-1,y(0)=0],<br>
+[x(0)=0,y(0)=-1],[x(0)=1,y(0)=1],[x(0)=-1,y(0)=1],<br>
+[x(0)=1,y(0)=-1],[x(0)=-1,y(0)=-1]],<br>
+x=-5..5,y=-5..5,stepsize=.01)<br>
+fi;<br>
+</b>

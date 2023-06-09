@@ -1,0 +1,133 @@
+
+<table CELLPADDING=10 CELLSPACING=10 width=600>
+
+
+<body bgcolor="efcfaf" link="0F0FFF"
+alink="FF0000" vlink="FF0000">
+
+<title>Math 221 Differential Equations Maple V Page</title>
+
+<td width=595>
+
+<center><font size=+2><font color="9f0f0f"><b><i> Math 221
+ Maple V Page</i></b></font></font></center>
+
+<p>
+
+The math department has a small collection of
+<a href="http://www.math.unl.edu/Dept/Resources/CourseMaterial/M221/">Maple worksheets</a>
+(as Maple files are called) that you can experiment with. What follows are my own
+results of experimenting with Maple code.<p>
+
+<b>Basic Maple etiquette:</b>Every line (or rather, complete expression) must end 
+with a colon (:) or semicolon (;) . A colon will supress the output of the line, a
+semicolon will print the output of the line.<p>
+
+This bit of Maple code:<p>
+
+<b>
+with(DEtools):<br>
+dfieldplot([diff(x(t),t)=1,
+diff(y(t),t)=1+x(t)*(y(t)*y(t)-3*x(t)-2)],[x(t),y(t)],t=-2..2,x=1..2,y=2..3);
+</b>
+<p>
+will draw a direction field for the differential equation
+<br>
+[dy/dt] = 1+t(y<sup>2</sup>-3t-2)
+<p>
+
+This bit of Maple code:<p>
+
+<b>
+with(DEtools):<br>
+DEplot([diff(x(t),t)=1,diff(y(t),t)=1+x(t)*(y(t)*y(t)-3*x(t)-2)],
+[x(t),y(t)],t=-2..2,[[x(0)=1,y(0)=2],[x(0)=1,y(0)=2.1],[x(0)=1,y(0)=2.15],
+[x(0)=1,y(0)=2.17],
+[x(0)=1,y(0)=2.1695]],x=1..2,y=2..3,stepsize=.005);
+</b>
+<p>
+
+will draw a bunch of solutions for the equation. From these examples it ought
+to be fairly straightforward for you to build examples of your own; 
+just replace "diff(y(t),t)=1+x(t)*(y(t)*y(t)-3*x(t)-2)" with "diff(y(t),t)= a function
+of your own". Note that "x(t)" is how these examples need you to write "t".<p>
+
+The command "dsolve" can be used to solve (symbolically) differential equations: for
+example, you can try<br>
+
+<b>dsolve(diff(y(t),t)-y(t)^2);</b><p>
+
+This will return all solutions to the differential equation [dy/dt] - y<sup>2</sup> = 0.<br>
+
+You can get a good sense of the fine line between equations `easy' to solve and those
+that aren't by comparing Maple's answers to<br>
+<b>dsolve(diff(y(t),t)-t*y(t)^2);</b><br>
+and<br>
+<b>dsolve(diff(y(t),t)-t*y(t)^2-1);</b><br>
+(i.e., to 
+[dy/dt] = ty<sup>2</sup> and [dy/dt] = ty<sup>2</sup> + 1). And while it could handle
+[dy/dt] = ty<sup>2</sup> + t just fine, it couldn't do anything with 
+[dy/dt] = ty<sup>2</sup> + t+ 1.<p>
+
+
+<br>
+To numerically solve a differential equation, using (forward) Euler's method, the following
+bit of code will do the job:<p>
+
+<b>
+with(DEtools):<br>
+deqn := diff(y(t), t) = y(t):<br>
+init1 := y(0)=1:<br>
+ans:= dsolve({deqn, init1}, {y(t)}, numeric, method=classical[foreuler], stepsize=.1):<br>
+ans(1.0),ans(2.0),ans(3.0),ans(4.0),ans(5.0);<br>
+</b>
+
+<p>
+
+You can, of course, insert your own functions into `deqn', adjust the stepsize, 
+initial condition,
+and points you want to evaluate your approximate solution at!<p>
+
+Here is some code to explore the solutions to spring-mass problems:<p>
+
+<b>
+with(DEtools):<br>
+m:=1: gam:= 0.0: k:= 9: om:=3.3: f(t):=cos(om*t): <br>
+de := m*diff(y(t),t$2) +gam*diff(y(t),t) + k*y(t) = f(t); <br>
+DEplot(de,y(t),t=0...20,[[y(0)=0,D(y)(0)=0]],stepsize=.01); </b><p>
+
+You can, as usual, change the values of m, gam, k, and om, as well as the initial 
+conditions, to generate examples of the various phenomena that we explored in class.<p>
+
+Here is some code for exploring systems of linear first order equations:<p>
+
+<b>with(DEtools):<br>
+a:=2: b:=3: c:=-3: d:=4: <br>
+charp:= k^2-(a+d)*k+(a*d-b8c); roots_:=solve(charp,k);
+DEplot([diff(x(t),t)=a*x(t)+b*y(t), diff(y(t),t)=c*x(t)+d*y(t)],<br>
+[x(t),y(t)],t=-10..10,color=black,linecolor=blue,<br>
+[[x(0)=2,y(0)=0],[x(0)=-1,y(0)=-1],[x(0)=0,y(0)=1],<br>
+[x(0)=0,y(0)=3],[x(0)=0,y(0)=-1],[x(0)=0,y(0)=-3]],<br>
+x=-5..5,y=-5..5,stepsize=.01);</b>
+
+<p>
+
+As you can probably tell, <b>a</b> and <b>b</b> are the coefficients in the first
+equation, while <b>c</b> and <b>d</b> belong to the second. This code will tell
+you what the associated matrix is, compute its characteristic polynomial and 
+eigenvalues, and
+draw the direction field and a few solution curves for the equation (i.e., draw 
+a phase portrait). So you can use this to see the effect on the phase portrait of 
+changes to your initial matrix.<p>
+
+A much more jazzed up version of this Maple routine can be found 
+<a href="linsystems.html">here</a>; it will determine (for a 2-by-2
+system) where the eigenvectors are, plot all of the straight-line
+solutions, and attempt to do a good job of picking other representative
+solutions. It's pretty cludgy (because I kept needing to avoid
+dividing by 0), so if you know of, or figure out, or
+stumble across a slicker way to do it, please let me know! 
+
+</td> 
+
+</table>
