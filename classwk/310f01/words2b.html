@@ -1,0 +1,589 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 310</center><br></b>
+<p>
+
+
+<center><b>Handy facts for the second exam</center><br></b>
+<p>
+
+Don't forget the handy facts from the first exam!
+<p>
+
+<b>Fermat's Little Theorem.</b> If p is prime and (a,p) = 1, then a<sup>p-1</sup> \medspace \underset p<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspace1
+<p>
+
+Because: (a&#183;1)(a&#183;2)(a&#183;3)<font face="symbol">¼</font
+>(a&#183;(p-1)) \medspace \underset p<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspace 1&#183;2&#183;3<font face="symbol">¼</font
+>(p-1) , and 
+(1&#183;2&#183;3<font face="symbol">¼</font
+>(p-1),p) = 1 . Same idea, looking at the a's between 1 and n-1 that are 
+relatively prime to n (and letting <font face="symbol">f</font
+>(n) be the number of them), gives
+<p>
+
+If (a,n) = 1, then a<sup><font face="symbol">f</font
+>(n)</sup> \medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspace1 .
+<p>
+
+<font face="symbol">f</font
+>(n) = n-1 
+<U>only</U> when n is prime. Numbers n which are <i>not</i> prime but for which a<sup>n-1</sup> \medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspace1
+are called <i>a-pseudoprimes</i>; they are very uncommon!
+<p>
+
+One approach to calculating  a<sup>k</sup> (mod n) quickly  is to start with a, and repeatedly square
+the result (mod n), computing a<sup>1</sup>,a<sup>2</sup>,a<sup>4</sup>,a<sup>8</sup>,a<sup>16</sup>. etc. , continuing until the resulting exponent is more than
+half of k . a<sup>k</sup> is then the product of some subset of our list - we essentially use the powers whose
+exponents are part of the base 2 expansion of k.
+<p>
+
+<b>Rings.</b> Basic idea: find out what makes our calculations in \Bbb Z<sub>n</sub> work.
+<p>
+
+A ring is a set R together with two operations +,&#183; (which we call addition and multiplication) satisfying:
+<p>
+
+For any r,s,t <font face="symbol">Î</font
+> R,
+<p>
+(0) r+s,r&#183;s <font face="symbol">Î</font
+> R [closure]
+<p>
+(1) (r+s)+t = r+(s+t) [associativity of addition]
+<p>
+(2) r+s = s+r [commutativity of addition]
+<p>
+(3) there is a 0<sub>R</sub> <font face="symbol">Î</font
+> R with r+0<sub>R</sub> = r [additive identity]
+<p>
+(4) there is a -r <font face="symbol">Î</font
+> R with r+(-r) = 0<sub>R</sub> [additive inverse]
+<p>
+(5) (r&#183;s)&#183;t = r&#183;(s&#183;t) [associativity of multiplication]
+<p>
+(6) there is a 1<sub>R</sub> <font face="symbol">Î</font
+> R with r&#183;1<sub>R</sub> = 1<sub>R</sub>&#183;r = r [mutliplicative identity]
+<p>
+(7) r&#183;(s+t) = r&#183;s + r&#183;t and (r+s)&#183;t = r&#183;t + s&#183;t [distributivity]
+<p>
+
+These are the most basic properties of the integers mod n that we used repeatedly. Some others 
+acquire special names:
+<p>
+
+A ring (R,+,&#183;) satisfying: for every r,s <font face="symbol">Î</font
+> R, r&#183;s = s&#183;r is called <i>commutative</i>.
+<p>
+
+A commutative ring R satisfying if rs = 0<sub>R</sub>, then r = 0<sub>R</sub> or s = 0<sub>R</sub> is called an <i>integral domain</i>.
+<p>
+
+A ring R satisfying if r <font face="symbol">¹</font
+> 0<sub>R</sub>, then r&#183;s = s&#183;r = 1<sub>R</sub> for some s <font face="symbol">Î</font
+> R is called a <i>division ring</i>.
+<p>
+
+A commutative division ring is called a <i>field</i>.
+<p>
+
+An element r <font face="symbol">Î</font
+> R satisfying r <font face="symbol">¹</font
+> 0<sub>R</sub> and r&#183;s = 0<sub>R</sub> for some b <font face="symbol">¹</font
+> 0<sub>R</sub> is called a <i>zero divisor</i>.
+<p>
+
+An element r <font face="symbol">Î</font
+> R satisfying rs = sr = 1<sub>R</sub> for some s <font face="symbol">Î</font
+> R is called a <i>unit</i>.
+<p>
+
+An <i>idempotent</i> is an element r <font face="symbol">Î</font
+> R satifying r<sup>2</sup> = r .
+<p>
+
+A <i>nilpotent</i> is an element r <font face="symbol">Î</font
+> R satisfying r<sup>k</sup> = 0<sub>R</sub> for some k <font face="symbol">³</font
+> 1 .
+<p>
+
+<b>Examples:</b> The integers \Bbb Z, the integers mod n \Bbb Z<sub>n</sub>, the real numbers \Bbb R, the complex numbers
+\Bbb C; 
+<p>
+
+If R is a ring, then the set of all polynomials with coefficients in R, denoted R[x],  is a ring, where you add and multiply
+as you do with ``ordinary'' polynomials:
+<p>
+R[x] =  {<font face="symbol">å</font
+><sub>i = 0</sub><sup>n</sup> r<sub>r</sub>x<sup>i</sup> :  r<sub>i</sub> <font face="symbol">Î</font
+> R} and (filling in with 0<sub>R</sub>'s as needed)
+<p>
+ <font face="symbol">å</font
+><sub>i = 0</sub><sup>n</sup> r<sub>r</sub>x<sup>i</sup> +  <font face="symbol">å</font
+><sub>i = 0</sub><sup>m</sup> s<sub>r</sub>x<sup>i</sup> =  <font face="symbol">å</font
+><sub>i = 0</sub><sup>n</sup> (r<sub>r</sub>+s<sub>i</sub>)x<sup>i</sup> and
+ <font face="symbol">å</font
+><sub>i = 0</sub><sup>n</sup> r<sub>r</sub>x<sup>i</sup> &#183;  <font face="symbol">å</font
+><sub>j = 0</sub><sup>m</sup> s<sub>r</sub>x<sup>j</sup> = 
+ <font face="symbol">å</font
+><sub>k = 0</sub><sup>n+m</sup> (<font face="symbol">å</font
+><sub>i+j = k</sub>r<sub>i</sub>&#183;s<sub>j</sub>)x<sup>k</sup>
+<p>
+
+If R is a ring and n <font face="symbol">Î</font
+> \Bbb N, then the set M<sub>n</sub>(R) of n&times;n matrices with entries in R is a ring, with entry-wise addition and
+`matrix' multiplication: 
+<p>
+ the (i,j)-th entry of (r<sub>ij</sub>)&#183;(s<sub>ij</sub>) is <font face="symbol">å</font
+><sub>k = 0</sub><sup>n</sup> r<sub>ik</sub>&#183;s<sub>kj</sub>
+<p>
+
+If R is commutative, then so is R[x] ; if R is an integral domain, then so is R[x]. If n <font face="symbol">³</font
+> 2, then M<sub>n</sub>(R) is not commutative.
+<p>
+
+A <i>subring</i> is a subset S <font face="symbol">Í</font
+> R which, using the same addition and multiplication as in R, is also
+a ring.
+<p>
+
+To show that S is a subring of R, we need:
+<p>
+
+(1) if s,s<sup><font face="symbol">¢</font
+></sup> <font face="symbol">Î</font
+> S, then s+s<sup><font face="symbol">¢</font
+></sup>, s&#183;s<sup><font face="symbol">¢</font
+></sup>  <font face="symbol">Î</font
+> S
+<p>
+(2) if s <font face="symbol">Î</font
+> S, then -s <font face="symbol">Î</font
+> S
+<p>
+(3) there is something that acts like a 1 in S (this need not 
+<U>be</U> 1<sub>R</sub> ! But 1<sub>R</sub> <font face="symbol">Î</font
+> S is enough...)
+<p>
+
+The Cartesian product of two rings R,S is the set R&times;S = {(r,s) : r <font face="symbol">Î</font
+> R, s <font face="symbol">Î</font
+> S} . It is a ring, using
+coordinatewise addition and multiplication: (r,s)+(r<sup><font face="symbol">¢</font
+></sup>,s<sup><font face="symbol">¢</font
+></sup>) = (r+r<sup><font face="symbol">¢</font
+></sup>,s+s<sup><font face="symbol">¢</font
+></sup>) , 
+(r,s)&#183;(r<sup><font face="symbol">¢</font
+></sup>,s<sup><font face="symbol">¢</font
+></sup>) = (r&#183;r<sup><font face="symbol">¢</font
+></sup>,s&#183;s<sup><font face="symbol">¢</font
+></sup>)
+<p>
+
+<b>Some basic facts:</b>
+<p>
+
+A ring has only one ``zero'': if x+r = r for some R, then x = 0<sub>R</sub>
+<p>
+A ring has only one ``one'': if xr = r for every r, then x = 1<sub>R</sub>
+<p>
+Every r <font face="symbol">Î</font
+> R has only one additive inverse: if r+x = 0<sub>R</sub>, then x = -r
+<p>
+-(-r) = r ; 0<sub>R</sub>&#183;r = r&#183;0<sub>R</sub> = 0<sub>R</sub> ; (-1<sub>R</sub>)&#183;r = r&#183;(-1<sub>R</sub>) = -r
+<p>
+
+Every finite integral domain is a field; this is because, for any a <font face="symbol">¹</font
+> 0<sub>R</sub>, the function m<sub>a</sub>:R<font face="symbol">®</font
+> R
+given by m<sub>a</sub>(r) = ar is one-to-one, and so by the Pigeonhole Principle is also onto; meaning ar = 1<sub>R</sub> for some r <font face="symbol">Î</font
+> R .
+<p>
+
+If R is finite, then every r <font face="symbol">Î</font
+> R, r <font face="symbol">¹</font
+> 0<sub>R</sub>, is either a zero-divisor 
+<U>or</U> a unit (and can't be both!). Idea:
+The first time the sequence 1,r,r<sup>2</sup>,r<sup>3</sup>,<font face="symbol">¼</font
+> repeats, we either have r<sup>n</sup> = 1 = r(r<sup>n-1</sup>) or r<sup>n</sup> = r<sup>n+k</sup>, so
+r(r<sup>n+k-1</sup>-r<sup>n-1</sup>) = 0 .
+<p>
+
+A unit in R&times;S consists of a pair (r,s) where each of r,s is a unit. (The same is true for idempotents and nilpotents.)
+<p>
+
+For n <font face="symbol">Î</font
+> \Bbb N and r <font face="symbol">Î</font
+> R, we define n&#183;x = x+<font face="symbol">¼</font
+>+x (add x to itself n times) and
+x<sup>n</sup> = x&#183;<font face="symbol">¼</font
+>&#183;x (multiply x by itself n times). And we define (-n)&#183;x = (-x)+<font face="symbol">¼</font
+>+(-x) .
+Then we have
+<p>
+
+(n+m)&#183;r = n&#183;r + m&#183;r, (nm)&#183;r = n&#183;(m&#183;r), r<sup>m+n</sup> = r<sup>m</sup>&#183;r<sup>n</sup>, r<sup>mn</sup> = (r<sup>m</sup>)<sup>n</sup>
+<p>
+
+<b>Homomorphisms and isomorphisms</b>
+<p>
+
+A <i>homomorphism</i> is a function <font face="symbol">f</font
+>:R<font face="symbol">®</font
+> S from a ring R to a ring S satisfying:
+<p>
+for any r,r<sup><font face="symbol">¢</font
+></sup> <font face="symbol">Î</font
+> R , <font face="symbol">f</font
+>(r+r<sup><font face="symbol">¢</font
+></sup>) = <font face="symbol">f</font
+>(r) + <font face="symbol">f</font
+>(r<sup><font face="symbol">¢</font
+></sup>) and <font face="symbol">f</font
+>(r&#183;r<sup><font face="symbol">¢</font
+></sup>) = <font face="symbol">f</font
+>(r) &#183;<font face="symbol">f</font
+>(r<sup><font face="symbol">¢</font
+></sup>) .
+<p>
+The basic idea is that it is a function that ``behaves well'' with respect to addition and multiplication.
+<p>
+
+An <i>isomorphism</i> is a homomorphism that is both one-to-one and onto. If there is an isomorphism from R to S, we say
+that R and S are <i>isomorphic</i>, and write R <font face="symbol">@</font
+> S . The basic idea is that isomorphic rings are ``really the same''; 
+if we think of the function
+<font face="symbol">f</font
+> as a way of identifying the elements of R with the elements of S, then the two notions of addition and
+multiplication on the two rings are 
+<U>identical</U>. For example, the ring of complex numbers \Bbb C is isomorphic to a 
+ring whose elements are the Cartesian product \Bbb R&times;\Bbb R, 
+<U>provided</U> we use the multiplication
+(a,c)&#183;(c,d) = (ac-bd,ad+bc) . And the main point is that anything that is true of R (which depends only on its
+properties as a ring) is also true of anything isomorphic to R, e.g., if r <font face="symbol">Î</font
+> R is a unit, and <font face="symbol">f</font
+> is an 
+isomorphism, then <font face="symbol">f</font
+>(r) is also a unit.
+<p>
+
+The phrase ``is ismorphic to'' is an equivalence relation: the composition of two isomorphisms is an 
+isomorphism, and the inverse of an isomorphism is an isomorphism.
+<p>
+
+A more useful example: if (m,n) = 1, then \Bbb Z<sub>mn</sub> <font face="symbol">@</font
+> \Bbb Z<sub>m</sub>&times;\Bbb Z<sub>n</sub> . The isomorphism is given by
+<p>
+<font face="symbol">f</font
+>([x]<sub>mn</sub>) = ([x]<sub>m</sub>,[x]<sub>n</sub>)
+<p>
+The main ingredients in the proof:
+<p>
+
+If <font face="symbol">f</font
+>: R<font face="symbol">®</font
+> S and <font face="symbol">y</font
+>: R<font face="symbol">®</font
+> T are ring homomorphisms, then the function
+<font face="symbol">w</font
+>: R <font face="symbol">®</font
+> S&times;T given by <font face="symbol">w</font
+>(r) = (<font face="symbol">f</font
+>(r),<font face="symbol">y</font
+>(r)) is also a homomorphism.
+<p>
+If m<font face="symbol">|</font
+>n, then the function <font face="symbol">f</font
+>: \Bbb Z<sub>n</sub><font face="symbol">®</font
+> \Bbb Z<sub>m</sub> given by <font face="symbol">f</font
+>([x]<sub>n</sub>) = [x]<sub>m</sub> is a homomorphism.
+<p>
+
+Together, these give that the function we want above is a homomorphism. The fact that (m,n) = 1 implies that <font face="symbol">f</font
+> is 
+one-to-one; then the Pigeonhole Principle implies that it is also onto!
+<p>
+The above isomorphism and induction imply that if n<sub>1</sub>,<font face="symbol">¼</font
+>n<sub>k</sub> are <i>pairwise relatively prime</i> (i.e., 
+if i <font face="symbol">¹</font
+> j then (n<sub>i</sub>,n<sub>j</sub>) = 1), then 
+<p>
+
+\Bbb Z<sub>n<sub>1</sub><font face="symbol">¼</font
+>n<sub>k</sub></sub>  <font face="symbol">@</font
+>  \Bbb Z<sub>n<sub>1</sub></sub>&times;<font face="symbol">¼</font
+>&times;\Bbb Z<sub>n<sub>k</sub></sub> . This implies:
+<p>
+
+<b>The Chinese Remainder Theorem:</b> If n<sub>1</sub>,<font face="symbol">¼</font
+>n<sub>k</sub> are pairwise relatively prime, then for any a<sub>1</sub>,<font face="symbol">¼</font
+>a<sub>k</sub> <font face="symbol">Î</font
+> \Bbb N
+the system of equations 
+<p>
+
+x <font face="symbol">º</font
+> a<sub>i</sub> (mod n<sub>i</sub>), i = 1,<font face="symbol">¼</font
+>k
+<p>
+
+has a solution, and any two solutions are congruent modulo n<sub>1</sub><font face="symbol">¼</font
+>n<sub>k</sub> .
+<p>
+
+A solution can be found by (inductively) replacing a pair of equations x <font face="symbol">º</font
+> a (mod n) , x <font face="symbol">º</font
+> b (mod m), with a
+single equation x <font face="symbol">º</font
+> c (mod nm), by solving the equation a+nk = x = b+mj for k and j, using the Euclidean Algorithm.
+<p>
+
+<b>Application to units and the Euler <font face="symbol">f</font
+>-function:</b>
+<p>
+
+If R is a ring, we denote the units in R by R<sup>*</sup> . E.g., \Bbb Z<sub>n</sub><sup>*</sup> = {[x]<sub>n</sub> ; (x,n) = 1}. From a fact above, we
+have (R&times;S)<sup>*</sup> = R<sup>*</sup>&times;S<sup>*</sup> .
+<p>
+ <font face="symbol">f</font
+>(n) = the number of units in \Bbb Z<sub>n</sub> = <font face="symbol">|</font
+>\Bbb Z<sub>n</sub><sup>*</sup><font face="symbol">|</font
+>; then the CRT implies that if (m,n) = 1, then <font face="symbol">f</font
+>(mn) = <font face="symbol">f</font
+>(m)<font face="symbol">f</font
+>(m) .
+Induction and the fact that if p is prime <font face="symbol">f</font
+>(p<sup>k</sup>) = p<sup>k-1</sup>(p-1) = p<sup>k</sup>-(the number of multiples of p) implies
+<p>
+
+If the prime factorization of n is p<sub>1</sub><sup><font face="symbol">a</font
+><sub>1</sub></sup><font face="symbol">¼</font
+>p<sub>k</sub><sup><font face="symbol">a</font
+><sub>k</sub></sup>, then <font face="symbol">f</font
+>(n) = [p<sub>1</sub><sup><font face="symbol">a</font
+><sub>1</sub>-1</sup>(p<sub>1</sub>-1)]<font face="symbol">¼</font
+>[p<sub>k</sub><sup><font face="symbol">a</font
+><sub>k</sub>-1</sup>(p<sub>k</sub>-1)]
+<p>
+
+<b>Groups:</b> Three important properties of the set R<sup>*</sup> of units of a ring R:
+<p>
+1<sub>R</sub> <font face="symbol">Î</font
+> R<sup>*</sup>
+<p>
+if x,y <font face="symbol">Î</font
+> R<sup>*</sup>, then xy <font face="symbol">Î</font
+> R<sup>*</sup>
+<p>
+if x <font face="symbol">Î</font
+> R<sup>*</sup> then (x, by definition, has a multiplicative inverse x<sup>-1</sup> and) x<sup>-1</sup> <font face="symbol">Î</font
+> R<sup>*</sup>
+<p>
+
+Together, these three properties (together with associativity of multiplication) describe what is called a <i>group</i>.
+<p>
+
+A <i>group</i> is a set G together with a single operation (denoted *) satisfying:
+<p>
+
+For any g,h,k <font face="symbol">Î</font
+> G,
+<p>
+(0) g*h <font face="symbol">Î</font
+> G [closure]
+<p>
+(1)  g*(h*k) = (g*h)*k [associativity]
+<p>
+(2) there is a 1<sub>G</sub> <font face="symbol">Î</font
+> G satisfying 1<sub>G</sub>*g = g*1<sub>G</sub> = g [identity]
+<p>
+(3) there is a g<sup>-1</sup> <font face="symbol">Î</font
+> G satisfying g<sup>-1</sup>*g = g*g<sup>-1</sup> = 1<sub>G</sub> [inverses]
+<p>
+
+A group (G.*) which, in addition, satisfies g*h = h*g for every g,h <font face="symbol">Î</font
+> G is called <i>abelian</i>.
+Since this is something we always expect out of addition, if we know that a group is abelian, we often write the group
+operation as ``+'' to help remind ourselves that the operation commutes.
+<p>
+
+<b>Examples:</b> Any ring (R,+,&#183;), if we just forget about the multiplication, is an (abelian) group (R,+) .
+<p>
+
+For any ring R, the set of units (R<sup>*</sup>,&#183;) is a group using the multiplication from the ring. [[Unsolved
+(I think!) question: is every group the group of units for some ring R?]]
+<p>
+
+Function composition is always associative, so one way to build many groups is to think of the 
+elements as functions. But to have an inverse under function composition, a function needs to be
+both one-to-one 
+<U>and</U> onto. [One-to-one is sometimes also called <i>injective</i>, and onto is called <i>surjective</i>;
+a function that is both injective and surjective is called <i>bijective</i>.] So if, for any set S, we set
+<p>
+
+G = P(S) = {f:S<font face="symbol">®</font
+> S : f is one-to-one and onto} , 
+<p>
+
+then G is a group under function composition; it is called the group of <i>permutations</i> of S. If S is the
+finite set {1,2,<font face="symbol">¼</font
+>,n}, then we denote the group by S<sub>n</sub>, the <i>symmetric group on n letters</i>. By
+counting the number of bijections from a set with n elements to itself, we find that S<sub>n</sub> has n! elements.
+<p>
+
+The set of rigid motions of the plane, that is, the functions f:\Bbb R<sup>2</sup><font face="symbol">®</font
+> \Bbb R<sup>2</sup> satisfying
+dist(f(x),f(y)) = dist(x,y) for every x,y <font face="symbol">Î</font
+> \Bbb R<sup>2</sup>, is a group under function composition, since
+the composition or inverse of rigid motions are rigid motions. More generally, for any geometric object T
+(like a triangle, or square, or regular pentagon, or...), the set of rigid motions f which take T to itself
+form a group, the group Symm(T) of <i>symmetries</i> of T. For example, for T = a square, Symm(T)
+consists of the identity, three rotations about the center of the square (with rotation angles <font face="symbol">p</font
+>/2,<font face="symbol">p</font
+>,, and 3<font face="symbol">p</font
+>/2),
+and four reflections (through two lines which go through opposite corners of the square, and two lines which go through
+the centers of opposite sides). 
+<p>
+
+G = Aff(\Bbb R) = {f(x) = ax+b : a <font face="symbol">¹</font
+> 0} , the set of linear, non-constant functions from \Bbb R to \Bbb R, form a
+group under function composition, since the composition of two linear functions is linear, and the inverse 
+of a linear function is linear. It is called the <i>affine group of</i> \Bbb R. This is an example of a <i>subgroup</i> of P(\Bbb R):
+<p>
+
+A <i>subgroup</i> H of G is a subset H <font face="symbol">Í</font
+> G which, using the same group operation as G, is 
+a group in its own right. As with subrings, this basically means that:
+<p>
+
+(1) If h,k <font face="symbol">Î</font
+> H, then h*k <font face="symbol">Î</font
+> H
+<p>
+(2) If h <font face="symbol">Î</font
+> H, then h<sup>-1</sup> <font face="symbol">Î</font
+> H
+<p>
+(3) 1<sub>G</sub> <font face="symbol">Î</font
+> H .
+<p>
+
+Condition (3) really need not be checked (so long as H <font face="symbol">¹</font
+> <font face="symbol">Æ</font
+>), since, for any 
+h <font face="symbol">Î</font
+> H, (2) guarantees that h<sup>-1</sup> <font face="symbol">Î</font
+> H, and so (1) implies that h*h<sup>-1</sup> = 1<sub>G</sub> <font face="symbol">Î</font
+> H .
+<p>
+
+For example, for the symmetries of a polygon T in the plane, since a symmetry must take the
+corners of T (called its <i>vertices</i>) to the corners, each symmetry can be thought of as a permutation
+of the vertices. So Symm(T) can be thought of (this can be made precise, using the notion of 
+isomorphism below) as a subgroup of the group of symmetries of the set of vertices of T.
+<p>
+
+As with rings, some basic facts about groups are true:
+<p>
+
+There is only one ``one'' in a group; if x <font face="symbol">Î</font
+> G satisfies x*y = y for some y <font face="symbol">Î</font
+> G, then x = 1<sub>G</sub>
+<p>
+
+Every g <font face="symbol">Î</font
+> G has only one inverse: if g*h = 1<sub>G</sub>, then h = g<sup>-1</sup>
+<p>
+
+(g<sup>-1</sup>)<sup>-1</sup> = g for every g <font face="symbol">Î</font
+> G
+<p>
+
+(gh)<sup>-1</sup> = h<sup>-1</sup>g<sup>-1</sup>
+<p>
+
+<b>Homomorphisms and isomorphisms:</b> Just as with rings, again, we have the notion of functions
+between groups which ``respect'' the group operations:
+<p>
+
+A <i>homomorphism</i> is a function <font face="symbol">f</font
+>:G<font face="symbol">®</font
+> H from groups G to H which satisfies:
+<p>
+for every g<sub>1</sub>,g<sub>2</sub> <font face="symbol">Î</font
+> G, <font face="symbol">f</font
+>(g<sub>1</sub>*g<sub>2</sub>) = <font face="symbol">f</font
+>(g<sub>1</sub>)*<font face="symbol">f</font
+>(g<sub>2</sub>)
+<p>
+
+No other condition is required, since this 
+<U>implies</U> that 
+<p>
+<font face="symbol">f</font
+>(1<sub>G</sub>) = 1<sub>H</sub> ,as well as <font face="symbol">f</font
+>(g<sup>-1</sup>) = (<font face="symbol">f</font
+>(g))<sup>-1</sup> .
+<p>
+
+An <i>isomorphism</i> is a homomorphism that is also one-to-one and onto. If there is an isomorphism 
+from G to H, we say that G and H are <i>isomorphic</i>. As with rings, the idea is that ismorphic
+groups are really the ``same''; the function is a way of identifying elements so that the two groups
+are identical (as groups!). For example, the group Aff(\Bbb R) can be thought of as \Bbb R&times;\Bbb R
+(i.e., the pair of coefficients of the linear function), but with the group multiplication given by (by working out
+what the coeffiicients of the composition are!) (a,b)*(c,d) = (ac,ad+b) .
+<p>
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

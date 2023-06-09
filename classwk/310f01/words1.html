@@ -1,0 +1,412 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 310</center><br></b>
+<p>
+
+
+<center><b>Handy facts for the first exam</center><br></b>
+<p>
+
+<b>Induction.</b> Three different equivalent versions:
+<p>
+
+
+<DL compact><DT>1.
+</DT><DD>
+ (Well-orderedness) Every non-empty set of natural numbers has a smallest element.</DD></DL>
+
+<p>
+
+<DL compact><DT>2.
+</DT><DD>
+ (Induction) <i>If</i> P(n) is a statement about the integer n and</DD></DL>
+(a) P(n<sub>0</sub>) is true for some integer n<sub>0</sub>, and
+<p>
+(b) if P(n-1) is true, then P(n) is true, 
+<p>
+
+<DL compact><DT>
+</DT><DD>
+<i>then</i> P(n) is true for every integer n <font face="symbol">³</font
+> n<sub>0</sub></DD></DL>
+
+<p>
+
+<DL compact><DT>3.
+</DT><DD>
+ (Complete Induction) <i>If</i> P(n) is a statement about the integer n and</DD></DL>
+(a) P(n<sub>0</sub>) is true for some integer n<sub>0</sub>, and
+<p>
+(b) if P(k) is true for every n<sub>0</sub> <font face="symbol">£</font
+> k <font face="symbol"> &lt; </font
+> n, then P(n) is true, 
+<p>
+
+<DL compact><DT>
+</DT><DD>
+<i>then</i> P(n) is true for every integer n <font face="symbol">³</font
+> n<sub>0</sub></DD></DL>
+
+<p>
+An integer p is <i>prime</i> if whenever p = ab with a,b <font face="symbol">Î</font
+> \Bbb Z, either a = <font face="symbol">±</font
+>n or b = <font face="symbol">±</font
+>n .
+<p>
+[For sanity's sake, we will take the position that primes should 
+<U>also</U> be  <font face="symbol">³</font
+> 2 .]
+<p>
+
+There are infinitely many distinct primes.
+<p>
+
+Every integer n <font face="symbol">³</font
+> 2 can be expressed as a product of primes; n = p<sub>1</sub>&#183;<font face="symbol">¼</font
+>&#183;p<sub>k</sub> .
+<p>
+
+If we insist that the primes are written in increasing order, p<sub>1</sub> <font face="symbol">£</font
+> <font face="symbol">¼</font
+> <font face="symbol">£</font
+> p<sub>k</sub>, then this
+representation is <i>unique</i>. 
+<p>
+
+Exponential notation: any n <font face="symbol">³</font
+> 2 can be uniquely expressed as 
+n = p<sub>1</sub><sup><font face="symbol">a</font
+><sub>1</sub></sup>&#183;<font face="symbol">¼</font
+>&#183;p<sub>r</sub><sup><font face="symbol">a</font
+><sub>r</sub></sup> with <font face="symbol">a</font
+><sub>i</sub> <font face="symbol">³</font
+> 1 for each i and p<sub>1</sub> <font face="symbol"> &lt; </font
+> <font face="symbol">¼</font
+><font face="symbol"> &lt; </font
+> p<sub>r</sub> .
+<p>
+
+<b>The Division Algorithm:</b> For any integers n  <font face="symbol">³</font
+> 0 and m <font face="symbol"> &gt; </font
+> 0, there are <i>unique</i>
+integers q and r with n = mq+r and 0 <font face="symbol">£</font
+> r <font face="symbol">£</font
+> m-1 .
+<p>
+
+[Note: this is also true for any integers n,m with m <font face="symbol">¹</font
+> 0, although you need to replace ``m-1''
+with ``<font face="symbol">|</font
+>m-1<font face="symbol">|</font
+>'' .]
+<p>
+
+The basic idea: keep repeatedly subtracting m from n until what's left is less than m.
+<p>
+
+Notation: b<font face="symbol">|</font
+>a = ``b divides a'' = ``b is a divisor of a'' = ``a is a multiple of b'', 
+means a = bk for some integer k .
+<p>
+
+If b<font face="symbol">|</font
+>a and a <font face="symbol">¹</font
+> 0, then <font face="symbol">|</font
+>b<font face="symbol">|</font
+> <font face="symbol">£</font
+> <font face="symbol">|</font
+>a<font face="symbol">|</font
+> .
+<p>
+
+If a<font face="symbol">|</font
+>b and b<font face="symbol">|</font
+>c, then a<font face="symbol">|</font
+>c
+<p>
+
+If a<font face="symbol">|</font
+>c and b<font face="symbol">|</font
+>d, then ab<font face="symbol">|</font
+>cd
+<p>
+
+If p is prime and p<font face="symbol">|</font
+>ab, then either p<font face="symbol">|</font
+>a or p<font face="symbol">|</font
+>b
+<p>
+
+Notation: (a,b) = gcd(a,b) = greatest common divisor of a and b
+<p>
+
+Different, equivalent, formulations for d = (a,b) :
+<p>
+
+(1) d<font face="symbol">|</font
+>a and d<font face="symbol">|</font
+>b, and if c<font face="symbol">|</font
+>a and c<font face="symbol">|</font
+>b, then c <font face="symbol">£</font
+> d .
+<p>
+
+(2) d is the smallest <i>positive</i> number that can be written as d = ax+by with a,b <font face="symbol">Î</font
+> \Bbb Z .
+<p>
+
+(3) d<font face="symbol">|</font
+>a and d<font face="symbol">|</font
+>b, and if c<font face="symbol">|</font
+>a and c<font face="symbol">|</font
+>b, then c<font face="symbol">|</font
+>d .
+<p>
+
+(4) d is the <i>only</i> divisor of a and b that can be expressed as d = ax+by with a,b <font face="symbol">Î</font
+> \Bbb Z .
+<p>
+
+If c<font face="symbol">|</font
+>a and c<font face="symbol">|</font
+>b, then c<font face="symbol">|</font
+>(a,b)
+<p>
+
+If c<font face="symbol">|</font
+>ab and (c,a) = 1, then c<font face="symbol">|</font
+>b
+<p>
+
+If a<font face="symbol">|</font
+>c and b<font face="symbol">|</font
+>c, and (a,b) = 1, then ab<font face="symbol">|</font
+>c
+<p>
+
+If a = bq+r, then (a,b) = (b,r)
+<p>
+
+<b>Euclidean Algorithm:</b> This last fact gives us a way to compute (a,b), using the division algorithm:
+<p>
+
+Starting with a <font face="symbol"> &gt; </font
+>b, compute a = bq<sub>1</sub>+r<sub>1</sub>, so (a,b) = (b,r<sub>1</sub>).
+Then compute b = r<sub>1</sub>q<sub>2</sub>+r<sub>2</sub>, and repeat: r<sub>i-1</sub> = r<sub>i</sub>q<sub>i+1</sub> +r<sub>i+1</sub> .
+Continue until r<sub>n+1</sub> = 0, then 
+(a,b) = (b,r<sub>1</sub>) = (r<sub>1</sub>,r<sub>2</sub>) = <font face="symbol">¼</font
+> = (r<sub>n</sub>,r<sub>n+1</sub>) = (r<sub>n</sub>,0) = r<sub>n</sub> .
+<p>
+
+Since b <font face="symbol"> &gt; </font
+> r<sub>1</sub> <font face="symbol"> &gt; </font
+> r<sub>2</sub> <font face="symbol"> &gt; </font
+> r<sub>3</sub> <font face="symbol"> &gt; </font
+> <font face="symbol">¼</font
+> , this process must end, by well-orderedrness.
+<p>
+
+We can reverse these calculations to recover (a,b) = ax+by, by rewriting each equation in our
+algorithm as r<sub>i+1</sub> = r<sub>i-1</sub>-r<sub>i</sub>q<sub>i+1</sub>, and then repeatedly substituting the higher equations into the 
+lowest one, in turn, working up through the list of equations.
+<p>
+
+<b>Primality Testing:</b>
+<p>
+If n <font face="symbol">³</font
+> 2 is not prime, then it has a prime factor p <font face="symbol">£</font
+> <font face="symbol">Ö</font
+>n. So to test if a number n is
+prime, `just' check to see if p<font face="symbol">|</font
+>n for any prime p <font face="symbol">£</font
+> <font face="symbol">Ö</font
+>n. 
+<p>
+
+The Sieve of Eratosthenes: To find all primes between 2 and n, first make a list, then repeat the following procedure: circle the smallest number p not already either circled or crossed off, then cross off all other
+multiples of p. Continue until the number you are about to circle is larger than <font face="symbol">Ö</font
+>n . Then
+every number either circled or <i>not crossed off</i> is prime, while every number crossed off is <i>not</i> prime.
+<p>
+
+<b>Congruence modulo n :</b> Notation: a <font face="symbol">º</font
+> b (mod n)  (also written a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb) means n<font face="symbol">|</font
+>(b-a)
+<p>
+
+Equivalently: the division algorithm will give the same remainder for a and b when you divide by n
+<p>
+
+Congruence mod n is an <i>equivalence relation</i>, which means
+<p>
+
+(Reflexive) a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspacea for every a <font face="symbol">Î</font
+> \Bbb Z
+<p>
+
+(Symmetric) If a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb , then b\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspacea
+<p>
+
+(Transitive) If a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb and b\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspacec , then a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspacec
+<p>
+
+If a = b , then a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb for any n <font face="symbol">Î</font
+> \Bbb Z
+<p>
+
+If a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb and k <font face="symbol">Î</font
+> \Bbb Z, then ka\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspacekb
+<p>
+
+If a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb and m<font face="symbol">|</font
+>n , then a\medspace \underset m<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb
+<p>
+
+(*) If a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb and c\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaced, then a+c\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb+d and ac\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspacebd
+<p>
+
+The <i>congruence class</i> of a mod n is the collection of all integers congruent mod n to a:
+<p>
+
+[a]<sub>n</sub> = {b <font face="symbol">Î</font
+> \Bbb Z : a\medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspaceb} = {b <font face="symbol">Î</font
+> \Bbb Z : n<font face="symbol">|</font
+>(b-a)}
+<p>
+
+Because \medspace \underset n<font face="symbol">®</font
+>  <font face="symbol">º</font
+>  \medspace is an equivalnce relation, these sets are either <i>disjoint</i> or <i>equal</i>. And 
+because every integer is congruent mod n to its remainder on division by n, there are exactly
+n congruence classes mod n, which can be represented as [0]<sub>n</sub> , [1]<sub>n</sub> , <font face="symbol">¼</font
+>, [n-1]<sub>n</sub> .
+The set of these n equivalence classes is denoted \Bbb Z/n\Bbb Z or \Bbb Z<sub>n</sub>, and is called the
+<i>integers mod n</i>
+<p>
+
+(*) tells us that it <i>makes sense</i> to add and multiply congruence classes:
+<p>
+
+[a]<sub>n</sub> + [b]<sub>n</sub> = [a+b]<sub>n</sub> , [a]<sub>n</sub>&#183;[b]<sub>n</sub> = [ab]<sub>n</sub>
+<p>
+
+These facts can be used to carry out some otherwise fairly difficult calculations very quickly:
+<p>
+
+To compute [a<sup>m</sup>]<sub>n</sub>, we note that [a<sup>m</sup>]<sub>n</sub> = [a]<sup>m</sup><sub>n</sub> , so we first write a = nq+r, so
+[a<sup>m</sup>]<sub>n</sub> = [a]<sup>m</sup><sub>n</sub> = [r]<sup>m</sup><sub>n</sub> . Then we look at the list [r]<sup>1</sup><sub>n</sub>,[r]<sup>2</sup><sub>n</sub>,[r]<sup>3</sup><sub>n</sub>,[r]<sup>4</sup><sub>n</sub>,<font face="symbol">¼</font
+> ,
+and continue until the power equals [0]<sub>n</sub>,[1]<sub>n</sub> or it repeates itself. All of these can be
+used to reduce m. For example,
+<p>
+
+[107<sup>1015</sup>]<sub>7</sub> : [107]<sub>7</sub> = [7&#183;15 + 2]<sub>7</sub> = [2]<sub>7</sub>, and [2]<sup>3</sup><sub>7</sub> = [8]<sub>7</sub> = [1]<sub>7</sub>, so
+since 1015 = 3&#183;338 + 1, we have 
+[107<sup>1015</sup>]<sub>7</sub> = [2]<sup>1015</sup><sub>7</sub>  = [2]<sup>3&#183;338+1</sup><sub>7</sub> = 
+([2]<sup>3</sup><sub>7</sub>)<sup>338</sup>&#183;[2]<sup>1</sup><sub>7</sub> = [1]<sup>338</sup><sub>7</sub>&#183;[2]<sub>7</sub> = [2]<sub>7</sub> .
+<p>
+
+We can show that some equations have no integer solutions by showing that the `same' 
+equations have no solutions in some \Bbb Z<sub>n</sub> (coefficients need to be interpreted as being
+
+<U>in</U> \Bbb Z<sub>n</sub> ...). The latter is far less difficult to do, in general, because \Bbb Z<sub>n</sub> has only n
+elements! For example,
+<p>
+
+In \Bbb Z<sub>5</sub>, 0<sup>2</sup> = 0, 1<sup>2</sup> = 1, 2<sup>2</sup> = 4, 3<sup>2</sup> = 4, and 4<sup>2</sup> = 1, and so x<sup>2</sup> = [3]<sub>5</sub> has
+no solution in \Bbb Z<sub>5</sub>. So the equation
+<p>
+
+<center>x<sup>2</sup>-5y<sup>2</sup> = 531253</center><br>
+<p>
+has no solution with x,y <font face="symbol">Î</font
+> \Bbb Z, since if it did, then 
+<p>
+
+[x<sup>2</sup>-5y<sup>2</sup>]<sub>5</sub> = [x]<sup>2</sup><sub>5</sub>-[5]<sub>5</sub>&#183;[y]<sup>3</sup><sub>5</sub> = [x]<sup>2</sup><sub>5</sub>-[0]<sub>5</sub>&#183;[y<sup>3</sup>]<sub>5</sub> = [x]<sup>2</sup><sub>5</sub> = [531253]<sub>5</sub> = [3]<sub>5</sub>
+<p>
+
+so [x]<sup>2</sup><sub>5</sub> = [3]<sub>5</sub> , which we know is impossible!
+<p>
+
+
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
