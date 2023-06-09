@@ -1,0 +1,555 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 314</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for first exam</center><br></b>
+<p>
+<p><br>
+
+<b>Chapter 1:</b> Linear systems of equations
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Some examples</b></DD></DL>
+Systems of linear equations:
+<p>
+
+<center>2x-3y-z = 6</center><br>
+<p>
+
+<center>3x+2y+z = 7</center><br>
+<p>
+Goal: find simultaneous solutions: all x,y,z satisfying both equations.
+<p>
+Most general type of system:
+<p>
+
+<center>a<sub>11</sub>x<sub>1</sub>+<font face="symbol">¼</font
+>+a<sub>1n</sub>x<sub>n</sub> = b<sub>1</sub></center><br>
+<p>
+
+<center><font face="symbol">¼</font
+></center><br>
+<p>
+
+<center>a<sub>m1</sub>x<sub>1</sub>+<font face="symbol">¼</font
+>+a<sub>mn</sub>x<sub>n</sub> = b<sub>m</sub></center><br>
+<p>
+<p>
+Example: input-output models
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Notations and a review of numbers</b></DD></DL>
+Set notation: A<font face="symbol">È</font
+>B, A<font face="symbol">Ç</font
+>B, A\B
+<p>
+Number systems: natural, integers, rational, reals, complex
+<p>
+Some complex arithmetic:
+<p>
+<p>
+i = [<font face="symbol">Ö</font
+>(-1)], pretend i behaves like a real number
+<p>
+complex numbers: standard form z = a+bi ; addition, subtraction, multiplication
+<p>
+division: complex conjugate [<font face="symbol">`</font
+>z] = a-bi
+<p>
+[<font face="symbol">`</font
+>(z+w)]=[<font face="symbol">`</font
+>z]+[<font face="symbol">`</font
+>w] ; [<font face="symbol">`</font
+>zw]=[<font face="symbol">`</font
+>z][<font face="symbol">`</font
+>w]
+<p>
+z&#183;[<font face="symbol">`</font
+>z] = a<sup>2</sup>+b<sup>2</sup> (
+<U>real</U>!) ; z<sub>1</sub>/z<sub>2</sub> = (z<sub>1</sub>&#183;[<font face="symbol">`</font
+>(z<sub>2</sub>)])/(z<sub>2</sub>&#183;[<font face="symbol">`</font
+>(z<sub>2</sub>)])
+<p>
+Polar coordinates:
+<p>
+
+z = a+bi (complex number) = (a,b) (point in plane) = 
+<p>
+(r,<font face="symbol">q</font
+>) (distance from origin
+and angle with (positive) x-axis)
+<p>
+
+z=a+bi = r(cos<font face="symbol">q</font
+>+isin<font face="symbol">q</font
+>)=re<sup>i<font face="symbol">q</font
+></sup> , w=c+di = s(cos<font face="symbol">f</font
+>+isin<font face="symbol">f</font
+>)=se<sup>i<font face="symbol">f</font
+></sup> , then
+<p>
+zw = rs(cos(<font face="symbol">q</font
+>+<font face="symbol">f</font
+>)+isin(<font face="symbol">q</font
+>+<font face="symbol">f</font
+>)=(rs)e<sup>i(<font face="symbol">q</font
+>+<font face="symbol">f</font
+>)</sup>. setting z = w yields
+<p>
+z<sup>n</sup>=r<sup>n</sup>e<sup>i(n<font face="symbol">q</font
+>)</sup> (DeMoivre's formula)
+<p>
+
+<p>
+Think backwards; solve z<sup>n</sup> = w 
+<p>
+Need: r<sup>n</sup> = s , cos(n<font face="symbol">q</font
+>) = cos<font face="symbol">f</font
+> , sin(n<font face="symbol">q</font
+>) = sin<font face="symbol">f</font
+> ; i.e.
+<p>
+r = s<sup>1/n</sup> , n<font face="symbol">q</font
+> = <font face="symbol">f</font
+>+2k<font face="symbol">p</font
+>, i.e., <font face="symbol">q</font
+> = <font face="symbol">f</font
+>/n+2k<font face="symbol">p</font
+>/n
+<p>
+So z<sup>n</sup> = w has n distinct solutions, coming from k = 0,1,<font face="symbol">¼</font
+>,n-1
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Gaussian elimination: basic ideas</b></DD></DL>
+
+<center>3x+5y = 2</center><br>
+<p>
+
+<center>2x+3y = 1</center><br>
+<p>
+Idea use 3x in first equation to eliminate 2x in second equation. How? Add a multiply of
+first equation to second. Then use y-term in new second equation to remove 5y from first!
+<p>
+The point: a solution to the original equations <b>must</b> also solve the new equations. The <b>real</b>
+point: it's much easier to figure out the solutions of the new equations!
+<p>
+<p>
+Streamlining: keep only the essential information; throw away unneeded symbols!
+<p>
+
+
+
+
+<a href="w1f1.eps">Figure</a>
+<p>
+We get an <b>(augmented) matrix</b> representing the system of equations.
+We carry out the same operations we used with equations, but do them to the rows of the matrix.
+<p>
+Three basic operations (elementary row operations):
+<p>
+E<sub>ij</sub> : switch ith and jth rows of the matrix
+<p>
+E<sub>ij</sub>(m) : add m times jth row to the ith row
+<p>
+E<sub>i</sub>(m) : multiply ith row by m
+<p>
+<p>
+Terminology: first non-zero entry of a row = <b>leading entry</b>; leading entry used to zero out
+a column = <b>pivot</b>.
+<p>
+
+Basic procedure (Gauss-Jordan elimination): find non-zero entry in first column, switch up to first row 
+(E<sub>1j</sub>) (pivot in (1,1) position). 
+Use E<sub>1</sub>(m) to make first entry a 1, then use E<sub>1j</sub>(m) 
+operations to zero out the other entries of the first column. Then: find leftmost entry in remaining rows, switch to 
+second row, use as a pivot to clear out the entries in the column below it. Continue (forward solving).
+When done, use pivots to clear out entries in column above the pivots (back-solving).
+<p>
+<p>
+Variable in linear system corresponding to a pivot = <b>bound</b> variable; other variables = <b>free</b> variables
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Gaussian elimination: general procedure</b></DD></DL>
+
+<b>The big fact</b>: After elimination, the new system of linear equations have the exact <b>same solutions</b>
+as the old system. Because: row operations are reversible!
+<p>
+Reverse of E<sub>ij</sub> is E<sub>ij</sub>; reverse of E<sub>ij</sub>(m) is E<sub>ij</sub>(-m); reverse of E<sub>i</sub>(m) is E<sub>i</sub>(1/m)
+<p>
+So: you can get old equations from new ones; so solution to new equations <b>must</b> solve old equations <b>as well</b>.
+<p>
+<p>
+Reduced row form: apply elementary row operations so turn matrix A into one so that
+<p>
+(a) each row looks like (0 0 0 <font face="symbol">¼</font
+>0 * * <font face="symbol">¼</font
+>*); firsdt * = leading entry
+<p>
+(b) leading entry for row below is further to the right
+<p>
+Reduced row <b>echelon</b> form: in addition, have
+<p>
+(c) each leading entry is = 1
+<p>
+(d) each leading entry is the only non-zero number in its column.
+<p>
+<p>
+RRF can be achieved by forward solving; RREF by back-solving and E<sub>i</sub>(m) 's
+<p>
+Elimination: every matrix can be put into RREF by elementary row operations.
+<p>
+Big Fact: If a matrix A is put into RREF by two different sets of row operations, you get the
+<b>same matrix</b>.
+<p>
+RREF of an augmented matrix: can read off solutions to linear system.
+<p>
+
+
+
+
+<a href="w1f2.eps">Figure</a>
+<p>
+Inconsistent systems: row of zeros in coefficient matrix, followed by a non-zero number (e.g., 2).
+Translates as 0=2 ! System has no solutions.
+<p>
+<p>
+Rank of a matrix = r(A) = number of non-zero rows in RREF = number of pivots in RREF.
+<p>
+Nullity of a matrix = n(A) = number of columns without a pivot = # columns - # pivots
+<p>
+rank = number of bound variables, nullity = number of free variables
+<p>
+rank  <font face="symbol">£</font
+>  number of rows, number of columns (at most one pivot per row/column!)
+<p>
+rank + nullity = number of columns = number of variables
+<p>
+<p>
+A = coefficient matrix, [A\tilde] = augmented matrix (A = m&times;n matrix)
+<p>
+system is consistent if and only if r(A) = r([A\tilde])
+<p>
+r(A)=n : unique solution ; r(A)<font face="symbol"> &lt; </font
+>n : infinitely many solutions
+<p>
+<p><br>
+<b>Chapter 2:</b> Matrix algebra
+<p>
+<p><br>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Matrix addition and scalar multiplication</b></DD></DL>
+Idea: take our ideas from vectors. Add entry by entry. Constant multiple of matrix: multiply entry by entry.
+<p>
+<b>0</b> = matrix all of whose entries are 0
+<p>
+Basic facts:
+<p>
+A+B makes sense only if A and B are the same size (m&times;n) matrix
+<p>
+A+B = B+A
+<p>
+(A+B)+C = A+(B+C)
+<p>
+A+<b>0</b> = A
+<p>
+A+(-1)A = <b>0</b>
+<p>
+cA has the same size as A
+<p>
+c(dA) = (cd)A
+<p>
+(c+d)A = cA + dA
+<p>
+c(A+B) = cA + cB
+<p>
+1A = A
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Matrix multiplication</b></DD></DL>
+Idea: <b>don't</b> multiply entry by entry! We want matrix multplication to allow us to write a 
+system of linear equations as Ax=b ....
+<p>
+Basic step: a row of A, times x, equals an <b>entry</b> of Ax. (row vector (a<sub>1</sub>,<font face="symbol">¼</font
+>,a<sub>n</sub>) times column vector
+(x<sub>1</sub>,<font face="symbol">¼</font
+>,x<sub>n</sub>) is a<sub>1</sub>x<sub>1</sub>+<font face="symbol">¼</font
+>+a<sub>n</sub>x<sub>n</sub> ....) Thisa leads to:
+<p>
+In AB, each row of A is `multiplied' by each column of B to obtain an entry of AB. Need: the length of the rows
+of A (= number of columns of A) = length of columns of B (= number of rows of B). I.e, in order to multiply,
+A must be m&times;n, and B must be n&times;k; AB is then m&times;k.
+<p>
+<p>
+Formula: (i,j)th entry of AB is  <font face="symbol">S</font
+><sub>k = 1</sub><sup>n</sup> a<sub>ik</sub>b<sub>kj</sub>
+<p>
+<p>
+I = identity matrix; square matrix (n&times;n) with 1's on diagonal, 0's off diagonal
+<p>
+Basic facts:
+<p>
+AI = A = IA
+<p>
+(AB)C = A(BC)
+<p>
+c(AB) = (cA)B = A(cB)
+<p>
+(A+B)C = AC + BC
+<p>
+A(B+C) = AB + AC
+<p>
+<p>
+In general, however it is **not** **not** true that AB and BA are the same; they are almost always different! ****
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Applications of matrix arithmetic</b></DD></DL>
+Ax=b ; A m-byn matrix. Think: x=vector=variable  (size n) , Ax = vector = image of x (size m)
+<p>
+i.e., A takes vectors in R<sup>n</sup> and spits out vectors in R<sup>m</sup>; it's a function (which we call T<sub>A</sub>) from 
+R<sup>n</sup> to R<sup>m</sup>. More than that, it's a <b>linear</b> function:
+<p>
+T<sub>A</sub>(a<b>x</b>+b<b>y</b> = aT<sub>A</sub>(<b>x</b>)+bT<sub>A</sub>(<b>y</b>)
+<p>
+With this new notation, matrix multiplication <b>becomes</b> composition of functions.
+<p>
+<p>
+What do we <b>do</b> with matrix multiplication? Solve equations!
+<p>
+Ax=b ; basic idea, try to find a matrix B with BA=I, so then x = Ix = (BA)x = B(Ax) = Bb
+<b>solves</b> the equation. (How to <b>find</b> B? Wait.....)
+<p>
+<p>
+Another application: Markov chains
+<p>
+Idea: in any give month, a fixed percentage people using one product switch to another.
+<p>
+
+<center>a<sub>1</sub> = .3a<sub>0</sub>+.4b<sub>0</sub>+.2c<sub>0</sub> , b<sub>1</sub> = .4a<sub>0</sub>+.5b<sub>0</sub>+.6c<sub>0</sub> , c<sub>1</sub> = .3a<sub>0</sub>+.1b<sub>0</sub>+.2c<sub>0</sub></center><br>
+<p>
+New distribution, given initial distribution x, is Ax, where
+<p>
+
+
+
+
+<a href="w1f3.eps">Figure</a>
+
+More generally, a Markov chain consists of an (initial) probability distribution vector (entries are
+ <font face="symbol">³</font
+> 0 and add up to 1) and a transition matrix A (entries are  <font face="symbol">³</font
+> 0 and each column adds
+up to 1). The distribution evolves by multiplication by A. E.g, after 20 iterations, initial vector
+x evolves into A<sup>20</sup>x.
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Special matrices and transposes</b></DD></DL>
+Elementary matrices:
+<p>
+A row operation (E<sub>ij</sub> , E<sub>ij</sub>(m) , E<sub>i</sub>(m))  applied to a matrix A corresponds to
+multiplication (on the left) by a matrix (also denoted E<sub>ij</sub> , E<sub>ij</sub>(m) , E<sub>i</sub>(m))
+The matrices are obtained by applying the row operation to the identity matrix I<sub>n</sub>.
+E.g., the 4&times;4 matrix E<sub>13</sub>(-2) looks like I, except it has a -2 in the (1,3)th entry.
+<p>
+The idea: if A <font face="symbol">®</font
+> B by the elementary row operation E, then B = EA.
+<p>
+So if A <font face="symbol">®</font
+> B <font face="symbol">®</font
+> C by elementary row operations, then C = E<sub>2</sub>E<sub>1</sub>A ....
+<p>
+Row reduction <b>is</b> matrix multiplication!
+<p>
+<p>
+A scalar matrix A has the same number c in the diagonal entries, and 0's everywhere else (the idea: AB = cB)
+<p>
+A diagonal matrix has all entries zero off of the (main) diangonal
+<p>
+A upper triangular matrix has entries =0 below the diagonal, a lower triangular matrix is 0 above the
+diagonal. A triangular matrix is either upper or lower triangular.
+<p>
+A strictly triangular matrix is triangular, and has zeros <b>on</b> the diagonal, as well. They come
+in upper and lower flavors.
+<p>
+<p>
+The <b>transpose</b> of a matrix A is the matrix A<sup>T</sup> whose columns are the rows of A (and vice versa). A<sup>T</sup> is A
+reflected across the main diagonal. (aij)<sup>T</sup> = (aji) ; (m&times;n)<sup>T</sup> = (n&times;m)
+<p>
+Basic facts:
+<p>
+(A+B)<sup>T</sup> = A<sup>T</sup>+B<sup>T</sup>
+<p>
+(AB)<sup>T</sup> = B<sup>T</sup>A<sup>T</sup>
+<p>
+(cA)<sup>T</sup> = cA<sup>T</sup>
+<p>
+(A<sup>T</sup>)<sup>T</sup> = A
+<p>
+Transpose of an elementary matrix is elementary:
+<p>
+E<sub>ij</sub><sup>T</sup> = E<sub>ij</sub> , E<sub>ij</sub>(m)<sup>T</sup> = E<sub>ji</sub>(m) , E<sub>i</sub>(m)<sup>T</sup> = E<sub>i</sub>(m)
+<p>
+A matrix A is <b>symmetric</b> if A<sup>T</sup> = A
+<p>
+An occasionally useful fact: AE, where E is an elementary matrix, is the result of an 
+elementary <b>column</b> operation on A .
+<p>
+<p>
+The transpose and rank:
+<p>
+For any pair of compatible matrices, r(AB)  <font face="symbol">£</font
+>  r(A)
+<p>
+Consequences: r(A<sup>T</sup>) = r(A) for any matrix A; r(AB)  <font face="symbol">£</font
+>  r(B), as well.
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Matrix inverses</b></DD></DL>
+One way to solve Ax=b  : find a matrix B with BA=I . When is there such a matrix? 
+<p>
+(Think about square matrices...) A an n-by-n matrix ; n=r(I)=r(BA) <font face="symbol">£</font
+> r(A) <font face="symbol">£</font
+> n implies that r(A)=n .
+This is necessary, and it is also sufficient!
+<p>
+r(A)=n, then the RREF of A has n pivots in n rows and columns, so has a pivot in every row, so the RREF of A is I.
+But! this means we can get to I from A by row operations, which correspond to multiplication by
+elementary matrices. *So* multiply A (on the left) by the right elementary matrices and you get I; call the
+product of those matrices B and you get BA=I !
+<p>
+It turns out (by using the transpose) that AB=I as well!
+<p>
+A matrix B is an <b>inverse</b> of A if AB=I and BA=I; it turns out, the inverse of a matrix
+is always unique. We call it A<sup>-1</sup> (and call A invertible).
+<p>
+Finding A<sup>-1</sup> : row reduction! (of course...)
+<p>
+Build the "super-augmented" matrix (A<font face="symbol">|</font
+>I) (the matrix A with the identity matrix next to it). Row reduce A, and carry out
+the operations on the entire row of the S-A matrix (i.e., carry out the identical row operations on I). Wnem done, if
+invertible+ the left-hand side of the S-A matrix will be I; the right-hand side will be A<sup>-1</sup> !
+<p>
+I.e., if (A<font face="symbol">|</font
+>I) <font face="symbol">®</font
+> (I<font face="symbol">|</font
+>B) by row operations, then I=BA .
+<p>
+<p>
+Basic facts:
+<p>
+(A<sup>-1</sup>)<sup>-1</sup> = A
+<p>
+if A and B are invertible, then so is AB, and (AB)<sup>-1</sup> - B<sup>-1</sup>A<sup>-1</sup>
+<p>
+(cA)<sup>-1</sup> = (1/c)A<sup>-1</sup>
+<p>
+(A<sup>T</sup>)<sup>-1</sup> = (A<sup>-1</sup>)<sup>T</sup>
+<p>
+If A is invertible, and AB = AC, then B = C; if BA = CA, then B = C.
+<p>
+Inverses of elementary matrices:
+<p>
+E<sub>ij</sub><sup>-1</sup> = E<sub>ij</sub> , E<sub>ij</sub>(m)<sup>-1</sup> = E<sub>ij</sub>(-m) , E<sub>i</sub>(m)<sup>-1</sup> = E<sub>i</sub>(1/m)
+<p>
+Highly useful formula: for a 2-by-2 matrix,
+<p>
+
+
+
+
+<a href="w1f4.eps">Figure</a>
+(Note: need D=ad-bc  <font face="symbol">¹</font
+>  0 for this to work....)
+<p>
+Some conditions for/consequences of invertibility: the following are all equivalent (A = n-by-n matrix).
+<p>
+1. A is invertible,
+<p>
+2. r(A) = n.
+<p>
+3. The RREF of A is I<sub>n</sub>.
+<p>
+4. Every linear system Ax=b has a unique solution.
+<p>
+5. For one choice of b, Ax=b has a unique solution (i.e., if one does, they all do...).
+<p>
+6. The equation Ax=0 has only the solution x=0.
+<p>
+7. There is a matrix B with BA=I.
+<p>
+<p>
+The euivalence of 4. and 6. is sometimes stated as <b>Fredholm's alternative</b>: Either every equation
+Ax=b has a unique solution, or the equation Ax=0 has a <b>non-trivial</b> solution (and only one of
+tyhe alternatives can occur).
+<p>
+
+
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
