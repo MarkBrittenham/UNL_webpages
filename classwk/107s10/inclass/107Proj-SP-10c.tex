@@ -1,0 +1,276 @@
+
+%created by M.Rammaha, March 21, 2001.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,reqno]{amsart}
+%\usepackage{amsfonts,amstext}
+\usepackage{amsmath,amstext,amssymb,amscd}
+\usepackage{verbatim} % This package allows the use of \begin{comment}
+      % and \end{comment}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{amssymb}
+%\usepackage[notcite,notref]{showkeys}
+
+\numberwithin{equation}{section} \theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{assumption}[lemma]{Assumption}
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{question}[lemma]{Question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%
+
+
+
+
+\addtolength{\topmargin}{-.8in} \addtolength{\textheight}{1in} 
+\addtolength{\evensidemargin}{-0.75in} 
+\addtolength{\oddsidemargin}{-1in} \addtolength{\textwidth}{2in}
+
+
+
+
+\begin{document}
+
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\o{\omega}
+\def\s{\sigma}
+\def\t{\tau}
+\def\r{\rho}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\O{\Omega}
+\def\e{\epsilon}
+\def\p{\phi}
+\def\P{\Phi}
+\def\S{\Psi}
+\def\E{\eta}
+\def\m{\mu}
+\def\c{\chi}
+\def\n{\nu}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\innerprod}[1]{\left\langle#1\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\begin{center}
+ {\bf  Math 107 Project: Balancing on the point of a pin}\\
+ Assigned: 2/26/2010 \hfill Due: 4/16/2010
+\end{center}
+\hrulefill
+
+This project explores the mathematics behind and applicatons of the
+{\it center of mass} (or {\it center of gravity}) of an object.
+In many physical situations, an object behaves as if all of its mass
+were concentrated at a single point, called the center of mass of the
+object. For example, an object allowed to rotate freely will rotate around 
+a line through its 
+center of mass; an object thrown through the air, in the absence of air 
+resistance, will have its center of mass trace out 
+the perfect parabolic arc that physics predicts. See, for example,\\
+\centerline{http://www.schooltube.com/video/ef4699826e6448bf9703/Elmo-Center-of-Mass}  
+
+\noindent for experiments carried out with an Elmo doll! 
+In this project we will focus on center of mass computations for an object
+modeled as a thin plate of uniform density shaped like a region $R$
+in the plane; under these hypotheses, the center of mass is usually called the {\it centroid}
+of the region $R$.
+
+For  a region $R$ in the $xy$-plane having a 
+line of reflection symmetry, the centroid will always lie along this line, a fact which 
+can greatly simplify calculations of centroids. Knowlege of the centroid of a 
+region, in turn, can greatly simplify other calculations; the Thoerem of Pappus
+states that when a region $R$ of the plane is rotated  in space around a line not meeting
+$R$, the volume of the resulting solid of revolution is equal to the area of $R$
+times the distance traveled by the centroid $R$ under the rotation. Our goal 
+is to verify these observations and carry out a variety of computations.
+
+Some basic material on centers of mass can be found in section 6.7 of our text, pages
+437-442, which makes a good starting point for your studies. But be {\bf aware}, 
+the notation in the text is not rigorous, 
+whereas the notation of this project is very rigorous. 
+To simplify our work, we begin our study with a one dimensional object like a rod lying on the $x$-axis.\\
+
+\noindent {\bf Part I: One-dimensional objects.}\\
+Assume that we have a system of $n$ discrete masses $m_k$ along the $x$-axis, each located at the coordinate $x_k$. 
+The moment of each mass $m_k$ is defined to be $m_k x_k$. The moment of the system about the origin is 
+$M_0=\sum_{k=1}^n m_k x_k$ and the total mass of the system is $M=\sum_{k=1}^n m_k $.
+The center of mass of this discrete system is defined by the point whose $x$-coordinate is $\overline{x}$, where
+$$\overline{x}= \frac{\sum_{k=1}^n m_k x_k}{\sum_{k=1}^n m_k}.$$
+
+The underlying physical intuition is that since (as you can check) $\sum_{k=1}^n m_k (\overline{x}-x_k)=0$,
+where $(\overline{x}-x_k)$ is interpreted as the ``signed'' distance from $x_k$ to $\overline{x}$, 
+the system of masses will ``balance'' (neither tip to the right nor to the left) at the center of mass.
+This is essentially the principle of the lever; a small mass far from
+the balance point can balance a larger mass close to the balance point but on the 
+other side. 
+
+Your first task is to extend this notion to a solid rod of varying density.
+
+\smallskip
+
+\noindent {\bf Task 1:} Consider a rod of length $L$ meters lying on the interval $[0,L]$ on the  $x$-axis. 
+Assume the rod's density is non-constant and given by $\rho (x)$ kg/m,  $x\in [0,L]$. Your first task 
+is to show that the center of mass of the rod is 
+$$\overline{x}= \frac{\int_{0}^L x \rho (x) dx}{\int_{0}^L  \rho (x) dx}.$$
+{\bf Idea:} Partition the interval  $[0,L]$  via the regular partition  
+$\{0=x_0, x_1, x_2,  \cdots , x_n=L\}$, with $\Delta x=\frac{L}{n}$. Now, think 
+of each piece of the rod lying on the kth segment $[x_{k-1}, x_k]$ as a discrete 
+mass whose coordinate is any point of your choice, $z_k \in [x_{k-1}, x_k] $.  
+Approximate $\overline{x}$ as a quotient of two Riemann sums, and let  $n\rightarrow \infty$.\\
+
+\noindent {\bf Task 2:} Use your results in {\bf Task 1} to find the center of mass of a 
+2-meter rod lying on the interval $[0,2]$ whose density is given by $\rho(x) =.01 \sqrt{x+1}$ kg/m. \\
+
+\noindent {\bf Part II: Two-dimensional objects.}\\
+Here, we extend the ideas developed for one-dimensional objects to find the center of mass (centroid) of 
+a thin plate occupying a   region $R$. To simplify the problem, we will assume the density of the 
+plate is a constant, say $\rho$ $kg/m^2$. 
+
+As in the one-dimensional case, suppose we have a discrete system of $n$ masses $m_k$ each located at a point 
+$(x_k, y_k)$ in the plane. We define $M_x$, the moment of the system about the $x$-axis by:
+$$M_x=\sum_{k=1}^n m_k y_k.$$
+Similarly, we define $M_y$, the moment of the system about the $y$-axis by:
+$M_y=\sum_{k=1}^n m_k x_k$. Also,  the total mass of the system is given by $M=\sum_{k=1}^n m_k $. 
+Finally, we define the center of mass of this discrete system to be the point $(\overline{x}, \overline{y})$, where
+$$\overline{x}= \frac{M_y}{M}= \frac{\sum_{k=1}^n m_k x_k}{\sum_{k=1}^n m_k},\quad \overline{y}= 
+\frac{M_x}{M}= \frac{\sum_{k=1}^n m_k y_k}{\sum_{k=1}^n m_k}.$$
+
+The intuition is, as before, that $\overline{x}-x_i$ represents the ``signed'' distance 
+from the point $(x_i,y_i)$
+to the line $x=\overline{x}$; the condition $\sum m_i(\overline{x}-x_i)=0$ 
+(which follows, as before, from the formula above) ensures
+that the masses, if placed on a massless plate supported along the vertical line 
+$x=\overline{x}$, will balance. The other condition ensures that the masses 
+balance when supported along the horizontal line $y=\overline{y}$. The masses will
+therefore balance on the point of a pin placed at the center of mass: they will not
+tip left, right, ``up'' or ``down''.
+
+\smallskip
+
+\noindent {\bf Task 3:} Your next task is to fill in the details behind the following computation.
+Assume we have a thin plate occupying a region $R$ as shown. Also, 
+assume the density of the plate is a constant $\rho$ $kg/m^2$.  
+
+
+\input epsf
+
+\leavevmode
+
+\epsfxsize=1.8in
+\centerline{\epsfbox{comfig.ai}}
+
+
+
+In order to find the centroid of the plate, we start by finding $\overline{x}$. 
+We partition the interval  $[a,b]$  via the regular partition  $\{a=x_0, x_1, x_2,  \cdots , x_n=b\}$, 
+with $\Delta x=\frac{b-a}{n}$. This process results in dividing the plate into thin vertical 
+strips which can be approximated as a rectangle of a small width $\Delta x$. Let   $L(z_k)$ be 
+the total length of the
+line segments of intersection of the vertical line $x=z_k$ with $R$, where 
+$z_k \in [x_{k-1}, x_k] $ is any point of your choice. Now, we think of each vertical strip 
+of the plate as a discrete mass in the plane whose coordinate is $(z_k, w_k)$, for some 
+$w_k\in \reals$, which is irrelevant in the following calculations. Let us note that 
+the mass of the kth vertical strip is given by:
+$m_k= \text{ (density)(area)} \approx \rho L(z_k) \Delta x $. So, by thinking of the 
+whole plate as a discrete system of $n$ masses $m_k  \approx \rho L(z_k) \Delta x$ each 
+located at a point $(z_k, w_k)$ in the plane, we find
+$$\overline{x}=\frac{M_y}{M} \approx \frac{\sum_{k=1}^n \rho z_k L(z_k) \Delta x} 
+{\sum_{k=1}^n \rho  L(z_k) \Delta x}=\frac{\sum_{k=1}^n  z_k L(z_k) \Delta x} {\sum_{k=1}^n   L(z_k) \Delta x} .$$ 
+
+
+\noindent By letting  $n\rightarrow \infty$, we obtain the formula \hskip.2in
+$\displaystyle\overline{x}= \frac{\int_{a}^b x  L(x) dx}{\int_{a}^b   L(x) dx}.$
+ 
+\smallskip
+
+Your task here is to fill in the details explaining why the formula for $\overline{x}$ 
+is valid. Also, you should carry out  similar steps to obtain 
+$$\overline{y}= \frac{\int_{c}^d y S(y) dy}{\int_{c}^d   S(y) dy}, $$
+where   $S(w_k)$ is the total length of the
+line segments of intersection of the horizontal line $y=w_k$ with $R$.\\
+
+
+\noindent{\bf Task 4:} Explain why $A(R)$, the area of the region $R$, is given by:
+$ A(R) = \int_a^b L(x)\ dx = \int_c^dS(y)\ dy$. Hence, we have 
+$$\overline{x}= \frac{1}{A(R)} \int_{a}^b   xL(x) dx, \quad \overline{y}= \frac{1}{A(R)}\int_{c}^d  y S(y) dy.$$
+Use this to explain why, if the region $R$ has a vertical line of reflection
+symmetry $x=A$, then $\overline{x}=A= \frac{a+b}{2}$, and if 
+$R$ has a horizontal line of reflection symmetry $y=B$, then
+$\overline{y}=B$. [Hint: a line of symmetry tells us something 
+about the functions $L(x)$ or $S(y)$.] 
+
+\medskip
+
+By computing $L(x)$ and $S(y)$ for specific examples, together with symmetry considerations,
+we can compute the centroids of a wide variety of regions in the plane:
+
+\medskip
+
+\noindent{\bf Task 5:} Compute the centroid of a thin plate occupying: 
+
+\smallskip
+
+(a): the disk $D=\{(x,y)\ :\ (x+2)^2+y^2\leq 1\}$;
+
+(b): the triangle with vertices $(1,0)$, $(5,0)$, and $(4,4)$;
+
+(c): the region lying between the parabolas $y=2x-x^2$ and $y=2x^2-4x$
+
+\medskip
+
+Computations of centroids, especially by symmetry considerations, can aid us in other
+computations. For example, using the formula for the volume of a solid obtained
+by revolving a region $R$ around the line $x=c$, by cylindrical shells,
+
+\smallskip
+
+volume = $\displaystyle\int_a^b 2\pi |x-c| L(x)\ dx = \pm\int_a^b 2\pi (x-c) L(x)\ dx$ 
+
+\smallskip
+
+\hskip.5in $= 
+\pm 2\pi(\int_a^b xL(x)\ dx -c\int_a^b L(x)\ dx) = \pm 2\pi(\overline{x}-c)A(R) = 2\pi|\overline{x}-c|A(R)$
+
+\smallskip
+
+\noindent and there is a similar computation for lines $y=c$. This establishes the {\it Theorem of
+Pappus}: the volume of a solid of revolution (a region $R$ revolved around an axis in the plane 
+which misses $R$)
+is equal to the area of the region $R$, $A(R)$,
+times $2\pi|\overline{x}-c|$ (or, for horizontal lines, $2\pi|\overline{y}-c|$),
+the circumference of the circle traced out by the centroid of $R$.
+
+\medskip
+
+\noindent{\bf Task 6:} Use Pappus' Theorem to  compute the volumes of the solids obtained by
+revolving each of the regions in Task 5 around the lines
+
+\smallskip
+
+\centerline{(a):  $x=-3$  \hskip.5in (b): $y=6$.}
+
+\vfill
+\end{document}
+
+
+
