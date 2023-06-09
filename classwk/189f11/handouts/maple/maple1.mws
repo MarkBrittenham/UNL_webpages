@@ -1,0 +1,70 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "# implements Euclid'
+s algorithm to compute the gcd" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 89 "n:=1331; m:=177; while m>0 do r:=n mod m: q:=(n-r)/m: print(n,
+m,q,r); n:=m: m:=r: end do:" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"nG
+\"%J8" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG\"$x\"" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6&\"%J8\"$x\"\"\"(\"##*" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6&\"$x\"\"##*\"\"\"\"#&)" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6&\"##*\"#&)\"\"\"\"\"(" }}{PARA 11 "" 1 "" {XPPMATH 20 "6&\"#&)\"\"(
+\"#7\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6&\"\"(\"\"\"F#\"\"!" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "# run at your own risk... " 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 98 "N:=1: c:=0: for i from 1 \+
+to 200000 do if isprime(i) then N:=N*i: c:=c+1: end if: end do: print(
+N);" }}{PARA 7 "" 1 "" {TEXT -1 33 "Warning, computation interrupted\n
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "m:=384758475643; gcd(m,
+N);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG\"-VcZeZQ" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#\"',!)Q" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+18 "ifactor(gcd(m,N));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*&-%!G6#\"$.
+\"\"\"\"-F%6#\"%nPF(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 238 "# \+
+This code uses the N computed above to find moderately-sized prime num
+bers, by finding one with no factor in common with N. If your input nu
+mber is smaller than the bound above (200000?), then this will find th
+e nxt larger prime number." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+85 "m:=48596875439: i:=0: while gcd(m,N)>1 do m:=m+1: i:=i+1: end do: \+
+print(m); print(i);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\",Za(of[" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\")" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 61 "# This computes the *number* of primes up to your inp
+ut size." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 106 "stp:=200000; N
+:=1: c:=0: q:=0: for i from 1 to stp do if isprime(i) then c:=c+1: end
+ if: end do: print(c);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$stpG\"'++
+?" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"&%)z\"" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 91 "# This computes the number of digits in the prod
+uct of the primes up to your selected size." }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 138 "sz:=10000000; N:=0: c:=0: for i from 1 to sz do i
+f isprime(i) then N:=N+evalf(log(i)/log(10)): c:=c+1: end if: end do: \+
+print(N); print(c);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#szG\")+++5" 
+}}{PARA 7 "" 1 "" {TEXT -1 33 "Warning, computation interrupted\n" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "# This computes the Fibonacc
+i sequence!" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 81 "top:=30: a:=
+1: b:=1: for i from 1 to top do c:=a+b: print(c); a:=b: b:=c: end do:
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"#" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"&" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\")" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#\"#8" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#@" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"#M" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#b" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#\"#*)" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"$
+W\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"$L#" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"$x$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"$5'" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"$()*" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#\"%(f\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"%%e#" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#\"%\"=%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"%ln
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"&Y4\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"&6x\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"&d'G" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"&oj%" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#\"&D](" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"'$R@\"" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#\"'=k>" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"'6yJ
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"'HU^" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"'S?$)" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"(piM\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"(4$y@" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{MARK "14 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 
+1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
