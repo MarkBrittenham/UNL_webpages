@@ -1,0 +1,186 @@
+
+
+\input amstex
+\magnification=1200
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\ra{\rightarrow}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 4 Solutions}
+
+\bsk
+
+\bsk
+
+\item{13.} [BC\#2.18.11] Show that if $\dl T(z)={{az+b}\over{cz+d}}$ 
+(where $a,b,c,d\in{\Bbb C}$ and $ad-bc\neq 0$ then 
+
+\msk
+
+\item{(a)} if $c=0$ then $\dl\lim_{z\rightarrow\infty} T(z) = \infty$.
+
+\msk
+
+\item{} In this case $ad-bc=ad\neq 0$, so $a,d\neq 0$, and so $a/d=\alpha\neq 0$. 
+Setting $\beta=b/d$, we then have $T(z)=\alpha z+\beta$ with $\alpha\neq 0$, so 
+$|T(z)|=|\alpha z+\beta|\geq |\alpha z|-|\beta| = |\alpha||z|-|\beta|$, which, since
+$|\alpha|>0$, will grow large when $|z|$ grows large. So $T(z)\ra\infty$ as $z\ra\infty$.
+
+\bsk
+
+\item{(b)} if $c\neq 0$ then $\dl\lim_{z\rightarrow\infty} T(z) = {{a}\over{c}}$ and
+$\dl\lim_{z\rightarrow -d/c} T(z) = \infty$.
+
+\msk
+
+\item{} In this case we can look at $\dl T\Big({{1}\over{z}}\Big)={{a{{1}\over{z}}+b}\over{c{{1}\over{z}}+d}}
+={{a+bz}\over{c+dz}}$ and investigate what happens as $z\ra 0$. Since $c\neq 0$ and the numerator and
+denominator are continuous (at $z=0$), we get
+$\dl\lim_{z\rightarrow\infty} T(z) = \dl\lim_{z\rightarrow 0} T\Big({{1}\over{z}}\Big) 
+= {{a+0b}\over{c+0d}} =  {{a}\over{c}}$.
+
+\ssk
+
+\item{} For $\dl\lim_{z\rightarrow -d/c} T(z)$, we look at $\dl {{1}\over {T(z)}}={{cz+d}\over{az+b}}$.
+Then since $\dl a(-{{d}\over{c}})+b={{bc-ad}\over{c}}$ is (finite and) non-zero, both the
+numerator and denominator are continuous at $\dl -{{d}\over{c}}$, and the denominator is non-zero 
+there, we have 
+$\dl\lim_{z\rightarrow -d/c} {{1}\over{T(z)}} = 
+{{c(-{{d}\over{c}})+d}\over{a(-{{d}\over{c}})+b}} ={{-dc+cd}\over{-ad+cb}}=0$,
+so $\dl\lim_{z\rightarrow -d/c} T(z) = \infty$.
+
+ 
+\bsk
+
+\item{14.} [BC\#2.20.9]  Let $f$ be the function $\dl f(z)=\cases
+(\overline{z})^2/z & \text{if}\ z\neq 0\\
+0 & \text{if}\ z=0
+\endcases$ . 
+
+\ssk
+
+\item{} Show that $f$ is not differentiable at $0$, even though the
+limit of the difference quotient exists (and both agree) when you let $\Delta z\rightarrow 0$
+along the vertical and horizontal axes; show that if you approach $0$ along the line $h=k$ (where
+$\Delta z = h+\ii k$) you find a different limit.
+\msk
+
+\item{} $\dl f(z)=f(x+y\ii)={{(x-y\ii)^2}\over{x+y\ii}} = {{(x-y\ii)^3}\over{(x+y\ii)(x-y\ii)}} = 
+{{x^3-3x^2y\ii-3xy^2+y^3\ii}\over{x^2+y^2}}=
+{{x^3-3xy^2}\over{x^2+y^2}}+{{-3x^2y+y^3}\over{x^2+y^2}}\ii$. 
+
+\ssk
+
+\item{} So as we approach $0$ along the $x$-axis, $z=x+0\ii$ and 
+
+\ssk
+
+\item{} $\dl {{f(z)-f(0)}\over{z-0}}= {{x^3-3x0^2}\over{x(x^2+0^2)}}+{{-3x^20+0^3)}\over{x(x^2+y0^2)}}\ii
+={{x^3}\over{x^3}}+{{-3x^20+0^3)}\over{x^3}}\ii = 1$, with limit $1$.
+
+\ssk
+
+\item{} But as we approach $0$ along the $y$-axis, $z=0+y\ii$ and 
+
+\ssk
+
+\item{} $\dl {{f(z)-f(0)}\over{z-0}}= 
+{{0^3-3\cdot 0y^2}\over{(y\ii)(0^2+y^2)}}+{{-3\cdot 0^2y+y^3)}\over{(y\ii)(0^2+y^2)}}\ii
+=0+{{y^3}\over{y^3\ii}}\ii =1$, which \underbar{also} has limit $1$.
+
+\ssk
+
+\item{} \underbar{But} as we approach $0$ along the line $y=x$, $z=x+x\ii$ and 
+
+\ssk
+
+\item{} $\dl {{f(z)-f(0)}\over{z-0}}= 
+{{x^3-3xx^2}\over{(x+x\ii)(x^2+x^2)}}+{{-3x^2x+x^3)}\over{(x+x\ii)(x^2+x^2)}}\ii =
+{{-2x^3}\over{(x+x\ii)2x^2}}+{{-2x^3}\over{(x+x\ii)2x^2}}\ii = 
+{{-x-x\ii}\over{x+x\ii}}=-{{x+x\ii}\over{x+x\ii}}=-1$, which has limit $-1$. 
+
+\msk
+\item{} 
+Therefore, the difference quotient in fact has \underbar{no} limit, and so $f$
+is not differentiable at $z=0$.
+
+\bsk
+
+\item{15.} [BC\#2.23.6] Revisit problem \#14 from the viewpoint of the Cauchy-Riemann equations. 
+That is, write $f(z)=f(x+\ii y)=u(x,y)+\ii v(x,y)$ (noting that we define $u(0,0)=v(0,0)=0$). 
+Show that $u_x,u_y,v_x$, and $v_y$ all exist at $(0,0)$ {\it and} that they satisfy the
+Cauchy-Riemann equations at $(0,0)$. 
+
+\msk
+
+\item{} From the work above we see that $\dl u(x,y)={{x^3-3xy^2}\over{x^2+y^2}}$
+and $\dl v(x,y)={{-3x^2y+y^3)}\over{x^2+y^2}}$ (filled in to have value $0$ at $z=0$.
+Most of the work for this problem can be lifted out of the computations above: at $z=0$ 
+we have 
+
+\msk
+
+$\dl u_x=\lim_{x\ra 0} {{u(x,0)-u(0,0)}\over{x-0}}=\lim_{x\ra 0}{{x^3}\over{xx^2}}=\lim_{x\ra 0} 1 = 1$
+
+$\dl u_y=\lim_{y\ra 0} {{u(0,y)-u(0,0)}\over{y-0}}=\lim_{y\ra 0}{{0}\over{yy^2}}=\lim_{y\ra 0} 0 = 0$
+
+$\dl v_x=\lim_{x\ra 0} {{v(x,0)-u(0,0)}\over{x-0}}=\lim_{x\ra 0}{{0}\over{xx^2}}=\lim_{x\ra 0} 0 = 0$
+
+$\dl v_y=\lim_{y\ra 0} {{v(0,y)-u(0,0)}\over{y-0}}=\lim_{y\ra 0}{{y^3}\over{yy^2}}==\lim_{y\ra 0} 1 = 1$
+
+\ssk
+
+\item{} So at $z=0$, we have $u_x=1=v_y$ and $u_y=0=-v_x$. So the Cauchy-Riemann equations are satisfied at
+$z-0$, even though $f(z)$ is not differentiable at $z-0$ !
+
+\bsk
+
+
+\item{16.} Let $f(z)=z^3+1$ and $\dl a={{1+\sqrt{3}\ii}\over{2}}$ , $\dl b={{1-\sqrt{3}\ii}\over{2}}$.
+Show that there is {\it no} value of $w$ on the  line segment 
+$\dl\{ {{1+t\sqrt{3}\ii}\over{2}}\ :\ -1\leq t\leq 1\}$
+where $\dl f^\prime(w)={{f(b)-f(a)}\over{b-a}}$.
+
+\msk
+
+\item{} Note that $\dl a={{1+\sqrt{3}\ii}\over{2}}=\cos(\pi/3)+\ii\sin(\pi/3)$
+and $\dl b={{1-\sqrt{3}\ii}\over{2}}=\cos(-\pi/3)+\ii\sin(-\pi/3)$, 
+so $a^3=\cos(\pi)+\ii\sin(\pi)=-1$ and $b^3=\cos(-\pi)+\ii\sin(-\pi)=-1$
+
+\ssk
+
+\item{} So we find that $\dl f(a)=f\big({{1+\sqrt{3}\ii}\over{2}}\big)=(-1)+1=0=(-1)+1=f\big({{1-\sqrt{3}\ii}\over{2}}\big)=f(b)$
+and so $\dl{{f(b)-f(a)}\over{b-a}}=0$.
+
+\ssk
+
+\item{} But $f^\prime(z)=(z^3+1)^\prime=3z^2=0$ only for $z=0$. And since $z=0$ does not lie on the
+line $\dl \gamma(t)=\{ {{1+t\sqrt{3}\ii}\over{2}}$ through $a$ and $b$ (all such points have real part
+$1/2$), there is no $w$ on the line segment between $a$ and $b$ so that 
+$\dl f^\prime(w)=0={{f(b)-f(a)}\over{b-a}}$.
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+

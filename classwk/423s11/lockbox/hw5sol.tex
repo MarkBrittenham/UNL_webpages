@@ -1,0 +1,197 @@
+
+
+\input amstex
+\magnification=1200
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\del{\partial}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 5 Solutions}
+
+\bsk
+
+\bsk
+
+\item{17.} [BC\#2.26.7] Let the function $f(z)=u(x,y)+\ii v(x,y)$ be analytic in a domain $D$ and 
+consider the families of level curves \hfill
+
+\ssk
+
+\ctln{${\Cal U}=\{\{(x,y) : u(x,y)=c_1\} : c_1\in\bbc\}$ and 
+${\Cal V}=\{\{(x,y) : v(x,y)=c_2\} : c_2\in\bbc\}$.}
+
+\ssk
+
+\item{} Show that wherever they meet, the curves
+in ${\Cal U}$ are \underbar{orthogonal} to the curves in ${\Cal V}$. That is, the slopes
+of the two curves, at a point of intersection, are negative reciprocals. 
+
+\msk
+
+\item{} [Hint: for each curve
+treat it as implicitly defining $y$ as a function of $x$ and use the multivariate chain rule
+to, e.g., differentiate both sides of $u(x,y(x))=c_1$ w.r.t. $x$.]
+
+\msk
+
+\item{} With the notation above, suppose the level curve $u(x,y)=c_1$ is given (in a little
+neighborhood of a point) by the function $y=g(x)$. Then using the multivariable 
+chain rule, since $u(x,g(x))=c_1$ is the constant function, we have
+
+\ssk
+
+\ctln{$\dl 0={{du}\over{dx}}={{\del u}\over{\del x}}+{{\del u}\over{\del y}}{{dy}\over{dx}}
+={{\del u}\over{\del x}}+{{\del u}\over{\del y}}g^\prime(x)$, so
+$\dl g^\prime(x)=-{{\del u}\over{\del x}}\big/{{\del u}\over{\del y}}$.}
+
+\ssk
+
+\item{} An analogous argument, supposing that $v(x,y)=c_2$ defines $y=h(x)$ as a function of $x$,
+gives
+
+\ssk
+
+\ctln{$\dl h^\prime(x)=-{{\del v}\over{\del x}}\big/{{\del v}\over{\del y}}$.}
+
+\ssk
+
+\item{} But since $f$ is analytic, we have $\dl {{\del u}\over{\del x}}={{\del v}\over{\del y}}$
+and $\dl {{\del u}\over{\del y}}=-{{\del v}\over{\del x}}$. 
+So 
+
+\ssk
+
+\ctln{$\dl g^\prime(x)\cdot h^\prime(x)=
+(-{{\del u}\over{\del x}}\big/{{\del u}\over{\del y}})\cdot
+(-{{\del v}\over{\del x}}\big/{{\del v}\over{\del y}})
+=(-{{\del u}\over{\del x}}\big/{{\del u}\over{\del y}})\cdot
+({{\del u}\over{\del y}}\big/{{\del u}\over{\del x}})=-1$,}
+
+\ssk
+
+\item{} so the two level curves have negative reciprocal slopes, so have orthogonal
+tangent lines, as desired.
+
+\bsk
+
+\item{18.} [BC\#3.29.12] For $z=x+y\ii$, write $\text{Re}(e^{1/z})$ in terms of $x$ and $y$. Explain why
+this function is harmonic in every domain $D$ that does not contain $0$.
+ 
+
+\msk
+
+\item{} $\dl 1/z=\overline{z}/|z|^2= {{x}\over{x^2+y^2}}-\ii{{y}\over{x^2+y^2}}$, so 
+
+
+\item{} $\dl \text{Re}(e^{1/z})=\text{Re}(e^{u+iv})=e^u\cos(v)
+=e^{{{x}\over{x^2+y^2}}}\cos\Big(-{{y}\over{x^2+y^2}}\Big)
+=e^{{{x}\over{x^2+y^2}}}\cos\Big({{y}\over{x^2+y^2}}\Big)$
+
+\msk
+
+\item{} But we know that $h(z)=1/z$ is analytic except at $z=0$ (since it is the quotient of $1$ and $z$, both
+analytic everywhere, and the denominator $z$ is non-zero except at $z=0$), and $g(z)=e^z$ is entire,
+so their composition $f(z)=g(h(z))=e^{1/z}$ is analytic except where $g$ is not, i.e, except 
+at $z=0$. But then the real part of $f(z)$ is consequently harmonic everywhere that $f(z)$ is
+analytic. So $\dl e^{{{x}\over{x^2+y^2}}}\cos\Big({{y}\over{x^2+y^2}}\Big)$, is harmonic
+on any domain that does not contain $z=0$.
+
+\vfill
+\eject
+
+\item{19.} [BC\#3.31.5] Show that:
+
+\ssk
+
+\item{(a):} the set of values of $\log(\ii^{1/2})$ is $\dl \big(n+{{1}\over{4}}\big)\pi\ii$ for $n$ any integer,
+and that the same is true for $\dl{{1}\over{2}}\log(\ii)$
+
+\msk
+
+\item{} Since $\ii=e^{\pi i/2}$, the two values of $\ii^{1/2}$ are $e^{\pi i/4}$ and $e^{5\pi i/4}$.
+So the values of $\log(\ii^{1/2})$ are
+
+\ssk
+
+\ctln{$\dl \log(e^{\pi i/4})=\ln|e^{\pi i/4}|+\ii\arg(e^{\pi i/4})
+=\ln(1)+({{\pi}\over{4}}+2k\pi)\ii = ({{\pi}\over{4}}+2k\pi)\ii$}
+
+\item{} and
+
+\ssk
+
+\ctln{$\dl \log(e^{5\pi i/4})=\ln|e^{5\pi i/4}|+\ii\arg(e^{5\pi i/4})
+=\ln(1)+({{5\pi}\over{4}}+2k\pi)\ii = ({{\pi}\over{4}}+(2k+1)\pi)\ii$}
+
+\ssk
+
+\item{} So the one set of values is $\dl {{\pi}\over{4}}$ plus even multiples of $\pi$, and the other is
+$\dl {{\pi}\over{4}}$ plus odd multiples of $\pi$, so the complete set of values is $\dl {{\pi}\over{4}}$
+plus \underbar{all} multiples of $\pi$.
+
+\ssk
+
+\item{} [Actually, most of your solutions were better than this one....]
+
+\msk
+
+\item{} On the other hand, $\log(\ii)=\ln(e^{\pi\ii/2})+\ii\arg(e^{\pi\ii/2}) = (\pi/2+2k\pi)\ii$, so
+$\dl{{1}\over{2}}\log(\ii) = {{1}\over{2}}(\pi/2+2k\pi)\ii = (\pi/4+k\pi)\ii$, as well.
+
+\bsk
+
+\item{(b):} the set of values of $\log(\ii^2)$ is \underbar{not} the same as the set of values for $2\log(\ii)$.
+
+\msk
+
+\item{} In a similar vein, $\log(\ii^2)= \log(e^{\pi\ii})=\arg(e^{\pi\ii}) = 
+(\pi+2k\pi)\ii$ = all odd multiples of $\pi\ii$.
+
+\ssk
+
+\item{} But $2\log(\ii) = 2(\pi/2+2k\pi)\ii = (\pi+4\pi)\ii$ consists of \underbar{every}
+\underbar{other} odd multiple of $\pi\ii$, so the two sets of values are not the same.
+
+\bsk
+
+\item{20.} For $z=x+y\ii$, does $1^z$ always equal $1$ ?
+
+\msk
+
+\item{} By definition, $a^z=e^{z\log(a)}$. So $1^z=e^{z\log(1)}$. But 
+$\log(1)=\ln|1|+\ii\arg(1)=0+\ii(0+2k\pi)=2k\pi\ii$, depending on which branch
+of $\arg(z)$ we choose. So $1^z=e^{2k\pi iz}$ which, depending on our choice of
+$k$, need not equal $1$. For $k=0$, $1^z=e^{0z}=e^0=1$, but for, e.g., $k=1$,
+$1^{\ii}=e^{2\pi\ii\ii}=e^{-2\pi}\neq 1$. So depending upon which value of 
+$\log(1)$ that we choose, $1^z$ need not equal $1$.
+
+\msk
+
+\item{} Shorter, pithier solution: $1^{1/2}$ should be \underbar{allowed} to be $-1$,
+under any reasonable definition of exponentials, so, no.
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+

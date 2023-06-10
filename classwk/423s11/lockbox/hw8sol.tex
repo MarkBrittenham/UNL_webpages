@@ -1,0 +1,219 @@
+
+
+\input amstex
+\magnification=1200
+\vsize=8in
+\voffset=-.3in
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\ubr{\underbar}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 8}
+
+\msk
+
+\ctln{Due Thursday, April 21}
+
+\bsk
+
+\bsk
+
+\item{29.}  [BC\#4.52.10] Suppose that $w=f(z)$ is an {\it entire} function,
+and there is a (real) $A>0$ so that for every $z\in\bbc$ we have
+$|f(z)|\leq A|z|$. Show that there is a (complex) $a$ so that $f(z)=az$
+for all $z$.
+
+
+\msk
+
+\item{} For any $z_0$ we have, for $|z-z_0|=R$, $R=|z-z_0|\geq |z|-|z_0|$, so 
+$|z|\leq |z_0|+R$, so $|f(z)|\leq A(|z_0|+R)$ for any $R$, and for any
+$z$ on the circle of radius $R$ centered at $z_0$, so $|f(z)|\leq A(|z_0|+R)$
+for any $z$ on and inside of the circle (since it would lie on a 
+circle of even smaller radius).
+
+\ssk
+
+\item{} But then by Cauchy's Inequality, $\dl|f^{\prime\prime}(z_0)|\leq {{2A(|z_0|+R)}\over{R^2}}$,
+for any radius $R$; letting $R\rightarrow\infty$, the expression on the
+righthand side of this inequality goes to $0$, so $|f^{\prime\prime}(z_0)|=0$ for every
+$z_0$, so $f^{\prime\prime}(z_0)=0$, so $f^{\prime\prime}(z)$ is the zero function.
+So $f^{\prime\prime}(z)$ is entire and its Taylor series centered at $z=0$ is the zero series.
+Integrating term-by-term, the power series for $f^{\prime}(z)$ is the constant series, so 
+$f^{\prime}(z)=a$ for som constant $a$. Integrating this power series term-by-term, we 
+find that $f(z)=az+b$  for some constants $a$ and $b$. But $|b|=|f(0)|\leq A|0|=0$, so
+$|b|=0$, so $b=0$, so $f(z)=az$ for some constant $a$, as desired.
+
+
+
+
+
+\bsk
+
+\item{30.} [BC\#5.62.4] Find the Laurent series expansions centered at
+$z=0$ for the function 
+
+\ssk
+
+\item{} $\dl f(z)={{1}\over{z^2(1-z)}}$
+\hskip.2in valid for (a) $0<|z|<1$, and (b) $1<|z|<\infty$ .
+
+\bsk
+
+\item{(a):} For $0<|z|<1$ we have $\dl {{1}\over{1-z}}=\sum_{n=0}^\infty z^n$, 
+
+\item{} so
+$\dl f(z)={{1}\over{z^2(1-z)}}={{1}\over{z^2}}{{1}\over{(1-z)}}={{1}\over{z^2}}\sum_{n=0}^\infty z^n
+=\sum_{n=0}^\infty z^{n-2}=\sum_{n=-2}^\infty z^n$ .
+
+\msk
+
+\item{(b)} For $1<|z|<\infty$ we have $\dl 0<|{{1}\over{z}}|<1$ and so
+$\dl f(z)={{1}\over{z^3((1/z)-1)}}=-{{1}\over{z^3}}{{1}\over{1-(1/z)}} = 
+-{{1}\over{z^3}}\sum_{n=0}^\infty\Big({{1}\over{z}}\Big)^n = \sum_{n=0}^\infty (-1)z^{-(n+3)}
+=\sum_{n=-\infty}^{-3} (-1)z^n$ .
+
+
+\bsk
+
+\item{31.} [BC\#5.62.8] (a) If $a$ is real and $|a|<1$, show how to derive the
+Laurent series expansion
+$\dl {{a}\over{z-a}} = \sum_{n=1}^\infty {{a^n}\over{z^n}}$
+\hskip.2in valid for $|a|<|z|<\infty$ .
+
+\ssk
+
+\item{(b)} Setting $z=e^{i\theta}$ in the equation from (a), set the real and 
+imaginary parts of each side equal to one another to show that
+
+\ssk
+
+\ctln{$\dl \sum_{n=1}^\infty a^n\cos n\theta = 
+{{a\cos\theta - a^2}\over{1-2a\cos\theta+a^2}}$ \hskip.1in and \hskip.1in 
+$\dl \sum_{n=1}^\infty a^n\sin n\theta = 
+{{a\sin\theta}\over{1-2a\cos\theta+a^2}}$}
+
+\ssk
+
+\item{} for any real $a$ with $|a|<1$ and any real $\theta$.
+ 
+\bsk
+
+\item{(a):} This is roughly the same as the previous problem; 
+if $|a|<|z|<\infty$ then $\dl 0<|{{a}\over{z}}|<1$. Then:
+$\dl {{a}\over{z-a}} = {{a}\over{z(1-(a/z))}} = {{a}\over{z}}{{1}\over{1-(a/z)}}
+= {{a}\over{z}}\sum_{n=0}^\infty \Big({{a}\over{z}}\Big)^n = 
+\sum_{n=1}^\infty \Big({{a}\over{z}}\Big)^n = \sum_{n=1}^\infty {{a^n}\over{z^n}}$ .
+
+\msk
+
+\item{(b):} Setting $z=e^{i\theta}=\cos\theta+i\sin\theta$, then $|z|=1$ so for $|a|<1$
+we have $|a|<|z|<\infty$ so the results of part (a) apply. Then we have
+$1/z=\overline{z}=\cos\theta-i\sin\theta$, so
+
+\ssk
+
+\item{}
+$\dl {{a}\over{z-a}}={{a}\over{(\cos\theta+i\sin\theta)-a}}=
+{{a}\over{(\cos\theta-a)+i\sin\theta}}$
+
+\ssk
+
+$\dl ={{a[(\cos\theta-a)-i\sin\theta]}\over{[(\cos\theta-a)+i\sin\theta][(\cos\theta-a)-i\sin\theta]}}
+={{a[(\cos\theta-a)-i\sin\theta]}\over{[(\cos\theta-a)^2+(\sin\theta^2]}}$
+
+\ssk
+
+$\dl ={{a[(\cos\theta-a)-i\sin\theta]}\over{a^2-2a\cos\theta+1}}
+={{a(\cos\theta-a)}\over{a^2-2a\cos\theta+1}}-i{{a\sin\theta]}\over{a^2-2a\cos\theta+1}}$
+
+\ssk
+
+$\dl ={{a(\cos\theta-a)}\over{a^2-2a\cos\theta+1}}-i{{a\sin\theta]}\over{a^2-2a\cos\theta+1}}$
+
+\ssk
+
+\item{} But setting $z=e^{i\theta}$, we have $z^{-n}=e^{-in\theta}=\cos(n\theta)-i\sin(n\theta)$, so 
+
+\ssk
+
+$\dl\sum_{n=1}^\infty {{a^n}\over{z^n}} = \sum_{n=1}^\infty a^nz^n = 
+\sum_{n=1}^\infty a^n\cos(n\theta)-i\sin(n\theta) = 
+\sum_{n=1}^\infty a^n\cos(n\theta)-i\sum_{n=1}^\infty a^n\sin(n\theta)$ 
+
+\ssk
+
+\item{} \underbar{provided} both of these last series converge, which they do, absolutely, by comparison with
+the series $\dl\sum_{n=1}^\infty a^n$.
+
+\ssk
+
+\item{} So equating the real and imaginary parts of these two expressions, we have
+
+\ssk
+
+\item{} $\dl\sum_{n=1}^\infty a^n\cos(n\theta) = {{a(\cos\theta-a)}\over{a^2-2a\cos\theta+1}}$ and
+$\dl\sum_{n=1}^\infty a^n\sin(n\theta) = {{a\sin\theta]}\over{a^2-2a\cos\theta+1}}$, as desired.
+
+
+\bsk
+
+\item{32.} [BC\#6.71.2(part)] Use the Residue Theorem to evaluate the
+integral 
+
+\ssk
+
+\ctln{$\dl \int_C z^2e^{{{1}\over{z}}}\ dz$ ,}
+
+\ssk
+
+\item{} where $C(t)=3e^{it}$, $0\leq t\leq 2\pi$.
+
+\msk
+
+\item{} $\dl f(z)=z^2e^{{{1}\over{z}}}
+$ is analytic everywher except at $z=0$, since $e^z$ and $z^2$ are entire. Since $0$ lies inside of
+the circle $C$, by the Residue Theorem we have 
+
+\ssk
+
+\ctln{$\dl \int_C z^2e^{{{1}\over{z}}}\ dz = (2\pi i)\text{Res}_{z=0} f(z)$.}
+
+\ssk
+
+\item{} But since $\dl e^z=\sum_{n=0}^\infty {{1}\over{n!}}z^n$ for all $z$, 
+$\dl e^{1/z}=\sum_{n=0}^\infty {{1}\over{n!}}z^{-n} = \sum_{n=-\infty}^0 {{1}\over{|n|!}}z^{n}$,
+so $\dl f(z)=z^2\sum_{n=-\infty}^0 {{1}\over{|n|!}}z^{n}=\sum_{n=-\infty}^0 {{1}\over{|n|!}}z^{n+2}
+=\sum_{n=-\infty}^2 {{1}\over{|n-2|!}}z^{n}$ is the Laurent series for $f(z)$ for $0<|z|<\infty$.
+
+\ssk
+
+\item{} So $\dl \text{Res}_{z=0} f(z) = $ the coefficient of $z^{-1}$ in this series expenasion = 
+$\dl {{1}\over{3!}}={{1}\over{6}}$, so $\dl \int_C z^2e^{{{1}\over{z}}}\ dz = (2\pi i)/6 = \pi i/3$.
+
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+

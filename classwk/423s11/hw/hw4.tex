@@ -1,0 +1,99 @@
+
+
+\input amstex
+\magnification=1200
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 4}
+
+\msk
+
+\ctln{Due Thursday, Feb. 17}
+
+\bsk
+
+\bsk
+
+\item{13.} [BC\#2.18.11] Show that if $\dl T(z)={{az+b}\over{cz+d}}$ 
+(where $a,b,c,d\in{\Bbb C}$ and $ad-bc\neq 0$ then 
+
+\msk
+
+\item{(a)} if $c=0$ then $\dl\lim_{z\rightarrow\infty} T(z) = \infty$.
+
+\msk
+
+\item{(b)} if $c\neq 0$ then $\dl\lim_{z\rightarrow\infty} T(z) = {{a}\over{c}}$ and
+$\dl\lim_{z\rightarrow -d/c} T(z) = \infty$.
+
+\bsk
+
+\item{14.} [BC\#2.20.9]  Let $f$ be the function $\dl f(z)=\cases
+(\overline{z})^2/z & \text{if}\ z\neq 0\\
+0 & \text{if}\ z=0
+\endcases$ . 
+
+\ssk
+
+\item{} Show that $f$ is not differentiable at $0$, even though the
+limit of the difference quotient exists (and both agree) when you let $\Delta z\rightarrow 0$
+along the vertical and horizontal axes; show that if you approach $0$ along the line $h=k$ (where
+$\Delta z = h+\ii k$) you find a different limit.
+
+\bsk
+
+\item{15.} [BC\#2.23.6] Revisit problem \#14 from the viewpoint of the Cauchy-Riemann equations. 
+That is, write $f(z)=f(x+\ii y)=u(x,y)+\ii v(x,y)$ (noting that we define $u(0,0)=v(0,0)=0$). 
+Show that $u_x,u_y,v_x$, and $v_y$ all exist at $(0,0)$ {\it and} that they satisfy the
+Cauchy-Riemann equations at $(0,0)$. 
+
+\ssk
+
+\item{} [N.B. This shows that the CR equations alone are not enough to guarantee differentiability
+at a point.]
+ 
+\bsk
+
+\item{16.} Let $f(z)=z^3+1$ and $\dl a={{1+\sqrt{3}\ii}\over{2}}$ , $\dl b={{1-\sqrt{3}\ii}\over{2}}$.
+Show that there is {\it no} value of $w$ on the  line segment 
+$\dl\{ {{1+t\sqrt{3}\ii}\over{2}}\ :\ -1\leq t\leq 1\}$
+where $\dl f^\prime(w)={{f(b)-f(a)}\over{b-a}}$.
+
+\ssk
+
+\item{} (Note: It is probably most efficient to determine \underbar{all} of the $w$ for 
+which $f^\prime(w)$ = that specific value, and show that none of those points lie on the
+line segment!)
+
+\ssk
+
+\item{} [N.B. Consequently, the direct analogue of the Mean Value Theorem (central to most
+theoretical results in calculus!) does not hold in general for analytic functions.]
+
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+

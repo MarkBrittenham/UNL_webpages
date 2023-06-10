@@ -1,0 +1,105 @@
+    
+\input amstex
+\magnification=1200
+\voffset=-.2in
+\vsize=11in
+\hoffset=-.45in
+\hsize=6.2in
+
+\loadmsbm
+
+\def\ssk{\smallskip}
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\dl{\displaystyle}
+\def\vdd{\bigskip}
+\def\vfe{\vfill\eject}
+\def\vdr{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\ra{\rightarrow}
+\define\Log{\text{Log}}
+
+
+\input epsf
+
+\overfullrule=0pt
+\nopagenumbers
+
+\centerline{\bf Math 423/823 Exam 2}
+
+\smallskip
+
+\noindent {\bf Show all work.} How you get your answer is just 
+as important, if not more important, than the 
+answer itself. If you think it, write it!
+
+\msk
+
+\noindent You may use your notes and the course text as reference while 
+completing this exam. You may consult no other resource while working
+on the exam, with the exception of your instructor. This is {\it not}
+as a test of reading comprehension; we want you to be certain that you
+are answering the intended question. If something seems unclear, consult
+your instructor! (Email will likely be fastest.) 
+
+\msk
+
+\noindent Note that the exam consists of five (5) problems.
+{\bf Your completed exam is due on the desk in front of your instructor at the 
+beginning of class (9:32am) on Thursday, April 14.}
+
+\bigskip
+
+\item{1.} (20 pts.) Find all values of $z\in \bbc$ for which $\sin(z)=\ii$.
+
+\vdd
+
+\item{2.} (20 pts.) Find the value of $\dl\int_C f(z)\ dz$, where 
+$f(z)=f(x+iy)=x^2-iy^2$ and 
+
+\item{} $C(t)=e^{it}$ for $0\leq t\leq \pi$.
+
+\vdd
+
+\item{3.} (20 pts.) Find the integral of the function $\dl f(z)={{z}\over{z^3+1}}$ around the 
+simple closed curve 
+
+\ssk
+
+\item{} $C(t)=[3+\sin(5t)]\cos t + \ii[3+\sin(2t)]\sin t$ , $0\leq t\leq 2\pi$.
+[See figure below.]
+
+\vdd
+
+\item{4.} (20 pts.) Let $C$ be a simple closed curve oriented counterclockwise, $f$
+a function which is analytic on and inside of the curve $C$, and $z_1,z_2$
+two (distinct!) points lying inside of $C$. Show that
+
+\ssk
+
+\ctln{$\dl \int_C{{f(z)}\over{(z-z_1)(z-z_2)}}\ dz$ = $\dl{{f(z_1)-f(z_2)}\over{z_1-z_2}}$}
+
+\vdd
+
+\item{5.} (20 pts.) If $w=f(z)$ is  analytic {\bf and non-constant} on and inside of the simple closed curve
+$C$ and, for some constant $K$, $|f(z)|=K$ for every point
+on $C$, show that there is a point $z_0$ inside of $C$ where $f(z_0)=0$.
+
+\msk
+
+\item{} [ Hint: Suppose not! Then show that we can apply the Maximum Principle to both
+$f(z)$ and $\dl g(z)={{1}\over{f(z)}}$ and get ourselves into trouble! ]
+
+\vskip.2in
+
+\leavevmode
+
+\epsfxsize=2.6in
+\ctln{\epsfbox{ex2c.eps}}
+
+\end
+
+

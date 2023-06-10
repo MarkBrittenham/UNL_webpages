@@ -1,0 +1,104 @@
+
+
+\input amstex
+\magnification=1200
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\ubr{\underbar}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 7}
+
+\msk
+
+\ctln{Due Thursday, Mar. 31}
+
+\bsk
+
+\bsk
+
+\item{25.} Show that `integration by parts' works with analytic functions: 
+for any curve $\gamma(t)$, $a\leq t\leq b$, 
+if $f,g,f^\prime$ and $g^\prime$ are all analytic along $\gamma$, then 
+we have
+
+\ssk
+
+\ctln{$\dl \int_\gamma f(z)g^\prime(z)\ dz = [f(\gamma(b))g(\gamma(b))-f(\gamma(a))g(\gamma(a))]-\int_\gamma f^\prime(z)g(z)\ dz$}
+
+\ssk
+
+\item{} [Hint: $F(z)=f(z)g(z)$ is the antiderivative of what (analytic) function?]
+
+\item{} [Note: we will shortly be learning that the analyticity of $f^\prime$ and $g^\prime$ follow from that of $f$ 
+and $g$, so the requirements on the derivatives are not, in the end, really neccesary...]
+
+
+ 
+\bsk
+
+\item{26.} (Via the fundamental theorem of (`complex') calculus, ) 
+
+\item{} Compute $\int_\gamma ze^{iz}\ dz$, where
+$\gamma$ is the (unit) circular arc running from $z=1$ to $z=i$.
+
+\item{} [Hint! Problem \#25 will help...]
+
+\bsk
+
+\item{27.} [BC\#4.49.7] Show that if $\gamma(t)$, $a\leq t\leq b$ is a simple closed curve traversed counterclockwise (so that the bounded
+region $R$ it encloses is always on the left), then 
+
+\ssk
+
+\ctln{$\dl {{1}\over{2\ii}}\int_C\overline{z}\ dz$ = the area of the region $R$.}
+
+\ssk
+
+\item{} [Hint: this is a ``standard'' consequence of Green's Theorem (from multivariate calculus), in disguise.
+Write $C(t)=x(t)+\ii y(t)$, and compute what the integral should be...note that the \underbar{real} part is an integral
+whose antiderivative we can write down!]
+ 
+\bsk
+
+\item{28.} Evaluate the following integrals:
+
+\ssk
+
+\item{(a):} $\dl\int_{\gamma_1} {{dz}\over{z^2+1}}$, where $\gamma_1(t)=1+e^{2\pi ti}$, $0\leq t\leq 1$
+
+\ssk
+
+\item{(a):} $\dl\int_{\gamma_2} {{dz}\over{z^2+1}}$, where $\gamma_2(t)=\ii+e^{2\pi ti}$, $0\leq t\leq 1$
+
+\msk
+
+\item{} [Note: one of these requires the Cauchy integral formula (unless you have gotten very ambitious
+and are working them directly from the definition!).]
+
+
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+

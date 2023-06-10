@@ -1,0 +1,211 @@
+
+
+\input amstex
+\magnification=1200
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\hhh{\hskip.72in}
+\define\hhhh{\hskip.3in}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 1 Solutions}
+
+\msk
+
+\ctln{Due Thursday, Jan. 27}
+
+\bsk
+
+\bsk
+
+\item{1.} [BC\#1.2.6(b)] For complex numbers $z_1=a_1+b_1\ii$, etc., verify the
+distributive law:
+
+\msk
+
+\ctln{$z_1(z_2+z_3)=z_1z_2+z_1z_3$}
+
+\msk
+
+\item{} We can write out both sides, using our rules for addition and muliplication:
+
+\ssk
+
+\item{} $z_1(z_2+z_3) = (a_1+b_1\ii)((a_2+b_2\ii)+(a_3+b_3\ii))$
+
+\hhh $= (a_1+b_1\ii)((a_2+a_3)+(b_2+b_3)\ii)$
+
+\hhh $= (a_1(a_2+a_3)-b_1(b_2+b_3))+(a_1(b_2+b_3)+(a_2+a_3)b_1)\ii$
+
+\hhh $= (a_1a_2+a_1a_3-b_1b_2-b_1b_3)+(a_1b_2+a_1b_3+a_2b_1+a_3b_1)\ii$
+
+\ssk
+
+\item{} $z_1z_2+z_1z_3 = (a_1+b_1\ii)(a_2+b_2\ii)+(a_1+b_1\ii)(a_3+b_3\ii)$
+
+\hhh $ =
+((a_1a_2-b_1b_2)+(a_1b_2+a_2b_1)\ii)+((a_1a_3-b_1b_3)+(a_1b_3+a_3b_1)\ii)$
+
+\hhh $ =
+((a_1a_2-b_1b_2)+(a_1a_3-b_1b_3)) +(a_1b_2+a_2b_1)+(a_1b_3+a_3b_1))\ii$
+
+\hhh $ = 
+(a_1a_2+a_1a_3-b_1b_2-b_1b_3) +(a_1b_2+a_1b_3+a_2b_1+a_3b_1)\ii$
+
+\ssk
+
+\item{} But these last two expressions are identical! So  $z_1(z_2+z_3)=z_1z_2+z_1z_3$, as desired.
+
+\ssk
+
+\item{} [N.B.: apparently I didn't follow my own advice....]
+
+\bsk
+
+\item{2.} [BC\#1.3.1] Reduce each of the quantities to a real number:
+
+\msk
+
+\ctln{(a) $\dl {{1+2\ii}\over{3-4\ii}}+{{2-\ii}\over{5\ii}}$ \hskip1in 
+(c) $(1-\ii)^4$}
+
+\msk
+
+\item{} $\dl {{1+2\ii}\over{3-4\ii}}+{{2-\ii}\over{5\ii}} = 
+{{(1+2\ii)(3+4\ii)}\over{3^2+4^2}}+{{(2-\ii)(-5\ii)}\over{0^2+5^2}}$
+
+$\dl = 
+{{(3-8)+(4+6)\ii}\over{25}}+{{(0-5)+(-10+0)\ii}\over{25}}$
+
+$\dl = 
+{{(-5-5)+(10-10)\ii}\over{25}} = {{-10}\over{25}} = {{-2}\over{5}}$
+
+\msk
+
+\item{} $(1-\ii)^4 = [(1-\ii)^2]^2 = [(1-\ii)(1-\ii)]^2$
+
+$ = 
+[((1)(1)-(-1)(-1))+((1)(-1)+(1)(-1))\ii]^2$
+
+$ = [-2\ii]^2=(-2)^2\ii^2=(4)(-1)=-4$
+
+\bsk
+
+\item{3.} [BC\#1.5.11] Use mathematical induction to show that for all
+natural numbers $n$, and complex numbers $z_1,\ldots,z_n$, 
+
+\msk
+
+\ctln{$\overline{z_1+\cdots +z_n}=\overline{z_1}+\cdots +\overline{z_n}$ \hskip.3in and
+\hskip.3in $\overline{z_1\cdots z_n}=\overline{z_1}\cdots \overline{z_n}$}
+
+\msk
+
+\item{} From class, or direct computation, we know that $\overline{z_1+z_2} = \overline{z_1}+\overline{z_2}$
+and $\overline{z_1z_2} = \overline{z_1}\cdot\overline{z_2}$. This is the base case of our
+induction. [Technically, $n=1$ really is, and $\overline{z_1}=\overline{z_1}$ is even 
+more immediately true.] For our inductive hypothesis, we suppose that
+
+\ssk
+
+\ctln{$\overline{z_1+\cdots +z_n}=\overline{z_1}+\cdots +\overline{z_n}$ \hskip.3in and
+\hskip.2in $\overline{z_1\cdots z_n}=\overline{z_1}\cdots \overline{z_n}$}
+
+\ssk
+
+\item{} and show that the result is also true with $n$ replaced by $n+1$:
+
+\vfill\eject
+
+\item{} $\overline{z_1+\cdots +z_{n+1}}$
+
+$ = \overline{(z_1+\cdots +z_n)+z_{n+1}}
+= \overline{(z_1+\cdots +z_n)}+\overline{z_{n+1}} =
+(\overline{z_1}+\cdots +\overline{z_n})+\overline{z_{n+1}}$
+
+$ = \overline{z_1}+\cdots +\overline{z_{n+1}}$
+
+\ssk
+
+\item{} where the third equality is the base case of our induction, and the fourth equality 
+is our inductive hypothesis. So by induction, the result holds for all $n$.
+Similarly, 
+
+\msk
+
+\item{} $\overline{z_1\cdots z_{n+1}}$
+
+$ = \overline{(z_1\cdots z_n)\cdot z_{n+1}} =
+\overline{(z_1\cdots z_n)}\cdot\overline{z_{n+1}} =
+(\overline{z_1}\cdots \overline{z_n})\cdot\overline{z_{n+1}}$
+
+$ =
+\overline{z_1}\cdots \overline{z_{n+1}}$
+
+\ssk
+
+\item{} where, again, the third equality is the base case of our induction, and the fourth equality 
+is our inductive hypothesis. So by induction, the result also holds for all $n$.
+
+\bsk
+
+\item{4.} Show that if $p(x)=a_nx^n+\cdots +a_0$ is a polynomial with
+real coefficients, and $z=a+b\ii$ is a complex root of $p$ [i.e., 
+$p(z)=a_nz^n+\cdots +a_0=0$], then $\overline{z}$ is \underbar{also} a root of $p$.
+
+\msk
+
+\item{} The main point is that the coefficients, being real, are equal to their own complex conjujates;
+$a_i=a_i+0\ii$, so $\overline{a_i}=a_i-0\ii=a_i$. Then if $z$ is a root of $f$, since, by problem 
+\#3, $\overline{a_iz^i}=\overline{a_i}(\overline{z})^i=a_i(\overline{z})^i$, we have
+
+\ssk
+
+\item{} $\overline{p(z)} = 
+\overline{a_nz^n+\cdots +a_1z+a_0}$
+
+\hhhh $ = \overline{a_nz^n}+\cdots +\overline{a_1z}+\overline{a_0}$
+
+\hhhh $ =
+\overline{a_n}(\overline{z})^n+\cdots +\overline{a_1}\overline{z}+\overline{a_0}$
+
+\hhhh $ = 
+a_n(\overline{z})^n+\cdots +a_1\overline{z}+a_0$
+
+\hhhh $ = p(\overline{z})$
+
+\ssk
+
+\item{} But since $z$ is a root of $p$, $p(z)=0$, and so $p(\overline{z})=\overline{p(z)}=\overline{0}=0$,
+so $\overline{z}$ is a root of $p$, as well.
+
+\ssk
+
+\item{} [N.B.: Note that this line of work only works for polynomials with real coeeficients! For example,
+the roots of $p(z)=z^2-\ii$ (find them!) are not complex conjugates of one another....]
+
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+

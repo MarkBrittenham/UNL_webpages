@@ -1,0 +1,194 @@
+
+
+\input amstex
+\magnification=1200
+
+\loadmsbm
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\ubr{\underbar}
+
+\overfullrule=0pt
+\nopagenumbers
+
+%\documentstyle{amsppt}
+
+\ctln{\bf Math 423/823 Exercise Set 7 Solutions}
+
+\bsk
+
+\bsk
+
+\item{25.} Show that `integration by parts' works with analytic functions: 
+for any curve $\gamma(t)$, $a\leq t\leq b$, 
+if $f,g,f^\prime$ and $g^\prime$ are all analytic along $\gamma$, then 
+we have
+
+\ssk
+
+\ctln{$\dl \int_\gamma f(z)g^\prime(z)\ dz = [f(\gamma(b))g(\gamma(b))-f(\gamma(a))g(\gamma(a))]-\int_\gamma f^\prime(z)g(z)\ dz$}
+
+\ssk
+
+\item{} [Hint: $F(z)=f(z)g(z)$ is the antiderivative of what (analytic) function?]
+
+\item{} [Note: we will shortly be learning that the analyticity of $f^\prime$ and $g^\prime$ follow from that of $f$ 
+and $g$, so the requirements on the derivatives are not, in the end, really neccesary...]
+
+\msk
+
+\item{} Since $f$ and $g$ are bboth analytic, their product $F(z)=f(z)g(z)$ is analytic, and, by the
+product rule, $F^\prime(z)=f^{\prime}(z)g(z)+f(z)g^{\prime}(z)$ . Therefore,
+
+\ssk
+
+\ctln{$\dl\int_\gamma f^{\prime}(z)g(z)+f(z)g^{\prime}(z)\ dz = F(z)\Big|_{\gamma(a)}^{\gamma(b)} = 
+[f(\gamma(b))g(\gamma(b))-f(\gamma(a))g(\gamma(a))]$}
+
+\ssk
+
+\item{} But $\dl\int_\gamma f^{\prime}(z)g(z)+f(z)g^{\prime}(z)\ dz = 
+\int_\gamma f^{\prime}(z)g(z)\ dz +  \int_\gamma f(z)g^{\prime}(z)\ dz$, so equating these two and
+rearranging terms, we have 
+
+\ssk
+
+\ctln{$\dl \int_\gamma f(z)g^\prime(z)\ dz = 
+[f(\gamma(b))g(\gamma(b))-f(\gamma(a))g(\gamma(a))]-\int_\gamma f^\prime(z)g(z)\ dz$}
+
+\ssk
+
+\item{} as desired.
+
+\bsk
+
+\item{26.} (Via the fundamental theorem of (`complex') calculus, ) 
+
+\item{} Compute $\int_\gamma ze^{iz}\ dz$, where
+$\gamma$ is the (unit) circular arc running from $z=1$ to $z=i$.
+
+\item{} [Hint! Problem \#25 will help...]
+
+\ssk
+
+\item{} From the above, setting $f(z)=z$ and $g^\prime(z)=e^{iz}$, so $f^\prime(z)=1$ and $g(z)=-\ii e^{iz}$, we have
+
+\ssk
+
+\ctln{$\dl\int_\gamma ze^{iz}\ dz = -\ii ze^{iz}\Big|_1^i - \int_\gamma -\ii e^{iz}\ dz$ .}
+
+\ssk
+
+\item{} But $-e^{iz}$ is an antiderivative of $-\ii e^{iz}$, so 
+
+\item{} $\dl\int_\gamma ze^{iz}\ dz = (-\ii ze^{iz})-(-e^{iz})\Big|_1^\ii
+= (1-\ii z)e^{iz}\Big|_1^\ii = (1-\ii^2)e^{i^2}-(1-i)e^i$
+
+\hfill $\dl = 2e^{-1}-(1-i)(\cos(1)+\ii\sin(1)
+= [2e^{-1}-\cos(1)-\sin(1)]+\ii[\cos(1)-\sin(1)]$ .
+
+\bsk
+
+\item{27.} [BC\#4.49.7] Show that if $\gamma(t)$, $a\leq t\leq b$ is a simple closed curve 
+traversed counterclockwise (so that the bounded
+region $R$ it encloses is always on the left), then 
+
+\ssk
+
+\ctln{(**) = $\dl {{1}\over{2\ii}}\int_C\overline{z}\ dz$ = the area of the region $R$.}
+
+\ssk
+
+\item{} [Hint: this is a ``standard'' consequence of Green's Theorem (from multivariate calculus), in disguise.
+Write $C(t)=x(t)+\ii y(t)$, and compute what the integral should be...note that the \underbar{real} part is an integral
+whose antiderivative we can write down!]
+ 
+\msk
+
+\item{} If we write this as an integral $dt$, writing
+$\gamma(t)=x(t)+\ii y(t)$, so $\gamma^\prime(t)=x^\prime(t)+\ii y^\prime(t)$, we have 
+
+\ssk
+
+\item{} (**) = $\dl\int_a^b (x(t)-\ii y(t))(x^\prime(t)+\ii y^\prime(t))\ dt
+= \int_a^b x(t)x^\prime(t)-\ii y(t)x^\prime(t)+\ii x(t)y^\prime(t)-\ii^2 y(t)y^\prime(t)\ dt
+= \int_a^b x(t)x^\prime(t)+y(t)y^\prime(t) \ dt + \ii\int_a^b x(t)y^\prime(t)-y(t)x^\prime(t)\ dt$
+
+\ssk
+
+\item{} But $\dl\int_a^b x(t)x^\prime(t)+y(t)y^\prime(t) \ dt = {{1}\over{2}}([x(t)]^2+[y(t)]^2\Big|_a^b$, which
+since $\gamma(a)=\gamma(b)$, is $0$ (the two endpoints evaluate to the same (unknown) number).
+
+\ssk
+
+\item{} On the other hand, $\int_a^b x(t)y^\prime(t)-y(t)x^\prime(t)\ dt = \ii\int_a^b (-y(t),x(t))\cdot(x^\prime(t),y^\prime(t))\ dt$
+is the line integral of the vector field $F(x,y)=(-y,x)$ around the closed curve $\gamma$. But by Green's Theorem,
+this is equal to the double integral 
+
+\msk
+
+\ctln{$\dl\iint_R{{\partial (x)}\over{\partial x}}-{{\partial (-y)}\over{\partial y}}\ dx\ dy = 
+\iint_R(1)-(-1)\ dx\ dy = \iint_R 2\ dx\ dy = 2$(Area of R).}
+
+\msk
+
+Putting this all together, (**) = $\dl{{1}\over{2\ii}}[0+\ii[2$(Area of R)]] = Area of R, as desired.
+
+
+\bsk
+
+\item{28.} Evaluate the following integrals:
+
+\ssk
+
+\item{(a):} $\dl\int_{\gamma_1} {{dz}\over{z^2+1}}$, where $\gamma_1(t)=1+e^{2\pi ti}$, $0\leq t\leq 1$
+
+\msk
+
+\item{} $\dl f(z) = {{1}\over{z^2+1}} = {{1}\over{(z-i)(z+i)}}$ is analytic at every point of 
+$\bbc$ except $z=\ii,-\ii$. But both $\ii$ and $-\ii$ lie outside of the
+simple closed curve $\gamma_1$ ; $\gamma_1$ describes the circle of radius $1$ centered at $z=1$, and 
+both $\ii$ and $-\ii$ are $\sqrt{1^2+1^2}=\sqrt{2} > 1$ from $z=1$. So $f$ is analytic on and inside of
+the curve $\gamma_1$, so Cauchy's Theorem tells us that $\dl\int_{\gamma_1} {{dz}\over{z^2+1}}=0$ .
+
+\msk
+
+\item{(b):} $\dl\int_{\gamma_2} {{dz}\over{z^2+1}}$, where $\gamma_2(t)=\ii+e^{2\pi ti}$, $0\leq t\leq 1$
+
+\msk
+
+\item{} The argument is similar to part (a), except with a different conclusion. Since $-\ii$ is a distance $2$
+from $\ii$, $-\ii$ lies outside of the simple closed curve $\gamma_2$ (which traces out the circle
+of radius $1$ around $z=\ii$). So the function $\dl g(z)={{1}\over{z+i}}$ is analytic on and inside of $\gamma_2$.
+SO by the Cauchy Integral Formula, 
+
+\ssk
+
+\ctln{$\dl\int_{\gamma_2} {{dz}\over{z^2+1}} = \int_{\gamma_2} {{{{1}\over{z+i}}}\over{z-i}}\ dz = 
+\int_{\gamma_2} {{g(z)}\over{z-i}}\ dz = 2\pi\ii g(\ii) = {{2\pi i}\over{i+i}} = {{2\pi i}\over{2i}} = \pi$.}
+
+\msk
+
+\item{} [Note: one of these requires the Cauchy integral formula (unless you have gotten very ambitious
+and are working them directly from the definition!).]
+
+
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+
