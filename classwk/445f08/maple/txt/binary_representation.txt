@@ -1,0 +1,5 @@
+with(numtheory); printlevel:=0;
+
+a:=1; for i from 1 to 20 do a:=2*a: print(i,a); end do;
+
+N:=1234567; while N>0 do B:=floor(log(N)/log(2)); print(B); N:=N-2^B: end do;

@@ -1,0 +1,87 @@
+
+\input amstex
+\loadmsbm
+
+\nopagenumbers
+\parindent=-20pt
+\voffset=-.6in
+
+\magnification=1400
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\zzz{{\Bbb Z}}
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{August 29, 2008}
+
+\bigskip
+
+An integer $p\geq 2$ is {\it prime} if the only $a|p$ are
+$\pm 1$ and $\pm p$ .
+
+\medskip
+
+{\bf Fundamental Theorem of Arithmetic}: Every integer is a product 
+of primes, unique up to re-ordering.
+
+\smallskip
+
+Because: if there is an $n$ which isn't, then there is a {\it smallest}
+one; then it isn't prime (else $n=p$ is the product), so $n=ab$ with
+$1<a,b<n$, so each is a product of primes, so $n$ is a product of \u{their}
+products, a contradiction.
+
+Uniqueness: need {\it If $p$ is prime and $p|a_1\cdots a_n$, then $p|a_i$
+for some $i$.} Then if $n=p_1\cdots p_k = q_1\cdots q_l$, then $p_1|q_i$
+for some $i$, so $p_1=q_i$, so $p_2\cdots p_k = q_1\cdots q_{i-1}q_{i+1}\cdots
+q_l$. Continuing, we can pair all the $p$'s with $q$'s. [Better? If not
+always unique, there is a {\it smallest} number without unique factorization;
+structure proof as before.]
+
+\medskip
+
+Completely factoring a number a la FTA has two parts; find factors, and 
+decide when they are prime. But how do you decide that a number $N\geq 2$ 
+is prime?
+
+\medskip
+
+(1) $a|b$ implies $|a|\leq |b|$. So check that no $1<a<N$ divides $N$ .
+
+\smallskip
+
+(2) $N=ab$ implies $|a|\leq \sqrt{|N|}$ or $|b|\leq \sqrt{|N|}$ . So 
+check that no $1<a\leq\sqrt{N}$ divides $N$ .
+
+\smallskip
+
+(3) A prime factorization $N=p_1\cdots p_k$ with $p_1\leq p_2\leq \ldots \leq p_k$
+is unique. Then (if $k\geq 2$, i.e., N is not prime) 
+
+\smallskip
+
+\ctln{$p_1^2$ $\leq$ $p_1^k$ = $p_1\cdots p_1$ $\leq$ $p_1\cdots p_k$ = $N$, so $p_1\leq
+\sqrt{N}$}
+
+\smallskip
+
+So check that no {\it prime} $p$, $1<p \leq\sqrt{N}$ divides $N$ .
+
+\bigskip
+
+Almost every other primality (or factoring) test involves {\it Fermat's
+Little Theorem}.
+
+
+\vfill\end
+
+
+
+
+
+
+

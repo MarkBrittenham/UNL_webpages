@@ -1,0 +1,108 @@
+
+%\input amstex
+
+
+\magnification=1400
+
+
+%\load amsbm
+
+\nopagenumbers
+\parindent=-15pt
+\voffset=-.6in
+\hoffset=-.4in
+\hsize = 7.5 true in
+\vsize=10 true in
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{September 13, 2004}
+
+\bigskip
+
+Public key cryptosystem vulnerabilities: 
+
+\msk
+
+(1) The public key $(N,e)$ is public! Anyone can spend any amount of time
+breaking it (by factoring $N$), without waiting for cyphertext to be intercepted.
+Which is why we want $N$ to be so hard to factor....
+
+(2) If someone can guess what message (or which 1,000,000 messages) you might
+be sending, they can compute what cyphertext $B=A^e \pmod{N}$ would correspond to 
+that message, effectively reading the message $A$ without knowing the secret key $d$.
+
+\bsk
+
+On a lighter note, the analysis we have developed can shed light on {\it repeating decimal 
+expansions of fractions}. 
+
+\msk
+
+A number like \hskip.2in $\displaystyle {{1}\over{13}} = 0.076923076923\ldots = 0.\overline{076923}$
+has a repeating pattern, every 6 digits (in this case). What this means is that
+
+\ssk
+
+$\displaystyle {{1}\over{13}} = {{76923}\over{10^6}} + {{76923}\over{10^{12}}} + {{76923}\over{10^{18}}} + \cdots$ = 
+$\displaystyle (76923)\left({{1}\over{10^6}} + \left({{1}\over{10^6}}\right)^2+\left({{1}\over{10^6}}\right)^3+\cdots\right)$ = 
+$\displaystyle{{76923}\over{10^6-1}}$
+
+\ssk
+
+The {\it period} of the decinal expansion is 6, because $10^6-1 = (13)(76923)$, i.e., 
+$10^6\equiv 1\pmod{13}$ , and 6 is the smallest positive number for which this is true. 
+Borrowing some terminology from group theory, we say that 
+the {\it order} of 10, mod 13, is 6, and write ord$_{13}(10)=6$ ; it is the smallest 
+positive power of 10 which is $\equiv 1$ mod $n$. The definition of ord$_n(a)$
+is similar.
+
+\msk
+
+In general, ord$_n(a)$ makes sense only if $(a,n)=1$ ; then, by Euler's Theorem,
+
+\ssk
+
+\ctln{$a^{\Phi(n)}\equiv 1\pmod{n}$}
+
+\ssk
+
+where $\Phi(n)$ = the number 
+of integers $b$ between 1 and $n$ with $(b,n)=1$.
+So there is a smallest such power of $a$ . Conversely, if $a^k\equiv 1\pmod{n}$, 
+then $a\cdot a^{k-1}+n\cdot x = 1$ for some $x$, so $(a,n)=1$ . 
+
+\msk
+
+Since $a^k,a^m\equiv 1\pmod{n}$ implies $a^{(k,m)}\equiv 1\pmod{n}$ , if $(a,n)=1$
+then ord$_n(a)|\Phi(n)$ . So we can test for the ord$_n(a)$ by factoring 
+$\Phi(n) = p_1^{k_1}\cdots p_r^{k_r}$ . We know $a^{\Phi(n)}\equiv 1$ ; if we test each
+of $a^{\Phi(n)/p_i}$ and none are $\equiv 1$, then ord$_n(a)=\Phi(n)$ . If one of them is $\equiv 1$,
+then ord$_n(a)|\Phi(n)/p_i$ ; continuing in this way, we can quickly determine ord$_n(a)$ .
+
+\msk
+
+One question about periods that still remains unsolved is : are there infinitely many $n$ for 
+which ord$_n(10) = \Phi(n)$ ? The conjectured answer is ``yes''; in fact, Gauss conjectured
+that there are infinitely many primes $p$ with ord$_p(10) = p-1$ . 
+
+
+\vfill\end
+
+
+
+
+
+
+

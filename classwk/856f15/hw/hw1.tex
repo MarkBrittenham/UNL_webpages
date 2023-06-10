@@ -1,0 +1,103 @@
+\magnification=1200
+
+\nopagenumbers
+
+\input amstex
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\nidt{\noindent}
+\def\del{\partial}
+\def\bbr{{\Bbb R}}
+\def\cla{{\Cal A}}
+\def\clb{{\Cal B}}
+\def\clc{{\Cal C}}
+
+
+
+\ctln{\bf Math 856 Problem Set 1}
+
+\ssk
+
+\ctln{Starred (*) problems to be handed in Friday, September 18}
+
+\bsk
+
+\item{\bf (*) 1.} You've probably heard that a connected, locally path-connected
+space $X$ is path connected; the set of points reachable from $x\in X$ by a path is open
+(and its complement is also open). So a connected manifold is path connected.
+
+\ssk
+
+\item{} Show, further, that a connected manifold $M$ is {\it arcwise connected},
+that is, for every pair of points $x,y\in M$ there is a
+{\it one-to-one} path $\gamma:[0,1]\rightarrow M$ with $\gamma(0)=x,\gamma(1)=y$.
+
+\ssk
+
+\item{} (There is a theorem, due to Hahn and Mazurkiewicz (circa 1914), which says 
+that a Hausdorff space is path connected iff it is
+arcwise connected (which is kind of funny, since the term ``Hausdorff''
+wasn't really introduced until the 1920s?); but for manifolds you can 
+give a much more elementary proof...)
+
+\msk
+
+\item{\bf 2.} Show that every topological $n$-manifold has a countable basis consisting of
+open sets homeomorphic to $\bbr^n$. [Hint: start with any old countable basis....]
+
+\msk
+
+\item{\bf 3.} (Lee, p. 28, problem 1-4) If $0\leq k\leq \min\{m,n\}$, show that the set 
+$R_k\subseteq M(m\times n,{\Bbb R})$ of $m$-by-$n$ matrices 
+with rank $\geq k$ is an open subset of $M(m\times n,{\Bbb R})
+\cong {\Bbb R}^{mn}$ (and therefore admits a smooth structure).
+({\it Hint:} look at Lee's linear algebra appendix...)
+
+\ssk
+
+\item{} Note: This implies that the space $GL(n,\bbr)$ of invertible $n\times n$ matrices
+is a smooth manifold, of dimension $n^2$.
+
+\msk
+
+\item{\bf (*) 4.} 
+We will call two $C^\infty$ atlases $\cla$ and $\clb$ for a manifold $M$ {\it equivalent}
+if their union $\cla\cup\clb=\clc$ is also a $C^\infty$ atlas for $M$. Show that
+equivalence is an equivalence relation!
+
+\msk
+
+\item{\bf 5.} We say that two charts 
+$\phi :U\rightarrow {\Bbb R}^n$ , $\psi :V\rightarrow {\Bbb R}^n$,
+$U,V\subseteq M^n$ are \underbar{$C^\infty$-related}
+if $\psi\circ\phi^{-1}:\phi(U\cap V)\rightarrow \psi(U\cap V)$
+and $\phi\circ\psi^{-1}:\psi(U\cap V)\rightarrow \phi(U\cap V)$
+are both $C^\infty$. Show that the relation `` is $C^\infty$-related
+to '' is {\bf not} an equivalence relation.
+(Hint: $M^n = {\Bbb R}$ will suffice for an example...)
+
+\msk
+
+\item{\bf 6.} Show that ${\Bbb R}$ has uncountably many distinct smooth structures.
+[(Perhaps) show first that it is enough to find uncountably many charts, with intersecting domains 
+and ranges, no two of which are $C^\infty$-related to one another.]
+
+\msk
+
+\item{\bf (*) 7.}
+If $M$ and $N$ are smooth manifolds, show that $M\times N$ and $N\times M$,
+with the (two) product smooth structures 
+$\{(U_\alpha\times V_\beta,h_\alpha\times k_\beta)\}$
+are diffeomorphic. [I.e., exhibit (and verify) a diffeomorphism!]
+
+\msk
+
+\item{\bf 8:} Show that a function $f:M^n\rightarrow N^m$ is $C^\infty$ $\Leftrightarrow$ 
+$g\circ f:M^n\rightarrow {\Bbb R}$ is $C^\infty$ for {\it every} $C^\infty$ function
+$g:N^m\rightarrow {\Bbb R}$. 
+\vfill
+\end

@@ -1,0 +1,32 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "with(numtheory); pri
+ntlevel:=0;" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7P%&GIgcdG%)bigomegaG%&
+cfracG%)cfracpolG%+cyclotomicG%)divisorsG%)factorEQG%*factorsetG%'ferm
+atG%)imagunitG%&indexG%/integral_basisG%)invcfracG%'invphiG%*issqrfree
+G%'jacobiG%*kroneckerG%'lambdaG%)legendreG%)mcombineG%)mersenneG%*mink
+owskiG%(mipolysG%%mlogG%'mobiusG%&mrootG%&msqrtG%)nearestpG%*nthconver
+G%)nthdenomG%)nthnumerG%'nthpowG%&orderG%)pdexpandG%$phiG%#piG%*pprimr
+ootG%)primrootG%(quadresG%+rootsunityG%*safeprimeG%&sigmaG%*sq2factorG
+%(sum2sqrG%$tauG%%thueG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+printlev
+elG\"\"!" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "a:=1; for i fro
+m 1 to 1 do a:=2*a: print(i,a); end do;" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%\"aG\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$\"\"\"\"\"#" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 77 "N:=1234567; while N>0 do B:=
+floor(log(N)/log(2)); print(B); N:=N-2^B: end do;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"NG\"(nXB\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#?
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#<" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#\"#:" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#9" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#\"#7" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#5" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"*" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#\"\"(" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"#" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "3 0 0" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

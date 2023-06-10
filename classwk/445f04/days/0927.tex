@@ -1,0 +1,121 @@
+
+\input amstex
+
+
+\magnification=1400
+
+
+\loadmsbm
+
+\nopagenumbers
+\parindent=0pt
+
+\voffset=-.6in
+\hoffset=-.4in
+\hsize = 7.5 true in
+\vsize=10.5 true in
+
+%\voffset=1.2in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\smallskip
+
+\ctln{September 24, 2004}
+
+\medskip
+
+Last time we found the result {\it "If $p$ is an odd prime then $x^2\equiv -1\pmod{p}$ has a solution \lra $p\equiv 1\pmod{4}$"} useful.
+Now we will explore such equations more generally.
+
+\ssk
+
+When does the equation $x^n\equiv a\pmod{m}$ have a solution?
+
+\ssk
+
+We will find it useful to first deal with the warm-up problem {\it When does $nx\equiv a\pmod{m}$ have a solution?} For this, we have
+$nx\equiv a\pmod{m}$ \lra $m|nx-a$ \lra $a=nx-my$ for some $x,y$ \lra $(n,m)|a$. Further, if $nx_0\equiv a\pmod{n}$, then a complete 
+set of incongruent solutions is given by (setting $k=(n,m)$)
+
+\ssk
+
+\ctln{$\displaystyle  x_0,x_0+{{m}\over{k}}, \ldots ,x_0+(k-1){{m}\over{k}}$ , \hskip.2in since $\displaystyle m|n{{m}\over{k}}=m{{n}\over{k}}$}
+
+\ssk
+
+So there are in fact $(n,m)$ solutions, if there are any.
+
+\msk
+
+Turning now to the main question, (*) $x^n\equiv a\pmod{m}$, we begin by supposing $m$ is prime, so that there is a primitive root $r$ mod $m$ , i.e., 
+ord$_m(r)=m-1$ . Then either $m|a$ (so $a\equiv 0$ and $x=0$ solves (*)) or $(a,m)=1$ . In the latter case, $a=r^s$ for some $s$. Since $(a,m)=1$,
+any possible solution to (*) must have $(x,m)=1$, as well, and so we can write $x=r^t$ for some $t$. So the equation that we {\it really} wish to solve is
+
+\ssk
+
+\ctln{(**) $(r^t)^n\equiv r^s\pmod{m}$ \hskip.2in (where we wish to solve for $t$).}
+
+\ssk
+
+But this means we wish to solve $(r^{nt-s}\equiv 1\pmod{m}$ , which, since ord$_m(r)=m-1$, means $m-1|nt-s$, i.e., 
+$nt\equiv s\pmod{m-1}$ . But as we have just seen, this has a solution (and we know how many) \lra $(n,m-1)|s$ .
+Translating this back into information about $a$, we find that $s=(n,m-1)q$ so $a=r^s=r^{(n,m-1)q}$, so, mod $m$,
+
+\ssk
+
+\ctln{$\displaystyle a^{{m-1}\over{(n,m-1)}} = (r^{(n,m-1)q})^{{m-1}\over{(n,m-1}} = r^{(m-1)q} = (r^{m-1})^q\equiv 1^q = 1$}
+
+\ssk
+
+Conversely, if $\displaystyle a^{{m-1}\over{(n,m-1)}}\equiv 1$, then $\displaystyle r^{s{{m-1}\over{(n,m-1)}}}\equiv 1$ .
+Therefore ord$\displaystyle _m(b)=m-1|s{{m-1}\over{(n,m-1)}}$, so $\displaystyle (m-1){{s}\over{(n,m-1)}} = (m-1)y$ , so 
+$\displaystyle {{s}\over{(n,m-1)}} = y$ is an integer. So $(n,m-1)|s$, which means (**) has a solution, and we can follow the
+argument back up from there to see that (*) has a solution. So we find:
+
+\msk
+
+If $m$ is prime and $(a,m)=1$, then 
+
+\hfill $x^n\equiv a\pmod{m}$ has $\displaystyle \cases (n,m-1) \text{ solutions,} &\text{if }a^{{m-1}\over{(n,m-1)}}\equiv 1\cr
+                                                                                                     0 \text{ solutions, }&\text{if }\displaystyle a^{{m-1}\over{(n,m-1)}}\not\equiv 1\cr\endcases$
+
+\ssk
+
+Specializing to $n=2$, we have Euler's Criterion:
+
+\ssk
+
+If $m$ is  an odd prime and $(a,m)=1$, then 
+
+\hfill$x^2\equiv a\pmod{m}$ has $\displaystyle \cases 2 \text{ solutions,} &\text{if }a^{{m-1}\over{2}}\equiv 1\cr
+                                                                                                     0 \text{ solutions, }&\text{if }\displaystyle a^{{m-1}\over{2}}\equiv -1\cr\endcases$
+
+\msk
+
+So for example, by checking that $13^2=169\equiv -1\pmod{17}$, so $13^8\equiv 1\pmod{17}$, we find that
+$x^2\equiv 13\pmod{17}$ has (two) solutions.
+
+\vfill\end
+
+
+
+
+
+
+

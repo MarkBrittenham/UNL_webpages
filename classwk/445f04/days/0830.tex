@@ -1,0 +1,99 @@
+
+\input amstex
+\loadmsbm
+
+\nopagenumbers
+%\parindent=-20pt
+\parindent=0pt
+\voffset=-.6in
+
+\magnification=1400
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\zzz{{\Bbb Z}}
+\def\modp{\medspace {\underset p\to \equiv} \medspace}
+\def\modn{\medspace {\underset n\to \equiv} \medspace}
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{August 30, 2004}
+
+\bigskip
+
+Our previous approaches to checking for primes are too labor 
+intensive! Fermat's Little Theorem provides a better way.
+
+\medskip
+
+$(a,b)$ = gcd$(a.b)$ = greatest common divisor ; $a\modp b$ means $p|b-a$ ; 
+
+\medskip
+
+{\bf FLT:} If $p$ is prime and $(a,p)=1$, then $p|a^{p-1}-1$  (i.e., $a^{p-1} \modp 1$)
+
+\smallskip
+
+(Alternatively, if $p$ is prime then $a^p\modp a$ for all $a$  .)
+
+\medskip
+
+Main ingredients:
+
+\smallskip
+
+(1) If $p$ is prime, $(a,p)=1$, and $ab\modp ac$, then $b\modp c$
+
+\smallskip
+
+(2) If  $(a,n) = 1$ and $(b,n) = 1$ , then $(ab,n)=1$
+
+\medskip
+
+Then to prove FLT, look at 
+
+\ctln{$N$ = $(p-1)!a^{p-1}$ = $(1\cdot a)(2\cdot a)\cdots((p-1)\cdot a)$ .}
+ 
+If we show that $N\modp (p-1)!$, then since $((p-1)!,p)=1$ (by (2) 
+and induction), we have $a^{p-1}\modp 1$ 
+by (1). But, again by (1), if $xa\modp ya$ then $x\modp y$, so each of
+$1\cdot a, 2\cdot a, \ldots , (p-1)\cdot a$ are distinct, mod $p$. I.e., 
+this list is the same, mod $p$, 
+as $1,2,\ldots ,p-1$, except for possibly being written in a different order. 
+But then the products of the two lists are the 
+same, as desired.
+
+\bigskip
+
+FLT describes a property shared by all prime numbers. What is remarkable is that most
+composite numbers {\it don't} have this property. A composite number $n$  for which
+$a^n\modn a$ is called a {\it pseudoprime to the base $a$}. If $n$ is a pseudoprime to
+all bases, it is called a {\it Carmichael number}.
+
+\medskip
+
+Unfortunately (for primality testing), Carmichael numbers do exist. The smallest is 
+$561 = 3\cdot 11\cdot 17$. 
+
+\medskip
+
+It is a fact that Carmichael numbers can be characterized precisely as those $n$ for 
+which their prime factorization $n=p_1\cdots p_k$ has $p_1<p_2<\ldots <p_k$ 
+(factors are {\it distinct}) and $p_i-1|n-1$ for every $i$. We showed that numbers of this
+form {\it are} Carmichael numbers.
+
+\medskip
+
+Next step: find a {\it better} property of primes to test for!
+
+
+\vfill\end
+
+
+
+
+
+
+

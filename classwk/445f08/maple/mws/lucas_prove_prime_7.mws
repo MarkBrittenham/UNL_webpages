@@ -1,0 +1,60 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "restart: with(numthe
+ory); printlevel:=0: " }}{PARA 7 "" 1 "" {TEXT -1 69 "Warning, the pro
+tected name order has been redefined and unprotected\n" }}{PARA 12 "" 
+1 "" {XPPMATH 20 "6#7P%&GIgcdG%)bigomegaG%&cfracG%)cfracpolG%+cyclotom
+icG%)divisorsG%)factorEQG%*factorsetG%'fermatG%)imagunitG%&indexG%/int
+egral_basisG%)invcfracG%'invphiG%*issqrfreeG%'jacobiG%*kroneckerG%'lam
+bdaG%)legendreG%)mcombineG%)mersenneG%*minkowskiG%(mipolysG%%mlogG%'mo
+biusG%&mrootG%&msqrtG%)nearestpG%*nthconverG%)nthdenomG%)nthnumerG%'nt
+hpowG%&orderG%)pdexpandG%$phiG%#piG%*pprimrootG%)primrootG%(quadresG%+
+rootsunityG%*safeprimeG%&sigmaG%*sq2factorG%(sum2sqrG%$tauG%%thueG" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1009 "prmstart:=29: expstart:=2
+00: expend:=300: p:=nextprime(prmstart):  test:=false: for k from exps
+tart to expend while evalb(test=false) do n:=p*(2^k)+1; test:=isprime(
+n): end do; cat(`k = `,k); cat(`n = `,n); printlevel:=1: if evalb(k>=e
+xpend) then print(`The exponent of 2 left your chosen range without fi
+nding a prime; choose new starting values.`); else cat(` n = `,p,`*2^(
+`,k,`) may be prime, it has `,ilog10(n),` digits. Checking: `); printl
+evel:=0: m:=2: while evalb(m&^((n-1)/2) mod n =1) do m:=m+1: end do;  \+
+s:=2: while evalb(s&^((n-1)/p) mod n = 1) do s:=s+1: end do; printleve
+l:=1: cat(` `); cat(`n is prime. The base `,m,` verifies Lucas' condit
+ion for the prime 2 ;`); cat(`the base `,s,` verifies Lucas' condition
+ for the prime `,p,` . Specifically:`); cat(` `); cat(m,`^`,(n-1)/2,` \+
+= `,m&^((n-1)/2) mod n,` mod `,n); cat(m,`^`,(n-1),` = `,m&^((n-1)) mo
+d n,` mod `,n); cat(s,`^`,(n-1)/p,` = `,s&^((n-1)/p) mod n,` mod `,n);
+ cat(s,`^`,(n-1),` = `,s&^((n-1)) mod n,` mod `,n); end if; printlevel
+:=0:" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%(k~=~217G" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#%bon~=~3264681041725272787635458858193783401885747957
+417022448883640303617G" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%en~n~=~31*2
+^(217)~may~be~prime,~it~has~66~digits.~Checking:~G" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%+printlevelG\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#%\"~G" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%]on~is~prime.~The~base~3~
+verifies~Lucas'~condition~for~the~prime~2~;G" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#%`othe~base~2~verifies~Lucas'~condition~for~the~prime~3
+1~.~Specifically:G" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"~G" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#%^x3^163234052086263639381772942909689170094
+2873978708511224441820151808~=~326468104172527278763545885819378340188
+5747957417022448883640303616~mod~3264681041725272787635458858193783401
+885747957417022448883640303617G" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#%\\
+t3^3264681041725272787635458858193783401885747957417022448883640303616
+~=~1~mod~3264681041725272787635458858193783401885747957417022448883640
+303617G" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#%\\x2^105312291668557186697
+918027683670432318895095400549111254310977536~=~7354455325907461999783
+27879268553974396800394555629549131083497108~mod~326468104172527278763
+5458858193783401885747957417022448883640303617G" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#%\\t2^3264681041725272787635458858193783401885747957417
+022448883640303616~=~1~mod~3264681041725272787635458858193783401885747
+957417022448883640303617G" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}}{MARK "1 0 0" 1009 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

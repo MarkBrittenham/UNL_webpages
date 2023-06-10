@@ -1,0 +1,123 @@
+
+\input amstex
+
+
+\magnification=1400
+
+
+\loadmsbm
+
+\nopagenumbers
+\parindent=0pt
+
+\voffset=-.6in
+\hoffset=-.4in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.2in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\smallskip
+
+\ctln{October 6, 2004}
+
+\medskip
+
+The {\it Legendre symbol}; for $p$ an odd prime, 
+
+\vskip-.1in
+
+\hfill $\displaystyle \Big({{a}\over{p}}\Big) = \cases 0 &\text{if }p|a \cr
+1 &\text{if } a \text{ is a quadratic residue mod } p\cr
+-1 &\text{if } a \text{ is a quadratic non-residue mod } p\cr
+\endcases$
+
+By Euler's criterion, $\displaystyle \Big({{a}\over{p}}\Big) \equiv a^{{p-1}\over{2}}\pmod{p}$ .
+
+\msk
+
+{\it Lemma of Gauss:} Let $p$ be an odd prime and $(a,p)=1$. For $1\leq k\leq {{p-1}\over{2}}$ let $ak=pt_k+a_k$ with
+$0\leq a_k\leq p-1$ . Let $A$ = $\{k: a_k>{{p}\over{2}}\}$ , and let $n$ = $|A|$ = the number of elements in $A$ . Then
+$\displaystyle \Big({{a}\over{p}}\Big) = (-1)^n$ .
+
+\ssk
+
+To see this, first note that $a_k\neq 0$ for every $k$, since $p\not | ak$ . Let $q_1,\ldots ,q_n$ be the $a_k$'s greater then $p/2$,
+and let $r_1,\ldots ,r_m$ be the other $a_k$'s. Then $p-q_1,\ldots ,p-q_n,r_1\ldots ,r_m$ are all $\leq {{p-1}\over{2}}$, and are
+all {\it distinct}; $q_i=q_j$ or $r_i=r_j$ implies $p|ak_i-ak_j$, so $p|k_i-k_j$, contradicting that $-{{p}\over{2}}<k_i-k_j<{{p}\over{2}}$,
+and $p-q_i=r_j$ implies $p=q_i+r_j$ so $p|ak_i+ak_j$, contradicting that $0<k_i+k_j\leq p-1$ . This means that the sequence
+$p-q_1,\ldots ,p-q_n,r_1\ldots ,r_m$ is identical to $1,2,\ldots,{{p-1}\over{2}}$, just written in a different order. But then
+
+\ctln{$(p-q_1)\cdots (p-q_n)r_1\cdots r_m = \big({{p-1}\over{2}}\big)!$}
+
+But, mod $p$, $(p-q_1)\cdots (p-q_n)r_1\cdots r_m\equiv (-q_1)\cdots(-q_n)r_1\cdots r_m = (-1)^nq_1\cdots q_nr_1\cdots r_m \equiv
+(-1)^n(a\cdot 1)(a\cdot 2)\cdots (a\cdot{{p-1}\over{2}})$, since the $q_i$'s and $r_i$'s are together a reordering of the $a_k$, each
+of which is $\equiv ak$. So
+
+\vskip-.05in
+
+\ctln{$\big({{p-1}\over{2}}\big)!\equiv (-1)^na^{{p-1}\over{2}}\big({{p-1}\over{2}}\big)!$}
+
+and since $(p,({{p-1}\over{2}}\big)!)=1$, we have, mod $p$, $1\equiv (-1)^na^{{p-1}\over{2}}$, so $\Big({{a}\over{p}}\Big)\equiv a^{{p-1}\over{2}}\equiv (-1)^n$ .
+But since $p$ is an odd prime, $p\geq 3$, and since each of the two terms above are $\pm 1$, this implies 
+$\Big({{a}\over{p}}\Big) = (-1)^n$ , as desired.
+
+\msk
+
+{\it Theorem:} Let $p$ be an odd prime and $(a,2p)=1$ (i.e., $(a,p)=1$ and $a$ is odd). Let 
+$t=\sum_{j=1}^{{p-1}\over{2}}\lfloor{{aj}\over{p}}\rfloor$ . Then $\displaystyle \Big({{a}\over{p}}\Big) = (-1)^t$ .
+
+\ssk
+
+To see this, we write $aj=pt_j+a_j$ as in the lemma above. Then $\lfloor{{aj}\over{p}}\rfloor=t_j$ and so 
+$t=\sum_{j=1}^{{p-1}\over{2}}t_j$ . But
+\hskip.1in (*) $a\sum_{j=1}^{{p-1}\over{2}}j = \sum_{j=1}^{{p-1}\over{2}}aj = \sum_{j=1}^{{p-1}\over{2}}pt_j+a_j = p\sum_{j=1}^{{p-1}\over{2}}t_j+\sum_{i=1}^nq_i+\sum_{i=1}^mr_i = pt+\sum_{i=1}^nq_i+\sum_{i=1}^mr_i$ , \hskip.1in 
+using the notation of the lemma. But since, as in the lemma, $p-q_1,\ldots ,p-q_n,r_1\ldots ,r_m$ is a reordering of $1,\ldots ,{{p-1}\over{2}}$, 
+we have 
+
+(**) $\sum_{j=1}^{{p-1}\over{2}}j = \sum_{i=1}^n(p-q_i)+\sum_{i=1}^mr_i = pn-\sum_{i=1}^nq_i+\sum_{i=1}^mr_i$ . \hskip.1in Subtracting
+(**) from (*), we get:
+
+\ssk
+
+\ctln{$(a-1)\sum_{j=1}^{{p-1}\over{2}}j = p(t-n)+2\sum_{i=1}^nq_i$}
+
+\ssk
+
+Consequently, since, mod $2$, $a-1\equiv 0$ ($a$ is odd) and $2\sum_{i=1}^nq_i\equiv 0$, we have $2|p(t-n)$, and so since
+$p$ is odd, $2|t-n$ . So $(-1)^t=(-1)^n$ ; together with the lemma above, this gives our result.
+
+\msk
+
+For next time, it is worth noting that $\sum_{j=1}^{{p-1}\over{2}}j ={{1}\over{2}}({{p-1}\over{2}})({{p-1}\over{2}}+1) = {{p^2-1}\over{8}}$ .
+
+
+
+
+\vfill\end
+
+
+
+
+
+
+

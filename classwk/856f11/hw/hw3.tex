@@ -1,0 +1,84 @@
+\magnification=1200
+
+\nopagenumbers
+
+\vsize=10in
+\voffset=-.3in
+
+\input amstex
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\nidt{\noindent}
+\def\del{\partial}
+\def\bbr{{\Bbb R}}
+\def\cla{{\Cal A}}
+\def\clb{{\Cal B}}
+\def\clc{{\Cal C}}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+
+\ctln{\bf Math 856 Problem Set 3}
+
+\ssk
+
+\ctln{Starred (*) problems to be handed in Thursday, November 3}
+
+\bsk
+
+\item{\bf 14.} The tangent space for a manifold $M$ with boundary is defined in exactly 
+the same way as for a manifold; the derivations at a point in $\del M$ are allowed
+to point ``in all the directions'' of $\bbr^n$. 
+
+\ssk
+
+\item{} We say that a tangent vector $X\in T_aM$ for $a\in \del M$ ``points inward'' if in 
+some set of local coordinates $h=(x^1,\ldots ,x^n)$ we have $X=\sum_i v^i\del/\del x^i$
+with $v^n>0$. (Here $h$ maps to the upper half-space, where $x^n\geq 0$.) Show that the
+notion of ``pointing inward'' is independent of coordinate chart.
+
+\msk
+
+\item{\bf 15.} [Lee, p.101, problem 4-9] Suppose that the map $F:M\rightarrow N$
+is a local diffeomorphism (that is, for every $a\in M$, there is a neighborhood
+$\Cal U$ of $a$ so that $F|_{\Cal U}:{\Cal U}\rightarrow F({\Cal U})$ is a diffeomorphism).
+Show that for every smooth vector field $Y$ on $N$ there is a unique smooth vector field
+$X$ on $M$ that is $F$-related to $Y$.
+
+\msk
+
+\item{\bf (*) 16.} If $X,Y$ are smooth tangent vector fields on $M$, and 
+$f,g\in C^\infty(M)$, show that 
+\hskip.2in $[fX,gY] = (fg)[X,Y]+(fXg)Y-(gYf)X$ . [Hint: evaluate on a third smooth function!]
+
+\msk
+
+\item{\bf (*) 17.} [Lee, p.346, Problem 13-1] If $M$ is a smooth manifold that is 
+the union of two open subsets $U$, $V$ with $U\cap V$ connected, and if
+$TM|_U$ and $TM|_V$ are orientable bundles, show that $M$ is orientable.
+Use this to show that $S^n$ is orientable for every $n\geq 1$.
+
+\msk
+
+\item{\bf 18.} If $\xi$ is a vector bundle, show that the Whitney sum $\xi\oplus \xi$ is orientable.
+
+\msk
+
+\item{\bf (*) 19.} [``Bundle Section Extension Lemma''] Given a smooth vector bundle $p:E\ra M$
+over a smooth manifold $M$, a closed subset $A\subseteq M$, and a smooth section
+$s:A\ra E$ defined over $A$ (that is, for every $a\in A$ there is a neighborhood 
+$U_a$ of $a$ in $M$ and a smooth section $s_U:U\ra E$ so that $s_u=s$ on $A\cap U$), 
+show that there is a global smooth section $S:M\ra E$ with $S|_A=s$ . [Hint: partition
+of unity...]
+
+\msk
+
+\item{\bf 20.} [Lee, p.151, Problem 6-3] Show that the tangent bundle $TM$ is trivial 
+if and only if the cotangent bundle $T^*M$ is also trivial.
+
+
+\vfill
+\end

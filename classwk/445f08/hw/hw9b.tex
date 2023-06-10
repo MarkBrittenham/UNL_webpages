@@ -1,0 +1,70 @@
+\input amstex
+\magnification=1200
+
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\dsl{\displaystyle}
+
+\overfullrule=0pt
+\nopagenumbers
+
+
+%(NZM, Problem ) 
+
+\ctln{\bf Math 445 Homework 9}
+
+\msk
+
+\ctln{Due whenever you feel like it (before November 26...)}
+
+\bsk
+
+\item{33.} [NZM, p.333, Problem 7.3.3] Show that if the continued fraction
+$[a_0,\ldots ,a_n]$ has convergents $h_i/k_i$, then 
+$k_i/k_{i-1}=[a_i,a_{i-1},\ldots,a_0]$ for every $i\geq 1$.
+
+\bsk
+
+\item{34.} [NZM, p.336, Problem 7.5.3 (sort of)] If $\alpha < \beta < \gamma$ are irrational numbers, 
+$\alpha=[a_0,a_1\ldots]$ , 
+$\beta=[b_0,b_1,\ldots]$ , 
+$\gamma=[c_0,c_1,\ldots...]$ , and $a_i=c_i$ for $0\leq i\leq n$ , then 
+$a_i=b_i=c_i$ for $0\leq i\leq n$ .
+
+\msk
+
+\item{} [Hint: Induction! Use $\alpha = [a_0,\ldots ,a_{i-1},a_i+r_i] $, etc. and Problem \#30 to compare 
+$\displaystyle a_{i+1}=\lfloor{{1}\over{r_i}}\rfloor$ , etc. 
+Note that if $x<y$ then $\lfloor x\rfloor \leq \lfloor y\rfloor$ .]
+
+\bsk
+
+\item{35.} [NZM, p. 333, \# 7.3.6] Let $p$ be prime and suppose
+$u^2\equiv -1\pmod{p}$ (so $p\equiv 1\pmod{4}$). 
+Let $[a_0,\ldots ,a_n]$ be the continued fraction expansion of 
+$\dsl {{u}\over{p}}$ , and let $i$ be the largest integer with $k_i\leq \sqrt{p}$ . Show that
+$\dsl |{{h_i}\over{k_i}}-{{u}\over{p}}| < {{1}\over{k_i\sqrt{p}}}$, and $|h_ip-k_iu|<\sqrt{p}$ .
+Setting $x=k_i$ and $y=h_ip-uk_i$, show that $p|x^2+y^2$ and $x^2+y^2<2p$, so 
+$x^2+y^2=p$ .
+
+\bsk
+
+\item{36.} [NZM, p. 336, \# 7.4.7] Show that if $x=[a_0,a_1,\ldots]$ is the 
+simple continued fraction expansion of (the irrational number) $x$, with convergents 
+$h_n/k_n$, then 
+
+\ssk
+
+\ctln{$k_n|k_{n-1}x-h_{n-1}|+k_{n-1}|k_nx-h_n|=1$}
+
+\ssk
+
+\item{} for all $n$. [Hint: figure out how to (correctly!) remove the absolute value signs.]
+
+
+
+
+\vfill\end
+

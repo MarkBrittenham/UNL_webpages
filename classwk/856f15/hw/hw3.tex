@@ -1,0 +1,106 @@
+\magnification=1200
+
+\nopagenumbers
+
+\vsize=10in
+\voffset=-.3in
+
+\input amstex
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\nidt{\noindent}
+\def\del{\partial}
+\def\bbr{{\Bbb R}}
+\def\cla{{\Cal A}}
+\def\clb{{\Cal B}}
+\def\clc{{\Cal C}}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+
+\ctln{\bf Math 856 Problem Set 3}
+
+\ssk
+
+\ctln{Starred (*) problems to be handed in Friday, October 30}
+
+\bsk
+
+
+\item{\bf (*) 16.} If $X,Y$ are smooth tangent vector fields on $M$, and 
+$f,g\in C^\infty(M)$, show that 
+\hskip.2in $[fX,gY] = (fg)[X,Y]+(fXg)Y-(gYf)X$ . [Hint: evaluate on a third smooth function!]
+
+\msk
+
+\item{\bf 17.} [Lee, p. 101, problem 4-7] Let $M,N$ be smooth manifolds, $f:M\ra N$ a smooth map, 
+and define $F:M\ra M\times N$ by $F(x)=(x,f(x))$ . Show that for every tangent vector field $X$ on $M$
+there is a tangent vector field $Y$ on $M\times N$ so that $Y$ is $F$-related to $X$.
+
+\msk
+
+\item{\bf 18.} [Lee, p.101, problem 4-9] Suppose that the map $F:M\rightarrow N$
+is a local diffeomorphism (that is, for every $a\in M$, there is a neighborhood
+$\Cal U$ of $a$ so that $F|_{\Cal U}:{\Cal U}\rightarrow F({\Cal U})$ is a diffeomorphism).
+Show that for every smooth vector field $Y$ on $N$ there is a unique smooth vector field
+$X$ on $M$ that is $F$-related to $Y$.
+
+\msk
+
+\item{\bf (*) 19.} [``Bundle Section Extension Lemma''] Given a smooth vector bundle $p:E\ra M$
+over a smooth manifold $M$, a closed subset $A\subseteq M$, and a smooth section
+$s:A\ra E$ defined over $A$ (that is, for every $a\in A$ there is a neighborhood 
+$U_a$ of $a$ in $M$ and a smooth section $s_U:U\ra E$ so that $s_u=s$ on $A\cap U$), 
+show that there is a global smooth section $S:M\ra E$ with $S|_A=s$ . [Hint: partition
+of unity...]
+
+\msk
+
+\item{\bf 20.} [Lee, p.101, problem 5-8] Let $p:E\ra M$ be a smooth $n$-dimensional 
+vector bundle and 
+$X_1,\ldots ,X_k$ be linearly independent smooth sections of $E$ defined over an open 
+subset $U\subseteq M$.
+Show that for every $a\in U$ there is a neighborhood $V$ of $a$ and smooth sections
+$Y_{k+1},\ldots ,Y_n$ defined over $V$ so that $(X_1,\ldots ,X_k,Y_{k+1},\ldots ,Y_n)$
+forms a local frame for $E$ over $U\cap V$. 
+
+\ssk
+
+(Hint: if $v_1,\ldots ,v_n$ form a basis for $\bbr^n$, then why is it that if you wiggle 
+the first $k$ vectors a little bit, you still have a basis?)
+
+\msk
+
+\item{\bf (*) 21.} [Lee, p.346, Problem 13-1] If $M$ is a smooth manifold that is 
+the union of two open subsets $U$, $V$ with $U\cap V$ connected, and if
+$TM|_U$ and $TM|_V$ are orientable bundles, show that $M$ is orientable.
+Use this to show that $S^n$ is orientable for every $n\geq 2$.
+
+\msk
+
+\item{\bf 22.} Show that $M\times N$ is orientable \lra\ both $M$ and $N$ are.
+
+\msk
+
+\item{\bf 23.} The tangent space for a manifold $M$ with boundary is defined in exactly 
+the same way as for a manifold; the derivations at a point in $\del M$ are allowed
+to point ``in all the directions'' of $\bbr^n$. 
+
+\ssk
+
+\item{} We say that a tangent vector $X\in T_aM$ for $a\in \del M$ ``points inward'' if in 
+some set of local coordinates $h=(x^1,\ldots ,x^n)$ we have 
+$\displaystyle X=\sum_i v^i{{\del}\over{\del x^i}}$
+with $v^n>0$. (Here $h$ maps to the upper half-space, where $x^n\geq 0$.) Show that the
+notion of ``pointing inward'' is independent of coordinate chart.
+
+\msk
+
+\item{\bf 24.} [Lee, p.151, Problem 6-3] Show that the tangent bundle $TM$ is trivial 
+if and only if the cotangent bundle $T^*M$ is also trivial.
+
+\vfill
+\end

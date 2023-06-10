@@ -1,0 +1,478 @@
+
+\input amstex
+
+
+\magnification=1400
+
+
+\loadmsbm
+
+\input colordvi
+
+\nopagenumbers
+\parindent=0pt
+
+\def\cgy{\GreenYellow}     % GreenYellow  Approximate PANTONE 388
+\def\cyy{\Yellow}	  % Yellow  Approximate PANTONE YELLOW
+\def\cgo{\Goldenrod}	  % Goldenrod  Approximate PANTONE 109
+\def\cda{\Dandelion}	  % Dandelion  Approximate PANTONE 123
+\def\capr{\Apricot}	  % Apricot  Approximate PANTONE 1565
+\def\cpe{\Peach}		  % Peach  Approximate PANTONE 164
+\def\cme{\Melon}		  % Melon  Approximate PANTONE 177
+\def\cyo{\YellowOrange}	  % YellowOrange  Approximate PANTONE 130
+\def\coo{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cbo{\BurntOrange}	  % BurntOrange  Approximate PANTONE 388
+\def\cbs{\Bittersweet}	  % Bittersweet  Approximate PANTONE 167
+%\def\creo{\RedOrange}	  % RedOrange  Approximate PANTONE 179
+\def\cma{\Mahogany}	  % Mahogany  Approximate PANTONE 484
+\def\cmr{\Maroon}	  % Maroon  Approximate PANTONE 201
+\def\cbr{\BrickRed}	  % BrickRed  Approximate PANTONE 1805
+\def\crr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cor{\OrangeRed}	  % OrangeRed  No PANTONE match
+\def\paru{\RubineRed}	  % RubineRed  Approximate PANTONE RUBINE-RED
+\def\cwi{\WildStrawberry}  % WildStrawberry  Approximate PANTONE 206
+\def\csa{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\ccp{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\cmag{\Magenta}	  % Magenta  Approximate PANTONE PROCESS-MAGENTA
+\def\cvr{\VioletRed}	  % VioletRed  Approximate PANTONE 219
+\def\parh{\Rhodamine}	  % Rhodamine  Approximate PANTONE RHODAMINE-RED
+\def\cmu{\Mulberry}	  % Mulberry  Approximate PANTONE 241
+\def\parv{\RedViolet}	  % RedViolet  Approximate PANTONE 234
+\def\cfu{\Fuchsia}	  % Fuchsia  Approximate PANTONE 248
+\def\cla{\Lavender}	  % Lavender  Approximate PANTONE 223
+\def\cth{\Thistle}	  % Thistle  Approximate PANTONE 245
+\def\corc{\Orchid}	  % Orchid  Approximate PANTONE 252
+\def\cdo{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\cpu{\Purple}	  % Purple  Approximate PANTONE PURPLE
+\def\cpl{\Plum}		  % Plum  VERY-Approx PANTONE 518
+\def\cvi{\Violet}	  % Violet  Approximate PANTONE VIOLET
+\def\parp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cbv{\BlueViolet}	  % BlueViolet  Approximate PANTONE 2755
+\def\cpe{\Periwinkle}	  % Periwinkle  Approximate PANTONE 2715
+\def\ccb{\CadetBlue}	  % CadetBlue  Approximate PANTONE (534+535)/2
+\def\cco{\CornflowerBlue}  % CornflowerBlue  Approximate PANTONE 292
+\def\cmb{\MidnightBlue}	  % MidnightBlue  Approximate PANTONE 302
+\def\cnb{\NavyBlue}	  % NavyBlue  Approximate PANTONE 293
+\def\crb{\RoyalBlue}	  % RoyalBlue  No PANTONE match
+%\def\cbb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cce{\Cerulean}	  % Cerulean  Approximate PANTONE 3005
+\def\ccy{\Cyan}		  % Cyan  Approximate PANTONE PROCESS-CYAN
+\def\cpb{\ProcessBlue}	  % ProcessBlue  Approximate PANTONE PROCESS-BLUE
+\def\csb{\SkyBlue}	  % SkyBlue  Approximate PANTONE 2985
+\def\ctu{\Turquoise}	  % Turquoise  Approximate PANTONE (312+313)/2
+\def\ctb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\caq{\Aquamarine}	  % Aquamarine  Approximate PANTONE 3135
+\def\cbg{\BlueGreen}	  % BlueGreen  Approximate PANTONE 320
+\def\cem{\Emerald}	  % Emerald  No PANTONE match
+\def\cjg{\JungleGreen}	  % JungleGreen  Approximate PANTONE 328
+\def\csg{\SeaGreen}	  % SeaGreen  Approximate PANTONE 3268
+\def\cgg{\Green}	  % Green  VERY-Approx PANTONE GREEN
+\def\cfg{\ForestGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cpg{\PineGreen}	  % PineGreen  Approximate PANTONE 323
+\def\clg{\LimeGreen}	  % LimeGreen  No PANTONE match
+\def\cyg{\YellowGreen}	  % YellowGreen  Approximate PANTONE 375
+\def\cspg{\SpringGreen}	  % SpringGreen  Approximate PANTONE 381
+\def\cog{\OliveGreen}	  % OliveGreen  Approximate PANTONE 582
+\def\pars{\RawSienna}	  % RawSienna  Approximate PANTONE 154
+\def\cse{\Sepia}		  % Sepia  Approximate PANTONE 161
+\def\cbr{\Brown}		  % Brown  Approximate PANTONE 1615
+\def\cta{\Tan}		  % Tan  No PANTONE match
+\def\cgr{\Gray}		  % Gray  Approximate PANTONE COOL-GRAY-8
+\def\cbl{\Black}		  % Black  Approximate PANTONE PROCESS-BLACK
+\def\cwh{\White}		  % White  No PANTONE match
+
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.6 true in
+
+\voffset=1.2in
+\hoffset=-.5in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\smallskip
+
+\ctln{November 1, 2004}
+
+\medskip
+
+From last time: $x = [a_0,a_1,\ldots ,a_n,\ldots]$ ;  set $\dsl r_n = [a_0,\ldots , a_n] = {{h_n}\over{k_n}}$ .
+Then $\dsl |x-r_n| < {{1}\over{k_n k_{n+1}}} \leq {{1}\over{k_n^2a_{n+1}}}$ . In particular, 
+$\dsl {{h_n}\over{k_n}}\rightarrow x$ as $n\rightarrow \infty$ .
+
+\ssk
+
+From this, we can learn many things! First, if $x=[a_0,a_1,\ldots]$ with $a_1\geq 1$ for all $i\geq 1$, then 
+$x\not\in{\Bbb Q}$; because if $\dsl x={{a}\over{b}}$, then 
+$\dsl |{{a}\over{b}}-{{h_n}\over{k_n}}|< {{1}\over{k_n k_{n+1}}}$ , so 
+$|ak_n-bh_n| < {{|b|}\over{k_{n+1}}} \rightarrow 0$  as $n\rightarrow\infty$ , so $ak_n-bh_n=0$ for some
+$n$ (since this quantity is an integer). So $x=r_n$, a contradiction (since $r_{n+2k}$, $k\geq 0$, is a monotone 
+sequence converging to $x$).
+
+\ssk
+
+Second, since $\dsl x=\lim_{n\rightarrow \infty} [a_0,\ldots ,a_n] = 
+\lim_{n\rightarrow \infty} a_0+{{1}\over{[a_1,\ldots ,a_n]}} = a_0+{{1}\over{[a_1,\ldots ]}}$, we
+can, as before, recover $a_0$ from $x$ as $a_0=\lfloor x\rfloor$ . This in turn, using the same
+proof as for finite continued fractions, yields
+
+\ssk
+
+If $x=[a_0,a_1,\ldots] = [b_0,b_1,\ldots]$ with $a_i,b_i\in{\Bbb Z}$ and $a_i,b_i\geq 1$ for all $i\geq 1$,
+then $a_i=b_i$ for all $i\geq 0$ .
+
+\ssk
+
+Third, the convergents $\dsl r_n = {{h_n}\over{k_n}}$ give better rational approximations than
+any other rational numbers we might choose:
+
+If $x\not\in{\Bbb Q}$ and $b\in{\Bbb Z}$ with $1\leq b\leq k_n$, then for 
+any $a\in{\Bbb Z}$, $\dsl |x-{{a}\over{b}}| \geq |x-{{h_n}\over{k_n}}|$ . In fact,
+if $1\leq b < k_{n+1}$, then $|bx-a|\geq|k_n x-h_n|$ . 
+
+\ssk
+
+To see this, suppose not; suppose 
+$1\leq b< k_{n+1}$ and, for some $a$, $|bx-a| < |k_n x-h_n|$. We can assume that $(a,b)=1$ . 
+We first solve the system of equations 
+$h_n\alpha +h_{n+1}\beta = a$ , $k_n\alpha +k_{n+1}\beta = b$ ;
+the solutions are $\alpha = (-1)^{n+1}(k_{n+1}a-h_{n+1}b) , \beta = (-1)^{n+1}(h_n b-k_n a)$ . 
+Note that $\alpha,\beta\neq 0$, since otherwise $\dsl {{a}\over{b}} = {{h_n}\over{k_n}}$ 
+or $\dsl {{h_{n+1}}\over{k_{n+1}}}$ , so $|bx-a| = |k_n x-h_n|$ or $b = k_{n+1}$.
+Also, if $\alpha<0$, then $k_n\alpha +k_{n+1}\beta = b$ implies $k_{n+1}\beta = b-k_n\alpha>b>0$, 
+so $\beta >0$ . 
+And if $\alpha>0$, then $k_n\alpha +k_{n+1}\beta = b$ implies 
+$k_{n+1}\beta = b - k_n\alpha < k_{n+1}-k_n\alpha<k_{n+1}$, so $\beta<1$, so $\beta <0$ .
+So $\alpha$ and $\beta$ have opposite signs. On the other hand, from before, we know 
+that $xk_n-h_n$ and $xk_{n+1}-h_{n+1}$ have oposite signs, as well, so
+$\alpha(xk_n-h_n)$ and $\beta(xk_{n+1}-h_{n+1})$ have the \underbar{same}
+sign. Then:
+\hhsk
+$xb-a = x(k_n\alpha +k_{n+1}\beta) -(h_n\alpha +h_{n+1}\beta) = 
+\alpha(xk_n-h_n) + \beta(xk_{n+1}-h_{n+1})$ , so
+$|xb-a| = |\alpha|\cdot|xk_n-h_n| + |\beta|\cdot|xk_{n+1}-h_{n+1}| \geq
+|\alpha|\cdot|xk_n-h_n| \geq |xk_n-h_n|$ , a contradiction. So no such $a$ exists!
+
+
+\vfill\end
+\msk
+
+We should note that the level of precision in a rational approximation that the 
+convergents give us is a lot better than we deserve; in general, we would expect 
+that $\dsl |x-{{M}\over{N}}|$ would typically be not much smaller than $\dsl {{1}\over{2N}}$ , 
+for a randomly chosen $N$. The point, of course, is that the $k_n$ are not randomly
+chosen! But there is a precise sense in which they \underbar{are} the best 
+possible choices:
+
+\ssk
+
+If $x\not\in {\Bbb Q}$ and $a,b\in {\Bbb Z}$ have $\dsl |x-{{a}\over{b}}| < {{1}\over{2b^2}}$ , then 
+$\dsl {{a}\over{b}} = {{h_n}\over{k_n}}$ for some $n$. 
+
+\ssk
+
+The idea: if not, then $|ak_n-bh_n|\geq 1$ for every $n$. But since $k_n\rightarrow \infty$ as
+$n\rightarrow \infty$, there is an $n$ with $k_n\leq b< k_{n+1}$. Then from above we 
+know that $\dsl |xk_n-h_n| \leq |xb-a| = |x-{{a}\over{b}}|\cdot |b| < {{1}\over{2b^2}}|b| = {{1}\over{2b}}$ .
+So $\dsl |x-{{h_n}\over{k_n}}| < {{1}\over{2bk_n}}$ , and then 
+
+$\dsl {{1}\over{bk_n}}\leq {{|bh_n-ak_n|}\over{bk_n}} = |{{a}\over{b}} - {{h_n}\over{k_n}}|
+ = |({{a}\over{b}}-x) + (x - {{h_n}\over{k_n}})| \leq  |{{a}\over{b}}-x| + |x - {{h_n}\over{k_n}}|
+< {{1}\over{2b^2}} + {{1}\over{2bk_n}}$ . So 
+$\dsl {{1}\over{2bk_n}} = {{1}\over{bk_n}} - {{1}\over{2bk_n}} \leq {{1}\over{2b^2}}$ , so 
+$2b^2 < 2bk_n$ , so $b<k_n$, a contradiction. So $\dsl {{a}\over{b}} = {{h_n}\over{k_n}}$ for some $n$.
+
+
+\bsk
+
+
+{\bf Pell's Equation:} solve $x^2-ny^2=N$ with $x,y\in {\Bbb Z}$ . (WOLOG, $x,y\geq 0$)
+
+\ssk
+
+If $n<0$, then $N= x^2-ny^2\geq x^2+y^2$ $\Rightarrow$ $x,y\leq \sqrt{N}$ ; can check all cases.
+
+\ssk
+
+If $n=m^2$ is a perfect square, then $N=x^2-ny^2 = (x-my)(x+my)$ $\Rightarrow$ $x-my=a, x+my=b$
+with $ab=N$, and so $2x=a+b, 2my=b-a$ . Again, we can just check all factorizations $N=ab$ to see what works.
+
+\ssk
+
+If $n>0$ is not a perfact square, then we can use the continued fraction expansion of $\sqrt{n}$ to 
+shed light on the solutions.
+
+$N=x^2-ny^2 = (x-\sqrt{n}y)(x+\sqrt{n}y)$, so $ \dsl 0<{{N}\over{x+\sqrt{n}y}} = x-\sqrt{n}y$ , so
+$\dsl {{|N|}\over{|x+\sqrt{n}y|\cdot |y|}} = |\sqrt{n} - {{x}\over{y}}|$ .
+
+And since $x-\sqrt{n}y>0$, $x>\sqrt{n}y$, so $\dsl {{x}\over{\sqrt{n}y}} >1$ so 
+$\dsl {{x}\over{\sqrt{n}y}} +1 = {{x+\sqrt{n}y}\over{\sqrt{n}y}} > 2$, so 
+$x+\sqrt{n}y > 2\sqrt{n}y$ so 
+
+$\dsl |\sqrt{n} - {{x}\over{y}}| = {{|N|}\over{|x+\sqrt{n}y|\cdot |y|}} < {{|N|}\over{2\sqrt{n}|y|\cdot |y|}}
+= {{|N|}\over\sqrt{n}} \cdot {{1}\over{2y^2}}$ .
+
+So if $N<\sqrt{n}$, then $x^2-ny^2=N$ $\Rightarrow$ $\dsl |\sqrt{n} - {{x}\over{y}}| < {{1}\over{2y^2}}$
+$\Rightarrow$ $\dsl {{x}\over{y}}$ is a \underbar{convergent} of $\sqrt{n}$ . 
+
+\msk
+
+Which makes it more interesting to understand the convergents of $\sqrt{n}$ !  The basic idea:
+$x$ has a repeating continued fraction expansion $x=[a_0,\ldots,a_n,\overline{b_0,\ldots,b_m}]$
+$\Leftrightarrow$ $x=r+s\sqrt{t}$ for some $r,s\in{\Bbb Q}$ , $t\in{\Bbb Z}$ . 
+
+To see this, set
+$\alpha=[\overline{b_0,\ldots,b_m}]$, so $x=[a_0,\ldots,a_n,\alpha]$ . If 
+$\dsl [a_0,\ldots,a_n] = {{h_n}\over{k_n}}$ , then 
+$\dsl x=[a_0,\ldots,a_n,\alpha] = {{h_n\alpha +h_{n-1}}\over{k_n\alpha + k_{n-1}}}$. 
+
+\underbar{If} $\alpha = r_0+s_0\sqrt{t}$, then 
+$\dsl x = {{h_n(r_0+s_0\sqrt{t}) +h_{n-1}}\over{k_n(r_0+s_0\sqrt{t}) + k_{n-1}}} = 
+{{(h_ns_0)\sqrt{t}) +(h_nr_0+h_{n-1})}\over{(k_ns_0)\sqrt{t}) +(k_nr_0+h_{n-1})}} = 
+{{((h_ns_0)\sqrt{t})+(h_nr_0+h_{n-1}))(k_ns_0)\sqrt{t})-(k_nr_0+h_{n-1})}
+\over{k_n^2s_0^2t-(k_nr_0+h_{n-1})^2}} = 
+{{h_nk_ns_0^2t-(h_nr_0+h_{n-1})(k_nr_0+h_{n-1})}\over{k_n^2s_0^2t-(k_nr_0+h_{n-1})^2}}
++ {{((k_ns_0)(h_nr_0+h_{n-1})-(h_ns_0)(k_nr_0+h_{n-1}))}\over{k_n^2s_0^2t-(k_nr_0+h_{n-1})^2}}\sqrt{t}
+ = r+s\sqrt{t}$ with $r,s\in{\Bbb Q}$ . 
+
+But $\alpha=[\overline{b_0,\ldots,b_m}] = [b_0,\ldots,b_m,\alpha]$ , so for $\dsl [b_0,\ldots,b_m] =
+{{h_m^\prime}\over{k_m^\prime}}$ , $\dsl \alpha = 
+{{h_m^\prime\alpha + h_{m-1}^\prime}\over{k_m^\prime\alpha + k_{m-1}^\prime}}$ , so
+$k_m^\prime\alpha^2 + k_{m-1}^\prime\alpha = h_m^\prime\alpha + h_{m-1}^\prime$ ,
+so $\alpha$ is the solution of a quadratic equation with rational coefficients, so $\alpha = r_0+s_0\sqrt{t}$ ,
+as desired.
+
+The converse ($\Leftarrow$) direction follows an argument parallel to one of your homework
+questions; our further explorations will not need this direction.
+
+\ssk
+
+In what follows, for $\dsl x={{a+\sqrt{d}}\over{b}}$ , it will be useful to have the
+notation $\dsl x^\prime = {{a-\sqrt{d}}\over{b}}$ for the {\it conjugate} of $x$, that
+is, the other root of the quadratic having $x$ as root. Our main result on periodic
+continued fractions is:
+
+\ssk
+
+If $x=\sqrt{n}+\lfloor \sqrt{n}\rfloor$, then $x=[\overline{a_0,\ldots , a_k}]$ is {\it purely periodic}.
+
+\ssk
+
+To see this, note that $x^\prime = \lfloor \sqrt{n}\rfloor - \sqrt{n}$ , so $-1<x^\prime < 0$ .
+If we set $x=[a_0,\ldots , a_i+x_i] = [a_0,\ldots , a_i,\zeta_i]$ (so $\dsl \zeta_i={{1}\over{x_i}}$  
+and $a_{i+1} = \lfloor\zeta_i \rfloor$) then from our homework we know that (since
+$\sqrt{n} = [b_0,b_1,\ldots] = [a_0-\lfloor\sqrt{n}\rfloor,a_1,a_2,\ldots]$
+
+$\dsl x_i = {{\sqrt{n}-m_i}\over{q_i}}$ and 
+$\dsl \zeta_{i+1} = {{q_i}\over{\sqrt{n}-m_i}} = {{\sqrt{n}+m_i}\over{q_{i+1}}}$ . 
+
+So
+$x_{i+1} = \zeta_{i+1}-a_{i+1}$ , where $q_iq_{i+1} = n-m_i^2$ (which, inductively, defines
+$q_{i+1}$) , 
+$\dsl a_{i+1} = \lfloor\zeta_{i+1}\rfloor$, so $\dsl  {{\sqrt{n}+m_i}\over{q_{i+1}}} = a_{i+1} + {{\sqrt{n}-m_{i+1}}\over{q_{i+1}}}$ , and so
+$m_{i+1} = a_{i+1}q_{i+1} - m_i$ (which, inductively, defines $m_{i+1}$) . 
+In other words, the formulas 
+$\dsl q_{i+1} = {{n-m_i^2}\over{q_i}}$ , 
+$\dsl a_{i+1}=\lfloor{{\sqrt{n}+m_i}\over{q_{i+1}}}\rfloor$ , 
+and $m_{i+1} = a_{i+1}q_{i+1} - m_i$ allow us to inductively 
+define each of these symbols, starting from 
+$m_0=\lfloor\sqrt{n}\rfloor$ and $q_0=1$ .
+
+\ssk
+
+Now note that $\dsl \zeta_i = {{\sqrt{n}+m_{i-1}}\over{q_i}}$ , so 
+
+$\dsl \zeta_{i+1} = {{1}\over{\zeta_i-a_i}} = {{1}\over{{{\sqrt{n}+m_{i-1}}\over{q_i}} - a_i}}
+= {{q_i}\over{\sqrt{n}+m_{i-1} - a_iq_i}}
+ = {{q_i\sqrt{n}-(m_{i-1}-a_iq_{i+1})q_i}\over{n-(m_{i-1}-a_iq_i)^2}}$ . Then
+
+$\dsl \zeta_i = {{-\sqrt{n}+m_{i-1}}\over{q_i}}$, and 
+
+$\dsl {{1}\over{\zeta_i^\prime-a_i}} = 
+{{1}\over{{{-\sqrt{n}+m_{i-1}}\over{q_i}} - a_i}} = {{q_i}\over{(m_{i-1}-a_iq_i)-\sqrt{n}}} = 
+{{q_i((m_{i-1}-a_iq_i)+\sqrt{n}}\over{(m_{i-1}-a_iq_i)^2-n}} = $
+
+$\dsl {{-q_i\sqrt{n}-(m_{i-1}-a_iq_{i+1})q_i}\over{n-(m_{i-1}-a_iq_i)^2}} = \zeta_{i+1}^\prime$ .
+
+But $x=\zeta_0$, so $-1<\zeta_0^\prime<0$ ; then we have, by induction, 
+$-1<\zeta_i^\prime$ $\Rightarrow$ $\zeta_i^\prime - a_i < -1$ $\Rightarrow$
+$\dsl -1<{{1}\over{\zeta_i^\prime - a_i}} = \zeta_{i+1}^\prime < 0$ . So, 
+
+$\dsl \lfloor{{-1}\over{\zeta_{i+1}^\prime}}\rfloor = \lfloor a_i-\zeta_i^\prime\rfloor = a_i$, since
+$a_i<a_i-\zeta_i^\prime < a_i+1$ . 
+
+\ssk
+
+But we know, from homework, that the continued fraction for $\sqrt{n}$ and therefore 
+for $\sqrt{n}+\lfloor\sqrt{n}\rfloor$ (since they agree in all but the first term), becomes
+periodic; past a certain point $k$, there is an $m> 0$ with $a_{k+s+m} = a_{k+s}$ for all $s\geq 0$.
+That is, $\zeta_k = \zeta_{k+m}$ .
+Let $k$ and $m$ be the smallest such numbers (i.e., $k$ = place where periodicity starts, 
+$m$=length of the shortesst period). We {\it claim:} $k=0$ . But this is just because if $k>0$, then
+$\zeta_k = \zeta_{k+m}$ $\Rightarrow$ $\zeta_k^\prime = \zeta_{k+m}^\prime$ $\Rightarrow$
+$\dsl a_{k-1} = \lfloor{{-1}\over{\zeta_{k}^\prime}}\rfloor = 
+\lfloor{{-1}\over{\zeta_{k+m}^\prime}}\rfloor = a_{k+m-1}$ $\Rightarrow$
+$\dsl {{1}\over{\zeta_{k-1}-a_{k-1}}} = \zeta_k =  \zeta_{k+m} = {{1}\over{\zeta_{k+m-1}-a_{k+m-1}}}
+= {{1}\over{\zeta_{k+m-1}-a_{k-1}}}$ $\Rightarrow$ $\zeta_{k-1} = \zeta_{(k-1)+m}$ , contradicting
+our choice of $k$ . 
+
+\ssk
+
+So $k=0$ ; and so there is an $m>0$ so that $a_{m+s} = a_s$ for all $s\geq 0$ . So
+$\sqrt{n}+\lfloor\sqrt{n}\rfloor = [\overline{a_0,\ldots,a_{m-1}}] = [a_0,\overline{a_1,\ldots,a_{m-1},a_0}]$ .
+Note that $a_0=2\lfloor\sqrt{n}\rfloor$, so 
+
+\ssk
+
+$\sqrt{n} = [\lfloor\sqrt{n}\rfloor,\overline{a_1,\ldots,a_{m-1},2\lfloor\sqrt{n}\rfloor}]$.
+
+\ssk
+
+Note that since $\dsl \zeta_0={{\sqrt{n}+\lfloor\sqrt{n}\rfloor}\over{1}}$, $m_0=\lfloor\sqrt{n}\rfloor$
+and $q_1=1$ . Then since $\zeta_0=\zeta_m=\zeta_{2m} = \cdots$ , we have
+$q_{mt+1} = 1$ for all $t\geq 0$.
+
+
+\msk
+
+Now back to Pell's Equation! We know that if $N<\sqrt{n}$, then every solution to $x^2-ny^2=N$
+has $\dsl {{x}\over{y}}$ = a convergent of $\sqrt{n}$. But as we have just seen,
+$\sqrt{n}+\lfloor\sqrt{n}\rfloor = [\overline{2\lfloor\sqrt{n}\rfloor,a_1,\ldots,a_{m-1}}]$ , and this 
+will allow us to shed light on $h_i^2-nk_i^2$, to understand Pell's equation better.
+
+$\sqrt{n}+\lfloor\sqrt{n}\rfloor = [\overline{2\lfloor\sqrt{n}\rfloor,a_1,\ldots,a_{m-1}}]$
+
+means (with $a_0=\lfloor\sqrt{n}\rfloor$) 
+$\dsl \sqrt{n}  = [a_0,\overline{a_1,\ldots,a_{m-1},a_0}] = 
+[a_0,a_1,\ldots,a_{m-1}+x_{m-1}] = [a_0,a_1,\ldots,a_{m-1},{{1}\over{x_{m-1}}}]
+= [a_0,a_1,\ldots,a_{m-1},\sqrt{n}+a_0]$  . So
+
+$\dsl \sqrt{n} = {{(\sqrt{n}+a_0)h_{m-1} + h_{m-2}}\over{(\sqrt{n}+a_0)k_{m-1} + k_{m-2}}}$, 
+so  $\sqrt{n}((\sqrt{n}+a_0)k_{m-1} + k_{m-2}) = (\sqrt{n}+a_0)h_{m-1} + h_{m-2}$ , so 
+$\sqrt{n}(a_0k_{m-1} + k_{m-2} -h_{m-1}) = a_0h_{m-1}+h_{m-2}-nk_{m-1}$, which implies
+that $\sqrt{n}\in{\Bbb Q}$, a contradiction, unless $a_0k_{m-1} + k_{m-2} -h_{m-1} = 0$ (so 
+$a_0h_{m-1}+h_{m-2}-nk_{m-1} = 0$. 
+So $h_{m-1} = a_0k_{m-1} + k_{m-2}$ and $nk_{m-1} = a_0h_{m-1}+h_{m-2}$ , so 
+$h_{m-1}^2-nk_{m-1}^2 = (a_0k_{m-1} + k_{m-2})h_{m-1} - (a_0h_{m-1}+h_{m-2})k_{m-1}
+= h_{m-1}k_{m-2} - h_{m-2}k_{m-1} = (-1)^m$
+
+So $h_{m-1}^2-nk_{m-1}^2 = (-1)^m$ . If $m$ is even, then we have found a solution to
+$x^2-ny^2=1$ . If $m$ is odd, then apply the same reasoning, except with \underbar{two}
+periods of the continued fraction: 
+
+$\sqrt{n} = [a_0,\ldots,a_{m-1},a_m,\ldots,a_{2m-1},\sqrt{n}+a_0]$, and the same argument shows
+that $h_{2m-1}^2-nk_{2m-1}^2 = (-1)^{2m} = 1$ . In general, taking $t$ periods, we get
+$h_{tm-1}^2-nk_{tm-1}^2 = (-1)^{tm}$ . So we have shown that $x^2-ny^2=1$ always has a solution;
+$x=h_{2m-1}, y=k_{2m-1}$ where $m$ = the period of the continued fraction of $\sqrt{n}$ , will
+always work.
+
+\ssk
+
+In fact, whereever we choose to stop the continued fraction expansion of $\sqrt{n}$, 
+$\dsl \sqrt{n} = [a_0,\ldots,a_s,\zeta_{s+1}] = [a_0,\ldots,a_s,{{\sqrt{n}+\alpha}\over{beta}}]$, we
+find that 
+
+$\dsl \sqrt{n} = 
+{{{{\sqrt{n}+\alpha}\over{beta}}h_s+h_{s-1}}\over{{{\sqrt{n}+\alpha}\over{beta}}k_s+k_{s-1}}}
+= {{(\sqrt{n}+\alpha)h_s+\beta h_{s-1}}\over{(\sqrt{n}+\alpha)k_s+\beta k_{s-1}}}$ , which 
+leads, by an idenitcal calculation, to 
+
+$h_s^2-nk_s^2 = (-1)^{s-1}\beta$ . So the only $N$ with $|N|\leq \sqrt{n}$ for which $x^2-ny^2=N$
+can be solved are those for which $N = (-1)^{s-1}\beta$ where 
+$\dsl \zeta_{s+1} = {{\sqrt{n}+\alpha}\over{beta}}$ . 
+
+\msk
+
+This is best illustrated with an example! Taking $n=19$, we have
+
+$a_0=4$ , $\dsl x_0=\sqrt{19}-4, \zeta_1 = {{\sqrt{19}+4}\over{3}}$ , 
+
+$a_1=2$ , $\dsl x_1={{\sqrt{19}-2}\over{3}}, \zeta_2 = {{\sqrt{19}+2}\over{5}}$ , 
+
+$a_2=1$ , $\dsl x_2={{\sqrt{19}-3}\over{5}}, \zeta_3 = {{\sqrt{19}+3}\over{2}}$ ,
+
+$a_3=3$ , $\dsl x_3={{\sqrt{19}-3}\over{2}}, \zeta_4 = {{\sqrt{19}+3}\over{5}}$ ,
+
+$a_4=1$ , $\dsl x_4={{\sqrt{19}-2}\over{5}}, \zeta_5 = {{\sqrt{19}+2}\over{3}}$ ,
+
+$a_5=2$ , $\dsl x_5={{\sqrt{19}-4}\over{3}}, \zeta_6 = {{\sqrt{19}+4}\over{1}}$ ,
+
+$a_6=8$ , $\dsl x_6=\sqrt{19}-4 = x_0$ , and we can compute
+
+\ssk
+
+$h_0=4, h_1=9, h_2=13, h_3=48, h_4=61, h_5=170, h_6=1421, \ldots$
+
+$k_0=1, k_1=2, k_2=3, k_3=11, k_4=14, k_5=39, k_6=325, \ldots$
+
+\ssk
+
+From our analysis above, $(h_5)^2-19(k_5)^2= (-1)^6=1$ , so
+$(170,39)$ is a solution to $x^2-19y^2=1$ . Also, the values of $(-1)^{s-1}\beta$
+are $-3, 5, -2, 5, -3, 1, -3, 5, -2, 5, \ldots$, so among $-4, -3, \ldots, 3, 4$ , the only $N$
+for which $x^2-19y^2=N$ has a solution are $N=-3,-2,$ and 1.  By continuing to compute
+convergents, we can find infnitely many solutions for each such equation.
+
+
+
+
+
+
+
+
+
+
+\vfill\end
+
+
+
+
+
+
+
+
+
+\ctln{$\displaystyle {{a}\over{b}} = q_1+{{r_1}\over{b}}$ , 
+$\displaystyle {{b}\over{r_1}} = q_2+{{r_2}\over{r_1}}$  , $\ldots$ , 
+$\displaystyle {{r_i}\over{r_{i+1}}} = q_{i+2}+{{r_{i+2}}\over{r_{i+1}}}$ , 
+$\displaystyle {{r_{n-2}}\over{1}} = q_{n}+0$}
+
+then we can use them to express $\displaystyle {{a}\over{b}}$ as a {\it continued fraction}:
+
+\ssk
+
+$\displaystyle {{a}\over{b}}$ = 
+$\displaystyle q_1+{\displaystyle {r_1}\over{b}}$ = 
+$\displaystyle q_1+{\displaystyle {1}\over{\displaystyle {b}\over{\displaystyle r_1}}}$ = 
+$\displaystyle q_1+{\displaystyle {1}\over{\displaystyle q_2+{\displaystyle {r_2}\over{\displaystyle r_1}}}}$ = 
+$\cdots$ = 
+$\displaystyle q_1+{\displaystyle {1}\over{\displaystyle q_2+{\displaystyle {1}\over{q_3+{\displaystyle {1}\over{\displaystyle \cdots + {\displaystyle {1}\over{\displaystyle q_n}}}}}}}}$ 
+
+
+$\displaystyle \sum_{n=1}^{\infty} $
+
+\Big({{}\over{}}\Big)
+
+
+\cfrac q_1+{{1}\over{{q_2+{{1}\over{{q_3+ {{1}\over{{\cdots +{{1}\over{q_n}}}}}}}}}}}}}\endcfrac
+
++\cfrac{1}{q_3+ \cfrac{1}{\cdots +\cfrac{1}{q_n}}}}}}}}

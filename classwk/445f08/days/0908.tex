@@ -1,0 +1,121 @@
+
+\input amstex
+
+
+%\load amsbm
+
+\nopagenumbers
+\parindent=-20pt
+%\voffset=-.6in
+
+\magnification=1400
+\overfullrule=0pt
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{September 8, 2008}
+
+\bigskip
+
+For future reference: Euler's generalization of Fermat's Little Theorem:
+
+\msk
+
+Setting $\phi(n)$ = the number of $a$, $0\leq a\leq n-1$, with $(a,n)=1$ (the Euler
+$\phi$-, or ``totient'' function), then whenever $(a,n)=1$ we have
+$a^{\phi(n)}\equiv 1\ (\mod n)$ . 
+
+\ssk
+
+The proof is nearly identical to FLT's: compute $(aa_1)\cdots (aa_{\phi(n)})$, where
+$a_1,\ldots,a_{\phi(n)}$ are the numbers coprime to $n$, and note that (for the same
+reasons!) this is $\equiv a_1\cdots a_{\phi(n)}$; but since this number is coprime to 
+$n$, we conclude that $a^{\phi(n)}\equiv 1$.
+
+\msk
+
+{\it Miller-Rabin Test:} Given a number $N$, and a base $a$, compute $N-1 = 2^k\cdot d$ , with $d$ odd. Then compute
+
+\ssk
+
+\noindent{$a_0=a^d\pmod{N}$ , $a_1=a^{2d} = (a^d)^2\pmod{N}$ , $a_2 = (a_1)^2\pmod{N}$ , $\ldots$ , $a_k=a^{2^kd} = a_{k-1}^2\pmod{N}$}
+
+\ssk
+
+If $a_0=1$ or $a_i\equiv -1\pmod{N}$ for some $i\leq k-1$, then $N$ passes the test; it is either prime or a {\it strong
+pseudoprime} to the base $a$. If not, then $N$ is definitely not prime.
+
+\msk
+
+Monier and Rabin in 1980 showed that a composite number $N$ is a strong pseudoprime for at most 1/4 of possible
+bases $a$. So if $N$ passes this test for $m$ randomly chosen bases $a_1,\ldots ,a_m$, then $N$ has only a 1 in $4^m$
+chance of {\it not} being prime. That is, multiple Miller-Rabin tests are very good at ferreting out non-primes.
+
+\bsk
+
+Fermat's Little Theorem \underbar{can} tell us that some numbers are prime, though:
+
+\msk
+
+Proth's Theorem: If $N=2^km+1$ with $m<2^k$ and if there is an $a$ with
+$a^{2^{k-1}m}\equiv -1\ (\mod N)$, then $N$ is prime.
+
+\msk
+
+This result is the reason behind why most of the largest known prime numbers are known to be prime!
+The instructor's personal favorite is $19433\cdot2^{1096861}+1$ (with 330,193 digits), found by the instructor
+in May of 2008. It is, as of this writing, the 200th largest known prime. The largest at this time is
+$2^{32582657}-1$, with 9,808,358 digits, although there are rumors that this may soon change?
+
+
+\vfill
+\end
+
+
+
+
+
+
+If the Miller-Rabin test tells us that a number $N$ is composite, how do we find its factors? The most straightforward 
+approach; test divide all numbers less than $\sqrt{N}$, or better, all {\it primes} less than $\sqrt{N}$; 
+eventually you will find a factor. But this requires on the order of $\sqrt{N}$ steps, which is far too
+large. 
+
+
+A different method uses the fact that if $N=ab$ and $a_1,\ldots a_n$ are chosen at random, $a$ is more 
+likely to divide one of the $a_i$ (or rather (for later efficiency), one of the differences $a_i-a_j$), than $N$
+is. This can be tested for by computing gcd's, $d=(a_i-a_j,N)$; this number is $1<d<N$ if $a$ (or some other
+factor) divides $a_i-a_j$ but $N$ does not, and finds us a proper factor, $d$, of $N$. The probability that
+$a$ divides none of the differences is approximately $1-1/a$ for each difference, and so is approximately
+
+\ssk
+
+\noindent{$\displaystyle (1-{{1}\over{a}})^{n\choose{2}} = ((1-{{1}\over{a}})^a)^{{n(n-1)}\over{2a}} 
+\approx ((1-{{1}\over{a}})^a)^{{n^2}\over{2a}} \approx ((1-{{1}\over{a}})^a)^{{n^2}\over{2a}} \approx (e^{-1})^{{n^2}\over{2a}} = 
+e^{{-n^2}\over{2a}}$}
+
+\ssk
+
+\noindent which is small when $n^2\approx a\leq\sqrt{N}$, i.e., $n\approx N^{1/4}$. The problem with this method,
+however, is that it requires $n(n-1)/2 \approx \sqrt{N}$ calculations, and so is no better than trial division! We 
+will rectify this by choosing the $a_i$ {\it pseudo-randomly} (which will also explain the use of differences). This
+will lead us to the Pollard $\rho$ method for factoring.
+
+
+\vfill\end
+
+
+
+
+
+
+

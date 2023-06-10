@@ -1,0 +1,108 @@
+
+\magnification=1400
+\nopagenumbers
+
+\parindent=-20pt
+
+\voffset=-.6in
+\vsize=10in
+
+\overfullrule=0pt
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+
+
+\input epsf
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{August 23 and 25, 2004}
+
+\bigskip
+
+Number theory is about {\it finding} and {\it explaining}
+patterns in numbers.
+
+\bigskip
+
+Ulam Sprial:
+
+\medskip
+
+\vbox{\hsize=1.6in
+
+\leavevmode
+
+\epsfxsize=1.6in
+\epsfbox{ulam.ai}}
+
+
+\vskip-1.6in
+
+\hskip2.6in
+\vbox{\hsize=2.2in Place the natural numbers in a
+rectangular spiral. The primes tend to fall on certain
+diagonal lines with more frequency than it seems they should?
+
+\medskip
+
+This means: for certain values of $\alpha,\beta,\gamma$, the sequences
+$n^2+\alpha$ , $n^2+n+\beta$ , $n^2-n+\gamma$ have more primes than
+we {\it expect} them to.
+
+\medskip
+
+{\it Why?} We don't yet know...}
+
+\vskip.3in
+
+
+Modulus:  $a\equiv b\pmod{n}$ means $a$ and $b$ leave the same remainder
+when you divide by $n$ (i.e., $n$ evenly divides $b-a$ ; we write $n|b-a$).
+
+\medskip
+
+$317 = 11^2+14^2$, but $319$ cannot be expressed that way. In fact, 
+
+\ctln{if $n=a^2+b^2$, then $n\equiv 0, 1,$ or $2\pmod{4}$}
+
+We will explore {\it which ones} are a sum of two squares later on.
+
+\bigskip
+
+Similarly, if $n=a^3+b^3+c^3$, then $n\not\equiv 4,5\pmod{9}$ . A conjecture
+(of ``Waring type'') states that 
+
+\ctln{if $n\not\equiv 4,5\pmod{9}$, then $n=a^3+b^3+c^3$}
+
+This is still unresolved.
+
+\bigskip
+
+Egyptian fractions:
+
+Any rational number $m/n$ can be written as a sum of reciprocals $1/a$ of
+integers. In fact, by repeatedly subtracting the largest reciprocal that we
+can from whatever is left, we find that 
+
+\ctln{$\displaystyle {{m}\over{n}} = {{1}\over{a_1}} + \cdots + {{1}\over{a_k}}$}
+
+with $a_1<a_2< \ldots < a_k$ and $k\leq n$. But not every fraction $3/n$ can 
+be expressed as a sum of {\it two} reciprocals (e.g, 3/7). However, it is
+conjectured (the Erd\"os-Strauss Conjecture) that
+
+\ctln{every fraction $\displaystyle {{4}\over{n}}$ is the sum of at most 3 reciprocals.}
+
+This has been verified to $n=10^{14}$, but still remains open.
+
+\vfill\end
+
+
+
+
+
+
+

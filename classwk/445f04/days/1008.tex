@@ -1,0 +1,129 @@
+
+\input amstex
+
+
+\magnification=1400
+
+
+\loadmsbm
+
+\nopagenumbers
+\parindent=0pt
+
+\voffset=-.6in
+\hoffset=-.4in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.2in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\smallskip
+
+\ctln{October 8, 2004}
+
+\medskip
+
+Recap: we know that the {\it Legendre symbol}, for $p$ an odd prime and $(a,p)=1$, satisfies 
+\hskip.1in $\Big({{a}\over{p}}\Big) =(-1)^n$ , where
+$n$ = $|A|$ = the number of elements in $A$, where 
+$A$ = $\{k: a_k>{{p}\over{2}}\}$, where $ak=pt_k+a_k$ with
+$0\leq a_k\leq p-1$. We have also seen that if $a$ is {\it odd} and $(a,p)=1$,
+then $\Big({{a}\over{p}}\Big) = (-1)^t$ , where $t=\sum_{j=1}^{{p-1}\over{2}}\lfloor{{aj}\over{p}}\rfloor$.
+Along the way we learned that 
+
+\ssk
+
+\ctln{$(a-1)\sum_{j=1}^{{p-1}\over{2}}j = p(t-n)+2\sum_{i=1}^nq_i$ \hsk and \hsk 
+$\sum_{j=1}^{{p-1}\over{2}}j ={{1}\over{2}}({{p-1}\over{2}})({{p-1}\over{2}}+1) = {{p^2-1}\over{8}}$}
+
+\msk
+
+When $a=2$, this last equation tells us that, mod 2,  ${{p^2-1}\over{8}}\equiv p(t-n) \equiv (t-n)$ . But in this case $t=0$, 
+since each of $\lfloor{{aj}\over{p}}\rfloor = \lfloor{{2j}\over{p}}\rfloor = 0$, since $2j<p$ for $1\leq j\leq {{p-1}\over{2}}$. So
+${{p^2-1}\over{8}}\equiv -n\equiv n\pmod{2}$, so 
+
+
+\ctln{$\Big({{2}\over{p}}\Big) =(-1)^n = (-1)^{{p^2-1}\over{8}}$}
+
+\msk
+
+Finally, we have the means to prove {\it Gauss' Law of Quadratic Reciprocity:}
+
+\ssk
+
+{\bf Theorem:} If $p$ and $q$ are distinct odd primes, then 
+$\displaystyle\Big({{p}\over{q}}\Big)\Big({{q}\over{p}}\Big) = 
+(-1)^{({{p-1}\over{2}})({{q-1}\over{2}})}$ .
+
+\msk
+
+This is because $\displaystyle\Big({{p}\over{q}}\Big)\Big({{q}\over{p}}\Big) = (-1)^{t_1}(-1)^{t_2} = (-1)^{t_1+t_2}$ , where
+
+\hfill $t_1=\sum_{i=1}^{{p-1}\over{2}}\lfloor{{qi}\over{p}}\rfloor$ and $t_2=\sum_{j=1}^{{q-1}\over{2}}\lfloor{{pj}\over{q}}\rfloor$ .
+
+\ssk
+
+But for every pair $(i,j)$, with $1\leq i\leq {{p-1}\over{2}}$ and $1\leq j\leq {{q-1}\over{2}}$, exactly one of
+$qi>pj$ or $qi<pj$ is true. So $S_1 = \{(i,j) : qi>pj\}$ and $S_2 = \{(i,j) : qi<pj\}$ are disjoint sets whose union
+is the set of all pairs. So $|S_1|+|S_2| = ({{p-1}\over{2}})({{q-1}\over{2}})$. But for each fixed $i$, the $j$'s with
+$(i,j)\in S_1$ are those which satisfy $j<{{qi}\over{p}}$, so there are $\lfloor{{qi}\over{p}}\rfloor$ of them, so $S_1$ has 
+$\sum_{i=1}^{{p-1}\over{2}}\lfloor{{qi}\over{p}}\rfloor = t_1$ elements. Similarly, for each fixed $j$, the $i$'s with
+$(i,j)\in S_2$ are those which satisfy $i<{{pj}\over{q}}$, so there are $\lfloor{{pj}\over{q}}\rfloor$ of them, so $S_2$ has 
+$\sum_{i=1}^{{q-1}\over{2}}\lfloor{{pj}\over{q}}\rfloor = t_2$ elements. 
+
+\ssk
+
+Consequently, $t_1+t_2 = |S_1|+|S_2| = ({{p-1}\over{2}})({{q-1}\over{2}})$, as desired.
+
+\msk
+
+These facts, 
+
+$\Big({{p}\over{q}}\Big)\Big({{q}\over{p}}\Big) = 
+(-1)^{({{p-1}\over{2}})({{q-1}\over{2}})}$ if $p,q$ distinct odd primes, $\Big({{2}\over{p}}\Big) =(-1)^n = (-1)^{{p^2-1}\over{8}}$,
+and $\Big({{-1}\over{p}}\Big) =(-1)^n = (-1)^{{p-1}\over{2}}$
+
+allow us to carry out the calculations of Legendre symbols much more simply than Euler's criterion would! For example
+
+\msk
+
+$\displaystyle\Big({{17}\over{31}}\Big)\Big({{31}\over{17}}\Big) = 
+(-1)^{({{17-1}\over{2}})({{31-1}\over{2}})} = (-1)^{8\cdot15} = 1$, so $\displaystyle\Big({{17}\over{31}}\Big) = \Big({{31}\over{17}}\Big)$. 
+But $\displaystyle\Big({{31}\over{17}}\Big) = \Big({{2\cdot 17-3}\over{17}}\Big) = \Big({{-3}\over{17}}\Big) =
+\Big({{-1}\over{17}}\Big) \Big({{3}\over{17}}\Big) = (-1)^8\Big({{3}\over{17}}\Big) =\Big({{3}\over{17}}\Big)$, 
+while $\displaystyle\Big({{3}\over{17}}\Big) \Big({{17}\over{3}}\Big) = (-1)^{8\cdot 1} = 1$, so 
+$\displaystyle\Big({{3}\over{17}}\Big)  = \Big({{17}\over{3}}\Big) = \Big({{3\cdot 6-1}\over{3}}\Big) = \Big({{-1}\over{3}}\Big) 
+=(-1)^1=-1$, so $\displaystyle\Big({{17}\over{31}}\Big)=-1$, and so the equation $x^2\equiv 17\pmod{31}$ has no solutions.
+
+
+
+
+
+
+\vfill\end
+
+
+
+
+
+
+

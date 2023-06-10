@@ -1,0 +1,23 @@
+We start by setting up some variables. "N" is the number we are testing for primality. 
+Some choices which foil some  of the tests are 2047 , 25326001 . 561 is fun, too. 
+"a" is the base we will test on. Change "printlevel" to 1 to stop supressing the output
+of the loop. Good starting choices for N are 2047, 1373653, 25326001, 3215031751, 
+2152302898747, 3474749660383, 341550071728321 . (The test fails to detect
+their compositeness for some values of "a".)
+
+First we find the ood part of  N-1, by repeatedly dividing by 2 if what is left is even. 
+Then N-1 = K2^d.. The program will print K and d.
+Then we compute a^K mod N , and its successive squares. The loop stops when 
+it either reaches a^(N-1) or 1 (or both), and prints out the last two residues. If N is 
+prime, these will be -1 and then 1. If they aren't, then N is not prime. If they are, then 
+N is either prime or a strong pseudoprime to the base a.
+
+"isprime" will tell you what Maple *thinks* N is (it uses this test plus another one).
+
+
+
+restart: with(numtheory);
+
+N:=203*2^(57)+1; a:=2: K:=N-1: i:=0: printlevel:=0: while (gcd(K,2)=2) do j:=i: i:=j+1: M:=K/2: K:=M: end do: oddpart:=K; power:=i; A:=a&^K mod N: C:=A: while ((K<N-1) and ((A>1) or (A<0))) do C:=A: B:=mods(A^2,N): A:=B; M:=2*K: K:=M: end do; C; B; if (B>1 or B<1 or C>(-1) or C<(-1)) then print(`not prime`) else print(`possibly prime`) end if;
+
+isprime(N);

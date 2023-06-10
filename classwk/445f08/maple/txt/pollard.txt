@@ -1,0 +1,15 @@
+
+First we set up a few variables. "N" will be the number that we will try to factor. 
+"isprime" and "ifactor" are included to let us know what to expect....  Change
+"printlevel" to 1 to stop supressing the output of the loop below.
+
+"a" is a parameter for our pseudo-random function f(x)=x^2+a, that we can change. 
+The "500" is so that the program won't run forever; we can alter that, too. The loop 
+computes the difference between f^(2n)(d) and f^n(d), mod N, and it's gcd with N. 
+It stops when this gcd is > 1; this is *either* a factor of N or equal to N .
+
+
+restart: with(numtheory);
+
+N:=nextprime(1111111111)*nextprime(2222222222); b:=1: d:=1: f:=d: isprime(N); ifactor(N); printlevel:=0: a:=5: for i from 1 to 50000 while b=1 do c:=d: e:=f: d:=c^2+a mod N; f:=(e^2+a)^2+a mod N; b:=gcd(d-f,N); end do; print(`iteration:`,i); b;
+

@@ -1,0 +1,97 @@
+
+\input amstex
+
+
+%\load amsbm
+
+\nopagenumbers
+\parindent=-20pt
+\voffset=-.6in
+
+\magnification=1400
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{September 8, 2004}
+
+\bigskip
+
+Finding factors of composite knots:  if $N=ab$ and $a_1,\ldots a_n$ 
+are chosen at random, $a$ is more 
+likely to divide  one of the differences $a_i-a_j$ than $N$
+is. This can be tested for by computing gcd's, $d=(a_i-a_j,N)$; this number 
+is $1<d<N$ if $a$ (or some other
+factor) divides $a_i-a_j$ but $N$ does not, and finds us a proper factor, 
+$d$, of $N$.  The problem with this method,
+however, is that it requires $n(n-1)/2$  gcd computations, which is too large. 
+This can be remedied by generating the $a_i$ {\it pseudo-randomly}.
+
+\msk
+
+The idea: choose a relatively simple to compute function, like $f(x)=x^2+c$. 
+Starting from some number
+$a_1$, we generate a sequence by repeatedly applying $f$ to 
+$a_1$ ; 
+
+\ssk
+
+\ctln{$a_2=f(a_1), a_3=f(a_2)=f^2(a_1),\ldots ,a_k=f(a_{k-1})=f^{k-1}(a_1),\ldots$}
+
+\ssk
+
+\noindent The point is that if ever we have $a|a_i-a_j$, then since 
+
+\ssk
+
+\ctln{$a_{i+1}-a_{j+1} = (a_i^2+c)-(a_j^2+c) = a_i^2-a_j^2 = (a_i-a_j)(a_i+a_j)$}
+
+\ssk
+
+\noindent we have $a|a_{i+1}-a_{j+1}$ , as well. So (by induction!) 
+$a|a_{i+k}-a_{j+k}$ for all $k\geq 0$ . So we can 
+test for occurances of $1<(a_i-a_j,N)<N$ by testing only a relatively few pairs; 
+we get the effect of testing many more of them for free. 
+In particular, we test $(a_{2i}-a_i,N)$ for each $i$. This is effective, 
+since if $1<(a_j-a_i,N)<N$ for $j>2i$, then $1<(a_{2j-2i}-a_{j-i},N)$ 
+as well. So testing $a_{2i}-a_i$ will essentially test these other
+pairs at the same time. Turning this into an algorithm:
+
+\bsk
+
+Given $N$ composite, choose a function $f(x)=x^2+c$ and a starting point $a_1$; 
+set $b_1=f(a_1)$ and then build the sequences $a_i=f(a_{i-1})$ and $b_i=f^2(b_{i-1})$.
+Compute $(b_i-a_i,N)$ and
+
+\ssk
+
+\noindent if for some $i$, $1<(b_i-a_i,N)<N$, stop: we have found a factor.
+
+\ssk
+
+\noindent if $(b_i-a_i,N)=N$ or $i$ gets too large, reset the parameters: use a new 
+$a_1$ or a new $c$.
+
+\msk
+
+We expect in the generic case for this process to find a factor by the time $i$ gets in
+the range of $N^{1/4}$ (or rather, the square root of the smallest prime factor of $N$),
+but this is not guaranteed.
+
+
+\vfill\end
+
+
+
+
+
+
+

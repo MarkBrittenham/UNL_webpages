@@ -1,0 +1,124 @@
+
+\magnification=1200
+\nopagenumbers
+
+\parindent=0pt
+
+\voffset=-.6in
+\vsize=10in
+
+\overfullrule=0pt
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+
+\input epsf
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{August 23 and 25, 2004}
+
+\bigskip
+
+Number theory is about {\it finding} and {\it explaining}
+patterns in numbers.
+
+\bigskip
+
+Ulam Sprial:
+
+\medskip
+
+\vbox{\hsize=1.6in
+
+\leavevmode
+
+\epsfxsize=1.6in
+\epsfbox{ulam.ai}}
+
+
+\vskip-1.6in
+
+\hskip2.6in
+\vbox{\hsize=2.2in Place the natural numbers in a
+rectangular spiral. The primes tend to fall on certain
+diagonal lines with more frequency than it seems they should?
+
+\medskip
+
+This means: for certain values of $\alpha,\beta,\gamma$, the sequences
+$n^2+\alpha$ , $n^2+n+\beta$ , $n^2-n+\gamma$ have more primes than
+we {\it expect} them to.
+
+\medskip
+
+{\it Why?} We don't yet know...}
+
+
+
+\bigskip
+
+Egyptian fractions:
+
+Any rational number $m/n$ can be written as a sum of reciprocals $1/a$ of
+integers. In fact, by repeatedly subtracting the largest reciprocal that we
+can from whatever is left, we find that 
+
+\ctln{$\displaystyle {{m}\over{n}} = {{1}\over{a_1}} + \cdots + {{1}\over{a_k}}$}
+
+with $a_1<a_2< \ldots < a_k$ and $k\leq n$. But not every fraction $3/n$ can 
+be expressed as a sum of {\it two} reciprocals (e.g, 3/7). However, it is
+conjectured (the Erd\"os-Strauss Conjecture) that
+
+\ctln{every fraction $\displaystyle {{4}\over{n}}$ is the sum of at most 3 reciprocals.}
+
+This has been verified to $n=10^{14}$, but still remains open.
+
+\medskip
+
+These sorts of expressions actually occur in engineering: If resistors with 
+resistances $r_1,\ldots,r_n$ are wired in parallel, they act as a single
+resistor with resistance $r$, where 
+
+\ctln{$\displaystyle {{1}\over{r}}={{1}\over{r_1}}+\cdots +{{1}\over{r_n}}$}
+
+\noindent so a resistor with `custom' resistance $r$ can be `manufactured' from 
+a set of standard resistors by solving such equations.
+
+\msk
+
+{\bf Perfect numbers:} A number $N$ is perfect if it is equal to the sum of
+its proper divisors. Euler showed that every even perfect number must be 
+of the form $N=2^n(2^{n+1}-1)$ where $p=2^{n+1}-1$ is \u{prime}. Such
+primes are known as {\it Mersenne} primes; there are only 44 currently known
+Mersenne primes, including the 4 (or so?) largest known primes. It is still
+an open question whether or not there exists an odd perfect number.
+
+\smallskip
+
+If the divisors of $N$ are $1=a_0,a_1,\ldots,a_n=N$ in order, then to be
+perfect we need $N=a_0+\cdots +a_{n-1}$. Dividing by $N$ yields
+
+\ctln{$\displaystyle 1={{1}\over{a_n}}+\cdots +{{1}\over{a_1}}$}
+
+\noindent and so techinques from Egyptian fractions can be employed.
+For example, it is known that the largest denomenator, $a_n=N$ must
+be $\leq u_n$ where the $u_i$ are a fixed sequence defined by $u_1=1$
+and $u_{i+1}=u_i(u_i+1)$. These provide an upper bound on the size of 
+an odd perfect number with exactly $k$ factors. Techniques such as this
+and others have enabled researchers to show that any odd perfect number
+(if one exists) has at least 300 digits, at least 9 distinct prime
+factors, and at least 57 prime factors in all......
+
+\vfill\end
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+
+\input amstex
+
+
+\magnification=1400
+
+
+\loadmsbm
+
+\nopagenumbers
+\parindent=0pt
+
+\voffset=-.8in
+\hoffset=-.4in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.2in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\smallskip
+
+\ctln{October 00, 2004}
+
+\medskip
+
+We have seen (because there is a primitive root mod $p^k$ for $p$ an odd prime):
+
+\msk
+
+{\it Theorem:} If $p$ is an odd prime, $k\geq 1$, and $(a,p)=1$, then the equation
+
+\ssk
+
+\hfill$x^n\equiv a\pmod{p^k}$ has  a solution $\Leftrightarrow$ $\displaystyle a^{{\Phi(p^k)}\over{(n,\Phi(p^k))}}\equiv 1\pmod{\Phi{p^k}}$
+
+\msk
+
+But what about $p=2$ ? This case is a bit different, since for $k\geq 3$ there is no primitive root mod $2^k$.
+But we can \underbar{almost} manage it: 
+
+\ssk
+
+{\it Proposition:} 5 has order $2^{k-2} = \Phi(2^k)/2$ mod $2^k$.
+
+\ssk
+
+This is because ord$_{16}(5) = 4 = 2\cdot$ord$_8(5)$ , and so our earlier result tells us that it will 
+keep rising by a factor of 2 ever afterwards.
+
+\ssk
+
+This in turn implies that
+
+\ssk
+
+{\it Proposition:} If $k\geq 3$ and $(a,2^k)=1$ (i.e., $a$ is odd), then 
+$a\equiv 5^j$ or $a\equiv -5^j$  mod $2^k$, for some $1\leq j\leq 2^{k-2}$
+
+\ssk
+
+This is because the integers $ 5^j : 1\leq j\leq 2^{k-2}$ are all distinct mod $2^k$, as are
+the $ -(5^j) : 1\leq j\leq 2^{k-2}$ , and they are distinct from one another, because mod 4,
+$5^j\equiv 1^j=1$, and $-(5^j)\equiv -(1^j)\equiv -1\equiv 3$, so the two collections have
+nothing in common. But together they account for $2^{k-2}+2^{k-2} = 2^{k-1} = \Phi(2^k)$
+of the elements relatively prime to $2^k$, i.e., all of them.
+
+\msk
+
+In particular, the representation of such an $a$ is unique. With this in hand, we can show:
+
+\ssk
+
+{\it Theorem:} If $n$ is odd and $(a,2)=1$, then for every $k\geq 1$,  $x^n\equiv a\pmod{2^k}$
+has a solution.
+
+\ssk
+
+To see this, note that $a\equiv \pm 5^j$ by the above result. If $a\equiv 5^j$, then as in the case of 
+an odd prime, we simply \underbar{assume} that the solution $x$ (since it also must have $(x,2)=1$)
+is $x=5^r$ for some $r$, and solve $5^{nr}\equiv 5^j\pmod{2^k}$ by solving $nr\equiv j$ mod ord$_{2^k}(5) = 2^{k-2}$ for $r$, which we can do, since $(n,2^{k-2})=1$ . If $a\equiv -(5^j)$, then we just
+solve $y^n\equiv 5^j$ first; then since $n$ is odd, $x=-y$ will solve our equation; $x^n=(-y)^n=-y^n\equiv -(5^j)\equiv a$ .
+
+\msk
+
+For even exponents, things are slightly more complicated.
+
+\ssk
+
+{\it Theorem:} If $k\geq 3$, $(a,2)=1$ and $n=2^m\cdot d$ with $d$ odd, $m\geq 1$, 
+then $x^n\equiv a\pmod{2^k}$
+has a solution $\Leftrightarrow$ $a\equiv 1\pmod{2^{m+2}}$ .
+
+\ssk
+
+$(\Rightarrow)$: If  $x^n\equiv a\pmod{2^k}$ has a solution, then $(x,2)=1$, so $x\equiv \pm 5^j$ mod $2^k$
+for some $j$ . We may assume that $m\leq k-2$, otherwise 
+$x^n=(x^{2^{k-2}})^s\equiv 1^s=1$ for all $x$, so only $a\equiv 1$ will have a solution. 
+So, since $n$ is even, 
+$a\equiv (\pm 5^j)^n = 5^{jn}= 5^{jd2^m} \equiv (5^{dj})^{2^{m}}$
+mod $2^k$, so this is also true mod $2^{m+2}$. So 
+$a\equiv x^n\equiv (5^{4dj})^{2^{m}}= y^{2^{m}}\equiv 1$ mod $2^{m+2}$, 
+since all (odd) integers have order, mod $2^{m+2}$, dividing $2^{m}$ .
+
+\ssk
+
+$(\Leftarrow)$: If $a\equiv 1\pmod{2^{m+2}}$, then $a=1+N2^{m+2}$, so
+$a^{2^{k-m-2}}= (1+N2^{m+2})^{2^{k-m-2}} = 1+N2^k+$ higher powers of 2 $\equiv 1\pmod{2^k}$. 
+But $a\equiv \pm 5^j\pmod{2^k}$, and we must have 
+$\pm 1 = 1$, since $a\equiv 1\pmod{4}$ . So $a\equiv 5^j\pmod {2^k}$, so 
+$a^{2^{k-m-2}}= 5^{j\cdot 2^{k-m-2}} \equiv 1\pmod{2^k}$, so $2^{k-2}|j\cdot 2^{k-m-2}$, so
+$2^m|j$ . So $j=2^mc$, and so we really 
+wish to solve the equation $x^{2^md}= (x^{2^m})^d\ equiv (5^{2^m})^c = 5^{2^mc}$ . If
+we instead solve $x^d\equiv 5^c$, which, from the theorem above, we can, since $d$ is odd, 
+then $x^{2^md}= (x^{d})^{2^m}\ equiv (5^c)^{2^m} = 5^{2^mc}\equiv a$, as desired!
+
+
+
+\vfill\end
+
+
+
+
+
+
+

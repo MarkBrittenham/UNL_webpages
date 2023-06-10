@@ -1,0 +1,133 @@
+
+\input amstex
+
+
+\magnification=1400
+
+
+\loadmsbm
+
+\nopagenumbers
+\parindent=0pt
+
+\voffset=-.6in
+\hoffset=-.4in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.2in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\smallskip
+
+\ctln{October 1, 2004}
+
+\medskip
+
+\ssk
+
+{\it Theorem:} If $p$ is an odd prime and $k\geq 1$, then $m=p^k$ has a primitive root, i.e., there is an integer $b$ with 
+ord$_{p^k}(b) = \Phi(p^k) = p^{k-1}(p-1)$ .
+
+\ssk
+
+We have so far shown this to be true for $k=1,2$. Today we see:
+
+\ssk
+
+If $p$ is an odd prime and  $b$ is a primitive root mod $p^2$, then $b$ is a primitive root mod $p^k$ 
+for all $k\geq 1$ .
+\hskip.3in In fact, we will show:
+
+\ssk
+
+(*) If $p$ is an odd prime and, for $k\geq 1$, ord$_{p^{k+1}}(b)$ $>$ ord$_{p^k}(b)$ , then 
+ord$_{p^{k+m}}(b)$ $= p^m\cdot$ord$_{p^k}(b)$  for all $m\geq 1$.
+
+\ssk
+
+To see this, set  $\alpha$ = ord$_{p^{k+1}}(b)$ and $\beta$ = ord$_{p^k}(b)$, then 
+$b^\alpha\equiv 1\pmod{p^{k+1}}$ implies $b^\alpha\equiv 1\pmod{p^{k}}$ , so $\alpha|\beta$, while
+$p^k|b^\beta -1$ and $p^{k+1}\not |b^\beta -1$ (since $\alpha > \beta$ implies $b^\beta = 1+sp^k$
+with $p^{k+1}\not |sp^k$ , so $p\not |s$, so $(s,p)=1$ . But then, mod $p^{k+1}$
+
+\ssk
+
+$\displaystyle b^{p\beta} = (1+sp^k)^p = 1+psp^k+{p \choose 2} s^2p^{2k} + {p \choose 3}s^3p{3k}+\cdots = 
+1+p^{k+1}(s+{{p-1}\over{2}}s^2p^{k}+{p \choose 3}s^3p^{2k-1}+\cdots) = 1+p^{k+1}(s+p({{p-1}\over{2}}s^2p^{k-1}+{p \choose 3}s^3p^{2k-2}+\cdots))
+1+p^{k+1}s^\prime \equiv 1$
+
+\ssk
+
+so $\alpha|p\beta$, so $\alpha=\beta$ (contradicting our hypothesis) or $\alpha = p\beta$ . So 
+$\alpha = p\beta$. But even more, since $s+p({{p-1}\over{2}}s^2p^{k-1}+{p \choose 3}s^3p^{2k-2}+\cdots\equiv s\pmod{p}$, so
+$(s^\prime,p)=1$, we have $\displaystyle b^{p\beta} \not\equiv 1\pmod{p^{k+2}}$ (since $p^{k+2}\not | s^\prime p^{k+1}$) . 
+So ord$_{p^{k+2}}(b)$ $>$ ord$_{p^{k+1}}(b)$ . So we can start the exact same argument over again, to show that
+ord$_{p^{k+2}}(b) = p\cdot$ord$_{p^{k+1}}(b)$ . This type of argument can be continued indefinitely (formally, we could simply 
+say that under the assumption (*) we showed that the exact same statement with $k+m$ replaced by $(k+m)+1$ was true, which is the inductive
+step for showing that (*) is true by induction! (We simply ``called'' $k+m$, $k$.) So we have proved (*) by induction. 
+The initial step is literally the first part of our proof.).
+So (*) is true for all $m\geq 1$.
+
+\ssk
+
+Applying this to ord$_{p^2}(b)=p(p-1)$ , we have that for every $k\geq 2$, ord$_{p^k}(b)=p^{k-1}(p-1)=\Phi(p^k)$ . So $b$ is a 
+primitive root modulo $p^k$ .
+
+\ssk
+
+The only place where this argument breaks down for the prime $p=2$ is 
+when we write $((p-1)/2)s^2p^{k-1}$ , since 
+$(p-1)/2 = 1/2$ is not an integer. But we need to extract the initial $p$ of $\displaystyle p((p-1)/2)s^2p^{k-1}$
+from $p(p-1)/2$, rather than from $p^{2k}$, only when $k=1$, otherwise $k\geq 2$ and  we write this as 
+$\displaystyle 1+p^{k+1}(s+p({p\choose 2}s^2p^{k-2}+{p \choose 3}s^3p{2k-2}+\cdots$ instead. 
+Then the proof goes through as before.
+And so, for $p=2$, we have:
+
+\ssk
+
+\hskip.1in If $p=2$ , $k\geq 2$ and ord$_{2^{k+1}}(b) > $ ord$_{2^k}(b)$ , then ord$_{2^{k+m}}(b) = 2^m$ord$_{2^k}(b)$ for all $m\geq 1$. 
+
+\ssk
+
+So, for example, since ord$_{16}(3) = 4 > 2 =$ ord$_{8}(3)$, we have ord$_{2^k}(3) = 2^{k-2}$ for all $k\geq 3$ . Since $(a,8)=1$ $\Rightarrow$ ord$_8(a)=2<4=\Phi(8)$ , there is no no primitive root mod $2^k$ for $k\geq 3$ ; our proof above shows that
+$ 2^{k-2} <  2^{k-1} = \Phi( 2^{k})$ is the highest order possible.
+
+\ssk
+
+Finally, with this result in hand, we can extend our result about $n^{\text th}$ roots mod $p$:
+
+\ssk
+
+{\it Theorem:} If $p$ is an odd prime, $k\geq 1$, and $(a,p)=1$, then the equation
+
+\ssk
+
+\hfill$x^n\equiv a\pmod{p^k}$ has $\displaystyle \cases (n,\Phi(p^k)) \text{ solutions,} &\text{if }a^{{\Phi(p^k)}\over{(n,\Phi(p^k))}}\equiv 1\cr
+                                                                                                     0 \text{ solutions, }&\text{if }\displaystyle a^{{\Phi(p^k}\over{(n,\Phi(p^k))}}\equiv -1\cr\endcases$
+
+
+\vfill\end
+
+
+
+
+
+
+

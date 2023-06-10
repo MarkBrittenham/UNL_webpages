@@ -1,0 +1,123 @@
+
+%\input amstex
+
+
+\magnification=1400
+
+
+%\load amsbm
+
+\nopagenumbers
+%\parindent=-15pt
+%\voffset=-.6in
+%\hoffset=-.4in
+%\hsize = 7.5 true in
+%\vsize=10 true in
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+
+
+\ctln{\bf Math 445 Number Theory}
+
+\medskip
+
+\ctln{September 19 and 22, 2008}
+
+\bigskip
+
+On a lighter note, the analysis we have developed can shed light on {\it repeating decimal 
+expansions of fractions}. 
+
+\msk
+
+A number like \hskip.2in $\displaystyle {{1}\over{13}} = 0.076923076923\ldots = 0.\overline{076923}$
+has a repeating pattern, every 6 digits (in this case). What this means is that
+
+\ssk
+
+$\displaystyle {{1}\over{13}} = {{76923}\over{10^6}} + {{76923}\over{10^{12}}} + {{76923}\over{10^{18}}} + \cdots$ = 
+$\displaystyle (76923)\left({{1}\over{10^6}} + \left({{1}\over{10^6}}\right)^2+\left({{1}\over{10^6}}\right)^3+\cdots\right)$ = 
+$\displaystyle{{76923}\over{10^6-1}}$
+
+\ssk
+
+The {\it period} of the decinal expansion is 6, because $10^6-1 = (13)(76923)$, i.e., 
+$10^6\equiv 1\pmod{13}$ , and 6 is the smallest positive number for which this is true. 
+Borrowing some terminology from group theory, we say that 
+the {\it order} of 10, mod 13, is 6, and write ord$_{13}(10)=6$ ; it is the smallest 
+positive power of 10 which is $\equiv 1$ mod $n$. The definition of ord$_n(a)$
+is similar.
+
+\msk
+
+In general, ord$_n(a)$ makes sense only if $(a,n)=1$ ; then, by Euler's Theorem,
+
+\ssk
+
+\ctln{$a^{\Phi(n)}\equiv 1\pmod{n}$}
+
+\ssk
+
+where $\Phi(n)$ = the number 
+of integers $b$ between 1 and $n$ with $(b,n)=1$.
+So there is a smallest such power of $a$ . Conversely, if $a^k\equiv 1\pmod{n}$, 
+then $a\cdot a^{k-1}+n\cdot x = 1$ for some $x$, so $(a,n)=1$ . 
+
+\msk
+
+Since $a^k,a^m\equiv 1\pmod{n}$ implies $a^{(k,m)}\equiv 1\pmod{n}$ , if $(a,n)=1$
+then ord$_n(a)|\Phi(n)$ . So we can test for the ord$_n(a)$ by factoring 
+$\Phi(n) = p_1^{k_1}\cdots p_r^{k_r}$ . We know $a^{\Phi(n)}\equiv 1$ ; if we test each
+of $a^{\Phi(n)/p_i}$ and none are $\equiv 1$, then ord$_n(a)=\Phi(n)$ . If one of them is $\equiv 1$,
+then ord$_n(a)|\Phi(n)/p_i$ ; continuing in this way, we can quickly determine ord$_n(a)$ .
+
+\msk
+
+If $(10,n)>1$ , then we write $n=2^i\cdot 5^j\cdot d$ , with $(d,10)=1$ . Then 
+
+\ssk
+
+\ctln{$\displaystyle{{1}\over{n}} = 
+{{1}\over{2^i\cdot 5^j\cdot d}} = {{A}\over{2^i\cdot 5^j}}+{{B}\over{d}} = 
+{{A\cdot d+B\cdot 2^i\cdot 5^j}\over{2^i\cdot 5^j\cdot d}}$}
+
+\ssk
+
+which we can solve for $A$ and $B$ because $1=A\cdot d+B\cdot 2^i\cdot 5^j$ has a solution, since $(d,2^i\cdot 5^j)=1$. Then the first half has
+a terminating decimal expansion, while the second repeats with some period ord$_d(10)|\Phi(d)$ . So $1/n$ eventually repeats (after the terminating
+decimal has, well, terminated), with period = the period of $1/d$ .
+
+\bsk
+
+We can show that there are $n$ with ord$_n(10)=\Phi(n)$; in fact, $n=7^k$ will work.
+To see this, we can show (directly) that ord$_7(10)=\Phi(7)=6$, so 
+6=ord$_{7}(10)|$ord$_{7^k}(10)$ for every $k$. But $\Phi(7^k)=7^{k-1}\cdot 6$,
+so ord$_{7^k}(10)=7^{i_k}\cdot 6$ for some $i_k$. We can show that 
+$i_k=k-1$ by induction, by showing (by induction!) that for every $k$,
+$10^{7^{k-1}\cdot 6}=1+7^k\cdot m$ for some $m\equiv 1$ (mod 7). 
+Consequently $10^{7^{k-1}\cdot 6}$ \underbar{cannot} be congruent to 1 mod $7^{k+1}$,
+because if $10^{7^{k-1}\cdot 6}=1+7^{k+1}r=1+7^k\cdot 7r$, then 
+$1+7^k\cdot m=1+7^k\cdot 7r$, so $m=7r$, so $m\equiv 0$ (mod 7), a contradiction.
+So ord$_{7^k}(10)=7^{k-1}\cdot 6=\Phi(7^k)$ for every $k\geq 1$.
+
+\msk
+
+Gauss conjectured
+that there are infinitely many \underbar{primes} $p$ with ord$_p(10) = p-1=\Phi(p)$,
+but this remains unsolved... 
+
+
+\vfill\end
+
+
+
+
+
+
+
