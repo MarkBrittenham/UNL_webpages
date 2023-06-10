@@ -1,0 +1,118 @@
+
+
+\documentclass[12]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+\usepackage{amsmath}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\sset{\subseteq}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\spc{$~$\hskip.15in$~$}
+
+
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 871 Problem Set 7}
+
+\msk
+
+Starred (*) problems are due Thursday, October 16.
+
+
+\begin{description}
+
+\item{42.} Show that if $h:(X\mt)\ra (Y,\mt^\prime)$ is a homeomorphism,
+$A\subseteq X$, and $h(A)=B\subseteq Y$, then \hfill
+
+\item{\spc} $h|_A:(A,\mt_A)\ra (B,\mt^\prime_B)$
+is also a homeomorphism.
+
+
+
+\msk
+
+\item{43.} [Munkres, p.144, Problem \#2]
+
+\item{(*)} (a) Show that if $p:(X,\mt)\ra(Y,\mt^\prime)$ is continuous,
+and there is a continuous map $f:(Y,\mt^\prime)\ra(X,\mt)$ with
+$p\circ f = Id_Y$, then $p$ is a quotient map.
+
+\ssk
+
+\item{(*)} (b) For $A\subseteq X$, a {\it retraction} 
+of $X$ onto $A$ is a continuous map
+$r:X\ra A$ with $r|_A=Id_A$. Show that a retraction is a quotient map.
+
+
+\msk
+
+\item{44.} [Munkres, p.152, Problem \#1] Show that if $\mt\subseteq \mt^\prime$ are topologies on
+$X$ and $(X,\mt^\prime)$ is connected, then so is $(X,\mt)$.
+
+\msk
+
+\item{45.} Find an example of a topological space $(X,\mt)$ 
+and $A\sset X$ so that $A$ is connected, but int$(A)$ isn't.
+
+(Note: A result from class says that this \u{can't} be done in $\bbr$.
+But it can be done in $\bbr^2$ ... or elsewhere!)
+
+
+\msk
+
+\item{(*)} 46. [Munkres, p.152, Problem \#9] Suppose that 
+$A\subsetneq X$ and $B\subsetneq Y$ are {\it proper} subsets of $X$ and $Y$.
+Show that if $(X\mt)$ and $(Y,\mt^\prime)$ are both connected, then 
+$(X\times Y)\setminus(A\times B)$ is a connected subset of $X\times Y$.
+
+\msk
+
+\item{47.} Give an example of a space $X$ and subset $A\subseteq X$ where 
+int$(A)$ and cl$(A)$ are both connected, but $A$ is not.
+
+\msk
+
+\item{(*)} 48. [Munkres, p.152, Problem \#11]
+Suppose that $p:X\ra Y$ is a quotient map, $Y$ is connected, and 
+for every $y\in Y$ the set $p^{-1}(\{y\})$ is a connected subset of $X$.
+Show that $X$ is connected.
+
+\ssk
+
+\item{\spc} [Hint: start with a potential separation for $X$; show that their
+images would separate $Y$.]
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+
+
+

@@ -1,0 +1,573 @@
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=8.9in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-.5in
+\parindent=-10pt
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\sset{\subseteq}
+\def\hsk{\hskip10pt}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\mbp{{\mathcal B}^\prime}
+\def\mbpp{{\mathcal B}^{\prime\prime}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+\def\mp{{\mathcal P}}
+\def\mtp{{\mathcal T}^\prime}
+\def\mtpp{{\mathcal T}^{\prime\prime}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\up{U^\prime}
+\def\upp{U^{\prime\prime}}
+\def\vp{V^\prime}
+\def\vpp{V^{\prime\prime}}
+\def\wp{W^\prime}
+\def\wpp{W^{\prime\prime}}
+
+\def\finv{f^{-1}}
+\def\ginv{g^{-1}}
+\def\hinv{h^{-1}}
+
+\def\sset{\subseteq}
+\def\lra{$\Leftrightarrow$}
+\def\smin{\setminus}
+\def\rta{\Rightarrow}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 871 Exam 1 Topics}
+
+\msk
+
+Starting point: continuity
+
+$f:\bbr\ra\bbr$ is continuous at $x_0$ if $|f(x)-f(x_0)|$ is small
+so long as $|x-x_0|$ is small \underbar{enough}.
+
+Goal: make this notion make sense more generally, and determine what
+makes the fundamental results (extreme value theorem, intermediate
+value theorem) work.
+
+Two ideas help: a neighborhood of $x$ is one which contains all
+points `close enough' to $x$. The {\it inverse image} of a set
+is the collection of points that the function $f$ maps into $x$.
+Then: continuity at $x$ means that the inverse image of a neighborhood
+of $f(x)$ is a neighborhood of $x$.
+
+\msk
+
+Images and inverse images.
+
+Given $f:X\ra Y$ a function, and $A\subseteq X$, $B\subseteq Y$, we have
+images $f(A) = \{f(x)\ :\ x\in A\}$ and inverse images $f^{-1}(B) = \{x\in X\ :\ f(x)\in B\}$
+
+Inverse images are very well-behaved! 
+$f^{-1}(\cap_\alpha B_\alpha) = \cap_\alpha f^{-1}(B_\alpha)$ , 
+$f^{-1}(\cup_\alpha B_\alpha) = \cup_\alpha f^{-1}(B_\alpha)$ ,
+$f^{-1}(Y\setminus B) = X\setminus f^{-1}(B)$ .
+
+But inages are not as well-behaved: $f(\cup_\alpha A_\alpha) = \cup_\alpha f(A_\alpha)$ ,
+but only $f(\cap_\alpha A_\alpha) \subseteq \cap_\alpha f(A_\alpha)$ in general.
+
+\msk
+
+Finite/countable/uncountable sets.
+
+A set $S$ is finite if for some $n\in\bbz_+$ there is a 
+bijective function $S\leftrightarrow \{1,\ldots,n\}$
+
+Equivalently, for some $n$, $\{1,\ldots,n\}\twoheadrightarrow S$ , 
+or $S\hookrightarrow\{1,\ldots,n\}$ .
+
+Some results: if $A,B$ are finite, then $A\cup B$, $A\times B$, and the
+set of all functions $\{f:A\ra B\}$ are finite.
+
+If $B$ is finite and $A\subseteq B$ then $A$ is finite.
+
+Countably infinite: there is a bijection $S\leftrightarrow \bbz_+$. 
+
+Countable: finite or countable infinite. Equivalently, there exists a
+surjection $\bbz_+\twoheadrightarrow S$, or there exists an injection
+$S\hookrightarrow \bbz_+$.
+
+Infinite: not finite! Equivalently, there is an injection $\bbz_+\hookrightarrow S$
+(or a surjection $S\twoheadrightarrow\bbz_+$)
+
+Uncountable: not countable! Equivalently, there is \underbar{no}
+surjection $\bbz_+\twoheadrightarrow S$ (or \underbar{no}
+injection $S\hookrightarrow \bbz_+$).
+
+Examples: $\bbr$ , or all functions $f:\bbz_+\ra\{0,1\}$ (note: the second
+is equivalent to all subsets of $\bbz_+$, via $f\leftrightarrow f^{-1}(\{0\})$)
+
+\msk
+
+Back to continuity.
+
+Given a {\it metric} on a set $X$ 
+
+[a function $d:X\times X\ra \bbr$ with,
+for all $x,y,z\in X$,
+(1) $d(x,y)\geq 0$, and $d(x,y) = 0$ iff $x=y$, (2) $d(x,y)=d(y,x)$, and (3)
+$d(x,z)\leq d(x,y)+d(y,z)$]
+
+We can formalize continuity at $x_0\in X$ using neighborhoods $N_d(x_0,\epsilon) = 
+\{x\in X\ :\ d(x_0,x)<\epsilon\}$; we need
+$f^{-1}(N_{d^\prime}(f(x_0),\epsilon))$ contains some $N_d(x_0,\delta)$. But more;
+since $x\in N_d(x_0,\epsilon)$ implies that 
+$N_d(x,\epsilon-d(x,x_0))\subseteq N_d(x_0,\epsilon)$, we have that
+$x\in f^{-1}(N_{d^\prime}(f(x_0),\epsilon))$ implies that 
+$N_d(x,\delta)\subseteq f^{-1}(N_{d^\prime}(f(x_0),\epsilon))$ for some $\delta>0$.
+That is, $f^{-1}(N_{d^\prime}(f(x_0),\epsilon))$ is, for every $x_0\in X$, a union of 
+neighborhoods.
+
+This leads to: $U\subseteq X$ is {\it open} if it is a union of neighborhoods. And
+$f:X\ra Y$ is continuous if $f^{-1}(V)$  is open (in $X$) for 
+\underbar{every} $V\subseteq Y$ open (in $Y$). And we just eliminated (explicit)
+mention of a point; continuity `at' $x_0$ has been eliminated, leaving just `continuity'.
+
+\msk
+
+Topologies.
+
+Looking at what properties open sets in a metric space have leads us to the 
+notion of a topology on a set $X$: it is a collection $\mt$ of subsets of $X$ so that
+
+(1) $\emptyset,X\in \mt$
+
+(2) if $U_\alpha\in\mt$ for all $\alpha$, then $\cup_\alpha U_\alpha\in\mt$
+
+(3) if $U,V\in\mt$ then $U\cap V\in\mt$
+
+And a function $f:(X,\mt)\ra(Y,\mt^\prime)$ between {\it topological spaces}
+(i.e., sets with particular topologies) is {\it continuous} (cts) if
+$f^{-1}(V)\in\mt$ for every $V\in\mt^\prime$.
+
+Constant maps are always cts; compositions of cts maps are cts.
+
+\msk
+
+Examples.
+
+$X$ = any set, $\mt=\mp(X)$ - all subsets of $X$, the {\it discrete} topology.
+
+$X$ = any set, $\mt=\{\emptyset,X\}$, the {\it indiscrete} (or trivial) topology.
+
+$X$ = any set, $\mt_f=\{A\subseteq X\ :\ X\setminus A\ \textrm{is finite}\}\cup\{\emptyset\}$, the {\it finite complement} topology.
+
+$X$ = any set, $\mt_c=\{A\subseteq X\ :\ X\setminus A\ \textrm{is countable}\}\cup\{\emptyset\}$, the {\it countable complement} topology.
+
+$X$ = any set, $a\in X$, $\mt_{ip}=\{A\subseteq X\ :\ a\in A\}\cup\{\emptyset\}$, the {\it included point} topology.
+
+$X$ = any set, $a\in X$, $\mt_{ip}=\{A\subseteq X\ :\ a\not\in A\}\cup\{X\}$, the {\it excluded point} topology.
+
+$X$ = $\bbr$, $\mt_{irr}=\{(a\infty)\}\cup\{\emptyset,\bbr\}$, the {\it infinite ray} (to the right) topology.
+
+$X$ = any metric space,$\mt_{d}=\{\textrm{all unions of $d$-neighborhoods in }X\}$
+= $\{\cup_i N_d(x_i,\epsilon_i)\ :\ x_i\in X, \epsilon_i>0\}$, the {\it metric} topology.
+
+$\mt,\mt^\prime$ topologies on $X$, with $\mt\subseteq\mt^\prime$, we say 
+$\mt$ is coarser/smaller than $\mt^\prime$, and $\mt^\prime$ is finer/larger than $\mt$.
+
+Basic idea: coarser $\Rightarrow$ more cts functions into $X$ (fewer inverse image to check), 
+finer $\Rightarrow$ more cts functions out of $X$ (more likely to contain the inverse images).
+
+$f:(X\mt)\ra Y$. $\mt^\prime = \{V\subseteq Y\ :\ f^{-1}(V)\in\mt\}$ is the finest topology on $Y$
+making $f$ cts.
+
+$g:X\ra (Y,\mt^\prime)$. $\mt = \{f^{-1}(V)\ :\ V\in\mt^\prime\}$ is the coarsest topology on $X$
+making $f$ cts.
+
+A set $U\sset X$ is open \lra\ for every $x\in U$ there is $U_x\in\mt$ with $x\in U_x\sset U$.
+[Note: if you know $U$ is open, $U_x=U$ works!]
+
+\msk
+
+Bases/subbases.
+
+Metric topologies are defined as unions of neighborhoods. What makes this a topology?
+
+A basis $\mb$ for a topology on $X$ is a collection of subsets so that
+
+\hsk (1) union of elements of $\mb$ is $X$ [every $x\in X$ lies in some $B\in\mb$]
+
+\hsk (2) the intersection of two is a union of elements of $\mb$ [if $B,B^\prime\in\mb$ and
+$x\in B\cap B^\prime$ then $x\in B^{\prime\prime}\subseteq B\cap B^\prime$ for some
+$B^{\prime\prime}\in\mb$]
+
+$\mt(\mb)$ = unions of elements of $\mb$ = the topology generated by $\mb$,
+the coarsest toplology containing $\mb$
+
+$f:(X,\mt)\ra (Y,\mt(\mb))$ is cts $\Leftrightarrow$ $f^{-1}(B)\in\mt$ for all $B\in\mb$
+
+Examples:
+
+$\mb = \{(a,b)\sset\bbr\ :\ a,b\in\bbr\}$ is a basis for the usual topology on $\bbr$;
+restrict to $a,b\in\bbq$, still a basis for usual topology.
+
+$\mb = \{[a,b)\sset\bbr\ :\ a,b\in\bbr\}$ is a basis; $\mt_\ell = \mt(\mb)$ = the {\it lower limit}
+topology on $\bbr$. Strictly finer than the usual topology!
+
+Subbasis $\ms$: insist only on (1) union of elements of $\ms$ is $X$.
+
+$\mb = \mb(\ms) = \{S_1\cap\cdots\cap S_n\ :\ n\in\bbz_+, S_i\in\ms\}$ is a basis;
+$\mt(\ms) = \mt(\mb)$ = topology generated by $\ms$.
+
+Detecting bases: If $\mb\sset\mt$ and $\mt\sset\mt(\mb)$, then $\mt=\mt(\mb)$
+
+\msk
+
+Product topologies.
+
+$(X,\mt)$, $(Y,\mtp)$ top spaces, then $\mb = \mt\times\mtp$ (subsets of $X\times Y$) is not a topology,
+but it is a basis for one (closed under intersection). $\mt(\mt\times\mtp)$ = (abusing notation
+`$\mt\times\mtp$' is the {\it product topology} on $X\times Y$.
+
+Motivation: want projection maps $p_X:X\times Y\ra X$, $p_X(x,y)=x$, etc. continuous! This
+forces topology on $X\times Y$ to contain certain sets, coarsest topology that contains them 
+is product topology.
+
+If $\mt=\mt(\mb)$, $\mtp=\mt(\mbp)$, then $\mb\times\mbp$ is a basis for the product topology.
+
+Example: product topology on $\bbr^2$, $\bbr^n$. \ubr{Same} as the (usual) metric topologies!
+
+Arbitrary products: two choices! $\prod_i X_i$, coarsest topology making all projections cts
+is the {\it product topology}, it has subbasis $\{p_{X_i}^{-1}(U)\ :\ i\in I, u\in \mt_i\}$
+(basis is $\prod_i U_i$, where all but finitely many $U_i$ are $X_i$).
+
+Box topology: basis is $\{\prod_i U_i\ :\ U_i\in\mt_i\}$; all factors can be proper open sets.
+
+If $I$ is infinite, box topology is (generally) strictly finer than product topology
+
+Recognizing cts fcns: $f:(X,\mt)\ra (\prod_i X_i,\textrm{prod top})$ is cts \lra\ 
+$p_{X_i}\circ f: X\ra X_i$ is cts for all $i$.
+
+This is not true if $\prod_i X_i$ is given the box topology!
+
+\msk
+
+Subspaces.
+
+Motivation $(X,\mt)$ and $A\sset X$, would be useful if inclusion map $\iota:A\hookrightarrow X$
+is cts.
+
+$\mt_A = \{A\cap U\ :\ U\in\mt\}$ is a topology on $A$, the coarsest making $\iota$ cts
+($A\cap U = \iota^{-1}(U)$), called the {\it subspace topology} on $A$.
+
+$f:(X,\mt)\ra (Y,\mtp)$ cts and $A\sset X$, then $f\circ\iota=f|_A:(A,\mt_A)\ra (Y,\mt)$ is cts
+
+$\mt=\mt(\mb)$, then $\mb_A = \{A\cap B\ :\ B\in\mb\}$ is a basis for $\mt_A$
+ 
+$A\sset X$, $B\sset Y$, then $A\times B\sset X\times Y$, and the subspace topology on 
+$A\times B$ is the same as the product of the subspace topologies (same bases!)
+
+Subtlety: $f|_A:A\ra Y$ cts means $A\cap\finv(U)$ is open in $A$, i.e.,
+$A\cap\finv(U)=A\cap V$ for \ubr{some} $V$ open in $X$. [I.e., $f|_A$ can be cts when $f$ isn't!]
+
+\msk
+
+Closed sets.
+
+$(X,\mt)$ top space, $C\sset X$ is {\it closed} (w.r.t. $\mt$; omitted if clear from context)
+if $X\smin C\in\mt$. [Equivalently, $C=X\smin U$ for some $U\in\mt$]
+
+$C_i$ closed $\rta$ $\cap_i C_i$ closed; $C,D\sset X$ closed $\rta$ $C\cap D$ closed.
+
+One can cast everything about a topology in terms of closed sets; e.g., a fcn
+$f:X\ra Y$ is cts \lra\ $\finv(C)\sset X$ is closed for evvery $c\sset Y$ closed.
+
+$C\sset X$, $D\sset Y$ both closed $\rta$ $C\times D\sset X\times Y$ is closed.
+($\Leftarrow$ requires both sets non-empty)
+
+\msk
+
+Closure.
+
+$C\sset A\sset X$ is closed in $(A,\mt_A)$ \lra\ $C=A\cap D$ for $D\sset X$ closed.
+
+Closed sets are closed (no put intended) under intersection, so can (usually) find a
+\ubr{smallest} closed set satisfying a property, as $\cap\{\textrm{closed sets with ppty}\}$
+
+Open set closed under union, so can find \ubr{largest} open set with a property.
+
+Example: $A\sset X$, the \ubr{closure} of $A$ in $X$ = 
+$\overline{A}=\textrm{cl}_\mt(A) = \cap\{C\sset X\ \textrm{closed}\ :\ A\sset C\}$
+= smallest closed set containing $A$
+
+Interior of $A$ = $\textrm{int}(A) = \textrm{int}_\mt(A) = \cap\{U\sset X\ :\ U\in\mt, U\sset A\}$
+
+$x\in\overline{A}$ \lra\ $x\in C$ for every closed $C$ with $A\sset C$
+\lra\ whenever $U\in\mt$ and $x\in U$ we have $A\cap U\neq\emptyset$
+
+$x$ is a {\it limit point} of $A$ if  
+whenever $U\in\mt$ and $x\in U$ we have $(A\smin\{x\})\cap U\neq\emptyset$, i.e., 
+$x\in\overline{A\smin\{x\}}$. 
+
+The set of limit points of $A$ is denoted $A^\prime$.
+So $\overline{A} = A\cup A^\prime$; $A$ is closed \lra\ $A^\prime\sset A$
+
+If $B\sset A\sset X$, then $\textrm{cl}_A(B) = A\cap\textrm{cl}_X(B)$.
+If $A\sset X$ and $B\sset Y$, then 
+$\textrm{cl}_{X\times Y}(A\times B) = \textrm{cl}_X(A)\times\textrm{cl}_Y(B)$.
+
+For any $A\sset X$, $\textrm{cl}(\textrm{int}(\textrm{cl}(\textrm{int}(A)))) = 
+\textrm{cl}(\textrm{int}(A))$. This is the main ingredient in the ``14 Set Theorem'':
+at most 14 distinct set can be constructed from $A$ using a combination of closure and 
+complement. [$X\smin\textrm{cl}(X\smin A) = \textrm{int}(A)$]
+
+For $f:X\ra Y$ cts, $\overline{\finv(A)}\sset \finv(\overline{A})$, and
+$f$ is cts \lra\ $f(\overline{A})\sset \overline{f(A)}$ for \ubr{every}
+subset $A\sset X$.
+
+\msk
+
+Building continuous functions.
+
+$f:X\ra Y$, $X=\cup_iU_i$ with $U_i\in\mt$ for all $i$, then 
+$f$ is cts \lra\ $f|_{U_i}$ is cts for all $i$.
+
+Reverse: (Pasting Lemma) If $X=\cup_iU_i$ with $U_i$ open, and $f_i:U_i\ra Y$
+are cts for all $i$, \ubr{and} $f_i=f_j$ on $U_i\cap U_j$ for all $i,j$, 
+then $f:X\ra Y$ defined by $f(x)=f_i(x)$ if $x\in U_i$ is (well-defined and)
+cts.
+
+Closed set version: If $f:X\ra Y$
+$X=C_1\cup\cdots\cup C_n$ with $C_i$ closed for all $i$,
+then $f$ is cts \lra\ $f|_{C_i}$ is cts for all $i$.
+
+Reverse: (`Other' Pasting Lemma) If $X=C_1\cup\cdots\cup C_n$ with $C_i$ closed for all $i$,
+$f_i:C_i\ra Y$ are cts for all $i$, \ubr{and} $f_i=f_j$ on $C_i\cap C_j$ for all $i,j$, 
+then $f:X\ra Y$ defined by $f(x)=f_i(x)$ if $x\in C_i$ is (well-defined and)
+cts.
+
+\msk
+
+Homeomorphisms.
+
+For fcns on $\bbr$, we have the Inverse Function Theorem: a cts bijection
+$f:\bbr\ra\bbr$ has contiuous inverse. But for topological spaces, this does
+not hold!
+
+Example: $X=\bbz$, $\mt = \{A\sset\bbz\ :\ A\sset\bbz_+\ \textrm{or}\ A=\bbz\}$, then 
+$f:X\ra X$ given by $f(x)=x-1$ is a cts bijection, but $\finv(x)=x+1$ is not cts.
+
+A {\it homeomorphism} is a cts bijection $f:(X,\mt)\ra(Y,\mtp)$ such that 
+the inverse $g=\finv:(Y,\mtp)\ra(X,\mt)$ is also cts. I.e., $f$ is a bijection
+so that $V\in\mtp$ \lra\ $\finv(V)\in\mt$. We write $X\cong Y$ (if the topologies are
+understood).
+
+Examples: $\bbr\cong (0,1)\cong (a,b)\cong (a,\infty)\cong (-infty,a)$. 
+$[0,1]\cong [a,b]$
+
+A homeo therefore gives a bijection not only of the points of $X$ and $Y$, but also of 
+their open sets (via inverse images). Consequently, any property that can
+be expressed in terms of points and open (or closed) sets which is true for 
+one of $X$ and $Y$ must be true for the other. Such properties are called
+{\it topological properties}.
+
+A topological property is one that is preserved by homeomorphisms.
+
+Examples.
+
+$(X,\mt)$ is $T_1$ if every 1-point set $\{x\}$ is closed.
+
+$(X,\mt)$ is $T_2$ or {\it Hausdorff} (Hdf?) if for every pair of points
+$x,yin X$, if $x\neq y$ then there are $U,V\in\mt$ with $x\in U$, $y\in V$, and $U\cap V=\emptyset$.
+[Points can be separated using disjoint open sets.]
+
+$T_2$ implies $T_1$; Metric topologies are Hausdorff.
+
+$(X,\mt)$ is {\it path connected} if for every $x,y\in X$ there is a path, a
+cts fcn $\gamma:([0,1],\textrm{usual})\ra(X,\mt)$ so that $\gamma(0)=x$ and 
+$\gamma(1)=y$.
+
+A set $A\sset X$ is {\it dense} if $\overline{A}=X$. A space $X$ is {\it separable}
+if it contains a countable dense subset. [For example, $(\bbr,\textrm{usual})$ is
+separable; $\bbq$ is dense.]
+
+A space is {\it second countable} if its topology can be generated by a basis consisting of
+countably many sets. [For example, $(\bbr,\textrm{usual})$ is 2nd ctble.]
+
+At its heart, topology is the study of topological properties!, and the relationships
+between them.
+
+Restriction of range: if $f:(X,\mt)\ra (Y,\mtp)$ is continuous, and $f(X)\sset B\sset Y$,
+then $f$, thought of as a function $f::(X,\mt)\ra (B,\mtp_B)$, is also continuous.
+
+A {\it topological embedding} (or imbedding) is an injective cts map
+$f:(X,\mt)\ra (Y,\mtp)$ so that, restricting the range, $f:(X,\mt)\ra (f(X),\mtp_{f(X)})$
+is a homeomorphism. 
+
+\msk
+
+Quotient spaces.
+
+We have seen, for $f:(X,\mt)\ra Y$, there is a finest topology on $Y$ to make
+it cts: $\mtp = \{V\sset Y\ :\ \finv(V)\in\mt\}$. This topology is especially
+important/useful when $f$ is surjective:
+
+A {\it quotient map} is a surjective fcn $f:(X,\mt)\ra (Y,\mtp)$ with
+$V\in\mtp$ \lra\ $\finv(V)\in\mt$.
+
+$U=\finv(V)$ is called a {\it saturated} set; $U$ contains every inverse impage that it meets.
+A surjective $f$ is a quotient map \lra\ it is continuous and the image of every saturated
+open set in $X$ is open in $Y$ [the point: $f$ surjective means that $f(\finv(V))=V$].
+
+Using closed sets (i.e., complements), quotient maps are also the surjective cts maps
+for which the image of every saturated closed st is closed.
+
+So for example, a cts, open (the image of \ubr{every} open set is open) surjective function
+is a quotient map. And a cts closed (the iage of \ubr{every} closed set is closed)
+surjective function is a quotient map.
+
+So the projection maps $p_{X_j}:\prod_i X_i\ra X_j$ are quotient maps (they are cts open surjections).
+
+Given a top space $(X,\mt)$, an equivalence relation $\sim$ on $X$ [reflexive, symmetric, transitive]
+has a collection $X/\sim = Y$ of equivalence classes $[x] = \{y\in X\ :\ x\sim y\}$, and a surjective
+function $q:X\ra Y = X/\sim$. Giving $Y$ the topology
+$\mtp = \{V\sset Y\ :\ q^{-1}(V)\in\mt\}$ makes $q$ a quotient map; we call 
+$\mtp$ the {\it quotient topology} on $Y$ (induced from $q$). Viewing $\sim$ as describing how to 
+glue pieces of $X$ together, this construction is a `standard' way to build topological spaces.
+
+E.g., on $X=[0,1]$, the equivalence relation $x\sin y$ if $x=y$ or $\{x,y\}=\{0,1\}$
+`glues' the ends of the interval together, and (we shall see!) yields a quotient space
+homeomorphic to the unit circle in $\bbr^2$.
+
+Building cts fcns, II: If $q:(X,\mt)\ra (Y,\mtp)$ is a quotient map and 
+$f:(X,\mt)\ra (Z,\mtpp)$ is cts, satisfying $q(x)=q(y)$ implies $f(x)=f(y)$, then there is 
+an induced map $\overline{f}:(Y,\mtp)\ra (Z,\mtpp)$, defined by $\overline{f}([x])=f(x)$,
+and $\overline{f}$ is continuous. 
+
+So, for example, the map $f:[0,1]\ra S^1\sset\bbr^2$ given by 
+$f(t)=(\cos(2\pi t),\sin(2\pi t))$, respects the equivalence relation above,
+and so induces a cts (bijection) $\overline{f}:[0,1]/\sim\ra S^1$. (We will eventually
+see that this is a homeo!)
+
+Most of our `interesting' topological spaces will be built as quotient spaces, and we
+will recognize what they are by building maps along the lines above.
+
+BUT: quotient maps do not behave well under most of our constructions.
+The composition of two quotient maps \ubr{is} a quotient map. But the restriction
+of a quotient map to a subspace (restricting the domain, too) will not, in general,
+be a quotient map. And if $f:(X_1,\mt_1)\ra (Y_1,\mtp_1)$ and $g:(X_2,\mt_2)\ra (Y_2,\mtp_2)$
+are both quotient maps, the map$f\times g:X_1\times X_2\ra Y_1\times Y_2$
+need not be a quotient map (a situation that will bother us many times moving forward...).
+But if $f$ and $g$ are both open maps, then $f\times g$ is an open map, and so is a quotient 
+map.
+
+\msk
+
+Connectedness.
+
+What makes the Intermediate Value Theorem [ $f:[a,b]\ra\bbr$ cts, then $f([a,b])$ contains
+the interval between $f(a)$ and $f(b)$ ] work? What is it about the topological space $[a,b]$?
+Pretend that the result fails! $f:X\ra\bbr$
+
+Then there is a $c$ between $f(a)$ and $f(b)$ missed by $f$, so $f(X)\sset (-\infty,c)\cup(c,\infty)$,
+so $X=\finv(-\infty,c)\cup\finv(c,\infty)=U\cup V$, with $U,V\in\mt$, $U\cap V=\finv(\emptyset)=\emptyset$,
+and $U,V\neq\emptyset$ ($a$ is in one, $b$ in the other).
+
+This describes a topological property! A {\it separation} of a top space $(X,\mt)$ is a pair
+$U,V\in\mt$ with $U\cup V=X$, $u\cap V=\emptyset$, and $U,V\neq\emptyset$. 
+And denying a topological property is a topological property! A space is 
+{\it connected} if it has \ubr{no} separation.
+
+Equivalently, if $U,V\in\mt$ with $U\cup V=X$ and $U\cap V=\emptyset$, then either
+$U = \emptyset$ or $V = \emptyset$. [Equivalently, $U=X$ or $V=X$ !]
+
+Equivalently (since $U=X\smin V$ would be closed), $X$ connected means that $X$
+contains no non-trivial
+(not equal to $\emptyset,X$) \ubr{clopen} (= both closed and open) sets.
+
+A separation can be used to build a cts fcn $f:X\ra\bbr$ failing IVT ($f(x)=3$ if $x\in U$
+and $f(x)=71$ if $x\in V$ works...). 
+
+So $(X,\mt)$ is connected \lra\ for \ubr{every} cts function
+$f:(X,\mt)\ra(\bbr,\textrm{usual})$ and $a,b\in X$, if $c$ lies between $f(a)$ and $f(b)$ 
+then there is a $d\in X$ with $f(d)=c$.
+
+A subset $A\sset X$ is connected if $(A,\mt_A)$ is a connected space. Equivalently, 
+if $A\sset U\cup V$ with $U,V\in\mt$ and $A\cap U\cap V = \emptyset$, then either
+$A\sset U$ or $A\sset V$.
+
+The unit interval $([0,1]\textrm{usual})$ is connected.
+
+If $f:x\ra Y$ is cts and $X$ is connected, then $f(X)\sset Y$ is a conected subset of $Y$.
+[`The cts image of a connected set is connected.']
+(Otherwise, the inverse image of a separation of $f(X)$ will be a separation of $X$.)
+
+Flipside: a space is {\it totally disconnected} if for every $x,y\in X$ with
+$x\neq y$, there is a separation $(U,v)$ of $X$ with $x\in U$, $y\in V$. [Points
+can be separated using separations!]
+
+\ssk
+
+`Building' connected sets.
+
+If $(X,\mt)$ is path connected, then $(X,\mt)$ is connected. (Otherwise, a path
+between points in different sets of the separation will, taking inverse images,
+give a separation of $[0,1]$.
+
+But: connected spaces need not be path connected. (Example: any uncountable 
+set $X$ with the countable complement topology. Every cts fcn $\gamma:[0,1]\ra X$
+must be constant.)
+
+All intervals in $\bbr$ are path-connected, hence connected. Conversely, all connected
+subsets of $\bbr$ are intervals.
+
+If $A,B\sset X$ are connected subsets of $X$, and $A\cap B\neq\emptyset$, then 
+$A\cup B$ is connected.
+
+If $A_i\sset X$ are connected subsets, and for some $j$, $A_i\cap A_j\neq\emptyset$ for all
+$i$, then $\cup_i A_i$ is connected.
+
+If $A\sset X$ is connected, and $A\sset B\sset\overline{A}$, then $B$ is connected.
+
+If $X$ and $Y$ are connected, then $X\times Y$ is connected.
+
+If $X_i$ are all connected, then $\prod_i X_i$, using the \ubr{product} topology,
+is connected.
+
+But: $\prod_{i\in\bbz_+}\bbr$, with the \ubr{box} topology, is not connected.
+(Thinking of points as sequences, the sets $\{\textrm{bounded sequences}\}$,
+$\{\textrm{unbounded sequences}\}$ form a separation).
+
+
+
+
+
+
+
+
+
+
+
+
+\vfill
+\end{document}
+
+
+

@@ -1,0 +1,132 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\sset{\subseteq}
+\def\smin{\setminus}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\mtp{{\mathcal T}^\prime}
+\def\mbp{{\mathcal B}^\prime}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\spc{$~$\hskip.15in$~$}
+
+
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 871 Problem Set 8}
+
+\msk
+
+Starred (*) problems are due Thursday, November 6.
+
+
+\begin{description}
+
+
+
+\item{49.} Show that if $X_\alpha, \alpha\in I$ are all path-connected, then so is
+$\prod_{\alpha\in I} X_\alpha$, if we use the product topology.
+
+\msk
+
+\item{(*)} 50. Show that if $A_\alpha\subseteq X, \alpha\in I$ are all path-connected, and
+for some $\alpha_0\in I$ we have $\displaystyle A_\alpha\cap A_{\alpha_0}\neq\emptyset$ for all
+$\alpha\in I$, then $\displaystyle\bigcup_{\alpha\in I}A_\alpha$ is path-connected.
+
+\msk
+
+\item{51.} Show that if $\mt$ and $\mtp$ are toplogies on $X$,
+$(X,\mtp)$ is compact, and $\mt\sset\mtp$, then
+$(X,\mt)$ is compact.
+
+
+\msk
+
+\item{52.} Give an example of a space $(X,\mt)$ and subsets $A,B\sset X$ so that
+$A$ and $B$ are compact but $A\cap B$ is not.
+
+\ssk
+
+\item{\spc} (Note: your space $X$ cannot be Hausdorff....)
+
+
+\msk
+
+\item{(*)} 53. Let $X$ = $\bbr$ with the infinite ray topology 
+
+\ssk
+
+\ctln{$\mt$ = $\{(a,\infty) : a\in \bbr\}\cup \{\emptyset,\bbr\}$}
+
+\ssk
+
+\item{\spc} Show that $A$ = $\{0\}$ is a compact subset of $X$, but its closure $\overline{A}$ \ubr{isn't}.
+
+
+\msk
+
+\item{54.} [Munkres, p.171, Problem \#5] 
+Show that if $(X,\mt)$ is a Hausdorff space and $A,B\sset X$ are disjoint compact
+subsets of $X$, then there are subsets $U,V\in \mt$ so that $A\sset U$, $B\sset V$,
+and $U\cap V =\emptyset$ .
+
+
+\msk
+
+\item{55.} [Munkres, p.171, Problem \#6] Show that if $f:(X,\mt)\ra (Y,\mtp)$ is continuous and 
+surjective, $(X,\mt)$ is compact, and $(Y,\mtp)$ is Hausdorff, then $f$ is a closed map (and
+therefore a quotient map).
+
+
+\msk
+
+\item{(*)} 56. Let $(X,\mt)$ be a Hausdorff space and let 
+
+\ssk
+
+\ctln{$\mtp = \{U\sset X\ :\ X\smin U\sset X\ \textrm{is compact}\}\cup\{\emptyset\}$.}
+
+\item{\spc} Show that
+$\mtp$ is a topology on $X$, and is coarser than $\mt$. Show that, in general, 
+the two topologies need not be equal. Do $(X,\mt)$ and $(X,\mtp)$ have the same compact
+subsets? [Note that problem \#51 says something about this...]
+
+\ssk
+
+\item{\spc} [This problem (except for the last part) was lifted from an old qualifying exam...] 
+
+\end{description}
+\vfill
+
+\end{document}
+
+
+
+

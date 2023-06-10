@@ -1,0 +1,358 @@
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=8.9in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-.5in
+\parindent=-10pt
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\sset{\subseteq}
+\def\hsk{\hskip10pt}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\mbp{{\mathcal B}^\prime}
+\def\mbpp{{\mathcal B}^{\prime\prime}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+\def\mp{{\mathcal P}}
+\def\mtp{{\mathcal T}^\prime}
+\def\mtpp{{\mathcal T}^{\prime\prime}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+\def\bbd{{\mathbb D}}
+\def\bbc{{\mathbb C}}
+
+\def\up{U^\prime}
+\def\upp{U^{\prime\prime}}
+\def\vp{V^\prime}
+\def\vpp{V^{\prime\prime}}
+\def\wp{W^\prime}
+\def\wpp{W^{\prime\prime}}
+
+\def\finv{f^{-1}}
+\def\ginv{g^{-1}}
+\def\hinv{h^{-1}}
+
+\def\sset{\subseteq}
+\def\lra{$\Leftrightarrow$}
+\def\smin{\setminus}
+\def\rta{$\Rightarrow$}
+\def\rtta{\Rightarrow}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 871 Exam 2 Topics Part 2: The homotopy part}
+
+\msk
+
+{\bf Homotopy Theory.}
+
+\ssk
+
+Motivation: understand \ubr{all} continuous functions $f:X\ra Y$,
+since it is functions to/from `model' spaces that allow us to 
+explore a space. 
+
+\ssk
+
+E.g., paths = $\gamma:I=[0,1]\ra X$. How many `essentially distinct'
+paths are there from $(-1,0)$ to $(1,0)$ in $\bbr^2\smin\{(0,0)\}$ ?
+What is inessetial? \ubr{Deformations}.
+
+\ssk
+
+Two maps $f,g:X\ra Y$ are {\it homotopic} if one can be deformed 
+to the other (through continuous maps). Formally, there is a
+cts map $H:X\times I\ra Y$ so that $H(x,0)=f(x)$ and $H(x,1)=g(x)$
+for all $x\in X$. We write: $f\simeq g$ (via $H$).
+
+\ssk
+
+Note: $\gamma_x:t\mapsto H(x,t)$ is a cts path in $Y$, for every $x$.
+
+\ssk
+
+Notation: $f:(X,A)\ra (Y,B)$ means $A\sset X$, $B\sset Y$ and $f(A)\sset B$.
+
+\ssk
+
+Two maps $f,g:(X,A)\ra (Y,B)$ are homotopic rel $A$ if 
+$H:X\times I\ra Y$ also satisfies $H(a,t)=f(a)=g(a)$ for all $a\in A$, $t\in I$.
+[So, in part, $f|_A=g|_A$ .]
+
+\ssk
+
+Basic example: any two maps $f,g:X\ra \bbr^n$ are homotopic, via a
+{\it straight-line homotopy}: $H(x,t)=(1-t)f(x)+tg(x)$.
+
+\msk
+
+Homotopy is an \ubr{equivalence} \ubr{relation}: $f\simeq f$  (via $H(x,t)=f(x)$),
+$f\simeq g$ implies $g\simeq f$ (via $K(x,t)=H(x,1-t)$); 
+$f\simeq g$ and $g\simeq h$ implies $f\simeq h$ (via doubling the speed;
+$M(x,t)=H(x,2t)$ for $t\leq 1/2$ and $=K(x,2t-1)$ for $t\geq 1/2$).
+
+\ssk
+
+This allows us to introduce a new notion of equivalence of topological spaces.
+$X$ and $Y$ are {\it homotopy equivalent} [we write $X\simeq Y$]
+if there are $f:X\ra Y$ and $g:Y\ra X$ so that $g\circ f\simeq {\textrm Id}_X$
+and $f\circ g\simeq{\textrm Id}_Y$ . 
+
+\ssk
+
+Homotopy equivalence is an equivalence relation! Note: a homeomorphism is a
+homotopy equivalence! [$g\circ f = {\textrm Id}_X\simeq {\textrm Id}_X$].
+
+\msk
+
+{\bf The homotopy viewpoint.}
+
+\ssk
+
+The basic idea is that homotopy equivalence  (= `h.e.') 
+allows us to move past/around
+`unimportant' differences in spaces. For example, 
+$\bbr^2\smin\{(0,0)\}\cong S^1\times\bbr\simeq S^1\times I\simeq S^1$
+means that maps into $\bbr^2\smin\{(0,0)\}$ `behave like' maps
+into $S^1$ (which we can more readily understand?).
+
+\ssk
+
+{\it Algebraic topology} seeks to understand topological spaces through
+algebraic invariants. An algebraic invariant assigns to each space $X$ an 
+algebraic object $A(X)$ and to each map $f:X\ra Y$ a 
+homomorphism $A(f):A(X)\ra A(Y)$. If $X$ and $Y$ are the `same', then 
+$A(X)$ and $A(X)$ will be isomorphic. Usually, `same' means homeomorphic,
+but we will often find that homotopy equivalent spaces will 
+same the same invariants, due the the methods that we use to build 
+them.
+
+\ssk
+
+This can be both bad and good, `homotopy invariance' of a invariant means
+that it will not be able to distinguish h.e. spaces that are not homeomorphic.
+But it also means that when computing an algebraic invariant, we can replace
+a space $X$ with $Y\simeq Y$, which may streamline a computation.
+
+\msk
+
+A {\it retraction} of $X$ onto $A\sset X$ is a map $r:X\ra A$ so that $r(a)=a$
+for all $a\in A$. [$A$ is a {\it retract} of $X$]. $A$ is a {\it deformation
+retract} of $X$ if $\iota\circ r:X\ra A\ra X$ is $\simeq{\textrm Id}_X$
+[$r$ is a {\it deformation retraction}]. and $r$ is a {\it strong
+deformation retraction} if $\iota\circ r:(X,A)\ra (X,A)$ is $\simeq{\textrm Id}_X$
+rel $A$ (i.e., $H(a,t)=a$ for all $a\in A$). We write $X\searrow A$. 
+
+\ssk
+
+For example, $r:\bbr^n\searrow\{\vec{0}\}$, since $\iota\circ r\simeq{\textrm Id}_{\bbr^n}$
+via a straight-line homotopy 
+
+\hfill $H(x,t)=(1-t)\iota\circ r(\vec{x})+t{\textrm Id}_{\bbr^n}(\vec{x})=t\vec{x}$ .
+
+\ssk
+
+A space $X$ is {\it contractible} if $X\simeq\{*\}$.
+
+\ssk
+
+Mapping cylinders:  If $f:X\ra Y$, then $M_f = X\times I\coprod Y/\sim$, where
+$(x,1)\sim f(x)$. [Idea: we glue $X\times\{1\}$ to $Y$ using $f$.] Then since 
+$X\times I\searrow X\times\{1\}$, we have $M_f\searrow Y$.
+
+\ssk
+
+Fact: $f:X\ra Y$ is a homotopy equivalence \lra\ $M_f\searrow X\times\{0\}$.
+This means that $X\simeq Y$ \lra\ there is a space $Z$ with $X,Y\sset Z$ and 
+$Z\searrow X$, $Z\searrow Y$.
+
+\msk
+
+{\bf The Fundamental Group.}
+
+\ssk
+
+Idea: find the essentially distinct paths between points in $X$.
+How? Turn this into a group! How? The concatenation $\gamma*\eta$ of two paths is
+a path. But: only if the first ends where the second begins (so that, by
+the Pasting Lemma, the resulting map is cts). So we
+either have a \ubr{partial} multiplication (= groupoid!), or we
+focus on \ubr{loops} $\gamma:(I,\partial I)\ra (X,x_0)$ based at a
+fixed point $x_0$ 9we'll do the second).
+
+\ssk
+
+Elements of the {\it fundamental group} $\pi_1(X,x_0)$ `are' 
+loops; the inverse will be the reverse $\overline{\gamma}(t)=\gamma(1-t)$,
+since $\gamma*\overline{\gamma}\simeq c_{x_0}$, and the 
+identity element will be the constant map $c_{x_0}$.
+But! to make $\gamma*\overline{\gamma}$ equal $c_{x_0}$, we need to work with
+{\it homotopy classes} of loops. So elements really are 
+equivalence classes $[\gamma]$ of loops, under $\simeq$ rel $\partial I$.
+
+\ssk
+
+Then by building homotopies (mostly working on the domain $I$,
+i.e., building $K=\gamma\circ H:I\times I\ra I\ra X$)
+we can see that $[\gamma][\eta] = [\gamma*\eta]$ is well defined,
+$[\gamma]^{-1}=[\overline{\gamma}]$ is the inverse, and 
+$([\gamma][\eta])[\omega] = [\gamma]([\eta][\omega])$, so 
+under $*$, $\pi_1(X,x_0)$ is a group. [Most of the proofs that
+needed maps (like $(\gamma*\eta)*\omega$ and $\gamma*(\eta*\omega)$
+(which are the same concatenations, except at 4,4, and 2 times speed, versus 
+2,4, and 4 times speed) are homotopic can be given `picture' proofs, 
+in addition to explicit analytic formulas.
+
+\ssk
+
+Given a map $f:(X,x_0)\ra (Y,y_0)$, we get an induced map
+$f_*:\pi_1(X,x_0)\ra \pi_1(Y,y_0)$ via $f_*[\gamma]=[f\circ\gamma]$.
+This is well-defined, and a homomorphism.
+
+\ssk
+
+Basic computations: $\pi_1(\{*\},*) = \{1\}$, as are 
+$\pi_1(\bbr^n,\vec{0})$ and $\pi_1([0,1]^n,x_0)$ for any
+$x_0$. More generally, any contractible space has trivial fundamental
+group.
+
+\msk
+
+Since $(f\circ g)_*=f_*\circ g_*$, and $({\textrm Id}_X)_*={\textrm Id}_{\pi_1(X,x_0)}$,
+then $X\cong Y$ via $f$ implies $f_*:\pi_1(X,x_0)\ra \pi_1(Y,f(x_0))$
+is an isomorphism.
+
+\ssk
+
+More generally, if $f:X\ra Y$ is a h.e., then $f_*$ is an isomorphism,
+but, because of basepoint issues, the inverse of $f_*$ is generally
+\ubr{not} $g_*$ for $g$ a homotopy inverse. Th is is because under
+a homotopy $H:X\times I\ra X$ of $g\circ f$ to ${\textrm Id}$,
+the basepoint $x_0$ traces out a path $\eta$ from $g(f(x_0))=x_1$ to $x_0$,
+and $[g\circ f\circ\gamma] = [\overline{\eta}*\gamma *\eta]$.
+This map $[\gamma]\mapsto [\overline{\eta}*\gamma *\eta]$ from
+$\pi_1(X,x_0)$ to $\pi_1(X,x_1)$ is a {\it change of basepoint 
+isomorphism}, which we might call $\eta_*$ ? The fact that homotopies
+can drag basepoints around will be a theme we will return to 
+many times moving forward.
+
+\ssk
+
+If $X$ is path connected, then, up to isomorphism, $\pi_1(X,x_0)$ 
+is independent of $x_0$ (we can always find a path to effect an 
+isomorphism), and so we will often write $pi_1(X)$, when $X$ is 
+path-connected, when we only care about the abstract group.
+
+\msk
+
+$\pi_1(S^1,(1,0))\cong\bbz$. The main ingredients:
+
+\ssk
+
+Writing $S^1\sset\bbc$ and $\gamma_n(t)=e^{2\pi int}$ is the loop
+traversing $S^1$ $n$ times counterclockwise at uniform speed,
+then (1) every loop $\gamma$ at $(1,0)$ is $\simeq\gamma_n$ for some $n$.
+
+\ssk
+
+We define $w:\pi_1(S^1,(1,0))\ra\bbz$ by $w[\gamma] = n$ if
+$[\gamma]=[\gamma_n]$. This is well-defined:
+(2) if $\gamma_n\simeq\gamma_m$ rel endpoints, then $n=m$.
+
+\ssk
+
+$w$ is a bijective homomorphism!
+
+\ssk
+
+The proof of (1) amounted to making a general $\gamma$ progreessively nicer, 
+via homotopy. This involved 
+
+\ssk
+
+{\it Lebesgue Number Theorem}: If $(X,d)$ is a compact metric space and
+$\{U_\alpha\}$ is an open covering of $X$, then there is an $\epsilon>0$
+so that for every $x\in X$ there is an $\alpha=\alpha(x)$ so that 
+we have $N_d(x,\epsilon)\sset U_\alpha$.
+
+\ssk
+
+Then by covering $S^1$ by the `top 2/3rds' and `bottom 2/3rds' subsets
+and taking inverse images under $\gamma:(I,\partial I)\ra (S^1,(1,0))$,
+the LNT will partition $I$ into finitely many intervals each mapping into
+top or bottom. Creating subpaths by restricting to each subinterval, and inserting
+`hairs' to points $(1,0),(-1,0)$ in the intersection of top and bottom,
+we can then homotope the subpaths to standard paths $t\mapsto e^{\pm 2\pi it}$.
+Cancelling pairs the reverse direction give us our `normal forms'
+$\gamma_n$.
+
+\ssk
+
+The proof of (2) amounted to using an `extra' coordinate $(\cos t,\sin t,t)$
+to keep track of how many times we wind around the circle. To do this correctly,
+we really use the map $p:t\mapsto(\cos t,\sin t,t)\mapsto(\cos t,\sin t)$ and
+then \ubr{lift} paths $\gamma:I\ra S^1$ to paths 
+$\widetilde{\gamma}:I\ra \bbr$ with $\gamma = p\circ\widetilde{\gamma}$. 
+This agin uses the LNT to partition $I$ into subintervals mapping into top and bottom,
+and the fact that the inverse image of top and bottom are a disjoint
+union of open sets mapped homeomorphically under $p$ to the top and bottom.
+[This is the {\it evenly covered property}.]
+
+\ssk
+
+More than this, homotopies $H:I\times I\ra S^1$ can also be lifted; this enables us to
+show that loops homotopic rel endpoints, when lifted both starting at the same point,
+will end at the same point. Since $\gamma_n$ when lifted starting at $0$ will
+end at $n$, the result follows.
+
+\msk
+
+{\bf Applications.}
+This single computation has many applications! First, there is no
+retraction $r:\bbd^2\ra \partial\bbd^2$. This is because if there were one,
+then $r_*:\pi_1(\bbd^2,(1,0))\ra\pi_1(S^1,(1,0))$ would be a surjection,
+which is impossible.
+
+\ssk
+
+This in turn gives the {\it Brouwer Fixed Point Theorem}: Every countinuous
+map $f:\bbd^2\ra \bbd^2$ has a fixed point. For if not, we can then 
+manufacture a retraction $r:\bbd^2\ra \partial\bbd^2$.
+
+\ssk
+
+Finally, we can prove the {\it Fundamental Theorem of Algebra}: Every non-constant
+polynomial $p$ has a complex root. For if not, then for large enough $N$ the map
+
+\ctln{$t\mapsto f(Ne^{2\pi it})\mapsto f(Ne^{2\pi it})/||f(Ne^{2\pi it})||$}
+
+from 
+$I$ to $S^1$ is homotopic to both $c_{(1,0)}=\gamma_0$ and $\gamma_n$ for $n$ = the
+degree of $f$, a contradiction.
+
+\vfill
+\end{document}
+
+
+

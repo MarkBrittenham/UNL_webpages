@@ -1,0 +1,135 @@
+
+
+\documentclass[12]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+
+
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 871 Problem Set 4}
+
+\msk
+
+Starred (*) problems are due Thursday, Sept. 25.
+
+
+\begin{description}
+
+\item{21.} Theorem 15.1 of the text shows that if $(X,\mt)$ and $Y,\mt^\prime$ are topological 
+spaces with bases $\mt=\mt(\mb)$ and $\mt^\prime=\mt(\mb^\prime)$,
+then $\mb\times \mb^\prime = \{B\times B^\prime\ :\ B\in\mb, B^\prime\in\mb^\prime\}$
+is a basis for the product topology on $X\times Y$. [You should prove this for yourself!]
+
+\ssk
+
+\item[$~$\hskip.15in$~$] Show, by contrast, that, for an infinite Cartesian product, one natural generalization
+of this is (typically)
+\underbar{false}; if $\mt_\alpha=\mt(\mb_\alpha)$ for all $\alpha$, the sets
+
+\ssk
+
+\ctln{$\prod_\alpha(\mb_\alpha)=\{\prod_\alpha B_\alpha\ :\ B_\alpha\in\mb_\alpha\ \textrm{for all}\ \alpha\}$}
+
+\ssk
+
+\item{$~$\hskip.15in$~$} is a basis, but for the \underbar{box} topology on $\prod_\alpha X_\alpha$, not (typically) the product topology.
+What would the `correct' basis be, to generate the product topology? 
+
+\msk
+
+\item{(*)} 22. [Munkres, p.112, Problem \#10] Show that if $A,B,X,Y$ are topological spaces, and
+$f:A\ra X$ and $g:B\ra Y$ are both continuous functions, then the function
+$h:A\times B\ra X\times Y$, given by $h(a,b)=(f(a),g(b))$, is also continuous (using the product topologies
+on domain and codomain).
+
+\msk
+
+\item{(*)} 23. [Munkres, p.91, Problem \#1] Show that if $(X,\mt)$ is 
+a topological space, $A\subseteq X$ is given the subspace topology
+$\mt_A$ it inherits from $X$, and $B\subseteq A$, then the subspace topology $\mt_{B,A}$ that $B$ inherits
+from $A$ is the same as the subspace topology $\mt_{B,X}$ that it inherits as a subset of $X$.
+
+
+\msk
+
+\item{24.} Show that if $\mt\subseteq\mt^\prime$ are topologies on the set $X$, and 
+$A\subseteq X$, then the subspace topology on $A$ induced by $\mt$ is coarser than the
+subspace topology induced by $\mt^\prime$. Find examples of topologies $\mt\subsetneq\mt^\prime$
+on $\bbr$ so that the topologies that they induce on $[0,1]\subseteq\bbr$ are the \underbar{same}.
+
+\msk
+
+\item{25.} [Munkres, p.118m, Problem \#2] Show that if $(X_\alpha,\mt_\alpha$ are topological spaces 
+and $A_\alpha\subseteq X_\alpha$ are given the subspace topologies for each $\alpha$, and 
+$\prod_\alpha X_\alpha$ is given the 
+product topology $\mt$, then the subspace topology on $\prod_\alpha A_\alpha$ induced by $\mt$
+is the product topology on $\prod_\alpha A_\alpha$. Is the analogous statement true if we use
+the box topologies?
+
+\msk
+
+\item{(*)} 26. Giving ${\mathbb R}$ the usual (metric) topology, show that if
+$f:(X,{\mathcal T})\ra{\mathbb R}$ and $g:(X,{\mathcal T})\ra{\mathbb R}$ are both continuous, then the 
+functions $m,M:(X,{\mathcal T})\ra{\mathbb R}$, given by
+
+\ssk
+
+\ctln{$m(x) = \textrm{min}\{f(x),g(x)\}$ \hskip1in $M(x) = \textrm{max}\{f(x),g(x)\}$}
+
+\ssk
+
+\item{$~$\hskip.15in$~$} are also both continuous.
+
+\msk
+
+\item{$~$\hskip.15in$~$} [Hint: using the subbasis ${\mathcal S} = \{(a,\infty)\ :\ a\in{\mathbb R}\}\cup\{(-\infty,a)\ :\ a\in{\mathbb R}\}$
+cuts down on your work...]
+
+
+\msk
+
+\item{27.} (a) Show that $\{(x,y)\in\bbr^2\ :\ x+y>a\}=\bigcup_c(c,\infty)\times(a-c,\infty)$ and
+$\{(x,y)\in\bbr^2\ :\ x+y<a\}=\bigcup_c(-\infty,c)\times(-\infty,a-c)$ (so both are open sets).
+
+\ssk
+
+\item{$~$\hskip.15in$~$} (b) Show that the function $A:\bbr\times\bbr\ra\bbr$ (with the usual (product) toplogies)
+given by $A(x,y)=x+y$ is continuous. [Part (a) helps... see previous hint!]
+
+\ssk
+
+\item{$~$\hskip.15in$~$} (c) Use a previous problem (!) to conclude that if $f,g:(X,\mt)\ra(\bbr,\textrm{usual})$ are
+both continuous , then the function $h:(X,\mt)\ra(\bbr,\textrm{usual})$ given by $h(x)=f(x)+g(x)$
+is also continuous.
+
+\end{description}
+\vfill
+
+\end{document}

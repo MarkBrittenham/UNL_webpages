@@ -1,0 +1,384 @@
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=8.9in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-.5in
+\parindent=-10pt
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\sset{\subseteq}
+\def\hsk{\hskip10pt}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\mbp{{\mathcal B}^\prime}
+\def\mbpp{{\mathcal B}^{\prime\prime}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+\def\mp{{\mathcal P}}
+\def\mtp{{\mathcal T}^\prime}
+\def\mtpp{{\mathcal T}^{\prime\prime}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\up{U^\prime}
+\def\upp{U^{\prime\prime}}
+\def\vp{V^\prime}
+\def\vpp{V^{\prime\prime}}
+\def\wp{W^\prime}
+\def\wpp{W^{\prime\prime}}
+
+\def\finv{f^{-1}}
+\def\ginv{g^{-1}}
+\def\hinv{h^{-1}}
+
+\def\sset{\subseteq}
+\def\lra{$\Leftrightarrow$}
+\def\smin{\setminus}
+\def\rta{$\Rightarrow$}
+\def\rtta{\Rightarrow}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 871 Exam 2 Topics, PART 1 (the point-set part)}
+
+\msk
+
+{\bf Compactness.} The topologcal property behind the Extreme Value Theorem
+
+\ssk
+
+Same idea: what would make EVT fail? $f:X\ra \bbr$ (Think maximum.) Either 
+$f$ has no upper bound, or its image has a (least) upper bound that is not
+achieved. Either, taking inverse images, leads to a collection of nested
+open sets whose union is $X$, but none of them is $X$. This leads to:
+
+\ssk
+
+An {\it open covering} of a topological spac $X$ is a collection of open sets
+$\mu_\alpha$ whose union is $X$.
+
+
+\ssk
+
+$(X,\mt)$ is {\it compact} (cpct) if every open covering $\{\mu_\alpha\}_{\alpha\in I}$ has a
+{\it finite subcover(ing)}: a finite collection $J\subseteq I$ so that
+$\{\mu_\beta\}_{\beta\in J}$ is also an open covering of $X$.
+
+\ssk
+
+Compact subset $A\sset X$ : $(A,\mt_A)$ is a cpct space.
+
+\ssk
+
+Topologist's EVT: If $f:(X,\mt)\ra(\bbr,\textrm{usual})$ is cts and $X$ is cpct, then there
+are $a,b\in X$ so that $f(a)\leq f(x)\leq f(b)$ for all $x\in X$.
+
+\ssk
+
+`Real' Topologists EVT: if $f:(X\mt)\ra (Y,\mtp)$ is cts and $X$ is cpct, then 
+$f(X)\sset Y$ is a cpct subset of $Y$.
+
+\ssk 
+
+A closed subset of a compact set is compact.
+
+\ssk
+
+A compact subset of a Hausdorff space is closed.
+
+\msk
+
+Consequence: 
+
+\hskip.2in If $f:X\ra Y$ is a cts bijection, and $X$ is cpct while $Y$ is Hausdorff, 
+then $f$ is a homeomorphism.
+
+This is generally our favorite way, for example, to identify a space as a quotient of another space;
+$f:X\ra Y$ cts and surjective, with $X$ cpct and $Y$ Hausdorff, then the quotient space
+$X/\sim$ where $x\sim y$ iff $f(x)=f(y)$, is homeomorphic to $Y$.
+
+\msk
+
+$X$ and $Y$ cpct, then $X\times Y$ is cpct.
+
+\ssk
+
+If $X_\alpha$ are compact for all $\alpha$, then $\prod X_\alpha$ is compact, using the
+\underbar{product} topology. [This is a deep result...]
+
+\ssk
+
+A finite union of compact subsets is compact.
+
+\msk
+
+Closed set formulation: take complements! A collecction $A_\alpha$ of subsets of $X$ has the
+{\it finite intersection property} (FIP) if the intersection of any finite number of the
+$A_\alpha$ is non-empty.
+
+\ssk
+
+$X$ is cpct \lra\ for \underbar{any} collection $\{C_\alpha\}$ of \underbar{closed} subsets
+of $X$ that has the FIP, we have $\bigcup_\alpha C_\alpha\neq\emptyset$.
+
+\ssk
+
+This is often treated as a method for locating `interesting' points: in a cpct space $X$ if 
+you can satisfy any finite number of a collection of `closed' conditions (the pts satisfying 
+each condition form a closed subset) then you can simultaneously satisfy \underbar{all}
+of them.
+
+\msk
+
+Alternate notions: In any cpct space, every infinite subset has a limit point.
+
+\ssk
+
+$(X,\mt)$ is {\it limit point compact} if every infinite subset of $X$ has a limit point.
+
+\ssk
+
+limit pt cpctness does \underbar{not} imply cpctness. Limit pt cpctness is not preserved
+under cts image. For {\it metrizable} spaces $X$ (those whose open sets can be defined by a 
+metric), $X$ is cpctness \lra\ $X$ is limit pt cpct.
+
+\msk
+
+{\bf Nets:}  
+
+\ssk
+
+A {\it sequence}  in $X$ is a function $f:\bbz_+\ra X$; $f(n)=x_n\in X$. A sequence
+converges $x_n\ra x$ if for all $x\in U\in X$, $U\in\mt$, there is an $N\in\bbz_+$
+so that $n\geq N$ $\Rightarrow$ $x_n\in U$.
+
+\ssk
+
+If $f:X\ra Y$ is cts and $x_n\ra x$ in $X$, then $f(x_n)\ra f(x)$ in $Y$. But in like in 
+analysis/$\bbr^n$, the converse is not true; convergence of sequences is not good enough
+to imply continuity.
+
+\ssk
+
+A {\it net} in $X$ is a collection of points indexed by a {\it directed set} $(D,\geq)$
+[$a\geq b$ and $b\geq c$ implies $a\geq c$],
+where for all $a,b\in D$ there is a $d\in D$ so that $d\geq a$, $d\geq b$
+
+\ssk
+
+Model: all $U\in\mt$ with $x\in U$, where $U\geq V$ means $V\sset U$ (reverse inclusion)
+
+\ssk
+
+A net $\{x_i\}_{i\in D}$  in $X$ {\it converges} if there is an $x\in X$ so that $x\in U\in\mt$
+implies there is a $d\in D$ so that $i\geq d$ $\Rightarrow$ $x_i\in U$. [Write $x_i\ra x$]
+
+\ssk
+
+If $f:X\ra Y$ is cts and $x_i\ra x$ in $X$, then $f(x_i)$ (is a net in $Y$, with the
+same index set and) converges to $f(x)$.
+
+\ssk
+
+But the converse is now true: if the image under $f$ of every convergent net is a convergent net, then
+$f$ is continuous.
+
+\ssk
+
+Also: a space $X$ is cpct \lra\ Every net in $X$ has a convergent {\it subnet} [a subnet must
+be cofinal: it is defined by a subset $E\sset D$ so that for all $d\in D$ there is some
+$e\in E$ with $e\geq d$.] The corresponding statement for sequences/subsequences is false
+(but they do characterize cpctness for metrizabe spaces).
+
+\msk
+
+{\bf Countability and separation properties.}
+
+\ssk
+
+Idea: other useful properties that $\bbr$ has that we might like $(X,\mt)$ to have.
+
+\ssk
+
+$(X,\mt)$ is {\it separable} if there is a countable subset $A\sset X$ with $\overline{A}=X$ [$A$ is dense in $X$].
+
+\ssk
+
+$(X,\mt)$ is {\it second countable} if $\mt=\mt(\mb)$ for some countable basis $\mb\sset\mt$.
+
+\ssk
+
+$(X,\mt)$ is {\it first countable} if for every $x\in X$ there are $\{U_n\}_{n\in \bbz_+}\sset\mt$
+so that $x\in U\in\mt$ implies $x\in U_n\sset U$ for some $n$. [Each point has a countable 
+{\it neighborhood basis}.]
+
+\ssk
+
+$(X,\mt)$ metrizable implies first ctble.
+
+\ssk
+
+$(X,\mt)$ second ctble $\Rightarrow$ $(X,\mt)$ separable, $(X,\mt)$ first ctble.
+
+\ssk
+
+In general, separable and first ctble do \ubr{not} imply second ctble.
+
+\ssk
+
+Subspace of first ctble is first ctble; subspace of second ctble is second ctble.
+
+\msk
+
+Separation properties: $T_1$ (points are closed) and $T_2$ = Hausdorff we have met already.
+
+\ssk
+
+A space $(X,\mt)$ is $T_3$ if for every $C\sset X$ closed and $x\in X$ with $x\not\in C$, there are 
+$U,V\in\mt$ so that $x\in U$, $C\sset V$, and $U\cap V=\emptyset$.
+
+\ssk
+
+A space $(X,\mt)$ is $T_4$ if for every $C,D\sset X$ closed with $C\cap D=\emptyset$, there are 
+$U,V\in\mt$ so that $C\sset U$, $D\sset V$, and $U\cap V=\emptyset$.
+
+\ssk
+
+$(X,\mt)$ is {\it regular} if it is $T_1$ and $T_3$; $(X,\mt)$ is {\it normal} if it
+is $T_1$ and $T_4$.
+
+\ssk
+
+normal \rta\ regular \rta\ Hausdorff \rta\ $T_1$
+
+\ssk
+
+$(X,\mt)$ metrizable implies that $X$ is normal.
+
+\ssk
+
+$(X,\mt)$ compact and Hausdorff implies that $(X,\mt)$ is normal.
+
+\ssk
+
+$(X,\mt)$ regular and second ctble implies that $(X,\mt)$ is normal.
+
+\ssk
+
+Alternate forms: 
+
+\ssk
+
+$(X,\mt)$ is regular \lra\ $X$ is $T_1$ and whenever $x\in U\in\mt$, there is a $V\in \mt$ with 
+$x\in V\sset \overline{V}\sset U$.
+
+\ssk
+
+$(X,\mt)$ is normal \lra\ $X$ is $T_1$ and whenever $C\sset U\in\mt$ with $C$ closed, there is a $V\in \mt$ with 
+$C\sset V\sset \overline{V}\sset U$.
+
+\ssk
+
+The cartesian product of regular spaces is regular; this is \ubr{not} true for normal spaces (and normality).
+
+\msk
+
+$(X,\mt)$ is {\it metrizable}, then $X$ is normal and first countable; these are necessary. What is 
+\ubr{sufficient}?
+
+\ssk
+
+Urysohn Metrization Theorem: If $(X,\mt)$ regular and second countable, then
+[$(X,\mt)$ is normal and] $(X,\mt)$ is metrizable.
+
+\ssk
+
+The idea: build an embedding $X\hookrightarrow \prod_{n\in\bbz_+}\bbr$, so $X$ is a subspace of 
+a metrizable space, hence metrizable. Key ingredient:
+
+\ssk
+
+Urysohn's Lemma: If $(X,\mt)$ is normal then for $A,B\sset X$ closed with $A\cap B=\emptyset$,
+there is a cts $f:X\ra [0,1]$ so that $f|_A=0$ and $f|_B=1$.
+
+\ssk
+
+So second ctbility, in addition to normality, is sufficient; but there are non-second-countable metric
+spaces (uncountable set, discrete topology!). 
+
+\ssk
+
+Smirnov metrizability: $(X,\mt)$ is metrizable \lra\ $X$ is Hausdorff, paracompact, and
+locally metrizable.
+
+\ssk
+
+Nagata-Smirnov metrizability: $(X,\mt)$ is metrizable \lra\ $X$ is regular and has a 
+$\sigma$-locally-finite basis for the topology.
+
+\ssk
+
+Paracompact = every open covering has a locally finite refinement. 
+Refinement = an open covering each of which is a subset of one of the original covering.
+Locally finite = every point as a neighborhood meeting only finitely many of the sets.
+$\sigma$-locally-finite = is a countable union of locally finite collections.
+
+\msk
+
+{\bf Local properties:} nearly every one of the properties we have studied has a 
+``local'' version (essentially, it hold for some open subset of a point).
+
+\ssk
+
+Locally connected: Given $x\in U\in\mt$, there is a $V\in\mt$ with $x\in V\sset U$ and $V$ is 
+connected.
+
+\ssk
+
+Locally path connected: Given $x\in U\in\mt$, there is a $V\in\mt$ with $x\in V\sset U$ and $V$ is 
+path connected.
+
+\ssk
+
+Locally compact: Given $x\in X$, there is a $U\in\mt$ and $C\sset X$ compact, so that
+$x\in U\sset C$.
+
+\ssk
+
+All of these are topological properties, and they typically allow us to leverage
+the useful properties that follow from connectedness/path connectedness/compactness
+to more general settings. [Think: $\bbr$ is not cpct, but it is locally cpct.]
+
+\msk
+
+{\bf Homotopy Theory.}
+
+\ssk
+
+
+
+\vfill
+\end{document}
+
+
+
