@@ -1,0 +1,119 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 417 Problem Set 4}
+
+\msk
+
+Starred (*) problems are due Friday, September 21.
+
+
+\begin{description}
+
+
+\item{21.} If $G$ is a group,
+and $H\subseteq G$ is a subset of $G$ so that, whenever
+$a,b\in H$ we have $a^{-1}b^{-1}\in H$, is this enough
+to guarantee that $H$ is a subgroup of $G$? If yes, 
+explain why! If not, give an example which shows that
+it doesn't work.
+
+\msk
+
+[Hint: if $a\in H$, start listing other elements that you can
+\ubr{guarantee} are in $H$ ...]
+
+\msk
+
+\item{22.} (Gallian, p.70, \#34) Show that if $G$ is a 
+group and $H,K\subseteq G$ are subgroups of $G$, then 
+their intersection $H\cap K$ is also a subgroup of $G$.
+Does this extend to the intersection of \underbar{any}
+number of subgroups of $G$ ?
+
+\msk
+
+\item{(*) 23.} (Gallian, p.71, \#46) Suppose that $G$ is a group
+and $g\in G$ has $|g|=5$. Show that the centralizer of $g$,
+$C(g)=C_G(g)=\{x\in G\ :\ xg=gx\}$, is equal to the
+centralizer of $g^3$, $C_G(g^3)$.
+
+\ssk
+
+[Hint: show that anything that commutes with $g$ must commute 
+with $g^3$, \ubr{and} \ubr{vice} \ubr{versa}! What, if anything,
+is special about the numbers $5$ and $3$ in this problem?]
+
+\msk
+
+\item{24.} (Gallian, p.73, \#66) Let $G = GL_2(\bbr)$ = the
+$2\times 2$ invertible matrices, under matrix multiplication, and
+let $H=\{A\in GL_2(\bbr)\ :\ \textrm{det}(A) = 2^k\ \textrm{for some}\ k\in\bbz\}$.
+Show that $H$ is a subgroup of $G$.
+
+\msk
+
+\item{(*) 25.} If $G$ is an \ubr{abelian} group and $n\in\bbz$, show that 
+$H_n = \{g\in G\ :\ g=x^n\ \textrm{for some}\ x\in G\}$ (i.e., the set
+of $n$-th powers of elements of $G$) is a subgroup
+of $G$. Give an example where this \ubr{fails} if $G$ is \ubr{not} abelian.
+\msk
+
+\item{(*) 26.} (Gallian, p.72, \#53) Consider the element 
+$A = \left( \begin{array}{cc} 1 & 1 \\ 0 & 1 \end{array} \right)\in SL(2,\bbz)$
+What is the order of $A$ ? If we instead view 
+$A = \left( \begin{array}{cc} 1 & 1 \\ 0 & 1 \end{array} \right)\in SL(2,\bbz_n)$
+for an integer $n\geq 2$, what is the order of $A$ ?
+
+\msk
+
+\item{27.} (Gallian, p.86, \#15) Let $G$ be an abelian group and let 
+$H = \{g \in G\ :\ |g|$ divides $12\}$.
+Prove that $H$ is a subgroup of $G$. Is there anything special about $12$
+here? Would your proof be valid if $12$ were replaced by some other
+positive integer? Why or why not?
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+

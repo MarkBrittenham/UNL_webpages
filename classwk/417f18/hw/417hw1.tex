@@ -1,0 +1,129 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 417 Problem Set 1}
+
+\msk
+
+Starred (*) problems are due Friday, Augsut 31.
+
+
+\begin{description}
+
+
+\item{(*) 1.} Some linear algebra(!) shows that that rotation $R(\theta)$ by angle $\theta$ 
+around the origin, 
+and reflection $M(\theta)$ in the line through the origin making angle $\theta$,
+are linear transformations, given in matrix terms as multiplication by 
+
+\ssk
+
+\ctln{
+$R(\theta) = \left( \begin{array}{cc} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{array} \right)$ 
+and
+$M(\theta) = \left( \begin{array}{cc} \cos(2\theta) & \sin(2\theta) \\ \sin(2\theta) & -\cos(2\theta) \end{array} \right)$
+}
+
+\ssk
+
+\item{\spc} Using matrix multiplication, show that $M(\theta)\circ M(\psi)$ is a rotation, and 
+$M(\theta)\circ R(\psi)$ and $R(\psi)\circ M(\theta)$ are both reflections, 
+and determine which angle they rotate or reflect by.
+
+\ssk
+
+\item{\spc} [You can show yourself that the matrices are correct, since their columns are the vectors that
+$R(\theta)$ and $M(\theta)$ send the `standard' basis vectors of $\mathbb{R}^2$ to.]
+
+\msk
+
+\item{(*) 2.} (Gallian, p.38, \#14) If we build a rhombus $R$ (a quadrilateral
+with all four sides having equal length) by gluing two equilateral
+triangles together along a pair of sides, describe the symmetries
+of $R$ in terms of rotations and reflections.
+
+\msk
+
+\item{3.} Describe the symmetries of a (right circular) cylinder (of height $h$ and radius $r$).
+
+\msk
+
+\item{4.} Show that the set $G=\{1,5,9,13\}$ forms a group, with group 
+multiplication
+being multiplication modulo 16. (One approach: build the `Cayley' table!
+This helps to see why some needed properties hold.)
+
+\msk
+
+\item{(*) 5.} (Gallian, p.55, \#18) Which elements $x\in D_4$ = the group
+of symmetries of a regular 4-gon (i.e., square) satisfy $x^2=e$ ?
+Which satisfy $x=y^2$ for some $y\in D_4$ ? 
+
+\item{\spc} [Problem \#1 can help you decide what an element $y^2$
+can look like...]
+
+\msk
+
+\item{6.} (Gallian, p.57, \#48) Show that the collection of all $3\times 3$
+matrices 
+
+\ssk
+
+\ctln{$\left( \begin{array}{ccc} 1 & a & b \\ 0 & 1 & c \\ 0 & 0 & 1 \end{array} \right)$}
+
+\ssk
+
+\item{\spc} with $a,b,c\in \bbr$ forms a group under matrix multiplication.
+
+\ssk
+
+\item{\spc} [This group is known as the {\it Heisenberg group}, and arises in the study of
+one-dimensional quantum systems. You may find your row reduction prowess useful
+in finding inverses!]
+
+\msk
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+
