@@ -1,0 +1,130 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+\usepackage{graphicx}
+
+\textheight=11in
+\textwidth=7.6in
+\voffset=-1.5in
+\hoffset=-1.3in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbc{{\mathbb C}}
+\def\bbd{{\mathbb D}}
+\def\bbh{{\mathbb H}}
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\dsp{\displaystyle}
+
+\def\ddr{d_{\bbr^2_+}}
+\def\ddd{d_{\bbd^2}}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 990 Hyperbolic Geometry and Topology}
+
+\ctln{\bf Problem Set 2}
+
+%%{\it General notation: $A=\begin{pmatrix} a & b \\ c & d \end{pmatrix}\in SL(2,\bbr)$ and
+%%$\dsp f_A(z)=\frac{az+b}{cz+d}$ is the corresponding $\bbr^2_+$-isometry. 
+%%$\ddr(z_1,z_2)$ is the hyperbolic distance function in $\bbr^2_+$, and 
+%%$\ddd(w_1,w_2)$ is the hyperbolic distance function in $\bbd^2$.}
+
+\begin{description}
+
+\item{9.} A sphere with 4 punctures has a decomposition into four ideal triangles. 
+Use this to describe all of the complete hyperbolic structures on a 4–punctured sphere,
+in terms of "translation coordinates" along the edges of the triangles. How many
+independent parameters do we have?
+
+\item{10.}  Show that in hyperbolic 3-space $\bbh^3$ for any two geodesics 
+$\gamma_1,\gamma_2$ that do not share a common
+endpoint on the sphere at infinity there is a third geodesic $\gamma_3$ that 
+meets both $\gamma_1$ and $\gamma_2$ and is perpendicular to both. [As usual,
+pick an isometry to make them look as nice as possible, first...]
+
+\item{11.} Show that every geodesic in $\bbh^3$ is the intersection of two totally
+geodesic planes in $\bbh^3$, and, conversely, that the intersection of two
+totally goedesic planes (if non-empty!) is a geodesic in $\bbh^3$.
+
+\item{12.} Given $z_1,z_2,z_3,w_1,w_2,w_3\in\bbc$, under what conditions is there a fractional linear
+transformation $\dsp f(z)=\frac{az+b}{cz+d}$ with $f(z_i)=w_i$ for $i=1,2,3$ ? 
+Under what conditions is the map unique? [Try to directly write one down and see when you fail...]
+
+\item{13.} (We found all of the isometries.) Use the fact that the geodesics of $\bbh^3$ (in the upper
+halfspace model) are the semicircles perpendicular to $\bbr^2\times\{0\}$ and vertical lines to show that
+the isometries of $\bbh^3$ are precisely the fractional linear transformations of Problem \#12 (composed
+with $(x,y,z)\mapsto (-x,y,z)$ to get the orientation-reversing maps). That is, show that "behavior
+at a single point" determines an isometry uniquely, and all such behaviors are captured by these maps.
+
+\item{14.} Prove that if $M$ is any 3-manifold obtained by gluing the faces of ideal tetrahedra, and the link of every 
+vertex of the associated complex (by including the vertices) is a torus, then 
+the number of 1-cells in the (ideal) triangulation of $M$ equals the number of 3-cells
+(i.e., tetrahedra) in the triangulation. [Hint: Think about counting (fractions of) things 
+in the links of the vertices, knowing what the Euler characteristics should be.]
+
+\item{15.} Find a decomposition of the complement $X$ of the knot $6_3$ in $S^3$ into ideal tetrahedra, 
+and write down the shape parameters and shape gluing equations for a hyperbolic structure on $X$.
+(See Purcell's notes in the "public" directory, section 5.1, for a refresher on decomposing $X$, 
+if you need it.)
+
+\vspace{-.1in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.5in]{6_3.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\item{16.} In Purcell's notes, page 45, she gives the following ideal tetrahedral decomposition
+of the complement $X$ of the knot $6_1$:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=5in]{ps2prob16.eps}
+%%\caption{Flype}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\item{\spc} Use this to give the shape gluing equations for the hyperbolic structure(s) on $X$.
+Draw the induced triangulation on the link of the ideal vertex, and give the corresponding
+completeness equations for a hyperbolic structure on $X$.
+
+\end{description}
+\vfill
+
+\end{document}
+
+

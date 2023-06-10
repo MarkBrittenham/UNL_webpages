@@ -1,0 +1,128 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbc{{\mathbb C}}
+\def\bbd{{\mathbb D}}
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\dsp{\displaystyle}
+
+\def\ddr{d_{\bbr^2_+}}
+\def\ddd{d_{\bbd^2}}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 990 Hyperbolic Geometry and Topology}
+
+\ctln{\bf Problem Set 1}
+
+\msk
+
+{\it General notation: $A=\begin{pmatrix} a & b \\ c & d \end{pmatrix}\in SL(2,\bbr)$ and
+$\dsp f_A(z)=\frac{az+b}{cz+d}$ is the corresponding $\bbr^2_+$-isometry. 
+$\ddr(z_1,z_2)$ is the hyperbolic distance function in $\bbr^2_+$, and 
+$\ddd(w_1,w_2)$ is the hyperbolic distance function in $\bbd^2$.}
+
+\begin{description}
+
+\item{1.} Show that if $z_1=0$ is the origin in $\bbd^2$ and $z_2\in\bbd^2$, then 
+
+\hfill
+$\dsp\ddd(z_1,z_2)=\int_0^{|z_2|}\frac{1}{1-t^2}\ dt=\frac{1}{2}\ln\Big|\frac{1+|z_2|}{1-|z_2|}\Big|$
+( = arctanh$(|z_2|)$ ).
+
+\msk
+
+\item{2.} Show that for $w_1\in\bbd^2$, the map $\dsp \varphi:z\mapsto \frac {z-w_1}{-\overline{w_1}z+1}$
+is an isometry of $\bbd^2$ sending $w_1$ to the origin. [Hint: use our particular isometry
+$\psi:\bbd^2\ra\bbr^2_+$ and show that $\psi\circ\varphi\circ\psi^{-1}=f_A$ for some $A\in SL(2,\bbr)$.]
+Use this, together with the previous problem,
+to give an explicit formula for $\ddd(z_1,z_2)$ for all $z_1,z_2\in\bbd^2$. 
+
+\msk
+
+\item{3.} Use Prbolem \#2 and the map $\psi$ to give a fairly ugly explicit formula for 
+$\ddr(z_1,z_2)$ for all $z_1,z_2\in\bbr^2_+$.
+
+\msk
+
+
+\item{4.} Show that if $z_1,z_2$ are distinct points in $\bbr^2_+$, as are
+$w_1,w_2$, and $\ddr(z_1,z_2)=\ddr(w_1,w_2)$, then there is an $A\in SL(2,\bbr)$
+with $f_A(z_i)=w_i$ for all $i$. [Hint: you could brute-force this, and solve 
+equations, or show that transitivity on point-direction pairs is enough to 
+guarantee it?]
+
+\msk
+
+\item{5.} Show that if $\alpha_1<\alpha_2<\alpha_3$ and 
+$\alpha_1^\prime<\alpha_2^\prime<\alpha_3^\prime$
+are all in $\bbr\cup\{\infty\}$ (where we interpret $x<\infty$ for all $x\in\bbr$),
+then there is an $A\in SL(2,\bbr)$ with $f_A(\alpha_i)=\alpha_i^\prime$ for all $i$.
+[Hint: do this (first) for $\alpha_1=0$, $\alpha_2=1$ and $\alpha_3=\infty$. Or: `just'
+treat it as a system of linear equations!]
+
+\msk
+
+\item{6.} The isometry of $\bbr^2_+$ given by $\varphi(z)= -\overline{z}$ is a `reflection': it fixes the 
+positive imaginary axis (a geodesic) pointwise and swaps the two sides of the axis. Call anything
+conjugate to this a reflection ($\psi=f_A\circ\varphi\circ f_A^{-1}$ fixes pointwise (check!) the image
+of the imaginary axis under $f_A$). Show that every elliptic or loxodromic isometry of $\bbr^2_+$ is a 
+composition of two reflections. Is this also true for a parabolic isometry?
+
+\msk
+
+\item{7.} Show that the `AAA Congruence Theorem' for triangles holds when some of the vertices of the
+triangle are ideal vertices. [Problem \#5 is basically the all-ideal-vertices case. When one of them isn't
+ideal, move it to the origin!]
+
+\msk
+
+\item{8.} Generalize the `area equals angle defect' result to all polygons. [What is the correct
+notion of `angle defect'?]. Use this to compute the hyperbolic area of the all-right-angle hexagon,
+and then compute the hyperbolic area of a closed orientable surface of genus $g\geq 2$. 
+
+\msk
+
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+

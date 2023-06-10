@@ -1,0 +1,180 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+\usepackage{graphicx}
+
+\textheight=10.3in
+\textwidth=7.6in
+\voffset=-1.5in
+\hoffset=-1.3in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbc{{\mathbb C}}
+\def\bbd{{\mathbb D}}
+\def\bbh{{\mathbb H}}
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\dsp{\displaystyle}
+
+\def\ddr{d_{\bbr^2_+}}
+\def\ddd{d_{\bbd^2}}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 990 Hyperbolic Geometry and Topology}
+
+\ctln{\bf Problem Set 3}
+
+%%{\it General notation: $A=\begin{pmatrix} a & b \\ c & d \end{pmatrix}\in SL(2,\bbr)$ and
+%%$\dsp f_A(z)=\frac{az+b}{cz+d}$ is the corresponding $\bbr^2_+$-isometry. 
+%%$\ddr(z_1,z_2)$ is the hyperbolic distance function in $\bbr^2_+$, and 
+%%$\ddd(w_1,w_2)$ is the hyperbolic distance function in $\bbd^2$.}
+
+\begin{description}
+
+
+\item{17.} (a) ["note this simplifying fact..."] If $X$ is a (metric) space, $f,g,h:X\ra X$ 
+are isometries, and $f\circ g=g\circ f$, then setting $F=h\circ f\circ h^{-1}$ and 
+$G=h\circ g\circ h^{-1}$ we have $F\circ G=G\circ F$.
+
+\item{\spc} (b) Show that if $f,g\in Isom(\bbh^3)$ and $f\circ g=g\circ f$, then either
+(1) $f$ and $g$ are both hyperbolic and share the same axis, (2) $f$ and $g$ are both parabolic
+and share the same fixed point at infinity, or $f$ and $g$ are both elliptic, and \ubr{either} 
+share the same axis \ubr{or} are both of order 2 and have axes that meet orthogonally.
+[Hint: (a)! Make one `standard' and use their representations as matrices.]
+
+\item{18.} Dylan Thurston (son of Bill!) showed that from a diagram of a knot $K$ with $k$ crossings 
+you can tile the complement of $K$ using $k$ octahedra (with common north and south poles).
+[See a concise description of the construction in the first two pages of the paper 
+"Bipyramids and bounds on volumes of hyperbolic 
+links" by Colin Adams on the public webpage.] By cutting an octagon into tetrahedra, 
+and arguing that a geodesic hyperbolic tetrahedron with some finite vertices must have 
+volume no more than the regular ideal tetrahedron, give an upper bound on the volume of 
+the complement of a hyperbolic knot with $k$ crossings, in terms of $k$ and $v_3$ = the
+volume of the regular hyperbolic ideal tetrahedron.
+
+\item{19.} Given a knot diagram $D$ for $K$, a {\it twist region} for the diagram is a 
+collection of crossings (possibly one!) which form a single pair of twisted strands, as in the diagram.
+It is a fact that if a link (complement) $L=K\cup C$ has a component $C$ bounded by a disk pierced twice by the 
+remainder of the link $K$, then the result of Dehn filling along $C$ with surgery coefficient 
+$1/n$ results in the complement of the link $K$ \ubr{with} $n$ \ubr{full} twists added to the 
+two piercing strands. The {\it twist number} $tw(K)$ of a knot is the minimum number of disjoint
+twist regions needed to encompass all of its crossings. Use Problem \#18 and the fact that Dehn filling
+lowers volume to find an upper bound on the volume of a hyperbolic knot in terms of $t(K)$ and $v_3$.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3.5in]{twisting.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\item{20.} Show that $1/n$ Dehn filling on the complement of the unknot (the knot with no crossings),
+i.e., filling so that $1\cdot\mu+n\cdot\lambda$ bounds a disk, always yields the 3-sphere $S^3$.
+[This is why in Problem \#19 above, `all' that happens when filling $C$ is that the strands get twisted...]
+
+\item{20.}  The {\it Seifert-Weber dodecahedral space} is a 3-manifold obtained by gluing the
+opposite faces of a dodecahedron by a $3\pi/10$ twist. (See the figure for a depiction of one of these
+gluings.) Show that the resulting space is a (closed) 3-manifold, by verifying that the link of 
+every vertex is a 2-sphere. If we treat the dodecahedron as a \ubr{regular} hyperbolic dodecahedron
+(i.e., the convex hull of symmmetrically placed points around the center), what must the dihedral 
+angles be for the gluing consistency equations to provide a hyperbolic structure around the edges?
+If you want to dig more, show that there is a regular hyperbolic dodecahedron with those angles!
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3.5in]{dodecahedron.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\item{20.} Play with the Seifert-Weber dodecahedral space!
+It is found in the SnapPy census as 
+{\it M = DodecahedralOrientableClosedCensus(solids = 1)[-1]}. Try random retriangulations
+to make its Diriclet domain look `dodecahedra-like'.
+Use SnapPy to (try to!) find a representation of the Seifert-Weber dodecahedral space as 
+Dehn filling on a link in $S^3$; you can try to move towards
+a knot complement by Dehn drilling (and then looking at the 'also known as' table),
+and filling and drilling...
+[Note: SnapPy reports that $M$ has first homology $\bbz_5+\bbz_5+\bbz_5$, which means that a link to 
+Dehn fill to get it will need at least 3 components.] [N.B. I have not succeeded at this, myself, yet.]
+
+\item{21.} Two manifolds $M_1,M_2$ are {\it commensurable} if there is a third manifold that
+is a finite-sheeted covering space of both. (The number of sheets need not be the same.) Show that
+``is commensurable to'' is an equivalence relation. [N.B. This is `really' a group theory 
+question...]
+
+\item{22.} (a) Show that if $\alpha,\beta$ are isometries of $\bbh^3$ that share no fixed point
+at infinity, then there is a third isometry $\gamma$ so that $\gamma\alpha\gamma^{-1}=\alpha^{\-1}$
+and $\gamma\beta\gamma^{-1}=\beta^{-1}$. [Hint: think about axes, and a rotation through $pi$
+around a well-chosen other axis! Or look in Thurston's notes...]
+
+\item{\spc} (b) (Show that!) the hypothesis of (a) is true for any pair of 
+elements of the image $\varphi(\pi_1(M))\subseteq PSL(2,\bbc)$ of the fundamental group of a closed
+hyperbolic 3-manifold under the natural identification with a group of isometries, 
+at least if $\alpha,\beta$ don't both lie in an abelian subgroup. Conclude that for 
+any word w=w(x,y) in the letters $x,y,$, if 
+$w(\alpha,\beta)=1$ in $\pi_1(M)$, then $w(\alpha^{-1},\beta^{-1})=1$, as well.
+[N.B. Note that the same is actually true if they \ubr{do} lie in an abelian subgroup, but 
+for a different reason!]
+
+
+\item{24.} It is \ubr{unknown} if starting from a hyperbiolic alternating knot $K$ and an alternating diagram $D$,
+changing some of its crossings can result in a hyperbolic knot $K^\prime$ with volume \ubr{larger} than the volume of 
+$K$. It has, however, been verified that this cannot happen for a \ubr{single} crossing change, 
+for alternating knots through 16 crossings
+(as of 2015). Devise a SnapPy experiment to randomly build alternating knots, randomly change some crossings, 
+and test to see if the volume has gone up. Don't forget to write any successes to a file, so that you can 
+claim the prize of finding a counterexample!
+
+\end{description}
+\vfill
+
+\end{document}
+
+
+\item{23.} A list of volumes of knots through 14 crossings, ordered by volume, can be found on the class
+webpage. Pick some pairs that appear to have the same volume, query SnapPy to see if that is 
+likely right, and try to decide if any of our tools to prove equality (cutting and pasting along 3-punctured
+or 4-punctured spheres, commensurability) could \ubr{explain} the equality. 
+
+
+\vspace{-.1in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.5in]{dodecahedron.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+

@@ -1,0 +1,191 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+\usepackage{graphicx}
+
+\textheight=10.3in
+\textwidth=7.6in
+\voffset=-1.5in
+\hoffset=-1.3in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbc{{\mathbb C}}
+\def\bbd{{\mathbb D}}
+\def\bbh{{\mathbb H}}
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\dsp{\displaystyle}
+
+\def\ddr{d_{\bbr^2_+}}
+\def\ddd{d_{\bbd^2}}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 990 Hyperbolic Geometry and Topology}
+
+\ctln{\bf Problem Set 4}
+
+%%{\it General notation: $A=\begin{pmatrix} a & b \\ c & d \end{pmatrix}\in SL(2,\bbr)$ and
+%%$\dsp f_A(z)=\frac{az+b}{cz+d}$ is the corresponding $\bbr^2_+$-isometry. 
+%%$\ddr(z_1,z_2)$ is the hyperbolic distance function in $\bbr^2_+$, and 
+%%$\ddd(w_1,w_2)$ is the hyperbolic distance function in $\bbd^2$.}
+
+\begin{description}
+
+
+\item{25.} Show that if an ideal tetrahedron in $\bbh^3$ has (pairs of) dihedral angles
+$\alpha, \beta, \gamma$, in clockwise order around a vertex, 
+then the shape invariant associated to the edge with angle $\alpha$ is 
+$\displaystyle\frac{\sin\gamma}{\sin\beta}e^{i\alpha}$ .
+
+\item{26} One way to build doubly primitive knots on the standard genus-2 surface $\sigma$ is the following.
+Pick \underbar{disjoint} non-separating simple closed curves $\alpha,\beta$ on $\Sigma$, one bounding a disk on 
+one side of $\Sigma$ and
+one bounding a disk on the other side (see figure for an example). Then draw any simple loop $K$ that hits $\alpha$ and 
+$\beta$ each exactly once. The loops $\alpha.\beta$ cut $\Sigma$ into a 4-punctured sphere $P$ (for `pillowcase'). 
+$K$ meets $P$ in a pair of arcs; these therefore \underbar{must} look like a pair of arcs of the same
+rational slope when viewing $P$ as a pillowcase (see figure!). Use this perspective to build families of 
+doubly-primitive knots. Main question: does this approach (starting with disjoint loops to build $K$)
+\underbar{ever} build anything other than the unknot? In particular, what happens with the specific example of
+loops in the figure? [N.B. I don't actually know the answer, my first attempt to build an `interesting' knot
+was the unknot...]
+
+\vspace{-.1in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=5in]{doublyprim.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\item{27.} Starting from the `standard' genus-1 Seifert/spanning surface $\Sigma$ for the trefoil knot pictured below, 
+construct some knots on $\Sigma$, use SnapPy to determine which knots they are (or if you hit `[]', which means 
+`I don't know', at least find their volume!), and determine which `surface slope' Dehn surgery fraction $a/b$ 
+yields the Lens space.
+(This, in theory, requires you to build a Seifert surface $S$ for your new knot? You can then count the net number of 
+times the surface slope hits $S$. Or you could try to find it
+by experiment with SnapPy, the coefficient will (always) be $a/1$, and SnapPy will report a 
+volume of $0$ when it encounters a Lens space.)
+
+\vspace{-.1in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.5in]{trefoil.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\item{28.} Repeat Problem \#27, for the `standard' genus-1 Seifert surface 
+(although this is a `non-standard', checkerboard, view of it) for the figure-8 knot pictured below.
+
+
+\vspace{-.1in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=2in]{figure8.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\vfill\eject
+
+\item{29.} Show that if a link $L$ has a `belt' component (as in the pictures in Problem \#30), 
+that is, a component $K$ that bounds a disk $D$ that meets the
+other components of $L$ in exactly two points, but does \underbar{not} bound a disk that is disjoint from 
+the other components, then the twice-punctured disk $P\subseteq D$ obtained by removing
+disk neighborhoods of the two points of $D\cap L$ is an {\it essential} 3-punctured sphere in 
+$X(K)=S^3\setminus N(L)$. That is, any (simple) loop
+$\gamma\subseteq P$ that bounds a disk in $X(K)$ must also bound a disk in $P$. [This geometric notion of essential
+agrees with the $pi_1$-version, by the Loop Theorem. Hint: there aren't very many simple
+loops in $P$ that \underbar{don't} bound disks in $P$...]
+
+
+\item{30.} Colin Adams' result on cutting-twistg-regluing along 3-punctured spheres applies
+also to \underbar{multiple} such surfaces. As a result, show that there is an `addition'
+theorem: if two hyperbolic links $L_i$ in $S^3$ each have a component which locally looks like the figure
+(each with a tangle $T_i$ on the `outside'), then the {\it belted sum} of the two links,
+shown in the figure, is hyperbolic and has volume the sum of the volumes of the $L_i$. 
+Use this and induction to express the volume of the `belted' $n$-link chain (shown), in terms of the 
+volume of the Whitehead link (shown!).
+
+\vspace{-.05in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=6.5in]{belted.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\item{31.}  A list of volumes of knots through 14 crossings, ordered by volume, can be found on the class
+webpage. Pick some pairs that appear to have the same volume, query SnapPy to see if that is 
+likely right, and use SnapPy and its computation of hyperbolic
+structures/volumes of cyclic branched covers of $S^3$ branched over $K$, and Dehn fillings,
+to decide if the pairs are not, or maybe are, mutants of one another.
+
+\end{description}
+\vfill
+
+\end{document}
+
+
+\item{32.} 
+
+\item{23.} 
+
+
+\vspace{-.1in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.5in]{dodecahedron.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
+
+\vspace{-.3in}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3.5in]{twisting.eps}
+%%\caption{6_3}\label{fig:flype1}
+\end{center}
+\end{figure} 
