@@ -1,0 +1,601 @@
+
+
+
+\input amstex
+\magnification=1100
+
+\vsize=8.9in
+\voffset=-.35in
+\loadmsbm
+
+\input epsf
+
+\define\dl{\displaystyle}
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\bbr{{\Bbb R}}
+\define\bbz{{\Bbb Z}}
+\define\bbc{{\Bbb C}}
+\define\ii{{\italic i}}
+\define\ubr{\underbar}
+\define\lra{$\Leftrightarrow$}
+\define\ra{\rightarrow}
+%\define\ssk{\vskip-10pt}
+\define\Arg{\text{Arg}}
+\define\Log{\text{Log}}
+\define\Arcsin{\text{Arcsin}}
+\define\del{\partial}
+
+\overfullrule=0pt
+\parindent=0pt
+%\parskip=10pt
+
+%\nopagenumbers
+
+\ctln{\bf Knot Theory from the Combinatorial Point of View}
+
+\msk
+
+\ctln{Highlights of ideas/topics/results}
+
+\bsk
+
+Knot theory is essentially about the simplest non-trivial
+instance of the embedding problem.
+
+\ssk
+
+$S^1\hookrightarrow \bbr^2$ : Jordan curve theorem says all are isotopic (all bound disks)
+
+$[0,1]\hookrightarrow \bbr^n$ : draw embedding back along itself to (near) $0$
+
+$S^1\hookrightarrow \bbr^3$ (or $S^3$) : interesting things happen!
+
+\ssk
+
+Avoid `wild' embeddings: embedding is \ubr{smooth} or \ubr{polygonal}. Two knots are the `same' if
+they are isotopic = homotopic through embeddings.
+
+\ssk
+
+Every knot has (many) planar projections = 4-valent graph indicating which strand passes
+over/under the other at each vertex.
+
+{\it Knot diagrammatics.} Reidemeister moves. Two diagrams of the same knot/link can be turned on into 
+another by a finite sequence of three moves: R1 = remove a kink, R2= remove a pair of cancelling 
+crossings, R3 = pass a strand over/under a crossing.
+
+\ssk
+
+As a result, knot theory can be treated as the study of properties of knot/link diagrams
+that remain invariant under Reidemeister moves.
+
+\msk
+
+{\it Crossing changes.} Given a knot/link diagram $D$, by changing at most half of the crossings
+(start at a point, and retrace the knot always going under what you have already drawn),
+$D$ can be transformed into the diagram of an unknot/unlink.
+
+\ssk
+
+Alternatively (no pun intended), we can change crossings in $D$ so that the crossings
+alternate over/under. This is essentially beacause the dual of the underlying 4-valent
+graph can be 2-colored red/blue: looking out from a red vertex, change crossings in $D$ so that
+the knot rises while moving right. 
+
+\msk
+
+{\it Knot invariants.} Goal: construct functions $I:\{$knots$\}\rightarrow\{$something$\}$ so that 
+$K_1=K_2$ implies $I(K_1)=I(K_2)$. Then: if $I(K_1)\neq I(K_2)$, then $K_1$ and $K_2$ are 
+different knots!
+
+\ssk
+
+Lots of knot invariants can be defined via diagrammatics, often as a minimum:
+
+crossing number = $c(K)$ = minimum number of crossings over all diagrams of $K$
+
+unknotting number = $u(K)$ = minimum number of crossing changes needed to change $K$ to unknot
+
+bridge number = $br(K)$ = minimum number of maxima in a projection $K\hookrightarrow \bbr^3 \rightarrow \bbr$
+
+\ssk
+
+Basic idea: build values from knot diagrams that are invariant under Reidemeister moves.
+
+\ssk
+
+Motivating goal: build computable knot invariants that shed light (= bound, and/or often compute!) invariants
+like $c(K),u(K),br(K)$.
+
+\ssk
+
+{\it $n$-colorability.} A knot diagram $D$ consists of a collection of unbroken strands running
+from undercrossing to undercorssing. If $D$ has $k$ crossings, it has $k$ strands. An $n$-coloring
+of $D$ is a (non-constant) function from the strands of $D$ to $\bbz_n$ so that, at each crossing, with
+the $i$-th strand crossing over (and the $i$-th and $k$-th ending), we have $a_i+a_i=a_j+a_k$ mod $n$.
+$n$-colorability is invariant under R-moves, so defines a ($2$-valued `yes/no') knot invariant.
+
+\ssk
+
+These equations can be assembled into a matrix $M$ with entries $-1,0,2$; a knot is $p$-colorable ($p$ prime) iff
+$p$ divides the determinant of (any) $(k-1)\times(k-1)$ minor of this matrix. We call the absolute value of
+this determinant
+the {\it determinant of the knot $K$}; it is itself invariant under R-moves, so is a knot invariant.
+The number of diagonal entries divisible by $p$ = the dimension of the solution space of $p$-colorings
+is also an invariant of $K$.
+$\det(K)$ can be computed by putting the matrix into Smith normal form, by doing row and column
+operations over $\bbz$ on $M$. The resulting diagonal matrix will have a $0$ on the diagonal. 
+
+\ssk
+
+$K$ is 2-colorable \lra\ $K$ has more than one component. (So for a knot, $\det(K)$ is odd.)
+
+For $K$ an alternating knot (with alternating diagram $D$), 
+$\det(K)$ = the number of maximal trees in the `checkerboard' graph $\Gamma$ for $D$: 2-color
+the dual to $D$, pick a color to use as vertices, and add an edge b/w vertices if the two
+complementary regions of $D$ the represent share a corner. This can make for much quicker
+computations of $\det(K)$, e.g., for an alternating pretzel knot $K_{p,q,r}$, $p,q,r>0$, 
+$\det(K_{p,q,r})=pq+pr+qr$.
+
+\ssk
+
+We showed the $\det(K)$ was a knot invariant by actually showing that it was $\Delta_K(-1)$ for another
+invariant, the Alexander polynomial $\Delta_K(t)$. If we orient $K$, then the crossings fall into two
+types, right-handed (positive) and left-handed (negative), distinguished, putting the arrows at the top,
+by the overstrand (SW-NE for $+$, SE-NW for $-$). Then we can refine the matrix $M$ by using the entries
+in the figure below, yielding the {\it Alexander matrix}:
+
+
+\ssk
+
+\ctln{\epsfxsize=1.5in
+\epsfbox{alex.ai}}
+
+\ssk
+
+The determinant of (any) $(k-1)\times(k-1)$ minor is a polynomial; it is invariant, up to 
+multiples of $\pm t^n$, under R-moves, and is called the {\it Alexander polynomial} $\Delta_K(t)$ 
+of the oriented knot/link $K$. It is a remarkably good invariant, capable of distinguishing
+all but a few pairs of knots in the standard (through 10 crossings) knot tables. Reversing the
+orientation on \ubr{all} components has the effect of replacing $t$ with $t^{-1}$.
+
+
+\msk
+
+{\it Alternate views.} $n$-colorings assign elements of $\bbz_n$ to strands of the knot diagram.
+This is really a group presentation in disguise: $\pi_1(S^3\setminus K)$ has a presentation, the 
+Wirtinger presentation, with generators $\leftrightarrow$ strands of $K$ and relations $\leftrightarrow$
+crossings of $K$. Orient $K$, and draw an arrow (= generator) under each strand going right to left. At each
+crossing, the arrows match in pairs head-to-tail; setting the two length-two words (reading along the
+arrows) equal gives the relation corresponding to the crossing. 
+
+\ssk
+
+A presentation is good for building homomorphisms \ubr{out} of a group; we assign values to the generators
+and check to see if those assignments turn the relators into true statements in the target group.
+We have an assignment to the gens of $\pi_1(S^3\setminus K)$ in $\bbz_n$, but the relations don't hold.
+But if we instead send the gen to the symmetry of the regular $n$-gon that is reflection
+in the line through the center that passes through the (cyclically ordered) vertex labeled
+by our element of $\bbz_n$, then the relation \ubr{is} satisfied. So $p$-colorings correspond to 
+(surjective) homoms $\pi_1(S^3\setminus K)\rightarrow D_{2p}$ (the dihedral group) 
+sending Wirtinger generators to reflections.
+
+\ssk
+
+The Alexander polynomial has its own interpretation in terms of $G=\pi_1(S^3\setminus K)$. $G$
+has abelianization $\bbz^{|K|}$, $|K|$ = the number of components of $K$, and an orientation on
+$K$ then determines a more or less canonical map $G\rightarrow \bbz$. The kernel of this
+map is a subgroup $H\subseteq G$, which by Galois correspondence corresponds to a covering space 
+$X$ of $S^3\setminus K$. $G/H=\bbz$ acts on this space (by deck transformations) and so acts on 
+$H_1(X)$, making this group a $\bbz[\bbz]$-module. (In group-theoretic terms, $\bbz=G_{ab}$ = 
+the abelianization of $G$, so $H=[G,G]=G^\prime$ = the commutator subgroup, so 
+$H_1(X)=[G,G]_{ab}=G^\prime/G^{\prime\prime}$.) This module happens to be finitely-generated, 
+so has a presentation matrix over $\bbz[\bbz]$ = the Laurent polynomial ring in 
+a variable $t$. The determinant
+of this presentation matrix \ubr{is} the Alexander polynomial (up to multiplication by $\pm t^n$).
+This gives an answer to a basic question: When is $\Delta_K(t)=1$? Ans: when this matrix is
+invertible, i.e., when $G^\prime = G^{\prime\prime}$, i.e., when $G^\prime$ is `perfect'.
+(Unfortunately, there are non-trivial knots, e.g., Kinoshita-Terasaka, for which this is true...)
+
+\ssk
+
+{\it Fox calculus.} The compuation of $\Delta_K(t)$ via the group can be carried out using Fox 
+derivatives. Given a presentation, we take the derivative of a relator by accumulating terms in an 
+(initially empty) sum as follows: reading $r_j$ from left
+to right, each occurance of the generator $x_i$ occurs as
+$r_j=ux_iv$ or $r_j=ux_i^{-1}v$. In the first case we add $u$, and in the 
+second case we add $-ux_i^{-1}$. The resulting sum should be thought of
+as an element in the group ring of the free group $F(X)$ generated by
+the symbols $X$, and is denoted $\dl {{\del r_j}\over{\del x_i}}$. 
+The canonical homomorphism $\psi$ from $F(X)$ to $G$ (sending each $x_i$ to $x_i$),
+followed by our chosen homomomorphism $\phi$ from $G$ to $\bbz=<t|>$, induces ring
+homomorphisms between their group rings; their composition sends each
+$\dl {{\del r_j}\over{\del x_i}}$ to a (Laurent) polynomial in $t$ with
+coefficients in $\bbz$. 
+These polynomials, when assembled into a `Jacobian' matrix
+
+\ssk
+
+\ctln{$\dl J=\big({{\del r_j}\over{\del x_i}}\big)^{\psi\phi}$,}
+
+\ssk
+
+yields a matrix which depends 
+upon the presentation for $G$ chosen. But any two (finite) presentations of $G$ can
+be transformed one to the other by Teitze transformations, and the effect on 
+the Jacobian matrix under these moves can be codified. In particular, the 
+resulting moves on the Jacobian do not change (for J an $n\times m$ matrix)
+the {\it ideal (in $\bbz[\bbz]$) generated by the 
+$(m-k)\times(m-k)$ minor determinants} of $J$. Then taking the
+ideal $I_1$ generated by the $(m-1)\times(m-1)$ minors, $I_1$ is principal,
+and a generator for $I_1$ is the Alexander polynomial $\Delta_K(t)$ (well defined up
+to multiplication by a unit $\pm t^n$ in $\bbz[\bbz]$).
+
+\ssk
+
+The essential point is that any presentation, and values of the generators which yield the
+`canonical' homomorphisnm to $\bbz$, can be used to compute the Alexander polynomial.
+For example, the Dehn presentation, where the generators correspond to the 
+complementary regions of a diagram and the relators again come from the crossings (but 
+yield difsferent relations!), can be used. Computing the Jacobian, we end up with 
+a formulation which is identical to Alexander's original approach. 
+The (p,q) torus knots have a presentation $<a,b | a^p=b^q>$, which yields
+a very quick computation of their Alexander polynomials, and a proof that $K_{p,q}=K_{r,s}$
+\lra\ $\{|p|,|q|\}=\{|r|,|s|\}$. 2-bridge knots have a presentation with 2 generators and
+1 relator (by applying Teitze transformations to a Wirtinger presentation in `bridge
+position'); the Fox calculus then yields a quick computation of $\Delta_K(t)$.
+
+\ssk
+
+Using Fox calculus anda  pair of `dual' presentations, Fox and Torres showed the most important property
+of $\Delta_K(t)$: up to multiplication by $\pm t^n$, $\Delta_K(t)=\Delta_K(t^{-1})$ (originally
+due to Seifert).
+
+\msk
+
+{\it Skein relations.} Together with $\Delta_K(1)=\pm 1$ (from the original matrix version), 
+these facts allow us to
+`normalize' the Alexander polynomial; multiplication by an appropriate power yields
+$\Delta_K(1)=\pm 1$ and $\Delta_K(t)=\Delta_K(t^{-1})$, and so
+$\Delta_K(t)=\nabla_K(t^{1/2}-t^{-1/2})=\nabla_K(z)$ for some polynomial $\nabla$.
+$\nabla_K(z)$ = the (Alexander-)Conway polynomial. Conway anticipated (it took awhile 
+for the world to appreciate) a new wave of knot invariants by showing that this
+normalized polynomial satisfies a {\it skein relation}: if three (oriented) diagrams differ at
+a single crossing, where we have a right-handed ($K_+$), left-handed ($K_-$) and no
+crossing ($K_0$) [but the orientation is respected], then 
+$\nabla_{K_+}(z)-\nabla_{K_-}(z)=z\nabla_{K_0}(z)$. 
+
+\ssk
+
+This identity was in fact anticipated in Alexander's original work (but the lack of normalization
+made it difficult as a computational tool). The skein relation enables computation of Conway
+(and Alexander - it is essentially the same polynomial) polynomials by induction, since crossing
+changes lead to the unknot and crossing removals yield diagrams with fewer crossings! But more than
+that, it leads to effective proofs of properties of these polynomials by induction, as well.
+For example, every Laurent polynomial $p$ satisfying $p(1)=1$ and $p(t)=p(t^{-1}$ is the 
+alexander polynomial of some knot $K$. Also, if $L$ is the mirror image of $K$, then 
+$\nabla_L(z)=\nabla_K(-z)$.
+
+\ssk
+
+Still more: the Alexander polynomial is invariant under 
+{\it mutation}. If you can find a loop (think: 2-sphere in space, 
+a disk above and below the projection plane) in the projection plane meeting the knot $K$ in 
+four points (separating the knot into two 2-tangles), then any rotation of one of the
+tangles (i.e., rotate the 3-ball) which brings the 4 points back to themselves
+without leaving any fixed yields a new knot (a {\it mutant} of $K$), which has the
+same Alexander-Conway polynomial as $K$.
+
+\msk
+
+{\it The Jones revolution:} 1985 was a very big year for knot theory, and skein relations played
+an important role. In 1984 Vaughan Jones introdues (via operator algebras) a new
+Laurent polynomial knot invariant, $V_L(t)$. In the end, it can be defined by a skein relation;
+$tV_{L-+}(t)-t^{-1}V_{L_-}(t)=(t^{1/2}-t^{-1/2}V_{L_0}(t)$ (together with the normalization
+$V_{O}(t)=1$ for O=unknot). [Note: the literature contains many minor but equivalent (under some
+change of variables) variations on this relation.] 
+
+\ssk
+
+Perhaps the most direct and combinatorial
+way to see that such a thing defines a knot invariant is via the Kauffman bracket $<D>$,
+which is defined as a `state sum'. Starting with an unoriented knot diagram $D$, the
+vicinity of each crossing can be decorated the A- and B-'channels': with the overstrand running
+SW-NE, the top and bottom are A's, and the two sides are B's. We now form a sum over all states
+(= choice of A- and B- channel at each crossing), where a state yields the summand 
+$A^\#(\text{A-chans})B^\#(\text{B-chans})C^{s(D)-1}$, where $s(D) = $ the number of loops
+created when every crossing of $D$ is removed and the ends are glued to make an open channel
+according to the state (`clear' the A- or B-channel at each crossing). This sum is $<D>$.
+
+\ssk
+
+Note that this could be thought of as an inductive computation as well: at a single crossing of
+the diagram $D$,
+$<D>=A<$clear A-crossing$>+B<$clear B-crossing$>$.
+Checking the effect of the Reidemeister moves on this state sum reveals that R2 and R3 leave it
+invariant, \ubr{provided} we set $B=A^{-1}$ and $C=-(A^2+A^{-2})$. But the R1 move
+will always multiply $<D>$ by $(-A^3)^{\pm 1}$, depending upon which R1 move is done.
+But by (temporarily!) orienting the knot and computing the {\it writhe} $W(D)$=\#(positive
+crossings)$-$\#(negative crossings) [which is also invariant under R2 and R3], we find that 
+$J_K(A)=(-A^3)^{-w(D)}<D>$ is invariant under all of the Reidemeister moves, and so defines 
+a Laurent polynomial invariant.
+
+\ssk
+
+We can, by comparing $<D>$ when we change a positive crossing to a negative one (essentially,
+interchange the A- and B-crossings), find a skein relation for $P$: 
+$A^4J_{K_+}(A)-A^{-4}J_{K_-}(A)=(A^2-a^{-2})J_{K_0}(A)$, and $J_O(A)=1$. Comparison
+of this relation with the skein relation for $V_K(t)$, and induction, yields that
+$V_K(t)=J_K(t^{1/4})$. [Again, note that the literature contains many different
+formulations of this (again, equivalent under change of variable), with
+slightly different skein relations!]
+
+\ssk
+
+Again, inductive arguments using the skein relation yields interesting results.
+If $L$ is the mirror image of $K$, then $J_L(A)=J_K(A^{-1}$. Unlike the Alexander 
+polynomial, however, this may not equal $J_K(A)$, allowing the Jones polynomial 
+to often distinguish a knot from its mirror image (e.g., the trefoil knot).
+If you reverse \ubr{all} orientations of a link $L$, yields $-L$, the writhe is 
+unchanged, so $J_{-L}(A)=J_L(A)$. Reversing the orientation on some components
+only changes the writhe, and so $J_L(A)$ only changes by a power of $A$. [This is
+in contradistinction with the Alexander polynomial, where a partial reversal of
+orientation can have unexpected effects.] 
+
+\ssk
+
+A major open problem in knot theory is: does the Jones polynomial detect the unknot?
+I.e., if $K$ is a knot and $J_K(A)=1$, is $K$ = unknot? Neither the Jones nor the Alexander
+polynomials determine one another; there are knots the can be distinguished by
+one but not the other.
+
+\msk
+
+The Jones polynomial distinguished itself early on by being able to shed light on
+the crossing number of a knot. For any Laurent polynomial $p$, define the {\it span
+of $p$} to be the difference between the highest index of a non-zero coefficient
+and the lowest. Then for any link $L$, the span of $J_K(A)$ is $\leq 4c(K)$. But
+Thistlethwiate, Murasugi, and Kauffman all showed that if $L$  is an alternating
+link (i.e., possesses an alternating diagram), then this inequality is in fact
+an equality. Moreover, if $L$ is {\it prime} (see below), and has no alternating
+projection, then the inequality is strict.
+
+\ssk
+
+A knot is prime if it cannot be decomposed as a non-trivial connected sum. The 
+connected sum $K_1\sharp K_2$ of two (oriented) knots $K_1,K_2$ 
+is obtained by drawing diagrams of the
+knots with two oppositely oriented strands side-by-side, and cutting and splicing
+the two strands together, respecting the orientation. A connected sum is trivial if
+one of the knots is the unknot (giving the other knot as the connected sum). Via
+skein relations, we can show that the Alexander and Jones polynomials of a 
+connected sum is the product of the polynomials of the summands. This and the 
+result above helps to motivate the (still open) conjecture:
+$c(K_1\sharp K_2)=c(K_1)+c(K_2)$.
+
+\msk
+
+
+{\it HOMFLY/HOMFLYPT/MYTHFLOP/LYMPH-TOFU.} Fast on the heels of the Jones polynomial
+came a 2-variable generalization, which also generalizes the Alexander polynomial.
+In the end it can be defined by a skein relation [again, there are many 
+equivalent formulations] 
+
+\ctln{$\ell P_{K_+}(\ell,m)+\ell^{-1}P_{K_-}(\ell,m)+m P_{K_0}(\ell,m)=0$}
+
+Proving this is a well-defined invariant is a very delicate induction on 
+the `distance' to a (well-decorated!) unlink, and showing that the result is
+invariant under the extra decorations. The Alexander polynomial and Jones
+polynomial can be recovered from $P_K$ by substituting values for $\ell$ and
+$m$, since their skein relations can be recovered that way.
+
+\ssk
+
+Like the other polynomials, the skein relation gives us a way to establish properties
+by induction. For example, if $L$ is $K$ with the opposite orientation, then 
+$P_L(\ell,m)=P_K(\ell^{-1},m)$. The HOMFLYPT polynomial of a connected sum is 
+the product of their polynomials. The the HOMFLYPT polynomial is 
+invariant under mutation. But it is not a complete knot invariant: Kanenobu
+gave a family examples of pairs of inequivalent knots with the same 
+HOMFLYPT polynomial. (The inequivalence comes from studying the Alexander matrix.)
+
+\ssk
+
+Like the Jones polynomial, the highest and lowest degrees of each of the variables
+of $P_K$ yields information about more classical invariants. Using the form 
+of the polynomial with skein relation [at least in this case the different
+variants had the good sense to use different letters for their variables...]
+$v^{-1} P_{K_+}(v,z)-vP_{K_-}(v,z)=zP_{K_0}(v,z)$, we write the
+degree range in the $v$ variable as $e$ to $E$ and the degree range in the $z$
+variable as $m$ to $M$ (low to high). For an oriented diagram $D$ for $K$, we
+can remove all of the crossings while respecting the orientation, yielding a 
+particular state for ther diagram. The loops for this state are called the
+{\it Seifert circles} for $D$ (for reasons coming later...), and we denote the
+number of them by $s(D)$. Recalling that $w(D)$ denotes the writhe of the
+diagram, Morton showed that $M\leq c(d)-s(D)+1$ and 
+
+\ctln{$w(D)-(s(D)-1)\leq e\leq E\leq w(D)+(s(D)-1)$}
+
+The latter inequalities implies that 
+the $v$-span of $P_K$ = $E-e\leq 2(s(D)-1)$ .
+
+\ssk
+
+This inequality becomes more interesting when paired with the result of Yamada.
+Alexander showed that every link can be expressed as the closure of a braid:
+a braid is a set of strands in $I^2\times I$ which run monotonicly from the
+top of the box to the bottom. The closure matches the points at the top to the 
+bottom, around the outside of the box, with no additional crossings.
+The minimum number of strands need to express a knot $K$ as (the closure of)
+a braid is the {\it braid index} $\beta(K)$. Yamada showed that $\beta(K)$ 
+is equal to the minimum of $s(D)$ over all diagrams of $K$, so Morton's
+inequality then becomes $\beta(K)\geq (\text{span}_v P_K 1)/2$. This inequality
+is currently the best way to determine the braid index of a knot; it is
+an equality with remarkable frequency.
+
+\ssk
+
+Morton's other inequality is also an equality with remarkable frequency. It 
+estimates the {\it canoical genus} of a knot. Given an oriented knot, the
+Seifert circles for the diagram can be joined together with half-twisted
+bands to create an oriented embedded surface $\Sigma$ whose boundary is $K$, called
+a {\it Seifert surface} for $K$. [This algorithm for building a Seifert
+surface is called {\it SEifert's algorithm}.] 
+The quantity $s(D)-c(D)$ is the Euler characteristic
+of $\Sigma$, which (for a knot) is equal to $1-2g(\Sigma)$, where $g(\Sigma)$ is its
+genus. So Morton's inequality translates to $\text{maxdeg}_z P_K\leq 2g(\Sigma)$
+for every surface for $K$ built by Seifert's algorithm. The minimum of these
+genera is called the {\it canonical genus} $g_c(K)$ of $K$, and is a knot invariant;
+Morton then gives a lower bound for $g_c(K)$, which is again an equality with
+remarkable frequency.
+
+\ssk
+
+Side note: The span of the Alexander polynomial provides a lower bound for a 
+similar knot invariant. The {\it genus} of $K$, $g(K)$, is the minimum over all 
+Seifert surface $\Sigma$ for $K$ (whether built by Seifert's
+algorithm or not...) of the genus of $\Sigma$. Seifert's approach to the
+Alexander polynomial (which we did not explore) involves using a pairing
+on the first homology of a Seifert surface, which ends up taking a determinant
+of a $2g(\Sigma)\times 2g(\Sigma)$ matrix, yielding this 
+$\text{span}\Delta_K(t)\leq 2g(K)$. Crowell showed that for alternating knots,
+this inequality is an equality.
+
+\ssk
+
+It is a classical result of Seifert that $g(K_1\sharp K_2)=g(K_1)+g(K_2)$, proved
+using a classical cut-and-paaste argument looking at the circles and arc of
+intersection of a genus-minimizing Seifert surface for the connected sum 
+with the sphere defining the conncted sum, and eliminating the circles of 
+intersection. 
+
+\msk
+
+{\it Vassiliev invariants.} Skein relations compare positive and negative
+crosssing with the link obtained by erasing the crossing. But in some sense
+this erasion \ubr{isn't} what lies halfway between the two types of crossing; 
+what does lie halfway is an \ubr{actual} crossing, i.e., a singularity. 
+In 1990 Vassiliev initiated a study of knot invariants of such singular knots,
+as a way to understand invariants of embedded knots. As reformulated by
+Birman, Lin, Bar-Natan and others, this has a combinatorial formulation
+(Vassiliev's approach was more homological). 
+
+\ssk
+
+Given a knot invariant $I$, with values in an abelain group, We can extend the
+invariant to knots with a finite number of singularities (sometimes thought of
+as embeddings of rigid-vertex 4-valent graphs) by (inductively) breaking
+a singularity at $p$ to a $+$ and $-$ crossing, and defining
+$I(K_p)=I(K_{p+})-I(K_{p-})$. $I$ is a {\it finite type} invariant of order $m$
+if the extension $I$ is identically zero for any singular knot with more 
+than $m$ crossings. 
+
+\ssk
+
+Many finite type invariants can be extracted from the polynomial invariants we
+have built thus far. The coefficient $c_i(K)$ of $z^i$ in the Conway polynomial
+is an invariant of order $\leq i$, since from the skein relation 
+$I(K_p)=z$(something), so by induction the Conway polynomial of a singular 
+knot with more than $i$ double points will have trivial coefficients up to
+$z^i$. In a similar vein if we set $t=e^x$ in the Jone's polynomial and then 
+expand as a power series, each of the coefficients of $\nabla_K(e_x)$ is 
+a finite type invariant.
+
+\msk
+
+But many of the classical invariants are not finite type. Work of Dean and Trapp
+show that starting with a tangle $T$ and summing with a tangle $T_n$ consisting
+of $n$ full twists in two strands, yielding a sequence of knots $K_n$, then
+for any invariant $I$ of order $k$, $n\mapsto I(K_n)$ is a poynomial of degree
+at most $k$. Specific choices of tangle $T$ then show that $c(K),u(K),g_c(K),g(K),br(K)$,
+and $\beta(K)$ are not finite type, since their values do not behave like those
+of a polynomial.
+
+\ssk
+
+A finite type invariant of order $k$
+is determined by a finite collection of data, called an 
+{\it actuality table}. The idea behind this is that once
+we have $k$ singularities, crossings in a diagram can be changed  
+without changing the invariant, so all that really matters is the
+relative order around a circle (= the domain of
+a singular embedding (i.e., immersion!)) that the pairs of points
+corresponding to singularities occur. This can be codified using the
+idea of {\it chord diagrams}. Pairs of points mapping to a singularity
+can be codified by drawing a (straight) arc between the points. A
+singular knot with $k$ double points then has $k$ chords. A realization
+of a chord diagram is an immersion whose double points yield the
+diagram; all diagrams are realizable. 
+
+\ssk
+
+If a chord diagram has a
+chord that meets no other chord (it is `isolated'), then it has a realization for 
+which that singular point meets a vertical line in the projection plane
+that meets the immersion nowhere else. Turning this double 
+point into $+$ and $-$ crossings yields the same knot/link, and
+so every finite type invariant ttakes the value $0$ on that
+singular knot. This motivates our construction of the table.
+
+\ssk
+
+For each chord diagram with $\leq k$ chords, choose a specific 
+realization of it, and record it and the value of $I$ on that
+realization, with the proviso that we use the 
+above realization (and value $0$) for diagrams with an isolated 
+chord. Then this information is enough to compute $I$ for
+any singular knot. The proof is by induction, starting with the
+\ubr{largest} number of singularities. Knots with $>k$ 
+double points have invariant $0$. Using the fact that 
+two knots with the same chord diagram can be deformed on to the 
+other (adding singularities to pass strands through one
+another) without moving any of the chords we started with,
+$I$ on a diagram is determined by the value of the representative 
+and the values of $I$ on knots with larger number of singularities,
+which, by induction, are themselves determined by the data
+in the actuality table. So by, induction, we are done.
+
+\ssk
+
+But the data in an actuality table, constructed at random, need not come
+from a finite type invariant; it might be inconsistent. Vassiliev
+showed that there is a set of 4-term relations (4T), which come from
+resolving the singularities of diagram which resembles a R3 move
+but two of the three crossings are singularities, which are satisfied
+by any finite type invariant. These can be translated into 4-term
+relations on the values assigned
+to representative of chord diagrams, which differ in the relative positions of 
+pairs of chords in diagrams that are otherwise identical. 
+Kontsevich showed, conversely, that an actuality table satisfying
+these 4-term relations defines a finite type invariant of order $\leq k$.
+
+\msk
+
+Finite type invariants have in recent years helped to understand several
+of the invariants we have looked at. For example, despite the fact that
+the Alexander and Jones polynomials do not determine the other, a `colored'
+version of the Jones polynomial determines the coefficients of the 
+Alexander polynomial; the (first) proof used finite type invariants to show this.
+There is a move on knot diagrams (in addition to the Reidemeister moves) which
+completely decribes all pairs of knots that agree for all $\bbz$-valued
+finite type invariants of order $\leq n$, called a `clasper' move.
+The question of how many finite type invariants (taking values in the same 
+abelian group) of order $\leq n$ there are is a active subject of current
+research. [Such invariants form a module (think: vector space) under addition
+of values; the result above implies that it is finite-dimensional.]
+
+
+
+
+
+
+
+
+
+
+\vfill\end
+
+

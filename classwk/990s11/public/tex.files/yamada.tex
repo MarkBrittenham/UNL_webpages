@@ -1,0 +1,80 @@
+
+\magnification=1200
+\def\ctln{\centerline}
+\def\ssk{\smallskip}	
+\def\bsk{\bigskip}
+\def\cgg{\ForestGreen}
+\def\cbb{\Blue}
+\def\cbr{\BrickRed}
+
+\input epsf.tex
+
+\input colordvi
+
+Yamada: turning a projection for a knot/link into a braid, without changing the number of Seifert circles:
+
+\ssk
+
+The idea: if the Seifert circles are all parallel, forming a ``bullseye'', then the center of the bullseye is an axis 
+around which the knot/link runs, making the knot/link a braid. We want to find a projection having this
+property, without changing the number of Seifert circles for the projection.
+
+\ssk
+
+Starting with the knot/link, find the Seifert circles. \cbr{(Red segments represent the twisted bands.)}
+The goal: find a new projection with fewer distinct families of parallel circles among the Seifert circles.
+
+\bsk
+
+\ctln{\epsfxsize=4in
+\epsfbox{yamada_pic1.ai}}
+
+\bsk
+
+The idea: find a an \cgg{arc, missing the circles and the segments,} which joins together two different families
+of parallel circles having the same (clockwise or counter-clockwise) orientation.
+
+\vfill\eject
+
+Use this arc to \cbb{extend the two sets of Seifert disks} one over/under one another, to make their boundaries
+become a single set of parallel circles.
+
+\bsk
+
+\ctln{\epsfxsize=5in
+\epsfbox{yamada_pic2.ai}}
+
+\bsk
+
+Problem: our original surface is {\bf not} the one that Seifert's algorithm would build for the resulting new projection! 
+\cbb{[The new circles pass over/under some of our old twisted bands.]} But if we run Seifert's algorithm on the new
+projection, we {\bf do} get the same Seifert circles! We just have ( a lot) more twisted bands. Basically, this is because the
+added \cbb{blue} arcs are oriented in the same way as the boundaries of the Seifert disks they are running parallel to.
+
+\vfill\eject
+
+
+
+\ctln{\epsfxsize=5in
+\epsfbox{yamada_pic3.ai}}
+
+\bsk
+
+Finding the arc to amalgamate disks along: if the Seifert circles are {\bf not} all parallel, then there is a complementary 
+region of the Seifert circles which is neither a disk nor an annulus (i.e., we see at least three distinct Seifert circles while 
+standing in the middle). At most one of the associated Seifert disks $D$ may contain all of the others (i.e., all others
+are nested within it). If we choose the opposite disk (on the projection 2-sphere) for the circle corresponding to $D$,
+then none of the disks are nested. [This switch of Seifert disk can be thought of as  choosing a different point at infinity for the
+2-sphere, to put the projection in the plane, which does not affect the Seifert circles.] When the disks are not nested, a twisted band 
+between them implies that the orientations of their boundaries are opposite. Since we see at least three disks, two of them
+must have the same orientation; we choose these to join by our \cgg{green arc}.
+
+\bsk
+
+\ctln{\epsfxsize=2in
+\epsfbox{yamada_pic4.ai}}
+
+
+\vfill\end
+
+
