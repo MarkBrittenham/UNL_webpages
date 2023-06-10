@@ -1,0 +1,148 @@
+
+%\input amstex
+
+
+\magnification=1200
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+%\loadmsbm
+\input colordvi
+
+\nopagenumbers
+\parindent=0pt
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+
+
+
+\ctln{\bf Math 314 Matrix Theory}
+
+\ssk
+
+\ctln{January 25, 2005}
+
+\msk
+
+
+Vector equations
+$x_1\left[\matrix{a_{11}\cr \vdots \cr a_{m1}\cr}\right] + \cdots x_n\left[\matrix{a_{1n}\cr \vdots \cr a_{mn}\cr}\right] 
+= \left[\matrix{b_1 \cr \vdots \cr b_m\cr}\right]$
+can be useful in understand solutions to linear systems. One reason for this is that addition and scalar
+multiplication are so well-beahved (because these operations are caried out component by component):
+
+\msk
+
+${\bf u} + {\bf v}$ = ${\bf v} + {\bf u}$ 
+\hskip.5in 
+$({\bf u} + {\bf v}) + {\bf w}$ = ${\bf u} + ({\bf v} + {\bf w})$
+ \hskip.5in 
+$c({\bf u} + {\bf v}) = c{\bf u} + c{\bf v}$
+
+${\bf u} + {\bf 0} = {\bf u} + {(0,\ldots ,0)} = {\bf u}$
+ \hskip.5in 
+$(c+d){\bf u} = c{\bf u} + d{\bf u}$ 
+\hskip.5in 
+$(cd){\bf u} = c(d{\bf u})$
+
+\ssk
+
+$1{\bf u} = {\bf u}$  
+\hskip.5in with 
+$-{\bf u} = (-1){\bf u}$ , ${\bf u}+(-{\bf u}) = (0,\ldots ,0)$
+
+\msk
+
+The {\it span} of a collection of vectors is the collection of all linear combinations of the
+vectors; 
+
+\ctln{{\bf Sp}$({\bf v_1},\ldots ,{\bf v_n})$ = $\{ x_1{\bf v_1}+\cdots +x_n{\bf v_n}$ : $ x_1,\ldots x_n\in{\bf R}\}$}
+
+Then a vector equation \hsk $x_1{\bf v_1}+\cdots +x_n{\bf v_n} = {\bf b}$ \hsk has a solution precisely when
+${\bf b}\in${\bf Sp}$({\bf v_1},\ldots ,{\bf v_n})$
+
+\ssk
+
+We can therefore understand linear systems (via vector equations) better, by understanding what the
+span of the column vectors of the coefficient matrix might look like. This will be a point of view that we 
+will continue to develop throughout the course.
+
+\bsk
+
+{\it Matrix equations}: 
+
+\ssk
+
+There is still a third point of view that we will aproach systems of equations from: matrix multiplication.
+We can interpret a linear combination of vectors,
+$x_1\left[\matrix{a_{11}\cr \vdots \cr a_{m1}\cr}\right] + \cdots x_n\left[\matrix{a_{1n}\cr \vdots \cr a_{mn}\cr}\right]$ ,
+as a product of the matrix $A=\left[\matrix{a_{11}&\cdots&\cr \vdots&&\vdots\cr a_{m1}&\cdots&a_{mn}\cr}\right]$
+and the vector ${\bf x} = \left[\matrix{x_1\cr \vdots\cr x_n\cr}\right]$, which we denote $A{\bf x}$ . In this
+notation a system of equations has a very compact form: $A{\bf x} = {\bf b}$ .
+
+\msk
+
+This is really just a new notation for systems, but it will turn out to be remarkably useful. One reason for its
+utility is that the matrix product is {\it linear} (in the vector term):
+
+\ssk
+
+\ctln{$A({\bf u}+{\bf v}) = A{\bf u}+A{\bf v}$ \hskip1in $A(c{\bf u} = c(A{\bf u})$}
+
+\ssk
+
+With this new notation, our basic goal becomes: understand the solutions ${\bf x}$ to the
+equation $A{\bf x} = {\bf b}$ . 
+
+\msk
+
+Another example of how these different perspectives give different ways to view the same result:
+
+\ssk
+
+If $A=\left[\matrix{a_{11}&\cdots&a_{1n}\cr \vdots&&\vdots\cr a_{m1}&\cdots&a_{mn}\cr}\right]$, 
+$v_1,\ldots ,v_n$ are the column vectors of $A$, and ${\bf b} = \left[\matrix{b_1\cr \vdots\cr b_m\cr}\right]$,
+then the system of equations 
+$\left(\matrix{a_{11}&\cdots&a_{1n}&|&b_1\cr \vdots&&\vdots&|&\vdots\cr a_{m1}&\cdots&a_{mn}&|&b_m\cr}\right)$
+has a solution for {\it every} $b_1,\ldots ,b_m$ \hsk $\Leftrightarrow$ \hsk $A{\bf x}={\bf b}$  has a solution
+for every ${\bf b}$  \hsk $\Leftrightarrow$ \hsk every ${\bf b}$ is a linear combination of $v_1,\ldots ,v_n$
+ \hsk $\Leftrightarrow$ \hsk {\bf Sp}$(v_1,\ldots ,v_n) = {\bf R}^m$ . 
+
+\ssk
+
+These, in turn, are true  \hsk $\Leftrightarrow$ \hsk after row reducing $A$ to RREF, every row has a 
+pivot in it. To see this, note that if $(A|{\bf b})$ is row reduced, then a pivot in every row means that
+there is no row $(0\cdots 0|1)$ , (because we can't have the row of $0$'s in the coefficient
+matrix), so the system is consistent, so there is a solution. Conversely, if the RREF does {\it not}
+have a pivot in every row, then its bottom row will be a row of $0$'s. But then if we start with the
+inconsistent system $\left(\matrix{&&&|0\cr &RREF&&|\vdots\cr &&&|0\cr &&&|1\cr}\right)$ and
+reverse all of the row reduction steps, we will arrive at $(A|{\bf b})$ (for {\it some} ${\bf b}$), which 
+we know to be inconsistent, so this equation has no solution. So if {\it every} system has a solution,
+then there must be a pivot in every row.
+
+
+\vfill\end
+

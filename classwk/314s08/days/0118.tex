@@ -1,0 +1,145 @@
+
+%\input amstex
+
+
+\magnification=1200
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.6 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+%\loadmsbm
+\input colordvi
+
+\nopagenumbers
+\parindent=0pt
+
+\overfullrule=0pt
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+
+
+
+
+
+\ctln{\bf Math 314 Matrix Theory}
+
+\ssk
+
+\ctln{January 18, 2005}
+
+\msk
+
+The three  steps of {\it row reduction}, swap rows, rescale a row
+by multiplication, and add a multiple of a row to another,
+are enough to change a system of equations to a new,
+``simpler'',  system, {\bf without changing the set of solutions}. In practice, 
+we will carry out the row reduction in two stages:
+
+\msk
+
+Moving {\bf left-to-right, top-to-bottom}, creating as many $0$ coefficients 
+as we can, we can reach {\it row echelon form (REF)}:
+
+\msk
+
+(1) Reading top to bottom, the first non-zero entry in each row (the {\it lead coefficient}) 
+occurs further and further to the right in the rows,
+
+\ssk
+
+(2) Every entry directly below a lead coefficient is equal to 0 [This is exactly what MoSS
+would do], and, as a consequence,
+
+\ssk
+
+(3) Rows with all coefficients 0 appear at the bottom.
+
+\msk
+
+REF allows us to read off the solutions to the original system by {\it back-substitution}:
+We can solve for each lead term in each row, and substitute them, working from bottom to
+top, into each equation above it. {\it Or}, we can do this at the level of the augmented matrix,
+working {\bf right-to-left, bottom-to-top}, to reach {\it reduced row echelon form (RREF)}:
+
+\msk
+
+(4) Every lead coefficient is equal to 1 (just divide the row through by what we have)
+
+\ssk
+
+(5) Every entry directly above a leading 1 is equal to 0 (by adding multiples of the row with leading 1
+to the rows above).
+
+\bsk
+
+Row reduction operations taking an augmented matrix to one in RREF do not change the set of 
+solutions; but those solutions can be transparently read off from the RREF.
+
+\msk
+
+An {inconsistent system} is one in which no assignement of values to the variables can satisfy all
+of the equations in the system. In RREF, this can be detected by a row which reads
+
+\ssk
+
+\ctln{$($ $0$ $0$ $\cdots$ $0)$ $|$ $1$ $)$}
+
+\ssk
+
+This equation translates to ``$0=1$'', which certainly no assignment of values can satisfy!
+
+\msk
+
+In all other cases, the system is consistent; and we can assemble solutions from the RREF. 
+The entry where a leading 1 occurs is called a {\it pivot}. The columns of the coefficient 
+matrix correspond to the variables in our system of equation ; a column containing a pivot 
+gives a {\it bound variable}, and all other columns give {\it free variables}. If we follow the
+lead of MoSS, and write the equations corresponding to the rows of our RREF as (it turns out)
+
+\msk
+
+\ctln{(bound variable) = (equation involving free variables)}
+
+\msk
+
+by subtracting the free variables over to the other side, then {\it any} assignment of values 
+to the free variables forces, through these equations, assignment of values to the bound
+variables which makes the equations corresponding to the rows of the RREF true, and 
+hence giving a solution to the (original) system of equations. For example, the augmented
+matrix
+
+\msk
+
+$\left(\matrix{1&2&1&1&7&|&11\cr 1&2&4&2&15&|&23\cr 2&4&1&2&12&|&19\cr}\right)$
+\hskip.2in 
+row reduces to
+\hskip.2in 
+$\left(\matrix{1&2&0&0&3&|&5\cr 0&0&1&0&2&|&3\cr 0&0&0&1&2&|&3\cr}\right)$
+
+\msk
+
+From which we can read off the solutions
+
+$x_1=5-2x_2-3x_5$ , $x_2$ is free, $x_3=3-2x_5$, $x_4=3-2x_5$, and $x_5$ is free.
+
+
+\vfill\end
+
