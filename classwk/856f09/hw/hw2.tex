@@ -1,0 +1,116 @@
+\magnification=1200
+
+\nopagenumbers
+
+\input amstex
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\nidt{\noindent}
+\def\del{\partial}
+\def\bbr{{\Bbb R}}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+
+
+\ctln{\bf Math 856 Homework 2}
+
+\ssk
+
+\ctln{Target date for starred {\bf (*)} problems to be handed in: Friday, September 25}
+
+\bsk
+
+
+\nidt {\bf (*) 7:} [Lee, problem 2-1 (part)] Using the charts on the circle $S^1$ given 
+by steriographic projection, compute the local coordinate representations of the functions
+
+\ssk
+
+\ctln{$f_n:S^1\rightarrow S^1$ given by $f_n(z)=z^n$ (in complex coordinates)}
+
+\ssk
+
+and use this to demonstrate that each $f_n$ is $C^\infty$.
+
+\msk
+
+\nidt {\bf (*) 8:} Show that a function $f:M^n\rightarrow N^m$ is $C^\infty$ $\Leftrightarrow$ 
+$g\circ f:M^n\rightarrow {\Bbb R}$ is $C^\infty$ for {\it every} $C^\infty$ function
+$g:N^m\rightarrow {\Bbb R}$. (Hint: you might need to use the technology of bump functions
+to do this?)
+
+\msk
+
+\nidt {\bf 9:} Let ${\Bbb H}^n=\{(x_1,\ldots,x_n)\in\bbr^n : x_n\geq 0\}$. Suppose that 
+$f:{\Bbb H}^n\rightarrow \bbr$ is a function for which every $x\in {\Bbb H}^n$ has an open 
+neighborhood $U_x$ of $x$ such that $f$ extends to a $C^\infty$ function on $U_x$. Show that $f$ extends
+to a $C^\infty$ function on a neighborhood of ${\Bbb H}^n$ in $\bbr^n$. 
+(Short version: show that if $f$ is locally smooth, then $f$ is smooth. A well-chosen partition
+of unity might help?)
+
+\msk
+
+\nidt {\bf 10:} We know that if $C,D\subseteq M$ are disjoint closed sets of the smooth manifold $M$,
+then there exists a smooth function $f:M\ra [0,1]$ with $C\subseteq f^{-1}(0)$ and $D\subseteq f^{-1}(1)$.
+But we can in fact make these containments {\it equalities}:
+
+\ssk
+
+(a) Show that it suffices to build a smooth function $g:M\ra [0,1]$ with $C=g^{-1}(0)$.
+
+\ssk
+
+(b) Build a countable cover $\{U_i\}$ of $M\setminus C$ by open sets of the form $h_i^{-1}(B(x_i,1)$ for
+a collection of coordinate charts $h_i=(x^1,\ldots,x^n)$ with image containing $B(x_i,2)$. Build $C^\infty$ functions $g_i:M\ra \bbr$ which are $>0$
+in $U_i$ and $=0$ on $M\setminus U_i$. Note that $\overline{U_i}$ is compact; for each $i$, let
+
+\ssk
+
+\ctln{$\displaystyle \alpha_i = \sup_{x\in \overline{U_i};j\leq i;m\leq i;k_1,\ldots 
+k_m\leq n}\{ {{\del^m g_j}\over{\del x^{k_1}\cdots \del x^{k_m}}}(x)\}$ .}
+
+\ssk
+
+\noindent Show that the function $g=\sum g_i/(\alpha_i 2^i)$ is $C^\infty$ and $C=g^{-1}(0)$ .
+
+\msk
+
+\nidt {\bf 11:} [Lee, problem 2-6] For $M$ a (smooth) manifold, let $C(M)$ denote the
+set of continuous functions from $M$ to $\bbr$, thought of as an algebra (i.e., a ring and a vector
+space over $\bbr$) with scalar multiplication by $\bbr$, and pointwise addition and multiplication.
+Let $C^\infty(M)$ be the subalgebra of smooth functions. If $F:M\ra N$ is continuous,
+let $F^*:C(N)\ra C(M)$ be given by $F^*(f)=f\circ F$.
+
+\ssk
+
+(a) Show that $F^*$ is a linear map.
+
+\ssk
+
+(b) Show that $F$ is smooth \lra\ $F^*(C^\infty(N))\subseteq C^\infty(M)$ .
+
+\ssk
+
+(c) Suppose $F$ is a homeomorphism. Show that $F$ is a diffeomorphism
+
+\noindent \lra\ $F^*:C^\infty(N)\ra C^\infty(M)$ is an isomorphism.
+
+\msk
+
+\nidt {\bf (*) 12:} [Lee, problem 2-17] Find an example of a (non-closed: it can't be done if the set is
+closed!) subset $A$ of a smooth manifold $M$, and a smooth function $f:A\rightarrow \bbr$ which admits
+{\bf no} extension to a smooth function $\tilde{f}:M\rightarrow \bbr$.
+
+\ssk
+
+(Note that $f$ is called smooth if for every $x\in A$ there is a neighborhood $x\in{\Cal U}$ and a smooth
+extension of $f|_{A\cap {\Cal U}}$ to the neighborhood ${\Cal U}$.
+
+
+
+\vfill
+\end

@@ -1,0 +1,97 @@
+\magnification=1200
+
+\nopagenumbers
+
+\input amstex
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\nidt{\noindent}
+\def\del{\partial}
+\def\bbr{{\Bbb R}}
+
+
+\ctln{\bf Math 856 Homework 1}
+
+\ssk
+
+\ctln{Starred (*) problems to be handed in Thursday, September 7}
+
+\bsk
+
+\nidt {\bf (*) 1:} Show that a connected manifold $M$ is {\it arcwise connected},
+that is, for every pair of points $x,y\in M$ there is a
+{\it one-to-one} path $\gamma:[0,1]\rightarrow M$ with $\gamma(0)=x,\gamma(1)=y$.
+
+\ssk
+
+(There is a theorem, due to Hahn and Mazurkiewicz (circa 1914), which says 
+that a Hausdorff space is path connected iff it is
+arcwise connected (which is kind of funny, since the term ``Hausdorff''
+wasn't really introduced until the 1920s?); but for manifolds you can 
+give a much more elementary proof...)
+
+\msk
+
+\nidt{\bf 2:} Show that if $A,B\subseteq {\Bbb R}^2$ are closed subsets, the statement
+
+\ctln{`` ${\Bbb R}^2\setminus A \cong {\Bbb R}^2\setminus B$ $\Rightarrow$
+$A \cong B$ ''}
+
+\hfill is {\bf false}. What about the converse statement?
+(N.B. That might be harder?)
+
+\msk
+
+\nidt {\bf (*) 3:} Given a collection of triangles (or 2-simplices, you are more
+comfortable with that terminology) $T_i$, $i=1,\ldots 2r$, with edges
+$e_{i1},e_{i2},e_{e3}$, and a collection of $3r$ homeomorphisms 
+$h_k:e_{i_kj_k}\rightarrow e_{i_k^\prime j_k^\prime}$ involving all $6r$ edges
+(as either domain or range),
+show (in a quasi-rigorous fashion?) that the quotient space obtained
+by gluing the 2-disks $T_i$ together using the maps $h_k$ is a 2-manifold.
+(There are basically three ``kinds'' of points to worry about. ``Describe'' 
+locally Euclidean neighborhoods for each.)
+
+\msk
+
+\nidt {\bf (*) 4:} (Lee, p. 28, problem 1-4) If $0\leq k\leq \min\{m,n\}$, show that the set 
+$R_k\subseteq M(m\times n,{\Bbb R})$ of $m$-by-$n$ matrices 
+with rank $\geq k$ is an open subset of $M(m\times n,{\Bbb R})
+\cong {\Bbb R}^{mn}$ (and therefore admits a smooth structure).
+({\it Hint:} look at Lee's linear algebra appendix...)
+
+\msk
+
+\nidt {\bf (*) 5.:} We say that two charts 
+$\phi :U\rightarrow {\Bbb R}^n$ , $\psi :V\rightarrow {\Bbb R}^n$,
+$U,V\subseteq M^n$ are \underbar{$C^\infty$-related}
+if $\psi\circ\phi^{-1}:\phi(U\cap V)\rightarrow \psi(U\cap V)$
+and $\phi\circ\psi^{-1}:\psi(U\cap V)\rightarrow \phi(U\cap V)$
+are both $C^\infty$. Show that the relation `` is $C^\infty$-related
+to '' is {\bf not} an equivalence relation.
+(Hint: $M^n = {\Bbb R}$ will suffice for an example...)
+
+\msk
+
+\nidt {\bf (*) 6:} Show that ${\Bbb R}$ has uncountably many distinct smooth structures.
+((Perhaps) show first that it is enough to find uncountably many charts, with intersecting domains 
+and ranges, no two of which are $C^\infty$-related to one another.)
+
+\msk
+
+\nidt {\bf 7:} Lee, page 28-29, problem 1-5. [It was too long to copy out.]
+
+\msk
+
+\nidt {\bf 8:} Show that a function $f:M^n\rightarrow N^m$ is $C^\infty$ $\Leftrightarrow$ 
+$g\circ f:M^n\rightarrow {\Bbb R}$ is $C^\infty$ for {\it every} $C^\infty$ function
+$g:N^m\rightarrow {\Bbb R}$. (Hint: you might need to use the technology of bump functions
+found on p.55 of the text?)
+
+
+\vfill
+\end

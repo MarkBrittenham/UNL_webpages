@@ -1,0 +1,2431 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+%\parindent=0pt
+
+%\nopagenumbers
+
+\input amstex
+\loadmsbm
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cltp{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\clto{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cltpk{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\clts{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\cltbb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\cltrp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cltp{\Purple}	  % Purple  Approximate PANTONE PURPLE
+
+\def\cgy{\GreenYellow}     % GreenYellow  Approximate PANTONE 388
+\def\cyy{\Yellow}	  % Yellow  Approximate PANTONE YELLOW
+\def\cgo{\Goldenrod}	  % Goldenrod  Approximate PANTONE 109
+\def\cda{\Dandelion}	  % Dandelion  Approximate PANTONE 123
+\def\capr{\Apricot}	  % Apricot  Approximate PANTONE 1565
+\def\cpe{\Peach}		  % Peach  Approximate PANTONE 164
+\def\cme{\Melon}		  % Melon  Approximate PANTONE 177
+\def\cyo{\YellowOrange}	  % YellowOrange  Approximate PANTONE 130
+\def\coo{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cbo{\BurntOrange}	  % BurntOrange  Approximate PANTONE 388
+\def\cbs{\Bittersweet}	  % Bittersweet  Approximate PANTONE 167
+%\def\creo{\RedOrange}	  % RedOrange  Approximate PANTONE 179
+\def\cma{\Mahogany}	  % Mahogany  Approximate PANTONE 484
+\def\cmr{\Maroon}	  % Maroon  Approximate PANTONE 201
+\def\cbr{\BrickRed}	  % BrickRed  Approximate PANTONE 1805
+\def\crr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cor{\OrangeRed}	  % OrangeRed  No PANTONE match
+\def\paru{\RubineRed}	  % RubineRed  Approximate PANTONE RUBINE-RED
+\def\cwi{\WildStrawberry}  % WildStrawberry  Approximate PANTONE 206
+\def\csa{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\ccp{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\cmag{\Magenta}	  % Magenta  Approximate PANTONE PROCESS-MAGENTA
+\def\cvr{\VioletRed}	  % VioletRed  Approximate PANTONE 219
+\def\parh{\Rhodamine}	  % Rhodamine  Approximate PANTONE RHODAMINE-RED
+\def\cmu{\Mulberry}	  % Mulberry  Approximate PANTONE 241
+\def\parv{\RedViolet}	  % RedViolet  Approximate PANTONE 234
+\def\cfu{\Fuchsia}	  % Fuchsia  Approximate PANTONE 248
+\def\cla{\Lavender}	  % Lavender  Approximate PANTONE 223
+\def\cth{\Thistle}	  % Thistle  Approximate PANTONE 245
+\def\corc{\Orchid}	  % Orchid  Approximate PANTONE 252
+\def\cdo{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\cpu{\Purple}	  % Purple  Approximate PANTONE PURPLE
+\def\cpl{\Plum}		  % Plum  VERY-Approx PANTONE 518
+\def\cvi{\Violet}	  % Violet  Approximate PANTONE VIOLET
+\def\clrp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cbv{\BlueViolet}	  % BlueViolet  Approximate PANTONE 2755
+\def\cpe{\Periwinkle}	  % Periwinkle  Approximate PANTONE 2715
+\def\ccb{\CadetBlue}	  % CadetBlue  Approximate PANTONE (534+535)/2
+\def\cco{\CornflowerBlue}  % CornflowerBlue  Approximate PANTONE 292
+\def\cmb{\MidnightBlue}	  % MidnightBlue  Approximate PANTONE 302
+\def\cnb{\NavyBlue}	  % NavyBlue  Approximate PANTONE 293
+\def\crb{\RoyalBlue}	  % RoyalBlue  No PANTONE match
+%\def\cbb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cce{\Cerulean}	  % Cerulean  Approximate PANTONE 3005
+\def\ccy{\Cyan}		  % Cyan  Approximate PANTONE PROCESS-CYAN
+\def\cpb{\ProcessBlue}	  % ProcessBlue  Approximate PANTONE PROCESS-BLUE
+\def\csb{\SkyBlue}	  % SkyBlue  Approximate PANTONE 2985
+\def\ctu{\Turquoise}	  % Turquoise  Approximate PANTONE (312+313)/2
+\def\ctb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\caq{\Aquamarine}	  % Aquamarine  Approximate PANTONE 3135
+\def\cbg{\BlueGreen}	  % BlueGreen  Approximate PANTONE 320
+\def\cem{\Emerald}	  % Emerald  No PANTONE match
+%\def\cjg{\JungleGreen}	  % JungleGreen  Approximate PANTONE 328
+\def\csg{\SeaGreen}	  % SeaGreen  Approximate PANTONE 3268
+\def\cgg{\Green}	  % Green  VERY-Approx PANTONE GREEN
+\def\cfg{\ForestGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cpg{\PineGreen}	  % PineGreen  Approximate PANTONE 323
+\def\clg{\LimeGreen}	  % LimeGreen  No PANTONE match
+\def\cyg{\YellowGreen}	  % YellowGreen  Approximate PANTONE 375
+\def\cspg{\SpringGreen}	  % SpringGreen  Approximate PANTONE 381
+\def\cog{\OliveGreen}	  % OliveGreen  Approximate PANTONE 582
+\def\pars{\RawSienna}	  % RawSienna  Approximate PANTONE 154
+\def\cse{\Sepia}		  % Sepia  Approximate PANTONE 161
+\def\cbr{\Brown}		  % Brown  Approximate PANTONE 1615
+\def\cta{\Tan}		  % Tan  No PANTONE match
+\def\cgr{\Gray}		  % Gray  Approximate PANTONE COOL-GRAY-8
+\def\cbl{\Black}		  % Black  Approximate PANTONE PROCESS-BLACK
+\def\cwh{\White}		  % White  No PANTONE match
+
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\bbh{{\Bbb H}}
+\def\calt{{\Cal T}}
+
+
+
+\ctln{\bf Math 856 Differential Topology}
+
+\ssk
+
+\ctln{Ever-expanding course notes}
+
+\msk
+
+
+Differential topology is about introducing concepts and methods from calculus to the
+realm of topological spaces. That is, we wish to use notions of differentiation
+and integration in a topological setting. There are (at least) two reasons for doing
+so. The first is, essentially, waste not want not; lots of people have put in a lot
+of effort into developing the tools of analysis, why shouldn't topologists want to take
+advantage of all of that body of work? Any tool that we can bring to bear to better
+understand topological spaces helps us, well, understand topological spaces better.
+The other reason is that by figuring out how to introduce analysis into topology,
+we will have extended the range of applicability of these concepts. Experience has
+also shown that the topological point of view can, in hindsight, provide a more natural
+setting for many problems of analysis. It can also provide a natural framework for
+explaining some of its results; Stokes' Theorem is perhaps the first and most well-known,
+but certainly not the only such result that we may encounter in our study.
+As with nearly any branches of mathematics,
+once you figure out how to reconcile the immediate difficulties in introducing one
+subject to another (analysis to topology, or topology to analysis?), you discover
+innumerable ways in which they open up new avenues of exploration, and neither 
+subject is ever the same again. The goal of this course is to explore the ways in 
+which we can bring analysis and topology together, and some of the ways in which 
+anaysis helps to illuminate the study of topology.
+
+\msk
+
+Our first task is to determine {\it which} topological
+spaces we can reasonably introduce such concepts and methods to.
+
+\ssk
+
+{\bf Manifolds:} A basic principle in topology is that a topological space is explored
+through its continuous functions/continuous maps, both in and out of the space. 
+Calculus as we usually encounter it applies to functions between Euclidean spaces
+$\bbr^n$. We have derivatives, partial derivatives, integrals, and multipe integrals,
+and many variations, depending upon what domain or range/codomain we choose for 
+our functions. So if we want to be able to introduce the idea of a ``differentiable''
+map, the simplest tack to take is to look at topological spaces which ``behave''
+like Euclidean spaces. Differentiability is a local property; a (partial) derivative
+of a function at a point (much less whether you have one, i.e., are
+differentiable) depends only on the values of the function near that point.
+Of course the notion of ``local'' is in some sense what a topology on a space
+is designed to describe; open neighborhoods of a point $x$ are precisely the sets
+describing which points are ``near'' $x$. So on a most basic level, the topological 
+spaces most naturally to introduce calculus to are those in which the the points have
+open neighborhoods which ``look like'' the spaces that we know how to do calculus on,
+namely, Euclidean spaces. This motivates our first definition.
+
+\msk
+
+A {\it topological manifold} $M$ of dimension $n$ is a Hausdorff, second countable
+space with the property that for every $x\in M$ there is an open neighborhood $U$ of
+$x$ which is homeomorphic to $\bbr^n$.
+
+\msk
+
+The shorthand for the last property is that $M$ is {\it locally Euclidean}. The other
+two properties, Hausdorffness and second countability, are designed, really, to make 
+the topologists job easier. One occasionally encounters situations in which a locally
+Euclidean space is either not Hausdorff or not second countable, but they are very
+much the exception rather than the rule. And being able to assume both conditions
+when someone starts tossing the term ``manifold'' around certainly make proving theorems
+a lot easier. Surely this isn't the first time that you have encountered hypotheses
+being imposed for the purpose of making theorems easier to prove? At any rate, any
+subset of a Euclidean space is both Hausdorff and second countable in the subspace 
+topology; most (all?) manifolds we will meet can (with effort) be interpreted as 
+such a subspace. A manifold of dimension $n$ will be called an $n$-manifold for short.
+It is not at all clear from the definition, but it is the case that the $n$ of $n$-manifold
+is a homeomorphism invariant. At a given point $x\in M$, this follows from a result 
+called the Invariance of Domain;
+which says that if $U\subseteq \bbr^n$ is open, and $f:U\rightarrow \bbr^n$ is 
+continuous and one-to-one, then $f(U)\subseteq \bbr^n$ is also open. (The cleanest proof
+uses homology theory, and can usually be found in any decent algebraic topology text.)
+It is a direct consequence that no open set $U\subseteq \bbr^n$ can be homeomorphic to 
+an open subset of $\bbr^m$ for $m\neq n$ (and so can't be homeomorphic to $\bbr^m$, either).
+This also means that in a connected manifold, every point has neighborhoods locally
+homeomorphic to the same $\bbr^n$; this can be verified by the usual trick of showing that
+for a fixed $n$, the points with neighborhoods homeomorphic to $\bbr^n$ is open (and 
+therefore also closed!).
+
+\msk
+
+{\bf Examples:} Some standard examples: Euclidean space $\bbr^n$ itself. Spheres $S^n$ = the points
+at unit distance in $\bbr^{n+1}$; given a point, $x\in S^n$ at least one of its
+coordinates $x_i$ is non-zero. Then the set of points $y\in S^n$ whose $i$-th 
+coordinate has the same sign as $x$ form a locally Euclidean neighborhood of $x$;
+the homeo to the unit ball in $\bbr^n$ is given by projection onto the other
+coordinates. Cartesian products of manifolds are manifolds; take the Cartesian
+product of neighborhood in each as your local models. Open subsets of
+manifolds are manifolds. These basic building blocks already let you build
+a wide variety of examples.
+
+\msk
+
+Once we are confortable with the setting, manifolds, into which we will ultimately introduce
+differentiability, we are left with actually {\it doing} it. It turns out that in order
+to do so in a meaningful way, we have to introduce additional ``structure''; simply
+having a topological manifold won't be enough.
+
+\ssk
+
+{\bf Smooth functions:} On the face of it, once we have a space $M$ which locally 
+``looks like'' Euclidean space,
+we can seemingly define differentiability at a point for any function $f:M\rightarrow \bbr$.
+Given a point $x\in M$, we have, by definition, a neighborhood $U$ of $X$ and a
+homeomorphism $h:U\rightarrow \bbr^n$. This is, at least, enough to {\it describe}
+a function for which differentiability makes sense, namely the composition
+of $h^{-1}$ with the restriction of $f$ to $U$; $f\circ h^{-1}:\bbr^n\rightarrow \bbr$.
+So as a first approximation, we could say that $f$ is differentiable at $x$ if 
+$f\circ h^{-1}$ is differentiable at $h(x)$.
+
+\ssk
+
+There is only one problem with this. Surely if we are generalizing the notion of 
+diferentiability to more general spaces we don't want to {\it change} what functions
+$g:\bbr^n\rightarrow \bbr$ we wish to consider to be differentable. But, technically,
+our first attempt at a definition just did. Consider the function $f(x)=|x|$, which 
+we are all, presumably, willing to agree is not differentiable at $0$. But we can 
+treat the domain $\bbr = M$ as a 1-dimensional manifold, where $U=\bbr$ and
+the homeomorphism $h(x)=x^{1/3}$ serves as the proof for each $x\in M$ that $M$
+is locally Euclidean. But then in testing whether or not $f$ is differentiable 
+at $0$, we can just check that $f\circ h^{-1}(x) = |x^3|$ is in fact differentiable
+at $0$. Which it is; the derivative is $0$.
+
+
+{\bf Charts:} What went wrong? Nothing. Unless you don't want to change the notion of 
+differentiability... The point is, our definition of differentiability mentions
+both a neighborhood $U$ of $x$ (which won't, in the end, really affect things)
+and a specific homeomorphism $h:U\rightarrow \bbr^n$. The function $f$ and the point
+$x$ wasn't enough to define differentiability; we also needed a {\it chart}
+$(U,h)$, that is, a specific description for {\it how} to identify a neighborhood
+of $x$ with $\bbr^n$. And whether or not we decide $f$ is differentiable depends
+on which chart we pick. (In our example above, if we chose the identity map to define
+our chart, we would have decided that $f(x)=|x|$ is not differentible at $0$.)
+So, in order to {\it unambiguously} decide if a function is differentiable, we
+need to restrict which pairs $(h,U)$ we are willing to allow ourselves to use 
+as charts. This special collection of charts is the extra structure that we need.
+
+\ssk
+
+What is the basic idea? We wish to find some way to ensure that if one of two
+charts $(U,h)$ and $(V,k)$ with $x\in U,V$ tells us that $f$ is differentiable 
+at $x$, then the other chart {\it must} do so, as well. That is, we wish to guarantee
+that $f\circ h^{-1}$ is differentiable at $h(x)$ iff $f\circ k^{-1}$ is differentiable 
+at $k(x)$. And how to do this? The Chain Rule to the rescue! The thing which connects
+$f\circ h^{-1}$ to $f\circ k^{-1}$ is a {\it transition map} 
+$k\circ h^{-1}$; $f\circ h^{-1} = (f\circ k^{-1})\circ (k\circ h^{-1})$.
+This equality holds on $h(U\cap V)$, which is the image under a homeo of an 
+open subset of $U$ containing $x$, so is an open subset of $\bbr^n$ contining $h(x)$.
+And if $k\circ h^{-1}$ is differentiable, then Chain Rule 
+tell us that $f\circ k^{-1}$ differentiable 
+at $k(x)$ implies $f\circ h^{-1}$ differentiable at $h(x)$. The reverse 
+implication follows from knowing that $h\circ k^{-1}$ is differentiable.
+
+\ssk
+
+{\bf Atlases:} This leads us to our basic construction. A $C^{(k)}$ {\it atlas} ${\Cal A}$ on a 
+topological manifold $M$ is a collection $(U_i,h_i)$ of charts on $M$ so that 
+(1) $\bigcup U_i=M$ and (2) for every $i,j$ with $U_i\cap U_j\neq \emptyset$,
+$h_i\circ h_j^{-1}:h_i(U_i\cap U_j)\rightarrow h_j(U_i\cap U_j)$ is $C^{(k)}$,\
+that is, has continuous partial derivatives through order $k$. Note that
+notationally, by reversing the roles of $i$ and $j$, we are also insisting
+that $h_j\circ h_i^{-1}$ be $C^{(k)}$. Given a $C^{(k)}$ atlas ${\Cal A}$ on a manifold
+$M$, we can then unambiguously define differentiatible functions,
+or $C^{(m)}$ functions for any $m\leq k$, $f:M\rightarrow \bbr$,
+by requiring that $f\circ h_i^{-1}:h(U_i)\rightarrow \bbr$ is $C^{(m)}$, for every $i$.
+More generally, given atlases on manifolds $M,N$, we can define a map
+$f:M\rightarrow N$ to be {\it differentiable } by requiring that 
+$k_j\circ f\circ h_i^{-1}$ is differentiable
+for every $k_j$ in the atlas for $N$ and $h_i$ in the atlas for $M$. 
+
+It will be useful to introduce some notation at this point, so that we don't 
+have to keep writing `` $h\circ k^{-1}$ is $C^{(k)}$ ''; we will say that $h$ and $k$ are 
+`` $C^{(k)}$-related '' if $h\circ k^{-1}$ and $k\circ h^{-1}$ are both $C^{(k)}$. 
+
+\msk
+
+{\bf Smooth structures:} A $C^{(k)}$ atlas is enough to be able to define $C^{(m)}$ 
+functions for $m\leq k$, but from 
+a philosophical ( and functional) point of view, some atlases are better than others. 
+If $f:M\rightarrow\bbr$
+is a $C^{(m)}$ function and $(h,U)$ is a chart on $M$, and $V\subseteq U$ is open,
+then
+$f\circ (h|_V)^{-1}:h(V)\rightarrow \bbr$, as the restriction of $f\circ h^{-1}$, is $C^{(m)}$.
+In fact, $h|_V$ is $C{(k)}$-related to every chart on $M$ (if we started with a $C^{(k})$
+atlas), and so it doesn't hurt to add $h|_V$ to our atlas; it won't alter what functions
+we will call $C^{(m)}$. But it {\it might} actually help! We re all no doubt familiar
+with $\epsilon$-$\delta$ arguments where we keep shrinking $\delta$ (effectively, shrinking
+the neighborhood of some point $x$) in order to make better things happen. The same will be
+true here; we will want to shink the domains of charts in order to make good things happen.
+It would be nice if such domains were already part of our atlas. So, we do the natural
+thing; just toss them in. And while we're at it, we might as well toss in everything that
+we can for free (without changing what we'll call a smooth map). This turns out to be
+everything which is $C^{(k)}$-related to {\it everything} already in our atlas. This is
+also the {\it largest} $C^{(k)}$ atlas which contains our original atlas. Such an
+atlas is called a {\it maximal} atlas.
+
+A {\bf $C^{(k)}$ structure} on a manifold $M$, $0\leq k\leq \infty$, is a maximal
+$C^{(k)}$ atlas on $M$. $M$, together with a $C^{(k)}$ structure, will be called
+a $C^{(k)}$ manifold. A $C^{(0)}$ manifold is ``just'' a manifold;  a $C^{(0)}$ structure
+is a collection of homeomorphisms from the sets of an open cover of $M$ to $\bbr^n$
+(that the transition maps are $C^{(0)}$, i.e., continuous, is automatic). In general
+we will content ourselves to study $C^{(\infty)}$ structures on manifolds, but it 
+is important to know that there are other possible choices. (When an author never
+needs anything beyond a second derivative, they will often talk only about 
+$C^{(2)}$ manifolds, for example. It is a fact (see, e.g., Hirsch, {\it Differential
+Topology}, p.51) that for every $1\leq r\leq s\leq \infty$, a $C^{(r)}$ structure $\Cal A$
+on a manifold $M$ {\it contains} a $C^{(s)}$ structure $\Cal B\subseteq \Cal A$;
+that is, $\Cal A$ contains an atlas which is $C^{(s)}$-compatible. 
+But we will likely not use this result.)
+
+\msk
+
+
+{\bf Examples:} Our standard examples of manifolds above also provide some standard examples of smooth
+manifolds; one merely needs to verify that the charts that we built are $C^{(\infty)}$-related,
+so that the have an atlas, and then wave our magic wand to `build' the corresponding
+maximal atlas. Restriction to an open set and Cartesian product both
+preserve smoothness, so we have several general approaches to building smooth
+manifolds at our fingertips.
+
+\msk
+
+{\bf Diffeomorphisms:} Just as in topology we have a notion, homeomorphism, which allows us to 
+treat two spaces as essentially the ``same'', there is a corresponding 
+notion of same in the smooth setting. Two $C^{(k)}$ manifolds $(M,{\Cal A}),(N,{\Cal B})$
+are {\it diffeomorphic} if there is a $C^{(k)}$ bijection $f:M\rightarrow N$ with
+$C^{(k)}$ inverse. Just as with a homeomorphism, a diffeomorphism induces a
+bijection between charts of $M$ and $N$, via 
+$h:U\rightarrow \bbr^n$, for $U\subseteq M$, is taken to 
+$h\circ f^{-1}:f(U)\rightarrow \bbr^n$. Because $f^{-1}$ is $C^{(k)}$, this
+map is $C^{(k)}$, hence is in the (maximal) atlas ${\Cal B}$.
+
+
+{\bf Some history:} Just as in the ``standard'' definition of topology, the field of 
+differential topology 
+can be most succintly described as the study of the properties of smooth manifolds that
+are invariant under diffeomorphism (i.e., are defined in terms of the smooth
+structure). You will have learned in the homework that a given manifold can have
+many different smooth structures, meaning that the atlases defining them are distinct.
+But in many cases these atlases can still define the `same' smooth
+structure, that is, they are diffeomorphic. In particular, up to diffeomorphism,
+$\bbr$,$\bbr^2$,$\bbr^3$, and $\bbr^n$ for $n\geq 5$ all have unique differentiable 
+structure. (Except for $\bbr$, these are all fairly difficult results to establish!)
+It was a major breakthrough of the mid-1980's that $\bbr^4$ was discovered
+to have more than one smooth structure; it in fact has uncountably many non-diffeomorphic
+smooth structures. In fact, there are uncountably many open subsets of standard
+$\bbr^4$, each homeomorphic to $\bbr^4$, but (using the smooth
+structures it inherits from standard $\bbr^4$) {\it none}
+of them diffeomorphic to one another! If this isn't wierd enough
+for you, consider that, since $\bbr^5$ has only one smooth structure,
+up to diffeo, if you take these `exotic' $\bbr^4$'s and cross them with
+$\bbr$ (with the standard structure), you obtain smooth manifolds, {\it all}
+of which are diffeomorphic to standard $\bbr^5$ (and hence to one another)!
+
+Every 2-manifold has a unique smooth structure up to diffeo (Rado, 1920s?);
+the same is true for 3-manifolds, as well (Moise, 1950's). 
+But there actually exist 4-manifolds which
+posess {\it no} smooth structure. This was first discovered as a result of work of
+Freedman and Donaldson (for which both received the Fields Medal in 1986). Freedman
+showed that simply-connected (meaning every map of
+a circle into $M$ extends to a map of a disk) topological 4-manifolds were determined
+up to homeo by their `intersection pairing on second homology' (whatever
+that is), and further, every unimodular symmetric bilinear pairing has a corresponding manifold.
+This, by the way, implies the topological 4-dimensional Poincar\'e conjecture.
+Donaldson, on the other hand, showed that for simply-connected {\it smooth} 
+4-manifolds, certain intersection pairings could not arise (if the pairing is
+positive definite, then it is diagonalizable). His work essentially
+involved PDE's on 4-manifolds. In particular, the
+pairing known as ``E8'' could not occur. So the 4-manifold ``E8'', which Freedman's work shows
+exists, has no smooth structure. Similar examples can be found for all 
+higher dimensions, as well.
+
+On the other hand, there are manifolds which have `too many' smooth structures, i.e., admit
+multiple structures which are not diffeomorphic to one another. $\bbr^4$ is the most famous example
+these days, but it turns out that most spheres have this property, as well. In the late 1950's
+John (`Jack') Milnor showed that $S^7$ has more than one smooth structure; it was later shown that
+it has exactly 28 non-diffeomorphic structures. $S^{31}$ has more than 16 million! And in case you
+think these structures are really wierd things that you are never likely to meet, the 28
+structures in $S^7$ arise on the links of singularities of algebraic surfaces. Specifically,
+the intersection of the solutions (in ${\Bbb C}^5$) to the equation
+
+\centerline{$a^2 + b^2 + c^2 + d^3 + e^{6k - 1} = 0$}
+
+\noindent with a small sphere centered at the origin, for $k=1,\ldots ,28$, gives all
+28 exotic 7-spheres (source: the Wikipedia entry for `exotic sphere').
+While wandering the web, I found an assertion (by Ron Stern) that `all known 4-manifolds
+have infinitely many distinct smooth structures', but I am not sure how to interpret that...
+A result of Kirby and Siebenmann from the 1960's says that, except possibly in dimension 4
+(unless Ron Stern's statement deals with it?), every smooth $n$-manifold $M^n$ has the same number
+of non-diffeomorphic smooth structures as $S^n$ does. So {\it every} smooth 7-manifold has
+28 distinct smooth structures, up to diffeomorphism...
+
+\ssk
+
+Aside from being interesting and suprising facts, proved by really bright people, these kinds 
+of results can have useful consequences. Since all 2- and 3-manifolds $M$ have unique smooth 
+structures, when somebody hands us such a manifold $M$, we can {\it assume} they have also 
+handed us a smooth structure (even if they didn't); it comes for free. Even more, we don't
+need to worry about which smooth structure we might have picked; if you and I happen to have
+picked different ones to work with, any result you might find with yours can be translated
+into a result about mine, because we know that there is a diffeomorphism between them (we just
+might not know what it {\it is}...). And if we are trying to set up some problem or do some
+computation, we can choose the most convenient coordinate system (i.e., atlas) that we want
+(tailored to the functions involved, perhaps), to carry out our work; we know, again, that we
+can translate our results into any other coordinate system, since they all describe the 
+`same' smooth structure. The fact that this isn't true in dimensions 4 and above (except, 
+technically, that the Kirby-Siebenmann results implies, for example, that all smooth 12-manifolds 
+have unique smooth structures?) makes life in higher dimensions much more interesting, in 
+this regard! 
+
+\msk
+
+{\bf Manifolds with boundary:} Our definitions so far do not allow for things like the unit
+interval $I=[0,1]$ to be a manifold, much less a smooth one. And, semantically at least,
+they never will be; they will be {\it manifolds with boundary}. A manifold with boundary is
+a Hausdorff, second countable space in which every point has a neighborhood homeomorphic
+to {\it either} $\bbr^n$ {\it or} the upper half space ${\Bbb H}^n = \{(x_1,\ldots ,x_n)\in\bbr^n : 
+x_n\geq 0\}$. Points which do not have a neighborhood homeomorphic to $\bbr^n$ are called
+boundary points; the union of them is the boundary of $M$, denoted $\del M$. It is a 
+consequence of Invariance of Domain that if $x\in M$ has neighborhood homeomorphic to 
+${\Bbb H}^n$ and the image of $x$ has last coordinate $0$, then $x\in \del M$; that is,
+{\it every} chart is homeomorphic to ${\Bbb H}^n$, not $\bbr^n$, and always sends $x$ to the 
+boundary. Putting a smooth structure on a manifold with boundary involves some extra
+requirements as well, motivated, mostly, by what analysts have found to be reasonable
+in dealing with regions with boundary in Euclidean space. That is, a map ${\Bbb H}^n\rightarrow \bbr$
+is $C^{(k)}$ if it can be {\it extended} to a $C^{(k)}$ map 
+$\bbr^{n-1}\times (-\epsilon,\infty)\rightarrow \bbr$ on an open neighborhood of ${\Bbb H}^n$.
+Then we can adopt the exact same definition of an atlas and smooth structure, using
+this augmented definition of smooth to test the compatibility of the charts; that is, for
+any point $x$ on the boundary, the maps $h\circ k^{-1}$ and $k\circ h^{-1}$ must extend to smooth 
+maps on open neighborhoods of $k(x)$ and $h(x)$ respectively. The boundary $\del M$ of a smooth
+manifold $M^n$ is a smooth manifold of dimension $n-1$; the restrictions of the charts to 
+$\del\bbh^n=\bbr^{n-1}\times \{0\}$ form a smooth atlas, since the original charts are smooth;
+we just ignore any partial derivatives in the $n$-th direction.
+
+\msk
+
+{\bf Smooth maps:} So what do you do when you have a smooth structure? 
+Start building smooth maps!
+We know how to identify a smooth map $f:M^n\rightarrow N^m$; we must have
+$h\circ f \circ k^{-1}:K(V)\rightarrow h(U)$ smooth for every pair of charts
+on $M$ and $N$. Note that it is enough, though, to verify this for charts in 
+a pair of atlases contained in the smooth structures for $M$ and $N$; the 
+compatibility of every other chart in our smooth structure with those of the atlases
+will guarantee smoothness of $h\circ f \circ k^{-1}$ over the entire maximal atlas.
+(Note also that this does {\it not} contradict what you've shown in one of your
+homework problems!) So, for example, to verify that some function $f:S^5\rightarrow S^8$
+(using the standard smooth structures!) is smooth, it suffices to use an atlas 
+consisting to two charts on each (the stereographic projections from the poles),
+so smoothness can be verified by examining only 4 functions from $\bbr^5$ to $\bbr^8$.
+Actually verifying that such functions {\it are} smooth we are going to mostly leave
+to the same slightly fuzzy realm one encounters in calculus: if it is built up 
+out of functions that we ``know'' are smooth, then it is smooth wherever it is 
+defined. 
+
+One thing that can help us in things is to recognize that smoothness is local.
+This is just like in topology, where continuity is local; if $f:M\rightarrow N$
+is a map such that for every $x\in X$ there is a chart $(h,U)$ for $M$ with $x\in U$
+and a chart $(k,V)$ for $N$ with $f(x)\in V$, and $h\circ f\circ k^{-1}$ is smooth
+(where it is defined), 
+then $f$ is smooth. This is simply because the $h$'s and the $k$'s form atlases
+for $M$ and $N$, respectively. But if you turn it around it can be thought of as a prescription
+for building a smooth function, by patching together smooth functions defined on open sets;
+if $\Cal O$ is an open cover of $M$, and for each $U\in {\Cal O}$ we have a
+smooth map $f_U:U\rightarrow N$ such that $f_U=f_V$ on $U\cap V$ for every $U,V\in {\Cal O}$,
+then the map $f:M\rightarrow N$ defined by `$f(x)=f_U(x)$ if $x\in U$' is smooth. This is
+the direct analogue of the Gluing Lemma from topology. Of course, in topology, one more
+often wants to glue together maps defined on {\it closed} sets, rather than open sets;
+it is less messy. But in the smooth setting things aren't nearly so nice;
+on $\bbr$ the function $f(x)=|x|$ can be obtained by gluing together two smooth
+functions, but it is not smooth (using the standard smooth structures!) Question:
+are there {\it other} smooth structures on $\bbr$ for which $f$ {\it is} smooth?
+
+{\bf Basic properties:} We also have many of the standard results. The composition of two smooth maps is smooth;
+this is essentially just because the corresponding result is true for maps between
+Euclidean spaces. The sum, difference, and product of two smooth maps $M\rightarrow\bbr$
+are all smooth; again, this is basically because this is true for maps from $\bbr^n$ to $\bbr$.
+And the quotient is smooth so long as the denomenator is never zero. And a map into a Cartesian 
+product of smooth manifolds (using the product smooth structure) is smooth iff the map into
+each factor is smooth (i.e., the composition with projection onto each factor is smooth). 
+This last fact you have probably already had to use, since to decide
+on the smoothness of $h\circ f \circ k^{-1}:K(V)\rightarrow h(U)\subseteq \bbr^m$, 
+you had to look at each of the $m$ coordinate functions (projecting onto each coordinate 
+factor $\bbr$). But some things {\it don't} work; for example the maximum $\max\{f,g\}$
+of two smooth functions (mapping to $\bbr$) {\it need not} be smooth; $h(x)=|x|$, for example, can 
+be defined as the maximum of the functions $f(x)=x$ and $g(x)=-x$.
+
+\ssk
+
+Technically, partial derivatives are taken with respect to coordinate charts, not variables.
+but if $h:U\rightarrow \bbr^n$ is a chart, and $f:M\rightarrow \bbr$ is a map, then
+if we adopt the notation that $h(z)=(x^1(z),\ldots ,x^n(z))\in \bbr^n$, we will adopt 
+the notation that 
+
+\ctln{$\displaystyle {{\partial}\over{\partial x^i}}(f)(z) = 
+{{\partial}\over{\partial x_i}}(f\circ h^{-1})(h(z))$}
+
+\noindent That is, we formally are taking the partial derivative of $f$ with respect to the
+coordinate functions of the chart $h$. Therefore, a function does 
+not really have a `value' of a partial derivative at a point; it has such a value 
+{\it with respect to} a given coordinate chart. If we change charts around a point, to
+$(k,V)$, $k=(y^1,\ldots ,y^n)$ the Chain Rule tells us how to relate the two sets of 
+partial derivatives; it works out to the familiar
+
+\ctln{$\displaystyle {{\partial f}\over{\partial y^i}} = 
+\sum_i{{\partial f}\over{\partial x^i}}{{\partial x^i}\over{\partial y^j}}$}
+
+\noindent (once you chase it through the notation). One thing that this formula
+immediately tells us is that if $\partial f/\partial x^i = 0$ at $z$ for every $i$,
+using one coordinate chart, 
+then $\partial f/\partial y^i = 0$ at $z$ for every $i$, for any other chart;
+a linear combination of $0$'s is still $0$. So the notion of a {\it critical point},
+as in mulrivariate calculus, is still well-defined in our more general setting. And
+the usual proof that local max's and min's are critical points carries over as
+well (apply any proof you've ever seen to $f\circ h^{-1}$ for any chart around
+your local extremum). So we can, for example, formulate and solve max-min problems
+on smooth manifolds!
+
+\msk
+
+{\bf Partitions of unity:} There will be many situations in the material to come where we will want to assemble information
+obtained locally into a single smooth map $f:M\rightarrow N$. To do so, we will introduce the
+notion of a {\it partition of unity}; this is a way of writing the function $f(x)=1$ as a sum
+of smooth functions $1=\sum g_i$. Of course, $f(x)=1$ works; constant functions are smooth. 
+But we will want each
+summand function to be `local'; that is, zero outside of a small open set (think: the domain of a chart).
+For example, in order to define the integral of a function $f:M^n\rightarrow \bbr$, the idea will be to 
+define it first over the domain of a chart $(h,U)$ (as the integral in $\bbr^n$ of the function
+$f\circ h^{-1}$, essentially), and then define the integral of $f$ as the sum of the integrals
+of $f\cdot g_i$ (which are `really' integrals over $\bbr^n$), since $f = f\cdot 1 \sum f\cdot g_i$.
+Building such a collection of functions will take a bit more work, and will be the first time we 
+really invoke the Hausdorffness and
+second countability conditions built into our original definition. 
+Put slightly differently, the idea is that 
+we want to make the
+{\it support} of each function, supp$(g_i)$ = cl($\{x\in M : g_i(x)\neq 0\}$), to be small.
+
+
+Given an open cover ${\Cal O}$ of a space $M$, a {\it locally-finite refinement} of ${\Cal O}$
+is an open cover ${\Cal P}$ of $M$ so that for every $P\in{\Cal P}$ there is an $O\in{\Cal O}$
+so that $P\subseteq O$ (that's the refinement part), and for every $x\in M$ there
+is an open neighborhood $x\in U$ of $x$ so that $U\cap P=\emptyset$ for all but finitely many
+$P\in {\Cal P}$ (that's the locally finite part). A space $M$ is {\it paracompact} if 
+every open cover ${\Cal O}$ has a locally finite refinement ${\Cal P}$ such that $\overline{P}$ is compact
+for every $P\in {\Cal P}$. Such $P$ are called {\it precompact}.
+
+The main result we are aiming at is:
+
+\ssk
+
+If $M$ is a smooth manifold and ${\Cal O}=\{u_\alpha : \alpha\in I\}$ is an open cover of $M$, then there
+is a partition of unity $\{g_i : i\in I\}$ so that supp$(g_i)\subseteq U_i$, and for every $x\in M$,
+there is a neighborhood $V$ of $x$ so that only finitely many supp$(g_i)$ intersect $V$.
+
+\ssk
+
+The statement that supp$(g_i)\subseteq U_i$ is referred to as having a partition of unity
+{\it subordinate} to the open cover.
+The last property of the statement allows us to make sense of adding the functions together; we don't
+need the convergence of some infinite series, since around every point all but finitely many of the
+functions take the value zero. We say that the supports of the functions are {\it locally finite},
+for short.
+
+The proof of the existence of partitions of unity essentially comes in two parts. The first part
+asserts that any open cover ${\Cal O}$ of $M$ has a {\it locally finite refinement}, that is, a 
+locally finite cover ${\Cal O}^\prime$ so that for every $O\in {\Cal O}$ there is an 
+$O^\prime\in{\Cal O}^\prime$ with $O^\prime\subseteq O$ (i.e., the refinement has ``smaller'' sets).
+This property is known as {\it paracompactness}. In particular, we will show that the refinement
+can be built out of the domains for coordinate charts of $M$. The second part uses the 
+refinement by coordinate charts to build the partition of unity, by building a collection of 
+smooth ``bump'' functions supported on each coordinate chart.
+
+\ssk
+
+{\bf Paracompactness:} To prove paracompactness, start with an open cover $\Cal O$ of $M$, and a countable basis $\Cal B$
+for the topology on $M$. First we need a locally 
+finite open cover to help guide our steps. Every point $x\in M$ is in the domain of some 
+chart $h:U\rightarrow \bbr^n$ (with, we can arrange, image containing $B(h(x),2)$). The 
+open sets $U_x=h^{-1}(B(h(x),1))$ cover $M$, and have compact closure; and for each there is 
+a basis element $B_x$ with $x\in B_x\subseteq U_x$. Since $\Cal B$ is countable, 
+there are countably many $x_i$ so that the $B_{x_i}$, and therefore the $U_{x_i}$,
+cover $M$. Call these sets $U_i, I\in {\Bbb N}$, and let $C_i=\overline{U_i}$. By construction,
+$C_i$ is compact, so for any finite set $I\in{\Bbb N}$, $C_I=\bigcup_I C_i$ is compact. 
+Let $E_I$ denote $\bigcup_I U_i$.
+Set $I_1=\{1\}$, then since the $U_i$ cover $M$ and therefore $C_1$, there are finitely
+many $i$ with union $J_2$ so that $C_{I_1}\subseteq \bigcup_{J_2}U_i$, and set $I_2=J_2\cup\{2\}$.
+Inductively, we continue to build finite sets $J_n$ so that $C_{I_{n-1}}\subseteq \bigcup_{J_n}U_i$
+and $I_n=J_n\cup\{n\}$. Then $M=\bigcup_n C_{I_n} = \bigcup_n E_{I_n}$, $C_{I_{n-1}}\subseteq E_{I_n}$
+$C_{I_n}$ is compact and $E_{I_n}$ is open. Then the sets 
+$K_n=E_{I_n}\setminus C_{I_{n-2}}$ are open, have union $M$, have compact closure (contained in $C_{I_n}$),
+and are locally finite. To demonstrate
+the last assertion, for any $x\in M$, 
+$x\in E_{I_n}$ for some $n$; assume $n$ is minimal. Then $x\in U_j$ for some $j\in I_n$, and since
+$U_j\subseteq E_{I_n}\subseteq E_{I_k}$ for all $k\geq n$, $U_j\cap K_r=\emptyset$ for all $r\geq n+2$.
+In fact, since $\overline{K_r}\subseteq C_{I_n}\setminus E_{I_{n-1}}$, only $K_{r-1}, K_r$, and $K_{r+1}$
+meet $\overline{K_r}$.
+
+\ssk
+
+Now start again. We have our open cover ${\Cal O}$, and the locally finite cover $\{K_n\}$ by 
+precompact open sets. For every point $x\in M$ we can, by local finiteness, find an open neighborhood $W_x$ so that
+if $x\in K_n$ then $W_x\subseteq K_n$; start with a neighborhood meeting only fnitely many of them, and then
+intersect it with each of them as well. Taking a further intersection with an element of $\Cal O$ containing
+$x$, we can also assume that $W_x\subseteq U\in {\Cal O}$. Then we may assume by intersecting with 
+the domain of a chart
+that there is a chart $h:W_x\rightarrow \bbr^n$ sending $W_x$ to an open neghborhood of $h(x)$. Rescaling
+$h$ on the codomain side and shrinking the domain, we can asuume that $h(W_x)=B(h(x),2)$, and 
+so $V_x=h^{-1}(B(h(x),1))$ is a neighborhood of $x$ with compact closure, contained in an element of
+$\Cal O$, and contained in every $K_n$ that it meets. $W_x$ satisfies all of these properties
+except possibly the compact closure.
+
+Now for each $n$, the sets $V_x$ with $x\in \overline{K_n}$ form an open cover of the compact set $\overline{K_n}$,
+so they have a finite subcover ${\Cal P}_n=\{V_{x_1,k]n},\ldots ,V_{x_{m_n},kn}\}$; we assume that each
+has non-empty intersection with $\overline{K_n}$ (otherwise we throw it away). 
+Set ${\Cal R}_n=\{W_{x_1,n},\ldots ,W{x_{m_n},n}\}$. The collectionS
+$\Cal P=\bigcup_n{\Cal P}_n$  and ${\Cal R}=\bigcup_n{\Cal R}_n$ both form open covers of $M$, are
+refinements of $\Cal O$, and, we now show, are locally finite. It is enough to show this for $\Cal R$,
+since these sets are larger. We show that, in fact, each set in $\Cal R$ meets only
+finitely many others, so each demonstrates local finiteness for every point in it.
+But each $W=W_{x_i,n}$ intersects, and is therefore contained in, some $K_m$. 
+It therefore meets only $\overline{K_{m-1}}, \overline{K_m}$, or $\overline{K_{m+1}}$. 
+Any other element $W^\prime$ of $\Cal R$ meeting $W$ meets, and therefore is contained in, one of these three
+sets. So the only $\overline{K_r}$ it could meet would be one of $\overline{K_{m-2}}$
+through $\overline{K_{m+2}}$. $W^\prime$ is therefore a member of one of ${\Cal R}_{m-2}$ through
+${\Cal R}_{m+2}$; it doesn't meet any of the other sets $\overline{K_r}$. Therefore, it is
+one of the finitely many elements of these five sets. So $W$ meets only finitely many of the other
+elements of $\Cal R$. 
+
+\msk
+
+{\bf The partitioning of 1:} Now that we know how to build a locally finite cover by (images of) charts $(h_i,h_i^{-1}(B(x_i,2))$
+for which $h_i^{-1}(B(x_i,1))$ also cover and $h_i^{-1}(\overline{B(x_i,1)})$ is compact, we turn 
+to bulding a partition of unity with supported on these sets. We start with the fact
+that the function
+
+\ctln{$f(x)= e^{-1/x} \text{ if } x>0$ ; $=0 \text{ if } x\leq 0$}
+
+\noindent is $C^\infty$. This follows from the fact that the $n$-th derivative of
+$e^{-1/x}$ is $f_n(x)=p_n(x)e^{-1/x}/x^{2n}$ for some polynomial $p_n(x)$, which can be established
+by induction on $n$. The function has (one-sided) limit $0$ at $x=0$, which can be established by
+repeated use of L`H\^opital's Rule (to show that $e^{-1/x}/x^{2n}$ has limit 0). 
+Together these imply that $f$ has continuous derivatives of'all orders. Note that since
+$-1/x<0$ for $x>0$, $0\leq f(x) <1$ for all $x$. Now define 
+$g(x)=f(2-x)/(f(2-x)+f(x-1))$; this function is smooth, since the denomentaor is always positive
+(one term is 0 only for $x\geq 2$ and the other is zero only for $x\leq 1$), takes values
+between 0 and 1, is one precisely when $f(x-1)=0$, i.e., $x\leq 1$, and is 0 precisely when 
+$f(2-x)=0$, i.e., $x\geq 2$. Then the function $G:\bbr^n\rightarrow \bbr$ defined by
+$G(y)=g(||y-x_0||^2)$ is smooth (it's the composition of smooth functions), is
+1 on $B(x_0,1)$ and has support contained in $B(x_0,2)$. Taking our charts $h_i$
+built above, the function $h_i\circ G$ extends (by taking the value 0) to a smooth 
+function $f_i:M\rightarrow \bbr$ which is 1 on 
+$h_i^{-1}(B(x_i\,1))$ and has support in $h_i^{-1}(B(x_i\,2))$. Since every
+point has a neighborhood which lies in only finitely many of the $h_i^{-1}(B(x_i\,2))$,
+the sum $F=\sum f_i$ is locally a finite sum and so is a smooth function on $M$.
+Since the $h_i^{-1}(B(x_i\,1))$ cover $M$, it is everywhere non-zero. So each 
+of the functions $F_i=f_i/F$ is smooth, their supports = the supports of the $f_i$
+are locally finite, and their sum (which is locally a finite sum) is $1$. that is,
+they form a smooth partition of unity subordinate to the cover
+$h_i^{-1}(B(x_i\,2))$, which is a refinement of our original cover $\Cal O$. So they
+form a smooth partition of unity subordinqate to $\Cal O$.
+
+\msk
+
+{\bf Density of smooth functions:} Now that we have a partition of unity, what do we do with it?
+One immediate application of partitions of unity is: for every continuous function $f:M\rightarrow \bbr$
+and $\epsilon > 0$, there is a smooth function $g:M\rightarrow \bbr$ with $|f(x)-g(x)|< \epsilon$ 
+for all $x\in M$. The proof consists of looking at the open cover $\{f^{-1}(f(x)-\epsilon,f(x)+\epsilon)\}$,
+and choose a partition of unity $g_i$ subordinate to this cover. For each $g_i$ pick a point $x_i$ with 
+supp$(g_i)\subseteq f^{-1}(f(x_i)-\epsilon,f(x_i)+\epsilon)$. Then the function $g(y)=\sum f(x_i)g_i(y)$ is smooth
+(since the $f(x_i)$ are constants, so this is a locally finite sum of smooth functions), and 
+$|f(y)-g(y)|=|\sum g_i(y)(f(y)-f(x_i))|\leq \sum g_i(y)|f(y)-f(x_i)| < \sum g_i(y) \epsilon = \epsilon$,
+since either $g_i(y)=0$, or $g_i(y)>0$, so $y\in f^{-1}(f(x_i)-\epsilon,f(x_i)+\epsilon)$, so 
+$f(y)\in (f(x_i)-\epsilon,f(x_i)+\epsilon)$, so $|f(y)-f(x_i)|<\epsilon$.
+
+\ssk
+
+Partitions of unity can also be used to build {\it bump functions};
+given a closed set $C$ of $M^n$ and an open set $U$ with $C\subseteq U$, we can build a smooth
+function $f:M\rightarrow \bbr$ which is $1$ on $C$ and has support contained in $U$. The idea is simply to take the 
+open cover $\{U,M\setminus C\}$ and build a smooth partition of unity $\psi_i,\phi_j$ subordinate to it.
+with supp$(\psi_i)\subseteq U$ and supp$(\phi_j)\subseteq   M\setminus C$ for every $i$ and $j$.
+Then set $\psi=\sum_i\psi_i$ and $\phi=\sum_j\phi_j$; by local finiteness, both are smooth functions.
+Since $\psi(x)+\phi(x)=1$ for all $x$ and $\phi(x)=0$ outside of $M\setminus C$ (since all summands are), i.e., 
+for $x\in C$,
+we have $\psi(x)=1$ for $x\in C$; since $\psi(x)=0$ outside of $U$, we have
+$\psi(x)=0$ for $x\notin U$, as desired. (This last statement does not quite say that supp$(\psi)\subseteq U$;
+but this can be remedied by using a slightly smaller open set $V$ in place of $U$, with 
+$C\subseteq V\subseteq \overline{V}\subseteq U$, which exists by the normality of $M$.)
+
+\msk
+
+{\bf Embedding in $\bbr^n$:} Another immediate application (of our proof, really) is that if 
+$M^n$ is a smooth manifold, then 
+there is a smooth
+embedding (that is, a topological embedding that is a smooth map) of $M$ into 
+$\bbr^n$ for some $N$. Right now we will prove this for compact
+$M$; later we will show it for all $M$. To build the embedding, cover $M$ by finitely many 
+coordinate charts $(h_i,U_i)$,
+$i=1,\ldots ,k$, so that $B(x_i,2)\subseteq h_i(U_i)$ and the $h_i^{-1}(B(x_i,1))$ cover $M$.
+Then taking a smooth bump function $g_i$ that is 1 on $h_i^{-1}(B(x_i,1))$ and supported on $U_i$, we can build 
+the smooth functions $f_i=g_i\cdot h_i:M\rightarrow \bbr^n$; Then the smooth function
+$F:M\rightarrow \bbr^{nk}=(\bbr^n)^k$ given by $F(x)=(f_1(x),\ldots ,f_k(x))$ is 1-to-1; 
+mapping from a compact space to a Hausdorff one, it is a homeomorphism onto its image.
+In a sense which we will eventually make precise, the smooth structure on $M$ is induced
+from the map $F$ and the smooth structure on $\bbr^{nk}$, making this a smooth embedding.
+
+\msk
+
+{\bf Tangent vectors:} In multivariable calculus, a prominent place is taken up by vectors, 
+underlying many constructions and techniques. Tangent vectors, directional
+derivatives, gradients, and vector fields appear throughout the subject. Our next task is to 
+introduce this technology into smooth manifolds.
+It turns out there are about as many ways to approach the concept of tangent vector as there were
+early researchers in the field. But in a way which we will make fairly precise, all are really
+the same. We will introduce (at least) two of them, since they both have their own advantages
+in different situations. 
+
+\ssk
+
+In $\bbr^n$, the notion of a direction is expressed by a vector $v$ based at a point. This leads
+to the notion of the directional derivative $D_vf$; the rate of change of $f$ in the direction of
+$v$. One way to approach (tangent) vectors for manifolds is to borrow directional derivatives,
+making a defnition out of the properties which they have in multivariable calculus. This
+will be one point of view we will take. 
+
+
+
+{\bf Velocity vectors:} Borrowing vectors directly will work (with a little effort); but we can
+reformulate them more directly, in terms of things that we can borrow more directly, namely 
+smooth functions. Specifically,
+in $\bbr^n$ a vector $v$ at $x$ describes a direction by way of the curve $\gamma(t) = 
+x+tv$; $v$ is the derivative of $\gamma$ at $t=0$. We can translate this picture to a smooth
+manifold using charts; given a chart $(h,U)$ around $x$, $\eta=h^{-1}\circ\gamma$, defined on 
+a small interval around $0$, is a smooth curve $\eta:(-\epsilon,\epsilon)\rightarrow M$. It's
+derivative at $0$, using the coordinate chart $h$, is $v$. But of course this result is dependent
+upon the chart chosen, both to define it and to evaluate it. But the idea of a smooth
+curve {\it isn't}. So instead we make our definition based on them. A tangent vector at a point $x$
+will ``be' the derivative, at $t=0$, of a smooth curve with value $x$ at $t=0$. But different curves 
+can have the same derivative, so we need to introduce an equivalence relation to make a formal definition. 
+
+\ssk
+
+A tangent vector at $x\in M$ is an equivalence class of smooth curves
+$\gamma:(-\epsilon,\epsilon)\rightarrow M$ with $\gamma(0)=x$. Two such curves $\gamma,\eta$
+are equivalent if for some chart $(h,U)$ about $x$ we have $(h\circ\gamma)^\prime(0)=(h\circ\eta)^\prime(0)$ .
+
+\ssk 
+
+Informally, we tend to think of this as saying that two curves are equivalent if they have the
+same velocity vector at $t=0$ ! Note that the equivalence is independent of coordinate chart
+chosen; if $(k,V)$ is another chart (for convenience, let us suppose that $h(x)=k(x)=0$),
+then $(k\circ\gamma)^\prime(0)=[D(k\circ h^{-1})(h(x))](h\circ\eta)^\prime(0)$ 
+(where this is matrix multiplication),
+so $(h\circ\gamma)^\prime(0)=(h\circ\eta)^\prime(0)$ implies
+$(k\circ\gamma)^\prime(0)=(k\circ\eta)^\prime(0)$.
+
+\msk
+
+But now we see how we {\it ought to} to relate tangent vectors from the point of view of different charts;
+we use the total derivative map $D(k\circ h^{-1})(h(x))$. And we can use this to get rid of the smooth curves!
+Writing $k\circ\gamma)^\prime(0)=w$ and $h\circ\eta)^\prime(0)=v$, what is important is that
+$w=D(k\circ h^{-1})(h(x))v$, which needs no mention of curves at all. So we can define
+a tangent vector at a point $x\in M$ as an equivalence class of triples $(x,h,v)$, where
+$h$ is a chart whose domain contains $x$, and $v$ is a vector based at $h(x)\in \bbr^n$.
+Another tangent vector (y,k,w) is equivalent if
+$y=x$ and $w=k\circ\gamma)^\prime(0)=w$. We will let $[h,v]_x$ denote the equivalence class.
+This construction illustrates a basic theme that runs throughout the development of 
+differential topology: To introduce an object from calculus, all we need to 
+do, really, is figure out how the object would transform when we change our point of view by using
+a different chart around at point, and incorporate that into the definition, in the form of an
+equivalence relation. The point, really, is that so long as we are working locally, we can essentially
+pretend that it {\it is} the familiar object from calculus; it is only when we start looking at how
+the object behaves as we wander around the manifold that we need to remember how they transform
+as we need to keep changing coordinate charts, as our point of view keeps shifting.
+
+The set of tangent vectors $[h,v]_x$ at a point form a vector space, the {\it tangent space},
+$TM_x$ or $T_xM$, at the point $x$. The union $\bigcup T_xM=TM$ is the tangent space of $M$. We
+could keep talking about this, exploring it various properties from this point of view, but let us
+back up and start again using the directional derivative point of view.
+
+\msk
+
+{\bf Derivations:} Given a vector $v$ based at $z\in \bbr^n$, it allows us to define the directional
+derivative $(D_vf)(x)$ of any differentiable function whose domain contains a neighborhood about $z$.
+That is, we have an operator $D_v$ from smooth functions to $\bbr$. This operator is linear, and
+satisfies a Leibnitz rule: $D_v(fg)=gD_vf+fD_vg$ (this last is because $D_v$ is `really'
+the gradient dotted with $v$, so it is a linear combination of the partial derivatives, and
+the partial derivatives satisfy the Leibnitz rule). Such an operator is called a {\it derivation}.
+But such a concept makes sense anywhere that the notion of `differentiable function' makes sense,
+e.g., on a smooth manifold. Since $D_v$ takes too long to write, and $D_v$ is really {\it replacing} 
+the notion of the vector $v$, we will write $D_v=X$ in general.
+
+\ssk
+
+For $a\in M^n$ a smooth manifold, a {\it derivation at $a$} is a map $X:C^\infty(M)\rightarrow \bbr$
+satisfying $X(\alpha f+\beta g) = \alpha X(f)+\beta X(g)$ and 
+$X(fg)=f(a)X(g)+g(a)X(f)$, for $\alpha,\beta\in \bbr$ and $f,g\in C^\infty(M)$.
+
+\ssk
+
+The set of all derivations at $a$ will be denoted $T_aM$. These will be our `tangent vectors' at $a$.
+On the face of it, this definition is hopelessly abstract, but we can get a better handle on it by
+outlining some of its basic properties.
+
+\ssk
+
+{\it Lemma:} If $c\in C^\infty(M)$ is constant, $c(x)=c$, then $X(c)=0$. If $f(a)=g(a)=0$, then $X(fg)=0$.
+If $f=g$ on a neighborhood of $a$, then $X(f)=X(g)$.
+
+\ssk
+
+{\it Proof:} First, $X(1) = x(1\cdot 1) = 1\cdot X(1)+1\cdots X(1)=2\cdot X(1)$, so $X(1)=(2-1)X(1)=0$.
+Then $X(c)=cX(1)=c\cdot 0=0$. For the second, $X(fg)=f(a)X(g)+g(a)X(f)=0+0=0$.
+And finally, choose a small chart $(h,U)$ around $a$, with domain contained in the neighborhood
+on which $f$ and $g$ agree, and build a bump function $B$ supported on $U$
+and equal to $1$ on the closure of a small ball $h^{-1}(B(b,\epsilon))$. Then
+$fB=gB$ on all of $M$; inside of $U$ they agree by hypothesis, and outside of $U$ they are both $0$.
+So $X(fB)=X(gB)$; but then 
+$0=X(fB)-X(gB) = (f(a)X(B)+B(a)X(f))- (g(a)X(B)+B(a)X(g)) = g(a)X(B)+X(f)-g(a)X(B)-X(g)=X(f)-X(g)$,
+so $X(f)=X(g)$.
+
+\ssk
+
+So the derivation $X$ is really `local'; it depends only on the values of $f$ near $a$. Which would
+indicate that we ought to be able to understand them better using charts! Which we will do. But first, 
+a little more theory. A chart can be thought of as a $C^\infty$ map from a neighborhood in $M$ to the
+standard smooth structure on $\bbr^n$. So understanding how derivations behave under smooth maps
+will help us understand derivations.
+
+\ssk
+
+{\bf Pushforwards:} Given a smooth map $F:M^n\rightarrow N^m$ and $a\in M$, 
+we can `push forward' a derivation $X$ at $a$ 
+to a 
+derivation at $F(a)$, which we will call $F_*(X)$; we define 
+$F_*(X)(f)=X(f\circ F)$. It is a 
+straighforward calculation, using the fact that $(f\cdot g)\circ F = (f\circ F)\cdot(g\circ F)$ that
+$F_*(X)$ is a derivation at $F(a)$ [don't forget linearity!]. The following facts are also 
+pretty straighforward:
+
+\ssk
+
+{\it Lemma:} $(F\circ G)_*=F_*\circ G_*$ . Id$_*$ = Id . If $F$ is a diffeomorphism, then 
+$F_*$ is an isomorphism for every $a\in M$.
+
+\ssk
+
+With these, we can go explore derivations using charts, and get a better understanding of them.
+First, because the definition of a derivation is really local, if $U\subseteq M$ is open 
+and $a\in U$, then the inclusion map $i:U\rightarrow M$ induces an isomorphism
+$i_*:T_aU\rightarrow T_aM$ ; choosing a bump function $g$ which is $1$ on  neighborhood
+of $a$ and supported on $U$, we can extend any smooth function $f$ on $U$ to a function $gf$ on $M$
+which equals $f$ on a neighborhood of $a$.
+Then comparing a derivation $X$ on $U$ and the derivation $i_*X$ on $M$, 
+we have $i_*X(gf)=X(gf\circ i)=X(f)$, since $gf\circ i$ and $f$ agree on a neighborhood of $a$.
+So if $i_*X_1=i_*X_2$, then $X_1f=X_2f$ for every $f:U\ra \bbr$, so $X_1=X_2$ and $i_*$ is injective.
+To show surjectivity, given $X\in T_aM$, define $Y\in T_aU$ by $Y(f)=X(gf)$. A computation shows that $Y$ is a 
+derivation at $a$. Then for any $f\in C^\infty(M)$, $i_*(Y)(f)=Y(f\circ i) = X(g(f\circ i)) = X(f)$,
+again, since $g(f\circ i)$ and $f$ gree near $a$. So $i_*Y=X$ and $i_*$ is onto. SO $i_*$ is an
+isomorphism.
+
+But now a chart $(h,U)$ is a diffeomorphism $U\ra \bbr^n$ for the standard smooth structure on
+$\bbr^n$, so $T_aU$ is isomorphic to $T_{h(a)}\bbr^n$. So to understand the tangent space
+at a point, we may assume that $M=\bbr^n$! But we can build a collection of derivations in
+$\bbr^n$; the directional derivatives $D_v=\sum_i v^i(\del/\del x^i)$ for $v=(v^1,\ldots ,v^n)$.
+The last piece of the puzzle is:
+
+\ssk
+
+{\it Lemma:} The map $I:v\mapsto D_v$ is an isomorphism.
+
+\ssk
+
+To prove it, look at the coordinate functions $f_j:x=(x^1,\ldots ,x^n)\mapsto x^j$ and note that
+ $D_v(x^j)=\sum_i v^i(\del x^j/\del x^i)=v^j$, so $D_v=D_w$ implies $v=w$,
+and $I$ is injective. For surjectivity, given a derivation $X$ on $\bbr^n$ at $a$,
+let $v^i=X(f_i)$, and $v=(v^1,\ldots ,v^n)$. We show $X=D_v$; given $f\in C^\infty(\bbr^n)$, we
+can expand $f$ as a power series centered at $a=(a^1,\ldots ,a^n)$. 
+
+\ssk
+
+\ctln{$\displaystyle f(x)=f(a)+\sum_i{{\del f}\over{\del x^i}}(a)(x^i-a^i) + \sum_i g_i(x)(x^i-a^i)$}
+
+\ssk
+
+\noindent where $g_i(a)=0$, by a result of advanced calculus. Since $f(a)$ is constant and
+$g_i(x)$ and $x^i-a^i$ are both $0$ at $a$, $X(f)=\sum_i f_{x^i}(a)v^i=D_v(f)$, so $X=D_v$.
+Finally, from calculus we know that $I$ is linear. So $I$ is an isomorphism.
+
+\msk
+
+The derivations $X_i=\del/\del x^i$ form a basis for $T_a\bbr^n$. Carrying these back to $M$ via 
+a chart $h:U\ra\bbr^n$, or rather the map $h_*:T_aU\ra T_{h(a)}\bbr^n$. But to get back
+to $M$, we use $(h^{-1})_*$;  this map carries the basis $X_i$ to
+$(h^{-1})_*X_i$, where $((h^{-1})_*X_i)f=X_i(h^{-1}\circ f)=\del(h^{-1}\circ f)/\del x^i$.
+Which should sound familiar! This is what we denoted $\del f/\del x^i$, where 
+$h(y)=(x^1(y),\ldots x^n(y))$. So the derivatives with respect to the coordinate functions
+of our chart $h$, $\del/\del x^i$, form a basis for $T_aM$. 
+
+\ssk
+
+The three approaches to the concept of a tangent vector can all be brought together by decribing
+the basis vectors for $T_aM$ from each point of view. For derivations, they are the differentiation
+operators $\del/\del x^i$ for the coordinate functions. For curves, they are the derivatives
+at $a$ of the functions $t\mapsto h^{-1}(h(a)+t(0,\ldots ,1,\ldots ,0))$. For vectors, they
+are the equivalence classes $[h,(0,\ldots ,1,\ldots ,0)]_a$. Each of these descriptions are
+local, usng the chart $h$.
+
+In particular, given a smooth curve $\gamma:(-\epsilon,\epsilon)\ra M$ with $\gamma(0)=a$,
+the map $f\mapsto (f\circ \gamma)^\prime(0)$ is a derivation at $a$; this follows
+from the fact that $(fg)\circ\gamma = (f\circ\gamma)(g\circ\gamma)$. Chasing this through
+both descriptions will verify that this assignment is an isomorphism between our 
+equivalence classes of curves and the space of derivations at $a$.
+
+\msk
+
+{\bf Computations in local coordinates:} Tangent vectors as derivations are defined globally, 
+but are typically worked with locally. Given $a\in M$ and a chart $(h,U)$ around $a$, 
+a derivation $X$ can be written $X=\sum_i v^i\del/\del x^i$ (evaluated at $h(a)$), 
+where $h=(x^1,\ldots ,x^n)$.
+Given a map $F:M^n\ra N^m$ we can express the pushforward in local coordinates: let 
+$(k,V)$ be a chart around $b=F(a)$, with $k=(y^1,\ldots ,y^m)$. We know we can write 
+$F_*X=\sum_j w^j\del/\del y^j$ for some $w^j$; the task is to compute $w^j$. But
+$w^k=(\sum_j w^j\del/\del y^j)(y^k)$, since $\del y^k/\del y^j=\delta_{kj}$.
+So in order to compute $w^j$ we need to compute 
+$w^j=F_*X(y^j)= X(y^j\circ F) = \sum_i v^i\del(y^j\circ F)/\del x^i$.
+The constants $\del(y^j\circ F)/\del x^i$ form the matrix a partial derivative of $F$, 
+in local coordinates, and so $\sum_i v^i\del/del x^i$ is carried to 
+$\sum_j[\sum_i v^i\del(y^j\circ F)/\del x^i]\del/del y^j$. 
+
+In particular, if we set $F=$Id = the identity function, we can recover a change of
+variables formula for tangent vectors: given two charts $h=(x^1,\ldots ,x^n)$ and
+$k=(y^1,\ldots ,y^n)$ about $a\in M$, we have 
+$\del/\del x^i = \sum_j(\del y^k/\del x^i)\del/del y^j$, which is, of course, the
+exact same change of variables formula we had for tangent vectors as smooth
+curves and as vectors. This formula extends to $T_aM$ by linearity. This formula
+allows us to translate computations when we switch perspectives by using a 
+different chart.
+
+\ssk
+
+As an example, let us examine the tangent vectors to $S^2$ using a variety of
+standard charts on $S^2$. We have the standard projection coordinates 
+$h_1:(x^1,x^2,x^3)\mapsto (x^1,x^2)$, etc., 
+with inverse $(x^1,x^2)\mapsto (x^1,x^2,\sqrt{(1-(x^1)^2-(x^2)^2})$.
+There are the stereographic coordinates
+$k_1:(y^1,y^2,y^3)\mapsto (y^1,y^2)/(1-y^3)$ , etc.. ,
+with inverse $(y^1,y^2)\mapsto (2y^1,2y^2,|y|^2-1)/(|y|^2+1)$.
+We also have spherical coordinates, 
+which we are all probably more familiar writing the inverse for:
+$\ell_1^{-1}:(\theta,\varphi)\mapsto (\cos\theta \sin\varphi, \sin\theta \sin\varphi,\cos\varphi)$.
+The inverse of the inverse is 
+$\ell_1:(z^1,z^2,z^3)\mapsto(\arctan(z^2/z^1),\arccos(z^3))$ .
+So, for example, on the upper hemisphere, we can compute the change of coordinates
+formula from sphereical to projection coordinates as the total derivative 
+of the map $(\theta,\varphi)\mapsto (\cos\theta \sin\varphi,\sin\theta \sin\varphi)$,
+which is the matrix $(-sin\theta \sin\varphi,\cos\theta \sin\varphi;\cos\theta \cos\varphi,\sin\theta \cos\varphi)$.
+
+\msk
+
+{\bf The tangent space:} In any of its manifestations, we can assemble the tangent spaces
+$T_aM$ at points $a$ into a single tangent space $TM=\bigcup_aT_aM$. But the change of 
+variable formula above can be turned into a prescription for putting a topology, and
+a smooth structure, on $M$. $TM$ is locally homeomorphic to $\bbr^n\times \bbr^n=\bbr^{2n}$,
+by charts $H:TU\ra \bbr^{2n}$, induced by a chart $(h,U)$, $h=(x^1,\ldots ,x^n)$ for $M$, where
+$H(X_a)=(h(a),(X_a(x^1),\ldots ,X_a(x^n))$. Given a second chart $(k,V)$ , $k=(y^1,\ldots ,y^n)$
+for $M$, the transition function for $TM$, using the change of variables formula, is given by
+$H\circ K^{-1}(b,(v^1,\ldots ,v^n))=
+(h\circ k^{-1}(b),(\sum_i v^i(\del x^1/\del y^i),\ldots ,\sum_iv^i(\del x^n/\del y^i)))$.
+This function is smooth, since in the first $n$ coordinates it is the transition function
+for $M$, and in the second $n$ coordinates it is essentially built out of the partial
+derivatives of the coordinate functions, which are also smooth. The topology on $TM$
+is generated from these charts; a basis consists of images under the $H^{-1}$ of a basis
+of open sets on $\bbr^{2n}$. Since a countable number of charts cover $M$ and each of
+the charts provide a countable collection of sets to add to the basis, we have second
+countability. Hausdorffness proceeds similarly (two cases: in the same chart or never in
+the same chart). The natural map $p:TM\ra M$ sending a derivation at $a$ to $a$ is smooth.
+
+
+\msk
+
+{\bf Vector fields:} The tangent bundle gives us the framework to introduce another standard
+concept from advanced calculus. A vector field is a choice of vector at every point in a space.
+From the point of view of $TM$, a (tangent) vector field is a choice of element of $T_aM$
+for every $a\in M$. Put differently, a vector field $X$ is a map $X:M\ra TM$ so that
+$X(a)\in T_aM$ for every $a\in M$; i.e., $p\circ X:M\ra TM\ra M$ is the identity map.
+Generally, for a vector bundle $p:E\ra M$, a map $s:M\ra E$ with $p\circ s=\text{Id}_M$
+is called a {\it section} of the bundle. So a vector field on $M$ is a section of the tangent
+bundle. The vector field is {\it smooth} if the section is a smooth map. The set of all
+smooth vector fields on $M$ is denoted ${\Cal T}(M)$.
+
+Writing things in local coordinates $(h,U)$, a vector field can be expressed as 
+$X=\sum_i v^i\del/\del x^i$, where the $v^i$ are functions from $U$ to $\bbr$. 
+$X$ is smooth \lra\ the functions $v^i$ are smooth; this follows from the construction
+of the smooth structure on $TM$. 
+Given a smooth vector field $X$ and a smooth function $f:M\ra \bbr$ the assignment $a\mapsto
+X_af$ is a function. Writing things in local coordinates, $Xf=\sum v^i\del f/\del x^i$ is a smooth
+function.
+This point of view actually provides another characterization of smoothness:
+$X$ is smooth \lra\ $Xf$ is smooth for every smooth map $f:M\ra \bbr$. This is because
+in local coordinates the $v^i$ can be recovered as $Xx^i$ (or rather, the coordinate
+function $x^i$ multiplied by a bump function for the chart), and $x^i$ is smooth, 
+so $Xx^i=v^i$ is smooth and $X$ is smooth.
+
+The fact that $Xf$ is a smooth function for smooth $f$ and smooth vector field $X$ means that
+we can use $Xf$ as the function to feed another vector field $Y$, allowing us to 
+define $YX$ as $(YX)(f)=Y(Xf)$. But $YX$ is not a vector field; it fails to be a
+derivtion at a point. We can compute
+
+$YX(fg)=Y(f(Xg)+g(Xf))=Y(f(Xg))+Y(g(Xf))=f(YX)g+(Yf)(Xg)+g(YX)f+(Yg)(Xf)=[f(YX)g+g(YX)f]+(Yf)(Xg)+(Yg)(Xf)$
+
+\noindent and we have no reason to believe that the last two terms will cancel one another.
+But! Those last two terms are symmetric in $X$ and $Y$, and $YX(fg)$ isn't. So if we compute
+$XY(fg)$, we will get the same two extra terms. So if we subtract these two expressions, they will
+cancel. That is, 
+$(XY-YX)(fg)=f(XY-YX)g+g(XY-YX)f$, so $XY-YX$ is a derivation (a quick check shows that it is 
+linear), and therefore defines a vector field, called the {\it Lie bracket} 
+$[X,Y]=XY-YX$ of $X$ and $Y$. A direct computation in local coordinates reveals that
+$[\sum_i v^i\del/\del x^i,\sum_i w^i\del/\del x^i]=
+\sum_i(\sum_j v^j(\del w^i/\del x^j)-w^j(\del v^i/\del x^j))\del/\del x^i$ . So the Lie bracket of two 
+smooth vector fields is a smooth vector field.
+
+\msk
+
+The Lie bracket satisfies several useful properties:
+
+(a) it is $\bbr$-linear in each entry: $[aX+bY,Z] = a[X,Z]+b[Y,Z]$ for $a,b\in \bbr$, etc.
+
+(b) it is antisymmetric: $[X,Y]=-[Y,X]$
+
+(c) it satisfies the {\it Jacobi identity}: $[X,[Y,Z]]+[Y,[Z,X]]+[Z,[X,Y]]=0$ (the $0$ vector field).
+
+Each can be verified by evaluating each side on a smooth function $f$, checking that we get the same answer.
+A natural question to ask is "what does the Lie bracket really measure?". On the face of it, it measures
+the extent to which two vector feilds fail to commute. In fact, the fact that our coordinate vetor fields
+$\del/\del x^i$ do commute ("mixed partials are equal") has a converse; If $X_1,\ldots X_k$ are vector
+fields defined on some open set $V$ so that the $X_i(a)\in T_aU$ are linearly independent at every $a$,
+and $[X_i,X_j]=0$ on $V$ for every $i,j$, then around every point there is a coordinate system
+$(h,U)$ so that in these local coordinates $X_i=\del/\del x_i$ for $i=1,\ldots ,k$. [We may
+prove this at some future point.]
+
+But what is the significance
+of the direction that $[X,Y]$ points, when it is non-zero? To answer this, we need to introduce 
+integral curves. And to do \u{that} we need to discuss pushforwards of vector fields.
+
+\msk
+
+{\bf Pushforwards and ${\Cal F}$-relatedness:} We have seen that a smooth map $f:M\ra N$
+induces a map $f_*:TM\ra TN$ which is linear on each $T_aM$. So if we wish to push a
+vector field $X$ on $M$ to a vector field on $N$, the natural thing to do would be so set
+$(f_*X)(b) = f_*(X_a)$ where $f(a)=b$. There are, of course, two problems with this;
+$f$ might not be onto, so there is no $a$ in the preimage of $b$, and $f$ might not
+ be 1-to-1, so there might be more than one $a$ in the preimage, and the various
+values of $f_*(X_a)\in T_bN$ might not agree. The concept of ${\Cal F}$-relatedness
+essentially declares that the second problem does not occur: two vector fields
+$X$ on $M$ and $Y$ on $N$ are ${\Cal F}$-related if $f_*(X_a)=Y_{f(a)}$ for all $a\in M$.
+Note that since a vector field is determined by its values on smooth (e.g., coordinate) functions,
+whether or not two vector fields are ${\Cal F}$-related can also be determined
+by testing values on functions: $X$ and $Y$ are ${\Cal F}$-related \lra\ $X(g\circ f)=Y(g)\circ f$
+for every smooth map $g:N\ra \bbr$.
+Given a vector field $X$ on $M$, there is of course no reason to expect there to be
+a vector field on $N$ ${\Cal F}$-related to $X$. Nor given $Y$ on $N$ should
+there be a vector field on $M$ ${\Cal F}$-related to $Y$. (Think: the constant function $f$.)
+But in one special case, which we use again and again, we can expect such good things:
+
+\ssk
+
+If $f:M\ra N$ is a diffeomorphism, then for every $X\in {\Cal T}(M)$ there is a unique 
+$Y\in {\Cal T}(N)$ ${\Cal F}$-related to $X$. This is mostly a matter of figuring out
+what $Y$ \u{has} to be; we want $f_*(X_a)=Y_{f(a)}$, so define
+$Y_b=f_*(X_{f^{-1}(b)})$, which is well-defined since $f$ has an inverse. Uniqueness of $Y$
+is immediate; plug $b=f(a)$ (so $a=f^{-1}(b)$) into the definition of ${\Cal F}$-relatedness.
+All that is left is to show that $Y$ is a smooth vector field. This can be done using the
+local coordinates $h\circ F^{-1}$ for some coordinate chart $h$ on $M$ about $a$; then 
+$Y$ has the exact same local formula as $X$ does. 
+
+\ssk
+
+The point to this really, is that we want to be able to think of (the restriction of) 
+a vector field on $M$ as ``really'' being a vector field on $\bbr^n$, using a local
+coordinate chart. Since a chart $h:U\ra \bbr^n$ is a diffeomorphism onto its 
+image, we can use pushforwards to work with our vector fields as if they were in $\bbr^n$.
+This is really just a fancy way of saying that we are working in local coordinates.
+so you should mostly treat this as a warning that in general there is no such thing
+as the pushforward of a vector field?
+
+
+\msk
+
+{\bf Integral curves:} Given a smooth curve $\gamma:I\ra M$, the derivative $\gamma^\prime(t)$
+can be defined as $\gamma_*(d/dt)\in T_{\gamma(t)}M$; this is how our notion of velocity vector
+for a curve translates into the language of derivations. $\gamma$ is an {\it integral curve}
+for a tangent vector field $X$ on $M$ if $\gamma^\prime(t)=X(\gamma(t))$ for all
+$t$ in the domain of $\gamma$. It is a consequence of the fundamental existence and uniqueness 
+theorem for solutions to ODEs that for every smooth vector field $X$ and $a\in M$ there is
+an integral curve $\gamma$ for $X$ with $\gamma(0)=a$; any two such integral curves agree
+on a neighborhood of $0$. The idea is to choose a chart $(h,U)$ about $a$; using the fact 
+that $TU=TM|_U\cong T\bbr^n$ we can translate the problem of finding an integral curve in $U$
+to finding integral curves for a vector field $Y$ on $\bbr^n$; set $Y_{h(x)}=h_*(X_x)\in T_{h(x)}\bbr^n$.
+This gives us a vector field on $\bbr^n$, which, in the standard coordinates, is just a collection of 
+smooth functions $Y(y)=(f_1(y),\ldots ,f_n(y))$. We find an integral curve $\eta=(\eta_1,\ldots ,\eta_n)$ satisfying 
+$\eta^\prime(t)=Y(\eta(t)$ by solving each of the differential equations $\eta_i^\prime(t)=f_i(\eta_i(t)$,
+which, since the $f_i$ are smooth, each have a unique solution with $\eta_i(0)=x^i(a)$.
+Pushing this curve back to $M$ using $h^{-1}$ gives an integral curve to $X$ on $M$.
+Uniqueness implies that any solution we find using another coordinate chart will agree with this one
+(push it over with the transition function and it will give ``another'' solution in our original
+coordinate system; uniqueness implies that they are actually the same). 
+
+\ssk
+
+
+Given two vector fields $X,Y$, we therefore have two sets of integral curves, $\gamma_x$ tangent to $X$ 
+and $\eta_x$ tangent to $Y$. If we choose $\epsilon$ small enough, we can, starting with $a\in M$,
+follow the integral curve to $X$ through $a$ from $t=0$ to $t=\epsilon$ arriving at $b\in M$, then 
+follow $\eta_b$ from $b=\eta_b(0)$ to $c=\eta_b(\epsilon)$, then $\gamma_c$ to $d=\gamma_c(-\epsilon)$,
+then $eta_d$ to $e=\eta_d(-\epsilon)$. Think of $e=\theta(\epsilon)$ as a curve. This curve, it
+turns out, is smooth, $\theta^|prime(0)=0$, and $\theta^{\prime\prime}(0)=2[X,Y]_a$ ! 
+So $[X,Y]$ points in the direction that, following the integral curves to $X$ and $Y$ around a 
+``square'', we infinitesimally fail to close up.
+
+\msk
+
+{\bf Vector bundles:} 
+The tangent space is our first example of a {\it vector bundle}. The idea behind a $k$-bundle $E$ over
+a space $M$ is that we have a $k$-dimensional vector space ``over'' each point of $M$, which locally
+fit together as a Cartesian product. More precisely, 
+we have a map $p:E\ra M$ so that for every $a\in M$ there is a neighborhood $U$ of $a$
+for which $p^{-1}(U)\cong U\times \bbr^k$ via a map $h_U:p^{-1}(U)\ra U\times \bbr^k$, so that
+the diagram 
+
+\ssk
+
+\ctln{$\displaystyle \CD
+p^{-1}(U)  @>h_U>> U\times\bbr^k\\
+@VpVV   @V\text{pr}_1VV\\
+U @>\text{Id}>> U
+\endCD$}
+
+\ssk
+
+\noindent commutes. Moreover, for each $x\in M$, the {\it fiber} $p^{-1}(x)=E_x$ has the structure of
+a vector space of dimension $k$ so that, for each $U$ with $x\in U$, the restriction
+of $h_U$ maps $E_x$ to $\{x\}\times \bbr^k$ by a linear isomorphism.
+
+That is, locally the bundle map looks like the projection
+onto the first coordinate of a product with the vector space $\bbr^k$.
+This is precisely what we have for the tangent space. The basic idea is
+that each point of $M$ has a vector space $\bbr^k$ attached to it, so that this assignment is
+`locally trivial' in the sense of the commutative diagram. In the case of the tangent space
+(which we will now start calling the {\it tangent bundle}), our coordinate charts for TM are the 
+local trivializations we need: $H:TU\ra h(U)\times \bbr^n$ was given by
+$H(a,X_a)=(h(a),(X_a(X^1),\ldots ,X_a(x^n))$, where $h=(x^1,\ldots ,x^n)$.
+
+The tangent space of a smooth manifold
+is just one such family of examples of vector bundles. 
+The {\it trivial bundle}
+$M\times \bbr^k$, often denoted $\epsilon^k(M)$ or simply $\epsilon^k$,
+with projection map $\text{pr}_1$, is another example. 
+It is called trivial because it has a {\it global} trivialization. The (open)
+M\"obius band is the total space of a (non-trivial) $1$-bundle, or line bundle, over the circle.
+
+The tangent bundle will not be the only `bundle' over a smooth manifold
+$M$ that we will find ourselves interested in. There will be many other linear spaces that we
+will wish to assign to each point $a\in M$, and assemble into a bundle. So it will benefit
+us to discover some general facts about these objects. First, for any subset
+$A\subseteq B$, $E_A=p^{-1}(A)$ and the restriction map $p|_A:E_A\ra A$ for a $k$-bundle,
+as well, the restrictions of the local trivializations for $E$ demonstrate this.
+
+A vector bundle $p:E\ra M$ is {\it smooth} if $E$ and $M$ are smooth manifolds, $p$
+is a smooth map, and the bundle admits smooth local trivializations. We will, of course, 
+be interested primarily in smooth bundles. Smooth bundles share several features in common
+with the tangent bundle. For the tangent space, the transition functions between two
+local trivializations had the form 
+$t:h(U\cap V)\times \bbr^n\ra k(U\cap V)\times \bbr^n$ is $(k\circ h^{-1},D(k\circ h^{-1})$.
+As a tangent bundle, we supress the first function and think of $TU$ as diffeomorphic to
+$U\times \bbr^n$ instead of $h(U)\times \bbr^n\subseteq \bbr^{2n}$. So the map on the first coordinate
+is the identity.
+In general, for a smooth vector bundle, the transition functions are smooth maps
+$(U\cap V)\times \bbr^k\ra(U\cap V)\times \bbr^k$ of the form $t(a,v)=(a,\tau_a(v))$
+where $\tau_a\in GL(n,\bbr)$. The map $a\mapsto \tau_a$ is a smooth map from 
+$U\cap V$ to $GL(n,\bbr)$, since the $(i,j)-th$ entry of this map is given by
+$a\mapsto$pr$_i \tau_a(\del/\del x^j)$, which is the composition of smooth functions.
+
+\msk
+
+A {\it section} of a vector bundle $p:E\ra M$ is a function $s:M\ra E$ satisfying $p\circ s=Id$.
+That is, it is a choice of vector at $a$ for every $a\in M$. A continuous section is a 
+continuous such function; a smooth section is a smooth such function. All bundles have 
+continuous sections; choosing the $0$-vector at each point we have the $0$-section. If 
+the bundle is smooth, so is this section. Not all bundles have a {\it nowhere zero section}
+$s:M\ra E$ with $s(p)\neq 0$ for all $p$; the M\"obius band, thought of as a line bundle
+over the circle, has no such section. Proof: if it did, it would be the trivial bundle
+(see below: global sections), but it isn't (see below: orientations!). 
+
+This statement foreshadows the fact that
+trivial bundles can be detected using sections. If $p:E\ra M$ is a trivial $k$-bundle, then 
+there is a fiber-preserving homeomorphism $H:E\ra M\times \bbr^k$. If we let $e^i$ represent
+the $i$-th coordinate vector, with $1$ in the $i$-th coordinate and $0$'s elsewhere, then 
+$X_i:x\mapsto h^{-1}(x,e^i)$ is a section of the bundle $E$, and for every $p\in M$
+$x_1(x),\ldots,X_k(x)$ form a basis for the vector space $p^{-1}(x)=E_x$. Such a collection
+of sections is called a {\it global frame} for the bundle (as in ``frame of reference for
+doing computations''?). Because vector bundles are locally trivial, a similar construction
+will build {\it local frames} for us. Trivial bundles therefore have global frames; but
+the converse is also true: a global frame provides a trivialization of the bundle, by
+defining $H:E\ra M\times \bbr^k$ by $H(z)=(p(z),(v^1,\ldots ,v^k))$, where
+$z=\sum_i v^iX_i(p(z))$. This is well-defined since the $X_i(p(z))$ form a basis for
+$p^{-1}(p(z))$. Showing it is a bijection is straighforward, and that it is continuous
+follows from the local triviality of the bundle (*). The inverse is continuous since
+the sections $X_i$ are. If the bundle is smooth, the same argument establishes that the
+maps are smooth. A smooth manifold $M^n$ is said to be {\it parallelizable} if its tangent bundle is 
+fiber-preserving diffeomorphic to the trivial $n$-plane bundle. by the above, this is equivalent 
+to the existence of $n$ vector fields which are linearly independent at each point.
+
+\ssk
+
+(*) Continuity of our map {\it does} follow from local triviality, but the route is more 
+complicated than I first thought. To show that $H$ is continuous/smooth, it suffice to show
+that it is locally so. Given a local trivialization $h_U:p^{-1}(U)\ra U\times \bbr^n$, we can 
+write $h_U(X_i(a))=(a,(s_{1i}(a),\ldots s_{ni}(a)))$. The functions $s_{ji}$ are continuous/smooth,
+since $h_U$ and the sections are, and since the sections form a basis, the matrix $A=(s_{ji}(a))$
+is invertible for all $a$. Using Cramer's Rule, we can see that the entries of the inverse
+matrix $B$ are continuous/smooth functions of $a$ (the inverse is built out of determinants of
+minors, each of which is smooth on its inputs). $S$ allows us to ``build'' $h_U^{-1}$ in a way that 
+is compatible with our definition of $H$; $H\circ h_U^{-1}(a,(v_1,\ldots v_k))=
+H(\sum_i v_i(h_U^{-1}(0,\ldots,1,\ldots,0))=H(\sum_i v_i(\sum_j X_j(a)S_{ji}(a)))
+=(a,(\sum_i v_iS_{1i}(a),\ldots ,\sum_i v_iS_{ni}(a)))$, which is smooth. Since $h_U$
+is a diffeomorphism, $H$ is smooth.
+
+\ssk
+
+It turns out that there are a lot more parallelizable manifolds than we have any right to expect.
+For example, all Lie groups are parallelizable. A Lie group is a group which is also a smooth
+manifold, such that the multiplication snf inversion maps are smooth. As exmples, the familiar
+linear groups, $GL(n,\bbr),O(n),SO(n),U(n)$, etc, are Lie groups. Building vector fields to
+demonstrate the triviality of the tangent bundle is not too tough; you take your favorite
+basis for the tangent space at the identity, and then, using the map $g:x\mapsto gx$,
+we define vector fields by the map $g\mapsto g_*(X_e)$ for our basis vectors $X_e$ at $e$.
+The fact that $g$ is a diffeomorphism says that we get a basis at each point $g\in G$, and a 
+little work shows that the vector fields that we have built are smooth.
+
+\msk
+
+{\bf Orientations:} Perhaps one of the most persistent properties of bundles (and
+manifolds) that one comes across is {\it orientability}. It is also often a rather
+elusive concept to pin down. (Consequently, there are a large number of different, though
+functionally equivalent, ways to define it; not unlike tangent vectors...) We define
+orientability for bundles over general topological spaces; a smooth manifold $M$
+is then called orientable if its tangent bundle is orientable. 
+
+The basic idea is that a bundle $p:E\ra B$ is orientable if you can assign an
+``orientation'' to each fiber $p^{-1}(a)$ which are compatible with a collection of local 
+trivializations which cover $E$. An orientation of a vector space $V$ of dimension $n$ 
+is a generalization of the 
+``right-hand rule'' that we learn in calculus, except we don't discriminate 
+against left-handed people; recall that a {\it frame} is any ordered basis ${\Cal B}=(e_1,\ldots ,e_n)$
+for $V$. The standard frame for $\bbr^n$, for example, would be the coordinate
+axis vectors in their natural order. Any pair of bases defines an isomorphism
+$\varphi:V\ra V$ which takes one ordered basis ${\Cal B}$ to the other ${\Cal B}^\prime$
+(and extends linearly); writing this as a matrix (using ${\Cal B}$, say, in both domain and
+range), we essentially get the change of basis matrix $M$, expressing the ${\Cal B}^\prime$ in terms
+of ${\Cal B}$. This matrix is non-singular, since both ${\Cal B}$ and ${\Cal B}^\prime$
+are bases, and so has non-zero determinant. We say that ${\Cal B}$ and ${\Cal B}^\prime$ determine the
+{\it same orientation} on $V$ if det$(M)>0$; since det$(MN)$=det$(M)$det$(N)$, ``determine the same
+orientation'' is an equivalence relation on ordered bases. An equivalence class is called an
+{\it orientation} on $V$; there are two of them. Given a frame $\Cal B$ representing an orientation on 
+$V$ and an isomorphism $h:V\ra W$, there is an induced orientation on $W$, with representative
+$h({\Cal B})=(h(v_1),\ldots h(v_n))$, so that $h$ carries the orientation on $V$ 
+to the orientation on $W$.
+
+\ssk
+
+A bundle $p:E\ra B$ is {\it orientable} if every fiber $p^{-1}(a)$ can be given 
+an orientation so that there is an open cover $\Cal O$ of $B$ and
+a collection of local trivializations $h_U:p^{-1}(U)\ra U\times \bbr^n$ so that 
+for every $U$ and every $a,b\in U$, the induced orientations on $h(a)\times \bbr^n$
+and $h(b)\times \bbr^n$ (by translation in the $U$-direction) are the same. 
+Note that, logically, the orientations of the fibers
+comes first! It is in fact the case that if some cover ${\Cal O}$ of a path-connected space $B$ 
+establishes that our bundle is orientable, then any cover ${\Cal O}^\prime$ does; choose two points in
+an element $U^\prime\in {\Cal O}^\prime$, a path between them, and a finite open cover of the 
+path by elements $U_i$ of ${\Cal O}$. Then we can compare the trivializations given by the $U_i$
+and $U^\prime$; along the path we see a continuous family of linear isomorphisms (from $U_i\times \bbr^n$
+to $U^\prime\times\bbr^n$); applying the determinant we get a continuously changing family of
+non-zero numbers. They therefore all have the same sign, so have the same sign at either end of
+the curve. Therefore the maps we get from one end to the other from both trivializations
+are either both orientation-preserving or both orientation-reversing; since the one from ${\Cal O}$
+is orientation-preserving, so is the one from $U^\prime$. The point to this is that orientability
+is a property of the bundle, not of the local trivializations we choose. (Although you need 
+to be a little careful about how you interpret that statement...)
+
+\ssk
+
+For example, trivial bundles are orientable; the global trivialization $E\ra B\times \bbr^n$
+will serve as our cover (i.e., ${\Cal O} = \{B\}$), and we give each fiber the
+orientation induced by the inverse of the trivialization map (restricted to each fiber). Therefore, 
+a non-orientable bundle cannot be trivial. Orientability turns out to be a crucial condition
+in many of the theorems we will encounter as we go forward, especially when we get to learning
+how to integrate over manifolds. 
+
+How do you {\it prove} that a bundle is not orientable? Well, the quickest way is to
+show that there is a loop $\gamma:[0,1]\ra B$ in $B$, $\gamma(0)=\gamma(1)=a$, so
+that in trying to ``transport'' an orientation over $a$ around $\gamma$ and back to $a$, 
+you return with the {\it opposite} orientation. And what do we mean by transport?
+Just what we were saying up above about comparing trivializations; over small segments
+we stay inside of a local trivialization chart, so we can use the orientation at
+one endpoint to determine what the compatible orientation at the other endpoint
+needs to be. In this way we can pull ourselves along the loop; if we
+return to our starting point with the opposite orientation, then one of the charts
+we used to get around the loop must have demonstrated that the orientations we
+thought we had at those endpoints were incompatible (no matter what they might have been).
+So there is no orientation at those points which will be compatible with all of
+the charts, so the bundle cannot be orientable.
+
+This line of reasoning also demonstrates that we can use charts to {\it create} the orientations 
+at each point; given a local trivialization and an orientation for a fiber over one point in the 
+trivialization chart, insisting upon compatibility determines what the orientations
+on every other fiber must be. What we require is that on the overlaps between 
+two charts, the orientations they impose from the chosen points in each chart to the points of the overlap 
+are the same; this amounts to saying
+that for the transition functions $h_U\circ h_V^{-1}:(U\cap V)\times \bbr^n\ra (U\cap V)\times \bbr^n$,
+the linear ismorphisms at each point preserve orientation, i.e., have positive
+determinant. Conversely, given an open cover by trivializations with that property, we
+can build a compatible family of orientations on each fiber by starting with an orientation
+on a single fiber and transporting it around as we have described above.
+
+\msk
+
+{\bf Boundary orientations:} The above discussion works fine for manifolds with boundary. 
+So the concept of an orientable manifold with boundary make sense. If $M$ is orientable,
+then we can use an orientation on $M$ to build an orientation for $T(\del M)$ as follows:
+one of the homework problems talks about inward pointing tangent vectors at $\del M$; the same is
+true for outward pointing vectors, the definition is independent of coordinate chart chosen.
+If we cover $\del M$ by coordinate charts $(h_i,U_i)$, and take $M\setminus \del M$ to 
+complete an open cover of $M$,
+we can find a partition of unity subordinate to this cover. Choosing a trivialization of each $TU_i$
+and a vector field $X_i$ over each $U_i$ which points outward at the boundary, then $X=\sum_ig_iX_i$
+is a vector field on $M$ which points outward at every point of $\del M$. If $M$ is orientatble,
+then we know how to choose an orientation on each fiber that is locally compatible. Look at the
+orientations for $M$ built along $\del M$. We can compare them to the local orientations we can build 
+{\it for} $\del M$ (i.e., choose local frames tangent to $\del M$) with the vector field $X$
+appended at the end; this is a frame for $M$ since $X$ is not in the span of the frame for $\del M$.
+The {\it induced} orientation for $\del M$ consists of the local frames for which this augmented
+frame agrees with the orientation of $M$ at the points of $\del M$. Checking that local 
+compatibility holds amounts to the fact that being outward pointing is independent of chart.
+[The use of outward pointing vectors to build the induced orientation follows historical precedence, 
+since the great integration theorems are always formulated in terms of ``outwardly-pointing normals''
+at the boundary.]
+
+\msk
+
+{\bf Bundle maps:} Given a smooth map $f:M\ra N$, we have seen how to construct a smooth
+map $f_*:TM\ra TN$ by pushing forward tangent vectors. Now that $TM$ and $TN$ have
+more structure - they are vector bundles - we can see that $f_*$ also has more
+structure; it is a {\it bundle map}. In general, a bundle map between to vector bundles
+$p:P\ra M$ and $q:Q\ra N$ is a pair of maps $f:M\ra N$ and $F:P\ra Q$ so that 
+$F$ {\it covers} $f$, that is, $q\circ F = f\circ p$ (so $F$ sends
+fibers $P_x$ to fibers $Q_{f(x)}$), and $F$ restricts to a linear
+map on fibers $F:P_x\ra Q_{f(x)}$. A bundle map is continuous or smooth if both maps are.
+A bundle isomorphism is a bundle map $f,F$ where $f$ is an isomorphism (homeo- or diffeo-),
+and $F$ is an isomorphism on each fiber. A global trivialization $E\ra M\times \bbr^k$
+is therefore ``just'' a bundle isomorphism from a bundle to the trivial bundle.
+If $M=N$ and $f=$Id, then $F$ is called a {\it bundle map over $M$}.
+
+Once you have maps, you of course have the notion of two objects being the ``same'':
+A bundle isomorphism is a bundle map which is a homeomorphism/diffeomorphism
+on the bases spaces and an isomorphism on every fiber. So saying, for example, that
+a bundle is trivial really means that it is bundle isomorphic to the trivial 
+bundle over the same base space. 
+
+Given a vector bundle $p:E\ra B$ and a map $f:X\ra B$, there is a procedure for building a 
+bundle $q:Y\ra X$ and a bundle map $F:Y\ra E$ over $f$, called the {\it pullback}.
+The total space $Y$ consists of pairs $(x,e)\in X\times E$ satisfying $f(x)=p(e)$;
+$q:Y\ra X$ is projection onto the first coordinate. $Y_x=q^{-1}(x)$ is ``really''
+$E_{f(x)}$, that is, for a fixed $x\in X$ the $(x,e)\in Y$ are literally the $e\in E$
+sitting over $f(x)$. To build local trivializations, 
+given $a\in X$ choose an open neighborhood $U$ of $a$ so that $f(U)$ lies inside
+the domain $V$ of some locally trivial neighborhood about $f(a)$. Then the 
+map $h_U:q^{-1}(U)\ra U\times \bbr^n$ given by $h_U(x,e)=(x,r(e))$, where
+$h_V(e)=(p(e),r(e))$. Since $h_V$ is an isomorphism on each fiber, so is 
+$h_U$; since $r$ is continuous/smooth, so is $h_U$. The standard notation for the 
+pullback $Y$ in the literature is $f^*(E)$. It plays a crucial role in the study
+of classifying vector bundles up to isomorphism; it plays a less crucial role in 
+the work we will be doing here. In the structure theory the basic idea is that every 
+$n$-plane bundle is the pullback of a specific (``universal'') bundle over a specific space,
+the Grassmanian of all $n$-planes through the origin in a sufficiently high dimensional
+Euclidean space (think: infinite-dimensional). The fiber of the bundle over a point
+\u{is} the $n$-plane. Understanding bundles up to isomorphism can then be turned
+into understanding maps into the Grassmanian up to homotopy; then the tools of 
+algebraic topology can be turned onto the problem.
+
+\msk
+
+{\bf New bundles out of old ones:} There are many ways to combine/transform 
+vector bundles over the same base space $B$ to create new vector bundles over 
+$B$. Several of these will be of central 
+importance to us as we continue to build new tools to study smooth manifolds. 
+
+\ssk
+
+Given two vector bundles $p:E\ra B$ and $p^\prime:E^\prime\ra B$, if we think of them as
+assignments of vector spaces $E_a,E_a^\prime$ to each point, any way that we can combine 
+them to produce a new vector space can, with a little care, be stitched together locally
+to construct a new bundle. For example, we can take the direct sum of the two, producing the
+vector space $E_a^{\prime\prime}=E_a\oplus E_a^\prime$ at each point. Their (disjoint)
+union over $a\in M$ we will call $E^{\prime\prime}$; the projection map to $B$ is
+the obvious one. Local trivializations
+can be constructed out of trivializations $h_U:p^{-1}(U)\ra U\times \bbr^k$
+and $h_U^\prime:(p^\prime)^{-1}(U)\ra U\times \bbr^\ell$ (taking intersections to make the
+projections of the domains the same) by taking 
+$h_U^{\prime\prime}:(p^{\prime\prime})^{-1}(U)\ra U\times \bbr^{k+\ell}$ to be 
+$h_U^{\prime\prime}(e)=(p^{\prime\prime}(e),(H_U(e),H_U^\prime(e)))$, where
+$H_U,H_U^\prime$ are the second coordinate functions for $h_U,h_U^\prime$. A quick check
+show that these have all of the necessary properties, turning $E^{\prime\prime}$ into
+a $(k+\ell)$-dimensional vector bundle, called the {\it Whitney sum} of $E$ and $E^\prime$,
+and denoted $E^{\prime\prime}=E\oplus E^\prime$. For example, 
+$TS^n\oplus \epsilon^1(S^n)\cong \epsilon^{n+1}(S^n)$ .
+
+\ssk
+
+Given two bundles $E,E^\prime$ over $B$, with $E^\prime_a$ a subspace of $E_a$ for every $a$,
+we can form the {\it quotient bundle} $E/E^\prime$ with fibers $E_a/E^\prime_a$. The reader is 
+invited to construct the appropriate local trivializations. This construction can be thought 
+of in some sense as the inverse of the Whitney sum construction.
+
+\ssk
+
+Given a vector space $V$, there is the dual vector space $V^*$=Hom$(V,\bbr)$ of linear maps
+to $\bbr$; it has the same dimension as $V$ (and, given a positive definite inner product
+on $V$, is isomorphic to $V$ by the map $v\mapsto (w\mapsto \langle w,v\rangle)$). The duals
+to the vector spaces $E_a$ over points can 
+also be assembled into a ``dual'' vector bundle. The local trivializations are ``dual'' to the 
+trivializations for $V$, that is, given $h_U=(p,H_U)$, we build $h_U^*$ by setting 
+$H_U^*(e)=\{w\mapsto \langle w,H_U(e)\rangle\}$, where $\lbrace\cdot.\cdot\rbrace$ is the standard
+inner product on $\bbr^k$. Again, these trivializations have the necessary properties; the resulting
+bundle is called the {\it dual} bundle to $E$, and is denoted $E^*$. When $E=TM$ is the tangent
+bundle to $M$, it is called the {\it cotangent} bundle to $M$, and denoted $T^*M$.
+
+So what do cotangent vectors (tangent covectors?) look like? In local coordinates, 
+$T^*_aM$ has a basis dual to 
+the coordinate basis $\del/del x^1,\ldots ,\del/\del x^n$ for $T_aM$, which we denote
+$dx^i$; that is, $dx^i(\del/\del x^j)=\delta_{ij}$. So in local coordinates, a tangent covector field
+would be given by $\sum f_i(a) dx^i$ . Does this notation look familiar? A covector field would be
+a choice of covector at each point, that is, a function from tangent vectors to $\bbr$ at each point.
+If we think more globally, a covector field $\omega$ would take a vector field, a choice of tangent
+vector at each point, to a number at each point. That is, it would take a vector field on $M$ to a function
+on $M$. And one thing that can do that is a function (suitably interpreted). That is, instead of thinking
+of the expression $Xf$ as starting with a vector field and feeding it a function, we can start with a 
+function and feed it a vector field! To denote this change in roles, we introduce the {\it differential}
+of a (smooth) function $f$, denoted $df$ . This is a covector, wherever $f$ is defined, whose value is 
+given by $df(X_a)=X_a(f)$. Since the expression $X_a(f)$ is linear in $X_a$, this is a covector. 
+To see what this looks like in local coordinates, note that $df(\del/\del x^i) = \del f/\del x^i$,
+and $(\sum_j f_j dx^j)(\del/\del x^i)=f_i$, so $df= \sum_i\del f/\del x^i dx^i$ . This \u{is}
+the standard notation for differentials in multivariate calculus. 
+
+\ssk
+
+Some properties of differentials, which can be verified either in coordinates or straight from 
+the definition: 
+
+(a) $d(\alpha f+\beta g) = \alpha df + \beta dg$ for functions $f,g$ and constants $\alpha,\beta$.
+
+(b) $d(fg)=f(dg)+g(df)$
+
+(c) $d(f/g) = [g(df)-f(dg)]/g^2$ wherever $g\neq 0$
+
+(d) $d($constant$)=0$. Conversely $df=0$ on a connected open set implies that $f$ is constant on that set.
+(This is just a reinterpretation of one of your homework problems...)
+
+(e) If $f:M\ra\bbr$ and $h:\bbr\ra\bbr$ is smooth, 
+then $h\circ f$ is smooth and $d(h\circ f)=(h^\prime\circ f)(df)$ .
+
+\ssk
+
+Can every covector field $\omega$ be expressed as $\omega = df$ for some $f$ (perhaps just locally)?
+Unfortunately (or fortunately) no, if $\omega = \sum f_i dx^i = df$ then $f_i=\del f/\del x^i$
+for each $i$, and so $\del f_i/\del x^j = \del f_j/\del x^i$ for every $i$ and $j$ (since mixed
+partials are equal). Which of course doesn't always happen.
+
+\msk
+
+Tangent vectors push forward under a smooth map $f:M\ra N$; The map $f_*:T_aM\ra T_{f(a)}N$
+was given by 
+$(f_*(X_a))g=X_a(g\circ f)$. Covectors, on the other hand, pull back. In general, a linear map
+$L:V\ra W$ induces a linear map $L^*:W*^\ra V^*$, its {\it dual}, given by $L^*(\varphi)v =\varphi(Lv)$ . 
+Given a covector $\omega\in T^*_{f(a)}N$, we can define $f^*\omega\in T^*_aM$ by
+$f^*\omega(X_a)=\omega(f_*X_a)$. Unlike the pushforward, however, the pullback extends to cotangent
+{\it fields}, without any condition required. That is, if $\omega$ is a cotangent field on $N$, then 
+we can define a cotangent field $f^*\omega$ on $M$ by, well, it's the same formula!
+$f^*\omega(X_a)=\omega(f_*X_a)$ ; this is well-defined, since a point $a\in M$ has exactly one
+image in $M$ under $f$; there is no ambiguity involved. Writing this in local coordinates, we find
+that if $\omega=\sum_i g_i dy^i$, then 
+$f^*\omega=\sum_i f_i dx^i$ for some smooth functions $f_i$; to figure out which, we
+evaluate $f_j=(\sum f_i dx^i)(\del/\del x^j)=
+\omega(f_*(\del/\del x^j))=\omega(\sum_i\del(y^i\circ f)/\del x^j]\del/del y^i)
+=\sum_i g_i\del(y^i\circ f)/\del x^j$, so $f^*\omega=\sum_j(\sum_i g_i\del(y^i\circ f)/\del x^j)dx^j$.
+
+\msk
+
+{\bf Double duals:} Given a vector space $V$, the dual $V^*$ is of course a vector field. So
+it has its own dual $(V^*)^*=V^{**}$. But unlike $V$ and $V^*$, we can define an isomorphism
+$\varphi:V\ra V^{**}$ without choosing a basis first; given $v\in V$, we define $\varphi(v)=v^{**}\in
+V^{**}=$Hom$(V^*,\bbr)$ by $v^{**}(f)=f(v)$. (This is the classic ``make the variable the function
+and the function the variable'' switch.) This map is linear (compare $(\alpha v+\beta w)^{**}(f)$
+and $(\alpha v^{**}+\beta w^{**})(f)$), and injective: if $0=v^{**}(f)=f(v)$ for all $f\in V^*$,
+then if we write $v=\sum a_ie_i$, then setting $f=\sum a_i e_i^*$ we have 
+$f(v)=\sum a_i^2=0$, so $a_i=0$ for all $i$ and $v=0$. If we cheat and only give a proof for 
+finite dimensional vector spaces, then injective linear maps between vector spaces of the same dimension
+are surjective, and so $\varphi$ is an isomorphism.
+
+Since this isomorphism does not invoke a basis for its construction, we can use it on every fiber of 
+a vector bundle to build an isomorphism $E\ra E^{**}$ over the identity map on the base space.
+So the double dual $E^{**}$ of any vector bundle $E$ is isomorphic to $E$. 
+
+\msk
+
+{\bf Inner products:} We've seen that the double dual of a bundle is isomorphic to the bundle.
+But what about the dual itself? To answer that, we need to introduce something which we have
+so far avoided introducing into a vector bundle: an inner product.
+An inner product on a vector space is a bilinear function $(v,w)\mapsto \lbrace v,w\rbrace$ which is symmetric
+($\lbrace v,w\rbrace=\lbrace w,v\rbrace$) and {\it non-degenerate}: for every $v\neq 0$ there is a $w$ with 
+$\lbrace v,w\rbrace\neq 0$. 
+The inner product is {\it positive definite} if $\lbrace v,v\rbrace >0$ for every $v\neq 0$.
+Note that positive definiteness immediately implies non-degeneracy (take $w=v$). An positive definite
+inner product
+allows us to define the norm of a vector: $||v||=\sqrt{\lbrace v,v\rbrace}$ satisfies the triangle
+inequality. We can also define angles using the law of cosines $\cos A=\lbrace v,w\l\rbrace/(||v||\cdot ||w||)$.
+Perhaps most importantly, we can define orthogality: $\lbrace v,w\rbrace =0$.
+
+All this can be carried over to vector bundles. A {\it Riemannian metric} on a vector 
+bundle $(p,E,B)$ is a choice of positive definite inner product 
+$\phi_b(\cdot,\cdot)=\lbrace\cdot,\cdot\rbrace_b$ for every
+fiber $b\in B$, which varies continuously, in the sense that for any pair of sections
+$v_1(b),v_2(b)$ of $E$ the function $\lbrace v_1(b),v_2(b)\rbrace_b$ is continuous.
+If the bundle is smooth, we can also require that the assignment of inner product vary smoothly.
+(A {\it pseudo-Riemannian metric} is a choice of non-degenerate inner product.)
+A Riemannian metric on the tangent bundle $TM$ is referred to as a Riemannian metric on $M$.
+And $M$ equipped with a Riemannian metric is called a {\it Riemannian manifold}.
+Riemannian metrics allow to introduce angles (and therefore orthogonality) into
+differential topology.
+
+Provided we can show that bundles have Riemannian metrics! But, it turns out, they do.
+Certainly they have Riemannian metrics locally; a trivial bundle $U\times \bbr^n$
+has an Riemannian metric obtained by choosing any (e.g., the standard) positive definite
+inner product on $\bbr^n$ and using it on every fiber. We can then stitch these locall-defined
+inner product together using (what else?) a partition of unity. Given a partition of 
+unity $g_i$ subordinate to an open cover $\Cal O$ of the base manifold $M$ by locally trivializable sets,
+and a positive definite inner product $\phi_U$ (as above) on each $p^{-1}(U)$, since a finite positive
+linear combination of positive definite inner products is positive definite (and an inner product!),
+we can define an inner product on each fiber $E_b$ by $\lbrace v,w\rbrace_b=\sum_ig_i(b)\phi_{U_i}(v,w)$
+(where $\phi_{U_i}(v,w)=0$ if $b\not\in U_i$). This defines a Riemannian metric on $E$, which is smooth
+if $E$ is smooth. (The locally defined inner products incorporate the (smooth) trivializations
+into their definition, to transport a given inner product to each fiber of $p^{-1}(U_i)$.) 
+
+{\bf The dual bundle again:} The existence of a Riemannian metric allows us to answer the 
+question of when $E$ is isomorphic to $E^*$, at least in the case of smooth vector
+bundles over smooth manifolds. The answer is, they always are! The point is that a Riemannian 
+metric $\lbrace\cdot,\cdot\rbrace_b$ allows us to define a (bundle) map $\psi:E\ra E^*$
+by $\psi(e)(e^\prime)=\lbrace e,e^\prime\rbrace_{p(e)}$. This map is certainly linear 
+in each fiber, and by definition of a Riemannian metric it is smooth. It is also
+an isomorphism on each fiber, by the non-degenerateness of the metric; if 
+$\psi(e)(e^\prime)=\lbrace e,e^\prime\rbrace_{p(e)}=0$ for every $e^\prime\in E_{p(e)}$, 
+then $e=0$. So the map $E_b\ra E^*_b$ is injective and linear, hence surjective,
+hence an isomorphism. 
+
+
+{\bf Riemannian metrics again:} So why is an inner product on the tangent bundle called a metric?
+Because it can be used to build one. The inner product allows us to compute a norm of a 
+tangent vector; in calculus, we learn that to compute the length of a (parametrized) curve, we
+integrate the length of its velocity vector. We can do the same thing in a Riemannian manifold $M$.
+Given a smooth curve $\gamma:[0,1]\ra M$, we define its length to be 
+$L(\gamma)=\int_0^1 ||\gamma_*(d/dt)|_{\gamma(t)}||\ dt$ . As in calculkus, we can show that this
+is independent of prarametrization; if $h:[0,1]\ra [0,1]$ is a smooth increasing bijection,
+then $L(\gamma\circ h)=\int_0^1 ||(\gamma\circ h)_*(d/dt)|_{\gamma(h(t))}||\ dt=
+\int_0^1 ||\gamma_*(d/dt)|_{\gamma(h(t))}h^\prime(t)||\ dt=
+\int_0^1 ||\gamma_*(d/dt)|_{\gamma(h(t))}||h^\prime(t)\ dt=
+\int_0^1 ||\gamma_*(d/dt)|_{\gamma(u)}||\ du=L(\gamma)$, using the $u$-substitution
+$u=h(t)$. So, essentially, the length of a curve is a function its image, not how
+we traverse it.
+
+Once we can define the length of a curve, we can define a metric on $M$ by choosing
+the ``shortest'' curve between two points; $d(a,b)$ = inf$\{L(\gamma) : \gamma$ a piecewise smooth curve
+from $a$ to $b\}$. By using piecewise smooth curves, verifying the triangle
+inequality requires no work; take curves close to the infimum for $d(a,b)$ and $d(b,c)$ and
+concatenate them to get a curve from $a$ to $c$ whose length is $\epsilon$ above
+the sum, and let $\epsilon$ goto $0$. Symmetry is also quick; use the curve $\overline{\gamma}(t)=\gamma(1-t)$
+to compare $d(b,a)$ to $d(a,b)$. The constant path demonstrates that $d(a,a)=0$. The only
+property of a metric that takes real work is showing that $d(a,b)=0$ implies $a=b$.
+
+The idea behind this is to push our computations into $\bbr^n$ usng a chart. That is,
+given a chart $(h,U)$ about $a$ and $k=h^{-1}$, we can put a Riemannian metric on $\bbr^n=h(U)$ by
+defining $\langle v,w\rangle_b=\langle k_*v,k_*w\rangle_{k(b)}$. At every point $b$ this is 
+an inner product, defining a norm whose unit sphere, in the \u{usual} inner product,
+is an ellipse with minor axis $\alpha(b)$ and major axis $\beta(b)$. These functions are
+smooth and positive, so on a compact neighborhood $V$ of $h(a)$ $\alpha$ has a minimum
+$\alpha_0$ and $\beta$ has a maximum $\beta_0$. Then the length $L(\gamma)$ of any curve that 
+stays in $V$, from the point of view of the pushed forward inner product, is bounded 
+between $\alpha_0$ and $\beta_0$ times the length computed from the point of view of the 
+ordinary inner product on $\bbr^n$. In particular, really short curves must also be really short
+from the point of view of the ordinary inner product, and so stay inside of $V$. And, finally,
+if $d(a,b)=0$, we can find arbitrarily short curves, which are therefore arbitrarily short from 
+the ordinary Euclidean metric point of view, and so $a=b$. So the metric $d(a,b)$ \u{is}
+a metric on $M$.
+
+Even more, the metric topology on $M$ from the Riemannian metric is the same as the manifold
+topology on $M$. This also follows from the basic inequality above; it's enough to show that
+$d_M(a,b)\leq c\cdot d_E(a,b)$ for some $c$, where $d_E$ is the ordinary Euclidean metric
+on $\bbr^n$ and $d_M$ is the transported metric from $M$; then standard facts about
+metrics imply that the $d_E$ metric topology is finer than the $d_M$ topology. The reverse
+inequality gives a coarser topology.
+
+\msk
+
+{\bf Immersions, submersions, and embeddings} 
+
+\msk
+
+{\bf The inverse function theorem:} We are going to take a break from our
+march towards ever more interesting constructions of vector bundles out of the tangent
+bundle to discuss something which is also at the heart of calculus, namely linear
+approximation. That is, to what extent does the 
+``derivative'' $F_*$ of a smooth function $F:M\ra N$ approximate the function?
+On the face of it this is a non-question, because unlike in calculus
+the values of $F_*$, tangent vectors, live in different places than the values of $F$.
+So the one \u{can't} approximate the other. But some things still hold true. In 
+particular, there is a result from (advanced) calculus, the Inverse Function Theorem,
+which says (in our current terminology) if $F_*$ is invertible at a point, then
+$F$ is invertible in a neighborhood of that point. (Lee's text has a proof of this,
+in Chapter 7.) This is a fundamental result,
+which we will often use. In the case of smooth manifolds, the proof amounts to 
+imposing local coordinates $(h,U)$ and $(k,V)$ about $a$ and $F(a)$, noticing 
+that the hypothesis still holds in $\bbr^n$ (the Jacobian of
+$k\circ F\circ h^{-1}$ is invertible; that's what $F_*$ being invertible \u{means}!),
+and invoking the conclusion of the $\bbr^n$ version to give our conclusion
+($k\circ F\circ h^{-1}$ invertible implies $F$ is, since $h$ and $k$ are
+invertible). 
+
+A smooth map $F:M^n\ra N^m$ is an {\it immersion} if $F_*:T_aM\ra T_{f(a)}N$
+is an injective linear map for every $a\in M$. (Note that thsi requires $n\leq m$.)
+$F$ is a submersion if $F_*$ is surjective at every point. (We need $n\geq m$.)
+A 1-to-1 immersion which is a homeomorphism onto its image is an {\it embedding}.
+The cheapest way to insure that an injective immersion is an embedding is to 
+have the domain $M$ compact, since $N$ is by hypothesis Hausdorff. The homeo
+onto image is not a vacuous condition, as the map $f:(-2\pi,2\pi)\ra \bbr^2$ given by
+$f(t)=(t,0)$ on the left half of the interval, and $=(\cos t,\sin t)$ on the right half shows.
+
+\ssk
+
+One way to interpret the inverse function theorem is that if $F_*$ is an isomorphism 
+at a point $a$ then (since $F$ is a diffeomorphism in a neighborhood of $a$) there
+are charts $(h,U)$ about $a$ and $(k,V)$ about $b=F(a)$, namely $k=h\circ F^{-1}$,
+so that in local coordinates, $k\circ F\circ h^{-1}=
+h\circ F^{-1}\circ F\circ h^{-1}=Id$ is the identity function. That is, there is a 
+local model for the map $F$ in which it looks like (and therefore behaves like)
+the identity. The key here is that $F_*(a):T_aM\ra T_{F(a)}N$ is a map of rank $n$
+between $n$-dimensional vector spaces, and so it is automatically true that there
+is a neighborhood of $a$ for which this is true; locally, the rank of $F_*$ can only go up
+(it's the size of the largest invertible $k\times k$ minor), so in this case it must stay
+$n$. In the case of an immersion, the same is true; since $F_*$ is injective, its rank
+equals $n=$dim$(M)$, and can't get higher, so locally it remains $n$. The same is true 
+of a submersion; the rank of $F_*$ equals $m=$dim$(N)$, and again, can't get higher.
+So all of these maps fit the pattern of: the rank of $F_*$ is constant in a neighborhood
+of $a$. And it is for such a situation, it turns out, that we can build the most 
+meaningful local models. The general statement is: if $F:M^n\ra N^m$ is smooth, and for 
+some $a\in M$ there is a neighborhood $U$ of $a$ for which $F_*(b):T_bM\ra T_{f(b)}N$ has 
+constant rank $k$ (note that then $k\leq n,m$), then there are charts about 
+$a$ and $F(a)$ so that, in local
+coordinates, $F$ looks like $(x_1,\ldots ,x_n)\mapsto (x_1\ldots ,x_k,0,\ldots ,0)$.
+
+The proof of this consists, first, of choosing any two charts $h$ and $k$ about $a$ and 
+$F(a)$ and noting that $k\circ F\circ h^{-1}$ has constant rank $k$ in a 
+neighborhood of $h(a)$, reducing the problem to a question of maps between open subsets of Euclidean 
+spaces. Then we invoke the corresponding theorem for Euclidean spaces, which is,
+really, a result from analysis. But since it follows fairly directly from the
+inverse function theorem, we present the proof; it also requires us to build charts
+on Euclidean spaces, so it really still belongs in the realm of differential topology.
+To prove this, note that the hypothesis implies that the matrix of partial derivatives
+of $F=(f_1,\ldots f_m):\bbr^n\ra \bbr^m$ has an invertible $k\times k$ minor, which, by
+permuting the coordinates of domain and range, we may assume is the uper left corner
+of the matrix. (Think of these permutations as the first level of a series of coordinate
+charts we build around $F$ to make the map successively nicer.) We now view $F$ as a 
+function $F(x,y)=(Q(x,y),R(x,y))$,
+$F:\bbr^k\times \bbr^{n-k}\ra \bbr^k\times \bbr^{m-k}$. We may assume, by translating 
+$a$ to $(0,0)$ and adding a constant,
+that $F(0,0)=(0,0)$.
+Our hypothesis tells us that the matrix $M(b)$ of partial derivatives of $Q$ with respect to the
+first $k$ variables is non-singular, for $b$ in a neighborhood of $(0,0)$. 
+If we consider the map $G:\bbr^n\ra \bbr^n$ given
+by $G(x,y)=(Q(x,y),y)$, then the matrix of partial derivatives of $G$ at $(0,0)$ is a 
+block matrix with the partials of $Q$ at top and a block of $0$s followed by the Identity 
+matrix at bottom. This matrix is non-singular precisely where $M(b)$ is; in particular it is
+non-singular at $(0,0)$. So $G$ is a diffeomorphism in a neighborhood of $(0,0)$,
+and using it as a chart in the domain of $F$, and writing its inverse $G^{-1}$ as
+$G^{-1}(x,y)=(A(x,y),B(x,y))$, we find that 
+$(x,y)=G(A(x,y),B(x,y))=(Q(A(x,y),B(x,y)),B(x,y))$, so $y=B(x,y)$ and $G^{-1}(x,y)=(A(x,y),y)$.
+Consequently, $(x,y)=G(A(x,y),y)=(Q(A(x,y),y),y)$, so $x=Q(A(x,y),y)$, and so
+$F\circ G^{-1}(x,y)=F(A(x,y),y)=(Q(A(x,y),y),R(A(x,y),y))=(x,R(A(x,y),y))=(x,S(x,y))$ where $S$ is the
+obvious function. The matrix of partial derivative of this function is also a block matrix, with
+the identity matrix and $0$s on the top and the partials of $S$ on the bottom. Since the composition with
+the diffeomorphism $G^{-1}$ cannot change the rank of the derivative, this matrix has rank $K$
+in a neighborhood of $(0,0)$, and therefore the lower right corner of the matrix must be
+identically $0$ in this neighborhood. But by the mean value theorem this implies that
+$S$ is constant on the $n-k$-dimensional planes where the first $k$ variables are held consant,
+i.e., $S(x,y)=S(x)$ is a function only of the first $k$ variables. This allow us to build a
+chart on $\bbr^m=\bbr^k\times \bbr^{m-k}$ to finish our transformation; The map
+$H:(x,z)\mapsto (x,z-S(x))$, on a neighborhood of $(0,0)$, gives a smooth (since $S$ is smooth)
+function for which $H\circ F\circ G^{-1}(x,y)=H(x,S(x))=(x,0)$,
+which is projection onto the first $k$ coordinates. Note that $H$ is a diffeomorphism
+(on the neighborhood of $(0,0)$ where $S$ is a function of $x$ alone); its inverse is
+$H^{-1}(x,z)=(x,z+S(x))$. Therefore we have built charts $G$ and $H$ on $\bbr^n$ and $\bbr^m$
+so that in these local coordinates $F$ is projection onto the first $k$ coordinates, as desired.
+
+\ssk
+
+This immediately implies that for an immersion there are charts so that in local coordinates
+the map looks like $x\mapsto (x,0)$. For a submersion, there are charts so that the map locally
+looks like $(x,y)\mapsto x$.
+
+\msk
+
+{\bf The implicit function theorem:} Another useful result that follows from the inverse function theorem is the implicit function
+theorem: If $W$ is an open subset of $\bbr^n\times \bbr^k$ and $F=(F_1,\ldots,F_k):W\ra \bbr^k$ is a smooth map,
+$(x,y)\mapsto F(x,y)$, and the matrix of partial derivatives $(\del f_i/\del y_j(a,b))$ is non-singular,
+then there are neighborhoods $U$ of $a$ and $V$ of $b$ and a smooth map $G:U\ra V$ so that
+$F^{-1}(F(a,b))\cap(U\times V)$ is the graph of $G$. That is, $(x,y)\in U\times V$ satisfies $F(x,y)=F(a,b)$
+\lra\ $y=G(x)$. that is, under the non-singularity condition, a point inverse of $F$ looks, locally, like the
+graph of a smooth function.
+
+\ssk
+
+The proof is, again, a matter of building the right charts. On the domain side, we use
+the map $H:\bbr^n\times \bbr^k\ra \bbr^n\times \bbr^k$ given by $H(x,y)=(x,F(x,y))$.
+At $(a,b)$ the derivative is an isomorphism, so $H$ is a diffeomorphism in a neighborhood
+of $(a,b)$, and arguing just as before, we find that we can express the inverse as
+$H^{-1}(x,y)=(x,E(x,y))$ for a smooth map $E$. Setting $F(a,b)=c$, we define
+$G(x)=E(x,c)$, which is a smooth function defined in a neighborhood of $a$. From 
+$(x,c)=H(H^{-1}(x,c))=(x,F(x,E(x,c)))=(x,F(x,G(x)))$, we have $F(x,G(x))=c=F(a,b)$, 
+so $y=G(x)$ $\Rightarrow$ $F(x,y)=F(a,b)$. For the opposite implication, 
+$F(x,y)=c$ implies that $H(x,y)=(x,c)$, so $(x,y)=H^{-1}(x,c)=(x,E(x,c))=(x,G(x))$, so $y=G(x)$.
+
+\msk
+
+Some useful things follow fairly quickly from our Rank Theorem. For example, a 
+submersion is an open map, since in local coordinates it looks like throwing away
+the last few coordinates, which takes a small open cube to a small open cube.
+Therefore, locally, it takes an open set (thought of as a union of small open cubes)
+to a union of open cubes, i.e., an open set. A surjective submersion $F:M\ra N$, therefore,
+is a quotient map, because surjective, continuous, open maps are quotient maps.
+[Proof: $F(F^{-1}(V))=V$, since $F$ is surjective; so if $F^{-1}(V)$ is open, so is $V$.]
+Submersions behave, locally, like bundle maps; for every $y_0=F(x_0)\in F(X)$, there is a neighborhood
+$V$ of $y_0$ and a smooth ``section'' $s:V\ra M$ with $s(y_0)=x_0$ and $F\circ s=$Id . We simply choose
+charts $(h,u),(k,V)$ as in the theorem and take $s(x)=h^{-1}(k(x),0,\ldots,0)$ .
+
+Even more, surjective submersions satisfy a smooth analogue of the ``fundamental lemmas''
+of quotient spaces. First, if $F:M\ra N$ is a surjective submersion and 
+$g:N\ra P$ is a map, then $g$ is smooth \lra\ $g\circ F$ is. $\Rightarrow$ is immediate;
+for the opposite implication, at $a\in M$ we choose charts on $M$ and $N$ as in the theorem
+and any chart around $g(F(a))$, then in local coordinates the composition looks like
+$(x_1,\ldots ,x_n)\mapsto (x_1,\ldots x_m)\mapsto (g_1(x_1,\ldots ,x_m),\ldots ,g_r(x_1,\ldots ,x_m))$,
+which has continuous partial derivatives to all degrees for all choices of variables $x_1,\ldots ,x_n$,
+so the $g_i$ certainly do when only choosing among $x_1,\ldots ,x_m$. With these charts, therefore, $g$
+is seen to be $C^\infty$. 
+
+Second, if $F:M\ra N$ is a surjective submersion and $g:M\ra P$ is a smooth map such that
+$F(x)=F(y)$ implies $g(x)=g(y)$, then there is an induced map
+$G:N\ra P$ defined by $G(z)=g(x)$ where $F(x)=z$. Since $F$ is a quotient map, $G$ is 
+continuous; but even more, $G$ is smooth. This is because $G\circ F = g$ is smooth. Put
+in words, a smooth map to $P$ from the domain of a surjective submersion $F$ which is constant on 
+point inverses of $F$ induces a smooth map from the quotient to $P$. As in point-set topology, 
+this provides a far less painful way to build smooth maps out of the quotients of smooth
+manifolds.
+
+\msk
+
+{\bf Embedded submanifolds:} So far we haven't really talked about the usefulness of immersions, just submersions. 
+The languge of immersions allow us to talk meaningfully of a manifold obtaining a
+smooth structure from an embedding into (for example) Euclidean space $\bbr^N$, which was
+probably really the original way to think about smooth manifolds; they look locally,
+like the graph of a smooth function $\bbr^n\ra \bbr^{N-n}$ (which, being an immersion,
+really locally looks like the graph of the $0$-function). We start with a definition.
+A subset $S\subseteq M^n$ of a smooth manifold $M^n$ is called an {\it embedded submanifold
+of dimension $k$} if for every $a\in S$ there is a chart $h(U)$ of $M$ about $a$ so that
+$h(S\cap U)=\bbr^k\times \{0\}\subseteq \bbr^n$. The terminology is that $h(S\cap U)$
+is called a $k$-slice of $U$, and $h$ is a slice chart for $S$ in $M$. The complementary
+dimension, $n-k$, is called the {\it codimension} of $S$ in $M$.
+
+Note that, as a subset of 
+$M$, in the subspace topology $S$ is Hausdorff and second countable; the $k$-slices also
+demonstrate that $S$ is locally Euclidean (of dimension $k$). But even more, 
+we can use
+the slice charts to assemble a smooth structure on $S$; composing $s|{S\cap U}$ with the projection
+to the first $k$ cooridinates of $\bbr^n$ form a collection of charts on $S$. The
+inverse of this chart is the inclusion of $\bbr^k$ into $\bbr^n$ as $\bbr^k\times \{0\}$, followed
+by the inverse of $s$, and so the transition function for two such charts consists of
+inclusion of $\bbr^k$ as $\bbr^k\times\{0\}$, followed by the transition 
+function of the two charts on $M$, followed by projection,
+all of which are smooth, so the charts on $S$ form a smooth atlas. They therefore define
+a smooth structure on $S$, which makes the inclusion map $\iota:S\ra M$ smooth. 
+
+Furthermore, this is the \u{only} smooth structure on $S$ making $\iota$ smooth. To see this, 
+suppose that $(k,V)$ is a chart (not necessarily in our smooth structure) for which 
+$\iota\circ k^{-1}: k(U)\ra M$ is smooth; we show that $(k,V)$ actually \u{is} in our smooth
+structure, that is, it is $C^\infty$-related to all of our slice charts (well, a collection of 
+slice charts that cover $S$, anyway). Given $a\in V$ and 
+a slice chart $(h,U)$ for $M$ about $a$, we may assume (since we are investigating a local condition (smoothness))
+that $\iota(V)\subseteq U$, and we have 
+$h\circ\iota\circ k^{-1}:\bbr^k\ra V\ra U\ra \bbr^n$ is smooth, by hypothesis. Since $h$ is a slice chart,
+$h|_S:S\cap U\ra \bbr^k\times\{0\}$ is a chart on $S$, and $h|_S\circ\iota\circ k^{-1}:\bbr^k\ra V\ra U\ra \bbr^k$
+is also smooth, since $h\circ\iota\circ k^{-1}$ really maps into $\bbr^k\times\{0\}$, anyway, so it has the 
+same matrix of partial derivatives (ignoring the $0$ columns from mapping into $\bbr^k\times\{0\}$).
+But this map is ``really'' just $h|_S\circ k^{-1}$, since the middle $\iota$ really only serves to
+redefine the codomain of $k^{-1}$, which we no longer really care about. Since this map is smooth,
+we have half of our $C^\infty$-relatedness. To prove the other half, we wish to use the
+Inverse Function Theorem! It suffices to show that $h|_S\circ k^{-1}$ has invertible Jacobian matrix
+at $k(a)$; then, locally, $h|_S\circ k^{-1}$ is invertible and has smooth inverse. And for this, it suffices
+to show that $(h|_S\circ k^{-1})_*$ is injective at $k(a)$. But this map is the same as
+(where pr$_k$ is the projection onto the first $k$ coordinates of $\bbr^n$)
+(pr$_{k}\circ h\circ k^{-1})_*$=(pr$_{k})_*\circ h_*\circ k^{-1}_*$=pr$_{k}\circ h_*\circ k^{-1}_*$,
+and $h_*$ and $k^{-1}_*$ are isomorphisms (being charts), while pr$_{k}$ is injective \u{on} \u{the}
+\u{image} \u{of} $h_*\circ k^{-1}_*$, which lies in $\bbr^k\times\{0\}$. So the derivative map is 
+injctive, sohwing that $h|_S\circ k^{-1}$ is a diffeomorphism, as desired.
+
+\msk
+
+With this smooth structure on $S$, $S$ becomes a smooth $k$-manifold in its own right, and (since we are
+using the subspace topology) $\iota:S\ra M$ is then a smooth embedding, that is, an immesrion
+which is a homeomorphism onto its image. So embedded submanifolds are images of smooth embeddings.
+Using the Rank Theorem, the converse is readily established; the image of a smooth embedding is an
+embedded submanifold. This is because given an embedding $f:M^n\ra N^m$ and setting $S=f(M)$, given 
+$a\in S$ we let $b=f^{-1}(a)$, so $f(b)=a$ and by the rank theorem there are charts $(h,U)$ around $b$
+and $(k,V)$ around $a$ so that $k\circ f\circ h^{-1}$ is the inclusion into the first 
+$n$ coordinates of $\bbr^m$. (WOLOG, $f(U)\subseteq V$.) In particular, 
+$k(f(M)\cap V)=k(S\cap V)$ lies in $\bbr^n\times\{0\}$.
+To finish, we need only show that this slice $\bbr^n\times\{0\}$ contains an open neighborhood of $k(a)$;
+but this follows from Invariance of Domain, since  pr$_n\circ k\circ f\circ h^{-1}$ is a continuous
+injective map from the open set $h(U)\subseteq\bbr^n$ to $\bbr^n$. So (on a possibly smaller
+neighborhhood than $V$) $k(f(M)\cap V)$ \u{equals} the entire slice.
+
+\msk
+
+{\bf The tangent space:} An embedded submanifold $S$ of a smooth manifold $M$ is itself a smooth manifold, so it has a
+tangent bundle. For $a\in S$, we can identify $T_aS$ with a subspace of the vector space $T_aM$,
+allowing us to treat $TS$ as a subbundle of $TM|_S$ . (Did we talk about subbundles?
+A subbundle $F$ of $E$ is a bundle such that $F_a$ is a subspace of $E_a$ for 
+every $a\in B$. If we want it to be a smooth subbundle, we insist that locally $F$ is the
+span of a collection of smooth sections of $E$.) Using the inclusion map $\iota:S\ra M$,
+which the above discussion shows is a smooth immersion, we can make this identification
+concrete, identifying $T_aS$ with $\iota_*(T_aS)\subseteq T_aM$ . From the point of 
+view of derivations, a tangent vector $X$ of $T_aS$ is identified with the
+tangent vector $\widetilde{X}$ in $T_aM$ satisfying $\widetilde{X}f=X(f|_S)$
+for $f\in C^\infty(M)$. Turning this around, an element $X\in T_aM$ (for $a\in S$) is
+\u{really} an element of $T_aS$ (that is, is in the image of $\iota_*$) if, working 
+in the local coordinates where $h(U\cap S)$ is the subspace with all but the first
+$k$ coordinates equal to $0$, $X=\sum_{i=1}^k a_i\del/\del x^i$, that is, 
+$X(x^j)=0$ for $j>k$. But this in turn can be characterized as saying that if $f\in C^\infty(M)$
+is constant on $S$, then $Xf=0$, and since $Xc=0$ for all constant functions, 
+this is the same as saying that $Xf=0$ for any smooth function that is $0$ on $S$.
+So we have a characterization of the tangent vectors to $S$, they are the tangent
+vectors to $M$ which are $0$ on smooth functions that vanish on $S$.
+
+\msk
+
+Given a submanifold $S\subseteq M$, we now have $TS$ as a subbundle of $TM|_S$. Together
+with a Riemannian metric on $M$, we can create a complementary subbundle $NS$ of 
+$TM|_S$ as, for $a\in S$, the set of vectors in $TM_a$ orthogonal to every vector in $TS_a$.
+If we choose a slice chart for $S$ about $a$, and take the standard basis vectors,
+the first $k$ in $TS_a$, and apply Gram-Schmidt to them, a recent homework problem 
+states that the local frame will be carried to a local frame; the first $k$ still span
+$TS_a$, and the remainder span $NS_a$. This gives us a smooth local frame of $NS$,
+so $NS$ is smooth. Since $TS_a\oplus NS_A=TM_a$ at every point, the normal
+bundle $NS$, as it is called, allows us to split $TM|_S$ as
+$TS\oplus NS$. For example, applying this to the standard embedding of 
+$S^n$ in $\bbr^{n+1}$, and noting that the normal bundle has a nowhere-zero
+(outward pointing) section, so $NS^n=\varepsilon^1$, we find that
+$TS^n\oplus\varepsilon^1\cong \varepsilon^{n+1}$.
+(It is a fact that since all Riemannian metrics are the ``same'', different choices of 
+Riemannian metric yield isomorphic normal bundles; two such metrics can be joined by
+a path of metrics, and ``nearby'' metrics build isomorphic bundles.)
+
+\msk
+
+{\bf Level sets:} So where do we get embedded submanifolds, anyway? One place is from smooth 
+maps of constant rank! For example, the function $F:\bbr^{n+1}\ra \bbr$ given by 
+$F(x_1,\ldots ,x_{n+1})=x_1^2+\cdots +x_{n+1}^2$ has rank $1$ everywhere except at the origin.
+Consequently, near any point except the origin, there are coordinate charts which make $F$ 
+look like projection onto the first coordinate. So in those charts, a point inverse,
+say, $S^n=F^{-1}(1)$, looks like the points with first coordinate equal to some constant $c$.
+Permuting the coordinates and composing with a translation, we can make this looking
+like the last coordinate equals $0$, i.e, we have $S^n$ looking like the embedded submanifold
+it is, of codimension $1$. We refer to point inverses as {\it level sets}, as people often do 
+outside of point-set topology, especially in analytical cricles.
+This works in complete generality: if $F:M^n\ra N^m$ is a smooth map of constant rank,
+then for every $c\in N$, the level set $F^{-1}(c)$ is a 
+(closed: $F$ is continuous and $\{c\}\subseteq N$ is closed)
+embedded submanifold of $M$ of codimension $k$, hence of dimension $n-k$. The proof is
+exactly the same. A particular instance is when $F$ is a submersion;
+then level sets are closed submanifolds of codimension $m$, hence dimension $n-m$.
+Note that insisting on constant rank $k$ is a bit of overkill; what we really
+need is that $F$ has constant rank $k$ in a neighborhood of $F^{-1}(c)$, in order to apply
+the rank theorem. This specializes to the the submersion case to require only that
+$F_*$ is a surjection at every point of the level set; the statement for nearby points is
+automatic. This prompts us to make a definition; a point $a\in M$ is a {\it regular point}
+for $F$ if $F_*$ is a surjection at $a$; otherwise,
+$a$ is a {\it critical point}. A point $b\in N$ is a {\it regular value}
+for $F$ if every $a\in F^{-1}(b)$ is a regular point; otherwise it is a {\it critical value}.
+Then the inverse image of every regular value is a closed submanifold of $M$.
+
+\ssk
+
+In the particular case of functions $F:M\ra \bbr$, we have a particularly succinct way of saying these things; 
+$a\in M$ is a regular point of $F$ iff $dF_a\neq 0$. (The text leaves this as an exercise; so will we.)
+
+\msk
+
+Examples to illustrate these concepts are all around; every closed orientable surface is the
+level set corresponding to a regular value of a smooth map from $\bbr^3$ to $\bbr$ (it just takes a 
+little work to build it... One approach; using the standard
+Riemannian metric on $\bbr^3$, we can find the vector in 
+$T\bbr^3$ normal to $T\Sigma$; these form a 1-dimensional bundle $N\Sigma$, which, since
+we can build a nowhere-zero (outward pointing) section, is trivial. 
+$N\Sigma\cong \Sigma\times \bbr$ can be embedded in $\bbr^3$
+with $\Sigma$ as $0$-section; the map which crushes each $\Sigma\times\{t\}$ to a point is a map 
+to $\bbr$ with $0$ as a regular value. [Send the stuff outside of $N(\Sigma)$ anywhere
+you want, away from $0$.]). In general, write down a smooth map $F$ from 
+$\bbr^n$ to $\bbr^k$; nearly 
+every point in $\bbr^k$ will turn out to be a regular value for $F$. (We will shortly make this
+statement precise.) 
+
+\msk
+
+{\bf Induced smooth maps:} Since the smooth structure on an embedded submanifold is ``derived'' from he ambient manifold $M$,
+certain typical operations work well. For example, if $F:M\ra N$ is smooth and
+$S\subseteq M$ is an embedded submanifold, then $F|_S:S\ra N$ is smooth. This is
+because this map is ``really'' the composition of the map $F$ and the (smooth) inclusion map $\iota$.
+On the other end, if 
+$F:M\ra N$ is smooth and $T^k\subseteq N^m$ is an embedded submanifold with $F(M)\ra T$, then
+we can think of $F$ as a map from $M$ to $T$, and the map $F:M\ra T$ is smooth; it is
+continuous, since $T$ has the subspace topology, so $U\subseteq T$ is open
+implies that $U=V\cap T$ for some $V\subseteq N$ open,
+and then $F^{-1}(U)=F^{-1}(V)$, since if $F(x)\in V$ then $F(x)\in F(M)\cap V\subseteq T\cap V=U$,
+so $F^{-1}(U)$ is open in $M$. To see that $F:M\ra T$ is, moreover, smooth, we note that,
+in slice coordinates for $T$, $F$ looks locally like a smooth map whose last $m-k$ 
+coordinates are $0$. Lopping off those zeroes gives a local representation of $F$ as a map
+into $T$, since the first $k$ coordinates for the chart on $N$ \u{are} the chart on $T$,
+and this map is still smooth. So as a map into $T$, $F$ is smooth.
+
+
+Vector and covector fields behave well, too. Covector fields are simplest;
+since $\iota:S\ra M$ is smooth, any covector field $\omega$ on $M$ pulls back to a 
+covector field $\iota^*\omega$ on $S$. Our characterization of tangent vectors to
+$S$ as tangent vectors to $M$ which vanish on smooth functions zero on $S$ 
+carries over to vector fields as well; a vector field $X$ on $M$ is tangent to
+$S$ if $X_a\in \iota_*T_aS$ for every $a\in S$, and this is true if, for every 
+$a\in S$, $X_af=0$ for every $f\in C^\infty(M)$ with $f|_S\equiv 0$. In this 
+case, $X_a=\iota_*Y_a$ for some $Y_a\in T_aS$, and since $\iota_*$ is injective at 
+every point, $Y_a$ is uniquely defined. The $Y_a$'s together define a
+smooth vector field $Y$ on $S$, which is therefore (by definition) $\iota$-related to
+$X$. To see that $Y$ is in fact smooth, we evaluate it on a collection of coordinate
+functions for charts covering $S$, specifically, slice charts. In slice charts, for $i\leq k$,
+$X(x^i)=\iota_*Y(x^i)=Y(x^i\circ\iota)=Y(x^i)$, where the first $x^i$ is a coordinate function on
+$M$ and the last is a coordinate function on $S$. Since $X(x^i)$ is smooth (as a function of
+$n$ variables), so is $Y(x^i)$ (as a function of the first $k$). Since these functions
+allow us to describe $Y$ in local coordinates $Y=\sum Y(x^i) \del/\del x^i$, $Y$ is smooth.
+
+\msk
+
+Our next goal is \u{really} to formulate the notion
+of integration of smooth manifolds. To do so, we first need to build up the
+concepts necessary to let us describe what the objects are that we will
+be integrating. These objects are best described in the language of tensors.
+
+\bsk
+
+{\bf Tensor products:} On one level, tensor products are just another method for combining two vector spaces
+to build another vector space. Ultimately, we will be interested in the $k$-fold tensor product
+of the dual vector space $V^*$, as a mechanism for building the higher-dimensional analogues of
+covectors and covector fields.
+
+\msk
+
+Given vector spaces $V,W$, we first buld the free vector space
+on $V\times W$, that is, the vector space $\bbr(V\times W)$
+with basis all pairs
+$(v,w)$. Then we take the quotient by the linear subspace spanned
+by the following:
+
+\ssk
+
+$(v_1+v_2,w)-(v_1,w)-(v_2,w)$, for $v_1,v_2\in V$ , $w\in W$
+
+$(v,w_1+w_2)-(v,w_1)-(v,w_2)$, for $v\in V$ , $w_1,w_2\in W$
+
+$c(v,w)-(cv,w)$, for $c\in \bbr$ , $v\in V$ , $w\in W$
+
+$c(v,w)-(v,cw)$, for $c\in \bbr$ , $v\in V$ , $w\in W$
+
+\ssk
+
+The quotient vector space is denoted $V\otimes W$, and the image of 
+$(v,w)$ is denoted $v\otimes w$. Given bases $\{v_i\}$ for $V$
+and $\{w_j\}$ for $W$, it is a quick matter of using the
+facts that $(v_1+v_2)\otimes w-v_1\otimes w-v_2\otimes w=0$
+in $V\otimes W$, etc., to show that every element 
+$v\otimes w$ (and therefore, taking linear combinations,
+every element of $V\otimes W$) can be expressed as a linear 
+combination of the $v_i\otimes w_j$; just write each of $v$ and $w$
+in terms of their bases and expand out the sums. That is, after all,
+what the four conditions above are designed to let you do.
+A slightly more involved argument establishes that the elements
+$v_i\otimes w_j$ form a {\it basis} for $V\otimes W$, rather 
+than just a spanning set. To see this,we first note that 
+this method of constructing $V\otimes W$ makes immediate the
+fact that the tensor product has the universal property:
+
+\ssk
+
+Given a vector space $Z$ and a bilinear map $F:V\times W\ra Z$
+(that is, a map which is linear on each separate variable),
+there is a unique linear map $L:V\otimes W\ra Z$ such that 
+$F=L\circ \pi$, where $\pi:V\times W\ra V\otimes W$ is the map
+sending $(v,w)$ to $v\otimes w$. $L$ is built by extending 
+$F$ to $\bbr(V\times W)$
+by making the image of a linear combination the combination of their
+images, and noting that by bilinearity the extension is $0$ on
+the relations we mod out by, and so descends to a 
+well-defined map from $V\otimes W$ to $Z$. This map is
+uniquely determined by the fact that $L(v_i\otimes w_j)=F(v_i,w_j)$,
+and linearity is built-in by the fact that our extension to 
+$\bbr(V\times W)$ was by linearity.
+
+\ssk
+
+Applying this to the duals $V^*,W^*$ of two vector
+spaces, we can build a bilinear map from $V^*\times W^*$ to 
+the vector space ${\Cal B}(V,W)$ of bilinear maps $F:V\times W\ra \bbr$
+by sending $(\varphi,\vartheta)$ to $(v,w)\mapsto \varphi(v)\vartheta(w)$.
+This map descends to a linear map $V^*\otimes W^*\ra {\Cal B}(V,W)$
+sending $\varphi\otimes\vartheta$ to the map above. If
+$\{v_i\},\{w_j\}$ form bases for $V$ and $W$, then their dual bases
+are $\{v_i^*\},\{w_j^*\}$, and $v_i^*\otimes w_j^*$ is sent to
+the map which is $1$ on $(v_i,w_j)$ and $0$ on all other pairs.
+This shows that the images of the $v_i^*\otimes w_j^*$ are
+linearly independent in ${\Cal B}(V,W)$; the coefficient of any
+$L(v_i^*\otimes w_j^*)$ in a linear combination can be extracted
+by evaluating the combination on $(v_i,w_j)$. But this implies
+that the $v_i^*\otimes w_j^*$ are then linearly independent in 
+$V^*\otimes W^*$, as well. But these also, by the argument above,
+span $V^*\otimes W^*$, so they form a basis. Applying this to 
+$V^{**}\cong V$ and $W^{**}\cong W$ shows that $v_i\otimes w_j$
+form a basis for $V\otimes W$, as well. Consequently, the 
+dimension of the tensor product of two vector spaces is the product of their
+dimensions.
+
+\msk
+
+Iterating this process allows us to define the $k$-fold tensor product
+$V_1\otimes \cdots\otimes V_n$ of vector spaces; technically, this requires
+showing that the order in which we pair things is unimportant, that is,
+$(V\otimes W)\otimes Z$ is naturally isomorphic to $V\otimes (W\otimes Z)$.
+Such an isomorphism can be constructed from the universal property, by
+starting, for $z\in Z$ with the bilinear map $v\times W\ra V\otimes (W\otimes Z)$
+given by $(v,w)\mapsto v\otimes(w\otimes z)$, which gives a linear map
+$V\otimes W\ra V\otimes (W\otimes Z)$. These can be assembled into a
+bilinear map $(V\otimes W)\times Z\ra V\otimes (W\otimes Z)$, giving
+a linear map $(V\otimes W)\otimes Z\ra V\otimes (W\otimes Z)$. This map 
+is readily shown to be surjective (its image contains a basis), so for
+dimension reasons it is an isomorphism. It is also exactly what you think it is;
+it sends $(v\otimes w)\otimes z$ to $v\otimes(w\otimes z)$. Alternatively, 
+we could simply
+rebuild the theory without parentheses, defining multilinear maps
+$V_1\times \cdots \times V_n\ra Z$ and constructing $V_1\otimes\cdots\otimes V_n$
+to satisfy the corresponding universal property.
+
+\ssk
+
+Our primary object of study will be the $k$-fold tensor product of the dual $V^*$
+of a vector space $V$ (think: $V=TM_a$). Elements of this vector space will be called 
+{\it covariant tensors of rank $k$} (for reasons of historical accident),
+and the space will be denoted $T^k(V)$. This tensor product has another life (as
+hinted at above), as the vector space of multilinear maps from the
+$k$-fold Cartesian product of $V$ with it self, to $\bbr$. The isomorphism,
+as above, is defined by sending $v_1^*\otimes\cdots\otimes v_k^*$ to
+the map $(w_1,\ldots ,w_k)\mapsto v_1^*(w_1)\cdots v_k^*(w_k)$, and extending
+linearly. This is the map that the (undeveloped here) universal property would construct
+out of the multilinear map sending $(v_1^*,\ldots ,v_k^*)$ to the map above.
+It will sometimes be more convenient to build elements of $T^k(V)$
+by building such multilinear maps, and then passing through this isomorphism.
+Though we won't encounter it much, the $k$-fold tensor product of $V$ with itself
+is the vector space of {\it contravariant tensors of rank $k$}, and denoted
+$T_k(V)$. Finally, the tensor product $T^k(V)\otimes T_\ell(V)$
+is the space of {\it mixed tensors of type $(k,\ell)$}, and is denoted $T^k_\ell(V)$.
+
+\msk
+
+{\bf Tensors on manifolds:} We now have a new means of combining vectors spaces
+to create a new one. So, of course, we want to turn this into a way to build new
+bundles. In particular, taking the $k$-fold tensor product of $T^*M_a$ at every
+$a\in M$, we can build a bundle which we will denote $T^k(TM)$, or
+$T^k(M)$ for short (note that in this new notation $T^1(M)=T^*M$),
+called the {\it bundle of covariant tensors of rank $k$}. 
+The bundles of contravariant tensors, and mixed tensors, are built 
+analogously. The bundle structure, for example on $T^k(M)$, can be described 
+by explicitly
+building local trivializations, which we have seen amounts to building
+local frames; but given a chart $h=(x^1,\ldots ,x^n)$ about $a\in M$,
+the covariant tensors $dx^{i_1}\otimes \cdots \otimes dx^{i_k}$ form a
+basis for $T^k(TM_a)$, and so give local frames about each point, and
+therefore local trivializations. A smooth structure can be imposed on
+$T^k(M)$ by declaring these trivializations to be an atlas;
+it is a tedious exercise to check that they are $C^\infty$-related.
+
+A section of the bundle $T^k(M)$ is called a covariant tensor field of rank $k$
+on $M$, or just a tensor field (when he rest is clear from context).
+The (vector) space of smooth section of $T^k(M)$ is denoted ${\Cal T}^k(M)$.
+Analogous contravariant and mixed tensor fields can be similarly 
+defined. As we saw with vector fields, a section $\sigma:M\ra T^k(M)$ can be
+tested for smoothness by writing $\sigma(x)$ as a linear combination
+of our local frames, and insisting that the coeficients be smooth
+functions of $x$. Using the interpretation of a tensor field as a choice of multilinear
+function $TM_a\times \cdots \times TM_a\ra \bbr$ at each point, we can also 
+test for smoothness by feeding $\sigma$ a $k$-tuple of vector fields $X_1,\ldots X_k$,
+and insisting that the function $x\mapsto \sigma_x(X_1(x),\ldots ,X_k(x))$ is always smooth.
+(Since $\sigma$ is multilinear, this can be checked by feeding it the coordinate
+vectors fields $\del/\del x^i$ in all possible combinations.) Given 
+$\sigma\in {\Cal T}^k(M)$ and $\tau\in {\Cal T}^\ell(M)$, we can build
+their tensor product $\sigma\otimes\tau\in {\Cal T}^{k+\ell}(M)$ by building 
+the tensor product in each fiber (supressing the necessary parentheses).
+
+\msk
+
+Covariant tensors pull back under smooth maps: given $F:M\ra N$ smooth, and 
+$\sigma\in {\Cal T}^k(N)$, we can define $F^*\sigma\in\calt^k(M)$ by
+(thinking of it as a choice of multilinear function and using) the formula
+$(F^*\sigma)_a(X^1_a,\ldots X^k_a)=\sigma_{F(a)}(F_*X^1_a,\ldots F_*X^k_a)$.
+As with covector fields, this pullback operation is well-behaved, e.g., 
+$F^*$ is $\bbr$-linear (but over smooth functions we need to shift the 
+domain: $F^*(f\sigma)=(f\circ F)\ F^*\sigma$),
+$(F\circ G)^*=G^*\circ F^*$, and $F^*(\sigma\otimes\tau)=F^*\sigma\otimes F^*\tau$.
+These are all nearly immediate from the definition.
+
+\ssk
+
+Covariant tensors (or rather, certain covariant tensors) will be the ``correct'' objects
+to integrate on manifolds and submanifolds. The reason for this is one of 
+invariance. The basic idea on integration is going to be to play our standard
+trick; we do it by taking the thing to integrate (whatever it turns out to be) and multiply it by one,
+in the form of a partition of unity subordinate to a cover by charts. But integrating
+$\sum g_i$(blah) will be done by integrating each $g_i$(blah), and adding; and each 
+$g_i$(blah) will be integrated by working in the range of the chart, that is,
+on an open subset of Euclidean space (where we think we know how to integrate).
+Proving that this make sense amounts to showing that the result is independent of
+choices, namely the cover by charts and the partition of unity. But by taking the product of
+the two partitions of unity, we have (blah) = $\sum_jG_j(\sum_ig_i$(blah)$)$, which 
+can be evaluated two ways; collecting $i$'s and summing over the $j$'s (using the charts for the $j$'s),
+or vice versa. Independence, in the end, comes down to knowing that integrating
+$G_ig_j$(blah) over the chart from the $i$'s gives the same answer as when integrating it over
+the chart from the $j$'s. That is, we want the representation of (blah) in local coordinates
+to transform in such a way that integrating it gives the same answer over both charts. But a
+covariant tensor transforms ``in the same way'' as the coordinate charts (hence the unfortunate
+terminology), which is why, in the end, this will work....
+
+\msk
+
+We have, as it happens, already encountered tensor fields in this class. A
+Riemannian metric on $M$ is a choice of bilinear map $TM_a\times TM_a\ra \bbr$
+(with other nice properties) at every point of $M$. But such a bilinear map
+now has a different life, as a covariant 2-tensor on $TM_a$. That is, a
+Riemannian metric is a certain kind of covariant 2-tensor field on $M$.
+In particular, it is a {\it symmetric} 2-tensor field. A covariant 
+$k$-tensor $\sigma$ over a vector space $V$ is called symmetric if 
+(in the language of multilinear maps)
+$\sigma(x_1,\ldots ,x_k)=\sigma(x_{\tau(1)},\ldots x_{\tau(k)})$ for any permutation
+$\tau$. (Since the group of permutations is generated by transpositions,
+it is enough to check this for $\tau$=transpositions.) 
+In the language of a basis $v_{i_1}^*\otimes\cdots\otimes v_{i_k}^*$ of
+$T^k(V)$, we need the coefficient of $v_{i_1}^*\otimes\cdots\otimes v_{i_k}^*$
+(in multi-language, the value of $\sigma(v_{i_1},\ldots,v_{i_k})$
+to be the same as the coefficient of $v_{i_{\tau(1)}}^*\otimes\cdots\otimes v_{i_{\tau(k)}}^*$.
+A tensor field is symmetric 
+if it is symmetric at every point. Since linear combinations of symmetric
+tensors are symmetric, the symmetric tensors form a vector subspace of $T^k(V)$,
+which we denote by $\Sigma^k(V)$. The argument above shows that the dimension
+of this subspace is equal to the number of orbits of 
+the basis elements $v_{i_1}^*\otimes\cdots\otimes v_{i_k}^*$ under the action of
+the symmetric group $S_k$. For example, if dim $V$ = $n$, then dim $\Sigma^2(V)$ = $n(n+1)/2$,
+having basis $v_i^*\otimes v_i^*$ and $v_i^*\otimes v_j^*+v_j^*\otimes v_i^*$ for $i<j$.
+A similar count establishes that $\Sigma^3(V)$ has dimension $n+n(n-1)+n(n-1)(n-2)/6$
+(counting those with all indices the same, exactly two the same, and all different).
+
+A process of {\it symmetrization} gives a 
+(projection) map Sym:$T^k(V)\ra \Sigma^k(V)$, given by 
+$\sigma\mapsto (1/k!)\sum_{\tau\in S_k}\ ^\tau\sigma$, where 
+$^\tau\sigma(x_1,\ldots ,x_k)=\sigma(x_{\tau(1)},\ldots x_{\tau(k)})$.
+A tensor is symmetric \lra\ $\sigma=$Sym$(\sigma)$ . Given two symmetric tensors $\sigma$ and $\tau$,
+their tensor product $\sigma\otimes\tau$ need not be symmetric (think of $dx^1$ and $dx^2$ (both symmetric)
+and $dx^1\otimes dx^2$). But we can introduce the {\it symmetric product} $ST$ of a
+symmetric $k$- and $\ell$-tensor, giving the symmetric $(k+\ell)$-tensor defined 
+(by way of multilinear maps) by $ST(x_1,\ldots, x_{k+\ell})$ = 
+$(1/(k+\ell)!)\sum_{\sigma\in S_{k+\ell}}S(x_{\sigma(1)},\ldots,x_{\sigma(k)})T(x_{\sigma(k+1)},\ldots,
+x_{\sigma(k+\ell)})$. It is straightforward to verify that the symmetric product is commutative
+and linear in each argument.
+
+\msk
+
+{\bf Alternating tensors:} But for the most part we don't want our tensors
+to be symmetric, we want the exact opposite. That is, we want anti-symmetric, 
+or {\it alternating}, tensors, which satisfy $^\tau S = -S$ for
+every transposition of the inputs of $S$ (here again, we are thinking
+of $S$ as a multilinear function). It follows that $^\tau S = (\sgn \tau)S$
+for any permutation $\tau$, where $\sgn(\tau)$ is the sign of the permutation $\tau$. 
+
+Why do we want to use alternating tensors? Because when we do integration in 
+Euclidean space we create huge sums of the values of our function $F$ at points in
+little boxes, times the {\it signed} volume of the little boxes. (This is why
+$\int_b^a f(x)\ dx=-\int_a^b f(x)\ dx$ ; we are really using the signed lengths of
+the intervals in our partition of $[a,b]$.) Alternating tensors, we shall see, are
+a way to capture the ``signedness'' of volume, as it appears in the formulation
+of multiple integrals. But before looking into \u{why} they work, let us look into
+\u{how} they work. The basic idea is the they behave like the determinant; 
+thinking of an $n\times n$ matrix as an ordered collection of $n$ column vectors 
+$X_1,\ldots ,X_n$, then $det(X_1,,\ldots ,X_n)$ is an alternating, multilinear 
+map from $V^n$ to $\bbr$, and so defines an alternating covariant $n$-tensor on
+$\bbr^n$. The uphot to what follows is that, in a certain sense, this is the only covariant
+tensor around...
+
+The collection of alternating covariant $k$-tensors for a sub-vector space of $T^k(V)$;
+the linear combination of alternating tensors is alternating, since we hit the
+combination with a permutation $\tau$ by hitting each term, and, by hypothesis,
+it amounts to just multiplying by $\sgn(\tau)$, which we can factor out of the
+sum. We will denote the subspace of alternating $k$-tensors by $\Lambda^k(V)\subseteq T^k(V)$;
+$\Omega^k(V)$ is also common. Linear maps $L:T^k(V)\ra T^k(W)$ also take alternating tensors
+to alternating tensors.
+A $k$-tensor $S$ is alternating \lra\ $S(x_1,\ldots ,x_k)=0$ whenever $x_i=x_j$ for some
+$i\neq j$. This is because the transposition of the two inputs introduces a 
+change of sign without changing the value; the opposite implication comes from expanding 
+out $0=S(x_1,\ldots,x_i+x_j,\ldots ,x_i+x_j,\ldots ,x_k)$ using the multilinearity.
+Using a basis $v_i^*$ for the underlying vector space, alternating requires that the
+coefficient of $v_{i_1}^*\otimes\cdots\otimes v_{i_k}^*$ in $S$ determines the
+coeficient of $v_{i_{\tau(1)}}^*\otimes\cdots\otimes v_{i_{\tau(k)}}^*$ for any permutation
+$\tau$; they are equal up to multiplication by $\sgn\tau$. In particular, in any 
+representation of an alternating tensor in the ``standard basis'', a term
+with a repeated basis element has coefficient $0$. Consequently, the only terms that can have
+non-zero coefficient are those with all basis elements distinct, and there
+are as many elements in a basis for $\Lambda^k(V)$ as there are orbits of those basic
+tensors under the action of the symmetric group $S_k$. Consequently, the dimension of
+$\Lambda^k(V)$ (if $V$ has dimension $n$) is $n$ choose $k$; a basis consists of the
+signed sums over each orbit of a representative of each orbit, which we can choose, unambiguously,
+as $v_{i_1}^*\otimes\cdots\otimes v_{i_k}^*$ with the $i_j$ strictly increasing.
+That is, the basis consists of elements 
+$\sum_{\tau \in S_k}(\sgn\tau)v_{i_{\tau(1)}}^*\otimes\cdots\otimes v_{i_{\tau(k)}}^*$
+one for each fixed increasing sequence $i_1,\ldots,i_k$ from 
+the sequence $1,\ldots ,n$. The dimension of $\Lambda^k(V)$ is therefore $n$ choose $k$.
+In particular, if $k>n$ the basis is empty; there are no (non-zero) alternating
+$k$-tensors when $k>$dim$(V)$. Significantly, when $k=n$, the space of alternating
+tensors has dimension $1$; the basis vector is the alternating sum $S$ of the tensors
+$v_{\tau(1)}^*\otimes\cdots\otimes v_{\tau(n)}^*$ . This is, essentially, the determinant;
+if we write a collection of vectors $w_i$, $i=1,\ldots ,n$ as column vectors in terms of the $v_i$'s,
+assembling them into a matrix then $S(w_1,\ldots w_n)$ is the determinant of that matrix.
+Similarly, the basis element given by the alternating sum of terms 
+$v_{\tau(i_1)}^*\otimes\cdots\otimes v_{\tau(i_k)}^*$, summed over $S_k$, gives the
+alternating $k$-tensor $T$ for which $T(w_1,\ldots w_k)$ is the
+determinant of the $k\times k$ ``minor'' built from the matrix of column vectors $w_i$ by taking the rows
+$i_1,\ldots ,i_k$ (in that order). So every alternating $k$-tensor is, essentially, a
+linear combination of determinants of $k\times k$ minors.
+
+\ssk
+
+Just as with symmetric tensors, there is a projection map Alt$:T^k(V)\ra \Lambda^k(V)$
+(alternification?) given by 
+Alt$(S)(v_1,\ldots,v_k)=(1/k!)\sum_\sigma (\sgn\sigma)S(v_{\sigma(1)},\ldots, v_{\sigma(k)})$.
+As before, Alt$(S)$ is alternating, $S$ is alternating \lra\ $S=$Alt$(S)$. Note, for example, that
+the basis for $\Lambda^k(V)$ consisted of the tensors $(k!)$Alt$(v_{i_1}^*\otimes\cdots v_{i_k}^*$)
+for $1\leq i_1<\cdots <i_k\leq n=$dim$(V)$. And again, the tensor product of two alternating 
+tensors typically isn't alternating, by we can just push it back into $\Lambda^{k+\ell}(V)$
+to create a {\it wedge product} 
+$\wedge:\Lambda^k(V)\otimes \Lambda^\ell(V)\ra\Lambda^{k+\ell}(V)$ given by
+$S\wedge T=((k+\ell)!/k!\ell !)$Alt$(S\otimes T)$. The coefficient out front is to make
+this formula behave well when applied to a dual basis:
+if we write, for a multi-index $I=(i_1,\ldots,i_k)$, 
+$v^I=\sum_{\tau \in S_k}(\sgn\tau)v_{i_{\tau(1)}}^*\otimes\cdots\otimes v_{i_{\tau(k)}}^*$,
+then $v^I\wedge v^J=v^{IJ}$, where $IJ$ is the concatenation of $I$ and $J$. (Note that
+$v^I=0$ if the multi-index contains a repeated index, otherwise it is (up to sign)
+one of our standard basis elements.) The proof is tedious, and not very enlightening;
+it suffices to show that both sides represent the same multilinear function, for which it 
+is enough to verify on all $k$-tuples of basis vectors that the $v_i^*$ are dual to.
+
+This wedge product is bilinear (since $\otimes$ and Alt are), associative 
+(from $v^I\wedge(v^J\wedge v^K)=v^{IJK}=(v^I\wedge v^J)\wedge v^K$ and 
+biliearity), and is {\it anticommutative} :
+$S\wedge T = (-1)^{k\ell} T\wedge S$ (again, since this is true for our basis
+elements $V^I$). Further, $v_{i_1}^*\wedge \cdots \wedge v_{i_k}^*=v^I$,
+where $I$ is the obvious multi-index. Finally, if $\omega^i\in V^*$ and
+$X_i\in V$, $i=1,\ldots,k$, then 
+
+\noindent $(\omega^1\wedge\cdots\wedge \omega^k)(x_1,\ldots,X_k)=
+\det(\omega^i(X_j))$.
+
+
+
+
+
+\bsk
+
+\noindent Some facts, mostly difficult to prove, which our new vocabulary allows us to express:
+
+\msk
+
+\noindent (*) Every $n$-manifold can be covered by at most $n+1$ charts. The minimum number of contractible 
+open sets which cover $M$ is
+called its {\it Lusternik-Schnirelmann category}, $LS(M)$. For example, $LS(S^n)=2$ for every $n$.
+In also happens to be the minimal number of critical points that a function $f:M\rightarrow \bbr$
+(whose critical points are discrete) can have.
+
+\ssk
+
+\noindent (*) $\bbr^4$ has uncountably many non-differomorphic smooth structures; but since $\bbr^5$
+has only one, crossing exotic $\bbr^4$'s with $\bbr$ always gives {\it standard} $\bbr^5$.
+
+\ssk
+
+\noindent (*) Tangent bundles can be constructed for topological manifolds; the trick is to come up
+with a characterization of the tangent bundle of a smooth manifold which doesn't mention
+derivatives! Topological tangent bundles can then be used to attack questions such as
+the existence of smooth structures; it amounts to being able to put a ``linear'' 
+structure on the topological tangent bundle. 
+
+\ssk
+
+\noindent (*) The {\it span} of a vector bundle is the maximum number of linearly independent vector fields
+the the bundle can have. The span of a smooth manifold is the span of its tangent bundle.
+A manifold $M$ has span $\geq 1$ \lra\ its Euler characteristic $\chi(M)=0$. Higher spans can
+be detected by increasingly sophisticated tools from algebraic topology.
+
+\ssk
+
+\noindent (*) Every orientable $3$-manifold $M^3$ is parallelizable; $TM^3$ is fiber-preserving diffeomorphic to
+$M^3\times \bbr^3$ (Stiefel, 1936). Among spheres, only $S^1,S^3$ and $S^7$ are parallelizable
+(Adams 1962, Le Lionnais 1983).
+
+\ssk
+
+\noindent (*) Every vector bundle over a contractible space $X$ (i.e., there is a continuous map
+$H:X\times I\ra X$ which restricted to $X\times \{0\}$ is the identity and to $X\times\{1\}$ is
+constant) is trivial. The usual proof consists of showing that the pullback bundle induced 
+from a constant map is trivial, and the pullbacks induced by homotopic maps are isomorphic.
+
+\ssk
+
+\noindent (*) Every vector bundle over $S^3$ is trivial (apparently, because $\pi_2(GL(3,\bbr))=0$ ?).
+
+\msk
+
+\noindent (*) $\bbr P^{31}$ can be embedded in $\bbr^{54}$, immersed in $\bbr^{53}$, and cannot immerse in $\bbr^{52}$.
+It is unknown if it can embed in $\bbr^{53}$. (Source: http://www.lehigh.edu/$\sim$dmd1/immtable )
+
+
+\vfill
+\end
+
+
+
+We can then derive the identity
+
+    $0v\otimes w=v\otimes 0w=0(v\otimes w)=0$,
+
+the zero in $V \otimes W$.
+
+The resulting tensor product $V \otimes W$ is itself a vector space, 
+which can be verified by directly checking the vector space axioms. 
+Given bases $\{v_i\}$ and $\{w_i\}$ for $V$ and $W$ respectively, 
+the tensors of the form $v_i \otimes w_j$ forms a basis for $V \otimes W$. 
+The dimension of the tensor product therefore is the product of dimensions 
+of the original spaces; for instance ${\Bbb R}^m \otimes {\Bbb R}^n$ will have dimension $mn$.
+
+\msk
+
+
+Universal property of tensor product
+
+The space of all bilinear maps from $V\times W$ to another vector space $X$ is naturally 
+isomorphic to the space of all linear maps from $V \otimes W$ to $K$. This is built 
+into the construction; $V\otimes W$ has all and only the relations that are necessary 
+to ensure that a homomorphism from $V\otimes W$ to $X$ will be linear.

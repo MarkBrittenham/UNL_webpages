@@ -1,0 +1,40 @@
+
+
+This fall we will be offering a new course, Math 873
+Differential and Geometric Topology. While waiting for
+the graduate catalog to catch up with the department,
+we will offer the course this fall as Math 856
+(Differental Geometry).
+
+The prerequisites for 856 will be a course in point-set 
+topology (Math 970 (or 871 as we will soon be calling it) 
+is more than sufficient) plus undergraduate linear algebra 
+and multivariable calculus. The goal of the course is to 
+provide a survey of the concepts of differential topology. 
+Essentially, differential topology adds the methods of 
+calculus - differentiability, tangency, integration - to 
+the study of topological spaces. The collection of spaces 
+for which such an addition makes the most sense are
+called manifolds. Quoting the first words of the text: 
+
+"Manifolds are everywhere. These generalizations of curves 
+and surfaces to arbitrarily many dimensions provide the 
+mathematical context for understanding `space' in all of 
+its manifestations. Today, the tools of manifold theory 
+are indispensible in most major subfields of pure mathematics, 
+and outside of pure mathematics they are becoming increasingly
+important to scientists in such diverse fields as genetics, 
+robotics, econometrics, computer graphics, biomedical imaging, 
+and, of course, theoretical physics."
+
+The overall goal of the course is to provide an introduction
+to the objects, concepts and some of the techniques of this
+field. The specific topics covered will depend partly on the 
+audience. The first several chapters of Lee's "Introduction 
+to Smooth Manifolds" (which will serve as the primary text) 
+will be our guide in the beginning. The table of contents of 
+the text can be viewed at the amazon.com website; there is a 
+link to it on the course website:
+
+www.math.unl.edu/~mbrittenham2/classwk/856f06/
+
