@@ -1,0 +1,122 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 417 Problem Set 7}
+
+\msk
+
+Starred (*) problems are due Friday, October 12.
+
+
+\begin{description}
+
+\item{43.} Show that if $n\geq 3$, then $Z(S_n)=\{e\}$ is the `trivial' subgroup of $S_n$.
+
+\ssk
+
+\item{\spc} [Hint: Show that if $\alpha(a)\neq a$ for some $a$, then $\tau\alpha\neq\alpha\tau$
+for \ubr{some} transposition $\tau$; note that you can assume there are \ubr{three} distinct
+integers $a,b,c$ you can build things out of (that's important! $S_2\cong \bbz_2$ ...).]
+
+\msk
+
+\item{(*) 44.} (Gallian, p.134, \#44) Suppose that $G$ is a finite {\it abelian} group, and
+that no element of $G$ has order 2. Show that the function $\varphi:G\rightarrow G$
+given by $\varphi(g)=g^2$ is an isomorphism. Show that if $G$ is infinite then $\varphi$ is a homomorphism,
+but \ubr{need} \ubr{not} be an isomorphism. (How many infinite abelian groups do we know at this point?)
+
+\msk
+
+\item{\spc} [Hint: show that the hypothesis about orders implies that $\varphi$ is \ubr{injective}.]
+
+\msk
+
+\item{45.} (Gallian, p.135, \#47) For $G$ a group and $g\in G$ we write $\phi_g:G\ra G$ to be the automorphism
+$\phi_g(x)=gxg^{-1}$. Show that if $\phi_g=\phi_h$ then $g^{-1}h\in Z(G)$.
+
+\msk
+
+\item{46.} (Gallian, p.135, \#49) Show that if $n\geq 3$ and $\alpha,\beta\in S_n$ have $\phi_\alpha=\phi_\beta$, then 
+$\alpha=\beta$ in $S_n$.
+
+\ssk
+
+\item{\spc} [This follows quickly from two previous problems; more `fun' would be to do it directly?]
+
+\msk
+
+\item{47.} Show that if $\varphi:G\rightarrow G$ is an homomorphism
+from $G$ to itself, then 
+
+\ctln{$H = \{g\in G\ :\ \varphi(g)=g\}$ is a subgroup of $G$.}
+
+\msk
+
+\item{\spc} [N.B.: $H$ is called the {\it fixed subgroup} of $\varphi$ .]
+
+\msk
+
+\item{(*) 48.} Let $(\bbz[x],+,0)$ be the group of polynomials with integer
+coefficients, under addition, and let $k\in\bbz$. Show that the function $\varphi:\bbz[x]\ra \bbz$ 
+given by $\varphi(p(x))=p(k)$ [the `evaluation function'] is a homomomorphism.
+
+\msk
+
+\item{(*) 49.} A subgroup $H\leq G$ is called \ubr{characteristic} if
+$\varphi(H)=H$ for every $\varphi\in\textrm{Aut}(G)$. Show that if 
+$K$ is a characteristic subgroup of $H$ and $H$ is a characteristic subgroup of $G$,
+then $K$ is a characteristic subgroup of $G$.
+
+\msk
+
+\item{50.} (Gallian p.209, \#52) Show that if $G=\langle a\rangle$ is a cyclic group, 
+$\phi,\psi:G\ra H$ are both homomorphisms from $G$ to $H$, and $\phi(a)=\psi(a)$,
+then $\phi=\psi$. 
+
+\item{\spc} [`A homomorphism from a cyclic group is completely determined
+by where it sends the generator.']
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+

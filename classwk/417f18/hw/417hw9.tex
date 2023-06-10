@@ -1,0 +1,120 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 417 Problem Set 9}
+
+\msk
+
+Starred (*) problems are due Friday, November 9.
+
+
+\begin{description}
+
+\item{(*) 58.} If $\varphi:G\ra H$ is a \ubr{surjective} homomorphism and $N\leq G$
+is a \ubr{normal} subgroup of $G$, show that $\varphi(N)\leq H$ is a normal subgroup of $H$.
+Show, on the other hand, that if $\varphi$ is not surjective, then $\varphi(N)$ 
+need not be a normal subgroup (hint: $G$ is a normal subgroup of $G$ !).
+
+\msk
+
+\item{59.} If $H,K\leq G$ are \ubr{normal} subgroups of the group $G$, show that 
+$H\cap K\subseteq G$ is also a normal subgroup of $G$, and there is an \ubr{injective}
+homomorphism $G/(H\cap K)\ra (G/H)\oplus(G/K)$.
+
+\ssk
+
+\item{\spc} [Note: This is a generalization of our work in class on $\bbz_{21}$ and $\bbz_{21}^*$ .]
+
+\msk
+
+\item{(*) 60.} (Gallian, p.222, \# 42) Show that if $N,K\leq G$ are \ubr{normal}
+subgroups of $G$ and $K\leq N$, then $N/K$ is a normal subgroup of 
+$G/K$, and $(G/K)/(N/K) \cong G/N$. [This is the ``Third Isomorphism Theorem'' 
+of Emmy Noether. One approach: start by looking at the `natural' map $G\ra G/N$.]
+
+\msk
+
+\item{61.} If $G$ is a group, show that $H=\{(g,g)\ :\ g\in G\}$ is a normal 
+subgroup of $G\oplus G$ \lra\ $G$ is \ubr{abelian}; when $H$ is normal, 
+show that $(G\oplus G)/H$ is isomorphic to $G$.
+
+\ssk
+
+\item{\spc} [Hint: how would you build a homomorphism $G\oplus G\ra G$ so that $H$ would be the kernel? Note
+that at this point in the problem you can \ubr{assume} that $G$ is abelian!]
+
+\msk
+
+\item{62.} (Gallian, p.202, \# 35 (sort of)) Show that the functions
+$\varphi,\psi:\bbz\oplus\bbz\oplus\bbz\ra\bbq$ given by $\varphi(a,b,c)=3^a6^b10^c$
+and $\psi(a,b,c)=3^a6^b12^c$ are homomorphisms (where the domains are groups under 
+addition and the codomains are groups under multiplication), and that 
+$\varphi$ is injective, while $\psi$ is \ubr{not}.
+
+\msk
+
+\item{(*) 63.} (Gallian, p.202, \# 37) If $H$ is a normal subgroup in $G$ and $G$ is finite,
+and $g\in G$, show that the order of $gH$ in $G/H$ divides the order of $g$ in $G$.
+
+\msk
+
+\item{64.} Show that in the symmetric group $S_n$, every \ubr{commutator} $\alpha\beta\alpha^{-1}\beta^{-1}$
+is an element of the subgroup $A_n$ = the alternating group.
+Show, in addition, that
+every 3-cycle $(a,b,c)$ can be written as a 
+commutator $\alpha\beta\alpha^{-1}\beta^{-1}$ . Conclude that every element of $A_n$
+can be written as a \ubr{product} of commutators. 
+
+\msk
+
+\item{65.} Use problem \#64 to show that if $\varphi:S_n\ra G$ is a homomorphism from the 
+symmetric group
+to an \ubr{abelian} group $G$, then $\varphi(A_n)=\{e_G\}$ and so $\varphi(S_n)$ is either 
+the trivial subgroup or isomorphic
+to $\bbz_2$.
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+

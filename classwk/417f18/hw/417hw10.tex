@@ -1,0 +1,118 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 417 Problem Set 10}
+
+\msk
+
+Starred (*) problems are due Friday, November 16.
+
+
+\begin{description}
+
+\item{66.} (Gallian, p209, \# 51) Let $N$ be a normal subgroup of a group $G$. 
+Show that every subgroup $K$ of $G/N$ has the form
+$H/N$, where $H$ is a subgroup of $G$. [Hint: Think about the homomorphism
+$\varphi:G\ra G/N$ .
+
+\msk
+
+\item{(*) 67.} (Gallian, p.191, \# ) If $G$ is a group, $H\lhd G$ is a normal subgroup, and 
+$K\leq G$ is a subgroup, then $HK=\{hk\ :\ h\in H, k\in K\}$ is a subgroup of $G$.
+(See Example 5 on p.175 for an explanation why.) Show that if, in addition, $K$ is a \ubr{normal}
+subgroup of $G$, then $HK$ is a normal subgroup.
+
+\msk
+
+\item{68.} (Gallian, p.168, \# 17) Show that if
+$G\oplus H$ is a cyclic group, then $G$ and $H$ are
+both cyclic. [Hint: A group \ubr{isomorphic}
+to a cyclic group is cyclic!]
+
+\msk
+
+\item{69.} (Gallian, p.170, \# 59) Let $p$ be a prime. Prove that $\bbz_p\oplus \bbz_p$ has exactly $p+1$
+distinct subgroups of order $p$.
+
+\msk
+
+\item{(*) 70.} Show that $2$ is \ubr{not} a generator for the group $\bbz_{31}^*$ of units 
+modulo $31$, but that $3$ \ubr{is}. If, using $\bbz_{31}^*$ and $a=3$ as the basis for a 
+(very weak!) Diffie-Hellman key exchange, if Alice chooses $n=5$ and Bob chooses $m=11$ 
+to build a shared key, what information do they send to one another and what is that key?
+
+\msk
+
+\item{71.} In the group $S_{10}$ the elements $a=(1,2,3)(4,5)(8,9)$ and $b=(2,4,8)(1,10)(3,7)$
+are conjugate. Find at least two distinct conjugating elements $x$ (so that
+$xa=bx$).
+
+\msk
+
+\item{72.} Find a matrix $X\in GL(2,\bbz)$ so that 
+$X\left(\begin{array}{cc} 2 & 1 \\ 1 & 1 \end{array}\right) = \left(\begin{array}{cc} 2 & -1 \\ -1 & 1 \end{array}\right)X$ .
+
+\msk
+
+\item{(*) 73.} Find a matrix $\left(\begin{array}{ccc} a & b \\ c & d \end{array}\right)\in GL(2,\bbz_7)$ so that 
+
+\ssk
+
+
+\ctln{$\left(\begin{array}{ccc} a & b \\ c & d \end{array}\right)\left(\begin{array}{ccc} 2 & 3 \\ 4 & 5 \end{array}\right) = 
+\left(\begin{array}{ccc} 3 & 4 \\ 5 & 4 \end{array}\right)\left(\begin{array}{ccc} a & b \\ c & d \end{array}\right)$}
+
+\ssk
+
+\item{\spc} in the group $GL(2,\bbz_7)$ .
+
+\ssk
+
+\item{\spc} [Note that we can multiply $a,b,c$, and $d$, in a solution, by $u\in\bbz_7^*$, and still have a solution. This allows you to 
+\ubr{assume} that, for example, either $a=0$ or $a=1$ . This can lower your work factor....]
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+\left(\begin{array}{ccc} a & b \\ c & d \end{array}\right)
