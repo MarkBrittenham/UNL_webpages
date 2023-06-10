@@ -1,0 +1,148 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+\nopagenumbers
+
+\input amstex
+
+\input epsf
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\bra{$\Rightarrow$}
+\def\bbr{{\Bbb R}}
+\def\bbz{{\Bbb Z}}
+\def\bbq{{\Bbb Q}}
+\def\del{\partial}
+\def\indt{\item{}}
+\def\wtl{\widetilde}
+\def\coker{\text{coker}}
+\def\im{\text{im}}
+
+\ctln{\bf Math 872 Algebraic Topology}
+
+\ssk
+
+\ctln{Problem Set \#\ 6}
+
+\ssk
+
+\ctln{Starred (*) problems due Thursday, March 29}
+
+\bsk
+
+\item{\bf (*) 27.} Show that for chain maps $f,g$ between chain
+complexes ${\Cal A} = \{A_n\},{\Cal B}=\{B_n\}$, the relation 
+``$f$ and $g$ are chain homotopic'' is an equivalence relation.
+
+\msk
+
+\item{\bf 28.} Show that if $A\subseteq X$, then the inclusion map
+$i:A\ra X$ induces an isomorphism on homology groups \lra\ 
+$H_n(X,A)=0$ for all $n\geq 0$.
+
+
+\msk
+
+\item{\bf 29.} Show that if a short exact sequence
+\hskip.2in
+$0\ra A{\buildrel{\alpha}\over\ra} B{\buildrel{\beta}\over\ra} C\ra 0$
+\hskip.2in
+{\it splits}, that is, there is a map $\gamma:B \ra A$ with
+$\gamma\circ\alpha=I$, then the map $\varphi:B\ra A\oplus C$
+given by $b\mapsto (\gamma(b),\beta(b))$, is an isomorphism.
+
+\ssk
+
+[This is part of the Splitting Lemma, proved in Hatcher, p.147. Splitting is equivalent 
+to the existence of $\delta:C\ra B$ satisfying
+$\beta\circ\delta = I$, but this is irrelevant to the question above.]
+
+\msk
+
+\item{\bf (*) 30.} Show that if $A\subseteq X$ and $r:X\ra A$ is a retraction, then
+for every $n$,
+
+\item{} $H_n(X)\cong H_n(A)\oplus H_n(X,A)$. 
+
+\ssk
+
+\item{} [Hint: show that the (piece of) the long exact homology sequence
+
+\item{} $H_n(A)\ra H_n(X)\ra H_n(X,A)$ is ``really'' 
+
+\item{} $0\ra H_n(A)\ra H_n(X)\ra H_n(X,A)\ra 0$, and splits.]
+
+\msk
+
+\item{\bf 31.} Prove the Snake Lemma: given a diagram of abelian groups
+
+\ssk
+
+$$\CD
+0 @>>> A @>>> B @>>> C @>>> 0 \\
+ @. @V\alpha VV @V\beta VV @V\gamma VV \\
+0 @>>> D @>>> E @>>> F @>>> 0 \\
+\endCD
+$$
+
+\ssk
+
+\item{} with the horizontal rows exact and where each rectangle commutes,
+then there are induced maps and a connecting homomorphism making the
+sequence 
+
+\ssk
+
+\ctln{$0\ra \ker\alpha \ra \ker\beta \ra \ker\gamma \ra \coker\alpha \ra \coker\beta \ra \coker\gamma \ra 0$}
+ 
+\ssk
+
+\item{} exact. (For $f:R\ra S$, $\coker f = S/\im(f)$.)
+
+\msk
+
+\item{\bf 32.} Compute the singular homology groups of the 
+topologist's sine curve
+
+\ssk
+
+\ctln{$X=\{(x,\sin(1/x) : 0<x\leq 1 \}\cup (\{0\}\times[-1,1])$}
+
+
+\vfill
+\end
+
+Find examples of spaces and subspaces
+$A_0\subseteq X_0$ and $A_1\subseteq X_1$ so that
+$H_*(X_0)\cong H_*(X_1)$ and $H_*(A_0)\cong H_*(A_1)$,
+but $H_*(X_0,A_0)\not\cong H_*(X_1,A_1)$ .
+
+
+
+If $A\subseteq X$ and $I:X\ra X$ is homotopic to a map $f:X\ra X$ with $f(X)\subseteq A$, then
+for every $n$, $H_n(A)\cong H_n(X)\oplus H_{n+1}(X,A)$.
+
+
+
+\ctln{\vbox{\hsize=4in
+\leavevmode
+\epsfxsize=4in
+\epsfbox{hw6.ai}}}
+
+

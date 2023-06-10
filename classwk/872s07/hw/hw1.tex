@@ -1,0 +1,84 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\input amstex
+
+\input epsf
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\bra{$\Rightarrow$}
+\def\bbr{{\Bbb R}}
+\def\bbz{{\Bbb Z}}
+\def\del{\partial}
+\def\indt{\item{}}
+
+
+
+\ctln{\bf Math 872 Algebraic Topology}
+
+\ssk
+
+\ctln{Homework \#\ 1}
+
+\ssk
+
+\ctln{Starred (*) problems due Thursday, January 25}
+
+\bsk
+
+\item{\bf 1.} Show that, in general, if $\alpha,\beta:I\ra X$ are paths which are {\it homotopic rel endpoints},
+$\alpha(0)=\beta(0)=x_0$, $\alpha(1)=\beta(1)=x_1$, then their associated change of basepoint
+maps are equal: 
+\hsk $\widehat{\alpha}=\widehat{\beta}:\pi_1(X,x_0)\ra \pi_1(X,x_1)$.
+
+\msk
+
+\item{\bf (*) 2.} Show that for a path-connected space $X$, $\pi_1(X)$ is abelian \lra\ the change of basepoint maps
+are all independent of path, i.e.,  
+
+\indt $\alpha(0)=\beta(0)=x_0$, $\alpha(1)=\beta(1)=x_1$ 
+\bra\
+$\widehat{\alpha}=\widehat{\beta}:\pi_1(X,x_0)\ra \pi_1(X,x_1)$. 
+
+\indt [Notation: our hypothesis can be expressed symbolically by saying that $\alpha,\beta$ are maps
+of triples; $\alpha,\beta:(I,0,1)\ra(X,x_0,x_1)$.]
+
+\msk
+
+\item{\bf (*) 3.} Show that every homomorphism $\varphi:\bbz\ra \pi_1(x)$ can be realized as the induced homomorphism
+$\varphi=f_*$ of a continuous map $f:(S^1,1)\ra (X,x_0)$. [Hint: Look at $\varphi(1)\in\pi_1(X,x_0)$.]
+
+\msk
+
+\item{\bf 4.} If $x_0\in A\subseteq X$ and $A$ is path-connected, show that the inclusion-induced map
+
+\indt $\iota_*:\pi_1(A,x_0)\ra\pi_1(X,x_0)$ is surjective \lra\ every path $\gamma:I\ra X$ with endpoints in
+$A$, $\gamma(0),\gamma(1)\in A$, is homotopic rel endpoints to a path in $A$, that is,
+$\gamma\simeq\alpha$ rel $\del I$ with $\alpha:I\ra A\subseteq X$.
+
+\msk
+
+\item{\bf 5.} Show that the homomorphism $\varphi:\pi_1(X\times Y,(x_0,y_0))\ra\pi_1(X,x_0)\times\pi_1(Y,y_0)$ given by
+$\varphi([\gamma])=((p_X)_*[\gamma],(p_Y)_*[\gamma])$ is an isomorphism, where $p_X,p_Y$ are the projections of
+$X\times Y$ onto the first and second factors, respectively.
+
+
+\vfill
+\end

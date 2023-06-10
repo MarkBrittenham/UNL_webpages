@@ -1,0 +1,165 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+{\bf Some examples:}
+
+\ssk
+
+{\bf Fundamental groups of graphs:} Every finite connected graph $\Gamma$ has a {\it maximal tree} $T$,
+a connected subgraph with no simple circuits. Since any tree is the 
+union of smaller trees joined at a vertex, we can, by induction, show that 
+$\pu(T) = \{ 1\}$ . In fact, if $e$ is an outermost edge of $T$, then 
+$T$ deformation retracts to $T\setminus e$, so, by induction, $T$ is 
+contractible. Consequently ({\it Hatcher, Proposition 0.17}), $\Gamma$ and the quotient space $\Gamma/T$
+are homotopy equivalent, and so have the same \mpu . But $\Gamma/T=\Gamma_n$
+is a bouquet of $n$ circles for some $n$. If we let ${\Cal U}$ = a neighborhood of 
+the vertex in $\Gamma_n$, which is contractible, then, by singling out one petal of the bouquet,
+we have
+
+\ssk
+
+\ctln{$\Gamma_n = (\Gamma_{n-1}\cup{\Cal U})\cup (\Gamma_1\cup{\Cal U}) = X_1\cup X_2$}
+
+\ssk
+
+with $\Gamma_{k}\cup{\Cal U}\sim (\Gamma_{k}\cup{\Cal U})/{\Cal U}\cong \Gamma_{k}$. 
+Since $X_1\cap X_2={\Cal U}\sim *$, we have 
+
+\ctln{$\pu(\Gamma_{n}) \cong \pu(\Gamma_{n-1})*_{1}\pu(\Gamma_1) = \pu(\Gamma_{n-1})*{\Bbb Z}$}
+
+So, by induction, $\pu(\Gamma) \cong \pu(\Gamma_{n})\cong {\Bbb Z}*\cdots *{\Bbb Z} = F(n)$, 
+the free group on $n$ letters, where $n$ = the number of edges not in a maximal tree for $\Gamma$. 
+The generators for the group consist of the
+edges not in the tree, prepended and appended by paths to the basepoint.
+
+\vfill
+\eject
+
+{\bf Gluing on a 2-disk:} $f:\del {\Bbb D}^2\ra X$ continuous, then we
+construct the quotient space $Z=(X\coprod {\Bbb D}^2)/\{x\simeq f(x) : x\in\del{\Bbb D}^2\}$,
+the result of gluing ${\Bbb D}^2$ to $X$ along $f$. 
+
+\ssk
+
+We can use Seifert - van Kampen to compute \mpu\ of the resulting space; if we
+wish to be careful with basepoints $x_0$,
+we include a rectangle $R$, the mapping cylinder of a path $\gamma$ running from 
+$f(1,0)$ to $x_0$, glued to 
+${\Bbb D}^2$ along the arc from $(1/2,0)$ to $(1,0)$ (see figure). 
+This space $Z_+$ deformation retracts to $Z$; it
+is simpler work with the basepoint $y_0$ lying above $x_0$.
+
+\ssk
+
+Write $D_1 = \{x\in {\Bbb D}^2 : ||x||<1\}\cup(R\setminus X)$ 
+and $D_2 = \{x\in {\Bbb D}^2 : ||x||>1/3\}\cup R$ , 
+then we can write $Z_+=D_+\cup(X\cup D_2) = X_1\cup X_2$.
+But since $X_1\simeq *$ , $X_2\simeq X$ 
+(it is essentially the mapping cylinder of the maps $f$ and $\gamma$ )
+and $X_1\cap X_2 = \{x\in {\Bbb D}^2 : 1/3<||x||<1\}\cap(R\setminus X)\simeq S^1$, 
+we find that 
+
+\ctln{$\pu(Z,y_0)\cong \pu(X_2,y_0)*_{\Bbb Z}\{1\} = \pu(X_2)/<{\Bbb Z}>^N \cong \pu(X_2)/<[\overline{\delta}*\overline{\gamma}*f*\gamma*\delta]>^N$}
+
+Use $\delta$ for a change of basepoint isomorphism, and then a homotopy
+equivalence from $X_2$ to $X$ (fixing $x_0$), we have, 
+if $\pu(X,x_0)=<\sig | R>$ , then $\pu(Z) = <\sig | R\cup\{[\overline{\gamma}*f*\gamma]\}>$ . 
+So the effect of gluing on a 2-disk on the $\pi_1$ is to add a new relator, 
+namely the word represented by the attaching map (adjusting for basepoint).
+
+\msk
+
+
+\vbox{\hsize=5in
+
+\leavevmode
+
+\epsfxsize=5in
+\epsfbox{gluedisk.ai}}
+
+\vfill
+\eject
+
+{\bf Wirtinger presentations for knot complements:}
+
+\msk
+
+A {\it knot} $K$ is (the image of) an embedding $h:S^1\hookrightarrow\bbr^3$. Wirtinger 
+gave a prescription for taking a planar projection of $K$ and producing a presentation
+of $\pi_1(\bbr^3\setminus K)$. The idea: think of $K$ as lying on the projection
+plane, except near the crossings, where it arches over and dives under. 
+Express $\bbr^3\setminus N(K)\simeq X$ as the union of
+$C_-=X\cap\{(x,y,z\in \bbr^3 : z\leq 0\}$ and $C_+=X\cap\{(x,y,z\in \bbr^3 : z\geq 0\}$,
+with intersection ($\bbr^2\times\{0\})\setminus N(K)$.
+
+But each of $C_-,C_+$ is $\simeq$ a bouquet of $n$ circles, where 
+$n=$ the number of crossings in the projection of $K$.
+
+\ssk
+
+
+
+\vfill
+\end
+

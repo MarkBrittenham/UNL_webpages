@@ -1,0 +1,123 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Problem Set 1}
+
+\msk
+
+Starred (*) problems are due Thursday, January 29.
+
+
+\begin{description}
+
+\item{1.} Show that the cone on a circle $cS^1 = S^1\times I/\sim$,
+where $(x,1)\sim(y,1)$ for $x,y\in S^1$, with the quotient topology,
+is homeomorphic to the unit disk $D^2=\{\vec{x}\in\bbr^2\ :\ ||\vec{x}||\leq 1\}$.
+
+\msk
+
+\item{2.} If $x_0\in A\sset X$ and $\pi_1(X,x_0)=\{1\}$, show that, for any space $Y$, if
+a cts map $f:A\ra Y$ extends to a map $g:X\ra Y$, then $f_*:\pi_1(A,x_0)\ra\pi_1(Y,f(x_0))$
+is the trivial map.
+
+\msk
+
+\item{(*)} 3. [Hatcher, p.38, \#5] Show that $\pi_1(X,x_0)=\{1\}$ for
+every $x_0\in X$ if and only if every cts map $f:S^1\ra X$ extends
+to a map $F:D^2\ra X$ (i.e., for some $F$, we have $F\circ\iota = f$).
+
+\msk
+
+\item{4.} [Hatcher, p.38, \#2] Show that, in general, if 
+$\alpha,\beta:I\ra X$ are paths which are {\it homotopic rel endpoints},
+$\alpha(0)=\beta(0)=x_0$, $\alpha(1)=\beta(1)=x_1$, then their associated change of basepoint
+maps are equal: 
+\hsk ${\alpha}_*={\beta}_*:\pi_1(X,x_0)\ra \pi_1(X,x_1)$.
+
+\msk
+
+\item{\spc} [N.B.: Hatcher calls these maps $\beta_\alpha$ and (sorry...) $\beta_\beta$, for
+reasons I don't understand. Maybe $\beta$ = `basepoint'?]
+
+\msk
+
+\item{5.} [Hatcher, p.38, \#3] Show that for a path-connected space $X$, 
+$\pi_1(X)$ is abelian \lra\ the change of basepoint maps
+are all independent of path, i.e.,  
+
+\hskip.3in for $\alpha,\beta:I\ra X$ with $\alpha(0)=\beta(0)=x_0$ and $\alpha(1)=\beta(1)=x_1$,
+we always have ${\alpha}_*={\beta}_*:\pi_1(X,x_0)\ra \pi_1(X,x_1)$. 
+
+\ssk
+
+\item{\spc} [Useful notation: our hypothesis can be expressed symbolically by saying that $\alpha,\beta$ are maps
+of triples; $\alpha,\beta:(I,0,1)\ra(X,x_0,x_1)$.]
+
+\msk
+
+\item{(*)} 6. Show that every homomorphism $\varphi:\bbz\ra \pi_1(X,x_0)$ can be realized as 
+the induced homomorphism $\varphi=f_*$ of a continuous map $f:(S^1,(1,0))\ra (X,x_0)$. 
+[Hint: Look at $\varphi(1)\in\pi_1(X,x_0)$.]
+
+\msk
+
+\item{(*)} 7. [Hatcher, p.39, \# 13] If $x_0\in A\subseteq X$ and $A$ is path-connected, show that the inclusion-induced map
+$\iota_*:\pi_1(A,x_0)\ra\pi_1(X,x_0)$ is surjective \lra\ for every path $\gamma:I\ra X$ with endpoints in
+$A$, $\gamma(0),\gamma(1)\in A$, $\gamma$ is homotopic rel endpoints to a path in $A$, that is,
+$\gamma\simeq\alpha$ rel $\del I$ with $\alpha:I\ra A\subseteq X$.
+
+\msk
+
+\item{8.} A {\it topological group} is a space $G$ with continuous maps $G\times G\ra G$ and $G\ra G$, denoted
+$(g,h)\mapsto g\cdot h$ and $g\mapsto g^{-1}$, which (together with an $e\in G$) make $G$ a group. Show that
+for loops $\alpha,\beta:(I,\del I)\ra (G,e)$, the loop $\gamma(t)=\alpha(t)\cdot\beta(t)$ is homotopic,
+rel endpoints, to \underbar{both} $\alpha*\beta$ and $\beta*\alpha$. Conclude that for any
+topological group $G$, $\pi_1(G,e)$ is \underbar{abelian}.
+
+\ssk
+
+\item{\spc} [Hint: $\alpha*\beta(t) = (\alpha*c_e)(t)\cdot(c_e*\beta)(t)$.]
+
+
+\end{description}
+\vfill
+
+\end{document}

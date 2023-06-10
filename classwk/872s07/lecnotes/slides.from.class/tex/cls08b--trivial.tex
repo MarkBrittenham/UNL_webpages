@@ -1,0 +1,152 @@
+
+
+\magnification=1800
+\overfullrule=0pt
+\parindent=0pt
+
+\vsize=10 true in
+\voffset=-.3 true in
+\hsize=6.5 true in
+
+\nopagenumbers
+
+\input amstex
+
+\def\ai{a^{-1}}
+\def\bi{b^{-1}}
+\def\ci{c^{-1}}
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+\hskip-.2in {\bf Another non-trivial presentation of the trivial group}
+
+\bsk
+
+$G=\langle a,b,c\ |\ bba\bi\ai,ccb\ci\bi,aac\ai\ci\rangle $
+
+$= \langle a,b,c\ |\ ab\ai=b^2,bc\bi=c^2,ca\ci=a^2\rangle$
+
+
+\msk
+
+Then:
+\hsk
+$ab\ai=b^2$, so $(ab\ai)^{-1} =a\bi\ai =b^{-2}$, 
+
+so $a\bi=b^{-2}a$.
+\hsk
+Also, 
+
+$b^2a=ab$, so $ba\bi=\bi(b^2a)b=\bi(ab)\bi = \bi a$.
+
+\underbar{Also}, 
+
+$b^2ab^{-2}=b(ba\bi)\bi =b\bi a\bi=a\bi =b^{-2}a$.
+
+\ssk
+
+Similarly, $c^2b=bc$, so $cb=\ci bc$, and $c^2bc^{-2}=c^{-2}b$.
+
+\msk
+
+\underbar{Then}: $ca\ci=a^2$, so $b(ca\ci)\bi=b(a^2)\bi$. But
+
+\ssk
+
+$b(ca\ci)\bi=(bc)a(bc)^{-1}=(c^2b)a(c^2b)^{-1}
+=c^2(ba\bi)c^{-2}$
+
+$=c^2(\bi a)c^{-2}=(c^2\bi c^{-2})(c^2ac^{-2})$
+
+$=(c^2bc^{-2})^{-1}c(ca\ci)\ci=(c^{-2}b)^{-1}c(a^2)\ci$
+
+$=\bi c^2(ca\ci)^2=\bi c^2(a^2)^2=\bi c^2a^4$
+
+and
+
+$b(a^2)\bi=(ba\bi)^2=(\bi a)^2=\bi a\bi a
+=\bi(a\bi)a$
+
+$=\bi(b^{-2}a)a=b^{-3}a^2$,
+
+so $\bi c^2a^4=b^{-3}a^2$, 
+
+so $c^2=b(\bi c^2a^4)a^{-4}=b(b^{-3}a^2)a^{-4}=b^{-2}a^{-2}$.
+
+So $c^{-2}=(c^2)^{-1}=(b^{-2}a^{-2})^{-1}=a^2b^2$.
+
+\msk
+
+\underbar{Then} $bc=\ci(cb)c=\ci(\ci bc)c=c^{-2}bc^2$
+
+$=(a^2b^2)b(b^{-2}a^{-2})=a^2ba^{-2}=a(ab\ai)\ai$
+
+$=ab^2\ai=(ab\ai)^2=(b^2)^2=b^4$, 
+
+so $c=\bi(bc)=\bi(b^4)=b^3$.
+
+\msk
+
+So $b^6=c^2=bc\bi=bb^3\bi=b^3$. So $b^3=1$, so $c=1$.
+
+\ssk
+
+Then $a^2=ca\ci=a$, so $a=1$; 
+
+and then $b^2=ab\ai=b$, so $b=1$.
+
+\msk
+
+Consequently, $a=b=c=1$, so $G=\{1\}$.
+
+\vfill
+\end
+
+
+
+
+
+$aaab\ai\bi\ai=$
+\hhsk

@@ -1,0 +1,201 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+
+
+{\bf Some applications:}
+
+\ssk
+
+Given a free group
+$G=F(a_1,\ldots a_n)$ and a collection of words $w_1,\ldots w_m\in G$,
+we can determine the rank and index of the subgroup it $H$ they
+generate by building the corresponding cover. The idea is
+to start with a bouquet of $m$ circles, each subdivided 
+and labelled to spell
+out the words $w_i$. Then we repeatedly identify edges sharing
+on common vertex if they are labeled precisely the same (same
+letter {\it and} same orientation). This process is known
+as {\it folding}. 
+
+\ssk
+
+One can inductively show that the (obvious)
+maps from these graphs to the bouquet of $n$ circles $X_n$ both
+have image $H$ under the induced maps on \mpu ; since the map 
+for the unfolded graph
+factors through the one for the folded graph, the image from the
+folded graph can only get smaller, but we can still spell out
+the same words as loops in the folded graph, so the image can
+also only have gotten bigger! We continue this folding process until there
+is no more folding to be done; the resulting graph $X$ is what is 
+known (in combinatorics) as a {\it graph covering}; the map to $X_n$
+is locally injective. If this map is a covering map, then our subgroup
+$H$ has finite index (equal to the degree of the
+covering) and we can compute the rank of $H$ (and a basis!) from the 
+folded graph. If it is not a covering map, then the map is not locally surjective at
+some vertices; if we graft trees onto these vertices, we can extend the map
+to an (infinite-sheeted) covering map without changing the homotopy
+type of the graph. $H$ therefore has infinite index in $G$, and its
+rank can be computed from $H\cong \pu(X)$. 
+
+\vfill
+\eject
+
+Note that for a graph $\Gamma$ to be a covering of another graph, with $k$ sheets, say,
+the number of vertices and edges of $\Gamma$ must both be a mulitple of $k$. This
+little observation can be very useful when trying to decide what graphs $\Gamma$ might
+cover!
+
+\msk
+
+{\it Kurosh Subgroup Theorem}: If $H < G_1*G_2$ is a subgroup of
+a free product, then $H$ is (isomorphic to) a free product of a
+collection of conjugates of subgroups of $G_1$ and $G_2$ and a 
+free froup. The proof is to build a space by taking 2-complexes
+$X_1$ and $X_2$ with $\pu$'s isomorphic to $G_1,G_2$ and join
+their basepoints by an arc. The covering space of this space $X$
+corresponding to $H$ consists of spaces that cover $X_1,X_2$
+(giving, after basepoint considerations, the conjugates)
+connected by a collection of arcs (which, suitably interpreted,
+gives the free group).
+
+\msk
+
+{\it Residually finite groups}: $G$ is said to be residually finite if for every $g\neq 1$ there is a 
+finite group $F$ and a homomorphism $\varphi: G\ra F$ with $\varphi(g)\neq 1$ in $F$. This 
+amounts to saying that $g\notin$ the (normal) subgroup $\ker(\varphi)$, which amounts to
+saying that a loop corresponding to $g$ does \underbar{not} lift to a loop in the finite-sheeted
+covering space corresponding to $\ker(\varphi)$. So residual finiteness of a group can be
+verified by building coverings of a space $X$ with $\pu(X)=G$. For example, free groups can be
+shown to be residually finite in this way. 
+
+\msk
+
+{\it Ranks of free (sub)groups:} A free group on $n$
+generators is isomorphic to a free group on $m$ generators
+\lra\ $n=m$; this is because the abelianizations of the two 
+groups are ${\Bbb Z}^n,{\Bbb Z}^m$. The (minimal) number of 
+generators for a free group is called its {\it rank}.
+
+
+\vfill
+\eject
+
+
+{\bf Postscript: why care about covering spaces?} The preceding discussion
+probably makes it clear that covering places play a central role in
+(combinatorial) group theory. It also plays a role in embedding 
+problems; a common scenario is to have a map $f:Y\ra X$ which is 
+injective on \mpu , and we wish to know if we can lift $f$ to a 
+finite-sheeted covering so that the lifted map $\widetilde{f}$ is 
+homotopic to an embedding. Information that is easier to obtain 
+in the case of an embedding can then be passed down to gain information
+abut the original map $f$. And covering spaces underlie the 
+theory of analytic continuation in complex analysis; starting
+with a domain $D\subseteq {\Bbb C}$, what analytic continuation really
+builds is an (analytic) function from a covering space of $D$ to ${\Bbb C}$.
+For example, the logarithm is really defined as a map from 
+the universal cover of ${\Bbb C}\setminus\{0\}$ to ${\Bbb C}$. 
+The various ``branches'' of the logarithm refer to which sheet
+in this cover you are in.
+
+
+
+
+\vfill
+\end
+
+
+
+Given words $w_1,\ldots,w_n\in F(x_1,\ldots x_m)$, we can build the covering space correpsonding
+to the subgroup $H=\langle w_1,\ldots,w_n\rangle$ by a process of {\it folding}, in so doing 
+determining the index of $H$ and a basis for $H$ as a free group. 
+
+\msk
+
+The idea is to build a 
+covering $\widetilde{X}$ of the bouquet $X_m$ of $m$ circles, 
+the image of whose fundamental group 
+is $H$. Start with a bouquet $Y$ of $n$ circles, each subdivided and (orientedly) 
+labeled to spell out the words 
+$w_i$. This is a 1-complex; the labeling tells us how to \underbar{map}
+$Y$ to $X_m$. Then inductively, we fold together any two edges at a vertex with the same oriented edge,
+since they are supposed to be mapping together in $X_m$, and that mapping will 
+\underbar{not} give a local homeo!
+Note two things: folding is (almost) a homotopy equivalence, 
+and the original words still always spell out loops in the intermediate folded spaces.
+
+\ssk
+
+Stop when you run out of folds. The ``obvious'' map from the resulting space to $X_m$ is locally
+injective, otherwise we have another fold to do.
+One of two things will occur at the end; either the map is everywhere a local homeo, and so is a covering
+map, or there are points where it is not locally surjective. In the first case, we have succeeded
+in building a finite covering $\widetilde{X}$ with 
+(since the $w_i$ still generate the fundamental group) fundamental group having image $H$, and we can 
+read off the index of and a basis for $H$ from the covering. In the second case, we can
+\underbar{extend} our space $\widetilde{X}$ to a covering by grafting on (infinite) trees, so $H$ has
+infinite index; since the grafted space deformation retracts to $\widetilde{X}$,
+we can still read off a basis for $H$ by the same process.

@@ -1,0 +1,275 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+{\bf Seifert-van Kampen Theorem:}
+
+\msk
+
+If $X={\Cal U}\cup{\Cal V}$ with ${\Cal U},{\Cal V}$ and ${\Cal U}\cap{\Cal V}={\Cal W}$ open and path-connected, and
+$x_0\in{\Cal W}$, then $\pi_1(X,x_0)$ is the pushout of $\pi_1({\Cal U})$ and $\pi_1({\Cal V})$ along $\pi_1({\Cal W})$.
+
+\msk
+
+The basic idea: a proof in two (and a half) parts.
+
+\ssk
+
+The inclusions $i_{\Cal U}:{\Cal U}\ra X$ and $i_{\Cal V}:{\Cal V}\ra X$ induce a homomorphism
+
+\ssk
+
+$\varphi:\pi_1({\Cal U})*\pi_1({\Cal V})\ra\pi_1(X)$. 
+
+\ssk
+
+First step: show that $\varphi$ is surjective
+(using a Lebesgue number argument!). We also have inclusion-induced homomorphisms from the
+maps 
+
+\ssk
+
+$j_{\Cal U}:{\Cal W}\ra {\Cal U}$ and $j_{\Cal V}:{\Cal W}\ra {\Cal U}$. 
+
+\ssk
+
+Second step: show that 
+
+\ssk
+
+$\ker(\varphi)=\langle \{{j_{\Cal U}}_*(\gamma){j_{\Cal V}}_*(\gamma^{-1}) : \gamma\in\pi_1(W)\}\rangle^N$
+
+\ssk
+
+(using a Lebesgue number argument!). Therfore, $\varphi$ induces an isomorphism
+
+$\vartheta:\pi_1({\Cal U})*_{\pi_1({\Cal W})}\pi_1({\Cal V})\ra\pi_1(X)$, as desired.
+
+\msk
+
+The reliance upon a decomposition of $X$ into open sets in the theorem is dictated by our use of Lebesgue numbers. In practice,
+we sidestep this (typically annoying) condition, by decomposing into \u{closed} sets $X=C\cup D$,
+but insist that these sets have open neighborhoods ${\Cal U},{\Cal V}$ so that ${\Cal U},{\Cal V},{\Cal U}\cap{\Cal V}$
+deformation retract to $C,D,C\cap D$ respectively. The closed sets therefore have (essentially)
+the same fundamental groups as the open sets, and the analogous result follows.
+Later we will show how we can always arrange this hypothesis for most ``reasonable''
+closed subsets of ``reasonable'' spaces.
+
+\vfill
+\eject
+
+{\bf Proof, part one:}
+
+\msk
+
+To show that $\varphi:\pi_1({\Cal U})*\pi_1({\Cal V})\ra\pi_1(X)$ is surjective, we wish, given a loop
+
+$\gamma:(I,\del i)\ra(X,x_0)$, to show that $\gamma$ is homotopic rel endpoints to the concatenation of
+loops which each map into either ${\Cal U}$ or ${\Cal V}$. But ${\Cal U},{\Cal V}$ form an open cover of $X$,
+so there is a Lebesgue number $1/n$ for the cover $\gamma^{-1}({\Cal U}),\gamma^{-1}({\Cal V})$ of $I$.
+Partitioning $I$ into $n$ equal pieces, and writing $\gamma_i=\gamma|_{[{{i-1}\over{n}},{{i}\over{n}}]}$,
+each $\gamma_i$ maps into ${\Cal U}$ or ${\Cal V}$. As in our proof of $\pi_1(S^1)\cong \bbz$, we amalgamate
+the subintervals until the subsets they map into alternate between the two as we traverse the interval $I$.
+
+
+\msk
+
+Calling the resulting intervals $I_j=[z_{j-1},z_j]$, $j=1,\ldots,m$, we then have that 
+
+$\gamma(z_j)\in{\Cal U}\cap{\Cal V}$ for every $j$. Since ${\Cal U}\cap{\Cal V}$ is path-connected,
+we can find a path $\alpha_j$ in ${\Cal U}\cap{\Cal V}$ from $z_j$ to $x_0$. 
+We will recycle the notation $\gamma_j=\gamma|_{[z_{j-1},z_j]}$; then
+
+\msk
+
+$\gamma\simeq\gamma_0*\cdots *\gamma_m\simeq
+\gamma_0*(\alpha_1*\overline{\alpha_1})*\gamma_1*\cdots *\gamma_{m-1}*(\alpha_{m-1}*\overline{\alpha_{m-1}})*\gamma_m$
+
+$\simeq 
+(\gamma_0*\alpha_1)*(\overline{\alpha_1}*\gamma_1*\alpha_2)*\cdots *(\overline{\alpha_{m-2}}*
+\gamma_{m-1}*\alpha_{m-1})*(\overline{\alpha_{m-1}}*\gamma_m)$
+
+$=\eta_0*\cdots *\gamma_m$, 
+
+\ssk
+
+which is a concatenation of loops (based at $x_0$) which alternately map into
+${\Cal U}$ and ${\Cal V}$. 
+
+\msk
+
+To be completely pedantic, if we let $\omega_j$=$\eta_j$ with its codomain changed from $X$ to ${\Cal U}$ or ${\Cal V}$
+as appropriate (the $\omega_i$ are continuous, since restriction of codomain preserves continuity (using subspace 
+topologies)), then $[\omega_0]\cdot \cdots \cdot [\omega_m]\in \pi_1({\Cal U})*\pi_1({\Cal V})$, and
+
+\ssk
+
+$\varphi([\omega_0]\cdot \cdots \cdot [\omega_m])=[\eta_0]\cdot \cdots \cdot [\eta_m]=[\eta_0*\cdots *\eta_m]=[\gamma]$,
+so $\varphi$ is surjective, as desired.
+
+\vfill
+\eject
+
+{\bf Proof, part two:}
+
+\msk
+
+It remains to show that $\ker(\varphi)=\langle \{{j_{\Cal U}}_*(\gamma){j_{\Cal V}}_*(\gamma^{-1}) : \gamma\in\pi_1(W)\}\rangle^N={\Cal H}$.
+
+\msk
+
+The containment $\supseteq$ follows by showing that $\varphi({j_{\Cal U}}_*(\gamma){j_{\Cal V}}_*(\gamma^{-1}))=1$
+in $\pi_1(X)$; but $\varphi({j_{\Cal U}}_*(\gamma){j_{\Cal V}}_*(\gamma^{-1}))
+={i_{\Cal U}}_*{j_{\Cal U}}_*(\gamma)\cdot {i_{\Cal V}}_*{j_{\Cal V}}_*(\gamma^{-1}))
+=(i_{\Cal U}\circ j_{\Cal U})_*(\gamma)\cdot (i_{\Cal V}\circ j_{\Cal V})_*(\gamma^{-1})$.
+But since both $(i_{\Cal U}\circ j_{\Cal U})$ and $(i_{\Cal V}\circ j_{\Cal V})$ are equal to the
+inclusion map $\iota:{\Cal U}\cap{\Cal V}\ra X$, 
+we have $\varphi({j_{\Cal U}}_*(\gamma){j_{\Cal V}}_*(\gamma^{-1}))=\iota_*(\gamma)\cdot \iota_*(\gamma^{-1})
+=\iota_*(\gamma\cdot\gamma^{-1})=\iota_*(1)=1$.
+
+\msk
+
+For the opposite containment, suppose that
+$\varphi([\gamma_1]\cdot \cdots \cdot [\gamma_n])=[\gamma_1*\cdots *\gamma_n]=1$
+where each $\gamma_i$ maps into ${\Cal U}$ or ${\Cal V}$. Then we have a homotopy
+rel endpoints $H:I\times I\ra X$ from $\gamma_1*\cdots *\gamma_n$ to the constant
+map at $x_0$. We wish to show that $[\gamma_1]\cdot \cdots \cdot [\gamma_n]$ is equal, 
+in $\pi_1({\Cal U})*\pi_1({\Cal V})$, to a product of conjugates of elements of the 
+form ${j_{\Cal U}}_*(\gamma){j_{\Cal V}}_*(\gamma^{-1})$. 
+
+\msk
+
+As before, we find a Lebesgue number $\epsilon >0$ for the open cover $H^{-1}({\Cal U}),H^{-1}({\Cal V})$ of $I\times I$,
+so that there is an $N$ so that every ${{1}\over{N}}\times{{1}\over{N}}$ subsquare in $I\times I$ maps
+into ${\Cal U}$ or ${\Cal V}$ under $H$. Partitioning $I\times I$ into $N^2$ squares, these squares form $N$ horizontal
+strips, each of height $1/N$. 
+
+\ssk
+
+The proof proceeds by showing that each of the loops
+$\alpha_i:t\mapsto H(t,(N-i)/N)$ lies in ${\Cal H}$, by induction on $i$; the initial case $i=0$ is the constant loop,
+which is immediate, while the case $i=N$ is our desired result. For the inductive step we show that if the
+bottom of one of our horizontal strips lies in ${\Cal H}$ then the top does, as well.
+
+\msk
+
+The one delicate point in what follows is that $\gamma_1*\cdots *\gamma_n$ is given as an explicit product of loops in 
+${\Cal U},{\Cal V}$, and we must remember in our deformations to always be dealing with loops into these two sets, in 
+order to show that \underbar{in} \underbar{the} \underbar{free} \underbar{product} $\gamma_1*\cdots *\gamma_n$
+is a product of conjugates of the form we desire. 
+\vfill
+\eject
+
+We have our domain cut into an $n\times n$ grid, so that each subsquare maps into ${\Cal U}$ or ${\Cal V}$; pick one for 
+each. As before, we amalgamate horizontally adjacent squares if they are labeled the same; then each horizontal strip
+is cut into rectangles which alternate their label. The vertical edges of the rectangles then map into
+${\Cal U})\cap{\Cal V}$, and so their endpoints do, as well. Join each of these endpoints to our basepoint by 
+paths $\eta_{i,j}$. Then the top and bottoms of the strips are
+
+$\gamma_{i,1}*\cdots \gamma_{i,m}\simeq 
+\gamma_{i,1}*(\eta_{i,1}*\overline{\eta_{i,1}})*\gamma_{i,2}*\cdots *\gamma_{i,m-1}*(\eta_{i,m-1}*\overline{\eta_{i,m-1}})*\gamma_{i,m}$
+
+$\simeq
+(\gamma_{i,1}*\eta_{i,1})*(\overline{\eta_{i,1}}*\gamma_{i,2}*\eta_{i,2})*\cdots *\gamma_{i,m-1}*\eta_{i,m-1})*(\overline{\eta_{i,m-1}}*\gamma_{i,m})$
+is a product of loops in ${\Cal U})$ and ${\Cal V}$.
+
+\msk
+
+Our \underbar{real} inductive hypothesis is that the bottom of thr strip has a partition and collection of paths to the basepoint in
+${\Cal U}\cap{\Cal V}$ from those partition points so that the resulting loops (as above), as an element of 
+$\pi_1({\Cal U}))*\pi_1({\Cal V})$, lies in ${\Cal H}$. (Note that this is immediate for the bottom of the square; it is literally
+written as products of loops and their inverses (since we go up and down each path).) 
+The first point is that the partitioning \cltr{coming from the strip and the
+paths chosen there} \underbar{also} express the bottom edge as an element of ${\Cal H}$. This is because we can add the paths from 
+one to the other without changing the element (the added paths map into ${\Cal U}\cap{\Cal V}$, so change nothing, up to homotopy), but then 
+when we change perspectives between the two sets of paths some of the sub-edges may change their label, and these subedges then map into 
+${\Cal U}\cap{\Cal V}$. But this change of label is precisely the same as inserting an element of the form 
+$\alpha={j_{\Cal U}}_*(\gamma)^{-1}{j_{\Cal V}}_*(\gamma)$ (or its inverse) into our group element; multiplication by
+$\alpha$ literally removes ${j_{\Cal U}}_*(\gamma)$ and replaces it with ${j_{\Cal V}}_*(\gamma)$; its inverse does the reverse.
+
+\vfill
+\eject
+
+Dealing with the horizontal strip itself is more straightforward. The top of the strip is homotopic to the bottom, and is equal, 
+in $\pi_1({\Cal U}))*\pi_1({\Cal V})$ to the bottom strip with pairs of loops inserted, namely (top path)*(vertical edge)*(bottom path)
+and its inverse. These inserted loops all map into ${\Cal U}\cap{\Cal V}$, but it is \underbar{thought} \underbar{of} as one copy
+mapping into ${\Cal U}$ and the other into ${\Cal V}$, to match the subset that each subrectangle maps into. Again, this 
+amounts to inserting an element of ${\Cal H}$ into an element of $\pi_1({\Cal U}))*\pi_1({\Cal V})$ which, by the inductive
+hypothesis, also lies in ${\Cal H}$. Therefore the top, partitioned as the subrectangles dictate, lies in ${\Cal H}$.
+
+\msk
+
+This insertion process leaves us in ${\Cal H}$, because:
+
+\ssk
+
+If $uv\in{\Cal H}$ and $w\in{\Cal H}$, then $uwv=(uwu^{-1})(uv)\in{\Cal H}$, since ${\Cal H}$ is normal, so 
+
+$uwu^{-1}\in{\Cal H}$.
+
+\msk
+
+By induction, we are done: $\ker(\varphi)\subseteq{\Cal H}$, so $\ker(\varphi)={\Cal H}$, as desired.
+
+\vfill
+\end
+

@@ -1,0 +1,126 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Problem Set 2}
+
+\msk
+
+Starred (*) problems are due Thursday, February 5.
+
+
+\begin{description}
+
+\item{9.} [Hatcher p.40, \#20] If $H:X\times I\ra X$ is a homotopy
+with $H_0=H_1=$ the identity map, show that
+$\gamma(t)=H(x_0,t)$ is a loop representing an element
+$g=[\gamma]\in\pi_1(X,x_0)$ lying in the center of $\pi_1(X,x_0)$.,
+i.e., $gh=hg$ for all $h\in\pi_1(X,x_0)$
+
+\msk
+
+\item{(*)} 10. Show that $\langle a,b\ |\ a^5=b^4,aba=bab\rangle$ is a(nother) presentation
+for the trivial group (that is, show that the relations imply that $a=1$ and $b=1$).
+
+\msk
+
+\item{11.} (a) Show that the group $\langle a\ |\ a^n\rangle$ is isomorphic to the cyclic group 
+$\bbz_n$ on $n$ elements.
+
+\ssk
+
+\item{\spc} (b) Show that the group $G = \langle a,b,c\ |\ a^2, b^2, c^2, (ab)^3, (ac)^2, (bc)^3\rangle$
+is isomorphic to the symmetric group $S_4$ on four letters. [You can/should model this on our demonstration
+for $S_3$; find a surjective homomorphism to $S_4$, and show that $G$ has at most 24 elements!]
+
+\msk
+
+\item{(*)} 12. [Hatcher, p.52, \#1] Show that the free product $G*H$ of non-trivial
+groups has trivial center; if $x\in G*H$ and $xy=yx$ for every $y\in G*H$, then 
+$x=1$. 
+
+\ssk
+
+\item{\spc} [Hint: show that if $x\neq 1$ then there
+is an element that it \underbar{doesn't} commute with! 
+Think of group elements as products alternately in $G$ and $H$.]
+
+\msk
+
+\item{13.} Show that if $G=\langle A\ |\ R\rangle$, $x\not\in A$, and $w$ is a word in
+the alphabet $A$, then $H=\langle A\cup\{x\}\ |\ R\cup\{xw\}\rangle$ is 
+isomorphic to $G$. That is, build homomorphisms $G\ra H$ and $H\ra G$ that are
+inverses of one another.
+
+\msk
+
+\item{\spc} [This is one of the two {\it Tietze transformations}, that describe how to 
+change presentations without changing the group.]
+
+\msk
+
+\item{14.}  Show that $X=\bbr^2\setminus\bbq^2\subseteq \bbr^2$ is path connected,
+and $\pi_1(X)$ is uncountable. (I.e., find uncountably many loops no two of which are
+homotopic to one another.)
+
+\msk
+
+\item{(*)} 15. Compute (i.e., find a presentation for) the fundamental group of the 
+complement $X$ of the coordinate 
+axes in $\bbr^3$, i.e., $X=\{(x,y,z)\in \bbr^3\ :\ |xy|+|xz|+|yz|\neq 0\}$. 
+
+\ssk
+
+\item{\spc} [Hint: Find a `simpler' space, homotopy equivalent to $X$, to compute the fundamental group of.]
+
+\msk
+
+\item{16.} Show that if $f:\del D^n\ra X$ is the attaching map of an $n$-cell
+$D^n$, with $n\geq 3$, then the inclusion $X\hookrightarrow X\cup_f D^n$ induces
+an isomorphism on $\pi_1$. Show that the same is true if we attach any
+(finite or infinite) collection of $n\geq 3$ cells. 
+
+\msk
+
+\end{description}
+\vfill
+
+\end{document}

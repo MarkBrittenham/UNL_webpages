@@ -1,0 +1,142 @@
+
+\magnification=1900
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+{\bf The homotopy realm}
+
+\ssk
+
+$\pi_1(X,x_0)$ uses loops $\gamma$, but treats two the same if they are
+(based) homotopic. 
+
+If $f,g:X\ra Y$ are homotopic maps, then 
+$f\circ\gamma\simeq g\circ\gamma$, so we expect homotopic maps to
+descend to the ``same'' maps on $\pi_1$. This is almost true; you need to 
+adjust for the change-of-basepoint map $\widehat{\alpha_H}$ for 
+$\alpha_H(t)=H(x_0,t)$, since the homotopy will drag the basepoint
+along this path. So $\pi_1$ is fairly insensitive to homotopies.
+This motivates:
+
+\ssk
+
+Spaces $X,Y$ are {\it homotopy equivalent} if there are $f:X\ra Y$ and $g:Y\ra X$ so that
+$f\circ g\simeq I_Y$ and $g\circ f\simeq I_X$ (via $H$ and $K$). If $\alpha_H,\alpha_K$
+are the traces of the basepoints, then 
+$f_*\circ g_*=\widehat{\alpha_H}$ and $g_*\circ f_*=\widehat{\alpha_K}$ are isomorphisms,
+so $f_*,g_*$ are isomorphisms. So homotopy equivalent spaces have isomorphic
+fundamental groups. 
+
+\ssk
+
+A special case: $A\subseteq X$, $r:X\ra A$ is a retraction ($r\circ \iota=I_A$), and 
+$\iota\circ r\simeq I_X$ (via a homotopy $H$). $A$ is then called a {\it reformation retract} of $X$.
+If $H$ fixes $A$ (i.e., $H(a,t)=a$ for all $a\in A$), then $A$ is a {\it strong
+deformation retract} of $X$. In both cases, $\iota_*:\pi_1(A)\ra \pi_1(X)$
+is an isomorphism. A space is {\it contractible} if it deformation retracts to a
+point (e.g., $I,D^n,\bbr^n$). Contractible spaces have trivial fundamental group.
+Path-connected spaces $X$ with $\pi_1(X)=\{1\}$ is called {\it simply connected}.
+
+\msk
+
+A loop $\gamma:(I,\del I)\ra (X,_0)$ induces a map $\gamma_1:S^1\cong I/{0,1}\ra X$ .
+Elements of $\pi_1(X,x_0)$ can be thought of as homotopy (of pairs) classes of maps
+$(S^1,1)\ra (X,x_0)$. 
+
+From this perspective, $\gamma:S^1\ra X$ represents the 
+identity in $\pi_1(X)$ \lra\ $\gamma$ extends to a map $\Gamma:D^2\ra X$. 
+(The extension is $\Gamma(re^{2\pi i\theta})=H(\theta,1-r)$.)
+
+\ssk
+
+Similarly, two paths $\alpha,\beta:I\ra X$ joining the same pair of points
+$x_0,x_1\in X$ are homotopic rel endpoints (i.e., the maps $(I\del I)\ra(X,\{x_0,x_1\})$
+are homotopic as maps of pairs) \lra\ the loop $\alpha *\overline{\beta}$ is 
+trivial in $\pi_1(X,x_0)$. So, for
+example, in a contractible space, any two paths between the same two points are
+homotopic rel endpoints.
+
+\vfill
+\end
+
+A loop is map $\gamma:I\ra X$ with $\gamma(0)=\gamma(1)=x_0$; it therefore 
+decends to a well-defined map of the quotient space $I/{0,1}\cong S^1$ to $X$,
+and so a loop can be thought of as a map from the unit circle $(S^1,1)\ra(X,x_0)$. Elements of
+$\pi_1(X,x_0)$ could have been defined as equivalence classes of such maps
+under homotopy of pairs (it is not difficult to see how to lift such a 
+homotopy to a homotopy $(I\times I,\del I\times I)\ra (X,x_0)$). The 
+multiplication is a little more convoluted to work out; the reader is 
+invited to do so. From this perspective, though, understanding 
+what the identity element looks like has a more geometric feel:
+$\gamma:S^1\ra X$ represents the identity in $\pi_1(X)$ \lra\
+$\gamma$ extends to a map $\Gamma:D^2\ra X$ ( i.e., $\Gamma|_{\del D^2}=\gamma$),
+where $D^2$ is the unit disk in $\bbr^2$. The basic idea is that if $\gamma$
+is trivial, there is a homotopy $S^1\times I\ra X$ which on $S^1\times \{0\}$ is
+$\gamma$ and which sends $Y=\{1\}\times I\cup S^1\times \{1\}$ to $x_0$.
+The homotopy descends to a map from $S^1\times I$, with $Y$ crushed to a point, to $X$.
+But $S^1\times I/Y$ is homeomorphic to $D^2$, with $S^1\times\{0\}$ being sent to $\del D^2$;
+the composition $D^2\ra S^1\times I/Y\ra X$ is the desired extension.
+
+In a similar vein, two paths $\alpha,\beta:I\ra X$ joining the same pair of points
+$x_0,x_1\in X$ are homotopic rel endpoints (i.e., the maps $(I\del I)\ra(X,\{x_0,x_1\})$
+are homotopic as maps of pairs) \lra\ the loop $\alpha *\overline{\beta}$ is 
+trivial in $\pi_1(X,x_0)$. (The extension to $D^2$ is built from the
+homotopy by crushing each of the vertical boundary segments to points.) So, for
+example, in a contractible space, any two paths between the same two points are
+homotopic rel endpoints.
+
+

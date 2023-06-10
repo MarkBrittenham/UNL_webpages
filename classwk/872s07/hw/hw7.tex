@@ -1,0 +1,131 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+\nopagenumbers
+
+\input amstex
+
+\input epsf
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\bra{$\Rightarrow$}
+\def\bbr{{\Bbb R}}
+\def\bbz{{\Bbb Z}}
+\def\bbq{{\Bbb Q}}
+\def\del{\partial}
+\def\indt{\item{}}
+\def\wtl{\widetilde}
+\def\coker{\text{coker}}
+\def\im{\text{im}}
+\def\wtih{\widetilde{H}}
+
+\ctln{\bf Math 872 Algebraic Topology}
+
+\ssk
+
+\ctln{Problem Set \#\ 7}
+
+\ssk
+
+\ctln{Starred (*) problems due Thursday, April 5}
+
+\bsk
+
+\item{\bf (*) 33.} Find examples of spaces and subspaces
+$A_0\subseteq X_0$ and $A_1\subseteq X_1$ so that
+$H_*(X_0)\cong H_*(X_1)$ and $H_*(A_0)\cong H_*(A_1)$,
+but $H_*(X_0,A_0)\not\cong H_*(X_1,A_1)$ . (If you want to make
+it more challenging, find examples with all of the spaces path-connected?
+Note that Problem \#35 gives a hint on how \u{not} to solve this problem...)
+
+\msk
+
+\item{\bf 34.} Show that if $A\subseteq X$ and the identity map 
+$I:X\ra X$ is homotopic 
+to a map $f:X\ra X$ with $f(X)\subseteq A$, then
+for every $n$, $H_n(A)\cong H_n(X)\oplus H_{n+1}(X,A)$.
+
+\item{} (So $A$ has more ``holes'' than $X$ does...)
+
+\msk
+
+\item{\bf 35.} (a): Let $f:(X,A)\ra (Y,B)$ be a map of pairs such that
+both $f:X\ra Y$ and $f:A\ra B$ are homotopy equivalences. Show that
+the induced map $f_*:H_n(X,A)\ra H_n(Y,B)$ is an isomorphism for all $n$.
+
+\ssk
+
+\item{} (b): Show that the inclusion map $\iota:(D^n,\del D^n)\ra (D^n,D^n\setminus \{0\})$
+satisfies the hypotheses of (a), but is \u{not} a {\it homotopy of pairs}, that is, there
+is \u{not} a map 
+
+\item{} $f:(D^n,D^n\setminus \{0\})\ra (D^n,\del D^n)$ so that $f\circ \iota$ and $\iota\circ f$
+are both homotopic, as maps of pairs, to the identity maps.
+
+
+\msk
+
+\item{\bf 36.} Compute the singular homology groups of the pseudo-projective 
+planes $P_n$, $n\geq 2$, shown below, where the boundary has been subdivided into $n$ equal arcs.
+
+\msk
+
+
+
+\ctln{\vbox{\hsize=1.4in
+\leavevmode
+\epsfxsize=1.4in
+\epsfbox{hw7.eps}}}
+
+
+
+\msk
+
+\item{\bf (*) 37.} For a space $X$ the {\it cone} on $X$ is the quotient space 
+
+\item{} $cX=X\times I/\{(x,0)\sim (y,0) : x,y\in X\}$ = $X\times I/X\times \{0\}$,
+and the {\it suspension} of $X$ is the quotient space 
+$SX=X\times I/\{(x,0)\sim (y,0) , (x,1)\sim (y,1) : x,y\in X\}$,
+which can be thought of as two cones on $X$ glued along their common copy of $X$.
+Show that for any path connected space $X$, $\wtih_i(cX)=0$ and $\wtih_i(SX)\cong \wtih_{i-1}(X)$
+for all $i$.
+
+\msk
+
+\item{\bf 38.} Show that, for any collection of finitely generated abelian groups $G_1,\ldots ,G_n$,
+there is a path-connected space $X$ with $\wtih_i(X)\cong G_i$ for all $i=1,\ldots,n$ and
+$\wtih_i(X)=0$ for all other $i$.
+
+\vfill
+\end
+
+
+
+
+
+
+
+
+
+\ctln{\vbox{\hsize=4in
+\leavevmode
+\epsfxsize=4in
+\epsfbox{hw6.ai}}}
+
+

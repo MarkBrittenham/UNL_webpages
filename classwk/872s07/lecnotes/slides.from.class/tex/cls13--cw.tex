@@ -1,0 +1,169 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+
+{\bf CW complexes:} The ``right'' spaces to do algebraic topology on.
+
+\msk
+
+The basic idea: CW complexes are built inductively, by gluing 
+disks onto lower-dimensional strata. $X=\bigcup X^{(n)}$, where
+
+\ssk
+
+$X^{(0)}$ = a disjoint union of points, and, inductively,
+
+\ssk
+
+$X^{(n)}$ is built from $X^{(n-1)}$ by gluing $n$-disks $D^n_i$
+along their boundaries. That is we have $f_i:\del D^n_i\ra X^{(n-1)}$
+and $X^{(n)}=X^{(n-1)}\cup(\coprod D^n_i)/\sim$ where
+$x\sim f_i(x)$ for all $x\in\del D^n_i$. We have (natural)
+inclusions $X^{(n-1)}\subseteq X^{(n)}$, and $X=\bigcup X^{(n)}$
+is given the {\it weak topology}; that is,  $C\subseteq X$ is closed \lra\
+$C\cap X^{(n)}$ is closed for all $n$. 
+
+(Note: this is reasonable;
+$X^{(n-1)}$ is closed in $X^{(n)}$ for all $n$.)
+
+\ssk
+
+Each disk $D^n_i$ has a {\it characteristic map} $\phi_i:D^n_i\ra X$
+given by 
+
+$D^n_i\ra X^{(n-1)}\cup(\coprod D^n_i)\ra X^{(n)}\subseteq X$.
+
+$f:X\ra Y$ is cts \lra\ $f\circ \phi_i:D^n_i\ra X\ra Y$ is cts for 
+all $D^n_i$. 
+
+(This is a consequence of using the weak topology.) 
+
+\msk
+
+A {\it CW pair} $(X,A)$ is a CW complex $X$ and a {\it subcomplex}
+$A$, which is a subset which is a union of images of cells, so it is 
+a CW complex in its own right. We can induce CW structures under
+many standard constructions; e.g., if $(X,A)$ is a CW pair, then
+$X/A$ admits a CW structure whose cells are $[A]$ and the cells of 
+$X$ not in $A$. We can glue two CW complexes $X,Y$ along isomorphic
+subcomplexes $A\subseteq X,Y$, yielding $X\cup_AY$.
+
+\msk
+
+``CW''=closure finiteness, weak topology
+
+\vfill
+\eject
+
+Perhaps the most important property of CW complexes (for algebraic topology,
+anyway) is the {\it homotopy extension property}; given a CW pair
+$(X,A)$, a map $f:X\ra Y$, and a homotopy $H:A\times I\ra Y$ such that
+$H|_{A\times 0}=f|_A$, there is a homotopy (extension)
+$K:X\times I\ra Y$ with $K|_{A\times I}=H$. This is because 
+$B=X\times\{0\}\cup A\times I$ is a retract of $X\times I$; $K$ is the 
+composition of this retraction and the ``obvious'' map from $B$ to $Y$.
+
+\ssk
+
+To build the retraction, we do it one cell of $X$ at a time. The idea is that
+the retraction is defined on the cells of $A$ (it's the identity), so look
+at cells of $X$ not in $A$. Working our way up in dimension, we can assume
+the the retraction $r_{n-1}$
+is defined on (the image of) $\del D^n\times I$, i.e., on $X^{(n-1)}\times I$.
+But $D^n\times I$ (strong deformation) retracts onto 
+$D^n\times 0\cup \del D^n\times I$; composition of $r_{n-1}$ with 
+this retraction extends the retraction over $\phi(D^n)\times I$, and 
+so over $X^{(n)}\times I$..
+
+\msk
+
+This, for example, lets us show that if $(X,A)$ is a CW pair and 
+$A$ is contractible, then $X/A\simeq X$. This is because the
+composition $A\ra *\ra A$ is homotopic to the identity $I_A$, via some map
+$H:A\times I\ra A$, with $H|_{A\times 0}=I_A$. Thinking of $H$ as
+mapping into $X$, then together with the map $I_X:X\ra X$ the HEP
+provides a map $K:X\times I\ra X$ with $K_0=I_X$ and $K_1(A)=*$.
+Setting $K_1=g:X\ra X$, it induces a map $h:X/A\ra X$. This is a homotopy
+inverse of the projection $p:X\ra X/A$:
+
+\msk
+
+$h\circ p=g\simeq I_X$ via $K$, and $p\circ h:X/A\ra X/A$
+is homotopic to $I_{X/A}$ since $K_t(A)\subseteq A$ for every $t$,
+so induces a map $\overline{K}_t:X/A\ra X/A$, giving a homotopy
+between 
+
+$\overline{K}_0=\overline{I_X}=I_{X/A}$ and 
+$\overline{K}_1=\overline{g}=p\circ h$.
+
+
+\vfill
+\end
+
+
+
+
+
+
+

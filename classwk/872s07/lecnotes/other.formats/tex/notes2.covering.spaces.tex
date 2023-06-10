@@ -1,0 +1,766 @@
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+%\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cltp{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\clto{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cltpk{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\clts{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\cltbb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\cltrp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cltp{\Purple}	  % Purple  Approximate PANTONE PURPLE
+
+\def\cgy{\GreenYellow}     % GreenYellow  Approximate PANTONE 388
+\def\cyy{\Yellow}	  % Yellow  Approximate PANTONE YELLOW
+\def\cgo{\Goldenrod}	  % Goldenrod  Approximate PANTONE 109
+\def\cda{\Dandelion}	  % Dandelion  Approximate PANTONE 123
+\def\capr{\Apricot}	  % Apricot  Approximate PANTONE 1565
+\def\cpe{\Peach}		  % Peach  Approximate PANTONE 164
+\def\cme{\Melon}		  % Melon  Approximate PANTONE 177
+\def\cyo{\YellowOrange}	  % YellowOrange  Approximate PANTONE 130
+\def\coo{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cbo{\BurntOrange}	  % BurntOrange  Approximate PANTONE 388
+\def\cbs{\Bittersweet}	  % Bittersweet  Approximate PANTONE 167
+%\def\creo{\RedOrange}	  % RedOrange  Approximate PANTONE 179
+\def\cma{\Mahogany}	  % Mahogany  Approximate PANTONE 484
+\def\cmr{\Maroon}	  % Maroon  Approximate PANTONE 201
+\def\cbr{\BrickRed}	  % BrickRed  Approximate PANTONE 1805
+\def\crr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cor{\OrangeRed}	  % OrangeRed  No PANTONE match
+\def\paru{\RubineRed}	  % RubineRed  Approximate PANTONE RUBINE-RED
+\def\cwi{\WildStrawberry}  % WildStrawberry  Approximate PANTONE 206
+\def\csa{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\ccp{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\cmag{\Magenta}	  % Magenta  Approximate PANTONE PROCESS-MAGENTA
+\def\cvr{\VioletRed}	  % VioletRed  Approximate PANTONE 219
+\def\parh{\Rhodamine}	  % Rhodamine  Approximate PANTONE RHODAMINE-RED
+\def\cmu{\Mulberry}	  % Mulberry  Approximate PANTONE 241
+\def\parv{\RedViolet}	  % RedViolet  Approximate PANTONE 234
+\def\cfu{\Fuchsia}	  % Fuchsia  Approximate PANTONE 248
+\def\cla{\Lavender}	  % Lavender  Approximate PANTONE 223
+\def\cth{\Thistle}	  % Thistle  Approximate PANTONE 245
+\def\corc{\Orchid}	  % Orchid  Approximate PANTONE 252
+\def\cdo{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\cpu{\Purple}	  % Purple  Approximate PANTONE PURPLE
+\def\cpl{\Plum}		  % Plum  VERY-Approx PANTONE 518
+\def\cvi{\Violet}	  % Violet  Approximate PANTONE VIOLET
+\def\clrp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cbv{\BlueViolet}	  % BlueViolet  Approximate PANTONE 2755
+\def\cpe{\Periwinkle}	  % Periwinkle  Approximate PANTONE 2715
+\def\ccb{\CadetBlue}	  % CadetBlue  Approximate PANTONE (534+535)/2
+\def\cco{\CornflowerBlue}  % CornflowerBlue  Approximate PANTONE 292
+\def\cmb{\MidnightBlue}	  % MidnightBlue  Approximate PANTONE 302
+\def\cnb{\NavyBlue}	  % NavyBlue  Approximate PANTONE 293
+\def\crb{\RoyalBlue}	  % RoyalBlue  No PANTONE match
+%\def\cbb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cce{\Cerulean}	  % Cerulean  Approximate PANTONE 3005
+\def\ccy{\Cyan}		  % Cyan  Approximate PANTONE PROCESS-CYAN
+\def\cpb{\ProcessBlue}	  % ProcessBlue  Approximate PANTONE PROCESS-BLUE
+\def\csb{\SkyBlue}	  % SkyBlue  Approximate PANTONE 2985
+\def\ctu{\Turquoise}	  % Turquoise  Approximate PANTONE (312+313)/2
+\def\ctb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\caq{\Aquamarine}	  % Aquamarine  Approximate PANTONE 3135
+\def\cbg{\BlueGreen}	  % BlueGreen  Approximate PANTONE 320
+\def\cem{\Emerald}	  % Emerald  No PANTONE match
+%\def\cjg{\JungleGreen}	  % JungleGreen  Approximate PANTONE 328
+\def\csg{\SeaGreen}	  % SeaGreen  Approximate PANTONE 3268
+\def\cgg{\Green}	  % Green  VERY-Approx PANTONE GREEN
+\def\cfg{\ForestGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cpg{\PineGreen}	  % PineGreen  Approximate PANTONE 323
+\def\clg{\LimeGreen}	  % LimeGreen  No PANTONE match
+\def\cyg{\YellowGreen}	  % YellowGreen  Approximate PANTONE 375
+\def\cspg{\SpringGreen}	  % SpringGreen  Approximate PANTONE 381
+\def\cog{\OliveGreen}	  % OliveGreen  Approximate PANTONE 582
+\def\pars{\RawSienna}	  % RawSienna  Approximate PANTONE 154
+\def\cse{\Sepia}		  % Sepia  Approximate PANTONE 161
+\def\cbr{\Brown}		  % Brown  Approximate PANTONE 1615
+\def\cta{\Tan}		  % Tan  No PANTONE match
+\def\cgr{\Gray}		  % Gray  Approximate PANTONE COOL-GRAY-8
+\def\cbl{\Black}		  % Black  Approximate PANTONE PROCESS-BLACK
+\def\cwh{\White}		  % White  No PANTONE match
+
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+
+
+
+\ctln{\bf Math 872 \hsk Algebraic Topology}
+
+\ssk
+
+\ctln{Running lecture notes}
+
+\bsk
+
+
+{\bf Covering spaces:} We can motivate our next topic by looking more
+closely at one of our examples above. The projective plane ${\Bbb R}P^2$
+has $\pu = {\Bbb Z}_2$ . It is also the quotient of the simply-connected
+space $S^2$ by the antipodal map, which, together with the identity map,
+forms a group of homeomorphisms of $S^2$ which is isomorphic to ${\Bbb Z}_2$.
+The fact that ${\Bbb Z}_2$ has this dual role to play in describing 
+${\Bbb R}P^2$ is no accident; codifying this relationship requires the 
+notion of a covering space.
+
+\msk
+
+The quotient map $q:S^2\ra {\Bbb R}P^2$ is an example of a {\it covering map}.
+A map $p:E\ra B$ is called a covering map if for every point $x\in B$, there
+is a neighborhood ${\Cal U}$ of $x$ (an
+{\it evenly covered neighborhood}) so that $p^{-1}({\Cal U})$ 
+is a disjoint union ${\Cal U}_\alpha$ of open sets in $E$, each mapped
+homeomorphically onto ${\Cal U}$ by (the restriction of) $p$ . $B$ is
+called the {\it base space} of the covering; $E$ is called the {\it total
+space}. The quotient map $q$ is an example; (the image of) the complement
+of a great circle in $S^2$ will be an evenly covered neighborhood
+of any point it contains. The disjoint union of 43 copies of a space,
+each mapping homeomorphically to a single copy, is an example of a 
+{\it trivial covering}. As a last example, we have the famous 
+exponential map $p:{\Bbb R}\ra S^1$ given by $t\mapsto e^{2\pi it} = 
+(\cos (2\pi t),\sin (2\pi t))$. The image of any interval $(a,b)$ of length
+less than 1 will have inverse image the disjoint union of the
+intervals $(a+n,b+n)$ for $n\in{\Bbb Z}$ .
+
+\msk
+
+OK, maybe not the last. We can build many finite-sheeted (every point
+inverse is finite) coverings of a bouquet of two circles, say, by 
+assembling $n$ points over the vertex, and then, on either side,
+connecting the points by $n$ (oriented) arcs, one each going in and out of
+each vertex. By choosing orientations on each 1-cell of the bouquet,
+we can build a covering map by sending the vertices above to the
+vertex, and the arcs to the one cells, homeomorphically, respecting 
+the orientations. We can build infinite-sheeted coverings in much 
+the same way.
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{0208f1.ai}}}
+
+
+\bsk
+
+Covering spaces of a (suitably nice) space $X$ have a very close relationship
+to $\pu(X,x_0)$. The basis for this relationship is the
+
+\msk 
+
+{\bf Homotopy Lifting Property:} If $p:\wtl{X}\ra X$ is a covering map, 
+$H:Y\times I\ra X$ is a homotopy, $H(y,0)=f(y)$, and
+$\wtl{f}:Y\ra \wtl{X}$ is a {\it lift} of $f$ (i.e., $p\circ \wtl{f}=f$),
+then there is a unique lift $\wtl{H}$ of $H$ with $\wtl{H}(y,0)=\wtl{f}(y)$ .
+
+\msk
+
+The {\bf proof} of this we will defer to next time, to give us sufficient time to ensure we
+finish it!
+
+\msk
+
+ In particular, applying this property in the case $Y=\{*\}$, where a homotopy
+$H:\{*\}\times I\ra X$ is really just a a path $\gamma:I\ra X$,
+we have the {\bf Path Lifting Property}: ``given 
+a covering map $p:\wtl{X}\ra X$, a path 
+$\gamma:I\ra X$ with $\gamma(0)=x_0$, and a point 
+$\wtl{x}_0\in p^{-1}(x_0)$, there is a unique path $\wtl{\gamma}$
+lifting $\gamma$ with $\wtl{\gamma}(0)=\wtl{x}_0$ .'' One of the 
+immediate consequences of this is one of the cornerstones of covering space
+theory:
+
+\bsk  
+
+If $p:(\wtl{X},\tilde{x}_0)\ra (X,x_0)$ is a covering map, then the 
+induced homomorphism $p_*:\pu(\wtl{X},\wtl{x}_0)\ra \pu(X,x_0)$ is
+injective.
+
+\msk
+
+{\bf Proof:} Suppose $\gamma:(I,\del I)\ra (\wtl{X},\wtl{x}_0)$ is a 
+loop $p_*([\gamma])=1$ in $\pu(X,x_0)$. So there is a homotopy
+$H:(I\times I,\del I\times I)\ra (X,x_0)$ between $p\circ\gamma$ and the constant 
+path. By homotopy lifting, there is a homotopy $\wtl{H}$ from $\gamma$ to 
+the lift of the constant map at $x_0$. The vertical sides 
+$s\mapsto \wtl{H}(0,s),\wtl{H}(1,s)$ are also lifts of the 
+constant map, beginning from 
+$\wtl{H}(0,0),\wtl{H}(1,0)=\gamma(0)=\gamma(1)=\wtl{x}_0$, so
+are the constant map at $\wtl{x}_0$. Consequently, the lift at the 
+bottom is the constant map at $\wtl{x}_0$. So $\wtl{H}$
+represents a null-homotopy of $\gamma$, so $[\gamma]=1$
+in $\pu(\wtl{X},\wtl{x}_0)$. So $\pu(\wtl{X},\wtl{x}_0)=\{1\}$ .
+
+\msk
+
+Even more, the image $p_*(\pu(\wtl{X},\wtl{x}_0)))\sset \pu(X,x_0)$
+is precisely the elements whose representatives are loops at $x_0$, 
+which when
+lifted to paths starting at $\wtl{x}_0)$, are loops. 
+For if $\gamma$ lifts
+to a loop $\wtl{\gamma}$, then $p\circ\wtl{\gamma}=\gamma$, so
+$p_*([\wtl{\gamma}])=[\gamma]$ . Conversely, if 
+$p_*([\wtl{\gamma}])=[\gamma]$, then $\gamma$ and $p\circ\wtl{\gamma}$
+are homotopic rel endpoints, and so the homotopy lifts to 
+a homotopy rel endpoints between the lift of $\gamma$ at 
+$\wtl{x}_0$, and the lift of $p\circ\wtl{\gamma}$ at $\wtl{x}_0$
+(which is $\wtl{\gamma}$, since $\wtl{\gamma}(0)=\wtl{x}_0$ and
+lifts are unique). So the lift of $\gamma$ is a loop, as desired.
+
+\bsk
+
+
+The {\bf proof} of the homotopy lifting property follows a pattern 
+that we will become 
+very familiar with: we lift maps a little bit at a time. For every $x\in X$
+there is an open set ${\Cal U}_x$ evenly covered by $p$ . For each fixed
+$y\in Y$, since $I$ is compact and the sets $H^{-1}({\Cal U}_x)$ form an
+open cover of $Y\times I$, then since $I$ is compact, 
+the Tube Lemma provides an open neighborhood 
+${\Cal V}$ of $y$ in $Y$ and finitely many $p^{-1}{\Cal U}_{x}$ whose union
+covers ${\Cal V}\times I$ . 
+
+\msk
+
+To define $\wtl{H}(y,t)$, we (using a Lebesgue number argument) cut the
+interval $\{y\}\times I$ into finitely many pieces, the $i$th mapping into 
+ ${\Cal U}_{x_i}$ under $H$. $\wtl{f}(y)$ is in one of the evenly covered
+sets ${\Cal U}_{x_1\alpha_1}$, and the restricted map 
+$p^{-1}:{\Cal U}_{x_1}\ra {\Cal U}_{x_1\alpha_1}$ following $H$ restricted
+to the first interval lifts $H$ along the first interval to a map 
+we will call $\wtl{H}$. We then have 
+lifted $H$ at the end of the first interval = the beginning of the second, 
+and we continue as before. In this way we can define $\wtl{H}$ for all
+$(y,t)$ . To show that this is independent of the choices we have
+made along the way, we imagine two ways of cutting up the interval 
+$\{y\}\times I$ using evenly covered neighborhoods ${\Cal U}_{x_i}$
+and ${\Cal V}_{w_j}$, and take intersections of both sets of intervals
+to get a common refinement of both sets, covered by the intersections
+${\Cal U}_{x_i}\cap {\Cal V}_{w_j}$, and imagine building $\wtl{H}$ using
+the refinement. At the start, at $\wtl{f}(y)$, we are in 
+${\Cal U}_{x_1\alpha_1}\cap {\Cal V}_{w_1\beta_1}$. Because at the 
+start of the lift $(y,0)$ we lift to the same point, and $p^{-1}$ restricted 
+to this intersection agrees with $p^{-1}$ restricted to each of the two
+pieces, we get the same lift acroos the first refined subinterval. This
+process repeats itself across all of the subintervals, showing that
+the lift is independent of the choices made. This also shows that
+the lift is unique; once we have decided what $\wtl{H}(y,0)$, the
+rest of the values of the $\wtl{H}$ are determined by the requirement
+of being a lift. also, once we know the map is well-defined, we can see
+that it is continuous, since for any $y$, we can make the same choices
+across the entire open set $V$ given by the Tube Lemma, and find
+that $\wtl{H}$, restricted to ${\Cal V}\times(a_i-\delta,b_i+\delta)$
+(for a small delta; we could wiggle the endpoints in the construction
+without changing the resulting function, by its well-definedness)
+is $H$ estricted to this set followed by $p^{-1}$ restriced in domain 
+and range, so this composition is continuous. So $\wtl{H}$
+is locally continuous, hence continuous.
+
+\msk
+
+So, for example, if we build a 5-sheeted cover of the bouquet of 2 circles, 
+as before, (after choosing a maximal tree upstairs) 
+we can read off the images of the generators of the fundamental group
+of the total space; we have labelled each ede by the ereator it
+traces out downstairs, and for each ede outside of the maximal tree
+chosen, we read from basepoint out the tree to one end, across the edge,
+and then back to the basepoint in the tree. In our example, this
+gives:
+
+
+\msk
+
+\ctln{$<ab,aaab^{-1}, baba^{-1},baa,ba^{-1}bab^{-1},bba^{-1}b^{-1} | >$}
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{0208f2.ai}}}
+
+
+\bsk
+
+This is (from its construction) a copy of the free group on 6 letters,
+in the free group $F(a,b)$ . In a similar way, by explicitly building
+a covering space, we find that the fundamental group of a closed 
+surface of genus 3 is a subgroup of the fundamental group of the 
+closed surface of genus 2. 
+
+\msk
+
+The cardinality of a point inverse $p\inv(y)$ is, by the evenly
+covered property, constant on (small) open sets, so the set of 
+points of $x$ whose point inverses have any given cardinality
+is open. Consequently, if $X$ is connected, this number
+is constant over all of $X$, and is called the number of {\it sheets}
+of the covering $p:\wtl{X}\ra X$ . 
+
+\bsk
+
+
+The number of sheets of a covering map can also be determined 
+from the fundamental groups:
+
+\msk
+
+{\bf Proposition:} If $X$ and $\wtl{X}$ are 
+path-connected, then the number of sheets of a covering map equals
+the index of the subgroup $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$G=\pu(X,x_0)$ . 
+
+\msk
+
+To see this, choose loops $\{\gamma_\alpha\}$ representing representatives $\{g_\alpha\}$ of each of the (right) cosets of $H$ in $G$. Then if we lift
+each of them to loops based at $\wtl{x}_0$, they will have distinct
+endpoints; if $\wtl{\gamma}_1(1)=\wtl{\gamma}_2(1)$, then 
+by uniqueness of lifts, $\gamma_1*\overline{\gamma_2}$ lifts to 
+$\wtl{\gamma}_1*\overline{\wtl{\gamma}_2}$, so it
+lifts to a loop, so $\gamma_1*\overline{\gamma_2}$ represents
+an element of $p_*(\pu(\wtl{X},\wtl{x}_0)$, so $g_1=g_2$.
+Conversely, every point in $p\inv(x_0)$ is the endpoint of on of these
+lifts, since we can construct a path $\wtl{\gamma}$
+from $\wtl{x}_0$ to any such point $y$, giving a loop
+$\gamma=p\circ \wtl{\gamma}$ representing an element $g\in\pu(X,x_0)$.
+But then $g=hg_\alpha$ for some $h\in H$ and $\alpha$, 
+so $\gamma$ is homotopic rel endpoints to $\eta*\gamma_\alpha$ for some loop
+$\eta$ representing $h$. But then lifting these based at $\wtl{x}_0$, by hmotopy
+lifting, $\wtl{\gamma}$ is homotopic rel endpoints to $\wtl{\eta}$, which is a 
+loop, followed by the lift $\wtl{\gamma}_\alpha$ of $\gamma_\alpha$
+starting at $\wtl{x}_0$. So $\wtl{\gamma}$ and 
+$\wtl{\gamma}_\alpha$ have the same value at 1.
+
+\ssk
+
+Therefore, lifts of representatives of coset representatives of $H$ in $G$ give
+a 1-to-1 correspondence, given by $\wtl{\gamma}(1)$, with $p\inv{x_0}$.
+In particular, they have the same cardinality.
+
+\msk
+
+The path lifting property (because $\pi([0,1],0)=\{1\}$) is actually a special
+case of a more general {\bf lifting criterion}: If 
+$p:(\wtl{X},\wtl{x}_0)\ra (X,x_0)$ is a covering map, and 
+$f:(Y,y_0)\ra (X,x_0)$ is a map, where
+$Y$ is path-connected and locally path-connected, then there is a lift 
+$\wtl{f}:(Y,y_0)\ra (\wtl{X},\wtl{x}_0)$ of $f$ (i.e., 
+$f=p\circ\wtl{f}$) $\Leftrightarrow$ 
+$f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$ . 
+Furthermore, two lifts of $f$ which agree at a single point are equal.
+
+\msk
+
+If the lift exists, then $f=p\circ\wtl{f}$ implies 
+$f_*=p_*\circ\wtl{f}_*$, so 
+$f_*(\pu(Y,y_0)) = p_*(\wtl{f}_*(\pu(Y,y_0)))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$ , as desired.
+Conversely, if $f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$,
+then we wish to build the lift of $f$. Not wishing to waste our work on the
+special case, we will {\it use} path lifting to do it! Given $y\in Y$,
+choose a path $\gamma$ in $Y$ from $y_0$ to $y$ and use path
+lifting in $X$ to lift the path $f\circ\gamma$ to a path $\wtl{f\circ\gamma}$ with 
+$\wtl{f\circ\gamma}(0)=\wtl{x}_0$ . Then define
+$\wtl{f}(y)=\wtl{f\circ\gamma}(1)$ . Provided we show that
+this is well-defined and continuous, it is our required lift, 
+since $(p\circ\wtl{f})(y) = p(\wtl{f}(y))=p(\wtl{f\circ\gamma}(1))
+=p\circ\wtl{f\circ\gamma})(1) = (f\circ\gamma)(1) = f(\gamma(1)) = f(y)$. 
+To show that it
+is well-defined, if $\eta$ is any other path from 
+$y_0$ to $y$, then $\gamma*\overline{\eta}$ is a loop in $Y$, 
+so $f\circ(\gamma*\overline{\eta})=(f\circ\gamma)*\overline{(f\circ\eta)}$
+is a loop in $X$ representing an element of 
+$f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$, and
+so lifts to a loop in $\wtl{X}$ based at $\wtl{x}_0$.
+Consequently, as before, $f\circ\gamma$ and $f\circ\eta$ lift to paths
+starting at $\wtl{x}_0$ with the same value at 1. So $\wtl{f}$ is
+well-defined.  To show that $\wtl{f}$ is continuous, we use the 
+evenly covered property of $p$. Given $y\in Y$,
+and  a neighborhood $\wtl{\Cal U}$ of 
+$\wtl{f}(y)$ in $\wtl{X}$, 
+we wish to find a nbhd ${\Cal V}$ of $y$ with 
+$\wtl{f}({\Cal V})\sset\wtl{\Cal U}$. Choosing an evenly covered 
+neighborhood ${\Cal U}_y$ for $f(y)$, choose the sheet 
+$\wtl{\Cal U}_y$ over ${\Cal U}_y$ which contains $\wtl{f}(y)$,
+and set ${\Cal W}=\wtl{\Cal U}\cap \wtl{\Cal U}_y$. This is open in 
+$\wtl{X}$, and $p$ is a homeomorphism from this 
+set to the open set $p({\Cal W})\sset X$. Then if we set ${\Cal V}^\prime= f\inv(p({\Cal W})$
+this is an open set containing $y$, and so contains a path-connected open 
+set ${\Cal V}$ containing $y$. Then is for every point $z\in {\Cal V}$ we build a path
+$\gamma$
+from $y_0$ to $z$ by concatenating a path from $y_0$ to $y$ with a path {\it in} ${\Cal V}$
+from $y$ to $z$, then by unique path lifting, 
+since $f({\Cal V}\sset {\Cal U}_y$ , $f\circ\gamma$ lifts to 
+the concatenation of a path from $\wtl{x}_0$ to $\wtl{f}(y)$ and a 
+path {\it in} $\wtl{\Cal U}_y$ from $\wtl{f}(y)$ to $\wtl{f}(z)$.
+So $\wtl{f}(z)\in\wtl{\Cal U}$.
+
+\ssk
+
+Because $\wtl{f}$ is built by lifting paths, and path
+lifting is unique, the last statement of the proposition follows.
+
+\bsk
+
+{\bf Universal covering spaces}: As we shall see, a particularly
+important covering space to identify is one which is simply
+connected. One thing we can see from the lifting crierion is
+that such a covering is essentially unique:
+
+\msk
+
+If $X$ is locally path-connected, and has two connected, simply connected
+coverings $p_1:X_1\ra X$ and $p_2:X_2\ra X$, then choosing
+basepoints $x_i, i=0,1,2$ , since 
+$p_{1*}(\pu(X_1,x_1)) = p_{2*}(\pu(X_2,x_2))=\{1\}\sset \pu(X,x_0)$,
+the lifting criterion with each projection playing the role of $f$ in turn
+gives us maps $\wtl{p}_1:(X_1,x_1)\ra (X_2,x_2)$ and 
+$\wtl{p}_2:(X_2,x_2)\ra (X_1,x_1)$ with $p_2\circ\wtl{p}_1=p_1$
+and $p_1\circ\wtl{p}_2=p_2$. Consequently, 
+$p_2\circ\wtl{p}_1\circ \wtl{p}_2 = p_1\circ\wtl{p}_2=p_2$
+and similarly, 
+$p_1\circ\wtl{p}_2\circ \wtl{p}_1 =p_2\circ\wtl{p}_1=p_1$.
+So $\wtl{p}_1\circ \wtl{p}_2:(X_2,x_2)\ra (X_2,x_2)$, for example,
+is a lift of $p_2$ to the covering map $p_2$. But so is the identity map! By
+uniqueness, therefore, $\wtl{p}_1\circ \wtl{p}_2=Id$ . Similarly,
+$\wtl{p}_2\circ \wtl{p}_1=Id$. So $(X_1,x_1)$ and $(X_2,x_2)$ 
+are homeomorphic. So up to homeomorphism, a space can have
+only one connected, simply-connected covering space. It is known
+as the {\it universal covering} of the space $X$. 
+
+\msk
+
+Not every (locall path-connected) space $X$ has a universal covering; a 
+(further) necessary condition is that $X$ be {\it semi-locally simply connected}.
+The idea is that If $p:\wtl{X}\ra X$ is the universal cover, then for every 
+point $x\in X$, we have an evenly-covered neighborhood ${\Cal U}$ of $x$.
+The inclusion $i:{\Cal U}\ra X$, by definition, lifts to $\wtl{X}$, so
+$i_*(\pu({\Cal U},x))\sset p_*(\pu(\wtl{X},\wtl{x}) = \{1\}$, so
+$i_*$ is the trivial map. Consequently, every loop in ${\Cal U}$ is 
+null-homotopic in $X$. This is semi-local simple connectivity;
+every point has a neighborhood whose inclusion-induced homomorphism
+is trivial. Not all spaces have this property; the most famous is the 
+Hawaiian earrings 
+$\displaystyle X=\bigcup_{n}\{x\in {\Bbb R}^2 :  ||x-(1/n,0)||=1/n\}$ .
+The point $(0,0)$ has no such neighborhood. 
+
+\bsk
+
+
+{\bf Building universal coverings:} If a space $X$ is path connected, locally path connected, and
+semi-locally simply connected (S-LSC), then it has a universal covering;
+we describe a general construction. The idea is that a covering
+space should have the path lifting and homotopy
+lifting properties, and the universal 
+cover can be characterized as the only covering space for 
+which {\it only} null-homotopic loops lift to loops. So we build a 
+space and a map which \underbar{must} have these properties.
+We do this by making a space $\widetilde{X}$ whose
+points are (equivalence classes of) $[\gamma]$
+based paths $\gamma:(I,0)\ra (X,x_0)$, where two paths are equivalent
+if they are homotopic rel endpoints! The projection map is
+$p([\gamma])=\gamma(1)$. The S-LSCness is what guarantees that this is a 
+covering map; choosing $x\in X$, a path $\gamma_0$ from $x_0$ to $x$,
+and a  neighborhood ${\Cal U}$ of $x$ guaranteed by S-LSC, paths from 
+$x_0$ to points in ${\Cal U}$ are based equivalent to $\gamma*\gamma_0*\eta$
+where $\gamma$ is a based loop at $x_0$ and $\eta$ is a path in ${\Cal U}$.
+But by simple connectivity, a path in ${\Cal U}$ is determined up to homotopy
+by its endpoints, and so, with $\gamma$ fixed, these paths are in one-to-one
+correspondence with ${\Cal U}$. So $p\inv({\Cal U}$ is a disjoint union,
+indexed by $\pu(X,x_0)$, of sets in bijective correspondence with ${\Cal U}$.
+The appropriate topology on $\widetilde{X}$, essentially given as a basis
+by triples $\gamma*,gamma_0,{\Cal U}$ as above, make $p$ a covering map.
+Note that the inverse image of 
+the basepoint $x_0$ is the equivalence classes of \underbar{loops} at $x_0$,
+i.e., $\pu(X,x_0)$. A path $\gamma$ lifts to the path of paths
+$[\gamma_t]$, where $\gamma_t(s)=\gamma(ts)$, and so the only 
+loop in $X$ which lifts to a loop in $\widetilde{X}$ has endpoint
+$[\gamma]=[c_{x_0}]$, i.e., $[\gamma]=1$ in $\pu(X,x_0)$. This
+implies that $p_*(\pu(\widetilde{X},[c_{x_0}]))=\{1\}$, so 
+$\pu(\widetilde{X},[c_{x_0}])=\{1\}$ . \hhsk However, nobody in their
+right minds would go about building $\widetilde{X}$ in this way, in general!
+Before describing how to do it ``right'', though, we should perhaps see why
+we should want to?
+
+\msk
+
+One reason for the importance of the universal cover is that it gives
+us a unified approach to building \underbar{all} connected covering
+spaces of $X$. The basis for this is the {\it deck transformation group}
+of a covering space $p:\wtl{X}\ra X$; this is the set of all
+homeomorphisms $h:\wtl{X}\ra\wtl{X}$ such that $p\circ h = p$.
+These homeomorphisms, by definition, permute each of the point inverses
+of $p$. In fact, since $h$ can be thought of as a lift of the projection
+$p$, by the lifting criterion $h$ is determined by which point in the 
+inverse image of the basepoint $x_0$ it takes the basepoint 
+$\wtl{x}_0$ of $\wtl{X}$ to. A deck transformation sending
+$\wtl{x}_0$ to $\wtl{x}_1$ exists $\Leftrightarrow$
+$p_*(\pu(\wtl{X},\wtl{x}_0)=p_*(\pu(\wtl{X},\wtl{x}_1)$
+[we need one inclusion to give the map $h$, and the opposite inclusion
+to ensure it is a bijection (because its inverse exists)]. These two groups
+are in general {\it conjugate}, by the projection of a path from 
+$\wtl{x}_0$ to $\wtl{x}_1$; this can be seen by following the change
+of basepoint isomorphism down into $G=\pu(X,x_0)$. As we have seen, paths
+in $\wtl{X}$ from $\wtl{x}_0$ to $\wtl{x}_1$ are in 1-to-1
+correspondence with the cosets of $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$p_*(\pu({X},{x}_0)$; so deck transformations are in 1-to-1 
+correspondence with cosets whose representatives conjugate 
+$H$ to itself. The set of such elements in $G$ is called the 
+{\it normalizer of $H$ in $G$}, and denoted $N_G(H)$ or simply
+$N(H)$. The deck transformation group is therefore
+in 1-to-1 correspondence with the group $N(H)/H$ under
+$h\mapsto$ the coset represented by the projection of the path from 
+$\wtl{x}_0$ to $h(\wtl{x}_0)$. And since $h$ is essentially built
+by lifting paths, it follows quickly that this map is a
+homomorphism, hence an isomorphism.
+
+\msk
+
+In particular, applying this to the universal covering space
+$p:\wtl{X}\ra X$, since in this case $H=\{1\}$, so $N(H)=\pu(X,x_0)$,
+its deck transformation group is isomorphic to $\pu(X,x_0)$. 
+For example, this gives the quickest possible proof 
+that $\pu(S^1)\cong {\Bbb Z}$, since ${\Bbb R}$ is a 
+contractible covering space, whose deck transformations
+are the translations by integer distances. 
+Thus $\pu(X)$ acts on its universal cover as a group of
+homeomorphisms. And since this action is {\it simply transitive}
+on point inverses [there is exactly one (that's the simple
+part) deck transformation carrying any one point in a point 
+inverse to any other one (that's the transitive part)], the 
+quotient map from $\wtl{X}$ to the orbits of this action \underbar{is}
+the projection map $p$. The evenly covered property of $p$ implies
+that $X$ does have the quotient topology under this action.
+
+\bsk
+
+
+Every space it $X$ the quotient of its universal cover (if it has
+one!) by its fundamental group $G=\pu(X,x_0)$, realized as the group
+of deck transformations. And the quotient map is the covering 
+projection. 
+So $X\cong \wtl{X}/G$ . In general, a quotient of a 
+space $Z$ by a group action $G$ 
+need not be 
+a covering map; the action must be {\it properly discontinuous}, 
+which means that for every point 
+ $z\in Z$, there is a neighborhood ${\Cal U}$ of $x$ so that $g\neq 1$ $\Rightarrow$
+${\Cal U}\cap g{\Cal U}=\emptyset$ (the group action carries sufficiently
+small neighborhoods off of themselves). The evenly covered neighborhoods
+provide these for the universal cover. And conversely, the quotient of a space by a 
+p.d. group action is a covering space. 
+
+\msk
+
+But! Given $G=\pu(X,x_0)$ and its 
+action on a universal cover $\wtl{X}$, we can, instead of quotienting out by $G$,
+quotient out by any \underbar{subgroup} $H$ of $G$, to build $X_H=\wtl{X}/H$. 
+This is a space with fundamental group $H$, having $\wtl{X}$ as universal covering.
+And since the quotient (covering) map $p_G:\wtl{X}\ra X=\wtl{X}/G$ factors through $\wtl{X}/H$,
+we get an induced map $p_H:\wtl{X}/H\ra X$, which is a covering map; open sets with
+trivial inclusion-induced homomorphism lift homeomorphically to $\wtl{X}$,
+hence homeomorphically to $\wtl{X}/H$; taking lifts to each point inverse of $x\in X$
+verifies the evenly covering property for $p_H$ . So every subgroup of $G$ is the
+fundamental group of a covering of $X$. 
+
+\ssk
+
+We can further refine this to give the {\it Galois correspondence}. Two covering spaces
+$p_1:X_1\ra X$ , $p_2:X_2\ra X$ are {\it isomorphic} if there is a homeomorphism
+$h:X_1\ra X_2$ with $p_1=p_2\circ h$. Choosing basepoints $x_1,x_2$ mapping to $x_0\in X$,
+this implies that, if $h(x_1)=x_2$, then $p_{1*}(\pu(X_1,x_1)) = p_{2*}(h_*(\pu(X_1,x_1))) = 
+p_{2*}(\pu(X_2,x_2))$ . On the other hand, our homeomorphism $h$ need not take our
+chosen basepoints to one another; if $h(x_1)=x_3$, then $p_{1*}(\pu(X_1,x_1)) = p_{2*}(\pu(X_2,x_3))$.
+But  $p_{2*}(\pu(X_2,x_2))$ and $p_{2*}(\pu(X_2,x_3))$ are isomorphic, via a change 
+of basepoint isomorphism $\widehat{\eta}$ , where $\eta$ is a path in $X_2$ from $x_2$ to $x_3$.
+But such a path projects to $X$ has a loop at $x_0$, and since the change of basepoint isomorphism
+is by ``conjugating'' by the path $\eta$, the resulting groups $p_{2*}(\pu(X_2,x_2))$ and $p_{2*}(\pu(X_2,x_3))$
+are conjugate, by $p_2\circ \eta$ . So, without reference to basepoints, isomorphic coverings give,
+under projection, conjugate subgroups of $\pu(X,x_0)$ . But conversely, given covering spaces
+$X_1,X_2$ whose subgroups $p_{1*}(\pu(X_1,x_1))$ and $p_{2*}(\pu(X_2,x_2))$ are conjugate,
+lifting a loop $\gamma$ representing the conjugating element to a loop $\wtl{\gamma}$ in
+$X_2$ starting at $x_2$ gives, as its terminal endpoint, a point $x_3$ with 
+$p_{1*}(\pu(X_1,x_1)) = p_{2*}(\pu(X_2,x_3))$ (since it conjugates back!), and so, by the lifting criterion,
+there is an isomorphism $h:(X_1,x_1) \ra (X_2,x_3)$. So conjugate subgroups give isomorphic coverings.
+Thus, for a path-connected, locally path-connected, semi-locally simply-connected space $X$,  
+the image of the induced homomorphism on \mpu\ 
+gives a one-to-one correspondence between 
+[isomorphism classes of (connected) coverings of $X$] and 
+[conjugacy classes of subgroups of $\pu(X)$].
+
+\msk
+
+So, for example, if you have a group $G$ that you are interested in, you know of a (nice enough) 
+space $X$ with $\pu(X)\cong G$, and you know enough about the covering of $X$, then you can
+gain information about the subgroup structure of $G$. For example, and in some respects as
+motivation for all of this machinery!, a free group $F(\Sigma)$ is \mpu\ of a bouquet of circles $X$. 
+Any covering space $\wtl{X}$ of $X$ is a union of vertices and edges, so is a graph.  Collapsing
+a maximal tree to a point, $\wtl{X}$ is $\sim$ a bouquet of circles, so has free \mpu . So, every
+subgroup of a free group is free. (That is a lot shorter than the original, group-theoretic, proof...) 
+A subgroup $H$ of index $n$ in $F(\Sigma)$ corresponds to a $n$-sheeted covering $\wtl{X}$ of $X$. If
+$|\Sigma| = m$, then $\wtl{X}$ will have $n$ vertices and $nm$ edges. Collapsing a maximal
+tree, having $n-1$ edges to a point, leaves a bouquet of $nm-n+1$ circles, so $H\cong F(nm-n+1)$.
+For example, for $m=3$, index $n$ subgroups are free on $2n+1$ generators, so every free subgroup
+on 4 generators has infinite index in $F(3)$. Try proving that directly!
+
+\bsk
+
+
+
+Every
+subgroup of a free group is free, because it is the fundamental group of a
+covering of a graph, i.e., of a graph.
+A subgroup $H$ of index $n$ in $F(\Sigma)$ corresponds to a $n$-sheeted covering $\wtl{X}$ of $X$. If
+$|\Sigma| = m$, then $\wtl{X}$ will have $n$ vertices and $nm$ edges. Collapsing a maximal
+tree, having $n-1$ edges to a point, leaves a bouquet of $nm-n+1$ circles, so $H\cong F(nm-n+1)$.
+For example, for $m=3$, index $n$ subgroups are free on $2n+1$ generators, so every free subgroup
+on 4 generators has infinite index in $F(3)$. Try proving that directly!
+
+\msk
+
+Note that for a graph $\Gamma$ to be a covering of another graph, with $k$ sheets, say,
+the number of vertices and edges of $\Gamma$ must both be a mulitple of $k$. This
+little observation can be very useful when trying to decide what graphs $\Gamma$ might
+cover!
+
+\msk
+
+{\it Kurosh Subgroup Theorem}: If $H < G_1*G_2$ is a subgroup of
+a free product, then $H$ is (isomorphic to) a free product of a
+collection of conjugates of subgroups of $G_1$ and $G_2$ and a 
+free froup. The proof is to build a space by taking 2-complexes
+$X_1$ and $X_2$ with $\pu$'s isomorphic to $G_1,G_2$ and join
+their basepoints by an arc. The covering space of this space $X$
+corresponding to $H$ consists of spaces that cover $X_1,X_2$
+(giving, after basepoint considerations, the conjugates)
+connected by a collection of arcs (which, suitably interpreted,
+gives the free group).
+
+\msk
+
+{\it Residually finite groups}: $G$ is said to be residually finite if for every $g\neq 1$ there is a 
+finite group $F$ and a homomorphism $\varphi: G\ra F$ with $\varphi(g)\neq 1$ in $F$. This 
+amounts to saying that $g\notin$ the (normal) subgroup $\ker(\varphi)$, which amounts to
+saying that a loop corresponding to $g$ does \underbar{not} lift to a loop in the finite-sheeted
+covering space corresponding to $\ker(\varphi)$. So residual finiteness of a group can be
+verified by building coverings of a space $X$ with $\pu(X)=G$. For example, free groups can be
+shown to be residually finite in this way. 
+
+\msk
+
+{\it Ranks of free (sub)groups:} A free group on $n$
+generators is isomorphic to a free group on $m$ generators
+\lra\ $n=m$; this is because the abelianizations of the two 
+groups are ${\Bbb Z}^n,{\Bbb Z}^m$. The (minimal) number of 
+generators for a free group is called its {\it rank}.
+Given a free group
+$G=F(a_1,\ldots a_n)$ and a collection of words $w_1,\ldots w_m\in G$,
+we can determine the rank and ndex of the subgroup it $H$ they
+generate by building the corresponding cover. The idea is
+to start with a bouquet of $m$ circles, each subdivided 
+and labelled to spell
+out the words $w_i$. Then we repeatedly identify edges sharing
+on common vertex if they are labelled precisely the same (same
+letter {\it and} same orientation). This process is known
+as {\it folding}. One can inductively show that the (obvious)
+maps from these graphs to the bouquet of $n$ circles $X_n$ both
+have image $H$ under the induced maps on \mpu ; since the map 
+for the unfolded graph
+factors through the one for the folded graph, the image from the
+folded graph can only get smaller, but we can still spell out
+the same words as loops in the folded graph, so the image can
+also only have gotten bigger! We continue this folding process until there
+is no more folding to be done; the resulting graph $X$ is what is 
+known (in combinatorics) as a {\it graph covering}; the map to $X_n$
+is locally injective. If this map is a covering map, then our subgroup
+$H$ has finite index (equal to the degree of the
+covering) and we can compute the rank of $H$ (and a basis!) from the 
+folded graph. If it is not a covering map, then the map is not locally surjective at
+some vertices; if we graft trees onto these vertices, we can extend the map
+to an (infinite-sheeted) covering map without changing the homotopy
+type of the graph. $H$ therefore has infinite index in $G$, and its
+rank can be computed from $H\cong \pu(X)$. 
+
+\bsk
+
+
+{\bf Postscript: why care about covering spaces?} The preceding discussion
+probably makes it clear that covering places play a central role in
+(combinatorial) group theory. It also plays a role in embedding 
+problems; a common scenario is to have a map $f:Y\ra X$ which is 
+injective on \mpu , and we wish to know if we can lift $f$ to a 
+finite-sheeted covering so that the lifted map $\widetilde{f}$ is 
+homotopic to an embedding. Information that is easier to obtain 
+in the case of an embedding can then be passed down to gain information
+abut the original map $f$. And covering spaces underlie the 
+theory of analytic continuation in complex analysis; starting
+with a domain $D\subseteq {\Bbb C}$, what analytic continuation really
+builds is an (analytic) function from a covering space of $D$ to ${\Bbb C}$.
+For example, the logarithm is really defined as a map from 
+the universal cover of ${\Bbb C}\setminus\{0\}$ to ${\Bbb C}$. 
+The various ``branches'' of the logarithm refer to which sheet
+in this cover you are in.
+
+
+\vfill
+\end
+
+
+
+
+
+
+

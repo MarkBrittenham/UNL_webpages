@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{dutchcal}
+
+\usepackage[all]{xy}
+
+\textheight=10.1in
+\textwidth=7.4in
+\voffset=-1.35in
+\hoffset=-1in
+
+\def\ctln{\centerline}
+\def\nidt{\noindent}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\im{\textrm{Im }}
+\def\krr{\textrm{Ker }}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\wtl{\widetilde}
+\def\sxs{short exact sequence}
+\def\sxss{short exact sequences}
+\def\lxs{long exact sequence}
+\def\lxss{long exact sequences}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+
+\ctln{\bf The zen of long exact sequences}
+
+
+\bsk
+
+Extracting information from a \lxs\ amounts to exploiting knowledge
+of the identities of some of the groups and/or some of the maps involved.
+The general setup we find coming from the conversion of \sxss\
+of chain maps to \lxss\ in homology is that every third group comes from the same chain complex.
+So we generally expect things to come in threes; we know/control every third
+group (when we control one) and/or every third map (when we control one).
+
+\msk
+
+A typical situation is that we are building a new space/chain complex out of two others
+that we ``understand'', meaning that we know the groups for two of the three spaces 
+and the maps running between them.
+In the \lxs\
+
+\ssk
+
+\ctln{$\xymatrix{
+\ar[r]&
+A_n \ar[r]^{\alpha_n}&
+B_n \ar[r]^{\beta_n} &
+C_n \ar[r]^{\gamma_n}&
+A_{n-1}\ar[r]^{\alpha_{n-1}}&
+B_{n-1}\ar[r]&
+}$}
+
+\ssk
+
+\nidt if we know the groups $A_k$ and $B_k$ and the maps $\alpha_k$ between them,
+then we can harvest the \lxs\ to give a collection of \sxss\ by noting that
+$\krr \beta_n = \im \alpha_n$ (which we know) and $\im \gamma_n = \krr \alpha_{n-1}$
+(which we know). So $\gamma_n$ maps onto $\krr \alpha_{n-1}$, making
+
+\ssk
+
+\ctln{$\xymatrix{
+A_n \ar[r]^{\alpha_n}&
+B_n \ar[r]^{\beta_n} &
+C_n \ar[r]^{\gamma_n}&
+\krr {\alpha_{n-1}} \ar[r]&
+0
+}$}
+
+\ssk
+
+\nidt exact, and on the other end, since by one of those Noether theorems, 
+the induced map $\overline{\beta}_n:B_n/\krr\beta_n\ra C_n$ is injective
+(with the same image as $\beta_n$), we have
+
+\ssk
+
+\ctln{$\xymatrix{
+0 \ar[r]&
+B_n/\im \alpha_n \ar[r]^{\overline{\beta}_n} &
+C_n \ar[r]^{\gamma_n}&
+\krr {\alpha_{n-1}} \ar[r]&
+0
+}$}
+
+\ssk
+
+\nidt is (short) exact. The groups on the ends are ones that, in principle, we know how to compute from the data
+$\xymatrix{A_n \ar[r]^{\alpha_n}&B_n}$. On the other hand, knowledge of the end groups is not
+enough to determine the middle group $C_n$; but if we know that the sequence 
+splits (which is always true, for example, if the rightmost group $\krr {\alpha_{n-1}}$ is free
+abelian (which, in turn, is true, for example, if $A_{n-1}$ is free abelian)), then the middle
+group is the direct sum of the outer groups.
+
+\ssk
+
+A similar analysis applies when we `know' $\xymatrix{B_n \ar[r]^{\beta_n} & C_n}$, or we know 
+$\xymatrix{C_n \ar[r]^{\gamma_n}&A_{n-1}}$ .
+
+\msk
+
+Another situation that we can often engineer is to know that every third map (the $\alpha_k$,
+for example) is always injective, or always surjective, or always the $0$ map. [We have
+already encountered topological conditions which make this happen.] As it happens, each of these 
+sort of imply the other, in fact: in the exact sequence
+
+\ssk
+
+\ctln{$\xymatrix{\ar[r]&
+B_{n+1} \ar[r]^{\beta_{n+1}} &
+C_{n+1} \ar[r]^{\gamma_{n+1}}&
+A_n \ar[r]^{\alpha_n}&
+B_n \ar[r]^{\beta_n} &
+C_n \ar[r]^{\gamma_n}&
+A_{n-1}\ar[r]&}$}
+
+\ssk
+
+\nidt if $\alpha_n$ is injective, then 
+$\{0\} = \krr\alpha_n=\im\gamma_{n+1}$, so $\gamma_{n+1}$ is the $0$ map,
+so $\krr\gamma_{n+1} = C_{n+1} = \im\beta_{n+1}$, so $\beta_{n+1}$ is surjective.
+similarly, if $\alpha_n$ is surjective, then $\beta_n$ is the $0$ map, and so
+$\gamma_n$ is injective, while if $\alpha_n$ is the $0$ map, then $\beta_n$ is
+injective and $\gamma_{n+1}$ is surjective. So if all of the $\alpha_k$
+have the same character, then every third map (somewhere) in the \lxs\ is
+the $0$ map, and so the map that precedes it is surjective and the map that
+follows it is injective. This enables us, again, to harvest the \lxs\ to create a
+collection of \lxss, which will be one of
+
+\ssk
+
+
+\hskip1in{$\xymatrix{
+0 \ar[r]&
+A_n \ar[r]^{\alpha_n} \ar[r]&
+B_n \ar[r]^{\beta_n} &
+C_n \ar[r]&
+0
+}$ , or}
+
+\hskip2in{$\xymatrix{
+0 \ar[r]&
+C_{n+1} \ar[r]^{\gamma_{n+1}}&
+A_n \ar[r]^{\alpha_n} \ar[r]&
+B_n \ar[r]&
+0
+}$ , or}
+
+\hskip3in{$\xymatrix{
+0 \ar[r]&
+B_n \ar[r]^{\beta_n} &
+C_n \ar[r]^{\gamma_n}&
+A_{n-1} \ar[r]&
+0
+}$}
+
+
+
+\ssk
+
+\nidt If we treat the $A_n$ and $B_n$ as `known', and the $C_n$ as unknown,
+then in the first case $C_n\cong B_n/\im\alpha_n$, while in the second
+case $C_{n+1}\cong \im\gamma_{n+1}\cong\krr\alpha_{n}$. The third case, 
+again, poses an `extension problem', and so without furher information about
+$B_n$, $A_{n-1}$, and the maps we cannot definitively determine $C_n$.
+
+\ssk
+
+And recognizing a $0$ map can happen many ways. One of the groups being $0$ is the 
+quickest, but, for example, the only map from a torsion group (all elements have
+finite order) to a torsion-free group (all non-zero elements have infinite order!)
+is the $0$ map.
+
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,95 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=2 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+
+{\bf The Lebesgue Number Theorem:}
+
+\msk
+
+If $(X,d)$ is a compact metric space
+(in our applications, it is always a compact subset of Euclidean space), and 
+$\{{\Cal U}_i\}$ is an open cover of $X$, then there is an $\epsilon>0$ so that
+for every $x\in X$, its $\epsilon$-neighborhood $N_d(x,\epsilon)$ is contained
+in ${\Cal U}_i$ for some $i$. 
+
+\msk
+
+
+{\bf Proof:} If not, then for every $n\in{\Bbb N}$ there is an $x_n\in X$ 
+whose $1/n$-neighborhood is contained in no ${\Cal U}_i$; that is, for 
+every $i\in I$, there is an $x_{n,i}$ with
+$d(x_n,x_{n,i})<1/n$ and $x_{n,i}\notin{\Cal U}_i$, so $x_{n,i}\in C_i=X\setminus {\Cal U}_i$, 
+a closed set. 
+But since $X$ is compact, there is a convergent subsequence of the $x_n$; $x_{n_k}\ra y\in X$.
+
+\msk
+
+[Proof: if not, then no point is the limit of a subsequence, so for every $x\in X$ there is
+an $\epsilon(x)>0$ and an $N=N(x)$ so that $n\geq N$ implies $x_n\notin N_d(x,\epsilon(x))$.
+But these neighborhoods cover $X$, so a finite number of them do; for any $n$ greater than
+the maximum of the associated $N(x)$'s $x_n$ lies in none of the neighborhoods, a contradiction,
+since $x_n\in X=$ the union of these neighborhoods.]
+
+\msk
+
+But then since $d(x_{n_k},y)\ra 0$ and $d(x_{n_k},x_{n_k,i})\ra 0$, for every $i$
+the $x_{n_k,i}$ also converge to $y$; since the $x_{n_k,i}$ all lie in the closed
+set $C_i$, so does $y$. So $y\in C_i$ for all $i$, so $y\notin {\Cal U}_i$ for all $i$,
+a contradiction, since the ${\Cal U}_i$ cover $X$. So some $\epsilon>0$, a 
+{\it Lebesgue number} for the covering, must exist.
+
+
+\vfill
+\end

@@ -1,0 +1,51 @@
+
+
+
+Errata for TOPOLOGY,second edition.
+xii, 13     of connectedness and compactness in Chapter 3.
+107; 2     f maps [0,1) into S super 1
+111; 15   The wording is confusing.  Try this:  Let  X  and X'  be 
+spaces having the same underlying set; let their topologies be...
+118; Exercise 9, line 2,          J is not empty.
+143; 1    composite  g  is ...
+151; 2*     (a sub 1, ..., a sub N, 0, 0, ...)
+187; 4*     Let  A  be a subset of  X.
+198; 3*   Replace psi by phi.
+203; 12     b < a.  Neither  U  nor  V  contains  a sub 0.
+203; 15     ... U  and  V  not containing  a sub 0, but containing
+205; 9*     if and only if  X  is  T sub 1  and for every...
+224;  13     open in  X sub i  for each  i.
+235; 13*     Show that if  X  is Hausdorff
+237; 8       Assume script A  is a covering of  X  by basis elements 
+such that
+251;  7     less than or equal to  1/n
+261; 7      replace "paracompact" by "metrizable".
+262; 8      (x, epsilon sub i)
+263; 1*     Throughout, we assume Section 28.
+266; 8*     rho super bar  is a metric;
+356; 7     Find a ball centered at the origin...
+417; 11     element of P(W),
+421; 8     length (at least 3), then
+425; 10*     (G sub 1) * (G sub 2)
+445; 10     Exercise 2 should be starred.
+466; 4     =  (w sub 0)[y sub 1] a [y sub 2] b ...
+481; 1     with k(h(e sub 0)) = e sub 0.
+488; 4     F = p inverse (b sub 0).
+488; 11     of the subset
+503; 14*     either empty or a one- or two- point set!
+
+Supplementary notes are available through MIT's Open Course Ware 
+program.  Go to www.ocw.mit.edu, then to "Mathematics", then to 
+"18.901", then to "Lecture Notes", then to whichever set of notes you 
+are interested in (if any).  The titles of the sections are as follows:
+Notes A  Set Theory and Logic (notes by J. Santos)
+Notes B  Proof of the well-ordering theorem
+Notes C  The Long Line
+Notes D  Countability axioms
+Notes E  Normality of linear continua
+Notes F  The separation axioms
+Notes G  Normality of quotient spaces
+Notes H  Tychonoff via well-ordering
+Notes I  Locally euclidean spaces
+Notes J  The Prufer manifold
+Notes K  Compactly generated spaces

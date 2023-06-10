@@ -1,0 +1,131 @@
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\wtl{\widetilde}
+\def\wtih{\widetilde{H}}
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Problem Set 9}
+
+\msk
+
+Starred (*) problems are due Thursday, April 23.
+
+
+\begin{description}
+
+\item{60.} Find the (singular) homology groups of the M\"obius band 
+$M=[0,1]\times [0,1]/\{(0,t)\sim (1,1-t)\ :\ t\in [0,1]\}$, and compute
+the inclusion-induced maps $i_*:H_k(\del M)\ra H_k(M)$.
+
+\msk
+
+\item{61.} Use the computations from problem \# 60 and the Mayer-Vietoris
+sequence to compute the (reduced) homology groups of the Klein bottle, 
+which can be viewed as two M\"obius bands with their boundary circles
+glued together $K^2=M_1\cup_{\del M_1 = \del M_2} M_2$.
+
+\msk
+
+\item{(*)} 62. [Hatcher, p.158, \# 32] Show, using a Mayer-Vietoris sequence,
+that for the suspension $\Sigma X = cX\cup_X cX$ of a space $X$ (the union of two cones
+on $X$ glued together along the two copies of $X$) that $H_n(\Sigma X)\cong H_{n-1}(X)$
+for every $n$.
+
+\msk
+
+\item{63.} Find an example of a pair of graphs $\Gamma_1,\Gamma_2$,
+so that one is a finite sheeted covering of the other $p:\Gamma_1\ra\Gamma_2$,
+but the induced map on homology $p_*:H_1(\Gamma_1)\ra H_1(\Gamma_2)$ is 
+\underbar{not} injective. [Hint: it actually almost never \underbar{is}
+injective...]
+
+\msk
+
+\item{64.} Show that the inclusion map $\iota$, thought of as a map of pairs 
+$\iota:(D^n,\del D^n)\ra (D^n,D^n\setminus \{0\})$, is a homotopy
+equivalence both of the spaces and of the subspaces, but is \u{not} a 
+{\it homotopy equivalence of pairs}, that is, there is \underbar{not} a map 
+
+\item{\spc} $f:(D^n,D^n\setminus \{0\})\ra (D^n,\del D^n)$ so that $f\circ \iota$ and $\iota\circ f$
+are both homotopic, as maps of pairs, to the identity maps.
+
+\msk
+
+\item{(*)} 65. Show that $H_i(X\times S^n)\cong H_i(X)\oplus H_{i-n}(X)$ for every $i$;
+here $H_i(X)=0$ if $i<0$.
+
+\ssk
+
+\item{\spc} [One approach: show that $H_i(X\times S^n)\cong H_i(X)\oplus H_i(X\times S^n,X\times D^n_+)$,
+where $D^n_+$ is the upper hemisphere of $S^n$ 
+(Problem \#57 will help), and that $H_i(X\times S^n,X\times D^n_+)\cong H_{i-1}(X\times S^{n-1},X\times D^{n-1}_+)$
+by excision and the long exact sequence of the triple $(X\times D^{n-1}_+,X\times S^{n-1},X\times D^{n}_-)$.]
+
+\ssk
+
+\item{\spc} [Hatcher, p.158, \# 36 gives a different approach.]
+
+\msk
+
+\item{(*)} 66. Show by induction on $n$ that, for the {\it $n$-torus}, 
+the Cartesian product ${\mathbb T}^n = (S^1)^n = S^1\times\cdots\times S^1$ of $n$ copies of the circle,
+we have for 
+every $k$ that $H_k({\mathbb T}^n)$
+is isomorphic to $\bbz^{N(n,k)}$ for some $N(n,k)\in\bbz$, and find a formula for 
+$N(n,k)$. 
+
+\msk
+
+\item{\spc} [Working out the homology of ${\mathbb T}^n$ for small values of $n$ and looking for a pattern 
+will probably help. Note that this says \underbar{find}, not \underbar{prove}, although a familiar formula
+for some familiar numbers probably constitutes a fine proof....]
+
+\msk
+
+\item{67.} Show that, for any collection of finitely generated abelian groups $G_1,\ldots ,G_n$,
+there is a path-connected space $X$ with $\wtih_i(X)\cong G_i$ for all $i=1,\ldots,n$ and
+$\wtih_i(X)=0$ for all other $i$.
+
+
+\end{description}
+\vfill
+
+\end{document}
+

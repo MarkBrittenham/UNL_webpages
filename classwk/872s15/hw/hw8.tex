@@ -1,0 +1,141 @@
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\wtl{\widetilde}
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Problem Set 8}
+
+\msk
+
+Starred (*) problems are due Thursday, April 16.
+
+
+\begin{description}
+
+\item{(*)} 53. [Hatcher, p.132, \#12] Show that for chain maps $f,g$ between chain
+complexes ${\mathcal A} = \{A_n\},{\mathcal B}=\{B_n\}$, the relation 
+``$f$ and $g$ are chain homotopic'' is an equivalence relation.
+
+\msk
+
+\item{54.} [Hatcher, p.133, \# 27(a)] Let $f:(X,A)\ra (Y,B)$ be a map of pairs such that
+both $f:X\ra Y$ and $f:A\ra B$ are homotopy equivalences. Show that
+the induced map $f_*:H_n(X,A)\ra H_n(Y,B)$ is an isomorphism for all $n$.
+
+\msk
+
+\item{55.} [Hatcher, p.132, \#15] Show that if $A\subseteq X$, then the inclusion map
+$i:A\ra X$ induces an isomorphism on homology groups \lra\ 
+$H_n(X,A)=0$ for all $n\geq 0$.
+
+\msk
+
+\item{(*)} 56. Show that if a short exact sequence
+\hskip.2in
+$0\ra A{\buildrel{\alpha}\over\ra} B{\buildrel{\beta}\over\ra} C\ra 0$
+\hskip.2in
+{\it splits}, that is, there is a map $\gamma:B \ra A$ with
+$\gamma\circ\alpha=I$, then the map $\varphi:B\ra A\oplus C$
+given by $b\mapsto (\gamma(b),\beta(b))$, is an isomorphism.
+
+\msk
+
+\item{\spc} [This is part of the Splitting Lemma, proved in Hatcher, p.147. Splitting is equivalent 
+to the existence of $\delta:C\ra B$ satisfying
+$\beta\circ\delta = I$, but this is irrelevant to the question above.]
+
+\msk
+
+\item{(*)} 57. Show that if $A\subseteq X$ and $r:X\ra A$ is a retraction, then
+for every $n$,
+
+\item{\spc} $H_n(X)\cong H_n(A)\oplus H_n(X,A)$. 
+
+\ssk
+
+\item{\spc} [Hint: show that the (piece of) the long exact homology sequence
+
+\item{\spc} $H_n(A)\ra H_n(X)\ra H_n(X,A)$ is ``really'' 
+
+\item{\spc} $0\ra H_n(A)\ra H_n(X)\ra H_n(X,A)\ra 0$, and splits.]
+
+\msk
+
+\item{58.} [Hatcher, p.156, \# 12] 
+$S^1\times S^1/[S^1\times\{*\}\cup\{*\}\times S^1$ is homeomorphic to $S^2$.
+Show that the quotient map $q:S^1\times S^1\ra S^2$ induces an isomorphism on $H_2$,
+so $q$ is not null-homotopic. Show, conversely (using covering spaces) that 
+any map $p:S^2\ra S^1\times S^1$ \underbar{is} null-hmotopic.
+
+\msk
+
+\item{59.} Find examples of spaces and subspaces
+$A_0\subseteq X_0$ and $A_1\subseteq X_1$ so that
+$H_*(X_0)\cong H_*(X_1)$ and $H_*(A_0)\cong H_*(A_1)$,
+but $H_*(X_0,A_0)\not\cong H_*(X_1,A_1)$ . (If you want to make
+it more challenging, find examples with all of the spaces path-connected?
+Note that Problem \#54 gives a hint on how \underbar{not} to solve this problem...)
+
+
+
+
+\end{description}
+\vfill
+
+\end{document}
+
+
+Show that if $A\subseteq X$ and the identity map 
+$I:X\ra X$ is homotopic 
+to a map $f:X\ra X$ with $f(X)\subseteq A$, then
+for every $n$, $H_n(A)\cong H_n(X)\oplus H_{n+1}(X,A)$.
+
+\item{} (So $A$ has more ``holes'' than $X$ does...)
+
+
+
+
+[Hatcher, p.131, \#9]
+
+\msk
+
+
+

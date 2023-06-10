@@ -1,0 +1,101 @@
+\input amstex
+
+\magnification=1200
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+
+\UseAMSsymbols
+\nopagenumbers
+
+\ctln{\bf Math 871 Problem Set 2 (revised)}
+
+\msk
+
+Starred (*) problems are due Thursday, Sept. 8.
+
+\bsk
+
+\item{(*)} 8. If $d:X\times X\ra{\Bbb R}$ is a metric on $X$ (i.e., $(X,d)$ is a metric space), show that
+$\overline{d}:X\times X\ra {\Bbb R}$ defined by 
+
+\ssk
+
+\ctln{$\overline{d}(x,y)=\text{min}\{d(x,y),1\} = \cases d(x,y) & \text{if}\ d(x,y)\leq 1 \cr 1 & \text{if}\ d(x,y)\geq 1\cr\endcases$}
+
+\ssk
+
+\item{} is also a 
+metric on $X$. Show that the two metric spaces $(X,d)$ and $(X,\overline{d})$ have the \underbar{same}
+open sets.
+
+\msk
+
+\item{9.} For a set $X$, and (fixed) $a\in X$, the \underbar{excluded} \underbar{point} \underbar{topology}
+on $X$ is the collection of subsets ${\Cal T}_a = \{{\Cal U}\subseteq X\ :\ a\not\in{\Cal U}\}\cup\{X\}$.
+Show that ${\Cal T}_a$ is a topology on $X$.
+
+\msk
+
+\item{(*)} 10. Show that the set 
+${\Cal T} = \{(a,\infty)\ :\ a\in{\Bbb R}\}\ \cup\ \{[a,\infty)\ :\ a\in{\Bbb R}\}\ \cup\ \{\emptyset,{\Bbb R}\}$
+of subsets of $\Bbb R$ is a topology on $\Bbb R$.
+
+\ssk
+
+\item{} [Note that ${\Cal T}$ can be thought of as the sets ${\Cal U}\subseteq{\Bbb R}$ so that whenever
+$a\in{\Cal U}$ and $b\geq a$, then $b\in{\Cal U}$.]
+
+\msk
+
+\item{11.} (a) Show that if $f:{\Bbb R}\ra{\Bbb R}$ is an increasing function [$a\geq b\ \Rightarrow f(a)\geq f(b)$],
+then, using the topology ${\Cal T}$ from Problem \#10, as a function from $({\Bbb R},{\Cal T})$ to $({\Bbb R},{\Cal T})$, $f$ is continuous.
+
+\msk
+
+\item{} (b) Show, conversely, that if  $f:({\Bbb R},{\Cal T})\ra({\Bbb R},{\Cal T})$ is continuous, then $f$ is increasing!
+
+\item{} [Consequently, this topology captures increasing functions precisely as its continuous functions...]
+
+\item{} [Hint: suppose $f$ \underbar{isn't} increasing: show it is \underbar{not} continuous.]
+
+\msk
+
+\item{12.} [Munkres, p.83, \#13.3] (a) Show that for any set $X$, the sets
+
+\hfill $\{{\Cal U}\subseteq X\ :\ X\setminus{\Cal U}\ \text{is}\ \text{countable}\}\cup\{\emptyset\}$ form a topology
+on $X$.
+
+\ssk
+
+\item{} (b) Do the sets $\{{\Cal U}\subseteq X\ :\ X\setminus{\Cal U}\ \text{is}\ \text{infinite}\}\cup\{\emptyset\}$
+always form a topology on $X$ ? Explain why or why not.
+
+\msk
+
+\item{(*)} 13. [Munkres, p.83, \#13.4(a)] If ${\Cal T}_\alpha$ are all topologies on the same set $X$, 
+show that $\bigcap_\alpha{\Cal T}_\alpha$ (the intersection of all of the topologies) is 
+also a topology on $X$. Is $\bigcup_\alpha{\Cal T}_\alpha$ (their union) a topology on $X$?
+
+\msk
+
+\item{14.} With the (excluded point) topology ${\Cal T}_a$ on $\Bbb R$ from problem \#9, and ${\Cal T}^\prime$ the ``usual''
+topology on ${\Bbb R}$ (open sets are unions of neighborhoods), 
+show that every continuous function 
+\hskip.15in $f:({\Bbb R},{\Cal T}_a)\ra ({\Bbb R},{\Cal T}^\prime)$ must be \underbar{constant}.
+
+\ssk
+
+\item{} [Hint: Suppose not! Show that $f$ \underbar{can't} be continuous.]
+
+\msk
+
+\item{15.} With the topologies from problem \#14, show that there do exist
+continuous functions $f:({\Bbb R},{\Cal T}^\prime)\ra ({\Bbb R},{\Cal T}_a)$ which are \underbar{not} constant.
+
+
+\vfill
+\end

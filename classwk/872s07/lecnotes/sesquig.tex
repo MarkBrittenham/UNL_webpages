@@ -1,0 +1,89 @@
+\documentclass[landscape,12pt]{article}
+
+\setlength{\oddsidemargin}{-.6in}		% default=0in
+\setlength{\textwidth}{10in}		% default=9in
+
+\setlength{\columnsep}{0.5in}		% default=10pt
+\setlength{\columnseprule}{1pt}		% default=0pt (no line)
+
+\setlength{\textheight}{8in}		% default=5.15in
+\setlength{\topmargin}{1.4in}		% default=0.20in
+\setlength{\headsep}{0.25in}		% default=0.35in
+
+\setlength{\parskip}{1.2ex}
+\setlength{\parindent}{0mm}
+
+\usepackage{rotating,amssymb}
+\pagestyle{empty}
+
+\input colordvi
+
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+%\loadmsbm
+
+\input epsf
+
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\rtar{$\Rightarrow$}
+
+\newsavebox{\ses}
+\savebox{\ses}{\parbox{18pt}{{\Large$\rightsquigarrow$\vskip10pt\  }}}
+
+\newsavebox{\sws}
+\savebox{\sws}{\parbox{18pt}{{\Large$\rightsquigarrow$\vskip-40pt}}}
+
+\def\sesquig{{\hskip-18pt\begin{turn}{-45}\usebox{\ses}\end{turn}}}
+
+\def\swsquig{{\hskip12pt\begin{turn}{225}\usebox{\sws}\end{turn}\hskip-10pt}}
+
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\bbn}{\mathbin}{AMSb}{"4E}
+\DeclareMathSymbol{\bbz}{\mathbin}{AMSb}{"5A}
+\DeclareMathSymbol{\bbr}{\mathbin}{AMSb}{"52}
+\DeclareMathSymbol{\bbq}{\mathbin}{AMSb}{"51}
+\DeclareMathSymbol{\bbi}{\mathbin}{AMSb}{"49}
+\DeclareMathSymbol{\bbc}{\mathbin}{AMSb}{"43}
+
+\begin{document}
+
+{\Large
+
+\smallskip
+
+$X$\sesquig$A$ $Y$\swsquig$B$ $\bbr$ $\bbz$ \hsk Try, try again.
+
+
+
+}
+
+\end{document}

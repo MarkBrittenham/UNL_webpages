@@ -1,0 +1,104 @@
+
+\magnification=1900
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+{\bf Straight-line homotopies:}
+
+\msk
+
+Any two maps $f,g:X\ra \bbr^n$ are homotopic:
+
+\msk
+
+$H(x,t)=(1-t)f(x)+tg(x)$
+
+\msk
+
+is continuous, since ``it is constructed out of continuous functions'' in a manner which we
+know preserves continuity.
+
+\ssk
+
+Note that if $f(x_0)=g(x_0)=y_0$, then $H(x_0,t)=(1-t)y_0+ty_0=y_0$.
+So the homotopy is relative to the set $A=\{x\in X: f(x)=g(x)\}$.
+
+\msk
+
+So, for example, any two paths $\alpha,\beta:I\ra \bbr^n$ in $\bbr^n$ (or any convex subset of $\bbr^n$)
+between the same endpoints are homotopic rel endpoints.
+
+\ssk
+
+The same (by composing with a homeomorphism) is true of any space homeomorphic to (a convex subset
+of) $\bbr^n$.
+
+\bsk
+
+Grafting a ``tail'' onto a path also does not change it's homotopy class:
+
+\ssk
+
+Since $\gamma*\overline{\gamma}$ is homotopic, rel endpoints, to a constant map $c_0$,
+
+\ssk
+
+\hskip.2in $\alpha*\beta\simeq \alpha*c_0*\beta\simeq\alpha*\gamma*\overline{\gamma}*\beta
+\simeq(\alpha*\gamma)*(\overline{\gamma}*\beta)$ .
+
+\vfill
+\end

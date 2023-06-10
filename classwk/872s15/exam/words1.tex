@@ -1,0 +1,719 @@
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=8.9in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-.5in
+\parindent=-10pt
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+\def\sset{\subseteq}
+\def\hsk{\hskip10pt}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\mbp{{\mathcal B}^\prime}
+\def\mbpp{{\mathcal B}^{\prime\prime}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+\def\mp{{\mathcal P}}
+\def\mtp{{\mathcal T}^\prime}
+\def\mtpp{{\mathcal T}^{\prime\prime}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\bbn{{\mathbb N}}
+\def\spc{$~$\hskip.15in$~$}
+\def\bbd{{\mathbb D}}
+\def\bbc{{\mathbb C}}
+
+\def\up{U^\prime}
+\def\upp{U^{\prime\prime}}
+\def\vp{V^\prime}
+\def\vpp{V^{\prime\prime}}
+\def\wp{W^\prime}
+\def\wpp{W^{\prime\prime}}
+
+\def\finv{f^{-1}}
+\def\ginv{g^{-1}}
+\def\hinv{h^{-1}}
+
+\def\sset{\subseteq}
+\def\lra{$\Leftrightarrow$}
+\def\smin{\setminus}
+\def\rta{$\Rightarrow$}
+\def\rtta{\Rightarrow}
+
+\def\ep{\epsilon}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\del{\partial}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\wtl{\widetilde}
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Exam 1 Topics}
+
+\msk
+
+{\bf Homotopy Theory.}
+
+\ssk
+
+Motivation: understand \ubr{all} continuous functions $f:X\ra Y$,
+since it is functions to/from `model' spaces that allow us to 
+explore a space. 
+
+\ssk
+
+E.g., paths = $\gamma:I=[0,1]\ra X$. How many `essentially distinct'
+paths are there from $(-1,0)$ to $(1,0)$ in $\bbr^2\smin\{(0,0)\}$ ?
+What is inessetial? \ubr{Deformations}.
+
+\ssk
+
+Two maps $f,g:X\ra Y$ are {\it homotopic} if one can be deformed 
+to the other (through continuous maps). Formally, there is a
+cts map $H:X\times I\ra Y$ so that $H(x,0)=f(x)$ and $H(x,1)=g(x)$
+for all $x\in X$. We write: $f\simeq g$ (via $H$).
+
+\ssk
+
+Note: $\gamma_x:t\mapsto H(x,t)$ is a cts path in $Y$, for every $x$.
+
+\ssk
+
+Notation: $f:(X,A)\ra (Y,B)$ means $A\sset X$, $B\sset Y$ and $f(A)\sset B$.
+
+\ssk
+
+Two maps $f,g:(X,A)\ra (Y,B)$ are homotopic rel $A$ if 
+$H:X\times I\ra Y$ also satisfies $H(a,t)=f(a)=g(a)$ for all $a\in A$, $t\in I$.
+[So, in part, $f|_A=g|_A$ .]
+
+\ssk
+
+Basic example: any two maps $f,g:X\ra \bbr^n$ are homotopic, via a
+{\it straight-line homotopy}: $H(x,t)=(1-t)f(x)+tg(x)$.
+
+\msk
+
+Homotopy is an \ubr{equivalence} \ubr{relation}: $f\simeq f$  (via $H(x,t)=f(x)$),
+$f\simeq g$ implies $g\simeq f$ (via $K(x,t)=H(x,1-t)$); 
+$f\simeq g$ and $g\simeq h$ implies $f\simeq h$ (via doubling the speed;
+$M(x,t)=H(x,2t)$ for $t\leq 1/2$ and $=K(x,2t-1)$ for $t\geq 1/2$).
+
+\ssk
+
+This allows us to introduce a new notion of equivalence of topological spaces.
+$X$ and $Y$ are {\it homotopy equivalent} [we write $X\simeq Y$]
+if there are $f:X\ra Y$ and $g:Y\ra X$ so that $g\circ f\simeq {\textrm Id}_X$
+and $f\circ g\simeq{\textrm Id}_Y$ . 
+
+\ssk
+
+Homotopy equivalence is an equivalence relation! Note: a homeomorphism is a
+homotopy equivalence! [$g\circ f = {\textrm Id}_X\simeq {\textrm Id}_X$].
+
+\msk
+
+{\bf The homotopy viewpoint.}
+
+\ssk
+
+The basic idea is that homotopy equivalence  (= `h.e.') 
+allows us to move past/around
+`unimportant' differences in spaces. For example, 
+$\bbr^2\smin\{(0,0)\}\cong S^1\times\bbr\simeq S^1\times I\simeq S^1$
+means that maps into $\bbr^2\smin\{(0,0)\}$ `behave like' maps
+into $S^1$ (which we can more readily understand?).
+
+\ssk
+
+{\it Algebraic topology} seeks to understand topological spaces through
+algebraic invariants. An algebraic invariant assigns to each space $X$ an 
+algebraic object $A(X)$ and to each map $f:X\ra Y$ a 
+homomorphism $A(f):A(X)\ra A(Y)$. If $X$ and $Y$ are the `same', then 
+$A(X)$ and $A(X)$ will be isomorphic. Usually, `same' means homeomorphic,
+but we will often find that homotopy equivalent spaces will 
+same the same invariants, due the the methods that we use to build 
+them.
+
+\ssk
+
+This can be both bad and good, `homotopy invariance' of a invariant means
+that it will not be able to distinguish h.e. spaces that are not homeomorphic.
+But it also means that when computing an algebraic invariant, we can replace
+a space $X$ with $Y\simeq Y$, which may streamline a computation.
+
+\msk
+
+A {\it retraction} of $X$ onto $A\sset X$ is a map $r:X\ra A$ so that $r(a)=a$
+for all $a\in A$. [$A$ is a {\it retract} of $X$]. $A$ is a {\it deformation
+retract} of $X$ if $\iota\circ r:X\ra A\ra X$ is $\simeq{\textrm Id}_X$
+[$r$ is a {\it deformation retraction}]. and $r$ is a {\it strong
+deformation retraction} if $\iota\circ r:(X,A)\ra (X,A)$ is $\simeq{\textrm Id}_X$
+rel $A$ (i.e., $H(a,t)=a$ for all $a\in A$). We write $X\searrow A$. 
+
+\ssk
+
+For example, $r:\bbr^n\searrow\{\vec{0}\}$, since $\iota\circ r\simeq{\textrm Id}_{\bbr^n}$
+via a straight-line homotopy 
+
+\hfill $H(x,t)=(1-t)\iota\circ r(\vec{x})+t{\textrm Id}_{\bbr^n}(\vec{x})=t\vec{x}$ .
+
+\ssk
+
+A space $X$ is {\it contractible} if $X\simeq\{*\}$.
+
+\ssk
+
+Mapping cylinders:  If $f:X\ra Y$, then $M_f = X\times I\coprod Y/\sim$, where
+$(x,1)\sim f(x)$. [Idea: we glue $X\times\{1\}$ to $Y$ using $f$.] Then since 
+$X\times I\searrow X\times\{1\}$, we have $M_f\searrow Y$.
+
+\ssk
+
+Fact: $f:X\ra Y$ is a homotopy equivalence \lra\ $M_f\searrow X\times\{0\}$.
+This means that $X\simeq Y$ \lra\ there is a space $Z$ with $X,Y\sset Z$ and 
+$Z\searrow X$, $Z\searrow Y$.
+
+\msk
+
+{\bf The Fundamental Group.}
+
+\ssk
+
+Idea: find the essentially distinct paths between points in $X$.
+How? Turn this into a group! How? The concatenation $\gamma*\eta$ of two paths is
+a path. But: only if the first ends where the second begins (so that, by
+the Pasting Lemma, the resulting map is cts). So we
+either have a \ubr{partial} multiplication (= groupoid!), or we
+focus on \ubr{loops} $\gamma:(I,\partial I)\ra (X,x_0)$ based at a
+fixed point $x_0$ 9we'll do the second).
+
+\ssk
+
+Elements of the {\it fundamental group} $\pi_1(X,x_0)$ `are' 
+loops; the inverse will be the reverse $\overline{\gamma}(t)=\gamma(1-t)$,
+since $\gamma*\overline{\gamma}\simeq c_{x_0}$, and the 
+identity element will be the constant map $c_{x_0}$.
+But! to make $\gamma*\overline{\gamma}$ equal $c_{x_0}$, we need to work with
+{\it homotopy classes} of loops. So elements really are 
+equivalence classes $[\gamma]$ of loops, under $\simeq$ rel $\partial I$.
+
+\ssk
+
+Then by building homotopies (mostly working on the domain $I$,
+i.e., building $K=\gamma\circ H:I\times I\ra I\ra X$)
+we can see that $[\gamma][\eta] = [\gamma*\eta]$ is well defined,
+$[\gamma]^{-1}=[\overline{\gamma}]$ is the inverse, and 
+$([\gamma][\eta])[\omega] = [\gamma]([\eta][\omega])$, so 
+under $*$, $\pi_1(X,x_0)$ is a group. [Most of the proofs that
+needed maps (like $(\gamma*\eta)*\omega$ and $\gamma*(\eta*\omega)$
+(which are the same concatenations, except at 4,4, and 2 times speed, versus 
+2,4, and 4 times speed) are homotopic can be given `picture' proofs, 
+in addition to explicit analytic formulas.
+
+\ssk
+
+Given a map $f:(X,x_0)\ra (Y,y_0)$, we get an induced map
+$f_*:\pi_1(X,x_0)\ra \pi_1(Y,y_0)$ via $f_*[\gamma]=[f\circ\gamma]$.
+This is well-defined, and a homomorphism.
+
+\ssk
+
+Basic computations: $\pi_1(\{*\},*) = \{1\}$, as are 
+$\pi_1(\bbr^n,\vec{0})$ and $\pi_1([0,1]^n,x_0)$ for any
+$x_0$. More generally, any contractible space has trivial fundamental
+group.
+
+\msk
+
+Since $(f\circ g)_*=f_*\circ g_*$, and $({\textrm Id}_X)_*={\textrm Id}_{\pi_1(X,x_0)}$,
+then $X\cong Y$ via $f$ implies $f_*:\pi_1(X,x_0)\ra \pi_1(Y,f(x_0))$
+is an isomorphism.
+
+\ssk
+
+More generally, if $f:X\ra Y$ is a h.e., then $f_*$ is an isomorphism,
+but, because of basepoint issues, the inverse of $f_*$ is generally
+\ubr{not} $g_*$ for $g$ a homotopy inverse. Th is is because under
+a homotopy $H:X\times I\ra X$ of $g\circ f$ to ${\textrm Id}$,
+the basepoint $x_0$ traces out a path $\eta$ from $g(f(x_0))=x_1$ to $x_0$,
+and $[g\circ f\circ\gamma] = [\overline{\eta}*\gamma *\eta]$.
+This map $[\gamma]\mapsto [\overline{\eta}*\gamma *\eta]$ from
+$\pi_1(X,x_0)$ to $\pi_1(X,x_1)$ is a {\it change of basepoint 
+isomorphism}, which we might call $\eta_*$ ? The fact that homotopies
+can drag basepoints around will be a theme we will return to 
+many times moving forward.
+
+\ssk
+
+If $X$ is path connected, then, up to isomorphism, $\pi_1(X,x_0)$ 
+is independent of $x_0$ (we can always find a path to effect an 
+isomorphism), and so we will often write $pi_1(X)$, when $X$ is 
+path-connected, when we only care about the abstract group.
+
+\msk
+
+$\pi_1(S^1,(1,0))\cong\bbz$. The main ingredients:
+
+\ssk
+
+Writing $S^1\sset\bbc$ and $\gamma_n(t)=e^{2\pi int}$ is the loop
+traversing $S^1$ $n$ times counterclockwise at uniform speed,
+then (1) every loop $\gamma$ at $(1,0)$ is $\simeq\gamma_n$ for some $n$.
+
+\ssk
+
+We define $w:\pi_1(S^1,(1,0))\ra\bbz$ by $w[\gamma] = n$ if
+$[\gamma]=[\gamma_n]$. This is well-defined:
+(2) if $\gamma_n\simeq\gamma_m$ rel endpoints, then $n=m$.
+
+\ssk
+
+$w$ is a bijective homomorphism!
+
+\ssk
+
+The proof of (1) amounted to making a general $\gamma$ progressively nicer, 
+via homotopy. This involved 
+
+\ssk
+
+{\it Lebesgue Number Theorem}: If $(X,d)$ is a compact metric space and
+$\{U_\alpha\}$ is an open covering of $X$, then there is an $\epsilon>0$
+so that for every $x\in X$ there is an $\alpha=\alpha(x)$ so that 
+we have $N_d(x,\epsilon)\sset U_\alpha$.
+
+\ssk
+
+Then by covering $S^1$ by the `top 2/3rds' and `bottom 2/3rds' subsets
+and taking inverse images under $\gamma:(I,\partial I)\ra (S^1,(1,0))$,
+the LNT will partition $I$ into finitely many intervals each mapping into
+top or bottom. Creating subpaths by restricting to each subinterval, and inserting
+`hairs' to points $(1,0),(-1,0)$ in the intersection of top and bottom,
+we can then homotope the subpaths to standard paths $t\mapsto e^{\pm 2\pi it}$.
+Cancelling pairs the reverse direction give us our `normal forms'
+$\gamma_n$.
+
+\ssk
+
+The proof of (2) amounted to using an `extra' coordinate $(\cos t,\sin t,t)$
+to keep track of how many times we wind around the circle. To do this correctly,
+we really use the map $p:t\mapsto(\cos t,\sin t,t)\mapsto(\cos t,\sin t)$ and
+then \ubr{lift} paths $\gamma:I\ra S^1$ to paths 
+$\widetilde{\gamma}:I\ra \bbr$ with $\gamma = p\circ\widetilde{\gamma}$. 
+This agin uses the LNT to partition $I$ into subintervals mapping into top and bottom,
+and the fact that the inverse image of top and bottom are a disjoint
+union of open sets mapped homeomorphically under $p$ to the top and bottom.
+[This is the {\it evenly covered property}.]
+
+\ssk
+
+More than this, homotopies $H:I\times I\ra S^1$ can also be lifted; this enables us to
+show that loops homotopic rel endpoints, when lifted both starting at the same point,
+will end at the same point. Since $\gamma_n$ when lifted starting at $0$ will
+end at $n$, the result follows.
+
+\msk
+
+{\bf Applications.}
+This single computation has many applications! First, there is no
+retraction $r:\bbd^2\ra \partial\bbd^2$. This is because if there were one,
+then $r_*:\pi_1(\bbd^2,(1,0))\ra\pi_1(S^1,(1,0))$ would be a surjection,
+which is impossible.
+
+\ssk
+
+This in turn gives the {\it Brouwer Fixed Point Theorem}: Every countinuous
+map $f:\bbd^2\ra \bbd^2$ has a fixed point. For if not, we can then 
+manufacture a retraction $r:\bbd^2\ra \partial\bbd^2$.
+
+\ssk
+
+Finally, we can prove the {\it Fundamental Theorem of Algebra}: Every non-constant
+polynomial $p$ has a complex root. For if not, then for large enough $N$ the map
+
+\ctln{$t\mapsto f(Ne^{2\pi it})\mapsto f(Ne^{2\pi it})/||f(Ne^{2\pi it})||$}
+
+from 
+$I$ to $S^1$ is homotopic to both $c_{(1,0)}=\gamma_0$ and $\gamma_n$ for $n$ = the
+degree of $f$, a contradiction.
+
+\bsk
+
+{\bf Group presentations.}
+
+{\it Free groups:} $\Sigma$ = a set; a {\it reduced word} on \msig\ is a (formal)
+product $a_1^{\ep_1}\cdots a_n^{\ep_n}$ with $a_i\in\sig$ and $\ep_i=\pm 1$,
+and either $a_i\neq a_{i+1}$ or $\ep_i\neq -\ep_{i+1}$ for every $i$. (I.e., no
+$aa^{-1},a^{-1}a$ in the product.)
+
+\ssk
+
+The free group $F(\sig)$ = the set of reduced words, with multiplication = concatenation 
+followed by reduction; remove all possible $aa^{-1},a^{-1}a$ from the site of concatenation.
+Identity element = the empty word, 
+$(a_1^{\ep_1}\cdots a_n^{\ep_n})^{-1} = a_n^{-\ep_n}\cdots a_1^{-\ep_1}$. 
+$F(\sig)$ is generated by \msig, with no relations among the generators
+other than the ``obvious'' ones.
+
+\ssk
+
+Important property of free groups: any function $f:\sig\ra G$ , $G$ a group, extends
+uniquely to a homomorphism $\phi: F(\sig)\ra G$.
+
+\ssk
+
+If $R\sset F(\sig)$, then $<R>^N$ = normal subgroup generated by $R$ 
+= $\displaystyle \{\prod_{i=1}^n g_i r_i g_i^{-1} : n\in\bbn_0 , g_i\in F(\sig) , r_i\in R\}$
+= smallest normal subgroup containing $R$.
+
+$F(\sig)/<R>^N$ = the group with {\it presentation} $<\sig | R>$ .
+Any homom $\varphi:F(\sig)\ra G$ with $F(R)=\{1_G\}$ induces 
+$\overline{\varphi}:<\sig | R>\ra G$ .
+
+If $G_1=<\sig_1 | R_1>$ and $G_2=<\sig_2 | R_2>$, then their {\it free product}
+$G_1*G_2 = <\sig_1\coprod\sig_2 | R_1\cup R_2>$ .
+Any pair of
+homoms $\phi_i:G_i\ra G$ extends uniquely to a homom $\phi:G_1*G_2\ra G$
+
+\ssk
+
+Gluing groups: given groups $G_1=<\sig_1 | R_1>$ and 
+$G_2=<\sig_2 | R_2>$, a group $H$ and homomorphisms $\phi_1 : H\ra G_i$,
+the largest group ``generated'' by
+$G_1$ and $G_2$, in which $\phi_1(h)=\phi_2(h)$ for all $h\in H$ is
+$G_1*_HG_2 = <\sig_1\coprod\sig_2 | R_1\cup R_2\cup\{\phi_1(h)(\phi_2(h))^{-1} : h\in H\}>$ .
+
+Important special cases : $G*_H\{1\} = G/<\phi(H)>^N = <\sig | R\cup \phi(H)>$ , and
+$G_1*_\{1\}G_2 \cong G_1*G_2$ .
+
+\ssk
+
+{\bf Seifert-van Kampen Theorem.}
+If we express a topological space as the union $X=X_1\cup X_2$, then we have 
+inclusion-induced homomorphisms 
+
+\ctln{$j_{1*}: \pu(X_1)\ra \pu(X)$ , $j_{2*}: \pu(X_2)\ra \pu(X)$}
+
+This in turn gives a homomorphism $\phi:\pi(X_1)*\pu(X_2)\ra \pu(X)$ . Under the
+hypotheses
+\hskip.2in $X_1,X_2$ are open, and $X_1,X_2,X_1\cap X_2$ are path-connected
+\hskip.2in (choose a basepoint in $X_1\cap X_2$ and)
+this homom is onto, and has kernel 
+$H=<i_{1*}(\gamma)(i_{2*}(\gamma))^{-1} : \gamma\in\pu(A) >^N$, so we have
+the {\it Seifert - van Kampen Theorem:}  $\pu(X)\cong \pu(X_1)*_{\pu(A)}\pu(X_2)$ . 
+
+[Why? Lebesgue number theorem! Any loop into $X$, using the inverse images of 
+$X_1,X_2$ as an open cover, can be partitioned into subloops alternately mapping into
+$X_1,X_2$, which makes $\phi$ surjective. Partitioning a null homotopy, using $H$ to 
+change which of $\pi(X_1),\pu(X_2)$ a loop lies in, yields the result.]
+
+Generalization (of sorts): if $X=C\cup D$ closed sets, with $C,D$ having nbhds $U,V$ which 
+deformation retract to $C,D$ (and $U\cap V$ def retracts to $C\cap D=A$, then 
+$\pu(X)\cong \pu(C)*_{\pu(A)}\pu(D)$.
+
+\ssk
+
+{\bf Applications.} 
+
+{\it Fundamental groups of graphs:} Choosing a maximal tree $T$ in a graph $\Gamma$,
+$\Gamma \simeq \Gamma/T = $a bouquet of circles, which by SvK has fundamental gorup free on the number
+of loops.
+
+{\it Gluing on a 2-disk:} If $X$ is a topological space and $f:\del \bbd^2\ra X$ is continuous, then we
+can construct the quotient space $Z=(X\coprod \bbd^2)/\{x\sim f(x) : x\in\del\bbd^2\}$,
+the result of gluing $\bbd^2$ to $X$ along $f$. Then SvK (with some delicacy choosing the basepoint),
+treating $f$ as a loop in $X$, gives
+$\pu(Z)\cong \pu(X)*_\bbz\{1\} = \pu(X_2)/<\bbz>^N \cong \pu(X_2)/<[f]>^N$ .
+So the effect of gluing on a 2-disk onto a space, on the fundamental group, is to add a new relator, 
+namely the word represented by the attaching map (adjusting for basepoint).
+All of this applies equally well to attaching several 
+2-disks; each adds a new relator. 
+This in turn opens up huge possibilities for the computation of $\pu(X)$. For example, for cell complexes
+(see below!),
+we can inductively compute \mpu\ by starting with the 1-skeleton, with free fundamental group, and 
+attaching the 2-cells one by one, which each add a relator to the presentation of $\pu(X)$  .
+
+Knot complements $X=S^3\setminus K$ deformation retract onto a 2-complex which can be built from a planar diagram of the 
+knot. From this, a presentation for $\pu(X)$ can be built, with a generator for each strand of the
+knot diagram, and a (length 4) relator for each crossing, expressing the relation that
+the overstrand conjugates one understrand at the crossing to the other. (The particular form
+of the relator ($xax^{-1}=b$ or $x^{-1}ax=b$ is determined by an orientation for the knot.)
+
+\msk
+
+{\bf CW complexes:} The ``right'' spaces to do algebraic topology on.
+The basic idea: CW complexes are built inductively, by gluing 
+disks onto lower-dimensional strata. $X=\bigcup X^{(n)}$, where
+$X^{(0)}$ = a disjoint union of points, and, inductively,
+$X^{(n)}$ is built from $X^{(n-1)}$ by gluing $n$-disks $D^n_i$
+along their boundaries. 
+$X=\bigcup X^{(n)}$
+is given the {\it weak topology}; that is,  $C\subseteq X$ is closed \lra\
+$C\cap X^{(n)}$ is closed for all $n$. 
+Each disk $D^n_i$ has a {\it characteristic map} $\phi_i:D^n_i\ra X$
+given by 
+$D^n_i\ra X^{(n-1)}\cup(\coprod D^n_i)\ra X^{(n)}\subseteq X$.
+$f:X\ra Y$ is cts \lra\ $f\circ \phi_i:D^n_i\ra X\ra Y$ is cts for 
+all $D^n_i$. 
+
+A {\it CW pair} $(X,A)$ is a CW complex $X$ and a {\it subcomplex}
+$A$. If $(X,A)$ is a CW pair, then
+$X/A$ admits a CW structure whose cells are $[A]$ and the cells of 
+$X$ not in $A$. We can glue two CW complexes $X,Y$ along isomorphic
+subcomplexes $A\subseteq X,Y$, yielding $X\cup_AY$.
+
+Perhaps the most important property of CW complexes (for algebraic topology,
+anyway) is the {\it homotopy extension property}; given a CW pair
+$(X,A)$, a map $f:X\ra Y$, and a homotopy $H:A\times I\ra Y$ such that
+$H|_{A\times 0}=f|_A$, there is a homotopy (extension)
+$K:X\times I\ra Y$ with $K|_{A\times I}=H$. This is because 
+$B=X\times\{0\}\cup A\times I$ is a retract of $X\times I$; $K$ is the 
+composition of this retraction and the ``obvious'' map from $B$ to $Y$.
+Consequence: if $(X,A)$ is a CW pair and 
+$A$ is contractible, then $X/A\simeq X$.
+
+\msk
+
+{\bf Covering spaces:} 
+A map $p:E\ra B$ is called a covering map if for every point $x\in B$, there
+is a neighborhood $\mu$ of $x$ (an
+{\it evenly covered neighborhood}) so that $p^{-1}(\mu)$ 
+is a disjoint union $\mu_\alpha$ of open sets in $E$, each mapped
+homeomorphically onto $\mu$ by (the restriction of) $p$ . $B$ is
+called the {\it base space} of the covering; $E$ is called the {\it total
+space}. 
+
+The disjoint union of 42 copies of a space,
+each mapping homeomorphically to a single copy, is an example of a 
+{\it trivial covering}. 
+The famous 
+exponential map $p:\bbr\ra S^1$ given by $t\mapsto e^{2\pi it} = 
+(\cos (2\pi t),\sin (2\pi t))$ is a covering map.
+We can build many finite-sheeted (every point
+inverse is finite) coverings of a bouquet of two circles, by 
+assembling $n$ points over the vertex, and then, on either side (the red/blue
+sides?),
+connecting the points by $n$ (oriented) arcs, one with one red/blue arcs going
+in/out of
+each vertex. 
+Covering spaces of more ``interesting'' graphs can be assembled similarly.
+Our basic theme: covering spaces of a (suitably nice) space $X$ have a very close relationship
+to $\pu(X,x_0)$. 
+
+\ssk
+
+{\bf Homotopy Lifting Property:} If $p:\wtl{X}\ra X$ is a covering map, 
+$H:Y\times I\ra X$ is a homotopy, $H(y,0)=f(y)$, and
+$\wtl{f}:Y\ra \wtl{X}$ is a {\it lift} of $f$ (i.e., $p\circ \wtl{f}=f$),
+then there is a unique lift $\wtl{H}$ of $H$ with $\wtl{H}(y,0)=\wtl{f}(y)$ .
+
+The idea: using the Lebesgue Number Theorem, we build the homotopy a little 
+bit at a time, using inverse images of evenly-covered neighborhoods.
+In particular, applying this property in the case $Y=\{*\}$, we get the
+
+{\bf Path Lifting Property}: Given 
+a covering map $p:\wtl{X}\ra X$, a path 
+$\gamma:I\ra X$ with $\gamma(0)=x_0$, and a point 
+$\wtl{x}_0\in p^{-1}(x_0)$, there is a unique path $\wtl{\gamma}$
+lifting $\gamma$ with $\wtl{\gamma}(0)=\wtl{x}_0$.
+
+\ssk
+
+An immediate consequence: 
+If $p:(\wtl{X},\tilde{x}_0)\ra (X,x_0)$ is a covering map, then the 
+induced homomorphism
+$p_*:\pu(\wtl{X},\wtl{x}_0)\ra \pu(X,x_0)$ is injective.
+Even more, $p_*(\pu(\wtl{X},\wtl{x}_0)))\sset \pu(X,x_0)$
+is precisely the elements given by loops at $x_0$, 
+whose lifts to paths starting at $\wtl{x}_0$, are loops. 
+
+The cardinality of a point inverse $p^{-1}(y)$ is, by the evenly
+covered property, constant on (small) open sets, so the set of 
+points of $x$ whose point inverses have any given cardinality
+is open. Consequently, if $X$ is connected, this number
+is constant over all of $X$, and is called the number of {\it sheets}
+of the covering $p:\wtl{X}\ra X$ . 
+If $X$ and $\wtl{X}$ are 
+path-connected, then the number of sheets of a covering map equals
+the index of the subgroup $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$G=\pu(X,x_0)$ . The idea: loops representing elements in the same coset have lifts
+at $\wtl{x}_0$ which end at the same point.
+
+\ssk
+
+The path lifting property (because $\pi([0,1],0)=\{1\}$) is actually a special
+case of a more general {\bf lifting criterion}: If 
+$p:(\wtl{X},\wtl{x}_0)\ra (X,x_0)$ is a covering map, and 
+$f:(Y,y_0)\ra (X,x_0)$ is a map, where
+$Y$ is path-connected and locally path-connected, then there is a lift 
+$\wtl{f}:(Y,y_0)\ra (\wtl{X},\wtl{x}_0)$ of $f$ (i.e., 
+$f=p\circ\wtl{f}$) $\Leftrightarrow$ 
+$f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$ . 
+Furthermore, two lifts of $f$ which agree at a single point are equal.
+
+\ssk
+
+{\bf Universal covering spaces}:
+A covering space $(\wtl{X},\wtl{x}_0)$ determines a subgroup of $\pu(X,x_0)$. Does it go the
+other way? A particularly
+important covering space to identify 
+is one which is simply connected. Such a covering 
+is essentially unique: if $X$ is {\it locally path-connected} and has two connected, simply connected
+covering spaces $p_1:X_1\ra X$ and $p_2:X_2\ra X$, then
+there is a homeomorphism $h:X_1\ra X_2$ with $p_2\circ h = p_1$.
+
+Not every (locally path-connected) space $X$ has a universal covering; a 
+(further) necessary condition is that $X$ be {\it semi-locally simply connected}:
+every point $x\in X$ has a nbhd $x\in\mu\sset X$ with $\iota_*:\pu(U,x)\ra\pi(X,x)$ is trivial.
+Conversely, every path connected, locally path connected, and
+semi-locally simply connected (S-LSC) space $X$ has a universal covering.
+$\widetilde{X}$ is the space whose
+points are (equivalence classes $[\gamma]$ of)
+based paths $\gamma:(I,0)\ra (X,x_0)$, where two paths are equivalent
+if they are homotopic rel endpoints. The projection map is
+$p([\gamma])=\gamma(1)$. 
+
+\msk
+
+This in turn is the key to building covering spaces corresponding to any subgroup $H$ of 
+$\pu(X)$. [This can, alternatively, be done by mimicking the construction above, 
+except paths $\gamma,\eta$ are equivalent when $[\gamma*\overline{\eta}]\in H$.]
+The key to this is the {\it deck transformation group
+(Deckbewegungsgruppe)}
+of a covering space $p:\wtl{X}\ra X$; this is the set of all
+homeomorphisms $h:\wtl{X}\ra\wtl{X}$ such that $p\circ h = p$.
+
+By definition, these $h$ permute each of the point inverses
+of $p$. Since $h$ is a lift of the projection map
+$p$, by the lifting criterion $h$ is determined by which point in $p^{-1}(x_0)$ 
+it takes the basepoint 
+$\wtl{x}_0$ of $\wtl{X}$ to. A deck transformation sending
+$\wtl{x}_0$ to $\wtl{x}_1$ exists $\Leftrightarrow$
+$p_*(\pu(\wtl{X},\wtl{x}_0)=p_*(\pu(\wtl{X},\wtl{x}_1)$
+[we need one inclusion to give $h$, and the opposite inclusion
+to ensure it is a bijection]. 
+
+In general, these two groups $p_*(\pu(\wtl{X},\wtl{x}_0),p_*(\pu(\wtl{X},\wtl{x}_1)$
+are always {\it conjugate}, by the projection of a path from 
+$\wtl{x}_0$ to $\wtl{x}_1$.
+Paths in $\wtl{X}$ from $\wtl{x}_0$ to $\wtl{x}_1$ are in 1-to-1
+corresp with the cosets of $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$\pu({X},{x}_0)$; so deck transformations are in 1-to-1 
+corresp with cosets whose representatives conjugate 
+$H$ to itself. The set of such elements in $G$ is called the 
+{\it normalizer of $H$ in $G$}, and denoted $N_G(H)$ or simply
+$N(H)$. The deck transformation group is therefore
+isomorphic to the group $N(H)/H$ under
+$h\mapsto$ the coset with representative the projection of the path from 
+$\wtl{x}_0$ to $h(\wtl{x}_0)$. 
+
+\ssk
+
+Applying this to the universal covering space
+$p:\wtl{X}\ra X$, in this case $H=\{1\}$, so $N(H)=\pu(X,x_0)$.
+So the deck transformation group is isomorphic to $\pu(X,x_0)$. 
+For example, this gives the quickest possible proof 
+that $\pu(S^1)\cong \bbz$, since $\bbr$ is a 
+contractible covering space, whose deck transformations
+are the translations by integer distances. 
+
+Thus $\pu(X)$ acts on its universal cover as a group of
+homeomorphisms. And since this action is {\it simply transitive}
+on point inverses [there is exactly one (that's the simple
+part) deck transformation carrying any one point in a point 
+inverse to any other one (that's the transitive part)], the 
+quotient map from $\wtl{X}$ to the orbits of this action \underbar{is}
+the projection map $p$ to $X$.
+
+But! Given $G=\pu(X,x_0)$ and its 
+action on a univ cover $\wtl{X}$, we can, instead of modding out by $G$,
+mod out by any \underbar{subgroup} $H$ of $G$, to build $X_H=\wtl{X}/H$. 
+This is a space with $\pi_1(X_H)\cong H$, having $\wtl{X}$ as univ covering.
+And since the quotient (covering) map $p_G:\wtl{X}\ra X=\wtl{X}/G$ factors through $\wtl{X}/H$,
+we have an induced map $p_H:\wtl{X}/H\ra X$, which is a covering map.
+So every subgroup of $G$ is the
+fundamental group of a covering of $X$. Even more:
+
+{\bf The Galois correspondence:} 
+Two coverings
+$p_1:X_1\ra X$ , $p_2:X_2\ra X$ are {\it isomorphic} if there is a homeo
+$h:X_1\ra X_2$ with $p_1=p_2\circ h$. Isomorphic coverings give,
+under projection, conjugate subgroups of $\pu(X,x_0)$.
+For a path-connected, locally path-connected, semi-locally simply-connected space $X$,  
+the image of the induced homomorphism on \mpu\ 
+gives a one-to-one correspondence between 
+[isomorphism classes of (connected) coverings of $X$] and 
+[conjugacy classes of subgroups of $\pu(X)$].
+
+\ssk
+
+So, for example, if you have a group $G$ that you are interested in, you know of a (nice enough) 
+space $X$ with $\pu(X)\cong G$, and you know enough about the coverings of $X$, then you can
+gain information about the subgroup structure of $G$. 
+
+For example, a free group $F(\Sigma)$ is \mpu\ of a bouquet of circles $X$. Since every covering
+of $X$ is a graph, we have: every
+subgroup of a free group is free. 
+A subgroup $H$ of index $n$ in $F(\Sigma)$ corresponds to a $n$-sheeted covering $\wtl{X}$ of $X$. If
+$|\Sigma| = m$, then $\wtl{X}$ will have $n$ vertices and $nm$ edges. Collapsing a maximal
+tree, having $n-1$ edges, to a point, leaves a bouquet of $nm-n+1$ circles, so $H\cong F(nm-n+1)$.
+
+Given a free group
+$G=F(a_1,\ldots a_n)$ and a collection of words $w_1,\ldots w_m\in G$,
+we can determine the rank and ndex of the subgroup it $H$ they
+generate by building the corresponding cover. The idea is
+to start with a bouquet of $m$ circles, each subdivided 
+and labelled to spell
+out the words $w_i$. Then we repeatedly identify edges sharing
+on common vertex if they are labelled precisely the same (same
+letter {\it and} same orientation). This process is known
+as {\it folding}. When done, we have (by adding trees if needed),
+constructed the covering corresponding to $<w_1,\ldots w_m>\sset G$.
+
+With work, this same process can be applied to subgroups of finitely presented
+groups (to be certain it stops, one usually needs a priori knowledge that the 
+subgroup has finite index). In so doing, it yields a presentation for the subgroup!
+
+\msk
+
+{\bf Postscript: why care about covering spaces?} The preceding discussion
+probably makes it clear that covering places play a central role in
+(combinatorial) group theory. It also plays a role in embedding 
+problems; a common scenario is to have a map $f:Y\ra X$ which is 
+injective on \mpu , and we wish to know if we can lift $f$ to a 
+finite-sheeted covering so that the lifted map $\widetilde{f}$ is 
+homotopic to an embedding. Information that is easier to obtain 
+in the case of an embedding can then be passed down to gain information
+abut the original map $f$
+
+
+
+\vfill
+\end{document}
+
+
+

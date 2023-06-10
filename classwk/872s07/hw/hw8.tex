@@ -1,0 +1,130 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+\nopagenumbers
+
+\input amstex
+
+\input epsf
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\bra{$\Rightarrow$}
+\def\bbr{{\Bbb R}}
+\def\bbz{{\Bbb Z}}
+\def\bbq{{\Bbb Q}}
+\def\del{\partial}
+\def\indt{\item{}}
+\def\wtl{\widetilde}
+\def\coker{\text{coker}}
+\def\im{\text{im}}
+\def\wtih{\widetilde{H}}
+
+\ctln{\bf Math 872 Algebraic Topology}
+
+\ssk
+
+\ctln{Problem Set \#\ 8}
+
+\ssk
+
+\ctln{Starred (*) problems due Thursday, April 13}
+
+\bsk
+
+\item{\bf 39.} Giving the $n$-simplex $X=\Delta^n$ its standard $\Delta$-complex
+structure, show that the $k$-skeleton of $X$ has homology
+
+\ssk
+
+\ctln{
+$\wtih_i(X^{(k)})=
+\cases 
+\bbz^{r(k,n)} & \text{if}\ i=k\cr
+0 & \text{otherwise} \cr
+\endcases$}
+
+\ssk
+
+\item{} where $r(k,n)={{n}\choose{k+1}}$. 
+
+\ssk
+
+\item{} (Hint: our computations preliminary to 
+the proof of ``cellular = singular'' will help.)
+
+\msk
+
+\item{\bf (*) 40.} Show that if the sequence
+
+\ssk
+
+\ctln{$0\ra C_n\ra C_{n-1}\ra \cdots \ra C_1\ra C_0\ra 0$}
+
+\ssk
+
+\item{} is exact, then $\sum (-1)^i{\text rank}\ C_i=0$.
+(Hint: pretend it's a chain complex...)
+
+\msk
+
+\item{\bf (*) 41.} Show that if $\{{\Cal U},{\Cal V}\}$ is an open cover of $X$ and 
+${\Cal U}\cap{\Cal V},{\Cal U},{\Cal V}$ and $X$ all have $\oplus_i H_i(\text{blah})$ of finite 
+rank, then $\chi(X)=\chi({\Cal U})+\chi({\Cal V})-\chi({\Cal U}\cap{\Cal V})$.
+
+\msk
+
+\item{\bf 42.} Show that if $\widetilde{X}$ is an $n$-sheeted covering space of the finite
+CW-complex $X$, then 
+
+\item{} $\chi(\widetilde{X})=n\chi(X)$. Conclude that the only non-trivial finite
+group that can act on an even-dimensional sphere $S^{2k}$ without fixed points is
+$\bbz_2$. (Skip the hard part: the quotient by the group action is a CW-complex...)
+
+\msk
+
+\item{\bf 43.} Show that $H_i(X\times S^n)\cong H_i(X)\oplus H_{i-n}(X)$ for every $i$;
+here $H_i(X)=0$ if $i<0$.
+
+\ssk
+
+\item{} [One approach: show that $H_i(X\times S^n)\cong H_i(X)\oplus H_i(X\times S^n,X\times D^n_+)$ 
+(Problem \#30 will help), and that $H_i(X\times S^n,X\times D^n_+)\cong H_{i-1}(X\times S^{n-1},X\times D^{n-1}_+)$
+by excision and the long exact sequence of the triple $(X\times D^{n-1}_+,X\times S^{n-1},X\times D^{n}_-)$.
+
+\ssk
+
+\item{} Hatcher, p.158, \# 36 gives a different approach.]
+
+\vfill
+\end
+
+
+
+
+
+
+
+
+
+\ctln{\vbox{\hsize=4in
+\leavevmode
+\epsfxsize=4in
+\epsfbox{hw6.ai}}}
+
+

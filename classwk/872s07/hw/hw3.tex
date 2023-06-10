@@ -1,0 +1,97 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\input amstex
+
+\input epsf
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\bra{$\Rightarrow$}
+\def\bbr{{\Bbb R}}
+\def\bbz{{\Bbb Z}}
+\def\del{\partial}
+\def\indt{\item{}}
+\def\wtl{\widetilde}
+
+
+
+\ctln{\bf Math 872 Algebraic Topology}
+
+\ssk
+
+\ctln{Homework \#\ 3}
+
+\ssk
+
+\ctln{Starred (*) problems due Tuesday, February 13}
+
+\bsk
+
+\item{\bf 11.} Compute the fundamental group of the complement $X$ of the coordinate 
+axes in $\bbr^3$, i.e., $X=\{(x,y,z)\in \bbr^3\ :\ |xy|+|xz|+|yz|\neq 0\}$. 
+(Hint: Find a simpler space to compute the fundamental group of.)
+
+\msk
+
+\item{\bf 12.} Show that if $p_1:\wtl{X_1}\ra X_1$ and $p_2:\wtl{X_2}\ra X_2$ are
+covering maps, then the map 
+
+\ssk
+
+$p=p_1\times p_2:\wtl{X_1}\times\wtl{X_2}\ra X_1\times X_2$,
+given by $p(x_1,x_2)=(p_1(x_1),p_2(x_2))$, is also a covering map.
+
+
+\msk
+
+\item{\bf (*) 13.} Let $Y\subseteq \bbr^2$ denote the {\it quasi-circle}, given by
+$Y=$
+
+\ssk
+
+$\{(x,\sin(1/x)):x\in(0,{{1}\over{\pi}}]\}\cup\{0\}\times [-1,1]\cup[-{{1}\over{\pi}},0]\times\{0\}
+\cup\{({{1}\over{\pi}}\cos(t),-{{1}\over{\pi}}\sin(t))\:0\leq t\leq \pi\}$
+
+\ssk
+
+(See Hatcher, p.79, problem \# 7 for an (approximate) picture.) The quotient map
+
+$q:Y\ra Y/\sim$ that collapses the vertical subinterval $\{0\}\times [-1,1]$ to a point 
+gives a space homeomorphic to $S^1$. 
+Show that $\pi_1(Y)=\{1\}$ (hint: show that any path in $Y$ is disjoint from $\{(x,y)\in Y\ :\ 0<x<\epsilon\}$
+for some $\epsilon>0$), but the map $q$ does not lift to the universal covering
+$p:\bbr\ra S^1$. [This demonstrates that we cannot in general eliminate the hypothesis 
+that $Y$ be locally path-connected, in the lifting criterion.]
+
+\msk
+
+\item{\bf 14.} Let $p:\wtl{X}\ra X$ be a finite-sheeted covering space, with $\wtl{X}\neq \emptyset$.
+Show that $\wtl{X}$ is compact and Hausdorff \lra\ $X$ is compact and Hausdorff.
+
+\msk
+
+\item{\bf (*) 15.} Let $p:\wtl{X}\ra X$ and $q:\wtl{Y}\ra Y$ be covering spaces of path-connected,
+locally path connected spaces $X$ and $Y$ with $\wtl{X}$ and $\wtl{Y}$ simply-connected.
+Show that if $X$ and $Y$ are homotopy equivalent, then $\wtl{X}$ and $\wtl{Y}$ are homotopy
+equivalent. [Problem 6 from Problem Set \# 1 might help.]
+
+
+\vfill
+\end

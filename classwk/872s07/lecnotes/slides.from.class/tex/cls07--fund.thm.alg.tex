@@ -1,0 +1,133 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+{\bf The Fundamental Theorem of Algebra:}
+
+\msk
+
+\cltr{Every non-constant polynomial
+has a complex root: for every $f(z)=a_nz^n+\cdots +a_0$ with $n\geq 1$ and $a_n\neq 0$,
+$a_i\in{\Bbb C}$, there is a $z_0\in{\Bbb C}$ with $f(z_0)=0$.}
+
+\ssk
+
+{\bf Proof:} Thinking of ${\Bbb C}=\bbr^2$, if not, then $f$ is a map $\bbr^2\ra \bbr^2\setminus\{0\}$.
+We can divide through by $a_n$ without affecting this, and assume that $f$ is monic.
+
+\ssk
+
+Setting \cltr{$\gamma_m(t)=f(m\cos(2\pi t),m\sin(2\pi t))$}, then $\gamma_m:S^1\ra\bbr^2\setminus\{0\}$
+extends to a map $\Gamma_m:D^2\ra\bbr^2\setminus\{0\}$, as $\Gamma_n(x)=f(mx)$, so $\gamma_m$ is 
+null-homotopic for all $m$. 
+
+\ssk
+
+But $\bbr^2\setminus\{0\}$ def. retracts to the unit circle (by $r(z)=z/|z|$), so 
+$\pi_1(\bbr^2\setminus\{0\})\cong \bbz$, and by the above all of the $[\gamma_m]$
+represent $0$ in $\bbz$, and so $r_*[\gamma_m]=[r\circ\gamma_m]=0$, as well. 
+But for large $m$ we can compute
+$w(r\circ\gamma_m)=n$; since $n\geq 1$, this is a contradiction. 
+
+\msk
+
+\cltr{$\gamma_m(t)=f(me^{2\pi it})=
+m^n(e^{2\pi nit}+{{a_{n-1}}\over{m}}e^{2\pi (n-1)it}+\cdots +{{a_0}\over{m^n}})= m^n(e^{2\pi nit}+R(m,t))$},
+
+\ssk
+
+so $r\circ\gamma_m(t)=(e^{2\pi nit}+R(m,t))/|e^{2\pi nit}+R(m,t)|$.
+But as $m\ra \infty$, $R(m,t)\ra 0$
+
+uniformly in $t$;
+$|R(m,t)|=|{{a_{n-1}}\over{m}}e^{2\pi (n-1)it}+\cdots +{{a_0}\over{m^n}}|\leq {{|a_{n-1}|}\over{m}}+\cdots +{{|a_0|}\over{m^n}}\ra 0$ .
+
+
+\msk
+
+So for large enough $m$ $|R(m,t)|<{{1}\over{2}}$ for all $t$, 
+
+and then 
+for every $s\in I$, 
+$|e^{2\pi nit}+sR(m,t)|\neq 0$, since 
+
+$|e^{2\pi nit}+sR(m,t)|\geq |e^{2\pi nit}|-s|R(m,t)|\geq |e^{2\pi nit}|-|R(m,t)|\geq {{1}\over{2}}$.
+
+\msk
+
+Then the homotopy
+$H(t,s)=(e^{2\pi nit}+sR(m,t))/|e^{2\pi nit}+sR(m,t)|$ is well-defined and
+continuous, $H:I\times I\ra S^1$, and defines a homotopy from 
+$\alpha:t\mapsto e^{2\pi nit}$ 
+
+(at $s=0$) to $r\circ\gamma_m$ (at $s=1$).
+Since $w(\alpha)=n$, for large enough $m$,
+$w(r\circ\gamma_m)=n$. 
+
+\msk
+
+This contradiction implies that $f$ must have a root, as
+desired.
+
+\vfill
+\end
+

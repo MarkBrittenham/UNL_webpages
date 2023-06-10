@@ -1,0 +1,97 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\input amstex
+
+\input epsf
+\loadmsbm
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+\def\ra{\rightarrow}
+\def\lra{$\Leftrightarrow$}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\bra{$\Rightarrow$}
+\def\bbr{{\Bbb R}}
+\def\bbz{{\Bbb Z}}
+\def\bbq{{\Bbb Q}}
+\def\del{\partial}
+\def\indt{\item{}}
+\def\wtl{\widetilde}
+
+
+
+\ctln{\bf Math 872 Algebraic Topology}
+
+\ssk
+
+\ctln{Problem Set \#\ 4}
+
+\ssk
+
+\ctln{Starred (*) problems due Tuesday, February 27}
+
+\bsk
+
+\item{\bf 16.} Show that $X=\bbr^2\setminus\bbq^2\subseteq \bbr^2$ is path connected,
+and $\pi_1(X)$ is uncountable. (I.e., find uncountably many loops no two of which are
+homotopic to one another.)
+
+\msk
+
+\item{\bf 17.} Show that if $p:\wtl{X}\ra X$ is a covering map and $A\subseteq X$ is
+a subspace if $X$, then 
+
+\item{}$p|_{p^{-1}(A)}:p^{-1}(A)\ra A$ is also a covering map.
+
+\msk
+
+\item{\bf (*) 18.} Find a pair of (finite) graphs (= 1-dim'l CW complexes with finitely
+many 0- and 1-cells) $X_1$ and $X_2$ that have a common finite-sheeted covering space 
+$p_1:X\ra X_1$ , $p_2:X\ra X_2$, but do {\it not} commonly cover another space, i.e., 
+they are not both covering spaces of a single space $Y$.
+
+\msk
+
+\item{\bf 19.} Show that if a group $G$ acts freely ($x=gx$ $\Rightarrow$ $g=1$)
+and properly discontinuously (for all $x\in X$ there is a nbhd ${\Cal U}$ of $x$ such that
+$\{g\ :\ g({\Cal U})\cap{\Cal U}\neq\emptyset\}$ is finite)
+on a space $X$, then the quotient map $p:X\ra X/G=X/\{x\sim gx \text{\ for all\ } g\in G\}$
+given by $p(x)=[x]$
+is a covering map. In particular if $X$ is Hausdorff and $G$ is a finite group acting freely on $X$,
+then $p:X\ra X/G$ is a covering map. 
+
+\item{}[Pointless remark: some people would write our quotient 
+space as $G\backslash X$, since $G$ is acting on the left, and so is being quotiented out from the left,
+although the Wikipedia entry on the matter, 
+{\it http://en.wikipedia.org/wiki/Group{\_}action},
+agrees with us in this. Besides, as I just learned when TeXing this up, TeX doesn't like $\backslash$
+as a symbol, it asked me what the macro ``$\backslash$X'' was supposed to mean ...?]
+
+\msk
+
+\item{\bf (*) 20.} (Using covering spaces,) show that a finitely generated group $G$ has only 
+finitely many subgroups of a given index $n$. (Hint: do this first for a free group $F(m)$, 
+then use the existence of a surjective homomorphism $\varphi:F(m)\ra G$ for a suitable $m$.) 
+
+\msk
+
+\item{\bf 21.} Show, using covering spaces, that the fundamental group of the closed
+orientable surface $\Sigma$ of genus 2 is not abelian. (Hint: to show that for loops $\gamma,\eta$ 
+that $\gamma*\eta*\overline{\gamma}*\overline{\eta}$ isn't trivial, show that it (at least once)
+does not lift to a loop.)
+
+\vfill
+\end

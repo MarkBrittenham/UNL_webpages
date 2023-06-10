@@ -1,0 +1,562 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+%\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cltp{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\clto{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cltpk{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\clts{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\cltbb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\cltrp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cltp{\Purple}	  % Purple  Approximate PANTONE PURPLE
+
+\def\cgy{\GreenYellow}     % GreenYellow  Approximate PANTONE 388
+\def\cyy{\Yellow}	  % Yellow  Approximate PANTONE YELLOW
+\def\cgo{\Goldenrod}	  % Goldenrod  Approximate PANTONE 109
+\def\cda{\Dandelion}	  % Dandelion  Approximate PANTONE 123
+\def\capr{\Apricot}	  % Apricot  Approximate PANTONE 1565
+\def\cpe{\Peach}		  % Peach  Approximate PANTONE 164
+\def\cme{\Melon}		  % Melon  Approximate PANTONE 177
+\def\cyo{\YellowOrange}	  % YellowOrange  Approximate PANTONE 130
+\def\coo{\Orange}	  % Orange  Approximate PANTONE ORANGE-021
+\def\cbo{\BurntOrange}	  % BurntOrange  Approximate PANTONE 388
+\def\cbs{\Bittersweet}	  % Bittersweet  Approximate PANTONE 167
+%\def\creo{\RedOrange}	  % RedOrange  Approximate PANTONE 179
+\def\cma{\Mahogany}	  % Mahogany  Approximate PANTONE 484
+\def\cmr{\Maroon}	  % Maroon  Approximate PANTONE 201
+\def\cbr{\BrickRed}	  % BrickRed  Approximate PANTONE 1805
+\def\crr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cor{\OrangeRed}	  % OrangeRed  No PANTONE match
+\def\paru{\RubineRed}	  % RubineRed  Approximate PANTONE RUBINE-RED
+\def\cwi{\WildStrawberry}  % WildStrawberry  Approximate PANTONE 206
+\def\csa{\Salmon}	  % Salmon  Approximate PANTONE 183
+\def\ccp{\CarnationPink}	  % CarnationPink  Approximate PANTONE 218
+\def\cmag{\Magenta}	  % Magenta  Approximate PANTONE PROCESS-MAGENTA
+\def\cvr{\VioletRed}	  % VioletRed  Approximate PANTONE 219
+\def\parh{\Rhodamine}	  % Rhodamine  Approximate PANTONE RHODAMINE-RED
+\def\cmu{\Mulberry}	  % Mulberry  Approximate PANTONE 241
+\def\parv{\RedViolet}	  % RedViolet  Approximate PANTONE 234
+\def\cfu{\Fuchsia}	  % Fuchsia  Approximate PANTONE 248
+\def\cla{\Lavender}	  % Lavender  Approximate PANTONE 223
+\def\cth{\Thistle}	  % Thistle  Approximate PANTONE 245
+\def\corc{\Orchid}	  % Orchid  Approximate PANTONE 252
+\def\cdo{\DarkOrchid}	  % DarkOrchid  No PANTONE match
+\def\cpu{\Purple}	  % Purple  Approximate PANTONE PURPLE
+\def\cpl{\Plum}		  % Plum  VERY-Approx PANTONE 518
+\def\cvi{\Violet}	  % Violet  Approximate PANTONE VIOLET
+\def\clrp{\RoyalPurple}	  % RoyalPurple  Approximate PANTONE 267
+\def\cbv{\BlueViolet}	  % BlueViolet  Approximate PANTONE 2755
+\def\cpe{\Periwinkle}	  % Periwinkle  Approximate PANTONE 2715
+\def\ccb{\CadetBlue}	  % CadetBlue  Approximate PANTONE (534+535)/2
+\def\cco{\CornflowerBlue}  % CornflowerBlue  Approximate PANTONE 292
+\def\cmb{\MidnightBlue}	  % MidnightBlue  Approximate PANTONE 302
+\def\cnb{\NavyBlue}	  % NavyBlue  Approximate PANTONE 293
+\def\crb{\RoyalBlue}	  % RoyalBlue  No PANTONE match
+%\def\cbb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cce{\Cerulean}	  % Cerulean  Approximate PANTONE 3005
+\def\ccy{\Cyan}		  % Cyan  Approximate PANTONE PROCESS-CYAN
+\def\cpb{\ProcessBlue}	  % ProcessBlue  Approximate PANTONE PROCESS-BLUE
+\def\csb{\SkyBlue}	  % SkyBlue  Approximate PANTONE 2985
+\def\ctu{\Turquoise}	  % Turquoise  Approximate PANTONE (312+313)/2
+\def\ctb{\TealBlue}	  % TealBlue  Approximate PANTONE 3145
+\def\caq{\Aquamarine}	  % Aquamarine  Approximate PANTONE 3135
+\def\cbg{\BlueGreen}	  % BlueGreen  Approximate PANTONE 320
+\def\cem{\Emerald}	  % Emerald  No PANTONE match
+%\def\cjg{\JungleGreen}	  % JungleGreen  Approximate PANTONE 328
+\def\csg{\SeaGreen}	  % SeaGreen  Approximate PANTONE 3268
+\def\cgg{\Green}	  % Green  VERY-Approx PANTONE GREEN
+\def\cfg{\ForestGreen}	  % ForestGreen  Approximate PANTONE 349
+\def\cpg{\PineGreen}	  % PineGreen  Approximate PANTONE 323
+\def\clg{\LimeGreen}	  % LimeGreen  No PANTONE match
+\def\cyg{\YellowGreen}	  % YellowGreen  Approximate PANTONE 375
+\def\cspg{\SpringGreen}	  % SpringGreen  Approximate PANTONE 381
+\def\cog{\OliveGreen}	  % OliveGreen  Approximate PANTONE 582
+\def\pars{\RawSienna}	  % RawSienna  Approximate PANTONE 154
+\def\cse{\Sepia}		  % Sepia  Approximate PANTONE 161
+\def\cbr{\Brown}		  % Brown  Approximate PANTONE 1615
+\def\cta{\Tan}		  % Tan  No PANTONE match
+\def\cgr{\Gray}		  % Gray  Approximate PANTONE COOL-GRAY-8
+\def\cbl{\Black}		  % Black  Approximate PANTONE PROCESS-BLACK
+\def\cwh{\White}		  % White  No PANTONE match
+
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+
+
+
+
+
+{\bf Simplicial homology = singular homology:}
+We have so far introduced two homologies; simplicial, $H_*^\Delta$, whose computation 
+``only'' required some linear algebra,
+and singular, $H_*$, which is formally less difficult to work with, and which, you may suspect by now, is also becoming
+less difficult to compute... For $\Delta$-complexes, these homology groups are the same, $H_n^\Delta(X)\cong H_n(X)$
+for every $X$. In fact, the isomorphism is induced by the inclusion $C_n^\Delta(X)\sset C_n(X)$. And we have
+now assembled all of the tools necessary to prove this. Or almost; we need to note that most of the edifice we
+have built for singular homology \u{could} have been built for simplicial homology, including relative 
+homology (for a sub-$\Delta$-complex $A$ of $X$), and a SES of chain groups, giving a LES sequence for the pair,
+
+\ssk
+
+$\cdots \ra H_n^\Delta(A) \ra H_n^\Delta(X) \ra H_n^\Delta(X,A) \ra H_{n-1}^\Delta(A) \ra \cdots$
+
+\ssk
+
+The proof of the isomorphism between the two homologies proceeds by first showing that the
+inclusion induces an isomorphism on $k$-skeleta, $H_n^\Delta(X^{(k)})\cong H_n(X^{(k)})$,
+and this goes by induction on $k$ using the Five Lemma applied to the diagram
+
+\ssk
+
+\ctln{$\displaystyle 
+\matrix 
+H_{n+1}^\Delta(X^{(k)},X^{(k-1)})&\ra&H_n^\Delta(X^{(k-1)})&\ra&H_n^\Delta(X^{(k)}) & \ra & H_{n}^\Delta(X^{(k)},X^{(k-1)}) & \ra & H_{n-1}^\Delta(X^{(k-1)})\cr
+\downarrow & & \downarrow & & \downarrow & & \downarrow & & \downarrow & \cr
+H_{n+1}(X^{(k)},X^{(k-1)})&\ra&H_n(X^{(k-1)})&\ra&H_n(X^{(k)}) & \ra & H_{n}(X^{(k)},X^{(k-1)}) & \ra & H_{n-1}(X^{(k-1)}) \cr
+\endmatrix$}
+
+\ssk
+
+The second and fifth vertical arrows are, by an inductive hypothesis, isomorphisms. The first and fourth vertical arrows are
+isomorphisms because, essentially, we can, in each case, identify these groups. 
+$H_{n}(X^{(k)},X^{(k-1)})\cong H_{n}(X^{(k)}/X^{(k-1)})\cong \widetilde{H}_n(\vee S^k)$
+are either 0 (for $n\neq k$) or $\oplus \bbz$ (for $n=k$), one summand for each $n$-simplex in $X$. 
+But the same is true for $H_{n}^\Delta(X^{(k)},X^{(k-1)})$; and for $n=k$ the generators are precisely
+the $n$-simplices of $X$. The inclusion-induced map takes generators to generators, so is an isomorphism.
+\hhsk So by the Five Lemma, the middle rows are also isomorphisms, completing our inductive proof.
+
+\ssk
+
+Returning to $H_n^\Delta(X) {\buildrel {I_*}\over \ra} H_n(X)$, we wish now to show that this map is an isomorphism.
+Any $[z]\in H_n(X)$ is represented by a cycle $z=\sum a_i\sigma_i$ for $\sigma_i:\Delta^n\ra X$ . But each
+$\sigma_i(\Delta^n)$ is a compact subset of $X$, and so meets only finitely-many cells of $X$. This is true for every
+singular simplex, and so there is a $k$ for which all of the simplices map into $X^{(k)}$, and so we may
+treat $z\in C_n(X^{(k)}$. Thought of in this way, it is still a cycle, and so $[z]\in H_n(X^{(k)})\cong H_n^\Delta(X^{(k)})$
+so there is a $z^\prime in C_n^\Delta(X^{(k)})$ and a $w\in C_{n+1}(X^{(k)})$ with $i_\#z^\prime -z=\del w$. 
+But thinking of  $z^\prime in C_n^\Delta(X)$ and $w\in C_{n+1}(X)$, we have the same equality, so 
+$[z^\prime] \in H_n^\Delta(X)$ and $i_*[z^\prime] = [z]$ . So $i_*$ is surjective.
+If $i_*([z]) = 0$, then the cycle $z=\sum a_i\sigma_i$ is a sum of characteristic maps of $n$-simplices of $X$, and
+so can be thought of as an element of $C_n^\Delta(X^{n)})$ . Being $0$ in $H_n(X)$, $z=\del w$ for some
+$w\in C_{n+1}(X)$ . But as before, $w\in C_n(X^{r)})$ for some $r$, and so thought of as an element of 
+the image of the isomorphism $i_*: H_n^\Delta(X^{(r)})\ra H_n(X^{(r)})$, $i_*([z])=0$, so $[z]=0$ . So 
+$z=\del u$ for some $u\in C_{n+1}^\Delta(X^{r)})\sset C_{n+1}^\Delta(X)$ . So $[z]=0$ in $H_n^\Delta(X)$.
+Consequently, simplicial and singular homology groups are isomorphic.
+
+\bsk
+
+
+
+
+
+
+The isomorphism between simplicial and singular homology provides very quick proofs
+of several results about singular homology, which would other would require some effort:
+
+\ssk
+
+{\it If the $\Delta$-complex $X$ has no simplices in dimension greater than $n$, then 
+$H_i(X)=0$ for all $i>n$.}
+
+\ssk
+
+This is because the simplicial chain groups $C_i^\Delta(X)$ are $0$, so $H_i^\Delta(X)=0$ .
+
+\ssk
+
+{\it If for each $n$, the $\Delta$-complex $X$ has finitely many $n$-simplices, then 
+$H_n(X)$ is finitely generated for every $n$.}
+
+\ssk
+
+This is because the simplicial chain groups $C_n^\Delta(X)$ are all finitely generated,
+so $H_n^\Delta(X)$, being a quotient of a subgroup, is also finitely generated. [We
+are using here that the number of generators of a subgroup $H$ of an {\it abelian} 
+group $G$ is no larger than that for $G$; this is not true for groups in general!]
+
+
+\bigskip
+
+Some more topological results with homological proofs: The Klein bottle and real projective plane cannot 
+embed in $\bbr^3$. This is because a surface $\Sigma$ embedded in $\bbr^3$ has a (the proper word is {\it normal})
+neighborhood $N(\Sigma)$, which deformation retracts to $\Sigma$; literally, it is all points within a (uniformly) short distance
+in the normal direction from the point on the surface $\Sigma$. Our non-embeddedness result follows (by contradiction)
+from applying Mayer-Vietoris to the pair $(A,B) = (\overline{N(\Sigma)},\overline{\bbr^3\setminus N(\Sigma)})$, whose intersection
+is the boundary $F=\del N(\Sigma)$ of the normal neighborhood. The point, though, is that
+$F$ is an orientable surface; the outward normal (pointing away from $N(\Sigma)$) at every point, taken as
+the first vector of a right-handed orientation of $\bbr^3$ allows us to use the other two vectors as an 
+orientation of the surface. So $F$ is one of the surface $F_g$ above whose homologies we just computed.
+This gives the LES
+\hhsk
+$\wtih_2(\bbr^3) \ra \wtih_1(F) \ra \wtih_1(A)\oplus \wtih_1(B)\ra \wtih_1(\bbr ^3)$
+\hhsk 
+which renders as 
+\hhsk
+$0\ra\bbz^{2g}\ra \wtih(\Sigma)\oplus G\ra 0$
+\hhsk , i.e., \hhsk
+$\bbz^{2g}\cong \wtih(\Sigma)\oplus G$ 
+\hhsk . But for the Klein bottle and projective plane (or any closed, non-orientable
+surface for that matter), $\wtih_1(\Sigma)$ has torsion, so it cannot be the direct
+summand of a torsion-free group! So no such embedding exists. This result holds
+more generally for any 2-complex $K$ whose (it turns out it would have to be first)
+homology has torsion; any embedding into $\bbr^3$ would have a neighborhood 
+deformation retracting to $K$, with boundary a (for the exact same reasons as above)
+closed orientable surface.
+
+\msk
+
+{\bf Invariance of Domain:} If ${\Cal U}\subseteq {\Bbb R}^n$ and $f:{\Cal U}\ra {\Bbb R}^n$
+is continuous and injective, then $f({\Cal U})\subseteq {\Bbb R}^n$ is open.
+
+\msk
+
+We will approach this through the {\bf Brouwer-Jordan Separation Theorem:} an embedded $(n-1)$-sphere
+in $\bbr^n$ separates $\bbr^n$ into two path components. And for this we need to do a slightly
+unusual homology calculation:
+
+\ssk
+
+For $k<n$ and $h:I^k\ra S^n$ an embedding of a $k$-cube in to the $n$-sphere,
+$\wtih_i(S^n\setminus h(I^k))=0$ for all $i$.
+
+\ssk 
+
+Here $I=[-1,1]$ . The proof proceeds by induction on $k$. For $k=0$, $S^n\setminus h(I^k)\cong \bbr^n$,
+and the result follows. Now suppose the result os true for all embeddings of $C=I^{k-1}$,
+but is false for some embedding $h:I^k\ra S^n$ and some $i$. Then if we divide the cube along its last coordinate, say,
+as $I^{k-1}\times [-1,0] = C\times [-1,0]$ and $C\times [0,1]$, we can set
+$A=S^n\setminus h(C\times [-1,0])$, $B = S^n\setminus h(C\times [0,1])$, 
+$A\cup B = S^n\setminus h(C\times \{0\})$, and $A\cap B = S^n\setminus h(I^k)$ .
+These sets are all open, since the image under $h$ of the various sets is compact, hence closed.
+By hypothesis, $A\cup B = S^n\setminus h(C\times \{0\})$ has trivial reduced homology, while
+$A\cap B = S^n\setminus h(I^k)$ has non-trivial reduced homology in some dimension $i$. Then 
+the Mayer-Vietoris sequence
+
+\ssk
+
+\ctln{$\cdots \ra \wtih_{i+1}(A\cup B) \ra \wtih_i(A\cap B) \ra \wtih_i(A)\oplus \wtih_i(B) \ra \wtih_i(A\cup B) \ra \cdots$}
+
+\ssk  reads $0\ra \wtih_i(A\cap B) \ra \wtih_i(A)\oplus \wtih_i(B) \ra 0$ so 
+$\wtih_i(A\cap B) \cong \wtih_i(A)\oplus \wtih_i(B)$ , so at least one of the groups
+on the right must be non-trivial, as well. WOLOG $\wtih_i(B)=\wtih(S^n\setminus h(C\times [0,1]))\neq 0$.
+Even more, choosing (once and for all) a non-zero element $[z]\in \wtih_I(A\cap B)$, snce its image in the
+direct sum is non-zero, it's coordinate in (say) $\wtih_i(B)$ is non-zero.
+
+\bsk
+
+Continuing with: \hhsk
+For $k<n$ and $h:I^k\ra S^n$ an embedding of a $k$-cube in to the $n$-sphere,
+$\wtih_i(S^n\setminus h(I^k))=0$ for all $i$.
+
+\msk
+
+We've shown how we can throw away half of the cube without losing a (chosen)
+non-zero homology element.
+Now we continue inductively, cutting $C\times [0,1]$ in two along the last coordinate as
+$C\times [0,1/2],C\times [1/2,1]$ and repeat the same argument. We fnd that
+$\wtih_i(S^n\setminus h(C\times [a,b]))\neq 0$, and $[z]$ maps to a non-zero 
+element under the inclusion-induced homomorphism.. Continuing inductively, we find a
+sequence of nested intervals $I_n=[a_n,b_n]\supseteq [a_{n+1},b_{n+1}]$ 
+whose lengths tend to zero (so $a_n,b_n\ra x_0\in I$ as $n\ra\infty$), and injective inclusion-induced maps
+
+\ctln{$0\neq \wtih_i(S^n\setminus h(I^n)\ra \cdots \ra \wtih_i(S^n\setminus h(C\times I_n)
+\ra \wtih_i(S^n\setminus h(C\times I_{n+1})$}
+
+all of which send a certain non-zero element $[z]\in\wtih_i(S^n\setminus h(I^n)$ to 
+a non-zero element, and all of which have an inclusion-induced map to $\wtih_i(S^n\setminus h(C\times \{x_0\}) = 0$.
+So there is a non-trivial element $[z]\in \wtih_i(S^n\setminus h(I^n)$ which \u{remains}
+non-zero in all $\wtih_i(S^n\setminus h(C\times I_n))$, but is zero in $\wtih_i(S^n\setminus h(C\times \{x_0\})$.
+Consequently, $z\del w$ for some chain $w=\sum a_j\sigma_j^{i+1}\in C_{i+1}(S^n\setminus h(C\times \{x_0\}))$.
+Each singular simplex, however, is a map $\sigma_j^{i+1}:\Delta^{i+1}\ra S^n\setminus h(C\times \{x_0\})$,
+and so has compact image. But the sets $S^n\setminus h(C\times I_n)$ form a nested open cover of
+$S^n\setminus h(C\times \{x_0\})$, and so of $\sigma_j^{i+1}(\Delta^{i+1})$, and so there is an
+$n_j$ with $\sigma_j^{i+1}(\Delta^{i+1})\subseteq S^n\setminus h(C\times I_{n_j})$ .
+Then setting $N=$max$\{n_j\}$, we have $\sigma_j^{i+1}:\Delta^{i+1}\ra S^n\setminus h(C\times I_N)$
+for every $j$,
+so $w\in C_{i+1}(S^n\setminus h(C\times I_N)$, so $0=[z]\in \wtih_i(S^n\setminus h(C\times I_N)$,
+a contradiction. So $\wtih_i(S^n\setminus h(I^k))=0$, and our inductive step is proved.
+
+\msk
+
+One immediate consequence of this is that if $h:S^k\ra S^n$ is an embedding of the $k$-sphere into the $n$-sphere,
+then thinking of $S^k$ as the union of its upper and lower hemispheres, $D^k_+,D^k_-$, each of which is homeomorphic
+to $I^k$, we have  $D^k_+\cap D^k_-=S^{k-1}$, the equatorial $(k-1)$-sphere, and so by Mayer-Vietoris we have
+
+\ssk
+
+$\cdots \ra 
+\wtih_{i+1}(S^n\setminus h(D^k_-))\oplus \wtih_{i+1}(S^n\setminus h(D^k_+)\ra
+\wtih_{i+1}(S^n\setminus h(S^{k-1}))\ra \wtih_{i}(S^n\setminus h(S^k))\ra$
+
+\hfill $\wtih_{i}(S^n\setminus h(D^k_-))\oplus \wtih_{i}(S^n\setminus h(D^k_+)\ra \cdots $
+
+i.e., $\wtih_{i}(S^n\setminus h(S^k)) \cong \wtih_{i+1}(S^n\setminus h(S^{k-1})) 
+\cong \cdots \cong \wtih_{i+k}(S^n\setminus h(S^0))\cong \wtih_{i+k}(S^{n-1})$ ,
+since $S^0$ = 2 points, and  so $S^n\setminus h(S^0)\cong S^{n-1}\times \bbr \sim S^{n-1}$.
+So $\wtih_{i}(S^n\setminus h(S^k)) = 0$ unless $i+k=n-1$ (i.e., $i=n-k-1$), when it is $\bbz$.
+
+\ssk
+
+In particular, $\wtih_0(S^n\setminus h(S^{n-1}))=\bbz$, so 
+we have the \crr{Jordan-Brouwer Separation Theorem: every embedded $S^{n-1}$ in $S^n$
+has two complementary path-components $A,B$} . With a little work, one can show that
+$\overline{A}\cap \overline{B} = h(S^{n-1}$ , so the $(n-1)$-sphere is the frontier of each
+complementary component. [Removing a point from $S^n$ to get $\bbr^n$ does not change the
+conclusion (for $n>1$); a point does not disconnect an open subset of $S^n$.]
+
+\msk
+
+When $n=2$, the Jordan Curve Theorem (as it is then called) has the additional
+consequence that the closure of each complementary region is a compact 2-disk,
+each having the embedded circle $h(S^1)$ as its boundary. This stronger result
+does not extend to higher dimensions, without putting extra restrictions 
+on the embedding. This was shown by Alexander (shortly after publishing an
+incorrect proof without restrictions) for $n=3$; these examples are known as
+the Alexander horned spheres.
+
+\msk
+
+To prove Invariance of Domain, let ${\Cal U}\subseteq \bbr^n\subseteq S^n$ be an open 
+set, and $f:{\Cal U}\ra \bbr^n \hookrightarrow S^n$ be injective and continuous. It suffices
+to show, for every $x\in {\Cal U}$, that there is an open neighborhood ${\Cal V}$ with
+$f(x)\subseteq {\Cal V} \subseteq f({\Cal U})$ . Since ${\Cal U}$ is open,
+there is an open ball $B^n$ centered at $x$ whose closure $D^n$ is contained in ${\Cal U}$. 
+$f$ is then an embedding of $\del D^n = S^{n-1}$ into $S^n$, and of $D^n\cong I^n$ into $S^n$.
+By our calculations above, $S^n\setminus f(S^{n-1})$ has two path components $A,B$; being an open set 
+and contained in a locally path-connected space, these are also the connected components
+of the complement. But our calculations above also show that $S^n\setminus f(D^n)$ is
+path-connected, hence connected, and $f(B^n)$, being the image of a connected set, is connected.
+Since $f(B^n)\cup (S^n\setminus f(D^n)) = S^n\setminus f(S^{n-1} = A\cup B)$, it follows that
+$f(B^n)=A$ and $S^n\setminus f(D^n) = B$ (or vice versa). In particular,
+$f(B^n)$ is open, forming an open subset of $f({\Cal U})$ containing $f(x)$, as desired.
+
+\bsk
+
+Invariance of Domain in turn implies the ``other'' invariance of domain; if 
+$f: {\Bbb R}^n\ra {\Bbb R}^m$ is continuous and injective, then
+$n\leq m$, since if not, then composition of $f$ with the inclusion 
+$i:{\Bbb R}^m\ra {\Bbb R}^n$, $i(x_1,\ldots ,x_m) = 
+(x_1,\ldots ,x_m,0,\ldots ,0)$ is injective and continuous with non-open 
+image (it lies in a hyperplane in ${\Bbb R}^n$),
+a contradiction.
+
+\msk
+
+This also gives the more elementary: if ${\Bbb R}^n\cong {\Bbb R}^m$, via $h$, then $n=m$ .
+Another proof: by composing with a translation, that $h(0)=0$, and then we have 
+$({\Bbb R}^n,{\Bbb R}^n\setminus 0)\cong {\Bbb R}^m,({\Bbb R}^m\setminus 0)$, which gives
+
+
+\ssk
+
+\ctln{$\widetilde{H}_i(S^{n-1})\cong H_{i+1}({\Bbb D}^n,\del {\Bbb D}^n) \cong H_{i+1}({\Bbb D}^n,{\Bbb D}^n\setminus 0)
+\cong H_{i+1}({\Bbb R}^n,{\Bbb R}^n\setminus 0) \cong H_{i+1}({\Bbb R}^m,{\Bbb R}^m\setminus 0)$}
+
+\ctln{$\cong H_{i+1}({\Bbb D}^m,{\Bbb D}^m\setminus 0) \cong H_{i+1}({\Bbb D}^m,\del {\Bbb D}^m)
+\cong \widetilde{H}_i(S^{m-1})$}
+
+\ssk
+
+Setting $i=n-1$ gives the result, since $\widetilde{H}_{n-1}(S^{m-1})\cong {\Bbb Z}$ implies $n-1=m-1$ .
+
+\msk
+
+{\bf Homology and homotopy groups:} There are connections between homology groups and
+the fundamental (and higher) homotopy groups, provided by what is known as the
+{\it Hurewicz map} $H:\pi_n(X,x_0)\ra H_n(X)$ . or $n=1$ (higher $n$ are similar)
+the idea is that elements of $\pu(X)$ are loops, which can be thought of as maps
+$\gamma:S^1\ra X$ (or more precisely, mapping into the path component containing 
+$x_0$), inducing a map $\gamma_*:\bbz = H_1(S^1)\ra H_1(X)$ . 
+We define $H([\gamma])=\gamma_*(1)$ . Because homotopic maps give the same induced
+map on homology, this really is well-defined map on homotopy
+classes, i.e. from $\pu(X)$ to $H_1(X)$. [A different view: 
+a loop $\gamma:(I,\del I)\ra (X,x_0)$ defines a singular 1-chain which, being a loop,
+has zero boundary, so is a 1-cycle. Since based homotopic maps give homologous
+chains (essentially by the same homotopy invariance property above), we get a 
+well-defined map $\pu(X,x_0)\ra H_1(X)$.
+
+Since as 1-chains, the concatenation $\gamma*\delta$ of two loops is homologous
+to the sum $\gamma+\delta$ - the map $K:I\times I\ra X$ given by $K(s,t)=(\gamma*\delta)(s)$,
+after crushing the left and right vertical boundaries to points, can be thought of as
+a singular 2-simplex with boundary $\gamma + \delta - (\gamma*\delta)$ - the map 
+$H$ is a homomorphism.
+
+\msk
+
+When $X$ is path-connected, this map $H:\pu(X)\ra H_1(X)$ is onto . [When it isn't it maps onto the 
+summand of $H_1(X)$ corresponding to the path component containing our chosen basepoint.]
+To see this, note that any cycle $z\in Z_1(X)$ can be represented as a sum of singular
+1-simplices $\sum \sigma_i^1$ , i.e. we can (by reversing the orientations on simplices
+to make coefficient positive, and then writing a multiple of a simplex as a sum of
+simplices) assume all coefficients in our sum are 1. Then 
+$0 = \del z = \sum (\sigma_i^1(0,1) - \sigma_i^1(1,0))$ means that, starting with any positive term, 
+we can match it with a 
+negative term to cancel that term, which is paired with a postive term, having a matching negative term, etc.,
+until the initial positive term is cancelled. This sub-chain represents a collection of paths which 
+concatenate to a loop, so $z=$ (this loop) + (the remainiung terms) . Induction implies that
+$z$ can be written as a sum of (sums of paths forming loops), which is (as above) homologous  to the
+sum of loops. Choosing paths from the start of these loops to our chosen basepoint (which is the only
+place where we use path connectedness, we can concatenate the based loops $\overline{\gamma}*\sigma*\gamma$
+to a single based loop $\eta$, which under $H$ is sent to a chain homologous to $z$.
+So $H[\eta] = [z]$ .
+
+\msk 
+
+Since $H_1(X)$ is abelian (and $\pu(X)$ need not be), the kernel of $H$ contains the
+commutator subgroup $[\pu(X),\pu(X)]$ . 
+We now show that, if $X$ is path connected,
+$H$ induces an isomorphism $H_1(X) \cong \pu(X)/[\pu(X),\pu(X)]$ . 
+To show this, it remains to show that  ker$(H)\subseteq [\pu(X),\pu(X)]$ . 
+Or put differently, the ineduced map from $\pu(X)_{ab} = \pu(X)/[\pu(X),\pu(X)]$ 
+(i.e., $\pu(X)$, written using additive notation) to $H_1(X)$  is injective.
+So suppose $[\gamma]\in \pu(X)$ and, thought of as a singular 1-simplex, 
+$\gamma = \del w$ for some 2-simplex $w=\sum a_i\sigma_i^2$ . 
+As before, we may assume that all $a_i=1$, by reversing orientation and writing multiples as 
+sums. By adding ``tails'' from each image of a vertex of each $\sigma_i^2$ to our chosen 
+basepoint $x_0$, we may assume that the image of every face of $\Delta^2$, under
+the $\sigma_i$ , is a loop at $x_0$ (by essentially replacing each $\sigma_i$ with a $\tau_i$
+which first collapses little triangle at each vertex to arcs, maps the resulting central triangle
+via $\sigma_i$, and the arcs via the paths). 
+
+\ssk
+
+Once we have made this slight alteration, the equation
+$\displaystyle \gamma = \del w = \sum_{i=1}^n \sum_{j=0}^2 \del_j \sigma_i = 0$
+makes sense (and is true) in both ($C_1(X)$ hence $Z_1(X)$ hence) $H_1(X)$ and
+$\pu(X)_{ab}$, the first essentially by definition and the second because 
+all of the $\del_j \sigma_i$ are loops at $x_0$ and, in 
+$\pu(X)$, $(\del_0\sigma_i)\overline{\del_1\sigma_i}(\del_2\sigma_i)$ is null-homotopic,
+so is trivial in $\pu(X)$. Written additively, this means that in
+$\pu(X)_{ab}$ , $\del_0\sigma_i - \del_1\sigma_i + \del_2\sigma_i = 0$. 
+So $\gamma = 0$ in $\pu(X)_{ab}$ , as desired.
+
+
+\bsk
+
+he Hurewicz map $H:\pu(X)\ra H_1(X)$ induces, when $X$ is path-connected,
+an isomorphism from $\pu(X)/[\pu(X),\pu(X)]$ to $H_1(X)$ . 
+This result can be used in two ways; knowing a (presentation for) $\pu(X)$
+allows us to compute $H_1(X)$, by writing the relators additively, giving
+$H_1(X)$ as the free abelian group on the generators, modulo the kernel 
+of the ``presentation matrix'' given by the resulting linear equations. Conversely,
+knowing $H_1(X)$ provides information about $\pu(X)$. For example,
+a calculation on the way to invariance of domain implied that for every
+knot $K$ in $S^3$ (i.e., the image of an embedding $h:S^1\hookrightarrow S^3$),
+$H_1(S^3\setminus K) \cong bbz$ . This implies that the abelianization of 
+$G_K = \pu(S^3\setminus K)$ (i.e., the largest abelian quotient of $G_K$  is $\bbz$.
+But this in turn implies that for every integer $n\geq 2$, there is a \u{unique}
+surjective homomorphism $G_K\ra \bbz_n$, since such a homomorphism must factor 
+through the abelianization, and there is exactly one surjective homomorphism
+$\bbz \ra \bbz_n$ ! Consequently, there is a unique (normal) subroup (the kernel
+of this homomorphism) $K_n\sset G_K$ with quotient $\bbz_n$ . Using the Galois
+correspondence, there is a (unique) covering space $X_n$ of $X=S^3\setminus K$
+corresponding to $K_n$, called the $n$-fold cyclic covering of $K$ . This space is determined
+by $K$ and $n$, and so its homology groups are determined by the same data.
+And even though homology cannot distinguish between two knot complements,
+$K$, $K^\prime$, it might be the case that homology \u{can} distinguish between 
+their cyclic coverings. Consequently, 
+if $H_1(X_n)\not\cong H_1(X_n^\prime)$, then $K$ and $K^\prime$ have non-homeomorphic
+complement, and so represent ``different'' embeddings, hence different knots.
+In practice, one can compute presentations for $\pu(X_n)$ (in several different ways),
+and so one can compute $H_1(X_n)$, providing an effective way to use homology
+to distinguish knots! This approach was ultimately formalized (by Alexander) into a polynomial
+invariant of knots, known as the Alexander polynomial.
+
+\msk
+
+Computing the homology of the cyclic coverings can be done in several ways. The
+Reidemeister-Schreier method will allow one to compute a presentation for the
+kernel of a homomorphism $\varphi:G\ra H$, given a presentation of $G$ and a
+{\it transversal} of the map, which is a representative of each coset of $G$ modulo
+the kernel. Abelianizing this will give homology computation. Another approach
+uses {\it Seifert surfaces}, orientable surfaces with $\del \Sigma = K$, to cut
+$S^3\setminus K$ open along. Writing $S^3\setminus K = (S^3\setminus N(\Sigma))\cup N(\Sigma)$
+allows us to use Mayer-Vietoris to compute homology. But the cyclic covering spaces
+can be built by ``unwinding'' this view of $S^3\setminus K$; instead of gluing the two
+ends of $N(K)$ to the same $S^3\setminus N(\Sigma)$, we can take $n$ copies
+of $S^3\setminus N(\Sigma)$ and glue them together in a circle. Mayer-Vietoris
+again tells us how to compute the homology of the resulting space. Details may be found on the accompanying
+pages taken from Rolfsen's ``Knots and Links''.
+
+
+\vfill
+\end
+
+
+
+
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+

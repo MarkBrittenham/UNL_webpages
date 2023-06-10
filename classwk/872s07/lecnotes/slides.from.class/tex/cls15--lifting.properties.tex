@@ -1,0 +1,317 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+
+{\bf Lifting properties:}
+
+\msk
+
+Covering spaces of a (suitably nice) space $X$ have a very close relationship
+to $\pu(X,x_0)$. 
+
+\ssk 
+
+\cltr{{\bf Homotopy Lifting Property:} If $p:\wtl{X}\ra X$ is a covering map, 
+$H:Y\times I\ra X$ is a homotopy, $H(y,0)=f(y)$, and
+$\wtl{f}:Y\ra \wtl{X}$ is a {\it lift} of $f$ (i.e., $p\circ \wtl{f}=f$),
+then there is a unique lift $\wtl{H}$ of $H$ with $\wtl{H}(y,0)=\wtl{f}(y)$ .}
+
+\msk
+
+In particular, applying this property in the case $Y=\{*\}$, where a homotopy
+
+$H:\{*\}\times I\ra X$ is really just a a path $\gamma:I\ra X$,
+we have the 
+
+\cltr{{\bf Path Lifting Property}: Given 
+a covering map $p:\wtl{X}\ra X$, a path 
+$\gamma:I\ra X$ with $\gamma(0)=x_0$, and a point 
+$\wtl{x}_0\in p^{-1}(x_0)$, there is a unique path $\wtl{\gamma}$
+lifting $\gamma$ with $\wtl{\gamma}(0)=\wtl{x}_0$.} 
+
+An immediate consequence: 
+
+\msk  
+
+\cltb{If $p:(\wtl{X},\tilde{x}_0)\ra (X,x_0)$ is a covering map, then the 
+induced homomorphism} 
+
+\cltb{$p_*:\pu(\wtl{X},\wtl{x}_0)\ra \pu(X,x_0)$ is injective.}
+
+\msk
+
+{\bf Proof:} $\gamma:(I,\del I)\ra (\wtl{X},\wtl{x}_0)$ a 
+loop with $p_*([\gamma])=1$ in $\pu(X,x_0)$. There is
+
+$H:(I\times I,\del I\times I)\ra (X,x_0)$ interpolating
+between $p\circ\gamma$ and the constant 
+path. By homotopy lifting, there is a homotopy $\wtl{H}$ from $\gamma$ to 
+the lift of the constant map at $x_0$. The vertical sides 
+$s\mapsto \wtl{H}(0,s),\wtl{H}(1,s)$ are also lifts of the 
+constant map, beginning from 
+$\wtl{H}(0,0),\wtl{H}(1,0)=\gamma(0)=\gamma(1)=\wtl{x}_0$, so
+are the constant map at $\wtl{x}_0$. So the lift at the 
+bottom is the constant map at $\wtl{x}_0$. So $\wtl{H}$
+represents a null-homotopy of $\gamma$, so $[\gamma]=1$
+in $\pu(\wtl{X},\wtl{x}_0)$.
+
+
+\vfill
+\eject
+
+Even more, $p_*(\pu(\wtl{X},\wtl{x}_0)))\sset \pu(X,x_0)$
+is precisely the elements given by loops at $x_0$, 
+whose lifts to paths starting at $\wtl{x}_0$, are loops. 
+If $\gamma$ lifts
+to a loop $\wtl{\gamma}$, then $p\circ\wtl{\gamma}=\gamma$, so
+$p_*([\wtl{\gamma}])=[\gamma]$ . If 
+$p_*([\wtl{\gamma}])=[\gamma]$, then $\gamma\simeq p\circ\wtl{\gamma}$
+rel endpoints; the homotopy lifts to 
+a homotopy b/w the lift of $\gamma$ at 
+$\wtl{x}_0$ and the lift of $p\circ\wtl{\gamma}$ at $\wtl{x}_0$
+(which is $\wtl{\gamma}$, since $\wtl{\gamma}(0)=\wtl{x}_0$ and
+lifts are unique). So the lift of $\gamma$ is a loop, as desired.
+
+\msk
+
+{\bf Proof} of H.L.P.:  lift maps a little bit at a time! Cover $X$ by
+evenly covered open sets ${\Cal U}_i$. For each fixed
+$y\in Y$, since $I$ is compact and the sets $H^{-1}({\Cal U}_i)$ form an
+open cover of $Y\times I$,
+the Tube Lemma provides an open neighborhood 
+${\Cal V_y}$ of $y$ in $Y$ and finitely many $p^{-1}{\Cal U}_{i}$ which
+cover ${\Cal V_y}\times I$ . 
+
+\msk
+
+To define $\wtl{H}(y,t)=\wtl{H}_y(t)$, cut $\{y\}\times I$ into pieces $I_j$,
+each mapping into some ${\Cal U}_{j}$ under $H$. Starting from the left,
+we have (inductively) a lift $\wtl{H}_y(t_j)$ of the left endpoint $t_j$ of $I_j$ to $\wtl{X}$,
+and a homeo $h_j:{\Cal U}_{j}\ra$ the component of its inverse image of ${\Cal U}_j$
+containing $\wtl{H}_y(t_j)$. Then define $\wtl{H}_y$ on $I_j$
+to be $h_j\circ {H}_y$. By induction, $\wtl{H}(y,t)$ is defined for all $t$ 
+(and $y$). This definition is independent of the partition $\{y\}\times I$,
+by the usual process of taking the union of the partitions, and noticing that
+the choice of $h_j$ is unique. (If we change the open cover,
+we can compare using the intersections; the choice of $h_j$'s will be the
+same.)
+$\wtl{H}$ is a lift of $H$ since 
+$p\circ \wtl{H} = p\circ (h_j\circ H) = (p\circ h_j)\circ H=I\circ H = H$.
+$\wtl{H}$ is continuous since for $y$ near $y_0$ we can use the same partitions 
+and the same open cover (because of our tube lemma condition), which means 
+that we use the same maps $h_j$ to lift; the pasting lemma implies continuity.
+
+\vfill
+\eject
+
+So, for example, if we build a 5-sheeted cover of the bouquet of 2 circles, 
+as before, (after choosing a maximal tree upstairs) 
+we can read off the images of the generators of the fundamental group
+of the total space; we have labelled each edge by the generator it
+traces out downstairs, and for each edge outside of the maximal tree
+chosen, we read from basepoint out the tree to one end, across the edge,
+and then back to the basepoint in the tree. In our example, this
+gives:
+
+
+\msk
+
+\ctln{$<ab,aaab^{-1}, baba^{-1},baa,ba^{-1}bab^{-1},bba^{-1}b^{-1} | >$}
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{lift1.ai}}}
+
+
+\bsk
+
+This is (from its construction) a copy of the free group on 6 letters,
+in the free group $F(a,b)$ . In a similar way, by explicitly building
+a covering space, we find that the fundamental group of a closed 
+surface of genus 3 is a subgroup of the fundamental group of the 
+closed surface of genus 2. 
+
+\vfill
+\eject
+
+The cardinality of a point inverse $p\inv(y)$ is, by the evenly
+covered property, constant on (small) open sets, so the set of 
+points of $x$ whose point inverses have any given cardinality
+is open. Consequently, if $X$ is connected, this number
+is constant over all of $X$, and is called the number of {\it sheets}
+of the covering $p:\wtl{X}\ra X$ . 
+
+\bsk
+
+
+The number of sheets of a covering map can also be determined 
+from the fundamental groups:
+
+\msk
+
+\cltr{{\bf Proposition:} If $X$ and $\wtl{X}$ are 
+path-connected, then the number of sheets of a covering map equals
+the index of the subgroup $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$G=\pu(X,x_0)$ .}
+
+\msk
+
+{|bf Proof:} Choose loops $\{g_\alpha=[\gamma_\alpha]\}$, one in 
+each of the (right) cosets of $H$ in $G$. Lift
+them to loops based at $\wtl{x}_0$; they will have distinct
+endpoints. (If $\wtl{\gamma}_1(1)=\wtl{\gamma}_2(1)$, then 
+by uniqueness of lifts, $\gamma_1*\overline{\gamma_2}$ lifts to 
+$\wtl{\gamma}_1*\overline{\wtl{\gamma}_2}$, so it
+lifts to a loop, so $\gamma_1*\overline{\gamma_2}$ represents
+an element of $p_*(\pu(\wtl{X},\wtl{x}_0)$, so they are
+in the same coset.)
+Conversely, every point in $p\inv(x_0)$ is the endpoint of one of these
+lifts, since we can construct a path $\wtl{\gamma}$
+from $\wtl{x}_0$ to any such point $y$, giving a loop
+$\gamma=p\circ \wtl{\gamma}$ representing an element $g\in\pu(X,x_0)$.
+But then $g=hg_\alpha$ for some $h\in H$ and $\alpha$, 
+so $\gamma$ is homotopic rel endpoints to $\eta*\gamma_\alpha$ for some loop
+$\eta$ representing $h$. But then lifting these based at $\wtl{x}_0$, by homotopy
+lifting, $\wtl{\gamma}$ is homotopic rel endpoints to $\wtl{\eta}$, which is a 
+loop, followed by the lift $\wtl{\gamma}_\alpha$ of $\gamma_\alpha$
+starting at $\wtl{x}_0$. So $\wtl{\gamma}$ and 
+$\wtl{\gamma}_\alpha$ have the same value at 1.
+
+\ssk
+
+Therefore, lifts of representatives of coset representatives of $H$ in $G$ give
+a 1-to-1 correspondence, given by $\wtl{\gamma}(1)$, with $p\inv{x_0}$.
+In particular, they have the same cardinality.
+
+\vfill
+\eject
+
+The path lifting property (because $\pi([0,1],0)=\{1\}$) is a special
+case of the \cltr{{\bf lifting criterion}: If 
+$p:(\wtl{X},\wtl{x}_0)\ra (X,x_0)$ is a covering map, and 
+$f:(Y,y_0)\ra (X,x_0)$ is a map, where
+$Y$ is path-connected and locally path-connected, then there is a unique lift 
+$\wtl{f}:(Y,y_0)\ra (\wtl{X},\wtl{x}_0)$ of $f$ (i.e., 
+$f=p\circ\wtl{f}$) $\Leftrightarrow$ 
+$f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$ . }
+
+
+\msk
+
+If $\wtl{f}$ exists, then $f_*=p_*\circ\wtl{f}_*$, so 
+$f_*(\pu(Y,y_0)) = p_*(\wtl{f}_*(\pu(Y,y_0)))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$.
+
+\ssk
+
+Conversely, if $f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$,
+we will use path lifting to build the lift.
+Given $y\in Y$,
+choose a path $\gamma$ in $Y$ from $y_0$ to $y$ and lift the path $f\circ\gamma$ 
+in $X$ to a path $\wtl{f\circ\gamma}$ with 
+$\wtl{f\circ\gamma}(0)=\wtl{x}_0$ . Then define
+$\wtl{f}(y)=\wtl{f\circ\gamma}(1)$ . \cltb{\underbar{If} well-defined and continuous}, 
+this is our required lift, 
+since $(p\circ\wtl{f})(y) = p(\wtl{f}(y))=p(\wtl{f\circ\gamma}(1))
+=p\circ\wtl{f\circ\gamma}(1) = (f\circ\gamma)(1) = f(\gamma(1)) = f(y)$. 
+For well-defined, if $\eta$ is a path from 
+$y_0$ to $y$, then $\gamma*\overline{\eta}$ is a loop, 
+so $f\circ(\gamma*\overline{\eta})=(f\circ\gamma)*\overline{(f\circ\eta)}$
+is a loop, giving an element of 
+$f_*(\pu(Y,y_0))\sset p_*(\pu(\wtl{X},\wtl{x}_0))$, and so
+lifts to a loop based at $\wtl{x}_0$.
+So $f\circ\gamma$ and $f\circ\eta$ lift,
+starting at $\wtl{x}_0$, to have the same value at 1. So $\wtl{f}$ is
+well-defined.  Continuity comes from the 
+evenly covered property of $p$. Given $y\in Y$,
+and  a nbhd $\wtl{\Cal U}$ of 
+$\wtl{f}(y)$ in $\wtl{X}$, 
+we want a nbhd ${\Cal V}$ of $y$ with 
+$\wtl{f}({\Cal V})\sset\wtl{\Cal U}$. Choose an evenly covered 
+nbhd ${\Cal U}_y$ for $f(y)$, the sheet 
+$\wtl{\Cal U}_y$ over ${\Cal U}_y$ which contains $\wtl{f}(y)$,
+and set ${\Cal W}=\wtl{\Cal U}\cap \wtl{\Cal U}_y$. $p$ is a homeo from ${\Cal W}$ to the 
+open set $p({\Cal W})\sset X$. Then if we set ${\Cal V}^\prime= f\inv(p({\Cal W}))$
+this is open and contains $y$, and so contains a path-connected open 
+nbhd ${\Cal V}$ of $y$. Then for every point $z\in {\Cal V}$ we compute $\wtl{f}(z)$ 
+by a path
+$\gamma$ from $y_0$ to $z$ which first goes to $y$ and then, \cltb{{\it in} ${\Cal V}$},
+from $y$ to $z$. Then by unique path lifting, 
+since $f({\Cal V})\sset {\Cal U}_y$ , $f\circ\gamma$ lifts to 
+the concatenation of a path from $\wtl{x}_0$ to $\wtl{f}(y)$ and a 
+path \cltb{{\it in} $\wtl{\Cal U}_y$} from $\wtl{f}(y)$ to $\wtl{f}(z)$.
+So $\wtl{f}(z)\in\wtl{\Cal U}$.
+
+\ssk
+
+
+\vfill
+\end
+
+
+Because $\wtl{f}$ is built by lifting paths, and path
+lifting is unique, the last statement of the proposition follows.

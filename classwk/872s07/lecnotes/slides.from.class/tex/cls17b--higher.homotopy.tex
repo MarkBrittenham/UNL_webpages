@@ -1,0 +1,162 @@
+
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+
+
+
+{\bf Higher homotopy groups:} Fundamental groups are a remarkably powerful
+tool for studying spaces; they capture a great deal of the global
+structure of a space, and so they are very good a detecting
+between homotopy-inequivalent spaces. In theory! \cltr{{\bf But}} in practice,
+they suffer from the fact that deciding whether two groups are 
+isomorphic or not is, in general, undecideable.... 
+
+\msk
+
+There are also ``higher'' homotopy groups beyond the fundamental group \mpu ,
+(hence the name pi-{\it one}); elements are homotopy classes, rel boundary, 
+of based maps \hfill
+
+$\gamma:(I^n,\del I^n)\ra(X,x_0)$. Multiplication is again by
+concatenation. We glue two $n$-cubes side-by-side and then
+reprarametrize into a single cube: 
+
+\ssk
+
+$\gamma*\eta(t_1,\ldots,t_n)
+=\cases
+\gamma(2t_1,t_2\ldots,t_n), & \text{if}\ t_1\leq 1/2\cr
+\eta(2t_1-1,t_2\ldots,t_n)& \text{if}\ t_1\geq 1/2\cr 
+\endcases$
+
+\ssk
+
+The elements can be interpreted as based homotopy classes of maps 
+$\gamma:(S^n,1)\ra(X,x_0)$, by crushing $\del I^n$ to a point.
+Like \mpu, it describes, essentially, maps of $S^n$ into
+$X$ which don't extend to maps of $D^{n+1}$, i.e., it turns the ``$n$-dimensional
+holes'' of $X$ into a group.
+
+\ssk
+
+The (well, an) inverse reverses the first coordinate; a homotopy to the
+constant map is built by applying the homotopy in the $\pi_1$ case 
+for each tuple $(t_2,\ldots,t_n)$.
+
+\vfill
+\eject
+
+One feature of the higher ($n\geq 2$) homotopy groups is that they are 
+all {\it abelian}: $\gamma*\eta$ is homotopic, rel boundary, to $\eta*\gamma$.
+The homotopy may be obtained by ``spinning'' the middle boundary between
+$\gamma$ and $\eta$ around one of the the coordinates.
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=4in
+\ctln{{\epsfbox{higher.homotopy.ai}}}
+
+\msk
+
+As with $\pi_1$, a continuous map induces homomorphisms of higher 
+homotopy groups: $f_*:\pi_n(X,x_0)\ra\pi_n(Y,y_0)$ by post-composition with $f$. 
+
+\ssk
+
+Another distinctive feature
+of the higher case is that a covering map $p:\wtl{X}\ra X$ induces an
+{\it isomorphism} on $\pi_n$; any map $\gamma:S^n\ra X$ lifts, by the lifting
+criterion, giving surjectivity, and homotopy lifting gives injectivity
+as usual. As before, a homotopy equivalence induces isomorphisms of
+the higher homotopy groups, as well.
+
+\msk
+
+But unlike \mpu , where we have a chance to compute it from simpler pieces
+via Seifert-van Kampen, nobody, for example knows what all of the 
+homotopy groups $\pi_n(S^2)$ are (except that nearly all of them are
+non-trivial!). For particular spaces (except for contractible ones!)
+they are, as a result, notoriously difficult to compute. But this doesn't 
+stop anyone from using them!, thanks
+in large part to 
+
+\ssk
+
+\cltr{Whitehead's Theorem: any map between CW-complexes that
+induces an isomorphism on all homotopy groups is a homotopy equivalence.}
+
+\ssk
+
+Proving this result would take us too far afield, however.
+
+
+
+\vfill
+\end
+
+

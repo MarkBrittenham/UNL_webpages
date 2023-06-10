@@ -1,0 +1,173 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=2 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+{\bf $\pi_1(S^1)\cong\bbz$ : A proof in two parts}
+
+\msk
+
+Show $\bbz$ surjects onto $\pi_1(S^1)$, and show that the 
+surjection is injective.
+
+\msk
+
+${\Cal U}_- = \{(x,y)\in S^1 : y < \epsilon\}$, 
+${\Cal U}_+ = \{(x,y)\in S^1 : y > -\epsilon\}$ open cover of $S^1\subseteq \bbr^2={\Bbb C}$
+
+\ssk
+
+$\gamma:(I,\del I)\ra (S^1,1)$ , $1/n$ a Lebesgue number for $\gamma^{-1}({\Cal U}_-),
+\gamma^{-1}({\Cal U}_+)$ ; $I_j=[{{j}\over{n}},{{j+1}\over{n}}]$
+
+\ssk
+
+So $\gamma(I_j)\subseteq {\Cal U}_\pm$ ; pick one and label each subinterval $+$ or $-$ .
+If consecutive intervals have the same sign \rtar\ (**) take union, label with the same
+sign. Induction \rtar\ eventually consecutive intervals have opposite signs.
+
+\ssk
+
+${\Cal U}_\pm\cong\bbr$ and $\pi_1(\bbr)=1$ \rtar\ $\gamma_j=\gamma|_{I_j}\simeq$ arc in 
+${\Cal U}_\pm$ between endpoints. Replace each $\gamma_j$ with the arc, get loop
+$\simeq\gamma$ that is a (finite) concatenation of arcs $\alpha_j$.
+
+\ssk
+
+If $\alpha_j(0),\alpha_j(1)$ lie in same component of ${\Cal U}_-\cap{\Cal U}_+$,
+then $\alpha_j$ maps into ${\Cal U}_-\cap{\Cal U}_+$ ; change label and apply
+(**) to lower number of intervals.
+
+\ssk
+
+Eventually, all $\alpha_j$ ``cross'' their ${\Cal U}_\pm$; after a small homotopy,
+we may assume \hfill
+
+$\alpha_j(\del I_j)\subseteq \{-1,1\}$. Reparametrize so that 
+$I_j=[{{j}\over{m}},{{j+1}\over{m}}]$, then \hfill
+
+$\alpha_j(t)=(\pm\cos(m\pi t),\pm\sin(m\pi t))$ for some choices of $\pm$'s.
+No backtracking \rtar\ $m$ is even and 
+$\alpha_{j}(t)=(\cos(m\pi t),\sin(m\pi t))$ for all $j$ 
+or 
+$\alpha_{j}(t)=(\cos(m\pi t),-\sin(m\pi t))$ for all $j$.
+
+
+\ssk
+
+Therefore $\alpha\simeq\gamma$ is $\alpha(t)=(\cos(m\pi t),\sin(m\pi t))$
+for some (positive, negativce, or zero) $m$. The map $\varphi:\bbz\ra\pi_1(S^1)$
+given by
+$m\mapsto[\beta_m:t\mapsto(\cos(m\pi t),\sin(m\pi t))]$ is surjective, by the
+above, and a homomorphism, since $\beta_m*\beta_n\simeq\beta_{m+n}$.
+
+\vfill\eject
+
+Second part: $\varphi$ is injective. I.e., $\beta_m\simeq\beta_n$ \rtar\ $m=n$.
+
+\msk
+
+Introduce {\it winding number} $w:\pi_1(S^1)\ra \bbz$. Let $\gamma:(I,\del I)\ra(S^1,1)$.
+
+\ssk
+
+${\Cal U}_{x+}=\{(x,y)\in S^1 : x>0\},{\Cal U}_{x-}=\{(x,y)\in S^1 : x<0\}$,
+
+${\Cal U}_{y+}=\{(x,y)\in S^1 : y>0\},{\Cal U}_{y-}=\{(x,y)\in S^1 : y<0\}$ : cover
+of $S^1$.
+
+\ssk
+
+$1/n$ = Lebesgue number for their inverse images under $\gamma$, 
+$I_j=[{{j}\over{n}},{{j+1}\over{n}}]$ (again). 
+$\gamma({{j}\over{n}}),\gamma({{j+1}\over{n}})$ both lie in one of the sets
+\rtar\ there is a well-defined (signed) angle $\theta_j$ (strictly between 
+$-\pi$ and $\pi$) between them. Define $w(\gamma)=\sum\theta_j$. Then show:
+
+\msk
+
+(1): $w(\gamma)$ is independent of the partition of $I$ used to compute it.
+Typical trick: show each is the same as the number computed using the 
+union of the two partitions (by noting that it is unchanged when a 
+single point is added to the partition).
+
+\ssk
+
+(2): If $\gamma\simeq \beta$, then $w(\gamma)=w(\beta)$. Another standard trick:
+the homotopy is a concatenation of ``small'' homotopies. Choose a 
+Lebesgue number $1/m$ for the inverse images of the sets under the homotopy
+$H$, and partition $I\times I$ into an $m$-by-$m$ grid, with vertices
+$(x_i,x_j)$. Each small square maps into one of our sets, so if
+$\theta_{i,j}=$angle from $H(x_i,x_j)$ to $H(x_{i+1},x_j)$,
+and $\phi_{i,j}=$angle from $H(x_i,x_j)$ to $H(x_i,x_{j+1})$,
+then (walking around a grid square)
+$\theta_{i,j}+\phi_{i+1,j}=\phi_{i,j}+\theta_{i,j+1}$ . This in turn implies
+that $w(H|_{I\times x_j})=\sum \theta_{i,j}=\sum \theta_{i,j+1}=w(H|_{I\times x_{j+1}})$.
+(telescoping sum!). So $w(\gamma)=w(\beta)$.
+
+\ssk
+
+(3): $w(\beta_n)=n$ (direct computation). 
+
+\msk
+
+So if $\beta_m\simeq\beta_n$, then $m=n$.
+So $\varphi(m)=\varphi(n)$ \rtar\ $m=n$, as desired. 
+
+
+
+
+\vfill
+\end

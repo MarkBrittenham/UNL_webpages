@@ -1,0 +1,160 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+
+{\bf Covering spaces:}
+
+\msk
+
+
+The projective plane ${\Bbb R}P^2$
+has $\pu = {\Bbb Z}_2$ . It is also the quotient of the simply-connected
+space $S^2$ by the antipodal map, which, together with the identity map,
+forms a group of homeomorphisms of $S^2$ which is isomorphic to ${\Bbb Z}_2$.
+The fact that ${\Bbb Z}_2$ has this dual role to play in describing 
+${\Bbb R}P^2$ is no accident; codifying this relationship requires the 
+notion of a covering space.
+
+\msk
+
+The quotient map $q:S^2\ra {\Bbb R}P^2$ is an example of a {\it covering map}.
+A map $p:E\ra B$ is called a covering map if for every point $x\in B$, there
+is a neighborhood ${\Cal U}$ of $x$ (an
+{\it evenly covered neighborhood}) so that $p^{-1}({\Cal U})$ 
+is a disjoint union ${\Cal U}_\alpha$ of open sets in $E$, each mapped
+homeomorphically onto ${\Cal U}$ by (the restriction of) $p$ . $B$ is
+called the {\it base space} of the covering; $E$ is called the {\it total
+space}. 
+
+\msk
+
+The quotient map $q$ is an example; (the image of) the complement
+of a great circle in $S^2$ will be an evenly covered neighborhood
+of any point it contains. 
+
+\msk
+
+The disjoint union of 42 copies of a space,
+each mapping homeomorphically to a single copy, is an example of a 
+{\it trivial covering}. 
+
+\msk
+
+The famous 
+exponential map $p:{\Bbb R}\ra S^1$ given by $t\mapsto e^{2\pi it} = 
+(\cos (2\pi t),\sin (2\pi t))$. The image $J\subseteq S^1$ of any interval 
+$(a,b)$ of length
+less than 1 will have inverse image the disjoint union of the
+intervals $(a+n,b+n)$ for $n\in{\Bbb Z}$ .
+
+\vfill
+\eject
+
+We can build many finite-sheeted (every point
+inverse is finite) coverings of a bouquet of two circles, by 
+assembling $n$ points over the vertex, and then, on either side (the red/blue
+sides?),
+connecting the points by $n$ (oriented) arcs, one with one red/blue arcs going
+in/out of
+each vertex. By choosing orientations on each 1-cell of the bouquet,
+we can build a covering map by sending the vertices above to the
+vertex, and the arcs to the one cells, homeomorphically, respecting 
+the orientations. We can build infinite-sheeted coverings in much 
+the same way.
+
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{cov1.ai}}}
+
+
+\msk
+
+Covering spaces of more ``interesting'' graphs can be assembled similarly.
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{cov2.ai}}}
+
+
+\msk
+
+
+\vfill
+\end
+
+
+
+
+
+
+

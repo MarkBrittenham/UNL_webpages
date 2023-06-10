@@ -1,0 +1,113 @@
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+\def\wtl{\widetilde}
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Problem Set 4}
+
+\msk
+
+Starred (*) problems are due Thursday, February 26.
+
+
+\begin{description}
+
+
+\item{(*)} 25. [Hatcher, p.19, \#9] Show that if $X$ is contractible,
+$A\sset X$, and $r:X\ra A$ is a retraction, then $A$ is contractible.
+
+\msk
+
+\item{26.} [Hatcher, p.19, \#16] Show that the CW-complex $S^\infty=\bigcup_n S^n$
+is contractible. 
+
+\ssk
+
+\item{\spc} [Hint: On $S^{\infty}\times[1/n,1/(n-1)]$, assume you have already mapped
+into $S^{n-1}\sset S^{\infty}$, and deform it (through $S^{n}$) into (a hemisphere of) $S^{n-2}$ .]
+
+\msk
+
+
+\item{27.} [Hatcher, p.79, \# 1] 
+Show that if $p:\wtl{X}\ra X$ is a covering map and $A\subseteq X$ is
+a subspace if $X$, then 
+
+\item{\spc} $p|_{p^{-1}(A)}:p^{-1}(A)\ra A$ is also a covering map.
+
+\msk
+
+\item{(*)} 28. [Hatcher, p.79, \# 2] Show that if $p_1:\wtl{X_1}\ra X_1$ and $p_2:\wtl{X_2}\ra X_2$ are
+covering maps, then the map 
+
+\ssk
+
+$p=p_1\times p_2:\wtl{X_1}\times\wtl{X_2}\ra X_1\times X_2$,
+given by $p(x_1,x_2)=(p_1(x_1),p_2(x_2))$, is also a covering map.
+
+\msk
+
+\item{(*)} 29. [Hatcher, p80, \# 11] Find a pair of (finite) graphs (= 1-dim'l CW complexes with finitely
+many 0- and 1-cells) $X_1$ and $X_2$ that have a common finite-sheeted covering space 
+$p_1:X\ra X_1$ , $p_2:X\ra X_2$, but do {\it not} commonly cover another space, i.e., 
+they are not both covering spaces of a single space $Y$.
+
+\msk
+
+\item{30.} Show that if $p:X\ra Y$ and $q:Y\ra Z$ are both covering maps, and, for
+each $z\in Z$, $q^{-1}(z)$ is {\it finite}, then $q\circ p:X\ra Z$ is also a covering
+map.
+
+\ssk
+
+\item{\spc} [N.B. This result can be false, if $q^{-1}(z)$ is infinite.]
+
+\msk
+
+\item{31.} Suppose that $p:\wtl{X}\ra X$ and $q:\wtl{Y}\ra Y$ are finite-sheeted
+covering spaces, with all spaces connected. Describe how to use these to build 
+connected finite-sheeted covering spaces of $X\vee Y$. What is the smallest number
+of sheets that such a covering can have?
+
+\end{description}
+\vfill
+
+\end{document}

@@ -1,0 +1,110 @@
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dutchcal}
+
+\textheight=10in
+\textwidth=6.5in
+\voffset=-1in
+\hoffset=-1in
+
+\begin{document}
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\hsk{\hskip.3in}
+\def\ra{\rightarrow}
+\def\ubr{\underbar}
+
+\def\mt{{\mathcal T}}
+\def\mb{{\mathcal B}}
+\def\ms{{\mathcal S}}
+\def\mu{{\mathcal U}}
+\def\mv{{\mathcal V}}
+
+\def\bbr{{\mathbb R}}
+\def\bbz{{\mathbb Z}}
+\def\bbq{{\mathbb Q}}
+\def\spc{$~$\hskip.15in$~$}
+
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\lra{$\Leftrightarrow$}
+\def\bra{$\Rightarrow$}
+
+
+
+%%\UseAMSsymbols
+
+\ctln{\bf Math 872 Problem Set 3}
+
+\msk
+
+Starred (*) problems are due Thursday, February 19.
+
+
+\begin{description}
+
+
+\item{17.} [Hatcher, p.19, \# 14] Given $v,e,f>0$ with $v-e+f=2$, build a cell structure on $S^2$ with
+$v$ 0-cells, $e$ 1-cells, and $f$ 2-cells. 
+
+\msk
+
+\item{18.} For a CW complex $X$, show that if the 1-skeleton $X^{(1)}$ of $X$ is path-connected, then 
+$X$ is path connected.
+
+\msk
+
+\item{(*)} 19. [Hatcher, p.20 \#22] Show that if $X$ is a CW complex, $A,B\subseteq X$ are subcomplexes, 
+$A\cup B=X$, and $A,B$ and $A\cap B$ are contractible, then $X$ is contractible.
+
+\msk
+
+\item{20.} [Hatcher, p.20, \#28] Show that if the pair $(X,A)$ satisfies the 
+homotopy extension property, then for any map $f:A\ra Y$ the pair
+$(Z,Y)$, where $Z=X\coprod Y/\{a\sim f(a)\ :\ a\in A\}$ is the space built 
+by gluing $X$ to $Y$ along $A$ using $f$, also satisfies the 
+homotopy extension property.
+
+\msk
+
+\item{(*)} 21. [Hatcher, p.53, \#7] Let $X$ be the quotient space formed from the 2-sphere
+$S^2$ by identifying the north and south poles. Put a cell structure on
+$X$ and use this to compute $\pi_1(X)$.
+
+\msk
+
+\item{22.} [Hatcher, p.54, \# 14 (sort of)] 
+Let $X$ = the space obtained from a cube $J^3=J\times J\times J$,
+$J=[-1,1]$,
+by gluing opposite square faces to one another with a 90-degree righthand
+twist (e.g., glue $J\times J\times \{0\}$ to $J\times J\times \{1\}$ by the
+map
+$(x,y,0)\mapsto (y,-x,1)$). Describe a CW structure for $X$ and compute a presentation for $\pi_1(X)$. 
+
+\msk
+
+\item{23.} Find a cell structure for, and compute a presentation for the fundamental group of,
+the space $X$ obtained by gluing two M\"obius bands 
+$I\times I/\{(t,0)\sim(1-t,1)\ :\ t\in I\}$ along their boundary circles.
+
+\msk
+
+\item{(*)} 24. [Hatcher, p.53, \# 11 (sort of)] For a map $f:X\ra X$, the {\it mapping torus}
+$T_f$ of $f$ is the space $X\times I/\{(x,0)\sim (f(x),1)\ :\ x\in X\}$ obtained by
+gluing the ends of the `cylinder' $X\times I$ together using $f$. Find a presentation of
+$\pi_1(T_f)$ in terms of $f_*:\pi_1(X,x_0)\ra \pi_1(X,x_0)$ in the case when 
+$X=S^1\vee S^1$ (joined along the basepoint $x_0$), and $f(x_0)=x_0$. [Hint: treating $T_f$
+as $X\vee S^1$ with cells attached can streamline this.] 
+
+
+\end{description}
+\vfill
+
+\end{document}

@@ -1,0 +1,137 @@
+\input amstex
+
+\magnification=1200
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+\def\ra{\rightarrow}
+
+\UseAMSsymbols
+
+\ctln{\bf Math 871 Problem Set 1}
+
+\msk
+
+Starred (*) problems are due Thursday, Sept. 1.
+
+\msk
+
+\item{1.} [Munkres, p.14, \#2 (part)] For each statement below,
+determine whether or not it is true. If true, show why; if 
+not, give an example demonstrating this.
+
+\ssk
+
+\item{(*)} (a) For any sets $A,B$, $A \setminus (A\setminus B) = B$ .
+
+\ssk
+
+\item{} (b) For any sets $A,B,C$, \{$A\subseteq B$ and $A\subseteq C$\} 
+if and only if $A\subseteq B\cap C$ .
+
+\ssk
+
+\item{} (c) For any sets $A,B,C$, $A\cap(B\setminus C) = (A\cap B)\setminus(A\cap C)$ .
+
+\ssk
+
+\item{} (d) For any sets $A,B,C,D$, \{$A\subseteq C$ and $B\subseteq D$\} implies that 
+$A\times C \subseteq B\times D$ .
+
+\ssk
+
+\item{} (e) For any sets $A,B,C,D$, $A\times C \subseteq B\times D$ implies that 
+\{$A\subseteq C$ and $B\subseteq D$\} .
+
+\ssk
+
+\item{(*)} (f) For any sets $A,B,C,D$, $(A\times B)\cap(C\times D) = (A\cap C)\times (B\cap D)$ .
+
+\msk
+
+\item{2.} If $A,C\subseteq X$ and $B,D\subseteq Y$, show how to express
+$(A\times B)\setminus (C\times D)$ as a union of Cartesian products 
+(i.e., sets of the form $U\times V$).
+
+\msk
+
+\item{3.} [Munkres, p.20, \#1] Show that if $f:A\ra B$ is a function, then
+
+\ssk
+
+\item{} (a) If $A_0\subseteq A$, then $A_0\subseteq f^{-1}(f(A_0))$; the sets are equal,
+if $f$ is injective.
+
+\ssk
+
+\item{} (b) If $B_0\subseteq B$, then $f(f^{-1}(B_0))\subseteq B_0$; the sets are equal,
+if $f$ is surjective.
+
+\msk
+
+\item{4.} [Munkres, p.20, \#2 (part)] If $f:A\ra B$ is a function, $A_0,A_1\subseteq A$,
+and $B_0,B_1\subseteq B$, then
+
+\ssk
+
+\item{(*)} (a) $f^{-1}(B_0\cap B_1)$ = $f^{-1}(B_0) \cap f^{-1}(B_1)$
+
+\ssk
+
+\item{} (b) $f^{-1}(B_0\cup B_1)$ = $f^{-1}(B_0) \cup f^{-1}(B_1)$
+
+\ssk
+
+\item{(*)} (c) $f(A_0\cap A_1) \subseteq f(A_0)\cap f(A_1)$, but equality does not always hold.
+
+\ssk
+
+\item{} (d) $f(A_0\cup A_1)$ = $f(A_0)\cup f(A_1)$ .
+
+\msk
+
+\item{5.} [Munkres, p.44, \#7] If $A$ and $B$ are finite sets, show that the
+set $B^A = \{f:A\ra B\}$ of all functions from $A$ to $B$ is also finite.
+
+\msk
+
+\item{6.} [Munlres, p.51, \#5 (part)] For each of the following sets, determine
+whether or not it is countable:
+
+\ssk
+
+\item{} (a) $A$ = $\{f:\{0,1\}\ra {\Bbb Z}\}$, all functions from ${0,1}$ to $\Bbb Z$
+
+\ssk
+
+\item{} (b) $B$ = $\{f:{\Bbb Z}_+\ra {\Bbb Z}_+\ :\ f(n)=0\ \text{for}\ \text{all}\ n\geq 3\}$
+
+\ssk
+
+\item{(*)} (c) $F$ = $\{f:{\Bbb Z}_+\ra {\Bbb Z}_+\ :\ \text{there}\ \text{is}\ N\in{\Bbb Z}_+\ \text{with}
+f(n)=0\ \text{for}\ \text{all}\ n\geq N\}$, all eventually-0 functions.
+
+\ssk
+
+\item{} (d) $H$ = $\{f:{\Bbb Z}_+\ra {\Bbb Z}_+\ :\ \text{there}\ \text{is}\ N\in{\Bbb Z}_+\ \text{with}
+f(n)=f(N)\ \text{for}\ \text{all}\ n\geq N\}$, all eventually constant functions.
+
+\ssk
+
+\item{} (e) $P$ = $\{f:{\Bbb Z}_+\ra {\Bbb Z}_+\ :\ n>m\ \text{implies}
+f(n)>f(m)\}$, all increasing functions.
+
+\ssk
+
+\item{} (f) The set F$ $of all finite subsets of ${\Bbb N}$.
+
+\msk
+
+\item{7.} Let $P(A)=\{B\ :\ B\subseteq A\}$ (the {\it power set} of $A$), and 
+suppose $f:A\ra P(A)$ is a function. Show that the set $B = \{ a\in A\ :\ a\not\in f(a)\}$
+is not in the image of $f$; conclude that $f$ can never be surjective. What does this say
+about functions $g:P(A)\ra A$ ?
+\vfill
+\end

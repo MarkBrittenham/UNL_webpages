@@ -1,0 +1,290 @@
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+
+
+
+The simplicial homology groups are, in the end, fairly routine to calculate from a 
+$\Delta$-complex structure. But! The calculations
+\u{depend} on the $\Delta$ structure! This is not a group defined from the space
+$X$; it depends on the space \u{and} a $\Delta$ structure on it. 
+Choosing a different structure on $X$, maybe we would get
+different groups! We \u{should} denote our groups by $H_i^\Delta(X)$, to 
+acknowledge this dependence on the structure.
+
+\bsk
+
+But we don't {\it want} a group that depends on this structure. We want groups that
+just depend on the topological space $X$, i.e., which are topological invariants.
+These groups $H_i^\Delta(X)$ \u{are} topological invariants,
+but we will need to take a very roundabout route to show this. We
+now define another sequence $H_i(X)$ of groups, the {\it singular homology
+groups}, which are readily seen to be topological invariants;
+but this definition will also make it very unclear how to really compute them! 
+Then we will show that for $\Delta$-complexes these two sequences of groups
+are really the same. In so doing, we will have built a sequence of topological
+invariants that for a large class of spaces are fairly routine to compute. Then
+all we will need to show is that they also capture useful information about
+a space (i.e., we can prove useful theorems with them!).
+
+\msk
+
+And the basic idea behind defining them is that, with simplicial homology,
+we have already done all of the hard work. What we do is, as before, build a 
+sequence of (free) abelian groups, the chain groups $C_n(X)$, 
+and (linear) boundary maps between them,
+with consecutive maps composing to 0. Then, as before, the homology groups are
+kernels mod images, i.e., cycles mod boundaries. And, as before, the basis
+elements for each of our chain groups $C_n(X)$ will be the $n$-simplices
+in $X$. But now $X$ is \u{any} topological space. So how do we get $n$-simplices
+in such a space? We do the only thing we can; we {\it map} them in. 
+
+\vfill
+\eject
+
+We work with {\it singular $n$-chains}, that is,
+formal (finite) linear combinations $\sum a_i\sigma_i$, where $a_i\in{\Bbb Z}$
+and the $\sigma_i$ are {\it singular simplices}, that is,
+maps $\sigma_i:\Delta^n\ra X$.
+The boundary maps are exactly as before; the alternating sum of
+the restrictions of $\sigma_i$ to the $n+1$ faces of $\Delta^n$. 
+The same proof as before (interpreting
+the faces as restrictions of the map $\sigma_i$, instead of as physical faces)
+shows that the composition of two successive boundaries is 0,
+and so all of the machinery is in place to define the {\it singular homology
+groups} $H_i(X)$ as the kernel of $\del_i$ modulo the image of $\del_{i+1}$ = $Z_i(X)/B_i(X)$ .
+They are, by definition, groups defined using the topological space $X$ as input,
+and so are topological invariants. Elements are equivalence classes of $i$-cycles,
+where $z_1\simeq z_2$ if $z_1-z_2=\del w$ for some $(i+1)$-chain $w$ . We say that $z_1$ and $z_2$ are
+{\it homologous}.
+
+\msk
+
+Singular homology groups are quick to define, but what do they measure?
+We are trying to mimic simplicial homology, but because a
+general topological space $X$ cannot be built out of simplices,
+we do the next best thing; we study $X$ by \u{mapping} simplices \u{in}. 
+This is true of simplicial homology, too, except that we restrict
+ourselves to a very few special singular simplices (the characteristic maps of the
+simplices for $X$). In the end an $n$-cycle $\sum a_i\sigma_i^n$, since the 
+faces of the $\sigma_i$ must match up precisely, in order to cancel, 
+can be thought of as a map of an $n$-complex into $X$, made by gluing the
+$n$-simplices $\sigma_i$ together \u{before} mapping in. 
+The integer coefficients can really be interpreted as taking multiple copies of 
+$\Delta^n$ and gluing them together along their boundaries (the signs tell us
+the underlying orientations). The idea is that this $n$-complex is being
+mapped ``around a hole'', unless it \u{extends} to a map of an $(n+1)$-complex
+into $X$ (having our $n$-complex as boundary). So singular homology really
+is trying to detect holes, it is just doing it with maps.....
+
+\vfill
+\eject
+
+The ``fun'' with singular homology groups comes when you try to \u{compute} them!
+$C_n(X) = \{\sum a_i\sigma_i$ : $a_i\in {\Bbb Z}$ and $\sigma_i:\Delta^n\ra X$ 
+is continuous$\}$ is typically a \u{huge} group, since there will be immense
+numbers of maps $\Delta^n\ra X$ . The only space for which this is not true is
+the one-point space $*$; then there is, for each $n$, exactly one (distinct)
+map $\sigma_n :\Delta^n\ra *$ ; the constant map. Therefore each face of $\Delta^n$
+gives the same restriction map $\sigma^{n-1}$, and so the boundary maps can 
+be directly computed (they depend on the parity of the number $n+1$ of faces 
+an $n$-simplex has). We find that $\del_{2n}=Id$ and $\del_{2n-1}=0$ . So in 
+computing homology groups, we either have kernel everything ($\del_i=0$) and
+image everything ($\del_{i+1}=Id$) or kernel nothing ($\del_i=Id$) and
+image nothing ($\del_{i+1}=0$), so in both cases $H_i(*)=0$ . Except for $i=0$;
+then $\del_0=0$ (by definition) and $\del_1=0$, so $H_0(*)={\Bbb Z}$ .
+But other than this example (and, well, OK, spaces with the discrete topology;
+it's the same calculation as above for every point!), computing singular 
+homology from the definition is quite a chore! So we need to build
+some labor-saving devices, namely, some theorems to help us break the problem
+of computing these groups into smaller, more manageable pieces.
+
+\msk
+
+First set of manageable pieces: if we decompose $X$ into its path components, $X=\bigcup X_\alpha$,
+then $H_i(X) \cong \bigoplus H_i(X_\alpha)$ for every $i$. This is because every singular simplex,
+since $\Delta^i$ is path-connected, maps into some $X_\alpha$ . So $C_i(X) \cong \bigoplus C_i(X_\alpha)$.
+Since the boundary of a simplex mapping into $X_\alpha$ consists of simplices in $X_\alpha$, the 
+boundary maps respect the decompositions of the chain groups, so 
+$B_i(X) \cong \bigoplus B_i(X_\alpha)$ and $Z_i(X) \cong \bigoplus Z_i(X_\alpha)$, and so 
+the quotients are $H_i(X) \cong \bigoplus H_i(X_\alpha)$ . 
+
+\vfill
+\eject
+
+So, if we wish to, we can focus on computing homology groups for path-connected spaces $X$. For such a space, 
+$H_0(X)\cong {\Bbb Z}$, generated by any map of a 0-simplex (= a point) into $X$. This is because any pair
+of 0-simplices are homologous; given any two points $x,y\in X$, there is a path $\gamma: I\ra X$ from $x$ to $y$,
+This path can be interpreted as a singular 1-simplex, and $\del\gamma = y-x$ . So $H_0(X)$ is generated
+by a single point $[x]$ . No multiple of this point is null-homologous, because for any 1-chain $\sum n_i \sigma_i$,
+the sum of the coefficients of its boundary is 0 (since this is true for each singular 1-simplex), and any 0-chain
+$\sum n_i [x_i]$ is homologous to $(\sum n_i)[x]$ by the above argument.
+
+\msk
+
+Techincal aside: the fact that $H_0(*)={\Bbb Z}$ is annoying to some,
+and often requires treating 0-dimensional homology as a special case. 
+But since the boundary of a singular 1-simplex is always of the form $v-w$, we find that the 
+image of $\del_1$ is always contained in the subgroup of $C_0(X)$ consisting
+of chains whose coefficients sum to 0. This means that we can, for free, 
+{\it augment} the singular chain complex by a map
+$\cdots \ra C_1(X) {\del_1\atop\ra}C_0)X) {\alpha\atop \ra} {\Bbb Z} \ra 0$
+where $\alpha$ is the map $\alpha(\sum a_i\sigma_i^0) = \sum a_i$ . This 
+is still a chain complex (compositions of consecutive maps are 0); the resulting
+homology groups are called {\it reduced} homology $\widetilde{H}_i(X)$ . 
+All that this does is remove one copy of ${\Bbb Z}$ from 
+$H_0$; $\widetilde{H}_0(X)\oplus {\Bbb Z} \cong H_0(X)$ . All other
+homology groups are unchanged. There is a reduced relative homology 
+as well, since we can augment with the same map (1-simplices always have 2 ends!),
+but in this case it has (essentially) no effect; $\widetilde{H}_i(X,A)\cong H_i(X,A)$
+for all $i$ \u{unless} $A=\emptyset$, in which case we lose the ${\Bbb Z}$ in
+dimension 0 that we expect to. 
+
+\vfill
+\eject
+
+{\bf Continuous maps:} Perhaps the most important property of the fundamental group is that a continuouos map 
+between spaces induces a homomorphism between groups. (This implied, for instance,
+that homeomorphic spaces have isomorphic \mpu ). The same is true for homology groups, 
+for essentially the same reason. Given a map $f:X\ra Y$, there is an induced map $f_\#:C_n(X)\ra C_n(Y)$
+defined by postcomposition; for a singular simplex $\sigma$, $f_\#(\sigma) = f\circ\sigma$, and we extend
+the map linearly. Since $f\circ(g|_A) = (f\circ g)|_A$ (postcomposition commutes with restriction of the domain),
+$f_\#$ commutes with $\del$ : $f_\#(\del \sigma) = \del(f_\#(\sigma))$. A homomorphism between
+chain complexes (i.e., a sequence of such maps, one for each chain group) which commutes with the 
+boundaries maps in this way, is called a {\it chain map}.
+A chain map, such as $f_\#$, therefore, takes cycles to cycles,
+and boundaries to boundaries, and so $f_\#:Z_i(X)\ra Z_i(Y)$ (which is linear, hence a homomorphism)
+induces a homomorphism $f_*:H_i(X)\ra H_i(Y)$ by $f_*[z] = [f_\#(z)]$ . 
+Since it is defined by composition with singular simplices, it is 
+immediate that, for a map $g:Y\ra Z$, $(g\circ f)_*=g_*\circ f_*$ . And since the identity map $I:X\ra X$
+satisfies $I_\#=Id$, so $I_*=Id$, homeomorphic spaces have isomorphic homology groups.
+
+\vfill
+\eject
+
+{\bf Homotopic maps:} Another important property of \mpu\ is that homotopic maps give the same
+induced map (after correcting for basepoints). This is also true for homology;
+if $f\simeq g:X\ra Y$, then $f_*=g_*$ . The proof, however, is not as straightforward
+as for \mpu. It requires some new technology; the chain homotopy.
+A chain homotopy $H$ between the chain maps $f_\#,g_\#:C_*(X)\ra C_*(Y)$ 
+is a sequence of homomorphisms $H_i:C_i(X)\ra C_{i+1}(Y)$ satisfying
+$H_{i-1}\del_i+\del_{i+1}H_i = f_\#-g_\#:C_i(X)\ra C_i(Y)$ . The existence of $H$
+implies that $f_*=g_*$; for an $i$-cycle $z$ (with $\del_i(z)=0$) we have
+
+\ssk
+
+$f_*[z]-g_*[z] = [f_\#(z)-g_\#(z)] = [H_{i-1}\del_i(z)+\del_{i+1}H_i(z)] = [H_{i-1}(0)+\del_{i+1}(w)]$
+
+$=[\del_{i+1}(w)]=0$.
+
+\ssk
+
+And the existence of a homotopy between $f$ and $g$ implies the existence of a 
+chain homotopy between $f_\#$ and $g_\#$ . This is because the homotopy 
+gives a map $H:X\times I\ra Y$, which induces a map $H_\#:C_{i+1}(X\times I)\ra C_{i+1}(Y)$ .
+Then we pull, from our back pocket, a {\it prism map}
+$P:C_i(X)\ra C_{i+1}(X\times I)$; the composition $H_\#\circ P$ will be our chain homotopy.
+The prism map takes a (singular) $i$-simplex $\sigma$ and sends it to a sum of singular $(i+1)$-simplices
+in $X\times I$. And the way we define it is to take the $i$-simplex $\Delta^i$, and cut
+$\Delta^i\times I$ (i.e., a {\it prism}) into a sum of $(i+1)$-simplices. Using the
+map $\sigma^\prime = \sigma\times Id : \Delta^i\times I\ra X\times I$, 
+restricted to each of these $(i+1)$-simplices,
+yields the prism map. There are many ways of decomposing a prism into simplices,
+but we need to be careful to choose one which restricts well to each of 
+the \u{faces} of $\Delta^i$,
+in order to get the chain homotopy property we require. What 
+this requires is that the
+decomposition, when restricted to any face of $\Delta^i$ (which we think of as a copy
+of $\Delta^{i-1}$), is the same as the decomposition we would have applied to a prism over
+an $(i-1)$-simplex. After some exploration, we are led to the following formulation:
+
+\vfill
+\eject
+
+If we write $\Delta^n\times\{0\}=[v_0,\ldots ,v_n]$ and 
+$\Delta^n\times\{1\}=[w_0,\ldots ,w_n]$, then we can decompose
+$\Delta^n\times I$ as the (n+1)-simplices $[v_0,\ldots ,v_i,w_i,\ldots ,w_n]$. 
+We then define $P(\sigma) = \sum (-1)^i \sigma^\prime|_{[v_0,\ldots ,v_i,w_i,\ldots ,w_n]}$.
+A ``routine calculation'' verifies that 
+
+\ssk
+
+\ctln{$(\del P+P\del)(\sigma) = \sigma^\prime|_{[w_0,\ldots ,w_n]}-\sigma^\prime|_{[v_0,\ldots v_n]}$}
+
+\ssk
+
+Composing with $H_{\#}$ yields our result.
+
+\msk
+
+Consequently, for example, homotopy equivalent spaces have isomporphic
+(reduced) homology groups; homotopy equivalences induce isomorphisms.
+So all contractible spaces have trivial reduced homology
+in all dimensions, since they are all homotopy to a point. If we think of a cell complex as
+a collection of disks glued together, this lends some hope that we can compute
+their homology groups, since we can compute the homology of the building blocks. 
+Our next goal is to make turn this idea into action; but we need another tool, to
+frame our answer in the best way possible.
+
+\vfill
+\end

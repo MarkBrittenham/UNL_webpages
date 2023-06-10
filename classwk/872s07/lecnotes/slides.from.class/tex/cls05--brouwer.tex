@@ -1,0 +1,123 @@
+
+\magnification=1900
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+%\voffset=-.6in
+%\hoffset=-.5in
+%\hsize = 7.5 true in
+%\vsize=10.4 true in
+
+\voffset=1.8 true in
+\hoffset=-.6 true in
+\hsize = 10.2 true in
+\vsize=8 true in
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+{\bf Applications: the Brouwer Fixed Point Theorem}
+
+\ssk
+
+Calculus: $f:I\ra I$ has a fixed point; $f(x_0)=x_0$ [Pf: apply IVT to $g(x)=f(x)-x$.]
+
+\ssk
+
+\cltr{{\bf Brouwer:} Every map $f:D^2\ra D^2$ has a fixed point.}
+
+\msk
+
+Proof: If not, then $f(x)\neq x$ for all $x\in D^2$. 
+Construct a retraction $r:D^2\ra \del D^2$ by
+sending $x\in D^2$ to the point on $\del D^2$ lying on the ray from $f(x)$ to $x$.
+Formally:
+
+\msk
+
+Send $x$ to $y=x+t(f(x)-x)$, $t\leq 0$ such that $||x+t(f(x)-x)||=1$.
+
+\ssk
+ 
+$||x+t(f(x)-x)||^2-1=\langle x+t(f(x)-x),x+t(f(x)-x)\rangle -1 =$ \hfill
+
+$||f(x)-x||^2t^2+2\langle x,f(x)-x\rangle t +(||x||^2-1)$ $=$ 
+$at^2+bt+c=0$ \hskip.1in
+and $t\leq 0$ . 
+
+I.e. (note that $c\leq 0$ and $a>0$), 
+$t=(-b-\sqrt{b^2-4ac})/2a=$ \hfill
+
+\ssk
+
+$(-\langle x,f(x)-x\rangle-\sqrt{\langle x,f(x)-x\rangle^2-||f(x)-x||^2(||x||^2-1)})/||f(x)-x||^2$,
+so 
+
+\msk
+
+\cltr{$\displaystyle r(x)=x+{{-\langle x,f(x)-x\rangle-\sqrt{\langle x,f(x)-x\rangle^2-||f(x)-x||^2(||x||^2-1)}
+}\over{||f(x)-x||^2}}(f(x)-x)$}
+
+\msk
+
+which, since $||x-f(x)||$ is bounded away from $0$ (it has a positive minimum on $D^2$), is continuous.
+Check: if $||x||=1$, then $r(x)=x$ (because $\langle x,f(x)-x\rangle < 0$).
+But a retraction induces a surjective homomorphism on $\pi_1$, so $r_*$
+is a surjection from $\pi_1(D^2)=1$ to $\pi_1(\del D^2)=\pi_1(S^1)=\bbz$,
+a contradiction. So $f$ must have a fixed point.
+
+\msk
+
+Basic idea: if no fixed point, then a \underbar{new} map that we build has a property (retraction)
+which translates into the algebra (surjection) to something which we know can't be true.
+
+\msk
+
+The exact same proof will apply in higher dimensions (every $f:D^n\ra D^n$ has a fixed point), once
+we build an algebraic gadget $H$ (``the $(n-1)^{\text{st}}$ homology group'') for which
+$H(D^n)=\{1\}$ and $H(\del D^n)=H(S^{n-1})\neq\{1\}$.
+
+
+\vfill
+\end

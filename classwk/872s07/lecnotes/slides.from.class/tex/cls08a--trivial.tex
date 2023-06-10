@@ -1,0 +1,130 @@
+
+
+\magnification=2000
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\def\ai{a^{-1}}
+\def\bi{b^{-1}}\def\ci{c^{-1}}
+
+\input colordvi
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+%\def\lra{\Leftrightarrow}
+\def\del{\partial}
+\def\delp{\partial^\prime}
+\def\delpp{\partial^{\prime\prime}}
+\def\sgn{{\roman{sgn}}}
+\def\wtih{\widetilde{H}}
+\def\bbz{{\Bbb Z}}
+\def\bbr{{\Bbb R}}
+\def\rtar{$\Rightarrow$}
+
+\def\cltr{\Red}		  % Red  VERY-Approx PANTONE RED
+\def\cltb{\Blue}		  % Blue  Approximate PANTONE BLUE-072
+\def\cltg{\PineGreen}	  % ForestGreen  Approximate PANTONE 349
+
+{\bf A non-trivial presentation of the trivial group}
+
+\msk
+
+$G=\langle a,b\ |\ bba\bi\ai,aab\ai\bi\rangle $
+
+$= \langle a,b\ |\ ab\ai=b^2,ba\bi=a^2\rangle$
+
+
+\msk
+
+Then:
+
+\msk
+
+$b=$
+\hhsk
+$\cltr{(aab\ai\bi)}b=$
+\hhsk
+$aab\ai\cltr{(\bi b)}=$
+
+$aab\ai=$
+\hhsk
+$aab\cltr{b\bi}\ai=$
+
+$aabb\cltg{(ab\ai)^{-1}}\cltr{(bba\bi\ai)^{-1}}\cltg{(ab\ai)}\bi\ai=$
+
+$aabb\cltg{a\bi\ai}\cltr{ab\ai\bi\bi}\cltg{ab\ai}\bi\ai=$
+
+$aabba\bi\cltr{\ai a}b\ai\bi\bi ab\ai\bi\ai=$
+
+$aabba\cltr{\bi b}\ai\bi\bi ab\ai\bi\ai=$
+
+$aabb\cltr{a\ai}\bi\bi ab\ai\bi\ai=$
+
+$aab\cltr{b\bi}\bi ab\ai\bi\ai=$
+\hhsk
+$aa\cltr{b\bi}ab\ai\bi\ai=$
+
+
+$a\cltr{aab\ai\bi}\ai=$
+\hhsk
+$a\ai=$
+\hhsk
+$1$
+
+\msk
+
+Similarly, $a=1$ in $G$. So every word in $a$ and $b$ is $1$, so $G=\{1\}$.
+
+\msk
+
+$\langle a,b,c\ |\ ab\ai=b^2,bc\bi=c^2,ca\ci=a^2\rangle$ is also a
+presentation for the trivial group, 
+but the proof is much more involved.
+
+\msk
+
+On the other hand, $H= \langle a,b\ |\ aba=b^2,bab=a^2\rangle$ isn't trivial, since
+
+$\varphi:F(a,b)\ra\bbz_3$ defined by $\varphi(a)=1,\varphi(b)=2$ is onto and
+satisfies $\varphi(aba)=4=1=4=\varphi(b^2)$ and $\varphi(bab)=5=2=\varphi(a^2)$,
+so descends to a surjective homomorphism $\vartheta:H\ra \bbz_3$. So $H\neq\{1\}$.
+
+\vfill
+\end
+
+
+
+
+
+$aaab\ai\bi\ai=$
+\hhsk
