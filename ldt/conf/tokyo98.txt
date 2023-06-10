@@ -1,0 +1,85 @@
+ First Announcement October '97
+
+
+	  The third MSJ Regional Workshop on 
+
+	Cone-Manifolds and Hyperbolic Geometry
+
+		   July 1 - 10, 1998 
+
+	     Tokyo Institute of Technology 
+
+
+Organizing Committee :  
+--------------------
+Steve Kerckhoff (Stanford), Sadayoshi Kojima (TIT), 
+Ken'ichi Ohshika (Tokyo), Tomoyoshi Yoshida (TIT).  
+
+
+Sponsoring Organization :
+-----------------------
+Mathematical Society of Japan, and 
+Tokyo Institute of Technology
+
+
+Description of the Workshop : 
+---------------------------
+The workshop will include a lecture series, lasting 16 hours, 
+by  
+
+		Daryl Cooper (UCSB), 
+		Craig Hodgson (Melbourne)  and 
+		Steve Kerckhoff (Stanford) 
+
+which will cover the fundamentals of cone-manifolds and several 
+recent developments in the theory.  In particular, the speakers 
+intend to give a complete proof of the geometrization theorem 
+for 3-dimensional orbifolds, as announced by W. P. Thurston 
+in 1982.  There will also be related research talks by other 
+participants and time for informal discussions. The introductory 
+part of the main lectures will take place during the first week 
+(2 one-hour lectures in each day).  The more advanced part of 
+the lectures and the related research talks will be scheduled 
+for the week of July 6-10.  The content of the lectures in 
+the second week should be sufficiently self-contained to be 
+accessible to participants attending only the second week.
+
+The other participants of the second week include 
+
+M. Boileau (Toulouse), A. Casson (Berkeley), K. Fujiwara (Keio)
+S. Hersonsky (Caltech), B. Meyerhoff (Boston), K. Ohshika (Tokyo)
+J.P Otal (Lyons), F. Paulin (Lyons), J. Porti (Toulouse)
+M. Sakuma (Osaka), T. Soma (Tokyo Denki U), W. Thurston (Davis)
+Y. Yamashita (Nara), T. Yoshida (TIT)
+
+Lecture notes based on the main lectures will be published by 
+the Mathematical Society of Japan.   
+
+
+Information : 
+-----------
+For inquiries, please send a message by email to  
+
+	msj-rw@is.titech.ac.jp  
+
+by fax to  
+	
+	+81-3-5734-2714  
+
+or by postal mail to 
+
+	The third MSJ-RW Office 
+	c/o Sadayoshi Kojima 
+	Department of Mathematical and Computing Sciences
+	Tokyo Institute of Technology 
+	Ohokayama, Meguro 
+	Tokyo 152 Japan
+
+We would be very happy if you would share this announcement 
+with your neighbor.  
+
+The poster with more details and an updated list of 
+participants will be distributed in December 97.  
+
+The workshop will have a home page accessible at website  
+http://www.is.titech.ac.jp/. hopefully in a month.  

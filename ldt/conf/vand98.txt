@@ -1,0 +1,220 @@
+%First Announcement
+%____________________
+%
+%        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        %  An International Conference on         % 
+%        %  Non-Positive Curvature in Group Theory %
+%        %  Topology and Geometry                  %
+%        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%Vanderbilt University
+%Nashville, Tennessee
+%May 28--31, 1998
+%
+%This conference -- to be held in conjunction with the 14th Shanks
+%Lectures -- will highlight significant recent developments in non-positively
+%curved geometry, topology and geometric group theory.
+%The aim of the conference is to explore the interplay between these
+%areas and provide a forum for the participants to meet and jointly
+%examine problems of common interest in an informal atmosphere. 
+%
+%This years Shank's Lecturer is Andre' Haefliger (University of Geneva).
+%
+%The following have agreed to give 1-hour talks:
+%Mladen Bestvina (University of Utah)
+%James Cannon (Brigham Young University)
+%Michael Davis (Ohio State University)
+%Benson Farb (University of Chicago)
+%Steven Ferry (SUNY Center at Binghamton)
+%Boris Goldfarb (Stanford University)
+%Misha Kapovitch (University of Utah)
+%Bruce Kleiner (University of Pennsylvania)
+%Peter Scott (University of Michigan)
+%
+%Researchers in neighboring areas whose interests fit the general aims of the
+%conference are encouraged to participate. The scientific program of the
+%conference will consist of nine plenary hour lectures,
+%and several special sessions each comprised of 
+%20--minute contributed talks.
+%
+%
+%
+%The Organizing Committee consists of
+%B. Hughes, M. Mihalik, E. Prassidis
+%J. Ratcliffe, K. Ruane and M. Sapir
+%
+% Expression of Interest
+%_________________________
+%_________________________
+%
+%If you are interested in the conference, please
+%return the following information  (preferably by email to
+%
+%__________________________________________________________________
+%|  Conference on Geometry, Topology and Geometric Group Theory   |
+%|  Vanderbilt University                                         |
+%|  Department of Mathematics                                     |
+%|  1326 Stevenson Center                                         |
+%|  Nashville, Tennessee 37240                                    |
+%|  USA                                                           |
+%|  Tel. (615) 322-6672,  Fax. (615) 343-0215                     |
+%|  E-mail: cgtg@math.vanderbilt.edu                              |
+%|________________________________________________________________|
+%
+%
+%
+%First and Last Name:
+%____________________________
+%
+%Title (Prof., Dr., Mr., Mrs.:
+%_____________________________
+%
+%Affiliation:
+%___________
+%
+%Address:
+%________
+%
+%Tel:
+%____
+%
+%I would like to receive the second mailing about the conference.
+%_______________________________________________________________
+%
+%I expect to be able to attend the conference.
+%______________________________________________
+%
+%I would like to present a contributed talk.
+%_____________________________________________
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%LATEX VERSION OF THE ANNOUNCEMENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentstyle[11pt]{article}
+\addtolength{\textheight}{1in}
+\addtolength{\topmargin}{-.5in}
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\it First Announcement}\\
+\bigskip
+{\bf An International Conference on}\\
+\medskip
+\large {\bf Non-Positive Curvature in Group Theory,}\\ 
+\medskip
+\large {\bf Topology and Geometry}\\
+\medskip
+{\em Vanderbilt University \\
+Nashville, Tennessee\\
+May 28--31, 1998}
+\end{center}
+\bigskip
+
+This conference -- to be held in conjunction with the 14th Shanks
+Lectures -- will highlight significant recent developments in non-positvely 
+curved geometry, topology and geometric group theory.
+The aim of the conference is to explore the interplay between these
+areas and provide a forum for the participants to meet and jointly
+examine problems of common interest in an informal atmosphere. 
+\bigskip
+
+This years Shank's Lecturer is 
+
+\centerline{\bf Andr\'e Haefliger (University of Geneva).}
+\bigskip
+
+The following have agreed to give 1-hour talks:
+
+\centerline{\bf Mladen Bestvina (University of Utah)}
+
+\centerline{\bf James Cannon (Brigham Young University)}
+
+\centerline{\bf Michael Davis (Ohio State University)}
+
+\centerline{\bf Benson Farb (University of Chicago)}
+
+\centerline{\bf Steven Ferry (SUNY Center at Binghamton)}
+
+\centerline{\bf Boris Goldfarb (Stanford University)}
+
+\centerline{\bf Misha Kapovitch (University of Utah)}
+
+\centerline{\bf Bruce Kleiner (University of Pennsylvania)}
+
+\centerline{\bf Peter Scott (University of Michigan)}
+\bigskip
+
+Researchers in neighboring areas whose interests fit the general aims of the
+conference are encouraged to participate. The scientific program of the
+conference will consist of nine plenary hour lectures,
+and several special sessions each comprised of 
+20--minute contributed talks.
+\bigskip
+
+The Organizing Committee consists of
+
+{\bf B. Hughes, M. Mihalik, E. Prassidis}
+
+{\bf J. Ratcliffe, K. Ruane and M. Sapir}
+\medskip
+\medskip
+
+\newpage
+
+
+\begin{center}
+{\bf Expression of Interest }
+\end{center}
+
+If you are interested in the conference, please
+return the following information  (preferably by email ) to:\\
+
+\begin{center}
+\begin{minipage}[t]{.85\textwidth}
+\begin{flushleft}
+{\bf Conference on Geometry, Topology and Geometric Group Theory }\\
+{\bf Vanderbilt University}\\
+{\bf Department of Mathematics}\\
+{\bf 1326 Stevenson Center}\\
+{\bf Nashville, Tennessee 37240}\\
+{\bf USA}\\
+{\bf Tel. (615) 322-6672,  Fax. (615) 343-0215}\\
+{\bf E-mail: cgtg@math.vanderbilt.edu}\\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{center}
+\begin{minipage}[t]{.85\textwidth}
+      First and Last Name:\dotfill\\
+      Title (Prof., Dr., Mr., Mrs.):\dotfill\\
+      Affiliation:\dotfill\\
+      Address:\dotfill\\
+      \hspace*{1.5cm}.\dotfill\\
+      \hspace*{1.5cm}.\dotfill\\
+      \hspace*{1.5cm}.\dotfill\\
+      Tel: \dotfill  Fax: \dotfill  Email: \dotfill\\
+\end{minipage}
+\end{center}
+
+
+
+\noindent
+$\Box$\hspace*{0.5cm}
+I would like to receive the second mailing about the conference\\
+\quad \\
+$\Box$\hspace*{0.5cm}
+I expect to be able to attend the conference\\
+\quad \\
+$\Box$\hspace*{0.5cm}
+I would like to present a contributed talk.\\
+\hspace*{0.9cm}The provisional title is :
+\dotfill\\
+
+\end{document}

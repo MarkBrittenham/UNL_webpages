@@ -1,0 +1,268 @@
+/* Created using Style Master from Western Civilisation CSS1 { -23 -4 558 625 } */
+
+.body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11pt;
+}
+
+body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #121212;
+background-color: #ffffff;
+font-size: 11pt;
+}
+
+table.contentTable {
+background-color: #F3F3F3;
+color: inherit;
+}
+
+hr {
+color: #004080;
+font-size: 1px;
+}
+
+ol {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+ul {
+margin-left: 20px;
+}
+
+.button {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #ffffff;
+background-color: #6666CC;
+border: 1px #000000 inherit;
+font-weight: 600;
+}
+
+td.content {
+border: 2px #6666CC solid;
+}
+
+.facts {
+font-size: .85em;
+border: thin #6666CC solid;
+}
+.trim {
+background-color: #6666CC;
+}
+
+a.navLink:link {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #ffffff;
+font-weight: 700;
+background-color: transparent;
+font-size: .95em;
+}
+
+.footnote {
+color: #ffffff;
+font-size: .85em;
+font-weight: normal;
+}
+
+a.support:link {
+color: #cc3300;
+background-color: transparent;
+font-size: .8em;
+}
+
+a.navLink:visited {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #ffffff;
+background-color: transparent;
+font-weight: 700;
+font-size: .95em;
+}
+
+table.navigation {
+background-color: #9999cc;
+}
+
+td.navBox {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+background-color: #6666CC;
+color: #ffffff;
+font-weight: 700;
+}
+
+a.navLink:active {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #ffff64;
+background-color: transparent;
+font-weight: 700;
+font-size: .95em;
+}
+
+a.navLink:hover {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #ffff64;
+background-color: transparent;
+font-weight: 700;
+font-size: .95em;
+}
+
+select {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #121212;
+background-color: #ffffff;
+font-size: 10pt;
+}
+
+input {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #121212;
+background-color: white;
+font-size: 10pt;
+}
+
+.pageHeader {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 1.1em;
+color: #121212;
+font-weight: 700;
+background-color: transparent;
+}
+
+.docSection {
+color: #CC3300;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-weight: 700;
+background-color: transparent;
+}
+
+.coordinates {
+color: #2e2e2e;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 0.8em;
+background-color: transparent;
+}
+
+.copyright {
+color: #ffffff;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 0.8em;
+background-color: transparent;
+}
+
+.sectionHead {
+color: #ffffff;
+font-family: Verdana, Arial, sans-serif, Helvetica;
+font-weight: 700;
+background-color: transparent;
+}
+
+tr.contentHeader {
+background-color: #9999CC;
+color: #ffffff;
+font-weight: 700;
+}
+td.contentHeader {
+background-color: #9999CC;
+color: #ffffff;
+font-weight: 700;
+}
+
+span.transtext {
+color: blue;
+background-color: pink;
+font-family: Verdana, Arial, sans-serif, Helvetica;
+font-weight: 700;
+border-bottom: 1.2em inherit;
+font-size: 1.1em;
+}
+
+span.transarea {
+color: black;
+font-family: Verdana, Arial, sans-serif, Helvetica;
+font-weight: 900;
+border-bottom: 1.2em inherit;
+font-size: 1.1em;
+}
+
+textarea {
+background-color: silver;
+color: black;
+}
+
+span.navBody
+{
+	color: #ffffff;
+	font-size: 1.0em;
+}
+
+span.navHeader {
+color: #ffffff;
+font-family: Verdana, Arial, sans-serif, Helvetica;
+font-weight: 700;
+border-bottom: 1.2em inherit;
+background-color: transparent;
+font-size: 1.1em;
+}
+
+td {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #121212;
+font-size: 11pt;
+}
+
+.shaded{
+	background-color: #f2f0f0;
+}
+
+.regular {  
+        color: #333399
+}
+
+.red { 
+        color: #990000
+}
+
+b.highlight{
+        color: red;
+       	background-color: yellow;      
+}
+td.buttonbar{
+	background-repeat: repeat-x;
+	background-position: bottom left;
+}
+table.buttonbar{
+	margin-left: 0;
+}
+
+table.buttonspacer{
+	margin-left: 0;
+	margin-bottom: 5px;
+	border-top: 2px solid #004080;
+}
+
+table.simplespacer{
+	margin-left: 0;
+	margin-bottom: 7px;
+}
+
+table.cgd {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+table.cgd td {
+	padding: 1px 5px 1px 5px;
+	border: 1px solid gray;
+}
+
+table.cgd a {
+	text-decoration: none;
+}
+
+table.cgd a:hover {
+	color: #CC3300;
+}
+
+td.cgd1, td.cgd3, td.cgd5 {
+	background-color: #e5e5e5;
+}

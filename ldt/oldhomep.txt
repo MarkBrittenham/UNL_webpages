@@ -1,0 +1,111 @@
+<H2> <a name="home">Personal</a> Home Pages (containing links to low dim'l topology)</H2>
+
+
+<a href="http://www.math.utah.edu/~bestvina/">Mladen Bestvina</a>, at the University of Utah.<p>
+
+<a href="http://www.math.usouthal.edu/~brick/">Steve Brick</a>, at U. of South Alabama.<p>
+
+<a href="http://math.binghamton.edu/matt/index.html">Matt Brin</a>, at SUNY Binghamton <p>
+
+<a href="http://math.nmsu.edu/~britten/home.html">My</a> home page. If you hit the right links, you can go around in circles forever.<p>
+
+<a href="http://www.math.usouthal.edu/~carter/">Scott Carter</a>, at U. of  South Alabama.<p>
+
+<a href="http://euler.slu.edu/Dept/Faculty/cantwell/cantwell.html">John Cantwell</a>, at St. Louis U. <p>
+
+<a href="http://www.msri.org/staff/bio/joe/">Joe Christy</a>, at MSRI.<p>
+
+<a href="http://math.standford.edu/~ralph/">Ralph Cohen</a>, at Stanford U.<p>
+
+<a href="http://ezinfo.ucs.indiana.edu/~edmonds/home.html">Allen Edmonds</a>, at U. of Indiana.<p>
+
+<a href="http://www.math.uiuc.edu/~gfrancis">George Francis</a>, at  U. Illinois Urbana-Champaign.<p>
+
+<a href="http://hopf.math.nwu.edu/~john/">John Franks</a>, at Northwestern.<p>
+
+<a href="http://math.binghamton.edu/ross/index.html">Ross Geoghegan</a>, at SUNY Binghamton.<p>
+
+<a href="http://www.geom.umn.edu/~strauss/">Chaim Goodman Strauss</a>, at the Geometry Center.<p>
+
+<a href="http://math.ucdavis.edu/~hass/">Joel Hass</a>, at UC Davis.<p>
+
+<a href="http://www.math.usouthal/~hitt/">Richard Hitt</a>, at U. of South Alabama.<p>
+
+<a href="http://math.idbsu.edu/faculty/kania.html">Joanna Kania-Bartoszynska</a>, at Boise State U.<p>
+
+<a href="http://www.math.tulane.edu/faculty_html/lawson.html">Terry Lawson</a> at Tulane.<p>
+
+<a href="http://math.berkeley.edu/~ctm/">Curt McMullen</a>, at UC Berkeley. <p>
+
+<a href="http://www.williams.edu:803/Mathematics/fmorgan/">Frank Morgan</a>, at Williams College.       Back to <a href="#top">TOP</a>.<p>
+
+<a href="http://www.maths.mu.oz.au/~neumann/">Walter Neumann</a>, at the Univ. of Melbourne.<p>
+
+<a href="http://www.math.uchicago.edu/~pollack/">Dan Pollack</a>, at the University of Chicago. <p>
+
+<a href="http://www.math.ubc.ca/people/faculty/rolfsen/Rolfsen.html">Dale Rolfsen</a>, at U. of British Columbia.<p>
+
+<a href="http://www.math.usf.edu/~saito/home.html">Masahico Saito</a>, at U. of South Florida. <p>
+
+<a href="http://math.ucdavis.edu/~stocking">Michelle Stocking</a>, at UC Davis.<p>
+
+<a href="http://www.math.nwu.edu/~mcs/">Mike Sullivan</a>, at Northwestern.<p>
+
+<a href="http://www.math.ucdavis.edu/~thompson/">Abby Thompson</a>, at UC Davis.<p>
+
+<a href="http://www.math.uiowa.edu/~wu/">Ying-Qing Wu</a>, at the University of Iowa.<p>
+
+BACK TO <a href="#top"> TOP </a>.<p>
+
+<H2> <a name="morehome">Other</a> Home Pages </H2>
+
+<a href="http://www.usc.edu/dept/math/people/faculty/Bonahon.html">Francis Bonahon</a>, at USC. <p>
+
+<a href="http://www.math.byu.edu/People/Faculty/Brady_Thomas.html">Tom Brady</a>, at BYU. <p>
+
+<a href="http://www.math.uiuc.edu/~sbrown/">Scott Brown</a>, at U. Illinois, Urbana-Champaign <p>
+
+<a href="http://www.math.byu.edu/People/Faculty/Cannon_James.html">Jim Cannon</a>, at BYU. <p>
+
+<a href="http://www.mth.msu.edu/People/Faculty/fintushel_r.html">Ron Fintushel</a>, at Michigan State. <p>
+
+<a href="http://math.ucsd.edu/~freedman/">Mike Freedman</a>, at UC San Diego. <p>
+
+<a href="http://tweedledee.caltech.edu/~math/gabai.html">Dave Gabai</a>, at Caltech. <p>
+
+<a href="http://www.mth.msu.edu/People/Faculty/ivanov_n.html">Nikolai Ivanov</a>, at Michigan State. <p>
+
+<a href="http://www.math.uga.edu/~will/">Will Kazez</a>, at the University of Georgia. <p>
+
+<a href="http://www.usc.edu/dept/math/people/faculty/Penner.html">Robert Penner</a>, at USC. <p>
+
+<a href="http://gwis.circ.gwu.edu/~math/przytycki.html">J&oacutezef Przytycki</a>, at George Washington U. <p>
+
+<a href="http://www.usc.edu/dept/math/people/visiting/Rieffel.html">Eleanor Rieffel</a>, at USC. <p>
+
+<a href="http://gwis.circ.gwu.edu/~math/rong.html">Yongwu Rong</a>, at George Washington U. <p>
+
+<a href="http://www.mathcs.emory.edu/Applications/People?jcs">Jennifer Schultens</a>, at Emory University. <p>
+
+<a href="http://math.vassar.edu/vassar/starr.html">Edith Starr</a>. at Vassar College. <p>
+
+<a href="http://"></a> <p>
+
+BACK TO <a href="#top"> TOP </a>.<p>
+
+<H2> <a name="knots">Knot Theory</a> </H2>
+
+<IMG hspace=20 vspace=20 AlIGN=left SRC= "celt7db.gif" ALT="Picture of a link"> An introduction to <a href="http://www.c3.lanl.gov/mega-math/gloss/knots/knots.html">knot theory</a> which seems to be aimed at teachers of mathematics can be found at <a href="http://www.c3.lanl.gov/">Los Alamos National Laboratory</a>.<p>
+
+There is also another <a href="http://www.cs.ubc.ca/nest/imager/contributions/scharein/KnotSquare.html">knot theory</a> page at the University of British Columbia.<p>
+
+A discussion, and several lists, concerning the classification of knots, may be
+found in <a href="http://sgi.ifh.de/~aneziris/contents">Charilaos Aneziris'</a> home page.<p>
+
+This <a href="table9.gif">table</a> of knots up to nine crossings came from <a href="http://www.bioch.ox.ac.uk/~sean/">Sean Collom</a>'s home page at Oxford.<p>
+
+<a href="ftp://chs.cusd.claremont.edu/pub/knot/">ftp://chs.cusd.claremont.edu/pub/knot</a><p>
+
+<a href="gopher://math.berkeley.edu/11/Topology">Berkeley's Topology gopher archive</a> contains, among other things,  Joyce Riley's bibliography of reviews in knot theory(up to about 1990) in Math Reviews.<p>
+
+A <a href="http://www.gang.umass.edu/docs/archive/knots.html">catalog</a> of energy-minimizing configurations of knots, at UMass.<p>

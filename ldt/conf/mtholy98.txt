@@ -1,0 +1,78 @@
+
+
+
+	Workshop on Geometric Group Theory and Computer Science
+  	=======================================================
+
+			      Venue
+
+	July 5-9, 1998. Mount Holyoke College, South Hadley, MA.
+	
+	This workshop is one of the 1998 AMS-IMS-SIAM Joint Summer 
+	Research Conferences in the Mathematical Sciences. See the 
+	October, November or December AMS Notices for more information.
+	
+
+			Organizing Committee
+
+	Gilbert Baumslag, Martin Bridson, James Cannon, 
+	Robert Gilman (chair), Michael Shapiro
+
+
+		Partial List of Speakers and Participants
+
+	John Cannon, David Epstein, Steven Gersten, Susan Hermiller, 
+	Chuck Miller, Sarah Rees, Mark Sapir, Charles Sims, 
+	Paul Schupp, John Stallings.
+
+         
+                    	Scientific Program
+
+Over the last several years the study of groups given by generators and
+relations has been invigorated by an influx of ideas from geometry,
+topology and computer science; the resulting collection of techniques
+and points of view has become known as geometric group theory.  The
+workshop is devoted to computer theoretic aspects of this new field. 
+
+	     Automatic Groups and Word Hyperbolic Groups
+
+Automatic groups and word hyperbolic groups are perhaps the best known
+products of geometric group theory.  At the beginning of the century Max
+Dehn solved the word and conjugacy problems for fundamental groups of
+orientable surfaces by making use of the underlying hyperbolic geometry.
+Dehn's ideas led to the theory of small cancellation groups and more
+recently to some striking connections between geometry and finite
+automata.  The geometry of the known compact 3-manifolds is reflected by
+restrictions on the structure of their fundamental groups, and in many
+cases the spirit of these restrictions is captured by the fact that
+multiplication in the fundamental group can be carried out by finite
+automata.  This fact leads to the definition of automatic groups and to
+previously unsuspected connections with computer science.
+
+Word hyperbolic groups are algebraic analogs of groups acting
+cocompactly on spaces of negative curvature.  They are defined by
+imposing geometric conditions on the Cayley diagram of a group.  It is
+remarkable that these groups are also characterized by concepts from
+computer science.  They are precisely the groups whose word problem can
+be solved by a length reducing rewriting system confluent at the
+identity.
+
+              Further Connections with Computer Science
+
+Another line of research, initiated by computer scientists, concerns the
+structure of a group and the properties of the formal language of all
+words
+defining the identity with respect to a fixed set of generators.  This
+program has produced a number of interesting results, among them the
+characterization of groups with a free subgroup of finite index as those
+groups whose word problem is a context-free language, and a 
+complexity-theoretic analog of the Higman Embedding Theorem.
+
+Geometric group theory has also inspired new approaches to computation
+with finitely presented groups.  It is well known that almost all
+questions about these groups are recursively unsolvable. The computational
+challenge is to devise programs which will work often enough to be
+useful.  
+
+
+

@@ -1,0 +1,100 @@
+From - Thu Oct 09 08:13:01 1997
+Path: news.unt.edu!cs.utexas.edu!howland.erols.net!vixen.cso.uiuc.edu!orion.math.uiuc.edu!dan
+From: baez@math.ucr.edu (john baez)
+Newsgroups: sci.math.research
+Subject: Low-dimensional topology and quantum gravity
+Date: 6 Oct 1997 15:21:30 -0700
+Organization: University of California, Riverside
+Lines: 87
+Approved: Daniel Grayson <dan@math.uiuc.edu>, moderator for sci.math.research
+Message-ID: <61bo9a$iri@charity.ucr.edu>
+NNTP-Posting-Host: orion.math.uiuc.edu
+Originator: dan@orion.math.uiuc.edu
+
+There will be a special session on "Low-dimensional Topology 
+and Quantum Gravity" at the Joint Mathematics Meetings in 
+Baltimore, which will be held by the American Mathematical Society 
+and other organizations from January 7th to 10th, 1998.  
+
+Here are the talks we have lined up:
+
+Quantum Theory of Riemannian Geometry
+                 Abhay Ashtekar ashtekar@phys.psu.edu
+ 
+Quantum Gravity: Path Integrals and State Sums
+                 John W Barrett, jwb@maths.nott.ac.uk
+
+Lattice Gauge Field Theory and Deformation Quantization
+                 Doug Bullock, bullock@math.gwu.edu
+                 Charles Frohman, frohman@math.uiowa.edu
+                 Joanna Kania-Bartoszynska, kania@math.idbsu.edu
+
+Einstein Manifolds, Spacetime Foam, and the Cosmological Constant 
+                  Steven J. Carlip, carlip@dirac.ucdavis.edu
+
+A State Sum Formulation for Quantum General Relativity
+                  Louis Crane, crane@math.ksu.edu
+
+Path Integrals Linking Chern-Simons and WZW Partition Functions
+                  Dana S Fine, dfine@umassd.edu
+
+The Kauffman Bracket Skein Module as a C*-algebra
+                  Charles D. Frohman, frohman@math.uiowa.edu
+                  Joanna Kania-Bartoszynska, kania@math.idbsu.edu
+
+Quantum Space and Causality
+                  Fotini G Markopoulou, fotini@phys.psu.edu
+
+Loop Constraints: A Habitat and their Algebra
+                  Donald M Marolf, marolf@suhep.phy.syr.edu
+                  Jerzy Lewandowski, lewand@aei-potsdam.mpg.de
+
+Kontsevich Integrals, Knot Invariants and TQFT
+                  Roger Picken, Roger.Francis.Picken@math.ist.utl.pt
+
+Tautological Classes and Cohomological Field Theories in Genus One
+                  Alexandre Kabanov, kabanov@math.msu.edu
+                  Takashi Kimura, kimura@math.bu.edu
+
+Discrete Physics
+                  Louis H. Kauffman, kauffman@uic.edu
+
+Spin Networks, Chern-Simons Theory and Black Holes
+                  Kirill V. Krasnov, krasnov@phys.psu.edu
+
+2-Tangles as a Free Braided Monoidal 2-Category with Duals
+                  Laurel T. Langford, laurel.langford@uwrf.edu
+
+The Space of States of Canonical Quantum gravity, Diffeo Invariance vs.
+Field Theory
+                 Jorge Pullin, pullin@phys.psu.edu
+
+Multiplicative Invariants and the Andrews-Curtis Conjecture
+                 John Rosson, rosson@alamo.mth.pdx.edu
+
+>From Loop Quantum Gravity to a Sum over Surfaces
+                 Carlo Rovelli, rovelli@pitt.edu
+
+Perturbative Strings From Perturbations of Evolving Spin Networks
+                 Lee Smolin, smolin@phys.psu.edu
+
+A Survey of Cohomological Physics
+                James Stasheff, jds@math.unc.edu
+
+The Homotopy Algebraic Structure of Topological Gravity
+                 Alexander A. Voronov, voronov@math.mit.edu
+
+Grist for a 4-D State-Sum Mill: Examples of Monoidal Bicategories
+                 David N Yetter, dyetter@math.ksu.edu
+
+    Our session will take place on Wednesday January 7th and 
+Thursday January 8th.  Witten will be giving a plenary talk on 
+M-theory on Wednesday night, and there will also be sessions on 
+"Knot Theory and Quantum Topology" on Friday and Saturday and 
+"Homotopy Theory" on Wednesday and Saturday.  
+
+For more information see:
+
+http://www.ams.org/amsmtgs/2014_intro.html
+
+

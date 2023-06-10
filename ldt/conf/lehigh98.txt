@@ -1,0 +1,126 @@
+From - Fri Feb 13 09:15:34 1998
+Path: news.unt.edu!cs.utexas.edu!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!howland.erols.net!vixen.cso.uiuc.edu!orion.math.uiuc.edu!dan
+From: "David L. Johnson" <dlj0@lehigh.edu>
+Newsgroups: sci.math.research
+Subject: 1998 Lehigh Geometry/Topology Conference
+Date: Tue, 10 Feb 1998 21:21:00 -0500
+Organization: Lehigh University
+Lines: 109
+Approved: Daniel Grayson <dan@math.uiuc.edu>, moderator for sci.math.research
+Message-ID: <34E10B0C.FE7DFB40@lehigh.edu>
+NNTP-Posting-Host: orion.math.uiuc.edu
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.04 [en] (X11; I; Linux 2.0.30 i486)
+Originator: dan@orion.math.uiuc.edu
+
+1998 Lehigh University Geometry/Topology Conference  June 11-13, 1998
+
+Principal Speakers 
+
+Mark Goresky, 	IAS: 		Chern classes of modular varieties.
+
+Lisa Jeffrey, 	McGill U, IAS: 	TBA.
+
+J. Peter May, 	U. of Chicago: 	Stable algebraic topology and stable 
+					topological algebra.
+
+Kent Orr, 	Indiana U.: 	TBA. 
+
+Peter Petersen,	UCLA: 		Geometry with integral curvature bounds.
+
+Frank Quinn, 	Virginia Tech: 	Some numerical quantum group theory.
+
+In addition, there will be parallel sessions of 40-minute contributed
+talks, divided roughly into Differential and Complex Geometry, Algebraic
+Topology, and Geometric Topology. Those wishing to give a talk should
+send an abstract to David Johnson or Don Davis by April 15. 
+
+We ask a $30 registration fee of participants who have research grants.
+On-campus dormitory housing will be provided at a cost of $20 per
+night per room. Single rooms will be provided except to those indicating
+the name of a roommate on their registration form. Housing on Wednesday
+night and/or Saturday night is possible. Please submit the registration
+form by May 1 regardless of whether you require housing. 
+
+More information will be available at the conference Web site as it
+becomes available. Please check back from time to time. You can register
+for the conference on the Web form there, or mail in the accompanying
+registration form. The URL is:
+
+http://www.lehigh.edu/~dlj0/geotop.html
+
+For more information, contact:
+
+David L. Johnson or Donald M. Davis
+Department of Mathematics
+14 E. Packer Avenue
+Lehigh University
+Bethlehem, PA 18015-3174
+e-mail: dlj0@lehigh.edu or dmd1@lehigh.edu
+
+--------8<--------8<--------8<--------8<--------8<--------8<--------8<
+
+1998 Lehigh University Geometry/Topology Conference
+
+E-mail Registration Form
+
+Name: 
+
+Address:  
+    
+Telephone: 
+
+E-mail:  
+
+If you wish to give a talk, please indicate the title:
+
+
+Please attach an abstract of your talk, preferably in LaTeX2e format.  Other
+TeX flavors, or plain text, will be OK as well.
+
+On-campus dormitory housing will be provided at a cost of $20 per night
+per room. Single rooms will be provided except to those indicating
+the name of a roommate on their registration form. 
+
+If you would prefer to stay in a hotel, there is Comfort Suites Hotel
+located 4 blocks from campus. Make your own reservations at (610)
+882-9700. 
+
+On-campus housing needed:         Wed.       Thu.       Fri.       Sat.
+
+Gender: (Needed for housing)        Male       Female 
+
+Roommate: If you wish to share a room with someone, please indicate name:
+
+
+Banquet: On Friday evening there will be a traditional Chinese banquet
+at a local restaurant, at a cost of $30 per person. 
+
+Number attending banquet:
+
+Registration fee: There is a $30 registration fee only for those supported
+by external research grants. If you are supported by such a grant,
+please indicate here: 
+
+Grant support:
+
+You may either pay room charges, registration fee, and banquet charges when
+you arrive, or send a check, payable to Lehigh University, to:
+
+David L. Johnson or Donald M. Davis
+Department of Mathematics
+14 E. Packer Avenue
+Lehigh University
+Bethlehem, PA 18015-3174
+e-mail: dlj0@lehigh.edu or dmd1@lehigh.edu
+
+-- 
+
+David L. Johnson         		dlj0@lehigh.edu, dlj0@netaxs.com
+Department of Mathematics		http://www.lehigh.edu/~dlj0/dlj0.html
+Lehigh University
+14 E. Packer Avenue			(610) 758-3759
+Bethlehem, PA 18015-3174
+

@@ -1,0 +1,293 @@
+<title> The Poincare conjecture</title>
+
+
+<body bgcolor="8FEFAF" link="0F0FFF"
+alink="FF0000" vlink="FF007C">
+
+
+<center><h2>The Poincare Conjecture: Its Past, Present, and Future</h2></center>
+
+<br>
+<br>
+
+<i>There has been a great deal of research surrounding the Poincare Conjecture since 
+I first wrote this page many years ago. Most recently, Grisha Perelman has 
+<a href="http://www.lehigh.edu/~dmd1/vk1120.txt">announced</a> 
+a proof of it; in fact, he has announced a proof of the far more sweeping Geometrization 
+Conjecture. I hope to clean up these pages one of these days, which, admittedly, 
+never were very well-written; stay tuned for further developments!</i>
+
+<p>
+<p>
+
+<!--http://commcgi.cc.stonybrook.edu/artman/publish/article_417.shtml-->
+<!--http://www.lehigh.edu/dmd1/public/www-data/poincare.html-->
+
+<p>
+
+<a href="http://www.ga.k12.pa.us/Academics/US/Math/Geometry/stwk00/crespi/geometrydefinition.htm">Topology</a> 
+is the mathematical study of 'shape'. The popular term is 'rubber-sheet geometry'; it
+is the study of the properties of an object that do not change under continuous deformations
+(such as stretching and bending (but not tearing)). The most basic problem in topology is to determine
+when two topological spaces are the same, that is, they can be identified with one another in a
+continuous way. The <b> Poincare Conjecture</b> is essentially the first conjecture ever made in topology; 
+it asserts that a 3-dimensional <a href="http://planetmath.org/encyclopedia/Manifold.html">manifold</a> is 
+the same as the <a href="http://www.wikipedia.org/wiki/3-sphere">3-dimensional sphere</a> precisely 
+when a certain algebraic condition is satisfied. The conjecture was formulated by Poincare around the 
+turn of the 20th century. A solution, positive or negative, is worth US$1,000,000 , since it is one of
+the <a href="http://www.claymath.org/Millennium_Prize_Problems/">Millenium Prize Problems</a> 
+maintained by the <a href="http://www.claymath.org/">Clay Mathematics Institute</a>.
+
+<p>
+
+The <a href="http://www-gap.dcs.st-and.ac.uk/~history/HistTopics/Topology_in_mathematics.html">history of topology</a>
+dates back at least to the middle of the 18th century. One of its first major boosts came at the end of the 19th century, when
+Poincare was trying to understand the set of solutions to a general algebraic equation <b>f(x,y,z)=0</b>, where <b>x,y,z</b> 
+are complex numbers. To understand the set of solutions, he at first tried an analytic approach, but he ended up adopting the 
+approach of assigning algebraic (= numerical) invariants to (successively more general) geometric objects, as a way of (having forgotten
+his original motivation!) classifying 
+these geometric objects. This approach can be considered the beginning of what we now call 
+<a href="http://www.math.niu.edu/~rusin/known-math/index/55-XX.html">algebraic topology</a>.
+
+<p>
+
+Poincare was really excited about this stuff, he thought 
+he had found the cure to the common cold or something; he thought these things would do a really great job of distinguishing 
+spaces. Pretty early on, along these lines, he made a (to our modern-day understanding, rather bold) conjecture, that the 
+3-dimensional sphere could be detected by <a href="http://planetmath.org/encyclopedia/HomologyTopologicalSpace.html">homology</a>:
+
+<p>
+
+If <b>M</b> is a 3-manifold ( = a space such that every point has an open neighborhood homeomorphic to 3-dimensional 
+Euclidean space) which has the same homology groups as the 3-sphere <b>S<sup>3</sup></b>, then <b>M</b> 
+is homeomorphic to <b>S<sup>3</sup></b>.
+
+<p>
+
+In fact, he went so far as to assert that he <a href="poincare/poinc_thm.jpg">had a proof</a>, although the margin 
+was too small to contain it (no, wait, that's a different theorem...).
+This would have been a really great theorem; unfortunately, it's false. Poincare himself found the first counterexample, 
+a space which is now known as the 
+<a href="http://infoshako.sk.tsukuba.ac.jp/~hachi/math/library/poincare_eng.html">Poincare homology sphere</a>. 
+In the process he basically invented the fundamental group of a space. Because that's what he had missed; 
+the 3-sphere not only has trivial (first and second) homology groups, but it also has trivial fundamental group. 
+That means that any map of a circle into <b>S<sup>3</sup></b> can be <i>extended</i> to a map of a 2-disk into 
+<b>S<sup>3</sup></b>. And you can (with some work) build a 3-manifold with the same homology groups as 
+<b>S^3</b>, but with non-trivial (finite) fundamental group, which Poincare did. It is an amazing little fact, however, that the 
+Poincare homology sphere is the <i>only known such example</i> (and is conjectured to be the only one!). If you are 
+willing to have a manifold with the homology of the 3-sphere but <i>infinite</i> fundamental group, building such a space 
+is fairly straighforward, using Dehn surgery on knots; they're called integer homology 3-spheres.
+
+<p>
+
+It is one of those not-very-well-known facts that the fundamental group 
+<FONT FACE="Symbol">p</FONT><sub>1</sub>(X) used to be denoted by  <FONT FACE="Symbol">p</FONT>(X) 
+(before we learned to number them), and was called simply the <i>group</i> of a space. Do you know why we use 
+<FONT FACE="Symbol">p</FONT> to denote it? That's right, it stands for Poincare.
+
+<p>
+
+Well, finding this counterexample so quickly apparently discouraged Poincare a bit, because the 
+<a href="poincare/poinc_conj.jpg">next thing he asked</a> was `OK, well, can you find a 3-manifold with trivial fundamental 
+group <i>and</i> the same homology groups as the 3-sphere, 
+which <i>isn't</i> the 3-sphere?'. This question has turned out to be a lot harder to answer. In fact, to 
+this day <b>[5/03: Perelman is claiming to have a proof. We await the opinions of the experts...]</b> we <i>still</i> don't know what the answer is,  
+although almost everybody thinks the answer to his question is `No'. (A tip to conjecture-makers: always formulate your question so that the answer you expect is `Yes'. It makes you sound smarter.) 
+The conjecture that the answer to Poincare's question is `No' has come to be known as the <b>Poincare Conjecture</b>:
+
+<p>
+
+<b>PC:</b> If <b>M</b> is a 3-manifold with trivial fundamental group, and 
+H_i(M)=0 for i=1,2 and =<b>Z</b> for i=0,3 (i.e., <b>M</b> has the homology groups 
+of a 3-sphere), then <b>M</b> is homeomorphic to the 3-sphere.
+
+<p>
+
+In other words, a few basic algebraic invariants can <b>distinguish</b> the 3-sphere from all other 3-manifolds.
+
+<p>
+
+***
+
+<p>
+
+This has turned out to be a bit harder to do; in fact, we don't (as of this writing, anyway) know how to do it. But that isn't for lack of trying! In fact, an entire AMS subject classification number (57M40) is devoted to papers which attempt to prove or disprove the Poincare Conjecture. Many proofs have made it into the literature, and in more recent years some have made it into the public eye in the form of press releases in the New York Times! The fact that we can't prove the first conjecture ever made in our field is a constant source of
+amusement/concern/frustration/embarassment (depending on your point of view).<p>
+<br>
+
+
+The question I really want to address here is, `How has this conjecture (and its lack of a proof) affected the course of topology, particularly geometric topology (to which it most properly belongs)?'. In other words, what do you do with a conjecture that you don't know how to prove? So far, I have come up with six answers to this question, which I want to address in turn. You can:
+
+<br>
+<br>
+<br>
+
+
+(1) Try to prove it.
+
+<br>
+<br>
+
+
+(2) Try to disprove it.
+
+<br>
+<br>
+
+
+(3) Generalize it.
+
+<br>
+<br>
+
+
+(4) Prove that other things that you don't know how to prove <b>imply</b> it.
+
+<br>
+<br>
+
+
+(5) Prove that it implies things you don't really know are true.
+
+<br>
+<br>
+
+
+(6) Ignore it.
+
+<br>
+<br>
+<br>
+
+
+<b>Proving the Poincare conjecture</b>
+
+<br>
+<br>
+
+
+This is, of course, the most natural thing to do to a conjecture that you think is true. It's also something that you can lose alot of time over! With the Poincare conjecture in particular, there seems to be this disease called Poincaritis that some people catch - when they do, they continue to try to prove the Poincare conjecture for about 20 years straight. There have been alot of well-known topologists who have caught this disease (and, I'm sure, quite alot of unknown ones, the only difference being that they caught it <b>before</b> they got tenure), such as R.H.Bing, John Stallings, John Hempel, and C.D. Papakyriakopoulos. Hempel devotes an entire chapter of his book on 3-manifolds to this subject. There have, in fact been alot of bad (read: false) proofs that have appeared over the years, which I personally tend to think of as a <i>good</i> thing: a (false) proof that was good enough for someone (and in some cases, nearly everyone) to believe it will usually uncover a very subtle point - a hole in our understanding of our own subject - that can lead to some quite beautiful mathematics. There's also the usual argument that in trying to prove a hard theorem you almost certainly are forced to build some very powerful machinery that can help but be useful in attacking problems in other parts of your subject. Personally, I don't think this really applies to the Poincare conjecture, but that's just me; having trivial fundamental
+group is a pretty big restriction! Although everything you build up to the point of imposing this restriction will of course be useful in other contexts. On the other hand you had better remember to impose that restriction *sometime*!. There is a famous/infamous story, I think Steve Smale is 
+the principal character, of the grad student who walks into a professor's office and says "I think I can prove the Poincare conjecture,
+what do you think of this proof? Start with a triangulation of your manifold, and remove the interior of one of the top
+dimensional 3-simplices. What I need to show is that what's left is a ball, right? So pick one of the exposed 2-dimensional faces, with a
+3-simplex on the other side, and collapse that 3-simplex from the face I'm at to the other 3 sides. This deformation gives a homeomrphism
+to something with fewer 3-simplices. Continuiung by induction, I get down to one 3-simplex, which is certainly a 3-ball. So before I started
+all of this I had a 3-ball, right?" The student, having finished the proof, waits for the professor to comment, but the professor justs sits
+there and says nothing. Eventually, the student, confused, leaves the office. Sometime later, he realizes that he had never used the 
+*hypothesis* of the Poincare conjecture; he had "proved" that *every* 3-manifold was homeomorphic to the 3-sphere...<p>
+<br>
+
+
+But to get back to my point, let's look at an example. In the early 1930's, J.H.C. Whitehead published a proof of the Poincare conjecture. His argument went as follows. Take your simply-connected 3-manifold M, and remove a point, to get a non-compact manifold X. now, if you did this to what you <b>think</b> M is, namely the 3-sphere, you would get <b>R^3</b>. In general, about the only thing you can immediately say is that X is contractible; it can be continuously deformed within itself to a point. What Whitehead showed was that every contractible 3-manifold is homeomorphic to <b>R^3</b>. Therefore, starting with M and going to X, you get <b>R^3</b>; putting the point back in amounts to taking the one-point compactification of X (i.e., of <b>R^3</b>), which is the 3-sphere!<p>
+
+The only problem is, he was wrong. Luckily he proved <b>himself</b> wrong, and published a counterexample to his above argument about a year later, in the form of an example of a contractible 3-manifold which wasn't homeomorphic to <b>R^3</b>. It is now called the Whitehead manifold.  [The following description was lifted from a
+<a href="http://www.math.niu.edu/~rusin/known-math/95/contractible">1995 email</a> of Greg Kuperberg's.] 
+Briefly, let V be an unknotted solid torus in S^3, let
+h:V -> V be an embedding of V in V such that h(V) is knotted in V
+but unknotted in S^3, and let X = intersection of all h^i(V). (You need to know that the
+meridian of V is null-homotopic in S^3 - h(V), as well.)
+Then W = S^3 - X is contractible, and moreover W x R is homeomorphic
+to R^4, but W is not homeomorphic to R^3. <p>
+
+So why is this a <b>good</b> thing? Well, contractible open 3-manifolds had never been imagined before, here was this new object to study, and people went out looking for them and found <b>tons</b> of them. McMillan showed that there are, in fact an uncountable number of mutually non-homeomorphic ones. This got the people working on another conjecture, that the only contractible 3-manifold that covers a compact 3-manifold is Euclidean 3-space, really excited, because there are only countably many compact 3-manifolds, so cardinality tells you that the vast majority of these guys aren't covering spaces. But it took another several years before anybody proved that any <b>specific</b> one didn't cover - it turned out to be Whithead's example!<p>
+
+There's another great thing that came out of this, but I can't tell you about it right now. Wait a bit (or jump to <a href=" ">here</a>).<p>
+<br>
+<br>
+
+
+<b>Disproving the Poincare conjecture</b>
+
+<p>
+
+I'm not sure what I can say about this; `everybody' believes it's actually true. I do remember once hearing that R.H. Bing's attitude towards the Poincare conjecture was that he would always spend two weeks trying to prove it, then two weeks trying to build a counterexample, and repeat the process over again. The idea behind finding a counterexeample is easy enough; build a 3-manifold whose fundmental group you can compute is trivial (the homology groups then actually come for free), and then try to show that you were lucky enough to build something that <b>isn't</b> a 3-sphere. This last part was the part that nobody could ever figure out; mostly their time was spent trying to find invariants that had a chance of distinguishing a homotopy 3-sphere (as they are called) from the 3-sphere. There was some hope for awhile that the Casson invariant would do this, but it turned out to be something computable from the fundamental group, if I remember right. There is in fact now an algorithm, due to Hyam Rubinstein, which when given a 3-manifold will decide in finite time whether or not it is the 3-sphere; but I don't know if anybody has tried to start feeding it known lists of homotopy 3-spheres yet.
+
+<br>
+<br>
+
+
+<b>Generalizing the Poincare conjecture</b>
+<br>
+<br>
+
+The idea here is that if your're going to be embarassed at not being able to prove a conjecture, you will be less 
+embarassed if you think of yourself as begin unable to prove something *harder* than your conjecture, instaead. After all,
+it's harder! With the development of algebraic topology, the terminology and techniques were invented to put the
+Poincare Conjecture in a more general context. A 3-manifold with trivial fundamental group is homotopy equivalent
+to the 3-sphere (hence the name "homotopy 3-sphere"), and so the Poincare Conjecture can be stated as the assertion
+that every 3-manifold homotopy equivalent to the 3-sphere is homeomorphic to the 3-sphere. One can generalize
+the Poincare conjecture by not restricting yourself to 3 dimensions, but instead try to answer the question in all dimensions.
+The Generalized Poincare Conjecture states that for every n, an n-dimensional manifold homotopy equivalent to the
+n-sphere is homeomorphic to the n-sphere. A specific instance of this conjecture, e.g., n=5, would be called the
+n-dimensional Poincare Conjecture.<p>
+
+The field gets a little more complicated here, though, since in high dimensions there really are *three* different kinds
+of manifolds, with three different notions of being the "same". There are ordinary topological manifolds, where "same"
+means homeomorphic; but there is a subset of them which admit a smooth structure (for which the notion of a 
+differentiable function makes sense), and the proper notion of "same" for them is the more restrictive notion of 
+diffeomorphism (=differentiable function with differentiable inverse). There are also the piecewise-linear (=PL) manifolds, 
+which almost but not quite means that they
+can be expressed as a union of n-simplices, and for them we have the more restrictive notion of PL-homeomorphism 
+( = locally linear, sort of). So there are really *three* Poincare conjectures:
+<p>
+A topological n-manifold homotopy equivalent to an n-sphere is homeomorphic to the n-sphere.
+<p>
+A smooth n-manifold homotopy equivalent to an n-sphere is diffeomorphic to the n-sphere.
+<p>
+A PL n-manifold homotopy equivalent to an n-sphere is PL-homeomorphic to the n-sphere.
+<p>
+
+For 3-manifolds, these distinctions don't really exist; every 3-manifold has a unique smooth and unique PL
+structure. (Poincare didn't know this; but everybody in the early days simply assumed that any manifold they
+worked with was a union of simplices.). But beginning in dimension 4 the topological and smooth=PL theories 
+are different; there are 4-manifolds that have no smooth structure. And beginning in dimension 7 (I think?) the
+smooth and PL theories are different.
+<p>
+
+<br>
+<br>
+
+
+<b>Proving things imply the Poincare conjecture</b>
+
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<b> Proving things follow from the Poincare conjecture </b><br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<b> Ignoring the Poincare conjecture</b>
+<br>
+<br>
+
+
+Well, this probably what anyone who doesn't actually work in 3-manifold topology can quite happily do! But my point really is that one can happily work <b>in</b> 3-manifold topology, even with such an important and basic conjecture still unsolved. One can easily argue that Fermat's Last Theorem (its solution, that is) will not really have any great impact on the future of number theory (its proof, perhaps, but...), but I doubt this will be the case for the Poincare conjecture. Quite the opposite, really - its proof is likely to be highly specialized, and the techniques are likely not to have a great impact on other problems, but the statement sits at the heart of what 3-manifold topologists see as their mission: to understand what 3-manifolds <i>look like</i>. [OK, this statement might
+have been a little over the top. Certainly one might argue that Perelman's current proof has little to really say directly to the
+3-manifold topologist? But it has *a lot* to say to the analyst! And the techniques are sure to find wide application to other problems.] 
+So how do you deal with the fact that there is this glaring hole in our understanding of what 3-manifolds look like? Basically, you figure out exactly how big the hole is, and concern yourself, for the time being, with figuring out what the <b>rest</b> of your 3-manifold looks like.<p>
+
+That deserves some explanation. The point is, one can restate the Poincare conjecture as saying that the only contractible, compact 3-manifold (which must automatically, for homological reasons, have boundary a 2-sphere) is the 3-ball. Any counterexample to this conjecture is called a homotopy 3-ball (this leads to the slightly confusing fact that the 3-ball isn't a homotopy 3-ball! (Or, at least, that's what *I* understand the terminology to mean.)). Now there is a standard construction in 3-manifold topology called a connected sum decomposition, "#", which cuts your 3-manifold up along 2-spheres into irreducible pieces ( = those for which any
+further cutting will only carve off a (punctured) 3-ball). Milnor showed that the (non-3-ball) pieces are unique up to reordering. 
+If we collect all of the homotopy 3-ball pieces together (if such a thing exists), they together form a single homotopy 3-ball. We
+can then express any 3-manifold M as M=(homotopy 3-ball) u N, where N does not contain a homotopy 3-ball. In other words,
+N will not contain a counterexample to the Poincare conjecture. *In other words*, if we content ourselves with proving
+results about *N*, instead of M, we can go about our work acting as if the Poincare conjecture is *true*. N is referred to as the
+<i>Poincare associate</i> N=P(M) of M; from the point of view of algebraic topology, you can't distinguish between P(M) and M.
+From this way of viewing things, all that the Poincare conjecture says is that you can't distinguish between P(M) and M at all, because they
+are in fact the *same*.<p>
+
+
+

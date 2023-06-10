@@ -1,0 +1,664 @@
+<title>Persistent laminations from Seifert surfaces: knots built</title>
+
+<body bgcolor="cfbfaf">
+
+<table CELLPADDING=0 CELLSPACING=0 width=450>
+<td width=450 valign=top align=left>
+
+<center><b>Persistent laminations from Seifert surfaces</b></center>
+
+<p>
+
+This page gives the current results of a search for knots from the 
+standard tables which can be 
+built by the construction found in the paper "Persistent laminations 
+from Seifert surfaces". Currently just over 40 percent 
+(i.e., 101) of the (250) prime
+knots with ten or fewer crossings can be constructed.<p>
+
+How to read this table:<p>
+
+Knots that are in <font size=+1 color="b00000"><b> bold red</b></font> can be
+built by the construction. Knots in <font size=+1 color="00b000"><i> italic 
+green</i></font> <b>cannot</b> be built (they are torus knots). The knots
+in <font size=+1 color="000000"><r> roman black </r></font> are still unknown.
+
+</td></table>
+
+<p>
+
+<table CELLPADDING=0 CELLSPACING=0 width=450>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="00b000"><i> 3_1 
+</i></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 4_1 
+</r></font></td>
+<td width=50 valign=top align=left><font color="00b000"><i>5_1  
+</i></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 5_2 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 6_1 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 6_2 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 6_3 
+</r></font></td>
+<td width=50 valign=top align=left><font color="00b000"><i> 7_1 
+</i></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 7_2 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 7_3 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 7_4 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 7_5 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 7_6 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 7_7 
+</r></font></td></tr>
+</table>
+
+<p>
+
+<table CELLPADDING=0 CELLSPACING=0 width=450>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 8_1 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_2 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_3 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_4 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_5 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_6 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_7 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_8 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_9 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_10 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 8_11 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_12 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_13 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_14 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_15 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_16 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_17 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 8_18 
+</r></font></td>
+<td width=50 valign=top align=left><font color="00b000"><i> 8_19 
+</i></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 8_20 
+</b></font></td>
+</tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 8_21 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 
+</r></font></td>
+</tr>
+</table>
+
+<p>
+
+<table CELLPADDING=0 CELLSPACING=0 width=450>
+<tr>
+
+<td width=50 valign=top align=left><font color="00b000"><i> 9_1 
+</i></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_2 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_3 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_4 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_5 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_6 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_7 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_8 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_9 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_10 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 9_11 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_12 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_13 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_14 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_15 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_16 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_17 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_18 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_19 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_20 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 9_21 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_22 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_23 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_24 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_25 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_26 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_27 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_28 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_29 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_30 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 9_31 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_32 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_33 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_34 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_35 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_36 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_37 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_38 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_39 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_40 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 9_41 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_42 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_43 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_44 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_45 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_46 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 9_47 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 9_48 
+</r></font>
+<td width=50 valign=top align=left><font color="000000"><r> 9_49 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> </r></font>
+</tr>
+</table>
+
+<p>
+
+<table CELLPADDING=0 CELLSPACING=0 width=450>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 10_1 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_2 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_3 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_4 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_5 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_6 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_7 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_8 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_9 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_10 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 10_11 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_12 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_13 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_14 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_15 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_16 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_17 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_18 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_19 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_20 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 10_21 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_22 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_23 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_24 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_25 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_26 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_27 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_28 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_29 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_30 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_31 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_32 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_33 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_34 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_35 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_36 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_37 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_38 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_39 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_40 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_41 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_42 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_43 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_44 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_45 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_46 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_47 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_48 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_49 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_50 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_51 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_52 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_53 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_54 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_55 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_56 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_57 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_58 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_59 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_60 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_61 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_62 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_63 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_64 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_65 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_66 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_67 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_68 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_69 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_70 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_71 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_72 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_73 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_74 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_75 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_76 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_77 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_78 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_79 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_80 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_81 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_82 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_83 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_84 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_85 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_86 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_87 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_88 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_89 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_90 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 10_91 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_92 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_93 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_94 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_95 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_96 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_97 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_98 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_99 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_100 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_101 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_102 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_103 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_104 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_105 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_106 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_107 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_108 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_109 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_110 
+</b></font></td></tr>
+<tr>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_111 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_112 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_113 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_114 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_115 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_116 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_117 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_118 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_119 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_120 
+</r></font></td></tr>
+<tr>
+<td width=50 valign=top align=left><font color="000000"><r> 10_121 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_122 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_123 
+</r></font></td>
+<td width=50 valign=top align=left><font color="00b000"><i> 10_124 
+</i></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_125 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_126 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_127 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_128 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_129 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_130 
+</r></font></td></tr>
+<tr>
+<td width=50 valign=top align=left><font color="000000"><r> 10_131 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_132 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_133 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_134 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_135 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_136 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_137 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_138 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_139 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_140 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="b00000"><b> 10_141 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_142 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_143 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_144 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_145 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_146 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_147 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_148 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_149 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_150 
+</b></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_151 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_152 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_153 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_154 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_155 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_156 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_157 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_158 
+</b></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_159 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_160 
+</r></font></td></tr>
+
+<tr>
+
+<td width=50 valign=top align=left><font color="000000"><r> 10_161
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_162 
+</r></font></td>
+<td width=50 valign=top align=left><font color="b00000"><b> 10_163 
+</b></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_164 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_165 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r> 10_166 
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r>  
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r>  
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r>  
+</r></font></td>
+<td width=50 valign=top align=left><font color="000000"><r>  
+</r></font></td>
+</tr>
+
+</table>

@@ -1,0 +1,111 @@
+From - Tue Apr 30 16:33:48 1996
+Path: bubba.NMSU.Edu!lynx.unm.edu!newshub.tc.umn.edu!spool.mu.edu!munnari.OZ.AU!news.ecn.uoknor.edu!paladin.american.edu!hookup!news.mathworks.com!news.kei.com!nntp.coast.net!howland.reston.ans.net!vixen.cso.uiuc.edu!ux1.cso.uiuc.edu!drg
+From: Mladen Bestvina <bestvina@news.cc.utah.edu>
+Newsgroups: sci.math.research
+Subject: Wasatch Topology Conference
+Date: 25 Apr 1996 17:36:21 GMT
+Organization: University of Utah Computer Center
+Lines: 95
+Approved: Daniel Grayson <dan@math.uiuc.edu>, moderator for sci.math.research
+Message-ID: <4lod6l$rtm@news.cc.utah.edu>
+NNTP-Posting-Host: ux1.cso.uiuc.edu
+Mime-Version: 1.0
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+Originator: drg@ux1.cso.uiuc.edu
+
+
+Announcing the
+
+			Fourth semiannual
+
+
+		Wasatch Topology Conference
+
+
+The fourth semiannual Wasatch Topology Conference will be held June 7-8
+at the Treasure Mountain Inn in Park City, Utah.  This
+conference is sponsored jointly by the Mathematics Departments of the
+University of Utah and Brigham Young University.  The speakers will be
+
+        Steve Ferry (SUNY Binghamton)
+		"Controlled topology and its applications"
+		"Strange homology manifolds" (see abstracts at the end).
+
+	Mark Sapir (University of Nebraska)
+		"Dehn functions of groups", I and II.
+
+	Abby Thompson (UC Davis)
+		"Recognizing the 3-sphere"
+		"Thin position for knots and 3-manifolds"
+
+Friday:
+
+2-3 pm  Ferry
+3:30-4:30  Sapir
+6:00- Conference Barbeque at a local park (FREE!)
+
+Saturday:
+
+8:30-9:30  Conference Breakfast (FREE!)
+9:30-10:30  Thompson
+11-12   Ferry
+2-3  Sapir
+3:30-4:30  Thompson
+5:00-Conference Hike
+
+Sunday:
+
+Hike is planned for those interested
+
+The Treasure Mountain Inn is located on Main Street in Park City next
+to the Park City Mall and across the street from the Wasatch Brewery
+and Pub.  This site is in the best part of Park City (upper Main
+Street) and offers luxury ski condominiums, a nice conference room, a
+pool, hot tub, and pool table, and has one of the best restaurants in
+Utah, the Cactus Moon, on-site.  We have negotiated significantly
+discounted room rates at the Treasure Mountain Inn.  A studio room
+will be $50 a night and a one bedroom unit will be $60 per night.
+Each room has a fully equipped kitchen (with a stove, oven, microwave,
+refrigerator, disposal, dishes and utensils), a bathroom (some have
+jetted tubs), and a fully furnished living room (equipped with a
+stereo, television, VCR and a futon sleeper sofa).  The studio rooms
+have a queen Murphy bed in the living room .  The one bedroom units
+have a large separate bedroom with two queen beds.  Each unit has
+assigned parking and some units have underground parking.  Considering
+that the conference will be taking place in one of the most beautiful
+locations in the West, and at one of the most popular times we feel
+that these rates are outstanding!
+
+ The Treasure Mountain Inn is located at 255 Main Street in Park City,
+Utah.  Their phone number is 1-800-344-2460.  Their mailing address
+is: P.O. Box 639; Park City, Utah 84060.
+
+If you would like to attend please email one of the organizers: Mladen
+Bestvina (bestvina@math.utah.edu) or Greg Conner
+(conner@math.byu.edu).
+
+
+ABSTRACTS:
+
+Ferry: "Controlled topology and its applications"
+
+We will outline the classification theory of high-dimensional
+topological manifolds and explain how controlled methods make that
+classification easier and more accessible in many interesting
+geometric situations.
+
+Ferry: "Strange homology manifolds"
+
+We will discuss the construction and classification of homology
+manifolds. One theorem, due to Edwards-Quinn, says that if X is a
+connected high-dimensional finite-dimensional locally contractible
+homology manifold which satisfies general position for 2-dimensional
+disks and which has any locally euclidean point, then X is a
+topological manifold. In contrast, Bryant-Ferry-Mio- Weinberger have
+constructed totally noneuclidean homology manifolds which satisfy the
+other conditions above.
+ 
+
+
+

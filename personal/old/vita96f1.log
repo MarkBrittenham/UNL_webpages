@@ -1,0 +1,222 @@
+This is TeX, Version 3.1415 (C version 6.1) (format=plain 94.9.30)  14 NOV 1996 14:21
+**vita96f1
+(vita96f1.tex
+Overfull \hbox (10.0pt too wide) in paragraph at lines 39--50
+[] [] 
+
+\hbox(57.94444+1.94444)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(57.94444+1.94444)x391.46176
+..\hbox(6.94444+0.0)x391.46176, glue set 220.32253fil
+...\tenrm e
+...\tenrm -
+...\discretionary
+...\tenrm m
+...\tenrm a
+...etc.
+..\glue 3.0 plus 1.0 minus 1.0
+..\glue(\parskip) 0.0 plus 1.0
+..\glue(\baselineskip) 6.5
+..\hbox(7.5+2.5)x391.46176, glue set 164.43341fil
+...\tenrm W
+...\tenrm W
+...\tenrm W
+...\tenrm :
+...\glue 3.33333 plus 1.66666 minus 1.11111
+...etc.
+..etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 79--81
+[] [] 
+
+\hbox(6.94444+1.94444)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(6.94444+1.94444)x391.46176
+..\hbox(6.94444+1.94444)x391.46176, glue set 65.66933fil
+...\tenrm G
+...\tenrm e
+...\tenrm o
+...\tenrm m
+...\tenrm e
+...etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 82--83
+[] [] 
+
+\hbox(6.94444+0.0)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(6.94444+0.0)x391.46176
+..\hbox(6.94444+0.0)x391.46176, glue set 275.51703fil
+...\tenrm l
+...\tenrm a
+...\tenrm m
+...\tenrm i
+...\tenrm n
+...etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 90--125
+[] [] 
+
+\hbox(186.94444+1.94444)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(186.94444+1.94444)x391.46176
+..\hbox(6.94444+1.94444)x261.9449
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x71.27794 []
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x190.66696 []
+...\glue(\tabskip) 0.0
+..\glue(\baselineskip) 5.11111
+..\hbox(6.94444+1.94444)x324.11165
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x71.27794 []
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x252.83371 []
+...\glue(\tabskip) 0.0
+..\glue(\baselineskip) 5.11111
+..\hbox(6.94444+1.94444)x294.69495
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x71.27794 []
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x223.417 []
+...\glue(\tabskip) 0.0
+..etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 128--135
+[] [] 
+
+\hbox(40.94444+1.94444)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(40.94444+1.94444)x391.46176
+..\hbox(6.94444+1.94444)x307.80618
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x71.27794 []
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x236.52824 []
+...\glue(\tabskip) 0.0
+..\glue 6.0 plus 2.0 minus 2.0
+..\glue(\parskip) 0.0 plus 1.0
+..\glue(\baselineskip) 5.11111
+..\hbox(6.94444+1.94444)x391.46176, glue set 176.15579fil
+...\tenrm F
+...\kern-0.83334
+...\tenrm a
+...\tenrm l
+...\tenrm l
+...etc.
+..etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+[1]
+Overfull \hbox (10.0pt too wide) in paragraph at lines 142--161
+[] [] 
+
+\hbox(111.5+1.94444)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(111.5+1.94444)x391.46176
+..\hbox(7.5+2.5)x240.83385
+...\glue(\tabskip) 0.0
+...\hbox(7.5+2.5)x71.27794 []
+...\glue(\tabskip) 0.0
+...\hbox(7.5+2.5)x169.55591 []
+...\glue(\tabskip) 0.0
+..\glue(\baselineskip) 4.55556
+..\hbox(6.94444+1.94444)x295.41728
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x71.27794 []
+...\glue(\tabskip) 0.0
+...\hbox(6.94444+1.94444)x224.13934 []
+...\glue(\tabskip) 0.0
+..\glue 3.0 plus 1.0 minus 1.0
+..\glue(\baselineskip) 4.55556
+..etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+[2] [3]
+Overfull \hbox (10.0pt too wide) in paragraph at lines 372--385
+[] [] 
+
+\hbox(57.94444+0.0)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(57.94444+0.0)x391.46176
+..\hbox(6.94444+0.0)x391.46176, glue set 207.79475fil
+...\tenrm R
+...\tenrm e
+...\tenrm v
+...\tenrm i
+...\tenrm e
+...etc.
+..\glue 3.0 plus 1.0 minus 1.0
+..\glue(\parskip) 0.0 plus 1.0
+..\glue(\baselineskip) 6.5
+..\hbox(7.5+2.5)x391.46176, glue set 228.62811fil
+...\tenrm R
+...\tenrm e
+...\tenrm v
+...\tenrm i
+...\tenrm e
+...etc.
+..etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 392--409
+[] [] 
+
+\hbox(74.94444+1.94444)x391.46176
+.\hbox(0.0+0.0)x20.0
+.\glue -10.0
+.\vbox(74.94444+1.94444)x391.46176
+..\hbox(6.94444+1.94444)x391.46176, glue set 218.6559fil
+...\tenrm P
+...\tenrm r
+...\tenrm o
+...\tenrm f
+...\tenrm .
+...etc.
+..\glue 3.0 plus 1.0 minus 1.0
+..\glue(\parskip) 0.0 plus 1.0
+..\glue(\baselineskip) 5.11111
+..\hbox(6.94444+1.94444)x391.46176, glue set 154.30853fil
+...\tenrm P
+...\tenrm r
+...\tenrm o
+...\tenrm f
+...\tenrm .
+...etc.
+..etc.
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.etc.
+
+[4] )
+Output written on vita96f1.dvi (4 pages, 9880 bytes).
