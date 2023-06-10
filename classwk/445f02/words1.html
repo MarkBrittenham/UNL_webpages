@@ -1,0 +1,372 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center>Math 445 Number Theory</center><br>
+<p>
+<p><br>
+
+<center>Topics for the first exam</center><br>
+<p>
+<p><br><p><br>
+
+An integer p is <i>prime</i> if whenever p = ab with a,b <font face="symbol">Î</font
+> \Bbb Z, either a = <font face="symbol">±</font
+>p or b = <font face="symbol">±</font
+>p .
+<p>
+[For sanity's sake, we will take the position that primes should 
+<U>also</U> be  <font face="symbol">³</font
+> 2 .]
+<p>
+
+<b>Primality Tests.</b>
+<p>
+
+How do you decide if a number n is prime?
+<p>
+
+Brute force: try to divide every number (better: prime)  <font face="symbol">£</font
+> n (better  <font face="symbol">£</font
+> <font face="symbol">Ö</font
+>n) into n, to locate a factor.
+<p>
+
+<i>Fermat's Little Theorem.</i> If p is prime and (a,p) = 1, then a<sup>p-1</sup> <font face="symbol">º</font
+> 1 (mod  p) .
+<p>
+
+A composite number n for which a<sup>n-1</sup> <font face="symbol">º</font
+> 1 (mod  n) is called a <i>pseudoprime to the base a</i>. A composite number
+which is a pseudoprime to every base a satisfying (a,n) = 1 is called a <i>Carmichael number</i>.
+<p>
+
+<font face="symbol">f</font
+>(n) = number of integers a between 1 and n with (a,n) = 1; if n = p<sub>1</sub><sup><font face="symbol">a</font
+><sub>1</sub></sup><font face="symbol">¼</font
+>p<sub>k</sub><sup><font face="symbol">a</font
+><sub>k</sub></sup> is the prime factorization of n, then <font face="symbol">f</font
+>(n) = p<sub>1</sub><sup><font face="symbol">a</font
+><sub>1</sub>-1</sup>(p<sub>1</sub>-1)<font face="symbol">¼</font
+>p<sub>k</sub><sup><font face="symbol">a</font
+><sub>k</sub>-1</sup>(p<sub>k</sub>-1)
+<p>
+
+<i>Euler's Theorem.</i>If (a,n) = 1, then a<sup><font face="symbol">f</font
+>(n)</sup>(mod  n) .
+<p>
+
+<i>Wilson's Theorem.</i> p is prime <font face="symbol">Û</font
+>&nbsp;(p-1)! <font face="symbol">º</font
+> -1 (mod  p)
+<p>
+
+Fermat <font face="symbol">Þ</font
+>&nbsp;if (a,n) = 1 and a<sup>n-1</sup>\not <font face="symbol">º</font
+> 1 (mod  n) then n is <b>not</b> prime.
+<p>
+
+If p is prime and a<sup>2</sup> <font face="symbol">º</font
+> 1 (mod  p), then a <font face="symbol">º</font
+> <font face="symbol">±</font
+>1 (mod  p)
+<p>
+
+(Miller-Rabin Test.) Given n, set n-1 = 2<sup>k</sup> d with d odd. Then if n is prime and (a,n) = 1, either a<sup>d</sup> <font face="symbol">º</font
+> 1 (mod  n) or 
+a<sup>2<sup>i</sup> d</sup> <font face="symbol">º</font
+> -1 (mod n) for some i<font face="symbol"> &lt; </font
+>k.
+<p>
+
+If n is <i>not</i> prime, but the above still holds for some a, then n is called a <i>strong pseudoprime to the base a</i>.
+<p>
+
+Compositeness test: If a<sup>d</sup>\not <font face="symbol">º</font
+> <font face="symbol">±</font
+>1 (mod  n), compute a<sup>2<sup>i</sup> d</sup> (mod n) for i = 1,2,<font face="symbol">¼</font
+> . If this sequence hits 1 <b>before</b>
+hitting -1, or is not 1 for i = k, then n is <b>not</b> prime.
+<p>
+
+Fact: If n is composite, then it is a strong pseudoprime for <i>at most</i> 1/4 th of the a's between 1 and n. 
+<p>
+
+<b>Finding Factors.</b>
+<p>
+
+(Pollard Rho Test.) Idea: if p is a factor of N, then for any two randomly chosen numbers a abd b, p is more likely
+to divide b-a than N is.
+<p>
+
+Procedure: given N, use Miller-Rabin to make sure it is composite! Then pick a fairly random starting value a<sub>1</sub> = a, and a 
+fairly random polynomial with integer coefficients f(x) (such as f(x) = x<sup>2</sup>+b), then compute a<sub>2</sub> = f(a<sub>1</sub>), <font face="symbol">¼</font
+>, a<sub>n</sub> = f(a<sub>n-1</sub>), <font face="symbol">¼</font
+> .
+Finally, compute (a<sub>2n</sub>-a<sub>n</sub>, N) for each n. If this is <font face="symbol"> &gt; </font
+>1 and <font face="symbol"> &lt; </font
+>N, stop: you have found a proper factor of N. If it
+gives you N, stop: the test has failed. You should restart with a different a and/or f.
+<p>
+Basic idea: this will typically find a factor on a timescale on the order of <font face="symbol">Ö</font
+>p <font face="symbol">£</font
+> N<sup>1/4</sup>, where p is the smallest (but unknown!)
+prime factor of N.
+<p>
+<p>
+
+<b>Periods of repeating fractions.</b>
+<p>
+
+For integers n with (10,n) = 1, the fractions a/n have a repeating decimal expansion. E.g, 2/3 = .6666<font face="symbol">¼</font
+>, 1/7 = .142857142857<font face="symbol">¼</font
+>, etc.
+<p>
+
+Determining the length of the <i>period</i> (repeating part) can be done via FLT:  1/7 = .142857142857<font face="symbol">¼</font
+> means 1/7 = 142857/10<sup>6</sup>+142857/10<sup>12</sup>+<font face="symbol">¼</font
+> = 142857/(10<sup>6</sup>-1), i.e 7<font face="symbol">|</font
+>10<sup>6</sup>-1, and 6 is the smallest power for which this is true.
+<p>
+
+In general (if (a,n) = 1), we define \roman ord<sub>n</sub>(a) = k = the smallest positive number with a<sup>k</sup> <font face="symbol">º</font
+> 1 (mod  n). Equivalently, it is
+the largest number satisfying a<sup>r</sup> <font face="symbol">º</font
+> 1 (mod  n) <font face="symbol">Þ</font
+>&nbsp;\roman ord<sub>n</sub>(a)<font face="symbol">|</font
+>r . (Therefore,  \roman ord<sub>n</sub>(a)<font face="symbol">|</font
+><font face="symbol">f</font
+>(n), by Euler's Theorem.)
+<p>
+
+Generally, then, the period of 1/n =  \roman ord<sub>n</sub>(10), when (10,n) = 1. When (10,n)<font face="symbol"> &gt; </font
+>1, we can write n = 2<sup>r</sup> 5<sup>s</sup> b = ab with (10,b) = 1, and then write
+<p>
+
+ [1/n] = [1/ab] = [A/a] +[B/b] for some integers A,B .
+<p>
+
+A/a will have a terminating decimal expansion, so 1/n will have some garbage at the beginning , and then repeat with period equal to the period of b.
+<p>
+
+Gauss conjectured that there are infinitely many primes p whose period is p-1; this is still unproved.
+<p>
+
+<b>Primality tests for special cases.</b>
+<p>
+
+(Lucas' Theorem.) If for, each prime p with p<font face="symbol">|</font
+>n-1, there is an a with a<sup>n-1</sup> <font face="symbol">º</font
+> 1 (mod  n) but a<sup>(n-1)/p</sup>\not <font face="symbol">º</font
+> 1 (mod  n), then n
+is prime.
+<p>
+
+Application: look at N = 2<sup>k</sup>+1. This <i>could</i> be prime only if k = 2<sup>n</sup>; otherwise k = 2<sup>n</sup>d, d odd, and then 2<sup>2<sup>n</sup></sup>+1<font face="symbol">|</font
+>(2<sup>2<sup>n</sup></sup>)<sup>d</sup>+1 = N. The numbers F<sub>n</sub> = 2<sup>2<sup>n</sup></sup>+1 are called <i>Fermat numbers</i>; the ones which are prime are called <i>Fermat primes</i>. The only known Fermat
+primes correspond to n = 0,1,2,3,4; Euler showed that 641<font face="symbol">|</font
+>F<sub>5</sub>, and F<sub>n</sub> is known to be composite for n = 5,<font face="symbol">¼</font
+>,28. By Lucas' Thm, F<sub>n</sub> is
+prime <font face="symbol">Û</font
+>&nbsp;there is an a with 
+<p>
+
+a<sup>F<sub>n</sub>-1</sup>  <font face="symbol">º</font
+> 1 (mod  F<sub>n</sub>), but a<sup>(F<sub>n</sub>-1)/2</sup>\not <font face="symbol">º</font
+> 1 (mod  F<sub>n</sub>) (which really together means a<sup>(F<sub>n</sub>-1)/2</sup> <font face="symbol">º</font
+> -1 (mod  F<sub>n</sub>)
+<p>
+
+Pepin showed that it if some a will work, then a = 3 will work!
+<p>
+
+Fermat primes are important in Euclidean geometry; Gauss showed that a regular N-sided polygon can be constructed with compass
+and straight-edge <font face="symbol">Û</font
+>&nbsp;N is a power of 2 times a product of <i>distinct</i> Fermat primes.
+<p>
+
+<b>Primitive roots.</b>
+<p>
+
+A number a is called a <i>primitive root of 1 mod n</i> if \roman ord<sub>n</sub>(a) = <font face="symbol">f</font
+>(n) (the largest it could be).
+<p>
+
+Strong converse to Lucas' Thm: If n is prime, then there is a primitive root of 1 mod n (i.e., there is <i>one</i> 
+a that will work for every prime p in Lucas' Thm).
+<p>
+
+The proof uses the important
+<p>
+
+(<i>Lagrange's Theorem.</i>) If p is a prime, and f(x) = a<sub>n</sub> x<sup>n</sup>+<font face="symbol">¼</font
+>a<sub>1</sub> x+a<sub>0</sub> is a polynomial with integer coefficients, a<sub>n</sub>\not <font face="symbol">º</font
+> 0 (mod  p),
+then the equation
+<p>
+f(x) <font face="symbol">º</font
+> 0 (mod  p)
+<p>
+has at most n solutions.
+<p>
+
+This implies that if p is prime and d<font face="symbol">|</font
+>p-1, then the equation x<sup>d</sup> <font face="symbol">º</font
+> 1 (mod  p) has <i>exactly</i> d solutions.
+<p>
+
+Lemma: If \roman ord<sub>n</sub>(a) = m, then \roman ord<sub>n</sub>(a<sup>k</sup>) = m/(m,k)
+<p>
+
+Corollary: If p is prime, then there are exactly <font face="symbol">f</font
+>(p-1) (incongruent mod p) primitive roots of 1 mod p: find one, a, then the
+rest are a<sup>k</sup> for 1 <font face="symbol">£</font
+> k <font face="symbol">£</font
+> p and (k,p-1) = 1.
+<p>
+
+Fact: There is a primitive root mod n only for n = 2,3,p<sup>k</sup>,2p<sup>k</sup> for p a prime.
+<p>
+
+Artin has conjectured that if a is not a square or -1, then a is a primitive root of 1 for infinitely many primes p. (This is a generalization of Gauss'
+conjecture above.)
+<p>
+
+<b>n<sup>\roman th</sup> roots modulo a prime:.</b>
+<p>
+
+If p is prime and (a,p) = 1, then (setting r = (n,p-1) the equation x<sup>n</sup> <font face="symbol">º</font
+> a (mod  p) has
+<p>
+
+r solutions if a<sup>(p-1)/r</sup> <font face="symbol">º</font
+> 1 (mod  p)
+<p>
+no solution if a<sup>(p-1)/r</sup>\not <font face="symbol">º</font
+> 1 (mod  p)
+<p>
+
+This result does not really require p to be prime, only that there be a primitive root mod p. The exact statement is:
+<p>
+
+If there is primitive root of 1 mod N and (a,N) = 1, then (setting r = (n,<font face="symbol">f</font
+>(N)) the equation x<sup>n</sup> <font face="symbol">º</font
+> a (mod  N) has
+<p>
+
+r solutions if a<sup><font face="symbol">f</font
+>(N)/r</sup> <font face="symbol">º</font
+> 1 (mod  N)
+<p>
+no solution if a<sup><font face="symbol">f</font
+>(N)/r</sup>\not <font face="symbol">º</font
+> 1 (mod  N)
+<p>
+
+Some consequences:
+<p>
+
+(Euler's Criterion.) The equation x<sup>2</sup> <font face="symbol">º</font
+> a (mod  p) has a solution (p = odd prime) <font face="symbol">Û</font
+>&nbsp;a<sup>(p-1)/2</sup> <font face="symbol">º</font
+> 1 (mod  p) ; it then has two 
+solutions (x and -x).
+<p>
+
+The equation x<sup>2</sup> <font face="symbol">º</font
+> -1 (mod  p) has a solution <font face="symbol">Û</font
+>&nbsp;(-1)<sup>(p-1)/2</sup> <font face="symbol">º</font
+> 1 (mod  p) <font face="symbol">Û</font
+>&nbsp;p = 2 or p <font face="symbol">º</font
+> 1 (mod  4)
+<p>
+
+For f(x) = a polynomial with integer coefficients, let S(n) = the number of (incongruent, mod n)
+solutions to the congruence equation f(x) <font face="symbol">º</font
+> 0 (mod  n). Then:
+<p>
+
+If (M,N) = 1, then S(MN) = S(M)&times;S(N). So: to decide if a congruence equation has a solution (and how many),
+it suffices to decide this for the prime power factors of the modulus.
+<p>
+
+<b>Sums of squares.</b>
+<p>
+
+If n = a<sup>2</sup>+b<sup>2</sup>, then n <font face="symbol">º</font
+> 0,1, or 2 (mod  4). Since the product of the sum of two squares
+<p>
+(a<sup>2</sup>+b<sup>2</sup>)(c<sup>2</sup>+d<sup>2</sup>) = (ac+bd)<sup>2</sup>+(ad-bc)<sup>2</sup> = (ad+bc)<sup>2</sup>+(ac-bd)<sup>2</sup> 
+<p>
+is the sum of two squares, and 
+<p>
+ 2n = (a<sup>2</sup>+b<sup>2</sup>) <font face="symbol">Þ</font
+> n = ([(a-b)/2])<sup>2</sup>+([(a+b)/2])<sup>2</sup> and m = (a<sup>2</sup>+b<sup>2</sup>) <font face="symbol">Þ</font
+> 2m = (a-b)<sup>2</sup>+(a+b)<sup>2</sup>
+<p>
+it suffices to focus on odd numbers, and (more or less) odd primes.
+<p>
+
+If p <font face="symbol">º</font
+> 1 (mod  4) is prime, then p is the sum of two squares.
+<p>
+
+If p <font face="symbol">º</font
+> 3 (mod  4) is prime and p<font face="symbol">|</font
+>a<sup>2</sup>+b<sup>2</sup>, then p<font face="symbol">|</font
+>a and p<font face="symbol">|</font
+>b.
+<p>
+
+Together, these imply that a positive integer n can be expressed as the sum of two squares <font face="symbol">Û</font
+>&nbsp;in the prime
+factorization of n, every prime congruent to 3 mod 4 appears with even (possibly 0) exponent.
+<p>
+
+If n can be expressed as a sum of two squares in two different ways, n = a<sup>2</sup>+b<sup>2</sup> = c<sup>2</sup>+d<sup>2</sup>, then 
+n = (x<sup>2</sup>+y<sup>2</sup>)(z<sup>2</sup>+w<sup>2</sup>) is the product of two sums of squares, with x,y,z,w <font face="symbol">³</font
+> 1 .
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>
