@@ -1,0 +1,491 @@
+<HTML>
+
+
+
+
+<center><b>Math 1710</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for third exam</center><br></b>
+<p>
+<p><br>
+<b>Chapter 3:</b> Applications of Derivatives
+<p>
+<p>
+
+<DL compact><DT>&#167; 7:
+</DT><DD>
+ <b>Linear approximation and differentials</b></DD></DL>
+Idea: The tangent line to a graph of a function makes a good approximation to the 
+function, near the point of tangency.
+<p>
+Tangent line to y = f(x) at (x<sub>0</sub>,f(x<sub>0</sub>) : L(x) = f(x<sub>0</sub>)+f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>)(x-x<sub>0</sub>)
+<p>
+f(x) <font face="symbol">»</font
+> L(x) for x near x<sub>0</sub>
+<p>
+Ex.: [<font face="symbol">Ö</font
+>27]  <font face="symbol">»</font
+> 5+[1/2&#183;5](27-25), using f(x) = <font face="symbol">Ö</font
+>x
+<p>
+(1+x)<sup>k</sup> <font face="symbol">»</font
+> 1+kx, using x<sub>0</sub>=0
+<p>
+<p>
+<font face="symbol">D</font
+>f = f(x<sub>0</sub>+<font face="symbol">D</font
+>x)-f(x<sub>0</sub>), then f(x<sub>0</sub>+<font face="symbol">D</font
+>x) <font face="symbol">»</font
+> L(x<sub>0</sub>+<font face="symbol">D</font
+>x) 
+translates to
+<p>
+<font face="symbol">D</font
+>f <font face="symbol">»</font
+> f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>) &#183;<font face="symbol">D</font
+>x
+<p>
+differential notation: df = f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>) dx
+<p>
+So <font face="symbol">D</font
+>f <font face="symbol">»</font
+> df, when <font face="symbol">d</font
+>x = dx is small
+<p>
+In fact, <font face="symbol">D</font
+>f-df = (diffrnce quot -f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>))<font face="symbol">D</font
+>x =
+(small)&#183;(small) = really small, goes like (<font face="symbol">D</font
+>x)<sup>2</sup>
+<p>
+<p>
+
+<DL compact><DT>&#167; 8:
+</DT><DD>
+ <b>Newton's method</b></DD></DL>
+A really fast way to approximate roots of a function.
+<p>
+Idea: tangent line to the graph of a function ``points towards'' a root of the function
+<p>
+Roots of (tangent) lines are easy to find!
+<p>
+L(x) = f(x<sub>0</sub>)+f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>)(x-x<sub>0</sub>) ; root is 
+ x<sub>1</sub> = x<sub>0</sub>-[(f(x<sub>0</sub>))/(f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>))]
+<p>
+Now use x<sub>1</sub> as starting point for new tangent line; keep repeating!
+<p>
+ x<sub>n+1</sub> = x<sub>n</sub>-[(f(x<sub>n</sub>))/(f<sup><font face="symbol">¢</font
+></sup>(x<sub>n</sub>))]
+<p>
+Basic fact: if x<sub>n</sub> approximates a root to k decimal places, then
+x<sub>n+1</sub> tends to approximate it to 2k decimal places!
+<p>
+BUT:
+<p>
+Newton's method might find the ``wrong'' root: Int Value Thm might find one, but N.M.
+finds a different one!
+<p>
+Newton's method might crash: if f<sup><font face="symbol">¢</font
+></sup>(x<sub>n</sub>) = 0, then we can't find x<sub>n+1</sub> 
+(horizontal lines don't have roots!)
+<p>
+Newton's method might wander off to infinity, if f has a horizontal asymptote; an
+initial guess too far out the line will generate numbers even farther out.
+<p>
+Newton's method can't find what doesn't exist! If f has no roots, Newton's method
+will try to ``find'' the function's closest approach to the x-axis; but everytime
+it gets close, a nearly horizontal tangent line sends it zooming off again!
+<p>
+<p><br>
+<b>Chapter 4:</b> Integration
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Antiderivatives</b></DD></DL>
+Integral calculus is all about finding areas of things, e.g. the area between the graph of a
+function f and the x-axis. This will, in the end, involve finding a function F whose
+<i>derivative</i> is f. 
+<p>
+F is an <i>antiderivative</i> (or (indefinite) <i>integral</i>) of f if F<sup><font face="symbol">¢</font
+></sup>(x)
+=f(x).
+<p>
+Notation: F(x) = <font face="symbol">ò</font
+>f(x) dx  ; it 
+<U>means</U>  F<sup><font face="symbol">¢</font
+></sup>(x)=f(x)
+<p>
+``the integral of f of x dee x''
+<p>
+Basic list:
+<p>
+<font face="symbol">ò</font
+>x<sup>n</sup> dx =  [(x<sup>n+1</sup>)/(n+1)] + C (provided n <font face="symbol">¹</font
+> -1)
+<p>
+<font face="symbol">ò</font
+>sin(kx) dx =  [(-cos(kx))/k] + C
+<p>
+<font face="symbol">ò</font
+>cos(kx) dx =  [sin(kx)/k] + C
+<p>
+<font face="symbol">ò</font
+>sec<sup>2</sup> x dx = tanx + C
+<p>
+<font face="symbol">ò</font
+>csc<sup>2</sup> x dx = -cotx + C
+<p>
+<font face="symbol">ò</font
+>secxtanx dx = secx + C
+<p>
+<font face="symbol">ò</font
+>cscxcotx dx = -cscx + C
+<p>
+Most differentiation rules can be turned into integration rules
+(although some are harder than others; some will even wait until Calc II !)
+<p>
+Basic integration rules: sum and constant multiple rules are easy to reverse
+<p>
+k=constant
+<p>
+<font face="symbol">ò</font
+>k&#183;f(x) dx = k<font face="symbol">ò</font
+>f(x) dx
+<p>
+<font face="symbol">ò</font
+>(f(x)<font face="symbol">±</font
+>g(x) dx = <font face="symbol">ò</font
+>f(x) dx <font face="symbol">±</font
+> <font face="symbol">ò</font
+>g(x) dx
+<p>
+<p>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Integration by substiution</b></DD></DL>
+The idea: reverse the chain rule!
+<p>
+if g(x) = u, then [d/dx]f(g(x))=[d/dx]f(u) = 
+f<sup><font face="symbol">¢</font
+></sup>(u)  [du/dx]
+<p>
+so <font face="symbol">ò</font
+>f<sup><font face="symbol">¢</font
+></sup>(u)  [du/dx] dx = 
+<font face="symbol">ò</font
+>f<sup><font face="symbol">¢</font
+></sup>(u) du = f(u)+c
+<p>
+<font face="symbol">ò</font
+>f(g(x)) g<sup><font face="symbol">¢</font
+></sup>(x) dx ; set u = g(x)
+<p>
+then du = g<sup><font face="symbol">¢</font
+></sup>(x) dx , so <font face="symbol">ò</font
+>f(g(x)) g<sup><font face="symbol">¢</font
+></sup>(x) dx = 
+int f(u) du , 
+<U>where</U> u = g(x)
+<p>
+Example: <font face="symbol">ò</font
+>x(x+2-3)<sup>4</sup> dx ; set u = x<sup>2</sup>-3, so du=2x dx . Then
+<p>
+<font face="symbol">ò</font
+>x(x+2-3)<sup>4</sup> dx = [1/2]<font face="symbol">ò</font
+>(x+2-3)<sup>4</sup>2x dx
+=[1/2]<font face="symbol">ò</font
+>u<sup>4</sup> du <font face="symbol">|</font
+><sub>u = x<sup>2</sup>-3</sub> = 
+<p>
+ [1/2][(u<sup>5</sup>)/5]+c <font face="symbol">|</font
+><sub>u = x<sup>2</sup>-3</sub> =
+ [((x<sup>2</sup>-3)<sup>5</sup>)/10]+c
+<p>
+
+<p>
+The three most important points:
+<p>
+1. Make sure that you calculate (and then set aside) your du before doing step 2!
+<p>
+2. Make sure everything gets changed from x's to u's
+<p>
+3. 
+<U><b>Don't</U></b> push x's through the integral sign! They're 
+<U>not</U> 
+constants!
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Estimating things with sums</b></DD></DL>
+Idea: alot of things can estimated by adding up alot of tiny pieces.
+<p>
+Sigma notation:  <font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> a<sub>i</sub> = a<sub>1</sub>+<font face="symbol">¼</font
+>a<sub>n</sub> ; just add the numbers up
+<p>
+formal properties:
+<p>
+ <font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> ka<sub>i</sub> = k<font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> a<sub>i</sub>
+<p>
+ <font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> (a<sub>i</sub><font face="symbol">±</font
+>b<sub>i</sub>) = <font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> a<sub>i</sub> <font face="symbol">±</font
+><font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> b<sub>i</sub>
+<p>
+Some things worth adding up:
+<p>
+length of a curve: approximate curve by a collection of straight line segments
+<p>
+
+<p><br><p><br>
+
+
+
+
+<center><a href="w3f1.ai">Figure</a></center><br>
+<p>
+length of curve  <font face="symbol">»</font
+> <font face="symbol">å</font
+>(length of line segments)
+<p>
+<p>
+distance travelled = (average velocity)(time of travel)
+<p>
+over short periods of time, avg. vel.  <font face="symbol">»</font
+>  instantaneous vel.
+<p>
+so distance travelled  <font face="symbol">»</font
+> <font face="symbol">å</font
+>(inst. vel.)(short time intervals)
+<p>
+E.g., s(t)=position, v(t)=velocity, use velocity 4 times per second
+<p>
+dist. travelled =  s(10)-s(5) <font face="symbol">»</font
+> <font face="symbol">å</font
+><sub>i = 1</sub><sup>20</sup> v(5+[i/4]) ([1/4]) 
+<p>
+<p>
+average value of a function
+<p>
+<p>average of n numbers: add the numbers, divide by n
+<p>
+<p>for a function, add up lots of values of f, divide by number of values
+<p>
+avg. value of f  <font face="symbol">»</font
+>  [1/n]<font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> f(c<sub>i</sub>)
+<p>
+
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Definite integrals</b></DD></DL>
+The most important thing to approximate by sums: area under a curve.
+<p>
+Idea: approximate region b/w curve and x-axis by things whose areas we can easily calculate:
+<p>
+rectangles!
+<p>
+
+<p><br><p><br>
+
+
+
+
+<center><a href="w3f2.ai">Figure</a></center><br>
+Area between graph and x-axis  <font face="symbol">»</font
+>  <font face="symbol">å</font
+> (areas of the rectangles)
+=<font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> f(c<sub>i</sub>)<font face="symbol">D</font
+>x<sub>i</sub>
+<p>
+We 
+<U>define</U> the area to be the 
+<U>limit</U> of these sums as the number
+of rectangles goes to <font face="symbol">¥</font
+> (i.e., the width of the rectangles goes to 0), and call this
+the <i>definite integral</i> of f from a to b:
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx&nbsp; = &nbsp;lim<sub>n<font face="symbol">®</font
+><font face="symbol">¥</font
+></sub> <font face="symbol">å</font
+><sub>i = 1</sub><sup>n</sup> f(c<sub>i</sub>)<font face="symbol">D</font
+>x<sub>i</sub>
+<p>
+When do such limits exist?
+<p>
+<b>Theorem</b> If f is continuous on the interval [a,b], then <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx exists.
+<p>
+(i.e., the area under the graph 
+<U>is</U> approximated by rectangles.)
+<p>
+
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>Properties of definite integrals</b></DD></DL>
+Fisrt note: the sum used to define a definite integral does 
+<U>need</U> to have 
+f(x) <font face="symbol">³</font
+> 0; the limit still makes sense. When f 
+<U>is</U> bigger than 0, we
+
+<U>interpret</U> the integral as area under the graph.
+<p>
+Basic properties of definite integrals:
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>a</sup> f(x)&nbsp;dx =0
+<p>
+
+<font face="symbol">ò</font
+><sub>b</sub><sup>a</sup> f(x)&nbsp;dx =  -<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> kf(x)&nbsp;dx =  k<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)<font face="symbol">±</font
+>g(x)&nbsp;dx =<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx
+<font face="symbol">±</font
+> <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> g(x)&nbsp;dx
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx + <font face="symbol">ò</font
+><sub>b</sub><sup>c</sup> f(x)&nbsp;dx =
+<font face="symbol">ò</font
+><sub>a</sub><sup>c</sup> f(x)&nbsp;dx
+<p>
+If m <font face="symbol">£</font
+> f(x) <font face="symbol">£</font
+> M for all x in [a,b], then 
+<p>
+ m(b-a) <font face="symbol">£</font
+> <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx <font face="symbol">£</font
+> M(b-a)
+<p>
+More generally, if f(x) <font face="symbol">£</font
+> g(x) for all x in [a,b], then 
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx  <font face="symbol">£</font
+>  <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> g(x)&nbsp;dx
+<p>
+Average value of f : formalize our old idea!
+<p>
+avg(f) = [1/(b-a)]<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx
+<p>
+Mean Value Theorem for integrals: If f is continuous in [a,b], then
+<p>
+there is a c in [a,b] so that f(c) = [1/(b-a)]<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx
+<p>
+<p>
+
+<DL compact><DT>&#167; 7:
+</DT><DD>
+ <b>The fundamental theorem of calculus</b></DD></DL>
+Formally, <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx 
+<U>depends</U> on a and b. 
+Make this explicit:
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>x</sup> f(t)&nbsp;dt = F(x) is a function of x.
+<p>
+F(x) = the area under the graph of f, from a to x.
+<p>
+Fund. Thm. of Calc (# 1): If f is continuous, then F<sup><font face="symbol">¢</font
+></sup>(x) = f(x)
+<p>
+(F is an antiderivative of f !)
+<p>
+Since any two antiderivatives differ by a constant, and F(b) = <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(t)&nbsp;dt, we get
+<p>
+Fund. Thm. of Calc (# 2): If f is continuous, and F is an antiderivative of f, then
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx = F(b)-F(a) = F(x)&nbsp;<font face="symbol">|</font
+><sub>a</sub><sup>b</sup>
+<p>
+Ex: <font face="symbol">ò</font
+><sub>0</sub><sup><font face="symbol">p</font
+></sup> sinx&nbsp;dx = (-cos<font face="symbol">p</font
+>)-(-cos0) =2
+<p>
+Building antiderivatives:
+<p>
+F(x)=<font face="symbol">ò</font
+><sub>a</sub><sup>x</sup> <font face="symbol">Ö</font
+>{sint}&nbsp;dt is an antiderivative of f(x) = <font face="symbol">Ö</font
+>{sinx}
+<p>
+G(x) = <font face="symbol">ò</font
+><sub>x<sup>2</sup></sub><sup>x<sup>3</sup></sup> [<font face="symbol">Ö</font
+>(1+t<sup>2</sup>)]&nbsp;dt = F(x<sup>3</sup>)-F(x<sup>2</sup>), where
+<p>
+F<sup><font face="symbol">¢</font
+></sup>(x) = [<font face="symbol">Ö</font
+>(1+x<sup>2</sup>)], so G<sup><font face="symbol">¢</font
+></sup>(x) = 
+F<sup><font face="symbol">¢</font
+></sup>(x<sup>3</sup>)(3x<sup>2</sup>)-F<sup><font face="symbol">¢</font
+></sup>(x<sup>2</sup>)(2x)...
+<p>
+<p>
+
+<DL compact><DT>&#167; 8:
+</DT><DD>
+ <b>substitution and definite integrals</b></DD></DL>
+We can use u-substitution directly with a definite integral, provided we remember that
+<p>
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup> f(x)&nbsp;dx 
+<U>really</U> means 
+<font face="symbol">ò</font
+><sub>x = a</sub><sup>x = b</sup> f(x)&nbsp;dx
+<p>
+and we remember to change 
+<U>all</U> of the x's to u's!
+<p>
+Ex: <font face="symbol">ò</font
+><sub>1</sub><sup>2</sup> x(1+x<sup>2</sup>)<sup>6</sup>&nbsp;dx; set u = 1+x<sup>2</sup>, du = 2x&nbsp;dx .
+when x = 1, u = 2; when x = 2, u = 5 ; so
+<p>
+<font face="symbol">ò</font
+><sub>1</sub><sup>2</sup> x(1+x<sup>2</sup>)<sup>6</sup>&nbsp;dx = 
+[1/2]<font face="symbol">ò</font
+><sub>2</sub><sup>5</sup> u<sup>6</sup>&nbsp;du = ...
+<p>
+<p><br>
+
+</HTML>

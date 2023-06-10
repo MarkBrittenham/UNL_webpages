@@ -1,0 +1,538 @@
+<HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 1710</center><br></b>
+<p>
+<p>
+
+<center><b>Topics for first exam</center><br></b>
+<p>
+<p><br>
+
+<b>Chapter 1:</b> Limits and Continuity
+<p>
+<p>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>Rates of change and limits</b></DD></DL>
+Calculus = Precalculus + (limits)
+<p>
+Limit of a function f at a point x<sub>0</sub> = the value the function `should' take at the point
+<p>
+= the value that the points `near' x<sub>0</sub> tell you f should have at x<sub>0</sub>
+<p>
+lim<sub>x<font face="symbol">®</font
+>x<sub>0</sub></sub>f(x) = L means f(x) is close to L when x is close to (but not 
+<U>equal</U>
+to) x<sub>0</sub>
+<p>
+Idea: slopes of tangent lines
+<p>
+
+
+<p><br><p><br>
+
+
+
+Figure
+<p>
+lim<sub>x<font face="symbol">®</font
+>x<sub>0</sub></sub>f(x) = L does 
+<U>not</U> care what f(x<sub>0</sub>) 
+<U>is</U>; it ignores it
+<p>
+lim<sub>x<font face="symbol">®</font
+>x<sub>0</sub></sub>f(x) need not exist! (function can't make up it's mind?)
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Rules for finding limits</b></DD></DL>
+If two functions f(x)&nbsp;and g(x)&nbsp;agree (are equal) for every x near a 
+<p>
+(but maybe not 
+<U>at</U> a), then
+lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)lim<sub>x<font face="symbol">®</font
+> a</sub>g(x)
+<p>
+Ex.: lim<sub>x<font face="symbol">®</font
+>2</sub> [(x<sup>2</sup>-3x+2)/(x<sup>2</sup>-4)] = lim<sub>x<font face="symbol">®</font
+>2</sub> [(x-1)/(x+2)]
+<p>
+If f(x)<font face="symbol">®</font
+>L and g(x)<font face="symbol">®</font
+>M as x<font face="symbol">®</font
+>x<sub>0</sub> (and c is a constant), then
+<p>
+f(x)+g(x)<font face="symbol">®</font
+>L+M ; f(x)-g(x)<font face="symbol">®</font
+>L-M ; cf(x)<font face="symbol">®</font
+>cL ; 
+<p>
+f(x)g(x)<font face="symbol">®</font
+>LM ;
+and f(x)/g(x)<font face="symbol">®</font
+>L/M 
+<U>provided</U> M <font face="symbol">¹</font
+> 0
+<p>
+If f(x)&nbsp;is a polynomial, then lim<sub>x<font face="symbol">®</font
+> x<sub>0</sub></sub>f(x)= f(x<sub>0</sub>)
+<p>
+Basic principle: to solve lim<sub>x<font face="symbol">®</font
+> x<sub>0</sub></sub>&nbsp;, plug in x = x<sub>0</sub> ! 
+<p>
+If (and when) you get 0/0 , try something else! (Factor (x-x<sub>0</sub>) out of top and bottom...)
+<p>
+If a function has something like <font face="symbol">Ö</font
+>x - <font face="symbol">Ö</font
+>a in it, try multiplying (top and bottom)
+<p>
+with <font face="symbol">Ö</font
+>x + <font face="symbol">Ö</font
+>a
+<p>
+Sandwich Theorem: If f(x) <font face="symbol">£</font
+>  g(x) <font face="symbol">£</font
+>  h(x)&nbsp;, for all x near a (but not 
+<U>at</U> a), and
+<p>
+lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)lim<sub>x<font face="symbol">®</font
+> a</sub>h(x)L , then lim<sub>x<font face="symbol">®</font
+> a</sub>g(x)L .
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Extensions of the limit concept</b></DD></DL>
+Motivation: the Heaviside function
+<p>
+
+<p><br><p><br>
+
+
+
+Figure
+<p>
+Limit from the right: lim<sub>x<font face="symbol">®</font
+> a<sup>+</sup></sub>f(x)L means f(x)&nbsp;is close to L 
+<p>
+when x is close to, and 
+<U>bigger</U> than, a
+<p>
+Limit from the left: lim<sub>x<font face="symbol">®</font
+> a<sup>-</sup></sub>f(x)M means f(x)&nbsp;is close to M 
+<p>
+when x is close to, and 
+<U>smaller</U> than, a
+<p>
+lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)L then means lim<sub>x<font face="symbol">®</font
+> a<sup>+</sup></sub>f(x)lim<sub>x<font face="symbol">®</font
+> a<sup>-</sup></sub>f(x)L
+<p>
+<p>
+Infinite limits: <font face="symbol">¥</font
+> represents something bigger than any number we can think of
+<p>
+lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)<font face="symbol">¥</font
+> means f(x)&nbsp;gets really large as x gets close to a
+<p>
+Also have lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)-<font face="symbol">¥</font
+> ; lim<sub>x<font face="symbol">®</font
+> a<sup>+</sup></sub>f(x)<font face="symbol">¥</font
+> ; 
+<p>
+lim<sub>x<font face="symbol">®</font
+> a<sup>-</sup></sub>f(x)<font face="symbol">¥</font
+> ; etc....
+<p>
+Typically, an infinite limit occurs where the denomenator of f(x)&nbsp;is zero 
+<p>
+(although not always)
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>Continuity</b></DD></DL>
+A function f is 
+<U>continuous</U> (cts) 
+<U>at</U> 
+<U>a</U> if lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)f(a)
+<p>
+This means: (1) lim<sub>x<font face="symbol">®</font
+> a</sub>f(x)&nbsp;exists ; (2) f(a) exists ; and
+<p>
+(3) they're equal.
+<p>
+Limit theorems say (sum, difference, product, quotient) of cts functions are cts.
+<p>
+Polynomials are continuous at every point; 
+<p>
+rational functions are continuous except
+where denom=0.
+<p>
+Points where a function is not continuous are called 
+<U>discontinuities</U>
+<p>
+Four flavors: 
+<p>
+removable: both one-sided limits are the same
+<p>
+jump: one-sided limts exist, not the same
+<p>
+infinite: one or both one-sided limits is <font face="symbol">¥</font
+> or -<font face="symbol">¥</font
+>
+<p>
+oscillating: one or both one-sided limits DNE
+<p>
+<p>
+Intermediate Value Theorem:
+<p>
+If f(x)&nbsp;is cts at every point in an interval [a,b], and M is between f(a) and f(b),
+<p>
+then there is (at least one) c between a and b so that f(c) = M.
+<p>
+Application: finding roots of polynomials
+<p>
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>Tangent lines</b></DD></DL>
+Slope of tangent line = limit of slopes of secant lines; at (x<sub>0</sub>,f(x<sub>0</sub>) :
+<p>
+lim<sub>x<font face="symbol">®</font
+> x<sub>0</sub></sub>[(f(x)-f(x<sub>0</sub>))/(x-x<sub>0</sub>)] Notation: call this limit f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>)derivative of f at x<sub>0</sub>
+<p>
+Different formulation: h = x-x<sub>0</sub>, x = x<sub>0</sub>+h 
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>)lim<sub>h<font face="symbol">®</font
+> 0</sub>[(f(x<sub>0</sub>+h)-f(x<sub>0</sub>))/h]
+<p>
+<p>
+
+<b>Chapter 2:</b> Derivatives
+<p>
+<p><br>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ <b>The derivative of a function</b></DD></DL>
+derivative  = limit of difference quotient (two flavors)
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>)&nbsp;exists, say f is 
+<U>differentiable</U> at x<sub>0</sub>
+<p>
+Fact: f differentiable (diff'ble) at x<sub>0</sub>, then f cts at x<sub>0</sub>
+<p>
+h<font face="symbol">®</font
+> 0 notation: replace x<sub>0</sub> with x (= variable), get f<sup><font face="symbol">¢</font
+></sup>(x)
+<U>new</U> 
+<U>function</U>
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(x)the derivative of f = function whose vaules are the slopes of the tangent
+<p>
+lines to the graph of y=f(x)&nbsp;. Domain = every point where the limit exists
+<p>
+Notation:
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(x)[dy/dx][d/dx](f(x)) = [df/dx] = y<sup><font face="symbol">¢</font
+></sup> = D<sub>x</sub> f = Df = (f(x))<sup><font face="symbol">¢</font
+></sup>
+<p>
+<p>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ <b>Differentiation rules</b></DD></DL>
+[d/dx](constant) = 0
+<p>
+[d/dx](x) = 1
+<p>
+
+<p>
+(f(x)+g(x))<sup><font face="symbol">¢</font
+></sup> = (f(x))<sup><font face="symbol">¢</font
+></sup>+ (g(x))<sup><font face="symbol">¢</font
+></sup>
+<p>
+(f(x)-g(x))<sup><font face="symbol">¢</font
+></sup>= (f(x))<sup><font face="symbol">¢</font
+></sup>- (g(x))<sup><font face="symbol">¢</font
+></sup>
+<p>
+(cf(x))<sup><font face="symbol">¢</font
+></sup>= c(f(x))<sup><font face="symbol">¢</font
+></sup>
+<p>
+<p>
+(f(x)g(x))<sup><font face="symbol">¢</font
+></sup>= (f(x))<sup><font face="symbol">¢</font
+></sup>g(x)+ f(x)(g(x))<sup><font face="symbol">¢</font
+></sup>
+<p>
+([f(x)/g(x)])<sup><font face="symbol">¢</font
+></sup>= [(f<sup><font face="symbol">¢</font
+></sup>(x)g(x)-f(x)g<sup><font face="symbol">¢</font
+></sup>(x))/(g<sup>2</sup>(x))]
+<p>
+<p>
+(x<sup>n</sup>)<sup><font face="symbol">¢</font
+></sup>= nx<sup>n-1</sup> , for n=0,1,-1,2,-2,3,.......
+<p>
+(( (1/g(x))<sup><font face="symbol">¢</font
+></sup>= -ggp/(g(x))<sup>2</sup> ))
+<p>
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(x)&nbsp;is `just' a 
+<U>function</U>, so we can take its derivative!
+<p>
+(f<sup><font face="symbol">¢</font
+></sup>(x))<sup><font face="symbol">¢</font
+></sup>= f<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(x)(= y<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup> = [(d<sup>2</sup>y)/(dx<sup>2</sup>)] = [(d<sup>2</sup>f)/(dx<sup>2</sup>)])
+<p>
+= second derivative of f (=rate of change of rate of change of f !)
+<p>
+Keep going! f<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(x) = 3rd derivative, f<sup>(n)</sup>(x) = nth derivative
+<p>
+
+<p>
+
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ <b>Rates of change</b></DD></DL>
+Physical interpretation:
+<p>
+f(t)= position at time t
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(t)= rate of change of position = velocity
+<p>
+f<sup><font face="symbol">¢</font
+><font face="symbol">¢</font
+></sup>(t)= rate of change of velocity = acceleration
+<p>
+<font face="symbol">|</font
+>f<sup><font face="symbol">¢</font
+></sup>(t)<font face="symbol">|</font
+> = speed
+<p>
+Basic principle: for object to change direction (velocity changes sign), 
+<p>
+f<sup><font face="symbol">¢</font
+></sup>(t)= 0 somewhere (IVT!)
+<p>
+Examples:
+<p>
+Free-fall: object falling near earth; s(t) = s<sub>0</sub>+v<sub>0</sub> t-[g/2] t<sup>2</sup>
+<p>
+s<sub>0</sub> = s(0) = initial position; v<sub>0</sub> = initial velocity; g= acceleration due to gravity
+<p>
+Economics: 
+<p>
+C(x) = cost of making x objects; R(x) = revenue from selling x objects; 
+<p>
+P = R-C = profit
+<p>
+C<sup><font face="symbol">¢</font
+></sup>(x) = marginal cost = cost of making `one more' object
+<p>
+R<sup><font face="symbol">¢</font
+></sup>(x) = marginal revenue ; profit is maximized when P<sup><font face="symbol">¢</font
+></sup>(x) = 0 ;
+<p>
+i.e., R<sup><font face="symbol">¢</font
+></sup>(x) = C<sup><font face="symbol">¢</font
+></sup>(x)
+<p>
+<p>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ <b>Derivatives of trigonometric functions</b></DD></DL>
+Basic limit: lim<sub>x<font face="symbol">®</font
+>0</sub>[sinx/x] = 1 ; everything else comes from this!
+<p>
+Note: this uses radian measure! lim<sub>x<font face="symbol">®</font
+>0</sub>[sin(bx)/x] = b
+<p>
+Then we get:
+<p>
+(sinx)<sup><font face="symbol">¢</font
+></sup>= cosx (cosx)<sup><font face="symbol">¢</font
+></sup>= -sinx
+<p>
+(tanx)<sup><font face="symbol">¢</font
+></sup>= sec<sup>2</sup> x (cotx)<sup><font face="symbol">¢</font
+></sup>=  = csc<sup>2</sup> x
+<p>
+(secx)<sup><font face="symbol">¢</font
+></sup>= secx tanx (cscx)<sup><font face="symbol">¢</font
+></sup>=  = cscxcotx
+<p>
+<p>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ <b>The Chain Rule</b></DD></DL>
+Composition (g<font face="symbol">°</font
+>f)(x<sub>0</sub>) = g(f(x<sub>0</sub>)) ; (note: we 
+<U>don't</U> know what g(x<sub>0</sub>) is.)
+<p>
+(g<font face="symbol">°</font
+>f)<sup><font face="symbol">¢</font
+></sup> ought to have something to do with g<sup><font face="symbol">¢</font
+></sup>(x)&nbsp;and f<sup><font face="symbol">¢</font
+></sup>(x)
+<p>
+in particular, (g<font face="symbol">°</font
+>f)<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>) should depend on f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>) and g<sup><font face="symbol">¢</font
+></sup>(f(x<sub>0</sub>))
+<p>
+<p>
+Chain Rule: (g<font face="symbol">°</font
+>f)<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>) = g<sup><font face="symbol">¢</font
+></sup>(f(x<sub>0</sub>))f<sup><font face="symbol">¢</font
+></sup>(x<sub>0</sub>)
+<p>
+= (d(outside) eval'd at inside fcn)&#183;(d(inside))
+<p>
+Ex: ((x<sup>3</sup>+x-1)<sup>4</sup>)<sup><font face="symbol">¢</font
+></sup>= (4(x<sup>3</sup>+1-1)<sup>3</sup>)(3x<sup>2</sup>+1)
+<p>
+<p>
+Different notiation:
+<p>
+y = g(f(x)) = g(u), where u = f(x), then [dy/dx] = [dy/du][du/dx]
+<p>
+<p>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ <b>Implicit differentiation</b></DD></DL>
+We can differentiate functions; what about <i>equations</i>? (e.g., x<sup>2</sup>+y<sup>2</sup> = 1)
+<p>
+graph 
+<U>looks</U> 
+<U>like</U> it has tangent lines
+<p>
+
+
+<p><br><p><br>
+
+
+
+
+Figure<p>
+
+Idea: 
+<U>Pretend</U> equation defines y as a function of x : x<sup>2</sup>+(f(x))<sup>2</sup> = 1
+and differentiate!
+<p>
+ 2x+2f(x) f<sup><font face="symbol">¢</font
+></sup>(x) = 0 ; so 
+ f<sup><font face="symbol">¢</font
+></sup>(x) = [(-x)/f(x)] = [(-x)/y]
+<p>
+Different notation:
+<p>
+x<sup>2</sup>+xy<sup>2</sup>-y<sup>3</sup> = 6 ; then  2x+(y<sup>2</sup>+x(2y[dy/dx])-3y<sup>2</sup>[dy/dx] = 0
+<p>
+ [dy/dx] = [(-2x-y<sup>2</sup>)/(2xy-3y<sup>2</sup>)]
+<p>
+Application: extend the power rule
+<p>
+[d/dx](x<sup>r</sup>) = rx<sup>r-1</sup> works for any <i>rational</i> number r
+<p>
+<p>
+
+<DL compact><DT>&#167; 7:
+</DT><DD>
+ <b>Related Rates</b></DD></DL>
+Idea: If two (or more) quantities are related (a change in one value means a change in
+others), then their rates of change are related, too.
+<p>
+xyz = 3 ; pretend each is a function of t, and differentiate (implicitly).
+<p>
+General procedure:
+<p>
+Draw a picture, describing the situation; label things with variables.
+<p>
+Which variables, rates of change do you know, or want to know?
+<p>
+Find an equation relating the variables whose <i>rates of change</i> you know or want to 
+know.
+<p>
+Differentiate!
+<p>
+Plug in the values that you know.
+<p>
+<p><br>
+
+
+<p><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

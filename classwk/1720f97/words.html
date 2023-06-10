@@ -1,0 +1,1285 @@
+<HTML>
+
+
+
+
+
+
+
+<title> Outline of Math 1720 </title>
+
+<body bgcolor="efcfaf" link="0F0FFF"
+alink="FF0000" vlink="FF0000">
+
+
+
+
+
+
+
+
+
+
+<center><b>Math 1720</center></b>
+<br>
+
+
+<center><b>Outline of the course</center></b>
+<br>
+<br>
+
+<center>(a.k.a. study sheet for final exam)</center><br>
+<br>
+<br>
+
+<b>Chapter 6:</b> Transcendental functions
+<br>
+<br>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ Inverse functions and their derivatives</DD></DL>
+Basic idea: run a function backwards
+<br>
+y=f(x) ; `assign' the value x to the input y ; x=g(y)
+<br>
+need g a function; so need f is one-to-one
+<br>
+f one=to one: if f(x)=f(y) then x=y ; if x <font face="symbol">¹</font
+> y then f(x) <font face="symbol">¹</font
+> f(y)
+<br>
+g = f<sup>-1</sup>, then g(f(x)) = x and f(g(x)) = x (i.e., g<font face="symbol">°</font
+>f=Id and f<font face="symbol">°</font
+>g=Id)
+<br>
+finding inverses: rewrite y=f(x) as x=some expression in y
+<br>
+graphs: if (a,b) on graph of f, then (b,a) on graph of f<sup>-1</sup>
+<br>
+graph of f<sup>-1</sup> is graph of f, reflected across line y=x
+<br>
+horizontal lines go to vertical lines; horizontal line test for inverse
+<br>
+derivative of the inverse:
+<br>
+f<sup><font face="symbol">¢</font
+></sup>(f<sup>-1</sup>(x))&#183;(f<sup>-1</sup>)<sup><font face="symbol">¢</font
+></sup>(x) = 1
+<br>
+if f(a) = b, then (f<sup>-1</sup>)<sup><font face="symbol">¢</font
+></sup>(b) = 1/f<sup><font face="symbol">¢</font
+></sup>(a)
+<br>
+<br>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ Natural logarithms</DD></DL>
+log's turn products into sums: log(ab) = log(a) + log(b)
+<br>
+<b>Define</b> lnx = <font face="symbol">ò</font
+><sub>1</sub><sup>x</sup> </i></b></tt>dt/t = area under 1/t from 1 to x
+<br>
+lnx is a log: ln(ab) = ln(a) + ln(b)
+<br>
+ln(a<sup>b</sup>) = bln(a) ; ln(a/b) = ln(a)-ln(b)
+<br>
+</i></b></tt>[d/dx](lnx) = 1/x ; </i></b></tt>[d/dx](ln(f(x))) =  [(f<sup><font face="symbol">¢</font
+></sup>(x))/f(x)]
+<br>
+ <font face="symbol">ò</font
+>[(f<sup><font face="symbol">¢</font
+></sup>(x))/f(x)]dx = ln<font face="symbol">|</font
+>f(x)<font face="symbol">|</font
+>+c
+<br>
+Logarithmic differentiation: f<sup><font face="symbol">¢</font
+></sup>(x) = f(x)</i></b></tt>[d/dx](ln(f(x)))
+<br>
+<br>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ The exponential function</DD></DL>
+e<sup>x</sup> = inverse of lnx ; e<sup>lnx</sup> = x (x<font face="symbol"> &gt; </font
+>0), ln(e<sup>x</sup>) = x (all x)
+<br>
+e<sup>a+b</sup> = e<sup>a</sup> e<sup>b</sup>, e<sup>ab</sup> = (e<sup>a</sup>)<sup>b</sup> ; e<sup>1</sup> = e = 2.718281828459045<font face="symbol">¼</font
+>
+<br>
+</i></b></tt>[d/dx](e<sup>x</sup>) = e<sup>x</sup> ; <font face="symbol">ò</font
+>e<sup>x</sup> dx = e<sup>x</sup>+c
+<br>
+<br>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ a<sup>x</sup> and log<sub>a</sub> x</DD></DL>
+ln(a<sup>b</sup>) <b>should be</b> blna, so a<sup>b</sup> = e<sup>blna</sup>
+<br>
+a<sup>b+c</sup> = a<sup>b</sup> a<sup>c</sup> ; a<sup>bc</sup> = (a<sup>b</sup>)<sup>c</sup>
+<br>
+a<sup>x</sup> = e<sup>xlna</sup> ; </i></b></tt>[d/dx](a<sup>x</sup>) = a<sup>x</sup> lna ; 
+<font face="symbol">ò</font
+>a<sup>x</sup> dx = [(a<sup>x</sup>)/lna]+c
+<br>
+x<sup>r</sup> = e<sup>rlnx</sup> ; </i></b></tt>[d/dx](x<sup>r</sup>) = rx<sup>r-1</sup>
+<br>
+f(x)=a<sup>x</sup> is <b>either</b> always increasing (a<font face="symbol"> &gt; </font
+>1) <b>or</b> always decreasing (a<font face="symbol"> &lt; </font
+>1)
+<br>
+inverse is g(x) = log<sub>a</sub> x = [lnx/lna]
+<br>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ Exponential growth and decay</DD></DL>
+<b>differential equation</b> f<sup><font face="symbol">¢</font
+></sup>(x) = kf(x) has solutions f(x) = Ae<sup>kx</sup>
+<br>
+A = f(0) = initial condition
+<br>
+Many common phenomena are modelled by exponential functions
+<br>
+population growth
+<br>
+population at t=0 and t=a, what will population be at t=b ?
+<br>
+radioactive decay
+<br>
+half-life = time for half of original substance to decay
+<br>
+given amount at t=0 and t=a, what is half-life?
+<br>
+given amount ant half-life, how much at time t=a ?
+<br>
+(continuous) compound interest A(t) = Pe<sup>rt</sup>
+<br>
+given initial amount P and interest rate r, how much at time a ?
+<br>
+intital amount and amount after t=a, what is interest rate?
+<br>
+Newton's Law of Cooling
+<br>
+T(t)=temp at time t, S=surrounding (constant) air temp, 
+then T<sup><font face="symbol">¢</font
+></sup>(t) = k(S-T(t))
+<br>
+Q=S-T(t) is exponential ; T(t) = S-Ae<sup>-kt</sup> (A=constant)
+<br>
+given temp at time t=0 and t=a, what will temp be at t=b ?
+<br>
+given temp at time t=0 and time t=a, when will temp be X ?
+<br>
+<br>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ L'H&#244;pital's Rule</DD></DL>
+indeterminate forms: limits which `evaluate' to 0/0 ; e.g. 
+ lim<sub>x<font face="symbol">®</font
+> 0</sub>[sinx/x]
+<br>
+LR# 1: if f(a) = g(a) = 0, f and g both differentiable at a, and 
+g<sup><font face="symbol">¢</font
+></sup>(a) <font face="symbol">¹</font
+> 0, then
+<br>
+ lim<sub>x<font face="symbol">®</font
+> a</sub>[f(x)/g(x)] = 
+ [(f<sup><font face="symbol">¢</font
+></sup>(a))/(g<sup><font face="symbol">¢</font
+></sup>(a))]
+<br>
+what if  [(f<sup><font face="symbol">¢</font
+></sup>(a))/(g<sup><font face="symbol">¢</font
+></sup>(a))] `=' 0/0 ? LR# 2:
+<br>
+if f(a) = g(a) = 0, f and g both differentiable near a, then
+<br>
+ lim<sub>x<font face="symbol">®</font
+> a</sub>[f(x)/g(x)] = 
+ lim<sub>x<font face="symbol">®</font
+> a</sub>[(f<sup><font face="symbol">¢</font
+></sup>(x))/(g<sup><font face="symbol">¢</font
+></sup>(x))] 
+<br>
+other indeterminate forms:  [(<font face="symbol">¥</font
+>)/(<font face="symbol">¥</font
+>)], 0&#183;<font face="symbol">¥</font
+>, 
+<font face="symbol">¥</font
+>- <font face="symbol">¥</font
+>,
+0<sup>0</sup>, 1<sup><font face="symbol">¥</font
+></sup>, <font face="symbol">¥</font
+><sup>0</sup>
+<br>
+LR#3: if f,g<font face="symbol">®</font
+><font face="symbol">¥</font
+> as x<font face="symbol">®</font
+> a, then
+<br>
+ lim<sub>x<font face="symbol">®</font
+> a</sub>[f(x)/g(x)] = 
+ lim<sub>x<font face="symbol">®</font
+> a</sub>[(f<sup><font face="symbol">¢</font
+></sup>(x))/(g<sup><font face="symbol">¢</font
+></sup>(x))] 
+<br>
+other cases: try to turn them into 0/0 or <font face="symbol">¥</font
+>/<font face="symbol">¥</font
+>
+<br>
+in last three cases, do this by taking logs, first
+<br>
+
+<br>
+
+<DL compact><DT>&#167; 8:
+</DT><DD>
+ Inverse trigonometric functions</DD></DL>
+<br>
+<br>
+Trig functions (sinx, cosx, tanx, etc.) 
+aren't one-to-one; make them!
+<br>
+sinx, -<font face="symbol">p</font
+>/2 <font face="symbol">£</font
+> x <font face="symbol">£</font
+> <font face="symbol">p</font
+>/2 is one-to-one; inverse is
+arcsinx
+<br>
+sin(arcsinx)=x, all x; 
+arcsin(sinx)=x IF x in range above
+<br>
+tanx, -<font face="symbol">p</font
+>/2<font face="symbol"> &lt; </font
+> x<font face="symbol"> &lt; </font
+> <font face="symbol">p</font
+>/2 is one-to-one; inverse is
+arctanx
+<br>
+tan(arctanx)=x, all x; 
+arctan(tanx)=x IF x in range above
+<br>
+secx, 0 <font face="symbol">£</font
+> x<font face="symbol"> &lt; </font
+><font face="symbol">p</font
+>/2 and <font face="symbol">p</font
+>/2<font face="symbol"> &lt; </font
+> x <font face="symbol">£</font
+> <font face="symbol">p</font
+>, is 
+one-to-one; inverse is arcsec  x
+<br>
+sec(arcsec x)=x, all x; 
+arcsec(secx)=x IF x in range above
+<br>
+cos(arcsinx), tan(arcsec  x), etc.; use right triangles
+<br>
+other inverse trig functions aren't very useful
+<br>
+<br>
+
+<DL compact><DT>&#167; 9:
+</DT><DD>
+ Derivatives and integrals of inverse trig functions</DD></DL>
+<br>
+<br>
+Derivatives of inverse functions! 
+Use right triangles to simplify.
+<br>
+[d/dx](arcsinx) = 
+[1/([<font face="symbol">Ö</font
+>(1-x<sup>2</sup>)])]
+<br>
+[d/dx](arctanx) = 
+[1/(x<sup>2</sup>+1)]
+<br>
+[d/dx](arcsec  x) = 
+[1/(<font face="symbol">|</font
+>x<font face="symbol">|</font
+>[<font face="symbol">Ö</font
+>(x<sup>2</sup>-1)])]
+<br>
+Integrals: reverse the formulas.
+<br>
+<font face="symbol">ò</font
+>[dx/([<font face="symbol">Ö</font
+>(a<sup>2</sup>-x<sup>2</sup>)])] = 
+arcsin([x/a]) + c
+<br>
+<font face="symbol">ò</font
+>[dx/(x<sup>2</sup>+a<sup>2</sup>)] = 
+[1/a]arctan([x/a]) + c
+<br>
+<font face="symbol">ò</font
+>[dx/(x[<font face="symbol">Ö</font
+>(x<sup>2</sup>-a<sup>2</sup>)])] = 
+[1/a]arcsec(|[x/a]|) + c
+<br>
+<br>
+<b>Chapter 7:</b> Techniques of integration
+<br>
+<br>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ Basic integration formulas (AKA dirty tricks)</DD></DL>
+u-substitution
+<br>
+<font face="symbol">ò</font
+>f(g(x))g<sup><font face="symbol">¢</font
+></sup>(x) dx = 
+<font face="symbol">ò</font
+>f(u) du|<sub>u = g(x)</sub>
+<br>
+complete the square
+<br>
+ax<sup>2</sup>+bx+c = a(x<sup>2</sup>+rx)+c = a(x+r/2)<sup>2</sup> +(c-(r/2)<sup>2</sup>)
+<br>
+Ex: <font face="symbol">ò</font
+>[1/(x<sup>2</sup>+2x+2)] dx
+= <font face="symbol">ò</font
+>[1/((x+1)<sup>2</sup>+1)] dx
+<br>
+use trig identities
+<br>
+sin<sup>2</sup>x+cos<sup>2</sup>x = 1, tan<sup>2</sup>x+1 = sec<sup>2</sup>x, 
+sin(2x) = 2sinxcosx, [tanx/secx]=sinx, etc.
+<br>
+Ex: <font face="symbol">ò</font
+>[(sin<sup>2</sup> x)/cosx] dx =
+<font face="symbol">ò</font
+>[(1-cos<sup>2</sup> x)/cosx] dx = <font face="symbol">¼</font
+>
+<br>
+pull fractions apart; put fractions together!
+<br>
+Ex: <font face="symbol">ò</font
+>[(x+1)/(x<sup>3</sup>)] dx =
+<font face="symbol">ò</font
+>x<sup>-2</sup>+x<sup>-3</sup> dx = <font face="symbol">¼</font
+>
+<br>
+do poylnomial long division
+<br>
+Ex: <font face="symbol">ò</font
+>[(x<sup>3</sup>)/(x<sup>2</sup>-1)] dx =
+<font face="symbol">ò</font
+>x+[x/(x<sup>2</sup>-1)] dx = <font face="symbol">¼</font
+>
+<br>
+add zero, multiply by one
+<br>
+Ex: <font face="symbol">ò</font
+>secx dx =
+
+<font face="symbol">ò</font
+>[(secx(tanx+secx))/(secx+tanx)] dx = <font face="symbol">¼</font
+>
+<br>
+<br>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ Integration by parts</DD></DL>
+
+Product rule: d(uv = (du)v + u(dv)
+<br>
+reverse: <font face="symbol">ò</font
+>u dv = uv-<font face="symbol">ò</font
+>v du
+<br>
+Ex: <font face="symbol">ò</font
+>xcosx dx : set u=x, dv=cosx dx
+<br>
+du=dx, v = sinx (or any 
+<U>other</U> antiderivative)
+<br>
+So: <font face="symbol">ò</font
+>xcosx = xsinx -<font face="symbol">ò</font
+>sinx dx = <font face="symbol">¼</font
+>
+<br>
+special case: <font face="symbol">ò</font
+>f(x) dx; u = f(x), dv=dx
+<br>
+<font face="symbol">ò</font
+>f(x) dx =  xf(x)-<font face="symbol">ò</font
+>xf<sup><font face="symbol">¢</font
+></sup>(x) dx
+<br>
+Ex: <font face="symbol">ò</font
+>arcsinx dx = 
+ xarcsinx-<font face="symbol">ò</font
+>[x/([<font face="symbol">Ö</font
+>(1-x<sup>2</sup>)])] = <font face="symbol">¼</font
+>
+<br>
+<br>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ Partial fractions</DD></DL>
+<br>
+<br>
+rational function = quotient of polynomials
+<br>
+Idea: integrate by writing function as 
+sum of simpler functions
+<br>
+Procedure: f(x) = [p(x)/q(x)]
+<br>
+(0): make sure degree(p)<font face="symbol"> &lt; </font
+>degree(q); long division if not
+<br>
+(1): factor q(x) into linear and irreducible quadratic factors
+<br>
+(2): group common factors together as powers
+<br>
+(3a): for each group (x-a)<sup>n</sup> ADD:
+<br>
+[(a<sub>1</sub>)/(x-a)]+<font face="symbol">¼</font
+>+[(a<sub>n</sub>)/((x-a)<sup>n</sup>)]
+<br>
+(3b): for each group (ax<sup>2</sup>+bx+c)<sup>n</sup> ADD:
+<br>
+[(a<sub>1</sub>x+b<sub>1</sub>)/(ax<sup>2</sup>+bx+c)]+<font face="symbol">¼</font
+>+[(a<sub>n</sub>x+b<sub>n</sub>)/((ax<sup>2</sup>+bx+c)<sup>n</sup>)]
+<br>
+(4) set f(x)=sum; solve for the `undetermined' coefficients
+<br>
+put sum over a common denomenator (=q(x)); set numerators equal.
+<br>
+always works: multiply out, group common powers, set 
+coeffs of the two 
+<br>
+polynomials equal
+<br>
+Ex: x+3 = a(x-1)+b(x-2) = (a+b)x+(-a-2b); 1 = a+b, 3 = -a-2b
+<br>
+linear term (x-a)<sup>n</sup>: set x = a, will give a coefficient
+<br>
+if n <font face="symbol">³</font
+> 2, take derivatives of both sides! set x=a, gives another coeff.
+<br>
+Ex: [(x<sup>2</sup>)/((x-1)<sup>2</sup>(x<sup>2</sup>+1))] = 
+
+ [A/(x-1)]+[B/((x-1)<sup>2</sup>)]+[(Cx+D)/(x<sup>2</sup>+1)] =
+<br>
+[(A(x-1)(x<sup>2</sup>+1)+B(x<sup>2</sup>+1)+(Cx+D)(x-1)<sup>2</sup>)/((x-1)<sup>2</sup>(x<sup>2</sup>+1))] = 
+<font face="symbol">¼</font
+>
+<br>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ Trig substitution</DD></DL>
+<br>
+<br>
+Idea: get rid of square roots by introducing perfect squares
+<br>
+[<font face="symbol">Ö</font
+>(a<sup>2</sup>-x<sup>2</sup>)] : set x = asinu . dx = acosu du, [<font face="symbol">Ö</font
+>(a<sup>2</sup>-x<sup>2</sup>)] = acosu
+<br>
+Ex: <font face="symbol">ò</font
+>[1/(x<sup>2</sup>[<font face="symbol">Ö</font
+>(1-x<sup>2</sup>)])] dx = 
+<font face="symbol">ò</font
+>[cosu/(sin<sup>2</sup> ucosu)] d u|<sub>x = sinu</sub> = 
+<font face="symbol">¼</font
+>
+<br>
+
+[<font face="symbol">Ö</font
+>(a<sup>2</sup>+x<sup>2</sup>)] : set x = atanu . dx = asec<sup>2</sup> u du, [<font face="symbol">Ö</font
+>(a<sup>2</sup>+x<sup>2</sup>)] = asecu
+<br>
+Ex: <font face="symbol">ò</font
+>[1/((x<sup>2</sup>+4)<sup>3/2</sup>)] dx = 
+<font face="symbol">ò</font
+>[(2sec<sup>2</sup> u)/((2secu)<sup>3</sup>)] d u|<sub>x = 2tanu</sub> = 
+<font face="symbol">¼</font
+>
+<br>
+
+[<font face="symbol">Ö</font
+>(x<sup>2</sup>-a<sup>2</sup>)] : set x = asecu . dx = asecutanu du, [<font face="symbol">Ö</font
+>(x<sup>2</sup>-a<sup>2</sup>)] = atanu
+<br>
+Ex: <font face="symbol">ò</font
+>[1/(x<sup>2</sup>[<font face="symbol">Ö</font
+>(x<sup>2</sup>-1)])] dx = 
+<font face="symbol">ò</font
+>[secutanu/(sec<sup>2</sup> u tanu)] 
+d u|<sub>x = secu</sub> = <font face="symbol">¼</font
+>
+<br>
+Undoing the ``u-substitution'': use right triangles
+<br>
+<br>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ Improper integrals</DD></DL>
+usual idea: <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup>f(x) dx = F(b)-F(a), where F<sup><font face="symbol">¢</font
+></sup>(x) = f(x)
+<br>
+Problems: a = -<font face="symbol">¥</font
+>, b = <font face="symbol">¥</font
+>; f blows up at a or b or somewhere in between
+<br>
+integral is``improper''; usual technique doesn't work
+<br>
+Solutions:
+<br>
+<font face="symbol">ò</font
+><sub>a</sub><sup><font face="symbol">¥</font
+></sup>f(x) dx = 
+lim<sub>b<font face="symbol">®</font
+><font face="symbol">¥</font
+></sub><font face="symbol">ò</font
+><sub>a</sub><sup>b</sup>f(x) dx
+<br>
+(similarly for a = -<font face="symbol">¥</font
+>)
+<br>
+(blows up at a) <font face="symbol">ò</font
+><sub>a</sub><sup>b</sup>f(x) dx = 
+lim<sub>r<font face="symbol">®</font
+> a<sup>-</sup></sub><font face="symbol">ò</font
+><sub>r</sub><sup>b</sup>f(x) dx
+<br>
+(similarly for blowup at b (or both!))
+<br>
+(blows up at c (b/w a and b))
+<font face="symbol">ò</font
+><sub>a</sub><sup>b</sup>f(x) dx = 
+lim<sub>r<font face="symbol">®</font
+> c<sup>-</sup></sub><font face="symbol">ò</font
+><sub>a</sub><sup>r</sup>f(x) dx
++ lim<sub>s<font face="symbol">®</font
+> c<sup>+</sup></sub><font face="symbol">ò</font
+><sub>s</sub><sup>b</sup>f(x) dx
+<br>
+integral 
+<U>converges</U> if (all of the) limit(s) are finite
+<br>
+<br>
+Comparison: 0 <font face="symbol">£</font
+> f(x) <font face="symbol">£</font
+> g(x) for all x;
+<br>
+if <font face="symbol">ò</font
+><sub>a</sub><sup><font face="symbol">¥</font
+></sup>g(x) dx converges, so does 
+<font face="symbol">ò</font
+><sub>a</sub><sup><font face="symbol">¥</font
+></sup>f(x) dx
+<br>
+Limit comparison: f,g <font face="symbol">³</font
+> 0, 
+lim<sub>x<font face="symbol">®</font
+><font face="symbol">¥</font
+></sub>[f(x)/g(x)] = L, L <font face="symbol">¹</font
+> 0,<font face="symbol">¥</font
+>, then
+<br>
+<font face="symbol">ò</font
+><sub>a</sub><sup><font face="symbol">¥</font
+></sup>f(x) dx and 
+<font face="symbol">ò</font
+><sub>a</sub><sup><font face="symbol">¥</font
+></sup>g(x) dx either both converge or both diverge
+<br>
+<br><br><br><br>
+<b>Chapter 8:</b> Infinite series
+<br>
+<br>
+
+<DL compact><DT>&#167; 1:
+</DT><DD>
+ Limits of sequences of numbers</DD></DL>
+<br>
+<br>
+A sequence is:
+<br>
+a string of numbers
+<br>
+a function f:<b>N</b><font face="symbol">®</font
+><b>R</b>; write f(n) = a<sub>n</sub>
+<br>
+Recursive formula: formula for a<sub>n</sub> based on a<sub>n-1</sub>, a<sub>n-2</sub>,<font face="symbol">¼</font
+> e.g., a<sub>n</sub>=1+(1/a<sub>n-1</sub>)
+<br>
+Graph: on number line; in Cartesian plane
+<br>
+Basic question: convergence/divergence
+<br>
+lim<sub>n<font face="symbol">®</font
+><font face="symbol">¥</font
+></sub>a<sub>n</sub> = L (or a<sub>n</sub><font face="symbol">®</font
+> L) if
+<br>
+eventually all of the a<sub>n</sub> are always as close to L as we like, i.e.
+<br>
+for any <font face="symbol">e</font
+><font face="symbol"> &gt; </font
+>0, there is an N so that if n <font face="symbol">³</font
+> N then <font face="symbol">|</font
+>a<sub>n</sub>-L<font face="symbol">|</font
+><font face="symbol"> &lt; </font
+><font face="symbol">e</font
+>
+<br>
+Ex.: a<sub>n</sub> = 1/n converges to 0 ; always choose N=1/<font face="symbol">e</font
+>
+<br>
+a<sub>n</sub> = (-1)<sup>n</sup> diverges; terms of the sequence never settle down to a 
+<U>single</U> number
+<br>
+Subsequence: &nbsp;a<sub>n<sub>k</sub></sub>}<sub>k = 1</sub><sup><font face="symbol">¥</font
+></sup> ; chooose only occasional terms out of 
+]&nbsp;a<sub>n</sub>}<sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup>
+<br>
+If a<sub>n</sub><font face="symbol">®</font
+> L, then a<sub>n<sub>K</sub></sub><font face="symbol">®</font
+> L for <b>every</b> subsequence
+<br>
+If a<sub>n</sub> is increasing (a<sub>n+1</sub> <font face="symbol">³</font
+> a<sub>n</sub> for every n) and bounded from above 
+<br>
+(a<sub>n</sub> <font face="symbol">£</font
+> M for every n, for some M) , THEN a<sub>n</sub> converges (but not necessarily to M !)
+<br>
+<br>
+
+<DL compact><DT>&#167; 2:
+</DT><DD>
+ Limit theorems for sequences</DD></DL>
+<br>
+<br>
+Idea: limits of sequences are alot like limits of functions
+<br>
+<br>
+Is a<sub>n</sub><font face="symbol">®</font
+> L and b<sub>n</sub><font face="symbol">®</font
+> M, then
+<br>
+(a<sub>n</sub>+b<sub>n</sub><font face="symbol">®</font
+> L+M (a<sub>n</sub>-b<sub>n</sub><font face="symbol">®</font
+> L-M hsk (a<sub>n</sub> b<sub>n</sub><font face="symbol">®</font
+> L M , and
+<br>
+(a<sub>n</sub>/b<sub>n</sub><font face="symbol">®</font
+> L/M (provided M, all b<sub>n</sub> are  <font face="symbol">¹</font
+>  0)
+<br>
+<br>
+Sqeeze play: if a<sub>n</sub> <font face="symbol">£</font
+> b<sub>n</sub> <font face="symbol">£</font
+> c<sub>n</sub> (for all n large enough) and
+<br>
+a<sub>n</sub><font face="symbol">®</font
+> L and c<sub>n</sub><font face="symbol">®</font
+> L , then b<sub>n</sub><font face="symbol">®</font
+> L
+<br>
+<br>
+If a<sub>n</sub><font face="symbol">®</font
+> L and f:<b>R</b><font face="symbol">®</font
+><b>R</b> is continuous at L, then 
+f(a<sub>n</sub>)<font face="symbol">®</font
+> f(L)
+<br>
+<br>
+if a<sub>n</sub> = f(n) for some function f:<b>R</b><font face="symbol">®</font
+><b>R</b> and 
+lim<sub>x<font face="symbol">®</font
+><font face="symbol">¥</font
+></sub>f(x) = L , then
+a<sub>n</sub><font face="symbol">®</font
+> L 
+<br>
+(allows us to use L'Hopital's Rule!)
+<br>
+<br>
+Another basic list: (x = fixed number, k = konstant)
+<br>
+[1/n]<font face="symbol">®</font
+> 0  k <font face="symbol">®</font
+> k
+<br>
+ x<sup>[1/n]</sup><font face="symbol">®</font
+> 1  n<sup>[1/n]</sup><font face="symbol">®</font
+> 1
+<br>
+(1+[x/n])<sup>n</sup><font face="symbol">®</font
+> e<sup>x</sup> [(x<sup>n</sup>)/n!]<font face="symbol">®</font
+> 0
+<br>
+ x<sup>n</sup><font face="symbol">®</font
+>  0, if <font face="symbol">|</font
+>x<font face="symbol">|</font
+><font face="symbol"> &lt; </font
+>1 ; 1, if x = 1 ; diverges, otherwise 
+<br>
+<br>
+
+<DL compact><DT>&#167; 3:
+</DT><DD>
+ Infinite series</DD></DL>
+<br>
+<br>
+An infinite series is an infinite sum of numbers
+<br>
+a<sub>1</sub>+a<sub>2</sub>+a<sub>3</sub>+<font face="symbol">¼</font
+> = <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> (summation notation)
+<br>
+n-th term of series = a<sub>n</sub> ; N-th partial sum of series = s<sub>N</sub> = <font face="symbol">å</font
+><sub>n = 1</sub><sup>N</sup> a<sub>n</sub>
+<br>
+Infinite series <b>converges</b> is the sequence of partial sums {s<sub>N</sub>}<sub>N = 1</sub><sup><font face="symbol">¥</font
+></sup> converges
+<br>
+We may start the series anywhere: <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>, 
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>, 
+<font face="symbol">å</font
+><sub>n = 3437</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>, etc. ; 
+<br>
+convergence is unaffected (but the number it adds up to is!)
+<br>
+Ex. geometric series:
+<br>
+a<sub>n</sub> = ar<sup>n</sup> ; <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> = [a/(1-r)]
+<br>
+<b>if</b> <font face="symbol">|</font
+>r<font face="symbol">|</font
+><font face="symbol"> &lt; </font
+>1; otherwise, the series <b>diverges</b>.
+<br>
+Ex. Telescoping series:  partial sums s<sub>N</sub> `collapse' to a simple expression
+<br>
+E.g. <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> [1/(n(n+2))] ; s<sub>N</sub> = 
+
+[1/2](([1/3]+[1/8])-([1/((N-1)(N+1))]+[1/(N(N+2))]))
+<br>
+<br>
+n-th term test: if <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> converges, then a<sub>n</sub><font face="symbol">®</font
+> 0
+<br>
+So if the n-th terms <b>don't</b> go to 0, then <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> diverges
+<br>
+Basic limit theorems: if <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> and 
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> b<sub>n</sub> converge, then
+<br>
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> (a<sub>n</sub>+b<sub>n</sub>)=
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> b<sub>n</sub>
+<br>
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> (a<sub>n</sub>-b<sub>n</sub>)=
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>-<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> b<sub>n</sub>
+<br>
+<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> (k a<sub>n</sub>)=  k<font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>
+<br>
+(Note: there are  no <b>no NO</b> results corresponding to products or quotients.)
+<br>
+Truncating a series: <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> =
+<font face="symbol">å</font
+><sub>n = N</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> + <font face="symbol">å</font
+><sub>n = 1</sub><sup>N-1</sup> a<sub>n</sub>
+<br>
+<br>
+
+<DL compact><DT>&#167; 4:
+</DT><DD>
+ The integral test</DD></DL>
+<br>
+<br>
+Idea: <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> with a<sub>n</sub> <font face="symbol">³</font
+> 0 all n, then
+the partial sums 
+<br>
+{ s<sub>N</sub>}<sub>N = 1</sub><sup><font face="symbol">¥</font
+></sup> form an increasing sequence; 
+<br>
+so converge exactly when bounded from above
+<br>
+<b>If</b> (eventually) a<sub>n</sub> = f(n) for a <b>decreasing</b> function f:[a,<font face="symbol">¥</font
+>)<font face="symbol">®</font
+><b>R</b>, then
+<br>
+
+<center><font face="symbol">ò</font
+><sub>a+1</sub><sup>N+1</sup> f(x) dx  <font face="symbol">£</font
+>  s<sub>N</sub> = <font face="symbol">å</font
+><sub>n = a</sub><sup>N</sup> a<sub>n</sub>
+ <font face="symbol">£</font
+>  <font face="symbol">ò</font
+><sub>a</sub><sup>N</sup> f(x) dx</center><br>
+<br>
+so <font face="symbol">å</font
+><sub>n = a</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> converges exactly when 
+<font face="symbol">ò</font
+><sub>a</sub><sup><font face="symbol">¥</font
+></sup> f(x) dx converges
+<br>
+<br>
+Ex: <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> [1/(n<sup>p</sup>)] converges exactly when p<font face="symbol"> &gt; </font
+>1 (p-series)
+<br>
+<br>
+
+<DL compact><DT>&#167; 5:
+</DT><DD>
+ Comparison tests</DD></DL>
+<br>
+<br>
+Again, think <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> , with a<sub>n</sub> <font face="symbol">³</font
+> 0 all n
+<br>
+Convergence depends only on partial sums s<sub>N</sub> being <b>bounded</b>
+<br>
+One easy way to determine this: <b>compare</b> series with 
+<br>
+one we <b>know</b> converges or diverges
+<br>
+<br>
+Comparison test: If b<sub>n</sub> <font face="symbol">³</font
+> a<sub>n</sub> <font face="symbol">³</font
+> 0 for all n (past a certain point), then
+<br>
+if <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> b<sub>n</sub> converges, so does <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub>
+<br>
+if <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> diverges, so does <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> b<sub>n</sub>
+<br>
+(i.e., smaller than a convergent series converges; 
+<br>
+bigger than a divergent series diverges)
+<br>
+<br>
+More refined: Limit comparison test: a<sub>n</sub> and b<sub>n</sub>  <font face="symbol">³</font
+> 0 for all n, 
+[(a<sub>n</sub>)/(b<sub>n</sub>)]<font face="symbol">®</font
+> L
+<br>
+If L <font face="symbol">¹</font
+> 0 and L <font face="symbol">¹</font
+> <font face="symbol">¥</font
+>, then <font face="symbol">å</font
+>a<sub>n</sub> anf <font face="symbol">å</font
+>b<sub>n</sub> either
+<b>both</b> converge or <b>both</b> diverge
+<br>
+If L = 0 and <font face="symbol">å</font
+>b<sub>n</sub> converges, then so does <font face="symbol">å</font
+>a<sub>n</sub>
+<br>
+If L = <font face="symbol">¥</font
+> and <font face="symbol">å</font
+>b<sub>n</sub> diverges, then so does <font face="symbol">å</font
+>a<sub>n</sub>
+<br>
+(Why? eventually (L/2) b<sub>n</sub>  <font face="symbol">£</font
+> a<sub>n</sub>  <font face="symbol">£</font
+> (3L/2) b<sub>n</sub> ; so can use comparison test.)
+<br>
+<br>
+Ex: <font face="symbol">å</font
+>1/(n<sup>3</sup>-1 converges; L-comp with <font face="symbol">å</font
+>1/n<sup>3</sup>
+<br>
+<font face="symbol">å</font
+>n/3<sup>n</sup> converges; L-comp with <font face="symbol">å</font
+>1/2<sup>n</sup>
+<br>
+<font face="symbol">å</font
+>1/(nln(n<sup>2</sup>+1) diverges; L-comp with <font face="symbol">å</font
+>1/(nlnn)
+<br>
+<br>
+
+<DL compact><DT>&#167; 6:
+</DT><DD>
+ The ratio and root tests</DD></DL>
+Previous tests have you compare your series with <b>something else</b>
+<br>
+(another series, an improper integral)
+<br>
+Ratio Test: <font face="symbol">å</font
+>a<sub>n</sub>, a<sub>n</sub><font face="symbol"> &gt; </font
+>0 all n; 
+lim<sub>n<font face="symbol">®</font
+> <font face="symbol">¥</font
+></sub>[(a<sub>n+1</sub>)/(a<sub>n</sub>)] = L
+<br>
+If L<font face="symbol"> &lt; </font
+>1 then <font face="symbol">å</font
+>a<sub>n</sub> converges
+<br>
+If L<font face="symbol"> &gt; </font
+>1, then <font face="symbol">å</font
+>a<sub>n</sub> diverges
+<br>
+If L = 1, then try something else!
+<br>
+Root Test: <font face="symbol">å</font
+>a<sub>n</sub>, a<sub>n</sub><font face="symbol"> &gt; </font
+>0 all n; 
+lim<sub>n<font face="symbol">®</font
+> <font face="symbol">¥</font
+></sub>(a<sub>n</sub>(<sup>1/n</sup> = L
+<br>
+If L<font face="symbol"> &lt; </font
+>1 then <font face="symbol">å</font
+>a<sub>n</sub> converges
+<br>
+If L<font face="symbol"> &gt; </font
+>1, then <font face="symbol">å</font
+>a<sub>n</sub> diverges
+<br>
+If L = 1, then try something else!
+<br>
+Ex: <font face="symbol">å</font
+>[(4<sup>n</sup>)/n!] converges by ratio test
+<font face="symbol">å</font
+>[(n<sup>5</sup>)/(n<sup>n</sup>)] converges by the root test
+<br>
+
+<DL compact><DT>&#167; 8:
+</DT><DD>
+ Power series</DD></DL>
+Idea: turn a series into a function, by making the terms a<sub>n</sub>  on x
+<br>
+replace a<sub>n</sub> with a<sub>n</sub> x<sup>n</sup> ; series of powers
+<br>
+<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> x<sup>n</sup> = power series centered at 0
+<br>
+<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> (x-a)<sup>n</sup> = power series centered at a
+<br>
+Big question: where does it converge? Solution from ratio test
+<br>
+lim|[(a<sub>n+1</sub>)/(a<sub>n</sub>)]|=L, set R=[1/L]
+<br>
+then <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> (x-a)<sup>n</sup> converges for <font face="symbol">|</font
+>x-a<font face="symbol">|</font
+><font face="symbol"> &lt; </font
+>R
+<br>
+diverges for <font face="symbol">|</font
+>x-a<font face="symbol">|</font
+><font face="symbol"> &gt; </font
+>R ; R = radius of convergence
+<br>
+Ex.: <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> x<sup>n</sup> = [1/(1-x)] ; conv. for <font face="symbol">|</font
+>x<font face="symbol">|</font
+><font face="symbol"> &lt; </font
+>1
+<br>
+Idea: partial sums <font face="symbol">å</font
+><sub>k = 0</sub><sup>n</sup> a<sub>k</sub> x<sup>k</sup> are ;
+<br>
+if f(x)=<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> x<sup>n</sup>, then the poly's make good approximations for f
+<br>
+Differentiation and integration of power series
+<br>
+Idea: if you diff. or int. each term of a power series, you get a power series 
+<br>
+which is the deriv. or integral of the original one.
+<br>
+If f(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> (x-a)<sup>n</sup> has radius of conv R,
+<br>
+then so does g(x) = <font face="symbol">å</font
+><sub>n = 1</sub><sup><font face="symbol">¥</font
+></sup> n a<sub>n</sub> (x-a)<sup>n-1</sup>, and
+g(x) = f<sup><font face="symbol">¢</font
+></sup>(x)
+<br>
+AND so does g(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(a<sub>n</sub>)/(n+1)] (x-a)<sup>n+1</sup>, and
+g<sup><font face="symbol">¢</font
+></sup>(x) = f(x)
+<br>
+Ex: f(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(x<sup>n</sup>)/n!], then 
+<br>
+f<sup><font face="symbol">¢</font
+></sup>(x) = f(x) , so (since f(0) = 1) f(x) = e<sup>x</sup> = 
+<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(x<sup>n</sup>)/n!]
+<br>
+Ex.: [1/(1-x)] = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> x<sup>n</sup>, so
+<br>
+ -ln(1-x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(x<sup>n+1</sup>)/(n+1)] 
+(for <font face="symbol">|</font
+>x<font face="symbol">|</font
+>&lt;1)
+<br>
+Ex:. arctanx = <font face="symbol">ò</font
+>[1/(1-(-x<sup>2</sup>))] dx =  <font face="symbol">ò</font
+><font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> (-x<sup>2</sup>)<sup>n</sup> dx =
+<br>
+<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((-1)<sup>n</sup>x<sup>2n+1</sup>)/(2n+1)] (for <font face="symbol">|</font
+>x<font face="symbol">|</font
+><font face="symbol"> &lt; </font
+>1)
+<br>
+<br>
+
+<DL compact><DT>&#167; 9:
+</DT><DD>
+ Taylor and MacLaurin series
+<br></DD></DL>
+Idea: start with function f(x), find power series FOR it.
+<br>
+IF f(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> a<sub>n</sub> (x-a)<sup>n</sup>, then (term by term diff.)
+<br>
+f<sup>(n)</sup>(a) = n!a<sub>n</sub> ; SO a<sub>n</sub> = [(f<sup>(n)</sup>(a))/n!]
+<br>
+Starting with f, define P(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(f<sup>(n)</sup>(a))/n!] (x-a)<sup>n</sup> ,
+<br>
+the Taylor series for f, centered at a.
+<br>
+P<sub>n</sub>(x) = <font face="symbol">å</font
+><sub>k = 0</sub><sup>n</sup> [(f<sup>(k)</sup>(a))/k!] (x-a)<sup>k</sup> , the n-th Taylor
+polynomial for f.
+<br>
+<br>
+Ex.: f(x) = sinx, then P(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((-1)<sup>n</sup>)/((2n+1)!)] x<sup>2n+1</sup>
+<br>
+Big questions: Is f(x) = P(x) ? (I.e., does f(x)-P<sub>n</sub>(x) tend to 0 ?)
+<br>
+If so, how well do the P-n's approximate f ? (I.e., how small IS f(x)-P<sub>n</sub>(x) ?)
+<br>
+<br>
+
+<DL compact><DT>&#167; 10:
+</DT><DD>
+ Error estimates</DD></DL>
+f(x) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(f<sup>(n)</sup>(a))/n!] (x-a)<sup>n</sup> 
+<br>
+means that the
+value of f at a point x (far from a) can be determined just from the behavior of f
+near a (i.e., from the derivs. of f at a). This is a VERY powerful property, one that
+we wouldn't ordinarily expect to be true. The amazing thing is that it often IS:
+<br>
+<br>
+P(x,a) = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [(f<sup>(n)</sup>(a))/n!] (x-a)<sup>n</sup> ;
+P<sub>n</sub>(x,a) = <font face="symbol">å</font
+><sub>k = 0</sub><sup>n</sup> [(f<sup>(k)</sup>(a))/k!] (k-a)<sup>n</sup> ;
+<br>
+R<sub>n</sub>(x,a)= f(x)-P<sub>n</sub>(x,a) = n-th remainder term = error in using P<sub>n</sub> to approximate f
+<br>
+
+Taylor's remainder theorem : estimates the size of R<sub>n</sub>(x,a)
+<br>
+If f(x) and all of its derivatives (up to n+1) are continuous on [a,b], then
+<br>
+f(b) = P<sub>n</sub>(b,a) + [(f<sup>(n+1)</sup>(c))/((n+1)!)] (b-a)<sup>n+1</sup> , for some 
+c in [a,b]
+<br>
+i.e., for each x, R<sub>n</sub>(x,a) = 
+[(f<sup>(n+1)</sup>(c))/((n+1)!)] (x-a)<sup>n+1</sup> , for some c between a and x
+<br>
+so if <font face="symbol">|</font
+>F<sup>(n+1)</sup>(x)<font face="symbol">|</font
+><font face="symbol">|</font
+>leq M for every x in [a,b], then 
+
+ <font face="symbol">|</font
+>R<sub>n</sub>(x,a)<font face="symbol">|</font
+> <font face="symbol">£</font
+> [M/((n+1)!)] (x-a)<sup>n+1</sup> for every x in [a,b]
+<br>
+<br>
+Ex.: f(x)=sinx, then <font face="symbol">|</font
+>f<sup>(n+1)</sup>(x)<font face="symbol">|</font
+> <font face="symbol">£</font
+> 1 for all x, so 
+<font face="symbol">|</font
+>R<sub>n</sub>(x,0)<font face="symbol">|</font
+> <font face="symbol">£</font
+> [(<font face="symbol">|</font
+>x<font face="symbol">|</font
+><sup>n+1</sup>)/((n+1)!)]<font face="symbol">®</font
+> 0 
+as n<font face="symbol">®</font
+><font face="symbol">¥</font
+>
+<br>
+so sinx = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((-1)<sup>n</sup>)/((2n+1)!)] x<sup>2n+1</sup>
+<br>
+Similarly, cosx = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((-1)<sup>n</sup>)/(2n)!] x<sup>2n</sup>
+<br>
+<br>
+Use Taylor's remainder to estimate values of functions:
+<br>
+e<sup>x</sup> = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((x)<sup>n</sup>)/(n)!], so 
+e=e<sup>1</sup>=<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [1/(n)!]
+<br>
+
+ <font face="symbol">|</font
+>R<sub>n</sub>(1,0)<font face="symbol">|</font
+> = [(f<sup>(n+1)</sup>(c))/((n+1)!)] = [(e<sup>c</sup>)/((n+1)!)] <font face="symbol">£</font
+> [(e<sup>1</sup>)/((n+1)!)] <font face="symbol">£</font
+> [4/((n+1)!)]
+<br>
+since e<font face="symbol"> &lt; </font
+>4 (since ln(4)<font face="symbol"> &gt; </font
+>(1/2)(1)+(1/4)(2) = 1) 
+<br>
+(Riemann sum for integral of 1/x)
+<br>
+so since [4/((13+1)!)] = 4.58&times;10<sup>-11</sup>, 
+<br>
+e = 
+ 1+1+[1/2]+[1/6]+[1/24]+[1/120]+ <font face="symbol">¼</font
+>+[1/13!] , to 10 decimal places.
+<br>
+<br>
+Other uses: if you know the Taylor series, it tells you the values of the derivatives at the center.
+<br>
+Ex.: e<sup>x</sup>=<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((x)<sup>n</sup>)/(n)!], so 
+<br>
+xe<sup>x</sup> = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((x)<sup>n+1</sup>)/(n)!], so
+<br>
+15th deriv of xe<sup>x</sup> , at 0, is 15!(coeff of x<sup>15</sup>) = 
+[15!/14!] = 15
+<br>
+<br>
+Substitutions: new Taylor series out of old ones
+<br>
+Ex. sin<sup>2</sup> x = [(1-cos(2x))/2] = 
+[1/2](1-<font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup>[((-1)<sup>n</sup>(2x)<sup>2n</sup>)/(2n)!]
+<br>
+= [1/2](1-(1-[((2x)<sup>2</sup>)/2!]+[((2x)<sup>4</sup>)/4!]-[((2x)<sup>6</sup>)/6!]+<font face="symbol">¼</font
+>
+<br>
+= [(2x<sup>2</sup>)/2!]-[(2<sup>3</sup>x<sup>4</sup>)/4!]+[(2<sup>5</sup>x<sup>6</sup>)/6!]-[(2<sup>7</sup>x<sup>8</sup>)/8!]+<font face="symbol">¼</font
+>
+<br>
+<br>
+Integrate functions we can't handle any other way:
+<br>
+Ex.: e<sup>x<sup>2</sup></sup> = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((x)<sup>2</sup>n)/(n)!], so
+<br>
+<font face="symbol">ò</font
+>e<sup>x<sup>2</sup></sup> dx = <font face="symbol">å</font
+><sub>n = 0</sub><sup><font face="symbol">¥</font
+></sup> [((x)<sup>2n+1</sup>)/(n!(2n+1))]
+<br>
+
+
+
+
+<br><hr><small>File translated from T<sub>E</sub>X by T<sub>T</sub>H, version 0.9.</small>
+</HTML>

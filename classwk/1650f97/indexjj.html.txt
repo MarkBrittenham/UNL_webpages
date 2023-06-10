@@ -1,0 +1,28 @@
+<table CELLPADDING=10 CELLSPACING=10 width=550>
+
+
+<title>Math 1650 Precalculus Home Page</title>
+
+<center><font size=+2><font color="9f0f0f"><b><i> Math 1650 
+Precalculus Home Page</i></b></font></font></center>
+
+<center><b><font size=+2><font color="0f7f3f"> 
+Mark Brittenham </font></font></b></center>
+
+<p>
+
+This page is devoted to materials and links specific to Mark Brittenham's Math 1650 class
+for Fall, 1997. Here you may find lists of <a href="hw.html">homework assignments</a>, 
+dates for <a href="exam.html">exams</a>, as well as lists of topics covered by these exams,
+an html-ized copy of the <a href=summ.html">course summary</a>, and anything else that
+might come up.<p>
+
+Some links that might be of general interest:<p>
+
+
+
+
+
+
+
+</table>
