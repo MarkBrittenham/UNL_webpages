@@ -1,0 +1,43 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "restart: with(numthe
+ory);" }}{PARA 7 "" 1 "" {TEXT -1 69 "Warning, the protected name orde
+r has been redefined and unprotected\n" }}{PARA 12 "" 1 "" {XPPMATH 
+20 "6#7P%&GIgcdG%)bigomegaG%&cfracG%)cfracpolG%+cyclotomicG%)divisorsG
+%)factorEQG%*factorsetG%'fermatG%)imagunitG%&indexG%/integral_basisG%)
+invcfracG%'invphiG%*issqrfreeG%'jacobiG%*kroneckerG%'lambdaG%)legendre
+G%)mcombineG%)mersenneG%*minkowskiG%(mipolysG%%mlogG%'mobiusG%&mrootG%
+&msqrtG%)nearestpG%*nthconverG%)nthdenomG%)nthnumerG%'nthpowG%&orderG%
+)pdexpandG%$phiG%#piG%*pprimrootG%)primrootG%(quadresG%+rootsunityG%*s
+afeprimeG%&sigmaG%*sq2factorG%(sum2sqrG%$tauG%%thueG" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 84 "First we set up
+ a few variables. \"N\" will be the number that we will try to factor.
+ " }}{PARA 0 "" 0 "" {TEXT -1 78 "\"isprime\" and \"ifactor\" are incl
+uded to let us know what to expect....  Change" }}{PARA 0 "" 0 "" 
+{TEXT -1 66 "\"printlevel\" to 1 to stop supressing the output of the \+
+loop below." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+-1 82 "\"a\" is a parameter for our pseudo-random function f(x)=x^2+a,
+ that we can change. " }}{PARA 0 "" 0 "" {TEXT -1 85 "The \"500\" is s
+o that the program won't run forever; we can alter that, too. The loop
+ " }}{PARA 0 "" 0 "" {TEXT -1 82 "computes the difference between f^(2
+n)(d) and f^n(d), mod N, and it's gcd with N. " }}{PARA 0 "" 0 "" 
+{TEXT -1 77 "It stops when this gcd is > 1; this is *either* a factor \+
+of N or equal to N ." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 210 "N:=ithprime(100000)*ithprime(120000); b:=1: d:=
+1: f:=d: isprime(N); ifactor(N); printlevel:=0: a:=2; for i from 1 to \+
+5000 while b=1 do c:=d: e:=f: d:=c^2+a mod N; f:=(e^2+a)^2+a mod N; b:
+=gcd(d-f,N); end do; b;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"NG\".^,
+*)R\"e?" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&falseG" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#*&-%!G6#\"(RNe\"\"\"\"-F%6#\"(4(*H\"F(" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%\"aG\"\"#" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+\"(4(*H\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "2 \+
+0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

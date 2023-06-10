@@ -1,0 +1,98 @@
+\input amstex
+\magnification=1200
+
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+\define\dsl{\displaystyle}
+
+\overfullrule=0pt
+\nopagenumbers
+
+\documentstyle{amsppt}
+
+
+%(NZM, Problem ) 
+
+\ctln{\bf Math 445 Homework 8}
+
+\msk
+
+\ctln{Due Wednesday, November 10}
+
+\bsk
+
+\item{36.} Let $h_n/k_n$ (as usual) denote the $n^{\roman th}$ convergent of the continued
+fraction expansion of the irrational number $x$. Show by example that it need {\bf not} be true
+that
+
+\ssk
+
+\ctln{$\displaystyle  \Bigl| x-{{a}\over{b}}\Bigr| < \Bigl| x-{{h_n}\over{k_n}}\Bigr|$ 
+implies $b\geq k_{n+1}$}
+
+\bsk
+
+
+
+\item{37.} [NZM, p.344, \# 7.6.3] Show that for any $c>2$, there are only finitely
+many pairs of integers $a,b$ with $\dsl |\sqrt{2}-{{a}\over{b}}| < {{1}\over{b^c}}$ .
+
+\bsk
+
+\item{38.} [NZM, p. 333, \# 7.3.6] Let $p$ be prime and suppose
+$u^2\equiv -1\pmod{p}$ (so $p\equiv 1\pmod{4}$). 
+Let $[a_0,\ldots ,a_n]$ be the continued fraction expansion of 
+$\dsl {{u}\over{p}}$ , and let $i$ be the largest integer with $k_i\leq \sqrt{p}$ . Show that
+$\dsl |{{h_i}\over{k_i}}-{{u}\over{p}}| < {{1}\over{k_i\sqrt{p}}}$, and $|h_ip-k_iu|<\sqrt{p}$ .
+Setting $x=k_i$ and $y=h_ip-uk_i$, show that $p|x^2+y^2$ and $x^2+y^2<2p$, so 
+$x^2+y^2=p$ .
+
+\bsk
+
+\item{39.} Show that for $n$ a positive integer that is not a perfect square (translation: 
+the continued fraction expansion of $\sqrt{n}$ never terminates), that at every stage 
+of the continued fraction expansion of $x = \sqrt{n}$
+
+\ssk
+
+\ctln{$x$ = $[a_0,a_1,\ldots ,a_{k-1},a_k+x_k]$}
+
+\ssk
+
+\item{} $x_k$ is always of the form $\displaystyle x_k = {{\sqrt{n}-a}\over{b}}$ , where 
+$a,b\in{\Bbb N}$ and $b|n-a^2$ . Conclude that the continued fraction expansion of $\sqrt{n}$ will 
+eventually repeat, with a period of length at most $n\lfloor \sqrt{n}\rfloor$.
+
+\ssk
+
+\item{} Hint: by induction! In the inductive step, write 
+$\displaystyle {{b}\over{\sqrt{n}-a}} = {{\sqrt{n}+a}\over{c}}$, and then 
+find the fractional part of this. For the second half, how long must you wait 
+before the $x_k$'s {\it must} repeat themselves?
+
+\vfill\end
+
+
+
+
+
+
+Show that if $a,b\in{\Bbb Z}$, $b\geq 1$, and $(a,b)=1$, then the continued fraction expansion of 
+$a/b$ has length at most $b$ . 
+
+\ssk
+
+\item{} Hint: this is really a question about the Euclidean algorithm....
+
+
+
+
+
+
+
+
+\bsk
+
+\item{10.}

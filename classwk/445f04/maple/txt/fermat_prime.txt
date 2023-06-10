@@ -1,0 +1,12 @@
+
+The Lucas-Lehmer test can decide whether or not a Mersenne number M=2^N-1 is prime. It requires
+that you compute A_{N-1}, where A_1=4 and A_{i+1}=(A_i)^2-2. Below, since the first "T" computed
+is A_2, we stop the loop at N-2. If the number "S", that the program reports after the loop, is "0",
+then M is prime. If not, then M is not prime. So far, M has been found to be prime for only 41 of the
+approximately 500,000 prime exponents less than 7,000,000 .
+
+
+
+with(numtheory); # 1,2,3,18,24,
+
+printlevel:=0: stt:=1: stp:=100: print(`Fermat primes 2^n-1: in the range `,ithprime(stt),ithprime(stp)); for j from stt to stp do N:=ithprime(j); A:=2^N-1; S:=4: for i from 1 to N-2 do T:=S^2-2 mod A: S:=T: end do; S; if (S=0) then print(A,`from n=`,ithprime(j),` is prime!`) end if; end do; print(`The rest are not prime.`);

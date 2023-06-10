@@ -1,0 +1,27 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "with(numtheory); " }
+}{PARA 12 "" 1 "" {XPPMATH 20 "6#7P%&GIgcdG%)bigomegaG%&cfracG%)cfracp
+olG%+cyclotomicG%)divisorsG%)factorEQG%*factorsetG%'fermatG%)imagunitG
+%&indexG%/integral_basisG%)invcfracG%'invphiG%*issqrfreeG%'jacobiG%*kr
+oneckerG%'lambdaG%)legendreG%)mcombineG%)mersenneG%*minkowskiG%(mipoly
+sG%%mlogG%'mobiusG%&mrootG%&msqrtG%)nearestpG%*nthconverG%)nthdenomG%)
+nthnumerG%'nthpowG%&orderG%)pdexpandG%$phiG%#piG%*pprimrootG%)primroot
+G%(quadresG%+rootsunityG%*safeprimeG%&sigmaG%*sq2factorG%(sum2sqrG%$ta
+uG%%thueG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "a := 142111; n
+ := 56333333333333333333; b := a&^(n-1) mod n;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"aG\"'6@9" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"nG
+\"5LLLLLLLLLc" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"bG\"5\"[rv%)))eqg
+&R" }}}{EXCHG {PARA 11 "" 1 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 17 "ithprime(100000);" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#\"(4(*H\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK 
+"3 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 
+1 }

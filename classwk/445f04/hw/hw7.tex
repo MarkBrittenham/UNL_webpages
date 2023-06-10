@@ -1,0 +1,102 @@
+\input amstex
+\magnification=1200
+
+\define\ctln{\centerline}
+\define\ssk{\smallskip}
+\define\msk{\medskip}
+\define\bsk{\bigskip}
+
+\overfullrule=0pt
+\nopagenumbers
+
+\documentstyle{amsppt}
+
+
+%(NZM, Problem ) 
+
+\ctln{\bf Math 445 Homework 7}
+
+\msk
+
+\ctln{Due Wednesday, November 3}
+
+\bsk
+
+\item{31.} Find the continued fraction expansions of the rational numbers
+
+\ssk
+
+\ctln{$53/18$ \hskip.5in and \hskip.5in $115/53$}
+
+\bsk
+
+\item{32.} [NZM, p.327, Problem 7.2.5] Show that if $x=[a_0,\ldots,a_n,b]$ and 
+
+\item{}$x=[a_0,\ldots,a_n,c]$ with $b<c$,
+then $x<y$ if $n$ is odd, and $x>y$ is $n$ is even. 
+
+\msk
+
+\item{}[Hint: induction!]
+
+\bsk
+
+\item{33.} Find the continued fraction expansion of $\sqrt{17}$, 
+and use this to find the first five (5) convergents of $\sqrt{17}$ .
+
+\bsk
+
+\item{34.} Repeat problem \# 33, for $\sqrt{19}$ .
+
+\bsk
+
+\item{35.} [NZM, p.336, Problem 7.5.3 (sort of)] If $\alpha < \beta < \gamma$ are irrational numbers, $\alpha=[a_0,a_1\ldots]$ , 
+$\beta=[b_0,b_1,\ldots]$ , 
+$\gamma=[c_0,c_1,\ldots...]$ , and $a_i=c_i$ for $0\leq i\leq n$ , then 
+$a_i=b_i=c_i$ for $0\leq i\leq n$ .
+
+\msk
+
+\item{} [Hint: Induction! Use $\alpha = [a_0,\ldots ,a_{i-1},a_i+x_i] $, etc. and Problem \#32 to compare 
+$\displaystyle a_{i+1}=\lfloor{{1}\over{x_i}}\rfloor$ , etc. 
+Note that if $x<y$ then $\lfloor x\rfloor \leq \lfloor y\rfloor$ .]
+
+\vfill\end
+
+
+
+
+
+
+Show that if $a,b\in{\Bbb Z}$, $b\geq 1$, and $(a,b)=1$, then the continued fraction expansion of 
+$a/b$ has length at most $b$ . 
+
+\ssk
+
+\item{} Hint: this is really a question about the Euclidean algorithm....
+
+
+
+Show that for $n$ a positive integer that is not a perfect square (translation: the continued fraction expansion of $\sqrt{n}$ never terminates),
+then at every stage of the continued fraction expansion of $x = \sqrt{n}$
+
+\ssk
+
+\ctln{$x$ = $\langle a_0,a_1,\ldots ,a_{k-1},a_k+x_k\rangle$}
+
+\ssk
+
+$x_k$ is always of the form $\displaystyle x_k = {{\sqrt{n}-a}\over{b}}$ , where $b|n-a^2$ . Conclude that the continued
+fraction expansion of $\sqrt{n}$ will eventually repeat, with a period of length at most $n\lfloor \sqrt{n}\rfloor$.
+
+\ssk
+
+\item{} Hint: by induction! In the inductive step, write $\displaystyle {{b}\over{\sqrt{n}-a}} = {{\sqrt{n}+a}\over{c}}$, and then find the 
+fractional part of this. For the second half, how long must you wait before the $x_k$'s {\it must} repeat themselves?
+
+
+
+
+\bsk
+
+\item{10.}
