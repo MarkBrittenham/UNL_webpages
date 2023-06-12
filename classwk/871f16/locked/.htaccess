@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Username/Password Required"
-AuthUserFile /Net/mathstat/Users/Fac/mbritten/lockbox.passwords/m871f16.pass
-Require valid-user
