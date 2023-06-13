@@ -1,0 +1,295 @@
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+\def\lra{\Leftrightarrow}
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{February 22, 2005}
+
+\msk
+
+{\bf Building universal coverings:} If a space $X$ is path connected, locally path connected, and
+semi-locally simply connected (S-LSC), then it has a universal covering;
+we describe a general construction. The idea is that a covering
+space should have the path lifting and homotopy
+lifting properties, and the universal 
+cover can be characterized as the only covering space for 
+which {\it only} null-homotopic loops lift to loops. So we build a 
+space and a map which \underbar{must} have these properties.
+We do this by making a space $\widetilde{X}$ whose
+points are (equivalence classes of) $[\gamma]$
+based paths $\gamma:(I,0)\ra (X,x_0)$, where two paths are equivalent
+if they are homotopic rel endpoints! The projection map is
+$p([\gamma])=\gamma(1)$. The S-LSCness is what guarantees that this is a 
+covering map; choosing $x\in X$, a path $\gamma_0$ from $x_0$ to $x$,
+and a  neighborhood ${\Cal U}$ of $x$ guaranteed by S-LSC, paths from 
+$x_0$ to points in ${\Cal U}$ are based equivalent to $\gamma*\gamma_0*\eta$
+where $\gamma$ is a based loop at $x_0$ and $\eta$ is a path in ${\Cal U}$.
+But by simple connectivity, a path in ${\Cal U}$ is determined up to homotopy
+by its endpoints, and so, with $\gamma$ fixed, these paths are in one-to-one
+correspondence with ${\Cal U}$. So $p\inv({\Cal U}$ is a disjoint union,
+indexed by $\pu(X,x_0)$, of sets in bijective correspondence with ${\Cal U}$.
+The appropriate topology on $\widetilde{X}$, essentially given as a basis
+by triples $\gamma*,gamma_0,{\Cal U}$ as above, make $p$ a covering map.
+Note that the inverse image of 
+the basepoint $x_0$ is the equivalence classes of \underbar{loops} at $x_0$,
+i.e., $\pu(X,x_0)$. A path $\gamma$ lifts to the path of paths
+$[\gamma_t]$, where $\gamma_t(s)=\gamma(ts)$, and so the only 
+loop in $X$ which lifts to a loop in $\widetilde{X}$ has endpoint
+$[\gamma]=[c_{x_0}]$, i.e., $[\gamma]=1$ in $\pu(X,x_0)$. This
+implies that $p_*(\pu(\widetilde{X},[c_{x_0}]))=\{1\}$, so 
+$\pu(\widetilde{X},[c_{x_0}])=\{1\}$ . \hhsk However, nobody in their
+right minds would go about building $\widetilde{X}$ in this way, in general!
+Before describing how to do it ``right'', though, we should perhaps see why
+we should want to?
+
+\msk
+
+One reason for the importance of the universal cover is that it gives
+us a unified approach to building \underbar{all} connected covering
+spaces of $X$. The basis for this is the {\it deck transformation group}
+of a covering space $p:\wtl{X}\ra X$; this is the set of all
+homeomorphisms $h:\wtl{X}\ra\wtl{X}$ such that $p\circ h = p$.
+These homeomorphisms, by definition, permute each of the point inverses
+of $p$. In fact, since $h$ can be thought of as a lift of the projection
+$p$, by the lifting criterion $h$ is determined by which point in the 
+inverse image of the basepoint $x_0$ it takes the basepoint 
+$\wtl{x}_0$ of $\wtl{X}$ to. A deck transformation sending
+$\wtl{x}_0$ to $\wtl{x}_1$ exists $\Leftrightarrow$
+$p_*(\pu(\wtl{X},\wtl{x}_0)=p_*(\pu(\wtl{X},\wtl{x}_1)$
+[we need one inclusion to give the map $h$, and the opposite inclusion
+to ensure it is a bijection (because its inverse exists)]. These two groups
+are in general {\it conjugate}, by the projection of a path from 
+$\wtl{x}_0$ to $\wtl{x}_1$; this can be seen by following the change
+of basepoint isomorphism down into $G=\pu(X,x_0)$. As we have seen, paths
+in $\wtl{X}$ from $\wtl{x}_0$ to $\wtl{x}_1$ are in 1-to-1
+correspondence with the cosets of $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$p_*(\pu({X},{x}_0)$; so deck transformations are in 1-to-1 
+correspondence with cosets whose representatives conjugate 
+$H$ to itself. The set of such elements in $G$ is called the 
+{\it normalizer of $H$ in $G$}, and denoted $N_G(H)$ or simply
+$N(H)$. The deck transformation group is therefore
+in 1-to-1 correspondence with the group $N(H)/H$ under
+$h\mapsto$ the coset represented by the projection of the path from 
+$\wtl{x}_0$ to $h(\wtl{x}_0)$. And since $h$ is essentially built
+by lifting paths, it follows quickly that this map is a
+homomorphism, hence an isomorphism.
+
+\msk
+
+In particular, applying this to the universal covering space
+$p:\wtl{X}\ra X$, since in this case $H=\{1\}$, so $N(H)=\pu(X,x_0)$,
+its deck transformation group is isomorphic to $\pu(X,x_0)$. 
+For example, this gives the quickest possible proof 
+that $\pu(S^1)\cong {\Bbb Z}$, since ${\Bbb R}$ is a 
+contractible covering space, whose deck transformations
+are the translations by integer distances. 
+Thus $\pu(X)$ acts on its universal cover as a group of
+homeomorphisms. And since this action is {\it simply transitive}
+on point inverses [there is exactly one (that's the simple
+part) deck transformation carrying any one point in a point 
+inverse to any other one (that's the transitive part)], the 
+quotient map from $\wtl{X}$ to the orbits of this action \underbar{is}
+the projection map $p$. The evenly covered property of $p$ implies
+that $X$ does have the quotient topology under this action.
+
+\msk
+
+So every space it $X$ the quotient of its universal cover (if it has
+one!) by its fundamental group $G=\pu(X,x_0)$, realized as the group
+of deck transformations. And the quotient map is the covering 
+projection. So $X|cong \wtl{X}/G$ . In general, a quotient of a 
+space $Z$ by a group action $G$ 
+need not be 
+a covering map; the action must be {\it properly discontinuous}, 
+which means that for every point 
+ $z\in Z$, there is a neighborhood ${\Cal U}$ of $x$ so that $g\neq 1$ $\Rightarrow$
+${\Cal U}\cap g{\Cal U}=\emptyset$ (the group action carries sufficiently
+small neighborhoods off of themselves). The evenly covered neighborhoods
+provide these for the universal cover. And conversely, the quotient of a space by a 
+p.d. group action is a covering space. 
+
+\msk
+
+But! Given $G=\pu(X,x_0)$ and its 
+action on a universal cover $\wtl{X}$, we can, instead of quotienting out by $G$,
+quotient out by any \underbar{subgroup} $H$ of $G$, to build $X_H=\wtl{X}/H$. 
+This is a space with fundamental group $H$, having $\wtl{X}$ as universal covering.
+And since the quotient (covering) map $p_G:\wtl{X}\ra X=\wtl{X}/G$ factors through $\wtl{X}/H$,
+we get an induced map $p_H:\wtl{X}/H\ra X$, which is a covering map; open sets with
+trivial inclusion-induced homomorphism lift homeomorphically to $\wtl{X}$,
+hence homeomorphically to $\wtl{X}/H$; taking lifts to each point inverse of $x\in X$
+verifies the evenly covering property for $p_H$ . So every subgroup of $G$ is the
+fundamental group of a covering of $X$. 
+
+\ssk
+
+We can further refine this to give the {\it Galois correspondence}. Two covering spaces
+$p_1:X_1\ra X$ , $p_2:X_2\ra X$ are {\it isomorphic} if there is a homeomorphism
+$h:X_1\ra X_2$ with $p_1=p_2\circ h$. Choosing basepoints $x_1,x_2$ mapping to $x_0\in X$,
+this implies that, if $h(x_1)=x_2$, then $p_{1*}(\pu(X_1,x_1)) = p_{2*}(h_*(\pu(X_1,x_1))) = 
+p_{2*}(\pu(X_2,x_2))$ . On the other hand, our homeomorphism $h$ need not take our
+chosen basepoints to one another; if $h(x_1)=x_3$, then $p_{1*}(\pu(X_1,x_1)) = p_{2*}(\pu(X_2,x_3))$.
+But  $p_{2*}(\pu(X_2,x_2))$ and $p_{2*}(\pu(X_2,x_3))$ are isomorphic, via a change 
+of basepoint isomorphism $\widehat{\eta}$ , where $\eta$ is a path in $X_2$ from $x_2$ to $x_3$.
+But such a path projects to $X$ has a loop at $x_0$, and since the change of basepoint isomorphism
+is by ``conjugating'' by the path $\eta$, the resulting groups $p_{2*}(\pu(X_2,x_2))$ and $p_{2*}(\pu(X_2,x_3))$
+are conjugate, by $p_2\circ \eta$ . So, without reference to basepoints, isomorphic coverings give,
+under projection, conjugate subgroups of $\pu(X,x_0)$ . But conversely, given covering spaces
+$X_1,X_2$ whose subgroups $p_{1*}(\pu(X_1,x_1))$ and $p_{2*}(\pu(X_2,x_2))$ are conjugate,
+lifting a loop $\gamma$ representing the conjugating element to a loop $\wtl{\gamma}$ in
+$X_2$ starting at $x_2$ gives, as its terminal endpoint, a point $x_3$ with 
+$p_{1*}(\pu(X_1,x_1)) = p_{2*}(\pu(X_2,x_3))$ (since it conjugates back!), and so, by the lifting criterion,
+there is an isomorphism $h:(X_1,x_1) \ra (X_2,x_3)$. So conjugate subgroups give isomorphic coverings.
+Thus, for a path-connected, locally path-connected, semi-locally simply-connected space $X$,  
+the image of the induced homomorphism on \mpu\ 
+gives a one-to-one correspondence between 
+[isomorphism classes of (connected) coverings of $X$] and 
+[conjugacy classes of subgroups of $\pu(X)$].
+
+\msk
+
+So, for example, if you have a group $G$ that you are interested in, you know of a (nice enough) 
+space $X$ with $\pu(X)\cong G$, and you know enough about the covering of $X$, then you can
+gain information about the subgroup structure of $G$. For example, and in some respects as
+motivation for all of this machinery!, a free group $F(\Sigma)$ is \mpu\ of a bouquet of circles $X$. 
+Any covering space $\wtl{X}$ of $X$ is a union of vertices and edges, so is a graph.  Collapsing
+a maximal tree to a point, $\wtl{X}$ is $\simeq$ a bouquet of circles, so has free \mpu . So, every
+subgroup of a free group is free. (That is a lot shorter than the original, group-theoretic, proof...) 
+A subgroup $H$ of index $n$ in $F(\Sigma)$ corresponds to a $n$-sheeted covering $\wtl{X}$ of $X$. If
+$|\Sigma| = m$, then $\wtl{X}$ will have $n$ vertices and $nm$ edges. Collapsing a maximal
+tree, having $n-1$ edges to a point, leaves a bouquet of $nm-n+1$ circles, so $H\cong F(nm-n+1)$.
+For example, for $m=3$, index $n$ subgroups are free on $2n+1$ generators, so every free subgroup
+on 4 generators has infinite index in $F(3)$. Try proving that directly!
+
+\msk
+
+{\it Kurosh Subgroup Theorem}: If $H < G_1*G_2$ is a subgroup of
+a free product, then $H$ is (isomorphic to) a free product of a
+collection of conjugates of subgroups of $G_1$ and $G_2$ and a 
+free froup. The proof is to build a space by taking 2-complexes
+$X_1$ and $X_2$ with $\pu$'s isomorphic to $G_1,G_2$ and join
+their basepoints by an arc. The covering space of this space $X$
+corresponding to $H$ consists of spaces that cover $X_1,X_2$
+(giving, after basepoint considerations, the conjugates)
+connected by a collection of arcs (which, suitably interpreted,
+gives the free group).
+
+\msk
+
+{\it Residually finite groups}: $G$ is said to be residually finite if for every $g\neq 1$ there is a 
+finite group $F$ and a homomorphism $\varphi: G\ra F$ with $\varphi(g)\neq 1$ in $F$. This 
+amounts to saying that $g\notin$ the (normal) subgroup $\ker(\varphi)$, which amounts to
+saying that a loop corresponding to $g$ does \underbar{not} lift to a loop in the finite-sheeted
+covering space corresponding to $\ker(\varphi)$. So residual finiteness of a group can be
+verified by building coverings of a space $X$ with $\pu(X)=G$. For example, free groups can be
+shown to be residually finite in this way. 
+
+\msk
+
+{\it Ranks of free (sub)groups:} A free group on $n$
+generators is isomorphic to a free group on $m$ generators
+$\lra$ $n=m$; this is because the abelianizations of the two 
+groups are ${\Bbb Z}^n,{\Bbb Z}^m$. The (minimal) number of 
+generators for a free group is called its {\it rank}.
+Given a free group
+$G=F(a_1,\ldots a_n)$ and a collection of words $w_1,\ldots w_m\in G$,
+we can determine the rank and ndex of the subgroup it $H$ they
+generate by building the corresponding cover. The idea is
+to start with a bouquet of $m$ circles, each subdivided 
+and labelled to spell
+out the words $w_i$. Then we repeatedly identify edges sharing
+on common vertex if they are labelled precisely the same (same
+letter {\it and} same orientation). This process is known
+as {\it folding}. One can inductively show that the (obvious)
+maps from these graphs to the bouquet of $n$ circles $X_n$ both
+have image $H$ under the induced maps on \mpu ; the graphs
+are in fact homotopy equivalent, and the map for the unfolded graph
+factors through the one for the folded graph. We continue until there
+is no more folding to be done; the resulting graph $X$ is what is 
+known (in combinatorics) as a {\it graph covering}; the map to $X_n$
+is locally injective. If this map is a covering map, then our subgroup
+$H$ has finite index (equal to the degree of the
+covering) and we can compute the rank of $H$ (and a basis!) from this
+index as above. If not, then the map is not locally surjective at
+some vertices; if we graft trees onto these vertices, we can extend the map
+to an (infinite-sheeted) covering map without changing the homotopy
+type of the graph. $H$ therefore has infinite index in $G$, and its
+rank can be computed from $H\cong \pu(X)$. An example of this procedure
+is given below.
+
+\msk
+
+{\bf Postscript: why care about covering spaces?} The preceding discussion
+probably makes it clear that covering places play a central role in
+(combinatorial) group theory. It also plays a role in embedding 
+problems; a common scenario is to have a map $f:Y\ra X$ which is 
+injective on \mpu , and we wish to know if we can lift $f$ to a 
+finite-sheeted covering so that the lifted map $\widetilde{f}$ is 
+homotopic to an embedding. Information that is easier to obtain 
+in the case of an embedding can then be passed down to gain information
+abut the original map $f$. And covering spaces underlie the 
+theory of analytic continuation in complex analysis; starting
+with a domain $D\subseteq {\Bbb C}$, what analytic continuation really
+builds is an (analytic) function from a covering space of $D$ to ${\Bbb C}$.
+For example, the logarithm is really defined as a map from 
+the universal cover of ${\Bbb C}\setminus\{0\}$ to ${\Bbb C}$. 
+The various ``branches'' of the logarithm refer to which sheet
+in this cover you are in.
+
+\bsk
+
+{\bf Homology theory:} 
+
+
+\vfill
+\end

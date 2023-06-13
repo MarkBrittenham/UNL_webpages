@@ -1,0 +1,210 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{February 8, 2005}
+
+\msk
+
+{\bf Some computations:}
+
+\msk
+
+{\it Gluing on a 2-disk:} If $X$ is a topological 
+space and $f:\del {\Bbb D}^2\ra X$ is continuous, then we
+can construct the quotient space $Z=(X\coprod 
+{\Bbb D}^2)/\{x\sim f(x) : x\in\del{\Bbb D}^2\}$,
+the result of gluing ${\Bbb D}^2$ to $X$ along $f$. 
+We can use Seifert - van Kampen to compute \mpu\ 
+of the resulting space, although if we
+wish to be careful with basepoints $x_0$ 
+(e.g., the image of $f$ might not contain $x_0$, and/or we
+may wish to glue several disks on, in remote parts of $X$),
+we should also include a rectangle $R$, the mapping 
+cylinder of a path $\gamma$ running from 
+$f(1,0)$ to $x_0$, glued to 
+${\Bbb D}^2$ along the arc from $(1/2,0)$ to $(1,0)$ (see figure). 
+This space $Z_+$ deformation retracts to $Z$, but it
+is technically simpler to do our calculations 
+with the basepoint $y_0$ lying above $x_0$.
+If we write $D_1 = \{x\in {\Bbb D}^2 : ||x||<1\}\cup(R\setminus X)$ 
+and $D_2 = \{x\in {\Bbb D}^2 : ||x||>1/3\}\cup R$ , 
+then we can write $Z_+=D_+\cup(X\cup D_2) = X_1\cup X_2$.
+But since $X_1\simeq *$ , $X_2\simeq X$ 
+(it is essentially the mapping cylinder of 
+the maps $f$ and $\gamma$ )
+and $X_1\cap X_2 = \{x\in {\Bbb D}^2 : 
+1/3<||x||<1\}\cap(R\setminus X)\sim S^1$, we find that 
+
+\ctln{$\pu(Z,y_0)\cong \pu(X_2,y_0)*_{\Bbb Z}\{1\} = 
+\pu(X_2)/<{\Bbb Z}>^N \cong 
+\pu(X_2)/<[\overline{\delta}*\overline{\gamma}*f*\gamma*\delta]>^N$}
+
+If we then use $\delta$ as a path for a change of 
+basepoint isomorphism, and then a homotopy
+equivalence from $X_2$ to $X$ (fixing $x_0$), we 
+have, in terms of group presentations, 
+if $\pu(X,x_0)=<\sig | R>$ , then $\pu(Z) = 
+<\sig | R\cup\{[\overline{\gamma}*f*\gamma]\}>$ . 
+So the effect of gluing on a 2-disk on the fundamental 
+group is to add a new relator, 
+namely the word represented by the attaching map 
+(adjusting for basepoint). 
+All of this applies equally well to attaching several 
+2-disks; each adds a new relator. 
+
+\msk
+
+\leavevmode
+
+\epsfxsize=5.4in
+\ctln{{\epsfbox{0201f1.ai}}}
+
+
+
+\bsk
+
+The inherent complications above derived from needing open
+sets can be legislated away, by introducing additional
+hypotheses:
+
+\msk
+
+{\bf Theorem:} If $X=X_1\cup X_2$ is a union of closed
+sets $X_1,X_2$, with $A=X_1\cap X_2$ path-connected, 
+and if $X_1,X_2$ have open neighborhood ${\Cal U}_1,{\Cal U}_2$
+so that ${\Cal U}_1,{\Cal U}_2,{\Cal U}_1\cap{\Cal U}_2$
+deformation retract onto $X_1,X_2,A$ respectively, then 
+$\pu(X)\cong \pu(X_1)*_{\pu(A)}\pu(X_2)$ as before.
+
+\msk
+
+The hypotheses are satisfied, for example, if $X_1.X_2$ are subcomplexes of the
+cell complex $X$.
+
+\msk
+
+
+This in turn opens up huge possibilities for the 
+computation of $\pu(X)$. For example, for cell complexes,
+we can inductively compute \mpu\ by starting with 
+the 1-skeleton, with free fundamental group, and 
+attaching the 2-cells one by one, which each add 
+a relator to the presentation of $\pu(X)$ . 
+[{\bf Exercise:}
+(Hatcher, p.53, \#\ 6) Attaching $n$-cells, for 
+$n\geq 3$, has no effect on \mpu .] 
+For example, the 2-sphere $S^2$ can be thought of as a
+2-disk with a 2-disk attached, along a circle, and so has
+$\pu(S^2)\cong \{1\}_{\Bbb Z}\{1\}=\{1\}$ . 
+We can also compute the fundamental group of 
+any compact surface:
+
+\msk
+
+The {\it real projective plane} ${\Bbb R}P^2$ is the quotient of 
+the 2-sphere $S^2$ by the antipodal map $x\mapsto -x$; 
+it can also be thought of as the upper hemisphere, with 
+identification only along the boundary. This in turn can be 
+interpreted as a 2-disk glued to a circle, whose boundary
+wraps around the circle twice. So $\pu({\Bbb R}P^2)\cong 
+<a | a^2>\cong {\Bbb Z}_2 = {\Bbb Z}/2{\Bbb Z}$ .
+A surface $F$ of genus 2 can be given a cell structure with 1 0-cell,
+4 1-cells, and 1 2-cell, as in the figure, as in the first of the 
+figures below. The fundamental group
+of the 1-skeleton is therefore free of rank 4, and $\pu(F)$ has
+a presentation with 4 generators and 1 relator. Reading the attaching
+map from the figure, the presentation is $<a,b,c,d\ |\ [a,b][c,d] >$ .
+
+\msk
+
+
+
+\leavevmode
+
+\epsfxsize=5.6in
+\ctln{{\epsfbox{0201f2.ai}}}
+
+\msk
+
+Giving it a different cell structure, as in the second figure, with 2 0-cells,
+6 1-cells, and 2 2-cells, after choosing a maximal tree, we can read off the
+two relators from the 2-cells to arrive at a different presentation
+$\pu(F) = <a,b,c,d,e\ |\ aba^{-1}eb^{-1},cde^{-1}c^{-1}d^{-1}>$ . A posteriori,
+these two presentations describe isomorphic groups.
+
+\bsk
+
+Using the same technology, we can also see that, in general, 
+any group is the fundamental group of some 2-complex $X$;
+starting with a presentation $G = <\sig | R>$, build $X$ by starting
+with a bouquet of $|\sig|$ circles, and attach $|R|$ 2-disks along
+loops which represent each of the generators of $R$. (This works just
+as well for infinite sets $\sig$ and/or $R$; essentially the same proofs
+as above apply.)
+
+\bsk
+
+
+\vfill
+\end
+
+
+
+
+
+
+
+
+

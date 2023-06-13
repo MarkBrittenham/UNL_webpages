@@ -1,0 +1,197 @@
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{February 10, 2005}
+
+\msk
+
+\bsk
+
+{\bf Postscript:  why should we care?} The role of the fundamental group
+in distinguishing spaces has already been touched upon; if two 
+(path-connected) spaces have non-isomorphic fundamental groups, then
+the spaces are not homeomorphic, and even not homotopy equivalent.
+It is one of the most basic, and in many cases the best such invariant
+we have in our arsenal
+(hence the name ``fundamental''). As we have seen with the circle, it
+captures the notion of how many times a loop ``winds around'' in a space.
+And the idea of using paths to understand a space is very basic; we 
+explore a space by mapping familiar objects into it. (This is 
+a theme we keep returning to in this course.) The concepts we 
+have introduced play a role in analysis, for instance with the notion
+of a path integral; the invariance of the integral under homotopies
+rel endpoints is an important property, related to Green's Theorem
+and (locally) conservative vector fields. And the \underbar{space}
+of all paths in $X$ plays an important (theoretical, although
+pprobably not practical) role in what we will do next.
+
+\bsk
+
+{\bf Covering spaces:} We can motivate our next topic by looking more
+closely at one of our examples above. The projective plane ${\Bbb R}P^2$
+has $\pu = {\Bbb Z}_2$ . It is also the quotient of the simply-connected
+space $S^2$ by the antipodal map, which, together with the identity map,
+forms a group of homeomorphisms of $S^2$ which is isomorphic to ${\Bbb Z}_2$.
+The fact that ${\Bbb Z}_2$ has this dual role to play in describing 
+${\Bbb R}P^2$ is no accident; codifying this relationship requires the 
+notion of a covering space.
+
+\msk
+
+The quotient map $q:S^2\ra {\Bbb R}P^2$ is an example of a {\it covering map}.
+A map $p:E\ra B$ is called a covering map if for every point $x\in B$, there
+is a neighborhood ${\Cal U}$ of $x$ (an
+{\it evenly covered neighborhood}) so that $p^{-1}({\Cal U})$ 
+is a disjoint union ${\Cal U}_\alpha$ of open sets in $E$, each mapped
+homeomorphically onto ${\Cal U}$ by (the restriction of) $p$ . $B$ is
+called the {\it base space} of the covering; $E$ is called the {\it total
+space}. The quotient map $q$ is an example; (the image of) the complement
+of a great circle in $S^2$ will be an evenly covered neighborhood
+of any point it contains. The disjoint union of 43 copies of a space,
+each mapping homeomorphically to a single copy, is an example of a 
+{\it trivial covering}. As a last example, we have the famous 
+exponential map $p:{\Bbb R}\ra S^1$ given by $t\mapsto e^{2\pi it} = 
+(\cos (2\pi t),\sin (2\pi t))$. The image of any interval $(a,b)$ of length
+less than 1 will have inverse image the disjoint union of the
+intervals $(a+n,b+n)$ for $n\in{\Bbb Z}$ .
+
+\msk
+
+OK, maybe not the last. We can build many finite-sheeted (every point
+inverse is finite) coverings of a bouquet of two circles, say, by 
+assembling $n$ points over the vertex, and then, on either side,
+connecting the points by $n$ (oriented) arcs, one each going in and out of
+each vertex. By choosing orientations on each 1-cell of the bouquet,
+we can build a covering map by sending the vertices above to the
+vertex, and the arcs to the one cells, homeomorphically, respecting 
+the orientations. We can build infinite-sheeted coverings in much 
+the same way.
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{0208f1.ai}}}
+
+
+\bsk
+
+Covering spaces of a (suitably nice) space $X$ have a very close relationship
+to $\pu(X,x_0)$. The basis for this relationship is the
+
+\msk 
+
+{\bf Homotopy Lifting Property:} If $p:\wtl{X}\ra X$ is a covering map, 
+$H:Y\times I\ra X$ is a homotopy, $H(y,0)=f(y)$, and
+$\wtl{f}:Y\ra \wtl{X}$ is a {\it lift} of $f$ (i.e., $p\circ \wtl{f}=f$),
+then there is a unique lift $\wtl{H}$ of $H$ with $\wtl{H}(y,0)=\wtl{f}(y)$ .
+
+\msk
+
+The {\bf proof} of this we will defer to next time, to give us sufficient time to ensure we
+finish it!
+
+\msk
+
+ In particular, applying this property in the case $Y=\{*\}$, where a homotopy
+$H:\{*\}\times I\ra X$ is really just a a path $\gamma:I\ra X$,
+we have the {\bf Path Lifting Property}: ``given 
+a covering map $p:\wtl{X}\ra X$, a path 
+$\gamma:I\ra X$ with $\gamma(0)=x_0$, and a point 
+$\wtl{x}_0\in p^{-1}(x_0)$, there is a unique path $\wtl{\gamma}$
+lifting $\gamma$ with $\wtl{\gamma}(0)=\wtl{x}_0$ .'' One of the 
+immediate consequences of this is one of the cornerstones of covering space
+theory:
+
+\bsk  
+
+If $p:(\wtl{X},\tilde{x}_0)\ra (X,x_0)$ is a covering map, then the 
+induced homomorphism $p_*:\pu(\wtl{X},\wtl{x}_0)\ra \pu(X,x_0)$ is
+injective.
+
+\msk
+
+{\bf Proof:} Suppose $\gamma:(I,\del I)\ra (\wtl{X},\wtl{x}_0)$ is a 
+loop $p_*([\gamma])=1$ in $\pu(X,x_0)$. So there is a homotopy
+$H:(I\times I,\del I\times I)\ra (X,x_0)$ between $p\circ\gamma$ and the constant 
+path. By homotopy lifting, there is a homotopy $\wtl{H}$ from $\gamma$ to 
+the lift of the constant map at $x_0$. The vertical sides 
+$s\mapsto \wtl{H}(0,s),\wtl{H}(1,s)$ are also lifts of the 
+constant map, beginning from 
+$\wtl{H}(0,0),\wtl{H}(1,0)=\gamma(0)=\gamma(1)=\wtl{x}_0$, so
+are the constant map at $\wtl{x}_0$. Consequently, the lift at the 
+bottom is the constant map at $\wtl{x}_0$. So $\wtl{H}$
+represents a null-homotopy of $\gamma$, so $[\gamma]=1$
+in $\pu(\wtl{X},\wtl{x}_0)$. So $\pu(\wtl{X},\wtl{x}_0)=\{1\}$ .
+
+\msk
+
+Even more, the image $p_*(\pu(\wtl{X},\wtl{x}_0)))\sset \pu(X,x_0)$
+is precisely the elements whose representatives are loops at $x_0$, 
+which when
+lifted to paths starting at $\wtl{x}_0)$, are loops. 
+For if $\gamma$ lifts
+to a loop $\wtl{\gamma}$, then $p\circ\wtl{\gamma}=\gamma$, so
+$p_*([\wtl{\gamma}])=[\gamma]$ . Conversely, if 
+$p_*([\wtl{\gamma}])=[\gamma]$, then $\gamma$ and $p\circ\wtl{\gamma}$
+are homotopic rel endpoints, and so the homotopy lifts to 
+a homotopy rel endpoints between the lift of $\gamma$ at 
+$\wtl{x}_0$, and the lift of $p\circ\wtl{\gamma}$ at $\wtl{x}_0$
+(which is $\wtl{\gamma}$, since $\wtl{\gamma}(0)=\wtl{x}_0$ and
+lifts are unique). So the lift of $\gamma$ is a loop, as desired.
+
+\vfill
+\end

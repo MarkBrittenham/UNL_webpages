@@ -1,0 +1,268 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+\nopagenumbers
+
+\input amstex 
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\ra{\rightarrow}
+\def\del{\partial}
+\def\inv{^{-1}}
+
+
+%%Homework: p.39: 5*,13,15,19,20* p.53: 6,7,8*
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{Homework \#\ 2 Solutions}
+
+\msk
+
+A continuous surjection from 
+a compact space to a Hausdorff space is (a closed map hence) a quotient map.
+(Which makes building induced maps a whole lot more straightforward.)
+
+\ssk
+
+If $\gamma:I\ra X$ is a path in $X$ beginning at $x_0$ and ending at $x_1$, then 
+the induced change of basepoint isomorphism $\widehat{\gamma}:\pu(X,x_0)\ra \pu(X,x_1)$
+is $\widehat{\gamma}([\eta]) = [\overline{\gamma}*\eta*\gamma]$ \hhsk (to get 
+the basepoints to work out right).
+
+\bsk
+
+{\bf (p.38, \#\ 5):} Every map $\gamma:S^1\ra X$ is homotopic to a constant 
+\lra\ every map $\gamma:S^1\ra X$ extends to a map $\Gamma:{\Bbb D}^2\ra X$
+\lra\ $\pu(X,x_0)=\{1\}$ for every $x_0\in X$.
+
+\ssk
+
+We will prove (1) $\Rightarrow$ (2) $\Rightarrow$ (3) $\Rightarrow$ (1). 
+We will think of $S^1$ as the unit circle in ${\Bbb R}^2={\Bbb C}$, and ${\Bbb D}^2$
+as the unit disk in ${\Bbb R}^2$.
+
+\ssk
+
+(1) $\Rightarrow$ (2): Given $\gamma:S^1\ra X$, by (1), there is a 
+homotopy $H:S^1\times I\ra X$ with $H(z,0)=\gamma(z)$ and $H(z,1)=x_0$
+for some $x_0\in X$. If we define a map $h:S^1\times I\ra{\Bbb D}^2$ by 
+$h(z,t)= h((x,y),t) = (1-t)z = ((1-t)x,(1-t)y)$. As a function of 3 variables, it is continuous,
+so restricting domain and range it is cts. The map $h$ factors through the quotient space
+$Z=(S^1\times I)/(S^1\times\{1\})$, since on the 1 end $h$ is 0. The
+resulting map $\overline{h}:Z\ra {\Bbb D}^2$ is a cts bijection from (quotient of compact, hence)
+compact to Hausdorff, so it is a homeomorphism. $H$ also factors through
+$Z$, since on the 1 end $H$ is constant; call the resulting map $\overline{H}$.
+Then $\Gamma = \overline{H}\circ\overline{h}^{-1}:{\Bbb D}^2\ra X$ is the required map 
+extending $\gamma$.
+
+\ssk
+
+(2) $\Rightarrow$ (3): Given an element $[\gamma]\in \pu(X,x_0)$, 
+$\gamma:(I,\del I)\ra (X,x_0)$ factors through the (quotient) map
+$f:I\ra S^1$ given by $f(t)=e^{2\pi it}$, to give a map $g:S^1\ra X$.
+By hypothesis, this map extends to a map $G:{\Bbb D}^2\ra X$. 
+If we define a map $K:I\times I\ra {\Bbb D}^2$ by
+$K(t,s) = (s,0)+(1-s)e^{2\pi it} = (s+(1-s)\cos(2\pi t),(1-s)\sin(2\pi t))$,
+then $K(t,0)=f(t)$ and $K(t,1)=(1,0)$. Then 
+$H=G\circ K:I\times I\ra X$ has $H(t,0)=\gamma(t)$ and $H(t,1) = G(1,0)=x_0$,
+and $H(0,s)=H(1,s) = K(1,0) = x_0$. So $H$ represents a
+homotopy, rel basepoint, from $\gamma$ to the constant map.
+So  $\pu(X,x_0)=\{1\}$ .
+
+\ssk
+
+(3) $\Rightarrow$ (1): Given $\gamma:S^1\ra X$, composing with the 
+(quotient) map $f$ above gives a based loop $g=\gamma\circ f:(I,\del I)\ra (X,x_0)$,
+where $x_0=\gamma(1,0)$. By hypothesis, this map is null-homotopic,
+so there is a map $H:I\times I\ra X$ with $H(t,0)=g(t)$, and 
+$H(t,1)=H(0,s)=H(1,s)=x_0$ for all $t,s\in I$. This map factors
+through the (quotient) map $f\times Id:I\times I\ra S^1\times I$ to give
+an induced map $\overline{H}:S^1\times I\ra X$ with 
+$\overline{H}(z,0)=\gamma(z)$ and $\overline{H}(z,1)=x_0$. So $\gamma$
+is homotopic to a constant map.
+
+\ssk
+
+\hhsk $X$ is simply-connected \lra\ all maps $S^1\ra X$ are homotopic to one another:
+
+\ssk
+
+($\Rightarrow$): Given two maps $g,h:S^1\ra X$, composing them with the map $p:I\ra S^1$,
+$p(t)=(\cos(2\pi t),\sin(2\pi t)$ gives us a pair of based loops $\gamma,\eta$, based at
+$g(1,0)=x_0$ and $h(1,0)=x_1$ respectively. By hypothesis, each one represents the trivial 
+element in $\pu(X,x_\epsilon)$, so there are homotopies $G,H:I\times I\ra X$ between these
+loops and their respective constant maps. Because these maps are constant on $I\times \del I$,
+they factor through the map $f$ above to induce maps $G^\prime,H^\prime:S^1\times I\ra X$
+with restriction to $S^1\times\{1\}$ the (appropriate) constant map. Since $X$ is 0-connected,
+there is a path $\delta:I\ra X$ with $\delta(0)=x_0$ and $\delta(1)=x_1$. Then defining $K:S^1\times I\ra X$
+by $K(x,t)=\delta(t)$ we have a continuous map (since $K\inv({\Cal U}) = S^1\times\delta\inv({\Cal U})$).
+And finally, defining $R:S^1\times I\ra X$ by
+
+$\displaystyle R(x,t) = 
+\cases
+G^\prime(x,3t)&\text{, if $t\leq 1/3$}\cr
+K(x,3t-1)&\text{, if $1/3\leq t\leq 2/3$}\cr
+H^\prime(x,3-3t)&\text{, if $t\geq 2/3$}\cr
+\endcases$
+\hhsk defines a homotopy from $g$ to $h$ .
+
+\ssk
+
+($\Leftarrow$): We wish to show both that $X$ is path-connected and $\pu(X)=\{1\}$ . For path
+connected, given $x_0,x_1\in X$ for the constant maps $g,h:S^1\ra X$ constant at these points,
+the hypothesis implies that there is a homotopy $H:S^!\times I\ra X$ between them. Then the 
+path $\gamma:I\ra X$ given by $\gamma(t)=H((1,0),t)$ has $\gamma(0)=H((1,0),0)=g(1,0)=x_0$
+and $\gamma(1)=H((1,0),1)=h(1,0)=x_1$. So $X$ is path connected. And since every map $g:S^1\ra X$
+is homotopic to any constant map, by (1) $\Rightarrow$ (2) $\Rightarrow$ (3) above,
+$\pu(X,x_0)=\{1\}$ for every $x_0$, so $X$ is 1-connected. So $X$ is simply-connected.
+
+\msk
+
+{\bf (p.39, \#\ 20):} If $H:X\times I\ra X$ is a cts homotopy
+from $H(x,0)=x$ to $H(x,1)=x$, then the loop defined by
+$\gamma(t)=H(x_0,t)$ represents an element in the center of $\pu(X,x_0)$.
+
+\ssk
+
+By Lemma 1.19 of the text, 
+the change of basepoint isomorphism
+$\widehat{\gamma}:\pu(X,x_0)\ra \pu(X,x_0)$ given by
+$\widehat{\gamma}[\eta] = [\overline{\gamma}*\eta*\gamma]$
+satisfies $H_{0*}=\widehat{\gamma}\circ H_{1*}$. But
+since $H_0=H_1=Id$, so their induced homomorphisms
+are $Id$, we have $Id=\widehat{\gamma}\circ Id$, so 
+$\widehat{\gamma} =Id$ . But this means that
+for all $\eta$, $[\overline{\gamma}*\eta*\gamma]=[\eta]$,
+so $[\gamma][\eta]=[\eta][\gamma]$ for every $[\eta]\in\pu(X,x_0)$.
+So $[\gamma]$ commutes with every element of $\pu(X,x_0)$,
+so it is central.
+
+\msk
+
+{\bf (p.53, \#\ 8):} Compute $\pu(X)$ where $X$ is obtained from 
+two copies of the torus $S^1\times S^1$ by identifying the
+circle $S^1\times\{x_0\}$ on one with the corresponding 
+circle on the other.
+
+\ssk
+
+A cheap way to do this is to identify $X$ as a product space
+itself. $X$ is the quotient space of $S^1\times S^1\times \{1,2\}$
+where we identify $(x,x_0,1)$ with $(x,x_0,2)$ . But this is the 
+same as taking the product of $S^1$ with the quotient $Z$ of 
+$S^1\times \{1,2\}$ where we identify $(x_0,1)$ with $(x_0,2)$ .
+But $Z$ is a bouquet of two circles; giving each copy of $S^1$ a 
+cell structure with vertex $x_0$ and one 1-cell, $Z$ then has one vertex
+and two 1-cells, which is what a bouquet of two circles is.
+Then we have that $\pu(Z)=<a,b\ | > = F(a,b)$ is free on two generators,
+so $\pu(X) = \pu(S^1\times Z)\cong \pu(S^1)\times \pu(Z) = {\Bbb Z}\times F(a,b)$ .
+
+\ssk
+
+Or if you prefer a cell structure approach, each torus can be given a cell 
+structure with one 0-cell, two 1-cells (one of which, with the vertex, is the circle
+$S^1\times \{x_0\}$), and one 2-cell whose boundary spells out
+the commutator of the two 1-cells. $X$ therefore has one 0-cell, three
+1-cells (since one from each torus have been identified), and two 2-cells.
+Thinking of this as gluing two 2-cells to a bouquet of 3 circles, whose 
+boundaries map to $[a,b]$ and $[b,c]$, we have
+$\pu(X)\cong <a,b,c\ |\ aba^{-1}b^{-1},bcb^{-1}c^{-1}>$ .
+
+\msk
+
+The motivated student can verify that these two groups are in fact 
+isomorphic!
+
+\vskip.15in
+
+
+\vbox{\hsize=4in
+
+\leavevmode
+
+\epsfxsize=2in
+\epsfbox{hw2f1.ai} 
+\hskip.5in
+\epsfxsize=2in
+\epsfbox{hw2f2.ai}}
+
+
+
+\vfill
+\end
+
+
+\vskip.15in
+
+
+
+
+\vbox{\hsize=3in
+
+\leavevmode
+
+\epsfxsize=3in
+}
+
+
+
+
+
+
+
+
+\vbox{\hsize=5in
+
+\leavevmode
+
+\epsfxsize=5in
+\epsfbox{hw1f1.ai}}
+
+
+
+
+\vfill
+\eject
+
+
+\vbox{\hsize=5in
+
+\leavevmode
+
+\epsfxsize=5in
+\epsfbox{hw1f2.ai}}
+
+
+
+
+
+
+
+
+
+
+
+
+

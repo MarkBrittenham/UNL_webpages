@@ -1,0 +1,200 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{February 3, 2005}
+
+\msk
+
+\msk
+
+We now turn our attention to proving Seifert - van Kampen; understanding
+the kernel of the map $\phi : \pu(X_1)*\pu(X_2)\ra\pu(X)$ , 
+under the hypotheses
+that $X_1,X_2$ are open, $A=X_1\cap X_2$ is path-connected, and the
+basepoint $x_0\in A$ . So we start with a product $g = g_1\cdots g_n$ 
+of loops alternately in $X_1$ and $X_2$, which when thought of in $X$
+is null-homotopic. We wish to show that $g$ can be expressed as a 
+product of conjugates of elements of the form $i_{1*}(a)(i_{2*}(a))^{-1}$
+(and their inverses). The basic idea is that a ``big'' homotopy can be
+viewed as a large number of ``little'' homotopies, which
+we essentially deal with one at a time, and we find out how
+little ``little'' is by using the same Lebesgue number agument that we
+used before.
+
+\msk
+
+Specifically, if $H$ is the homotopy, rel basepoint, from 
+$\gamma_1*\cdots *\gamma_n$,
+where $\gamma_i$ is a based loop representing $g_i$, and the constant
+loop, then, as before, $\{H^{-1}(X_1),H^{-1}(X_2)\}$ is an open cover 
+of $I\times I$, and so has a Lebesgue number $\ep$. If we cut
+$I\times I$ into subsquares, with length $1/N$ on a side, where $1/N<\ep$,
+then each subsquare maps into either $X_1$ or $X_2$. The idea is to 
+think of this as a collection of horizontal strips, each cut into squares.
+Arguing by induction, starting from the bottom (where our conclusion
+will be obvious), we will argue that if the bottom of the strip
+can be expressed as an element of the group 
+
+$N = <i_{1*}(\gamma)(i_{2*}(\gamma))^{-1} : 
+\gamma\in\pu(A) >^N\sset \pu(X_1)*\pu(X_2)$ 
+
+(i.e., as a product
+of conjugates of such loops), then so can the 
+top of the strip. 
+
+\msk
+
+\leavevmode
+
+\epsfxsize=4in
+\ctln{{\epsfbox{0203f1.ai}}}
+
+\msk
+
+And to do \underbar{this}, we work as before. We have a strip of squares,
+each mapping into either $X_1$ or $X_2$. If adjacent squares map into the
+same subpace, amalgamate them into a single larger rectangle. Continuing
+in this way, we can break the strip into subrectangles which
+alternately map into $X_1$ or $X_2$. This means that the vertical arcs
+in between map into $X_1\cap X_2 = A$, and represent paths $\eta_i$ in 
+$A$. Their endpoints also map into $A$,
+and so can be joined by paths ($\delta_i$  on the top, $\epsilon_i$ 
+on the bottom) in $A$ to the basepoint. The top of the strip is
+homotopic, rel basepoint, to 
+
+$(\alpha_1*\delta_1)*(\overline{\delta_1}*\alpha_2*\delta_2)*\cdots *
+(\overline{\delta_{k-1}}*\alpha_k)$
+
+each grouping mapping into either $X_1$ or $X_2$.
+The rectangles demonstrate that each grouping is homotopic, rel basepoint,
+to the product of loops
+
+$(\overline{\delta_i}*\eta_i*\epsilon_i)*
+(\overline{\epsilon_i}*\beta_i*\epsilon_{i+1})*
+(\overline{\epsilon_{i+1}}*\overline{\eta_{i+1}}*\delta_{i+1})
+=a_i b_i a_{i+1}^{-1}$
+
+where this is thought of as a product in either $\pu(X_1)$ or
+$\pu(X_2)$. The point is that when strung together, this appears
+to give $(b_1a_2^{-1})(a_2b_2a_3^{-1})\cdots (a_kb_k)$ , with lots
+of cancellation, but in reality, the terms $a_i^{-1}a_i$ represent
+elements of $N$, since the two ``cancelling'' 
+factors are thought of as living in the
+different groups $\pu(X_1),\pu(X_2)$. The remaining terms, if we
+delete these ``cancelling'' pairs, is 
+$b_1\cdots b_k = 
+\beta_1*\epsilon_1*\cdots *\overline{\epsilon_i}*\beta_i*\epsilon_{i+1}
+*\cdots * \overline{\epsilon_k}*\beta_k$, which is homotopic
+rel endpoints to $\beta_1*\cdots *\beta_k$, which, by induction, can 
+be represented as a product which lies in $N$. 
+
+\msk
+
+
+
+
+\leavevmode
+
+
+\epsfxsize=3.5in
+\ctln{{\epsfbox{0203f2.ai}}}
+
+\bsk
+
+So, we can obtain the element represented by the top of the strip by 
+inserting elements of $N$ into the bottom, which 
+is a word having a representation as an 
+element of $N$. The final problem to overcome is that the
+insertions represented by the vertical arcs might not be occuring
+where we want them to be! But this doesn't matter; inserting a word $w$
+in the middle of another $uv$ (to get $uwv$) 
+is the same as multiplying $uv$ by a conjugate of $w$;
+$uwv = (uv)(v^{-1}wv)$, so since the bottom of the strip is 
+in $N$, and we obtain the top of the strip by inserting elements
+of $N$ into the bottom, the top is represented by a product of 
+conjugates of elements of $N$, so (since $N$ is normal) is in $N$.
+And a \underbar{final} final point; the subrectangles may not have 
+cut the bottom of the strip up into the same pieces that the inductive
+hypothesis used to express the bottom as an element of $N$. It didn't even 
+cut it into loops; we added paths at the break points to make that happen.
+The inductive hypothesis would have, in fact, added its own extra paths,
+at possibly different points!
+But if we add \underbar{both} sets of paths, 
+and cut the loop up into even more pieces, 
+then we end up with a loop, which we have expressed as a product in
+$\pu(X_1)*\pu(X_2)$ in two (possibly different) ways, since the 
+two points of view will have interpreted pieces as living in 
+different subspaces. But when this happens, it must be because
+the subloop really lives in $X_1\cap X_2=A$. Moving from one
+to the other amounts to repeatedly changing ownership between the 
+two sets, which in $\pu(X_1)*\pu(X_2)$ means \underbar{inserting}
+an element of $N$ into the product (that is literally what elements
+of $N$ do). But as before, these insertions can be collected at one
+end as products of conjugates. So if one of the elements is in $N$, 
+the other one is, too.
+
+\msk
+
+Which completes the proof! 
+
+\vfill
+\end
+
+
+
+
+
+
+
+

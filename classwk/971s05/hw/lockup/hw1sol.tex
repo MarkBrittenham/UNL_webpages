@@ -1,0 +1,158 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{Homework \#\ 1 Solutions}
+
+\msk
+
+{\bf (p.19, \#\ 14):} Given $v,e,f>0$ with $v-e+f=2$, build a cell structure on $S^2$ with
+$v$ 0-cells, $e$ 1-cells, and $f$ 2-cells. 
+
+\msk
+
+Here is one way to more or less systematically do it. Starting from the 
+smallest case, $(v,e,f) = (1,0,1)$ [we always need at least one  
+top- and bottom-dimensional
+cell, each] as a 2-cell with its  boundary quotiented out to a point, we can proceed
+to the cases $(1,n,n+1)$ by adding a bouquet of circles off of our 0-cell. 
+Each new loop cuts out a new 2-cell from our original one, so the edges 
+and faces each increase by 1 each time. Then we can choose one of the 
+1-cells, and continually cut it into pieces, each time creating one more 
+vertex and edge, to build the cases $(1+m,n+m,n+1)$ . This covers
+all cases, except for $f=1,v>1$ (since increasing $v$, above, required at least
+one $e$, which you don't get unless $f>1$); this we can handle, for example,
+by starting from $(2,1,1)$ as an arc in the sphere, and continually subdividing the 
+arc. Formally, we should probably describe the gluing maps for the 2-cells, 
+but these should be evident from the pictures. 
+\hhsk See the pictures on the accompanying page.
+
+\msk
+
+{\bf (p.38, \#\ 10):} Since $\pu(X\times Y,(x_0,y_0))\cong \pu(X,x_0)\times \pu(Y,y_0)$,
+elements represented by loops $a(t)=(\gamma(t),y_0)$ and $b(s)=(x_0,\delta(s))$,
+with $\gamma : I\rightarrow X$ , $\delta : I\rightarrow Y$ , commute. Construct
+an explicit homotopy.
+
+\msk
+
+We wish to build a based homotopy $H:I\times I\rightarrow X\times Y$
+between $a*b$ and $b*a$ (see the pictures on the accompanying page).
+The basic idea is really to write down the only map we can, that has a
+vague chance of looking like a homotopy! Define
+$K:I\times I\rightarrow X\times Y$ by $K(t,s)=(\gamma(t),\delta(s))$ .
+This is continuous, because 
+
+\ctln{$(t,s)\longmapsto t\longmapsto \gamma(t)$
+and $(t,s)\longmapsto s\longmapsto \delta(s)$}
+
+ both are. Since 
+$\gamma(0)=\gamma(1)=x_0$ and $\delta(0)=\delta(1)=y_0$, this
+homotopy, on its boundary, has $a$'s and $b$'s (as in the figure).
+But fundamentally (no pun intended) it is what we want, just without
+some constant maps (the vertical sides that we want for $H$) inserted.
+But since a loop followed by the constant map is homotopic to the loop,
+this is something that we can fix. A formal approach involves grafting on 
+some auxiliary homotopies to the one we have built, and using the fact 
+that the resulting domain is still homeomorphic to $I\times I$ . (Writing 
+this homeo explicitly is tedious but not hard.)
+
+\msk
+
+Actually, in the end, it appears I used a pair of ``constant'' (i.e., ignore the last factor)  homotopies,
+$(t,s)\longmapsto (a*b)(t)$ and $(t,s)\longmapsto (b*a)(t)$ , 
+together with homeos that map the upper right and
+lower left portions of the last figure to a standard rectangle $I\times I$,
+and pasting things together with the Pasting Lemma to assure continuity.
+And as Susan (H.) has pointed out, if we shave a bit off of that picture,
+we get a function (represented by the last picture) that, with patience, 
+we can really write down:
+
+\bsk
+
+$\displaystyle H(t,s) = 
+\cases {
+a(t),&if $t+s\leq 1/2$\cr
+b(t),&if $t\geq s+1/2$\cr
+b(t),&if $s\geq t+1/2$\cr
+a(t),&if $s+t\geq 3/2$\cr
+K(s+t-{{1}\over{2}},s-t+{{1}\over{2}})&otherwise\cr
+}$
+
+
+\vfill
+\eject
+
+
+\vbox{\hsize=5in
+
+\leavevmode
+
+\epsfxsize=5in
+\epsfbox{hw1f1.ai}}
+
+
+
+
+\vfill
+\eject
+
+
+\vbox{\hsize=5in
+
+\leavevmode
+
+\epsfxsize=5in
+\epsfbox{hw1f2a.ai}}
+
+\vfill
+\end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

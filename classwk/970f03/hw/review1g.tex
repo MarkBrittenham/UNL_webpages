@@ -1,0 +1,418 @@
+\input amstex
+\UseAMSsymbols
+
+%\hoffset=10pt
+
+\def\ctln{\centerline}
+\def\ni{\noindent}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ra{\rightarrow}
+\def\itt{\item}
+\def\pr{\hskip-10pt}
+\def\hsk{\hskip10pt}
+\def\hhsk{\hskip20pt}
+\def\lra{$\Leftrightarrow\ $ }
+\def\exs{$\exists\ $}
+\def\foa{$\forall\ $}
+\def\cau{{\Cal U} }
+\def\cav{{\Cal V}}
+\def\sset{\subseteq}
+\def\finv{f^{-1}}
+\def\catm{${\Cal T}\ $}
+\def\cat{{\Cal T}}
+\def\catpm{$\cat^\prime\ $}
+\def\catp{\cat^\prime}
+\def\top{topology}
+\def\tops{topologies}
+\def\cts{continuous}
+\def\smin{\setminus}
+\def\cab{{\Cal B}}
+\def\cabm{${\Cal B}\ $}
+\def\cas{{\Cal S}}
+\def\casm{${\Cal S}\ $}
+\def\bbbr{{\Bbb R}}
+\def\bbbn{{\Bbb N}}
+\def\bbbq{{\Bbb Q}}
+
+\magnification=1200
+
+\ctln{\bf Math 970 mid-semester review}
+
+\bsk
+
+\pr {\bf Set-theoretic beginnings:}
+
+Functions: $f:X\ra Y$ .  injection, surjection, bijection; image, 
+
+inverse image $f^{-1}(A) = \{x\in X : f(x)\in A\}$
+
+\pr Image: $f(\bigcup A_\alpha) = \bigcup f(A_\alpha)$ , 
+$f(\bigcap A_\alpha) \subseteq \bigcap f(A_\alpha)$
+
+\pr Inverse image: $f^{-1}(\cup A_\alpha) = \cup f(A_\alpha)$ , $f^{-1}(\cap A_\alpha) = \cap f^{-1}(A_\alpha)$, 
+$f^{-1}(Y\setminus A) = X\setminus f^{-1}(A)$
+
+Finite sets, infinite sets, countable sets
+
+\hsk $A$ is finite \lra \exs a surjection $\{1,\ldots , n\}\rightarrow A$ \lra \exs an injection $A \rightarrow \{1,\ldots , n\}$ .
+
+\hsk $A$ is countable \lra \exs a surjection ${\Bbb N}\rightarrow A$ \lra \exs an injection $A \rightarrow {\Bbb N}$ .
+
+\hsk countable union of countables is countable, product of two countables is countable.
+
+Cardinality: $|A|=|B|$ if $\exists$ a bijection $f:A\ra B$
+
+Shroeder-Bernstein Thm: if \exs injection $A\ra B$ and \exs injection $B\ra A$, then $|A|=|B|$
+
+\msk
+
+\pr {\bf Topologies}
+
+Idea: extend continuity to more general settings. 
+
+ Metric spaces: $(X,d)$ , $d: X\times X \ra {\Bbb R}$ satisfies 
+
+\hsk $d(x,y)\geq 0$, $d(x,y)=0$ \lra $x=y$, $d(x,y)=d(y,x)$, and $d(x,z)\leq d(x,y)+d(y,z)$ .
+
+$f:(X,d)\ra (Y,d^\prime)$ continuous ( = cts) if 
+
+\hsk \foa $a\in X$ and \foa $\epsilon > 0$ \exs $\delta = \delta(a,\epsilon) > 0$
+so that $d(a,x) < \delta \Rightarrow d^\prime(f(a),f(x)) > \epsilon$.
+
+(Open) neighborhood: $N_d(x,\epsilon) = \{y\in X : d(x,y) < \epsilon\}$
+
+Open set: $\cau\sset X$ is open if \foa $x\in\cau$ \exs $\epsilon > 0$ so that $N_d(x,\epsilon)\sset \cau$
+
+\hsk $\cau\sset X$ is open \lra $\cau$ = a union of neighborhoods.
+
+\hsk $f : X\ra Y$ is cts \lra $\finv\cau$ is open in $X$ \foa $\cau$ open in $Y$
+
+The collection \catm of open sets in $(X,d)$ satisfies
+
+\hsk $\emptyset, X\in \cat$ 
+
+\hsk if $\cau,\cav\in \cat$, then $\cau\cap\cav\in \cat$
+
+\hsk if $\cau_\alpha\in \cat$ \foa $\alpha\in I$, then $\bigcap\cau_\alpha\in \cat$
+
+\msk
+
+\ni For $X$ any set, a {\bf topology} on $X$ is any collection \catm of subsets of $X$ satisfying the above three conditions.
+
+$f : (X,\cat)\ra (Y,\cat^\prime)$ is cts \lra $\finv(\cau)\in\cat$  for all  $\cau\in\cat^\prime$
+
+comparing topologies: $\cat\sset\cat^\prime$, then \catm is {\it coarser} than \catpm ; \catpm is {\it finer} than \catm .
+
+$\cat=\cat^\prime$ \lra $\cat\sset\cat^\prime$ and $\cat^\prime\sset\cat$
+
+\ni Examples: 
+
+$\cat_i$ = $\{\emptyset, X\}$ = trivial \top\ ( = indiscrete \top).
+
+$\cat_d$ = ${\Cal P}(X)$ = all subsets of $X$ = discrete \top.
+
+\catm = open sets for a metric $d$ on $X$ = metric topology on $X$.
+
+\hsk $(X,\cat)$ is {\it metrizable} if $\cat$ is the metric topology for some metric on $X$.
+
+\catm = $\{\cau\in X : X\smin\cau$ is finite$\}\cup\{\emptyset\}$ = finite complement \top.
+
+\catm = $\{\cau\in X : X\smin\cau$ is countable$\}\cup\{\emptyset\}$ = countable complement \top.
+
+ For $a\in X$, \catm = $\{\cau\sset X : a\in\cau\}\cup\{\emptyset\}$ = included point \top.
+
+ For $a\in X$, \catm = $\{\cau\sset X : a\notin\cau\}\cup\{X \}$ = excluded point \top.
+
+On ${\Bbb R}$, \catm = $\{(a,\infty) : a\in{\Bbb R}\}\cup\{\emptyset, {\Bbb R}\}$ = infinite open ray topology.
+
+On ${\Bbb R}$, \catm = $\{(a,\infty) : a\in{\Bbb R}\}\cup\{[a,\infty) : a\in{\Bbb R}\}\cup\{\emptyset, {\Bbb R}\}$ = infinite ray topology.
+
+$f:X\ra (Y,\cat^\prime)$ , then \catm = $\{\finv(\cau) : \cau\in\cat^\prime\}$ = coarsest top. on $X$ making $f$ cts.
+
+$f:(X,\cat)\ra Y$ , then $\cat^\prime$ = $\{\cau : \finv(\cau)\in\cat\}$ = finest topology on $Y$ making $f$ cts.
+
+\msk
+
+\ni Metric \tops\ also satisfy: if $x,y\in X$, $x\neq y$, then \exs $\cau,\cav$ open with $x\in\cau, y\in\cav$ and $\cau\cap\cav=\emptyset$
+\hsk A topological space satisfying this property is called {\it Hausdorff}.
+
+A {\it topological property} is a property which can be described in terms of open sets and 
+relations between them. (For example, Hausdorffness.) Topology is, essentially, the study 
+of topological properties and the relationships between them.
+
+\msk
+
+\pr{\bf Bases and subbases}
+
+Open sets for metric spaces were defined as unions of neighborhoods ( = nbhds); 
+
+this gives a topology \underbar{because}:
+
+\hsk $X$ = union of nbhds, and the intersection of two nbhds is a union of nbhds.
+
+A collection \cabm of subsets of $X$ is a {\it basis} if it satisfies those two properties, i.e.:
+
+\hsk $X=\bigcup\{B : B\in\cab\}$ , and 
+
+\hsk if $B,B^\prime\in \cab$ and $x\in B\cap B^\prime$, then \exs $B^{\prime\prime}\in\cab$ with
+$x\in B^{\prime\prime}\sset B\cap B^\prime$ .
+
+The topology $\cat(\cab)$ that it {\it generates} is the unions of elements of \cabm .
+
+\ssk
+
+A {\it subbasis} is a collection \casm of subsets whose union is $X$. 
+
+The basis $\cab(\cas)$ that it generates is the set of all finite intersections of elements of \casm .
+
+\ssk
+
+\hsk $f : (X,\cat)\ra (Y,\cat(\cab))$ is cts \lra $\finv(B)\in\cat$  for all  $B\in\cab$
+
+\hsk $f : (X,\cat)\ra (Y,\cat(\cab(\cas)))$ is cts \lra $\finv(S)\in\cat$  for all  $S\in\cas$
+
+\ssk
+
+$\cau\in\cat(\cab)$ \lra \foa $x\in\cau$ \exs $B\in\cab$ so that $x\in B\sset \cau$ \hsk ; \hsk $\cat(\cab)\sset\cat$ \lra $\cab\sset\cat$
+
+\ni On $\bbbr$, \cabm = $\{(a,b) : a,b\in\bbbr\}$ is a basis for the usual (metric) \top .
+
+\ni \cabm = $\{[a,b) : a,b\in\bbbr\}$ is also a basis; $\bbbr$ with this \top\ is called the {\it Sorgenfrey line}.
+
+\msk
+
+\ni{\bf New spaces from old}
+
+\ni Basic idea: \tops\ on new sets should be defined to make reasonable functions cts.
+
+$A\sset X$ , $(X,\cat)$ , then would like $i: A\ra X$ \cts , so define
+
+$\cat_A = \{i^{-1}(\cau) : \cau\in\cat\}$ = $\{\cau\cap A : \cau\in\cat\}$ = subspace topology
+
+\hsk if \cabm is a basis for \catm, then $\{B\cap A : B\in\cab\}$ = $\cab_A$ is a basis for $\cat_A$
+
+\hsk If $f: X\ra Y$ is \cts, then $f|_A : A\ra Y$ is \cts ; $f|_A = f\circ i$
+
+If $B\sset A\sset X$ then the subspace topology $B$ gets from $(A,\cat_A)$ is the same as it gets
+from $(X,\cat)$.
+
+\ssk
+
+$(X,\cat), (Y,\cat^\prime)$ top spaces, would like $p_X:X\times Y \ra X$ and $p_Y:X\times Y \ra Y$ 
+
+(coord projections) to be cts. 
+
+So need $p_X^{\-1}(\cau) = \cau\times Y$ and $p_Y^{\-1}(\cav) = X\times\cav$ open. These form a subbasis, with basis
+
+$\cab = \{\cau\times\cav : \cau\in\cat, \cav\in\cat^\prime\}$ \hsk ;\hsk $\cat(\cab)$ = the {\it product topology} on $X\times Y$ = $\cat\times\cat^\prime$.
+
+\hsk $f : Z\ra X\times Y$ is cts \lra $p_X\circ f$ and $p_Y\circ f$ are both continuous
+
+\hsk If $\cat=\cat(\cab), \cat^\prime = \cat(\cab^\prime)$, then $\{B\times B^\prime : B\in\cab, B^\prime\in\cab^\prime\}$ is a 
+basis for $\cat\times\cat^\prime$.
+
+\hsk If $A\sset X, B\sset Y$, then the subspace topology on $A\times B\sset X\times Y$ is the same as $\cat_A\times \cat_B$
+
+\ssk
+
+\ni Products in general:
+
+$(X_\alpha,\cat_\alpha)$ top. spaces, $\alpha\in I$, then there are two reasonable topologies on $\prod X_\alpha$: 
+
+\hsk box \top: basis is $\{\prod\cau_\alpha : \cau_\alpha\in\cat_\alpha\}$
+
+\hsk product \top: subbasis is $\bigcup\{p_{\alpha}^{-1}(\cau_\alpha) : \cau_\alpha\in\cat_\alpha\}$ ; $p_\alpha$ = proj to $X_\alpha$
+
+In the product \top, $f: Z\ra \prod X_\alpha$ is cts \lra $p_{\alpha}\circ f$ is cts for all $\alpha$
+
+\msk
+
+\ni{\bf Closed sets}
+
+$C\sset X$ is closed if $X\setminus C = \cau\in \cat$ \hsk ; \hsk i.e., $C$ is closed if $C=X\smin \cau$ for some $\cau\in\cat$
+
+\hsk $\emptyset, X$ are closed ; $C,D$ closed $\Rightarrow C\cup D$ closed ; $C_\alpha$ closed $\Rightarrow \bigcap C_\alpha$ closed.
+
+\hsk $f : X\ra Y$ is cts \lra $\finv\cau$ is closed in $X$ \foa $\cau$ closed in $Y$
+
+\hsk $D\sset A\sset X$ is closed in $(A,\cat_A)$ \lra $C=D\cap A$ for some $D$ closed in $(X,\cat)$
+
+\ssk
+
+Closure:  cl$(A)$ = $\overline{A} = \bigcap\{C\sset X$ closed : $A\sset C\}$ = smallest closed set containing $A$
+
+Interior: int$(A) = \bigcup\{\cat\in\cat : \cau\sset A\}$ = largest open set contained in $A$
+
+\hsk cl$(X\smin A) = X\smin$int$(A)$ \hsk ;\hsk int$(X\smin A) = X\smin$cl$(A)$ .
+
+\hsk $C$ closed and $A\sset C \Rightarrow \overline{A}\sset C$
+
+\hsk $A\sset B \Rightarrow \overline{A}\sset\overline{B}$ \hsk ; \hsk $\overline{A\cup B} = \overline{A}\cup\overline{B}$
+
+\hsk $A$ is closed \lra $\overline{A} = A$ \hsk ; \hsk $A$ is open \lra int$(A) = A$
+
+\hsk The closure of $B\sset A$ as a subset of $A$ = $A\cap$cl$_X(B)$
+
+\hsk The interior of $B\sset A$ as a subset of $A$ = $A\cap$int$_X(B)$
+
+\hsk $f: X\ra Y$ is cts \lra for all $A\sset X$ , $f(\overline{A})\sset\overline{f(A)}$
+
+\hsk If $A\sset X$ and $B\sset Y$, then $\overline{A\times B} = \overline{A}\times\overline{B}$
+
+\hsk $x \in \overline{A}$ \lra every open $\cau\in\cat$ that contains $x$ intersects $A$.
+
+\ssk
+
+$x\in X$ is a limit point of $A\sset X$ if $x\in\overline{A\smin\{x\}}$ , i.e, every open set in $X$ 
+
+that contains $x$ hits $A$ in a point other than $x$. 
+
+The set of limit points of $A$ = $A^\prime$ = the derived set of $A$ 
+
+\hsk $\overline{A}=A \cup A'$.
+
+\ni {\bf More on continuity}
+
+$f:X\ra Y$ and $g: Y\ra Z$ both cts $\Rightarrow$ $g\circ f : X\ra Z$ is cts
+
+If $X=\bigcup \cau_alpha$, $\cau_alpha\in\cat$ for all $\alpha$, and $f: X\ra Y$ has $f|_{\cau_alpha}: \cau_\alpha\ra Y$ is cts
+for all $\alpha$, then $f$ is cts.
+
+If $X=C\cup D$, $C,D$ both closed, and $f: X\ra Y$ has $f|_C: C\ra Y$ and $f|_D: D\ra Y$ cts, then $f$ is cts.
+
+In reverse: if $X=C\cup D$, $C,D$ both closed, $f: C\ra Y$ and $g: D\ra Y$ are both cts, and
+$f(x)=g(x)$ for all $x\in C\cap D$, then $h: X\ra Y$, defined by $h(x)=f(x)$ if 
+$x\in C$, $h(x)=g(x)$ if $x\in D$, is cts. A similar statement is true for $X$ = union of open sets.
+
+\ssk
+
+A cts bijection $f:X\ra Y$ is a {\it homeomorphism} if the inverse function $\finv : Y\ra X$ is also 
+cts. $X$ and $Y$ are called {\it homeomorphic}. A homeo gives not only a bijection between points
+of the spaces, but also between the open sets in the two topologies. Homeomorphic spaces have the 
+same topological properties.
+
+\msk
+
+\ni {\bf Quotient spaces}
+
+Given an equivalence relation $\sim$ on a topological space $(X,\cat)$, its quotient $X/\sim$
+is the set of equivalence classes under $\sim$. The quotient map $p: X\ra X/\sim$ can be used
+to induce a topology on $X/\sim$; $\cau\sset X/\sim$ is open \lra $p^{-1}(\cau)\in \cat$. This 
+is the {\it quotient topology} on $X/\sim$.
+
+\ssk
+
+Given a quotient map $p:X \ra X/\sim$ and a cts function $f:X \ra Z$ with $g(a)=g(b)$ 
+whenever $p(a)=p(b)$, then $f$ induces a continuous map $\overline{f}:X/\sim \ra Z$ 
+with $f=\overline{f}\circ p$.
+
+\ssk
+
+\hsk If $A\sset X$, we can define an equiv reln generated by $x\sim y$ if $x,y\in A$; the quotient is $X/A$.
+
+\hsk If $A\sset X$, $B\sset Y$ and $h:A\ra B$ is a homeo, then we have an equiv reln generated by $x\sim y$ if $h(x)=y$; quotient is $X\cup_{A=B} Y$
+
+\hsk If $f: X\ra Y$ is continuous, then we have the equiv reln on $(X\times I)\cup Y$ generated by $(x,1)\sim f(x)$;
+the quotient is the mapping cylinder $M_f$.
+
+\msk
+
+\ni{\bf Connectedness}
+
+Motivation: understand the topological property underlying the Intermediate Value Theorem:
+
+\hsk If $f:[a,b]\ra\bbbr$ is cts and $c$ is between $f(a)$ and $f(b)$, then $f(d)=c$ for some $d\in [a,b]$.
+
+Idea: focus on when IVT \underbar{fails}: If $f: X\ra \bbbr$ fails IVT, then
+
+\hsk $\finv((-\infty,c))=\cau\in\cat, \finv((c,\infty))=\cav\in\cat$ satisfy $\cau\cup\cav =X$, $\cau\cap\cav = \emptyset$, $a\in\cau,b\in\cav$.
+
+Conversely, a pair of such sets allows us to build a cts $f: X\ra \{0,1\}\sset \bbbr$ failing IVT.
+
+\ssk
+
+A {\it separation} (or {\it disconnection}) of $(X,\cat)$ is a pair $\cau\cav\in\cat$ with $\cau\cup\cav =X$, $\cau\cap\cav = \emptyset$, and $\cau,\cav\neq\emptyset$. $X$ is {\it connected} if it admits no separation.
+
+\hsk A subset $A\sset X$ is connected if $(A,\cat_A)$ is a connected space.
+
+\hsk $A\sset X$ is connected \lra whenever $\cau,\cav\in\cat$ with $A\sset\cau\cup\cav$ and 
+$A\cap\cau\cap\cav=\emptyset$, either $A\sset\cau$ or $A\sset\cav$.
+
+\hsk If $A\sset X$ is connected and $\cau,\cav$ separate $X$, then either $A\sset\cau$ or $A\sset\cav$.
+
+\hsk If $(X,\cat)$ is connected and $\cat^\prime\sset \cat$, then $(X,\cat^\prime)$ is connected.
+
+\hsk If $A\sset X$ is connected and $f: X\ra Y$ is cts, then $f(A)\sset Y$ is connected.
+
+\hsk If $A_\alpha\sset X$ are connected \foa $\alpha$ and $\bigcap A_\alpha\neq\emptyset$, then 
+$\bigcup A_\alpha$ is connected.
+
+\hsk If $A\sset X$ is connected and $A\sset\ B\sset \overline{A}$, then $B$ is connected.
+
+\hsk If $X_\alpha$ are all connected, then $\prod X_\alpha$ is connected, when given the product topology.
+
+\hsk\hsk This is false in general, when using the box topology.
+
+\ssk
+
+The connected subsets of $\bbbr$ are precisely the intervals: 
+
+\hsk $(a,b),[a,b),(a,b],[a,b],(-\infty,b),(-\infty,b],(a,\infty),[a,\infty),\emptyset,\bbbr$ .
+
+\ssk
+
+
+\ni{\bf Path-connectedness}
+
+A {\it path} in $X$ is a cts function $\gamma: [0,1]\ra X$. $X$ is {\it path-connected} if 
+foa $x,y\in X$ \exs a path $\gamma: [0,1]\ra X$ with $\gamma(0)=x,\gamma(1)=y$ .
+
+\hsk $(X,cat)$ path-connected $\Rightarrow$ $(X,cat)$ connected.
+
+\hsk\hsk The converse is not true; there are connected spaces which are not path-connected.
+
+\hsk If $A\sset X$ is path-connected and $f: X\ra Y$ is cts, then $f(A)\sset Y$ is path-connected.
+
+\ni The relation $x\sim y$ if \exs connected $A\sset X$ with $x,y\in A$ is an equivalence relation;
+the equivalence classes are the {\it connected components} $[x]$ of $X$.
+
+\hsk $[x] = \bigcup\{A\sset X$ connected : $x\in A\}$ = largest connected subset containing $x$.
+
+\hsk Connected components are closed subsets of $X$.
+
+\ni The relation $x\sim y$ if \exs path in $X$ joining $x$ and $y$ is an equivalence relation;
+the equivalence classes are the {\it path components} $[x]_p$ of $X$.
+
+\hsk $[x]_p = \bigcup\{A\sset X$ path connected : $x\in A\}$ = largest path connected subset containing $x$.
+
+\hsk $[x]_p\sset [x]$ ; each $[x]$ is a disjoint union of $[y]_p$ 's.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vfill
+\end
+

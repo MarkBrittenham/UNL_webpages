@@ -1,0 +1,78 @@
+\input amstex
+
+\magnification=1200
+
+\def\ctln{\centerline}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\ssk{\smallskip}
+
+\UseAMSsymbols
+
+\ctln{\bf Math 970 Homework}
+
+\msk
+
+\ctln{{\bf Due: }\hskip1.5in (Fill in the date!)}
+
+\bsk
+
+\item{1.} Show that if $f$:$X\rightarrow Y$ is a function, then the inverse
+image of subsets of $Y$ satisfies:
+
+\ssk
+
+\item{(a)} $\displaystyle f^{-1}(\bigcup_{i\in I} {\Cal U}_i) =\bigcup_{i\in I} f^{-1}({\Cal U}_i)$
+
+\ssk
+
+\item{(b)} $\displaystyle f^{-1}(\bigcap_{j\in J} {\Cal V}_j) =\bigcap_{j\in J} f^{-1}({\Cal V}_j)$
+
+\ssk
+
+\item{(c)} $\displaystyle f^{-1}(Y\setminus B) = X\setminus f^{-1}(B)$
+
+\bsk
+
+\item{2.} With notation as in problem \# 1, show, by contrast, that some 
+of the corresponding results for the {\it image} of subsets of $X$ do {\it not}
+hold in general. Under what conditions of the function $f$ would each 
+property that fails actually hold true?
+
+\bsk
+
+\item{3.} Show that if $f$:$(X,d)\rightarrow (Y,d^\prime)$ is a function between
+metric spaces which satisfies, for some $K\in{\Bbb R}$, 
+$d^\prime(f(x),f(y))\leq K\cdot d(x,y)$ for all $x,y\in X$, then $f$ is continuous. In particular, if
+$f$ decreases distances, then $f$ is continuous.
+
+\bsk
+
+\item{4.} Show that the metrics $d_1$ and $d_2$ on ${\Bbb R}^n$ satisfy
+
+\ssk
+
+\ctln{$d_2(\vec{x},\vec{y})\leq d_1(\vec{x},\vec{y})\leq 
+n\cdot $max$\{|x_1-y_1|,\ldots |x_n-y_n|\} \leq
+n\cdot d_2(\vec{x},\vec{y})$}
+
+\ssk
+
+\item{} Conclude that $d_1$ and $d_2$ give the same open sets for ${\Bbb R}^n$ .
+
+\bsk
+
+
+\item{5.} Show that if $(X,d)$ is a metric space, then $(X,\bar{d})$, where
+
+\ssk
+
+\ctln{$\bar{d}(x,y) = \min\{d(x,y),1\}$}
+
+\ssk
+
+\item{} is also a metric space, with the {\it same} open sets as $(X,d)$ .
+
+
+\vfill
+\end

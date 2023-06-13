@@ -1,0 +1,563 @@
+
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{February 3, 2005}
+
+\msk
+
+
+{\it Gluing on a 2-disk:} If $X$ is a topological 
+space and $f:\del {\Bbb D}^2\ra X$ is continuous, then we
+can construct the quotient space $Z=(X\coprod 
+{\Bbb D}^2)/\{x\sim f(x) : x\in\del{\Bbb D}^2\}$,
+the result of gluing ${\Bbb D}^2$ to $X$ along $f$. 
+We can use Seifert - van Kampen to compute \mpu\ 
+of the resulting space, although if we
+wish to be careful with basepoints $x_0$ 
+(e.g., the image of $f$ might not contain $x_0$, and/or we
+may wish to glue several disks on, in remote parts of $X$),
+we should also include a rectangle $R$, the mapping 
+cylinder of a path $\gamma$ running from 
+$f(1,0)$ to $x_0$, glued to 
+${\Bbb D}^2$ along the arc from $(1/2,0)$ to $(1,0)$ (see figure). 
+This space $Z_+$ deformation retracts to $Z$, but it
+is technically simpler to do our calculations 
+with the basepoint $y_0$ lying above $x_0$.
+If we write $D_1 = \{x\in {\Bbb D}^2 : ||x||<1\}\cup(R\setminus X)$ 
+and $D_2 = \{x\in {\Bbb D}^2 : ||x||>1/3\}\cup R$ , 
+then we can write $Z_+=D_+\cup(X\cup D_2) = X_1\cup X_2$.
+But since $X_1\simeq *$ , $X_2\simeq X$ 
+(it is essentially the mapping cylinder of 
+the maps $f$ and $\gamma$ )
+and $X_1\cap X_2 = \{x\in {\Bbb D}^2 : 
+1/3<||x||<1\}\cap(R\setminus X)\sim S^1$, we find that 
+
+\ctln{$\pu(Z,y_0)\cong \pu(X_2,y_0)*_{\Bbb Z}\{1\} = 
+\pu(X_2)/<{\Bbb Z}>^N \cong 
+\pu(X_2)/<[\overline{\delta}*\overline{\gamma}*f*\gamma*\delta]>^N$}
+
+If we then use $\delta$ as a path for a change of 
+basepoint isomorphism, and then a homotopy
+equivalence from $X_2$ to $X$ (fixing $x_0$), we 
+have, in terms of group presentations, 
+if $\pu(X,x_0)=<\sig | R>$ , then $\pu(Z) = 
+<\sig | R\cup\{[\overline{\gamma}*f*\gamma]\}>$ . 
+So the effect of gluing on a 2-disk on the fundamental 
+group is to add a new relator, 
+namely the word represented by the attaching map 
+(adjusting for basepoint). 
+All of this applies equally well to attaching several 
+2-disks; each adds a new relator. 
+
+\msk
+
+
+\leavevmode
+
+\epsfxsize=5.4in
+\ctln{{\epsfbox{0201f1.ai}}}
+
+
+
+\bsk
+
+The inherent complications above derived from needing open
+sets can be legislated away, by introducing additional
+hypotheses:
+
+\msk
+
+{\bf Theorem:} If $X=X_1\cup X_2$ is a union of closed
+sets $X_1,X_2$, with $A=X_1\cap X_2$ path-connected, 
+and if $X_1,X_2$ have open neighborhood ${\Cal U}_1,{\Cal U}_2$
+so that ${\Cal U}_1,{\Cal U}_2,{\Cal U}_1\cap{\Cal U}_2$
+deformation retract onto $X_1,X_2,A$ respectively, then 
+$\pu(X)\cong \pu(X_1)*_{\pu(A)}\pu(X_2)$ as before.
+
+\msk
+
+The hypotheses are satisfied, for example, if $X_1.X_2$ are subcomplexes of the
+cell complex $X$.
+
+\msk
+
+
+This in turn opens up huge possibilities for the 
+computation of $\pu(X)$. For example, for cell complexes,
+we can inductively compute \mpu\ by starting with 
+the 1-skeleton, with free fundamental group, and 
+attaching the 2-cells one by one, which each add 
+a relator to the presentation of $\pu(X)$ . 
+[{\bf Exercise:}
+(Hatcher, p.53, \#\ 6) Attaching $n$-cells, for 
+$n\geq 3$, has no effect on \mpu .] 
+For example, the 2-sphere $S^2$ can be thought of as a
+2-disk with a 2-disk attached, along a circle, and so has
+$\pu(S^2)\cong \{1\}_{\Bbb Z}\{1\}=\{1\}$ . 
+We can also compute the fundamental group of 
+any compact surface:
+
+\msk
+
+The {\it real projective plane} ${\Bbb R}P^2$ is the quotient of 
+the 2-sphere $S^2$ by the antipodal map $x\mapsto -x$; 
+it can also be thought of as the upper hemisphere, with 
+identification only along the boundary. This in turn can be 
+interpreted as a 2-disk glued to a circle, whose boundary
+wraps around the circle twice. So $\pu({\Bbb R}P^2)\cong 
+<a | a^2>\cong {\Bbb Z}_2 = {\Bbb Z}/2{\Bbb Z}$ .
+A surface $F$ of genus 2 can be given a cell structure with 1 0-cell,
+4 1-cells, and 1 2-cell, as in the figure, as in the first of the 
+figures below. The fundamental group
+of the 1-skeleton is therefore free of rank 4, and $\pu(F)$ has
+a presentation with 4 generators and 1 relator. Reading the attaching
+map from the figure, the presentation is $<a,b,c,d | [a,b][c,d] >$ .
+
+\msk
+
+
+
+\leavevmode
+
+\epsfxsize=5.6in
+\ctln{{\epsfbox{0201f2.ai}}}
+
+\msk
+
+Giving it a different cell structure, as in the second figure, with 2 0-cells,
+6 1-cels, and 2 2-cells, after choosing a maximal tree, we can read off the
+two relators from the 2-cells to arrive at a different presentation
+$\pu(F) = <a,b,c,d,e | aba^{-1}eb^{-1},cde^{-1}c^{-1}d^{-1}>$ . A posteriori,
+these two presentations describe isomorphic groups.
+
+\bsk
+
+Using the same technology, we can also see that, in general, 
+any group is the fundamental group of some 2-complex $X$;
+starting with a presentation $G = <\sig | R>$, build $X$ by starting
+with a bouquet of $|\sig|$ circles, and attach $|R|$ 2-disks along
+loops which represent each of the generators of $R$. (This works just
+as well for infinite sets $\sig$ and/or $R$; essentially the same proofs
+as above apply.)
+
+\bsk
+
+{\bf Understanding that darn kernel.}
+
+\msk
+
+We now turn our attention to proving Seifert - van Kampen; understanding
+the kernel of the map $\phi : \pu(X_1)*\pu(X_2)\ra\pu(X)$ , 
+under the hypotheses
+that $X_1,X_2$ are open, $A=X_1\cap X_2$ is path-connected, and the
+basepoint $x_0\in A$ . So we start with a product $g = g_1\cdots g_n$ 
+of loops alternately in $X_1$ and $X_2$, which when thought of in $X$
+is null-homotopic. We wish to show that $g$ can be expressed as a 
+product of conjugates of elements of the form $i_{1*}(a)(i_{2*}(a))^{-1}$
+(and their inverses). The basic idea is that a ``big'' homotopy can be
+viewed as a large number of ``little'' homotopies, which
+we essentially deal with one at a time, and we find out how
+little ``little'' is by using the same Lebesgue number agument that we
+used before.
+
+\msk
+
+Specifically, if $H$ is the homotopy, rel basepoint, from 
+$\gamma_1*\cdots *\gamma_n$,
+where $\gamma_i$ is a based loop representing $g_i$, and the constant
+loop, then, as before, $\{H^{-1}(X_1),H^{-1}(X_2)\}$ is an open cover 
+of $I\times I$, and so has a Lebesgue number $\ep$. If we cut
+$I\times I$ into subsquares, with length $1/N$ on a side, where $1/N<\ep$,
+then each subsquare maps into either $X_1$ or $X_2$. The idea is to 
+think of this as a collection of horizontal strips, each cut into squares.
+Arguing by induction, starting from the bottom (where our conclusion
+will be obvious), we will argue that if the bottom of the strip
+can be expressed as an element of the group 
+
+$N = <i_{1*}(\gamma)(i_{2*}(\gamma))^{-1} : 
+\gamma\in\pu(A) >^N\sset \pu(X_1)*\pu(X_2)$ 
+
+(i.e., as a product
+of conjugates of such loops), then so can the 
+top of the strip. 
+
+\msk
+
+
+
+
+
+\leavevmode
+
+\epsfxsize=4in
+\ctln{{\epsfbox{0203f1.ai}}}
+
+\msk
+
+And to do \underbar{this}, we work as before. We have a strip of squares,
+each mapping into either $X_1$ or $X_2$. If adjacent squares map into the
+same subpace, amalgamate them into a single larger rectangle. Continuing
+in this way, we can break the strip into subrectangles which
+alternately map into $X_1$ or $X_2$. This means that the vertical arcs
+in between map into $X_1\cap X_2 = A$, and represent paths $\eta_i$ in 
+$A$. Their endpoints also map into $A$,
+and so can be joined by paths ($\delta_i$  on the top, $\epsilon_i$ 
+on the bottom) in $A$ to the basepoint. The top of the strip is
+homotopic, rel basepoint, to 
+
+$(\alpha_1*\delta_1)*(\overline{\delta_1}*\alpha_2*\delta_2)*\cdots *
+(\overline{\delta_{k-1}}*\alpha_k)$
+
+each grouping mapping into either $X_1$ or $X_2$.
+The rectangles demonstrate that each grouping is homotopic, rel basepoint,
+to the product of loops
+
+$(\overline{\delta_i}*\eta_i*\epsilon_i)*
+(\overline{\epsilon_i}*\beta_i*\epsilon_{i+1})*
+(\overline{\epsilon_{i+1}}*\overline{\eta_{i+1}}*\delta_{i+1})
+=a_i b_i a_{i+1}^{-1}$
+
+where this is thought of as a product in either $\pi(X_1)$ or
+$\pu(X_2)$. The point is that when strung together, this appears
+to give $(b_1a_2^{-1})(a_2b_2a_3^{-1})\cdots (a_kb_k)$ , with lots
+of cancellation, but in reality, the terms $a_i^{-1}a_i$ represent
+elements of $N$, since the two ``cancelling'' 
+factors are thought of as living in the
+different groups $\pu(X_1),\pu(X_2)$. The remaining terms, if we
+delete these ``cancelling'' pairs, is 
+$b_1\cdots b_k = 
+\beta_1*\epsilon_1*\cdots *\overline{\epsilon_i}*\beta_i*\epsilon_{i+1}
+*\cdots * \overline{\epsilon_k}*\beta_k$, which is homotopic
+rel endpoints to $\beta_1*\cdots *\beta_k$, which, by induction, can 
+be represented as a product which lies in $N$. 
+
+\msk
+
+
+
+
+\leavevmode
+
+
+\epsfxsize=3.5in
+\ctln{{\epsfbox{0203f2.ai}}}
+
+\bsk
+
+So, we can obtain the element represented by the top of the strip by 
+inserting elements of $N$ into the bottom, which 
+is a word having a representation as an 
+element of $N$. The final problem to overcome is that the
+insertions represented by the vertical arcs might not be occuring
+where we want them to be! But this doesn't matter; inserting a word $w$
+in the middle of another $uv$ (to get $uwv$) 
+is the same as multiplying $uv$ by a conjugate of $w$;
+$uwv = (uv)(v^{-1}wv)$, so since the bottom of the strip is 
+in $N$, and we obtain the top of the strip by inserting elements
+of $N$ into the bottom, the top is represented by a product of 
+conjugates of elements of $N$, so (since $N$ is normal) is in $N$.
+And a \underbar{final} final point; the subrectangles may not have 
+cut the bottom of the strip up into the same pieces that the inductive
+hypothesis used to express the bottom as an element of $N$. It didn't even 
+cut it into loops; we added paths at the break points to make that happen.
+The inductive hypothesis would have, in fact, added its own extra paths,
+at possibly different points!
+But if we add \underbar{both} sets of paths, 
+and cut the loop up into even more pieces, 
+then we end up with a loop, which we have expressed as a product in
+$\pu(X_1)*\pu(X_2)$ in two (possibly different) ways, since the 
+two points of view will have interpreted pieces as living in 
+different subspaces. But when this happens, it must be because
+the subloop really lives in $X_1\cap X_2=A$. Moving from one
+to the other amounts to repeatedly changing ownership between the 
+two sets, which in $\pu(X_1)*\pu(X_2)$ means \underbar{inserting}
+an element of $N$ into the product (that is literally what elements
+of $N$ do). But as before, these insertions can be collected at one
+end as products of conjugates. So if one of the elements is in $N$, 
+the other one is, too.
+
+\msk
+
+Which completes the proof! 
+
+\bsk
+
+{\bf Postscript:  why should we care?} The role of the fundamental group
+in distinguishing spaces has already been touched upon; if two 
+(path-connected) spaces have non-isomorphic fundamental groups, then
+the spaces are not homeomorphic, and even not homotopy equivalent.
+It is one of the most basic, and in many cases the best such invariant
+we have in our arsenal
+(hence the name ``fundamental''). As we have seen with the circle, it
+captures the notion of how many times a loop ``winds around'' in a space.
+And the idea of using paths to understand a space is very basic; we 
+explore a space by mapping familiar objects into it. (This is 
+a theme we keep returning to in this course.) The concepts we 
+have introduced play a role in analysis, for instance with the notion
+of a path integral; the invariance of the integral under homotopies
+rel endpoints is an important property, related to Green's Theorem
+and (locally) conservative vector fields. And the \underbar{space}
+of all paths in $X$ plays an important (theoretical, although
+pprobably not practical) role in what we will do next.
+
+\bsk
+
+{\bf Covering spaces:} We can motivate our next topic by looking more
+closely at one of our examples above. The projective plane ${\Bbb R}P^2$
+has $\pu = {\Bbb Z}_2$ . It is also the quotient of the simply-connected
+space $S^2$ by the antipodal map, which, together with the identity map,
+forms a group of homeomorphisms of $S^2$ which is isomorphic to ${\Bbb Z}_2$.
+The fact that ${\Bbb Z}_2$ has this dual role to play in describing 
+${\Bbb R}P^2$ is no accident; codifying this relationship requires the 
+notion of a covering space.
+
+\msk
+
+The quotient map $q:S^2\ra {\Bbb R}P^2$ is an example of a {\it covering map}.
+A map $p:E\ra B$ is called a covering map if for every point $x\in B$, there
+is a neighborhood ${\Cal U}$ of $x$ (an
+{\it evenly covered neighborhood}) so that $p^{-1}({\Cal U})$ 
+is a disjoint union ${\Cal U}_\alpha$ of open sets in $E$, each mapped
+homeomorphically onto ${\Cal U}$ by (the restriction of) $p$ . $B$ is
+called the {\it base space} of the covering; $E$ is called the {\it total
+space}. The quotient map $q$ is an example; (the image of) the complement
+of a great circle in $S^2$ will be an evenly covered neighborhood
+of any point it contains. The disjoint union of 43 copies of a space,
+each mapping homeomorphically to a single copy, is an example of a 
+{\it trivial covering}. As a last example, we have the famous 
+exponential map $p:{\Bbb R}\ra S^1$ given by $t\mapsto e^{2\pi it} = 
+(\cos (2\pi t),\sin (2\pi t))$. The image of any interval $(a,b)$ of length
+less than 1 will have inverse image the disjoint union of the
+intervals $(a+n,b+n)$ for $n\in{\Bbb Z}$ .
+
+\msk
+
+OK, maybe not the last. We can build many finite-sheeted (every point
+inverse is finite) coverings of a bouquet of two circles, say, by 
+assembling $n$ points over the vertex, and then, on either side,
+connecting the points by $n$ (oriented) arcs, one each going in and out of
+each vertex. By choosing orientations on each 1-cell of the bouquet,
+we can build a covering map by sending the vertices above to the
+vertex, and the arcs to the one cells, homeomorphically, respecting 
+the orientations. We can build infinite-sheeted coverings in much 
+the same way.
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{0208f1.ai}}}
+
+
+\bsk
+
+Covering spaces of a (suitably nice) space $X$ have a very close relationship
+to $\pu(X,x_0)$. The basis for this relationship is the
+
+\msk 
+
+{\bf Homotopy Lifting Property:} If $p:\widetilde{X}\ra X$ is a covering map, 
+$H:Y\times I\ra X$ is a homotopy, $H(y,0)=f(y)$, and
+$\widetilde{f}:Y\ra \widetilde{X}$ is a {\it lift} of $f$ (i.e., $p\circ \widetilde{f}=f$),
+then there is a unique lift $\widetilde{H}$ of $H$ with $\widetilde{H}(y,0)=\widetilde{f}(y)$ .
+
+\msk
+
+The {\bf proof} of this property follows a pattern that we will become 
+very familiar with: we lift maps a little bit at a time. For every $x\in X$
+there is an open set ${\Cal U}_x$ evenly covered by $p$ . For each fixed
+$y\in Y$, since $I$ is compact and the sets $H^{-1}({\Cal U}_x)$ form an
+open cover of $Y\times I$, then since $I$ is compact, 
+the Tube Lemma provides an open neighborhood 
+${\Cal V}$ of $y$ in $Y$ and finitely many $p^{-1}{\Cal U}_{x}$ whose union
+covers ${\Cal V}\times I$ . 
+
+\msk
+
+To define $\widetilde{H}(y,t)$, we (using a Lebesgue number argument) cut the
+interval $\{y\}\times I$ into finitely many pieces, the $i$th mapping into 
+ ${\Cal U}_{x_i}$ under $H$. $\widetilde{f}(y)$ is in one of the evenly covered
+sets ${\Cal U}_{x_1\alpha_1}$, and the restricted map 
+$p^{-1}:{\Cal U}_{x_1}\ra {\Cal U}_{x_1\alpha_1}$ following $H$ restricted
+to the first interval lifts $H$ along the first interval to a map 
+we will call $\widetilde{H}$. We then have 
+lifted $H$ at the end of the first interval = the beginning of the second, 
+and we continue as before. In this way we can define $\widetilde{H}$ for all
+$(y,t)$ . To show that this is independent of the choices we have
+made along the way, we imagine two ways of cutting up the interval 
+$\{y\}\times I$ using evenly covered neighborhoods ${\Cal U}_{x_i}$
+and ${\Cal V}_{w_j}$, and take intersections of both sets of intervals
+to get a common refinement of both sets, covered by the intersections
+${\Cal U}_{x_i}\cap {\Cal V}_{w_j}$, and imagine building $\widetilde{H}$ using
+the refinement. At the start, at $\widetilde{f}(y)$, we are in 
+${\Cal U}_{x_1\alpha_1}\cap {\Cal V}_{w_1\beta_1}$. Because at the 
+start of the lift $(y,0)$ we lift to the same point, and $p^{-1}$ restricted 
+to this intersection agrees with $p^{-1}$ restricted to each of the two
+pieces, we get the same lift acroos the first refined subinterval. This
+process repeats itself across all of the subintervals, showing that
+the lift is independent of the choices made. This also shows that
+the lift is unique; once we have decided what $\widetilde{H}(y,0)$, the
+rest of the values of the $\widetilde{H}$ are determined by the requirement
+of being a lift. also, once we know the map is well-defined, we can see
+that it is continuous, since for any $y$, we can make the same choices
+across the entire open set $V$ given by the Tube Lemma, and find
+that $\widetilde{H}$, restricted to ${\Cal V}\times(a_i-\delta,b_i+\delta)$
+(for a small delta; we could wiggle the endpoints in the construction
+without changing the resulting function, by its well-definedness)
+is $H$ estricted to this set followed by $p^{-1}$ restriced in domain 
+and range, so this composition is continuous. So $\widetilde{H}$
+is locally continuous, hence continuous.
+
+\bsk
+
+ In particular, applying this in the case $Y=\{*\}$, where a homotopy
+$H:\{*\}\times I\ra X$ is generally thought of as a path $\gamma:I\ra X$,
+we have the {\bf Path Lifting Property}: ``given 
+a covering map $p:\widetilde{X}\ra X$, a path 
+$\gamma:I\ra X$ with $\gamma(0)=x_0$, and a point 
+$\widetilde{x}_0\in p^{-1}(x_0)$, there is a unique path $\widetilde{\gamma}$
+lifting $\gamma$ with $\widetilde{\gamma}(0)=\widetilde{x}_0$ .'' One of the 
+immediate consequences of this is one of the cornerstones of covering space
+theory:
+
+\bsk  
+
+%%
+%%
+%%Homework: p.39: 5*,13,15,19,20* p.53: 6,7,8*
+%%
+%%
+
+If $p:(\widetilde{X},\tilde{x}_0)\ra (X,x_0)$ is a covering map, then the 
+induced homomorphism $p_*:\pu(\widetilde{X},\widetilde{x}_0)\ra \pu(X,x_0)$ is
+injective.
+
+\msk
+
+{\bf Proof:} Suppose $\gamma:(I,\del I)\ra (\widetilde{X},\widetilde{x}_0)$ is a 
+loop $p_*([\gamma])=1$ in $\pu(X,x_0)$. So there is a homotopy
+$H:(I\times I,\del I\times I)\ra (X,x_0)$ between $p\circ\gamma$ and the constant 
+path. By homotopy lifting, there is a homotopy $\widetilde{H}$ from $\gamma$ to 
+the lift of the constant map at $x_0$. The vertical sides 
+$s\mapsto \widetilde{H}(0,s),\widetilde{H}(1,s)$ are also lifts of the 
+constant map, beginning from 
+$\widetilde{H}(0,0),\widetilde{H}(1,0)=\gamma(0)=\gamma(1)=\widetilde{x}_0$, so
+are the constant map at $\widetilde{x}_0$. Consequently, the lift at the 
+bottom is the constant map at $\widetilde{x}_0$. So $\widetilde{H}$
+represents a null-homotopy of $\gamma$, so $[\gamma]=1$
+in $\pu(\widetilde{X},\widetilde{x}_0)$. So $\pu(\widetilde{X},\widetilde{x}_0)=\{1\}$ .
+
+\msk
+
+Even more, the image $p_*(\pu(\widetilde{X},\widetilde{x}_0))\sset \pu(X,x_0)$
+is precisely the elements whose representatives are loops at $x_0$, 
+which when
+lifted to paths starting at $\widetilde{x}_0)$, are loops. 
+For if $\gamma$ lifts
+to a loop $\widetilde{\gamma}$, then $p\circ\widetilde{\gamma}=\gamma$, so
+$p_*([\widetilde{\gamma}])=[\gamma]$ . Conversely, if 
+$p_*([\widetilde{\gamma}])=[\gamma]$, then $\gamma$ and $p\circ\widetilde{\gamma}$
+are homotopic rel endpoints, and so the homotopy lifts to 
+a homotopy rel endpoints between the lift of $\gamma$ at 
+$\widetilde{x}_0$, and the lift of $p\circ\widetilde{\gamma}$ at $\widetilde{x}_0$
+(which is $\widetilde{\gamma}$, since $\widetilde{\gamma}(0)=\widetilde{x}_0$ and
+lifts are unique). So the lift of $\gamma$ is a loop, as desired.
+
+\msk
+
+So, for example, if we build a 5-sheeted cover of the bouquet of 2 circles, 
+as above, (after choosin maximal tree upstairs) 
+we can read off the images of the generators of the fundamental group
+of the total space; we have labelled each ede by the ereator it
+traces out downstairs, and for each ede outside of the maximal tree
+chosen, we read from basepoint out the tree to one end, across the edge,
+and then back to the basepoint in the tree. In our example, this
+gives:
+
+
+\msk
+
+\ctln{$<ab,aaab^{-1}, baba^{-1},baa,ba^{-1}bab^{-1},bba^{-1}b^{-1} | >$}
+
+\msk
+
+\leavevmode
+
+
+\epsfxsize=3in
+\ctln{{\epsfbox{0208f2.ai}}}
+
+
+\bsk
+
+This is (from its construction) a copy of the free group on 6 letters,
+in the free group $F(a,b)$ . In a similar way, by explicitly building
+a covering space, we find that the fundamental group of a closed 
+surface of genus 3 is a subgroup of the fundamental group of the 
+closed surface of genus 2. 
+
+
+\vfill
+\end
+
+
+
+
+
+
+
+
+

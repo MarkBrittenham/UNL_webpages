@@ -1,0 +1,153 @@
+
+\magnification=1200
+\overfullrule=0pt
+\parindent=0pt
+
+\nopagenumbers
+
+\input amstex
+
+\voffset=-.6in
+\hoffset=-.5in
+\hsize = 7.5 true in
+\vsize=10.4 true in
+
+%\voffset=1.4in
+%\hoffset=-.5in
+%\hsize = 10.2 true in
+%\vsize=8 true in
+
+\input colordvi
+
+\loadmsbm
+
+\input epsf
+
+\def\ctln{\centerline}
+\def\u{\underbar}
+\def\ssk{\smallskip}
+\def\msk{\medskip}
+\def\bsk{\bigskip}
+\def\hsk{\hskip.1in}
+\def\hhsk{\hskip.2in}
+\def\dsl{\displaystyle}
+\def\hskp{\hskip1.5in}
+
+\def\lra{$\Leftrightarrow$ }
+\def\ra{\rightarrow}
+\def\mpto{\logmapsto}
+\def\pu{\pi_1}
+\def\mpu{$\pi_1$}
+\def\sig{\Sigma}
+\def\msig{$\Sigma$}
+\def\ep{\epsilon}
+\def\sset{\subseteq}
+\def\del{\partial}
+\def\inv{^{-1}}
+\def\wtl{\widetilde}
+\def\lra{\Leftrightarrow}
+
+
+
+\ctln{\bf Math 971 Algebraic Topology}
+
+\ssk
+
+\ctln{February 22, 2005}
+
+\msk
+
+{\bf Building universal coverings:} If a space $X$ is path connected, locally path connected, and
+semi-locally simply connected (S-LSC), then it has a universal covering;
+we describe a general construction. The idea is that a covering
+space should have the path lifting and homotopy
+lifting properties, and the universal 
+cover can be characterized as the only covering space for 
+which {\it only} null-homotopic loops lift to loops. So we build a 
+space and a map which \underbar{must} have these properties.
+We do this by making a space $\widetilde{X}$ whose
+points are (equivalence classes of) $[\gamma]$
+based paths $\gamma:(I,0)\ra (X,x_0)$, where two paths are equivalent
+if they are homotopic rel endpoints! The projection map is
+$p([\gamma])=\gamma(1)$. The S-LSCness is what guarantees that this is a 
+covering map; choosing $x\in X$, a path $\gamma_0$ from $x_0$ to $x$,
+and a  neighborhood ${\Cal U}$ of $x$ guaranteed by S-LSC, paths from 
+$x_0$ to points in ${\Cal U}$ are based equivalent to $\gamma*\gamma_0*\eta$
+where $\gamma$ is a based loop at $x_0$ and $\eta$ is a path in ${\Cal U}$.
+But by simple connectivity, a path in ${\Cal U}$ is determined up to homotopy
+by its endpoints, and so, with $\gamma$ fixed, these paths are in one-to-one
+correspondence with ${\Cal U}$. So $p\inv({\Cal U}$ is a disjoint union,
+indexed by $\pu(X,x_0)$, of sets in bijective correspondence with ${\Cal U}$.
+The appropriate topology on $\widetilde{X}$, essentially given as a basis
+by triples $\gamma*,gamma_0,{\Cal U}$ as above, make $p$ a covering map.
+Note that the inverse image of 
+the basepoint $x_0$ is the equivalence classes of \underbar{loops} at $x_0$,
+i.e., $\pu(X,x_0)$. A path $\gamma$ lifts to the path of paths
+$[\gamma_t]$, where $\gamma_t(s)=\gamma(ts)$, and so the only 
+loop in $X$ which lifts to a loop in $\widetilde{X}$ has endpoint
+$[\gamma]=[c_{x_0}]$, i.e., $[\gamma]=1$ in $\pu(X,x_0)$. This
+implies that $p_*(\pu(\widetilde{X},[c_{x_0}]))=\{1\}$, so 
+$\pu(\widetilde{X},[c_{x_0}])=\{1\}$ . \hhsk However, nobody in their
+right minds would go about building $\widetilde{X}$ in this way, in general!
+Before describing how to do it ``right'', though, we should perhaps see why
+we should want to?
+
+\msk
+
+One reason for the importance of the universal cover is that it gives
+us a unified approach to building \underbar{all} connected covering
+spaces of $X$. The basis for this is the {\it deck transformation group}
+of a covering space $p:\wtl{X}\ra X$; this is the set of all
+homeomorphisms $h:\wtl{X}\ra\wtl{X}$ such that $p\circ h = p$.
+These homeomorphisms, by definition, permute each of the point inverses
+of $p$. In fact, since $h$ can be thought of as a lift of the projection
+$p$, by the lifting criterion $h$ is determined by which point in the 
+inverse image of the basepoint $x_0$ it takes the basepoint 
+$\wtl{x}_0$ of $\wtl{X}$ to. A deck transformation sending
+$\wtl{x}_0$ to $\wtl{x}_1$ exists $\Leftrightarrow$
+$p_*(\pu(\wtl{X},\wtl{x}_0)=p_*(\pu(\wtl{X},\wtl{x}_1)$
+[we need one inclusion to give the map $h$, and the opposite inclusion
+to ensure it is a bijection (because its inverse exists)]. These two groups
+are in general {\it conjugate}, by the projection of a path from 
+$\wtl{x}_0$ to $\wtl{x}_1$; this can be seen by following the change
+of basepoint isomorphism down into $G=\pu(X,x_0)$. As we have seen, paths
+in $\wtl{X}$ from $\wtl{x}_0$ to $\wtl{x}_1$ are in 1-to-1
+correspondence with the cosets of $H=p_*(\pu(\wtl{X},\wtl{x}_0)$ in 
+$p_*(\pu({X},{x}_0)$; so deck transformations are in 1-to-1 
+correspondence with cosets whose representatives conjugate 
+$H$ to itself. The set of such elements in $G$ is called the 
+{\it normalizer of $H$ in $G$}, and denoted $N_G(H)$ or simply
+$N(H)$. The deck transformation group is therefore
+in 1-to-1 correspondence with the group $N(H)/H$ under
+$h\mapsto$ the coset represented by the projection of the path from 
+$\wtl{x}_0$ to $h(\wtl{x}_0)$. And since $h$ is essentially built
+by lifting paths, it follows quickly that this map is a
+homomorphism, hence an isomorphism.
+
+\msk
+
+In particular, applying this to the universal covering space
+$p:\wtl{X}\ra X$, since in this case $H=\{1\}$, so $N(H)=\pu(X,x_0)$,
+its deck transformation group is isomorphic to $\pu(X,x_0)$. 
+For example, this gives the quickest possible proof 
+that $\pu(S^1)\cong {\Bbb Z}$, since ${\Bbb R}$ is a 
+contractible covering space, whose deck transformations
+are the translations by integer distances. 
+Thus $\pu(X)$ acts on its universal cover as a group of
+homeomorphisms. And since this action is {\it simply transitive}
+on point inverses [there is exactly one (that's the simple
+part) deck transformation carrying any one point in a point 
+inverse to any other one (that's the transitive part)], the 
+quotient map from $\wtl{X}$ to the orbits of this action \underbar{is}
+the projection map $p$. The evenly covered property of $p$ implies
+that $X$ does have the quotient topology under this action.
+
+\msk
+
+So every space it $X$ the quotient of its universal cover (if it has
+one!) by its fundamental group $G=\pu(X,x_0)$, realized as the group
+of deck transformations. And the quotient map is the covering 
+projection. 
+
+\vfill
+\end
